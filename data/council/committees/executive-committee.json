@@ -1,0 +1,21 @@
+{
+  "name": "Executive Committee",
+  "parent": "CouncilMasterManager",
+  "chair": "ExecutiveCommitteeManager",
+  "purpose": "Core system governance and operations",
+  "managers": [
+    "ExecutiveCommitteeManager",
+    "BackendManager",
+    "FrontendManager",
+    "APIManager",
+    "GovernanceManager",
+    "OperationsManager",
+    "TestingManager",
+    "IntegrationManager",
+    "PerformanceManager",
+    "SecurityManager",
+    "KnowledgeManager",
+    "ContinuousImprovementManager",
+    "AnticipatoryLearningManager"
+  ]
+}

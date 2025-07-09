@@ -1,0 +1,14 @@
+{
+  "factors": {
+    "impact": 0.4,
+    "urgency": 0.3,
+    "effort": 0.2,
+    "risk": 0.1
+  },
+  "weights": {
+    "business": 0.4,
+    "technical": 0.3,
+    "operational": 0.2,
+    "strategic": 0.1
+  }
+}

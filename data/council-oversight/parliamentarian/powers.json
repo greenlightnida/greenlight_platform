@@ -1,0 +1,29 @@
+{
+  "name": "Parliamentarian Powers",
+  "powers": {
+    "proceduralAuthority": {
+      "title": "Procedural Authority",
+      "description": "Authority to interpret and enforce parliamentary procedures",
+      "scope": "All Council procedural matters",
+      "limitations": "Must consult with Council Chair on strategic matters"
+    },
+    "efficiencyAuthority": {
+      "title": "Efficiency Authority",
+      "description": "Authority to optimize Council operations and workflows",
+      "scope": "Council operational efficiency and effectiveness",
+      "limitations": "Must maintain procedural integrity and fairness"
+    },
+    "communicationAuthority": {
+      "title": "Communication Authority",
+      "description": "Authority to optimize communication pathways and protocols",
+      "scope": "All Council communication channels and protocols",
+      "limitations": "Must ensure all holon agents remain informed and engaged"
+    },
+    "improvementAuthority": {
+      "title": "Improvement Authority",
+      "description": "Authority to implement operational improvements",
+      "scope": "Council operational and procedural improvements",
+      "limitations": "Must coordinate with Council Chair on strategic improvements"
+    }
+  }
+}

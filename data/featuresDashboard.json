@@ -1,0 +1,937 @@
+{
+  "generatedAt": "2025-07-08T23:03:32.756Z",
+  "totalFeatures": 82,
+  "health": {
+    "status": "healthy",
+    "timestamp": "2025-07-08T23:03:32.756Z",
+    "metrics": {
+      "totalComponents": 0,
+      "componentsByPlatform": {
+        "greenlight-platform": 0
+      },
+      "componentsByHolon": {
+        "systemMaster": 0
+      },
+      "componentsByCategory": {},
+      "componentsByStatus": {},
+      "healthScore": 100,
+      "complianceRate": 94,
+      "averageUsage": 0,
+      "performance": {
+        "queryCount": 1,
+        "averageQueryTime": 0,
+        "lastQueryTime": 0
+      },
+      "lastSync": "2025-07-08T23:03:32.743Z",
+      "alertCount": 0,
+      "activeAlertCount": 0
+    }
+  },
+  "features": [
+    {
+      "id": "greenlight-platform",
+      "name": "Greenlight Platform",
+      "type": "system",
+      "status": "active",
+      "description": "System governance and holon management platform",
+      "components": []
+    },
+    {
+      "id": "system-master",
+      "name": "System Master",
+      "type": "principle",
+      "status": "active",
+      "description": "Core system governance and orchestration",
+      "path": "src/components/SystemMaster/",
+      "docs": "docs/architecture/SYSTEM_MASTER_SPECIFICATION.md",
+      "components": []
+    },
+    {
+      "id": "inform-console",
+      "name": "Inform Console",
+      "type": "component",
+      "status": "active",
+      "description": "Information and notification management",
+      "path": "src/components/SystemMaster/InformConsole.tsx",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "resolve-console",
+      "name": "Resolve Console",
+      "type": "component",
+      "status": "active",
+      "description": "Issue resolution and conflict management",
+      "path": "src/components/SystemMaster/ResolveConsole.tsx",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "observe-console",
+      "name": "Observe Console",
+      "type": "component",
+      "status": "active",
+      "description": "System monitoring and observation",
+      "path": "src/components/SystemMaster/ObserveConsole.tsx",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "elaborate",
+      "name": "Elaborate",
+      "type": "principle",
+      "status": "active",
+      "description": "System evolution and development management",
+      "path": "src/core/governance/",
+      "docs": "docs/architecture/ELABORATE_HOLON_SPECIFICATION.md",
+      "components": []
+    },
+    {
+      "id": "anchor-command-service",
+      "name": "Anchor Command Service",
+      "type": "service",
+      "status": "active",
+      "description": "Context awareness and anchor command service",
+      "path": "src/services/anchorCommandService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "deployment-tracker",
+      "name": "Deployment Tracker",
+      "type": "service",
+      "status": "active",
+      "description": "System deployment tracking and monitoring",
+      "path": "src/utils/deploymentTracker.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "system-evolution-service",
+      "name": "System Evolution Service",
+      "type": "service",
+      "status": "active",
+      "description": "System evolution tracking and optimization",
+      "path": "src/services/performanceTrackingService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "elevate",
+      "name": "Elevate",
+      "type": "principle",
+      "status": "active",
+      "description": "Performance optimization and enhancement",
+      "path": "src/core/governance/",
+      "docs": "docs/architecture/ELEVATE_HOLON_SPECIFICATION.md",
+      "components": []
+    },
+    {
+      "id": "player-service",
+      "name": "Player Service",
+      "type": "service",
+      "status": "active",
+      "description": "Player data management and tracking service",
+      "path": "src/services/playerService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "data-import-service",
+      "name": "Data Import Service",
+      "type": "service",
+      "status": "active",
+      "description": "Data import and processing service",
+      "path": "src/services/dataImportService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "ai-insights-service",
+      "name": "AI Insights Service",
+      "type": "service",
+      "status": "active",
+      "description": "AI-powered insights and analysis service",
+      "path": "src/services/aiInsightsService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "administrate",
+      "name": "Administrate",
+      "type": "principle",
+      "status": "active",
+      "description": "Administrative and operational management",
+      "path": "src/core/governance/",
+      "docs": "docs/architecture/ADMINISTRATE_HOLON_SPECIFICATION.md",
+      "components": []
+    },
+    {
+      "id": "business-intelligence-service",
+      "name": "Business Intelligence Service",
+      "type": "service",
+      "status": "active",
+      "description": "Business intelligence and analytics service",
+      "path": "src/services/businessIntelligenceService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "reporting-service",
+      "name": "Reporting Service",
+      "type": "service",
+      "status": "active",
+      "description": "Report generation and distribution service",
+      "path": "src/services/reportingService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "articulate",
+      "name": "Articulate",
+      "type": "principle",
+      "status": "active",
+      "description": "Knowledge management and communication",
+      "path": "src/core/governance/",
+      "docs": "docs/architecture/ARTICULATE_HOLON_SPECIFICATION.md",
+      "components": []
+    },
+    {
+      "id": "knowledge-service",
+      "name": "Knowledge Service",
+      "type": "service",
+      "status": "active",
+      "description": "Knowledge management and organization service",
+      "path": "src/services/knowledgeService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "nlp-service",
+      "name": "NLP Service",
+      "type": "service",
+      "status": "active",
+      "description": "Natural language processing service",
+      "path": "src/services/nlpService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "developer-notes-service",
+      "name": "Developer Notes Service",
+      "type": "service",
+      "status": "active",
+      "description": "Developer notes and documentation service",
+      "path": "src/services/developerNotesService.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "operations",
+      "name": "Operations",
+      "type": "principle",
+      "status": "active",
+      "description": "System operations and maintenance",
+      "path": "src/core/operations/",
+      "docs": "docs/architecture/OPERATIONS_HOLON_SPECIFICATION.md",
+      "components": []
+    },
+    {
+      "id": "server-governor",
+      "name": "Server Governor",
+      "type": "service",
+      "status": "active",
+      "description": "Server governance and management service",
+      "path": "src/core/operations/ServerGovernor.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "server-manager",
+      "name": "Server Manager",
+      "type": "service",
+      "status": "active",
+      "description": "Server management and monitoring service",
+      "path": "src/core/operations/ServerManager.ts",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "top-bins-platform",
+      "name": "Top Bins Platform",
+      "type": "product",
+      "status": "active",
+      "description": "Product features and client-specific functionality",
+      "components": []
+    },
+    {
+      "id": "media-library",
+      "name": "Media Library",
+      "type": "product",
+      "status": "active",
+      "description": "Media management and AI detection features",
+      "path": "src/components/MediaLibrary/",
+      "docs": "docs/platforms/MEDIA_LIBRARY_IMPROVEMENTS.md",
+      "components": []
+    },
+    {
+      "id": "batch-upload",
+      "name": "Batch Upload",
+      "type": "feature",
+      "status": "active",
+      "description": "Bulk media upload functionality",
+      "path": "src/components/BatchUpload.tsx",
+      "docs": "docs/platforms/BATCH_UPLOAD_IMPROVEMENTS.md",
+      "components": []
+    },
+    {
+      "id": "ai-detection",
+      "name": "AI Detection",
+      "type": "feature",
+      "status": "active",
+      "description": "AI-powered media analysis and detection",
+      "path": "src/utils/aiDetection.ts",
+      "docs": "docs/platforms/AI_DETECTION_IMPROVEMENTS.md",
+      "components": []
+    },
+    {
+      "id": "player-crm",
+      "name": "Player CRM",
+      "type": "product",
+      "status": "active",
+      "description": "Player relationship management and tracking",
+      "path": "src/components/PlayerCRM.tsx",
+      "docs": "docs/platforms/TEAM_PORTAL_SUMMARY.md",
+      "components": []
+    },
+    {
+      "id": "player-grid",
+      "name": "Player Grid",
+      "type": "feature",
+      "status": "active",
+      "description": "Visual player management interface",
+      "path": "src/components/PlayerGrid/",
+      "docs": "docs/platforms/PLAYER_GRID_DOCUMENTATION.md",
+      "components": []
+    },
+    {
+      "id": "team-portal",
+      "name": "Team Portal",
+      "type": "product",
+      "status": "active",
+      "description": "Team collaboration and management platform",
+      "path": "src/components/TeamPortal/",
+      "docs": "docs/platforms/TEAM_PORTAL_README.md",
+      "components": []
+    },
+    {
+      "id": "cohort-management",
+      "name": "Cohort Management",
+      "type": "feature",
+      "status": "active",
+      "description": "Program and camp lifecycle management",
+      "path": "src/components/CohortManagement.tsx",
+      "docs": null,
+      "components": []
+    },
+    {
+      "id": "data-import",
+      "name": "Data Import",
+      "type": "feature",
+      "status": "active",
+      "description": "Import player data from CSV",
+      "path": "src/components/DataImport.tsx",
+      "docs": "docs/platforms/DATA_MANAGEMENT_FEATURE.md",
+      "components": []
+    },
+    {
+      "id": "external-features",
+      "name": "External Features",
+      "type": "external",
+      "status": "active",
+      "description": "External platform features and integrations",
+      "components": []
+    },
+    {
+      "id": "top-bins-coaching-toolkit",
+      "name": "Coaching Toolkit",
+      "type": "external",
+      "status": "online",
+      "description": "Unified coaching interface for sports teams",
+      "components": [],
+      "lastUpdated": "2025-01-07T00:00:00Z"
+    },
+    {
+      "id": "top-bins-player-grid",
+      "name": "Player Grid",
+      "type": "external",
+      "status": "online",
+      "description": "Visual player progress tracking and management",
+      "components": [],
+      "lastUpdated": "2025-01-07T00:00:00Z"
+    },
+    {
+      "id": "top-bins-media-library",
+      "name": "Media Library",
+      "type": "external",
+      "status": "online",
+      "description": "Photo management and OCR-based media tagging",
+      "components": [],
+      "lastUpdated": "2025-01-07T00:00:00Z"
+    },
+    {
+      "id": "top-bins-team-portal",
+      "name": "Team Portal",
+      "type": "external",
+      "status": "online",
+      "description": "Unified team collaboration and management",
+      "components": [],
+      "lastUpdated": "2025-01-07T00:00:00Z"
+    },
+    {
+      "id": "top-bins-cohort-management",
+      "name": "Cohort Management",
+      "type": "external",
+      "status": "online",
+      "description": "Program and camp lifecycle management",
+      "components": [],
+      "lastUpdated": "2025-01-07T00:00:00Z"
+    },
+    {
+      "id": "top-bins-batch-upload",
+      "name": "Batch Upload",
+      "type": "external",
+      "status": "online",
+      "description": "Data import and batch processing capabilities",
+      "components": [],
+      "lastUpdated": "2025-01-07T00:00:00Z"
+    },
+    {
+      "id": "featuresholon",
+      "name": "FeaturesHolon",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features",
+      "path": "src/core/holons/features/FeaturesHolon.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:30:01.037Z"
+    },
+    {
+      "id": "componentregistryengine",
+      "name": "ComponentRegistryEngine",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules",
+      "path": "src/core/holons/features/modules/ComponentRegistryEngine.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:31:04.419Z"
+    },
+    {
+      "id": "deliveryengine",
+      "name": "DeliveryEngine",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules",
+      "path": "src/core/holons/features/modules/DeliveryEngine.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:06:51.796Z"
+    },
+    {
+      "id": "implementationengine",
+      "name": "ImplementationEngine",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules",
+      "path": "src/core/holons/features/modules/ImplementationEngine.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:07:12.727Z"
+    },
+    {
+      "id": "technicalengine",
+      "name": "TechnicalEngine",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules",
+      "path": "src/core/holons/features/modules/TechnicalEngine.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:08:07.482Z"
+    },
+    {
+      "id": "productholon",
+      "name": "ProductHolon",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product",
+      "path": "src/core/holons/product/ProductHolon.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T19:23:09.940Z"
+    },
+    {
+      "id": "productmanager",
+      "name": "ProductManager",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product",
+      "path": "src/core/holons/product/ProductManager.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T20:28:07.844Z"
+    },
+    {
+      "id": "coordinationengine",
+      "name": "CoordinationEngine",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product/modules",
+      "path": "src/core/holons/product/modules/CoordinationEngine.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:08:01.061Z"
+    },
+    {
+      "id": "governanceengine",
+      "name": "GovernanceEngine",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product/modules",
+      "path": "src/core/holons/product/modules/GovernanceEngine.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:08:04.198Z"
+    },
+    {
+      "id": "requirementsengine",
+      "name": "RequirementsEngine",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product/modules",
+      "path": "src/core/holons/product/modules/RequirementsEngine.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:07:57.688Z"
+    },
+    {
+      "id": "backendmanager",
+      "name": "BackendManager",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/systemMaster",
+      "path": "src/core/holons/systemMaster/BackendManager.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T17:02:10.002Z"
+    },
+    {
+      "id": "designsystemmanager",
+      "name": "DesignSystemManager",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/systemMaster",
+      "path": "src/core/holons/systemMaster/DesignSystemManager.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T17:09:57.409Z"
+    },
+    {
+      "id": "frontendmanager",
+      "name": "FrontendManager",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/systemMaster",
+      "path": "src/core/holons/systemMaster/FrontendManager.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T17:01:09.210Z"
+    },
+    {
+      "id": "testingholonmanager",
+      "name": "TestingHolonManager",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/testing",
+      "path": "src/core/holons/testing/TestingHolonManager.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T18:55:24.381Z"
+    },
+    {
+      "id": "accessibilitycontext",
+      "name": "AccessibilityContext",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components",
+      "path": "src/components/AccessibilityContext.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.483Z"
+    },
+    {
+      "id": "insights",
+      "name": "Insights",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate",
+      "path": "src/components/Articulate/Insights.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.486Z"
+    },
+    {
+      "id": "knowledgebase",
+      "name": "KnowledgeBase",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate",
+      "path": "src/components/Articulate/KnowledgeBase.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.486Z"
+    },
+    {
+      "id": "taskengine",
+      "name": "TaskEngine",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate",
+      "path": "src/components/Articulate/TaskEngine.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.487Z"
+    },
+    {
+      "id": "wiki",
+      "name": "Wiki",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate",
+      "path": "src/components/Articulate/Wiki.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.485Z"
+    },
+    {
+      "id": "workhistory",
+      "name": "WorkHistory",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate",
+      "path": "src/components/Articulate/WorkHistory.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.488Z"
+    },
+    {
+      "id": "coachingtoolkit",
+      "name": "CoachingToolkit",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/CoachingToolkit",
+      "path": "src/components/CoachingToolkit/CoachingToolkit.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:13:15.158Z"
+    },
+    {
+      "id": "developernotespanel",
+      "name": "DeveloperNotesPanel",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/DeveloperNotes",
+      "path": "src/components/DeveloperNotes/DeveloperNotesPanel.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:15:54.376Z"
+    },
+    {
+      "id": "executivedashboard",
+      "name": "ExecutiveDashboard",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/ExecutiveDashboard",
+      "path": "src/components/ExecutiveDashboard/ExecutiveDashboard.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:18:41.600Z"
+    },
+    {
+      "id": "featuresdashboard",
+      "name": "FeaturesDashboard",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/FeaturesDashboard",
+      "path": "src/components/FeaturesDashboard/FeaturesDashboard.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T19:30:30.399Z"
+    },
+    {
+      "id": "importcontextselector",
+      "name": "ImportContextSelector",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components",
+      "path": "src/components/ImportContextSelector.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:28:14.097Z"
+    },
+    {
+      "id": "photocorrection",
+      "name": "PhotoCorrection",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components",
+      "path": "src/components/PhotoCorrection.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:28:14.097Z"
+    },
+    {
+      "id": "roadmapdashboard",
+      "name": "RoadmapDashboard",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/RoadmapDashboard",
+      "path": "src/components/RoadmapDashboard/RoadmapDashboard.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:19:49.469Z"
+    },
+    {
+      "id": "sessionsmanager",
+      "name": "SessionsManager",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SessionsManager",
+      "path": "src/components/SessionsManager/SessionsManager.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:20:41.186Z"
+    },
+    {
+      "id": "systemdashboard",
+      "name": "SystemDashboard",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard",
+      "path": "src/components/SystemDashboard/SystemDashboard.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:06:15.977Z"
+    },
+    {
+      "id": "systemfeatures",
+      "name": "SystemFeatures",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard",
+      "path": "src/components/SystemDashboard/SystemFeatures.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.510Z"
+    },
+    {
+      "id": "systemnavigation",
+      "name": "SystemNavigation",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard",
+      "path": "src/components/SystemDashboard/SystemNavigation.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.510Z"
+    },
+    {
+      "id": "systemoverview",
+      "name": "SystemOverview",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard",
+      "path": "src/components/SystemDashboard/SystemOverview.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.509Z"
+    },
+    {
+      "id": "systemstats",
+      "name": "SystemStats",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard",
+      "path": "src/components/SystemDashboard/SystemStats.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.511Z"
+    },
+    {
+      "id": "systemlogconsole",
+      "name": "SystemLogConsole",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemLogConsole",
+      "path": "src/components/SystemLogConsole/SystemLogConsole.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:21:26.200Z"
+    },
+    {
+      "id": "scriptmaster",
+      "name": "ScriptMaster",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemMaster",
+      "path": "src/components/SystemMaster/ScriptMaster.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:18:10.429Z"
+    },
+    {
+      "id": "systemmaster",
+      "name": "SystemMaster",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemMaster",
+      "path": "src/components/SystemMaster/SystemMaster.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T21:16:15.686Z"
+    },
+    {
+      "id": "button",
+      "name": "Button",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/design-system/atoms/Button",
+      "path": "src/components/design-system/atoms/Button/Button.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T17:14:03.705Z"
+    },
+    {
+      "id": "input",
+      "name": "Input",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/design-system/atoms/Input",
+      "path": "src/components/design-system/atoms/Input/Input.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:13:59.291Z"
+    },
+    {
+      "id": "button",
+      "name": "Button",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/shared/Button",
+      "path": "src/components/shared/Button/Button.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:22:12.747Z"
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/shared/Card",
+      "path": "src/components/shared/Card/Card.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-08T22:22:30.967Z"
+    },
+    {
+      "id": "themecontext",
+      "name": "ThemeContext",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/theme",
+      "path": "src/components/theme/ThemeContext.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.518Z"
+    },
+    {
+      "id": "themecontextdefinition",
+      "name": "ThemeContextDefinition",
+      "type": "component",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/theme",
+      "path": "src/components/theme/ThemeContextDefinition.tsx",
+      "components": [],
+      "lastUpdated": "2025-07-07T23:07:18.518Z"
+    },
+    {
+      "id": "featureregistryengine",
+      "name": "FeatureRegistryEngine",
+      "type": "holon",
+      "status": "active",
+      "description": "Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules",
+      "path": "src/core/holons/features/modules/FeatureRegistryEngine.ts",
+      "components": [],
+      "lastUpdated": "2025-07-08T23:00:55.306Z"
+    }
+  ],
+  "analytics": {
+    "total": 82,
+    "active": 76,
+    "deprecated": 0,
+    "stale": 6,
+    "recentlyChanged": 43,
+    "byType": {
+      "system": 1,
+      "principle": 6,
+      "component": 31,
+      "service": 13,
+      "product": 4,
+      "feature": 5,
+      "external": 7,
+      "holon": 15
+    },
+    "byStatus": {
+      "active": 76,
+      "online": 6
+    }
+  },
+  "featureMetrics": {
+    "totalFeatures": 57,
+    "featuresByPlatform": {
+      "unknown": 44,
+      "greenlight-platform": 13
+    },
+    "featuresByHolon": {
+      "unknown": 44,
+      "features": 13
+    },
+    "featuresByType": {
+      "system": 1,
+      "product": 1,
+      "external": 1,
+      "holon": 14,
+      "component": 27,
+      "feature": 13
+    },
+    "featuresByStatus": {
+      "active": 57
+    },
+    "healthScore": 64.91228070175438,
+    "complianceRate": 0,
+    "averageUsage": 0,
+    "staleFeatures": 0,
+    "recentlyChangedFeatures": 54,
+    "roadmapSyncRate": 22.807017543859647,
+    "componentSyncRate": 71.9298245614035
+  },
+  "featureHealth": {
+    "status": "warning",
+    "score": 64.91228070175438,
+    "metrics": {
+      "totalFeatures": 57,
+      "featuresByPlatform": {
+        "unknown": 44,
+        "greenlight-platform": 13
+      },
+      "featuresByHolon": {
+        "unknown": 44,
+        "features": 13
+      },
+      "featuresByType": {
+        "system": 1,
+        "product": 1,
+        "external": 1,
+        "holon": 14,
+        "component": 27,
+        "feature": 13
+      },
+      "featuresByStatus": {
+        "active": 57
+      },
+      "healthScore": 64.91228070175438,
+      "complianceRate": 0,
+      "averageUsage": 0,
+      "staleFeatures": 0,
+      "recentlyChangedFeatures": 54,
+      "roadmapSyncRate": 22.807017543859647,
+      "componentSyncRate": 71.9298245614035
+    },
+    "alerts": 0,
+    "lastSync": "2025-07-08T23:03:32.755Z",
+    "performance": {
+      "queryCount": 0,
+      "averageQueryTime": 0,
+      "lastQueryTime": 0,
+      "syncCount": 1,
+      "lastSyncTime": 1
+    }
+  },
+  "syncStatus": {
+    "roadmapSyncRate": 22.807017543859647,
+    "componentSyncRate": 71.9298245614035,
+    "lastSync": "2025-07-08T23:03:32.755Z"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "CouncilOperationsManager",
+  "role": "Council Operations Management",
+  "responsibilities": [
+    "Council operations management",
+    "Committee performance monitoring",
+    "Council resource allocation",
+    "Council process optimization"
+  ],
+  "capabilities": [
+    "Operations monitoring and optimization",
+    "Resource allocation and management",
+    "Process improvement and automation",
+    "Performance tracking and reporting"
+  ],
+  "parent": "CouncilMasterManager",
+  "children": []
+}

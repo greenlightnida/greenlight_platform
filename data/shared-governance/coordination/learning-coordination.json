@@ -1,0 +1,43 @@
+{
+  "name": "Shared Learning Coordination",
+  "mechanisms": {
+    "collaborativeSessions": {
+      "frequency": "weekly",
+      "participants": [
+        "council-chair",
+        "executive-committee"
+      ],
+      "purpose": "Joint learning review and planning",
+      "outcomes": [
+        "strategic_direction",
+        "operational_plans",
+        "performance_review"
+      ]
+    },
+    "sharedDashboard": {
+      "access": [
+        "council-chair",
+        "executive-committee"
+      ],
+      "features": [
+        "Real-time learning metrics",
+        "Cross-committee learning insights",
+        "Performance trends and analysis",
+        "Strategic learning recommendations"
+      ]
+    },
+    "decisionMaking": {
+      "process": "collaborative",
+      "participants": [
+        "council-chair",
+        "executive-committee"
+      ],
+      "criteria": [
+        "strategic_impact",
+        "operational_feasibility",
+        "resource_availability"
+      ],
+      "escalation": "council-chair-final-approval"
+    }
+  }
+}

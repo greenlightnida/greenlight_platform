@@ -1,0 +1,106 @@
+{
+  "authentication": {
+    "sessionManagement": {
+      "timeout": 28800000,
+      "inactivityTimeout": 1800000,
+      "maxConcurrentSessions": 3,
+      "secureCookies": true,
+      "httpOnly": true,
+      "sameSite": "strict"
+    },
+    "passwordPolicy": {
+      "minLength": 12,
+      "requireUppercase": true,
+      "requireLowercase": true,
+      "requireNumbers": true,
+      "requireSpecialChars": true,
+      "maxAge": 7776000000
+    },
+    "mfa": {
+      "enabled": true,
+      "methods": ["totp", "sms", "email"],
+      "requiredForAdmins": true,
+      "requiredForSensitiveOperations": true
+    }
+  },
+  "authorization": {
+    "roleMapping": {
+      "owner": {
+        "permissions": ["*"],
+        "description": "Full system access"
+      },
+      "admin": {
+        "permissions": [
+          "user:read",
+          "user:write",
+          "content:read",
+          "content:write",
+          "system:read",
+          "system:write",
+          "audit:read"
+        ],
+        "description": "Administrative access"
+      },
+      "editor": {
+        "permissions": [
+          "content:read",
+          "content:write",
+          "user:read"
+        ],
+        "description": "Content management access"
+      },
+      "reader": {
+        "permissions": [
+          "content:read",
+          "user:read"
+        ],
+        "description": "Read-only access"
+      }
+    },
+    "groupMapping": {
+      "greenlight-admins@greenlight.live": ["owner", "admin"],
+      "greenlight-developers@greenlight.live": ["admin", "editor"],
+      "greenlight-users@greenlight.live": ["reader", "editor"]
+    }
+  },
+  "security": {
+    "headers": {
+      "hsts": {
+        "enabled": true,
+        "maxAge": 31536000,
+        "includeSubDomains": true,
+        "preload": true
+      },
+      "csp": {
+        "enabled": true,
+        "defaultSrc": ["'self'"],
+        "scriptSrc": ["'self'", "'unsafe-inline'", "https://accounts.google.com"],
+        "styleSrc": ["'self'", "'unsafe-inline'"],
+        "imgSrc": ["'self'", "data:", "https:"],
+        "connectSrc": ["'self'", "https://accounts.google.com", "https://www.googleapis.com"]
+      },
+      "xFrameOptions": "DENY",
+      "xContentTypeOptions": "nosniff",
+      "referrerPolicy": "strict-origin-when-cross-origin"
+    },
+    "rateLimiting": {
+      "enabled": true,
+      "windowMs": 900000,
+      "maxRequests": 100,
+      "skipSuccessfulRequests": false,
+      "skipFailedRequests": false
+    },
+    "auditLogging": {
+      "enabled": true,
+      "level": "info",
+      "events": [
+        "login",
+        "logout",
+        "permission_change",
+        "content_access",
+        "system_change"
+      ],
+      "retention": 7776000000
+    }
+  }
+} 

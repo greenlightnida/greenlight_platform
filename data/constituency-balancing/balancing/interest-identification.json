@@ -1,0 +1,34 @@
+{
+  "name": "Interest Identification System",
+  "identification": {
+    "automatic": {
+      "method": "pattern_analysis",
+      "sources": [
+        "constituency_activities",
+        "performance_metrics",
+        "resource_usage"
+      ],
+      "frequency": "continuous",
+      "output": "interest_indicators"
+    },
+    "manual": {
+      "method": "constituency_self_reporting",
+      "sources": [
+        "constituency_representatives",
+        "stakeholder_feedback"
+      ],
+      "frequency": "weekly",
+      "output": "interest_declarations"
+    },
+    "predictive": {
+      "method": "trend_analysis",
+      "sources": [
+        "historical_data",
+        "market_trends",
+        "technology_evolution"
+      ],
+      "frequency": "monthly",
+      "output": "interest_forecasts"
+    }
+  }
+}

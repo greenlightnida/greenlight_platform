@@ -1,0 +1,1009 @@
+[
+  {
+    "name": "OPERATIONAL HOLON SPECIFICATION",
+    "path": "docs/OPERATIONAL_HOLON_SPECIFICATION.md",
+    "status": "current",
+    "lastUpdated": "2025-07-06T23:51:09.781Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "SCRIPTMASTER RULES AND SYSTEM",
+    "path": "docs/SCRIPTMASTER_RULES_AND_SYSTEM.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:19:51.217Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "ARCHITECTURE MIGRATION PLAN",
+    "path": "docs/architecture/ARCHITECTURE_MIGRATION_PLAN.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.499Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "ARTICULATE SYSTEM DOCUMENTATION",
+    "path": "docs/architecture/ARTICULATE_SYSTEM_DOCUMENTATION.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.502Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "CORRECT MIGRATION PLAN",
+    "path": "docs/architecture/CORRECT_MIGRATION_PLAN.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.499Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "CROSS REPOSITORY INTEGRATION GUIDE",
+    "path": "docs/architecture/CROSS_REPOSITORY_INTEGRATION_GUIDE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T13:51:30.914Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DOCUMENTATION MANAGER INTEGRATION",
+    "path": "docs/architecture/DOCUMENTATION_MANAGER_INTEGRATION.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:46:23.820Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture",
+    "description": "Ensure the DocumentationManager is properly integrated with existing protocols and managers to handle comprehensive documenting and logging responsibilities, taking load off other managers."
+  },
+  {
+    "name": "DOCUMENTATION MANAGER PROTOCOL",
+    "path": "docs/architecture/DOCUMENTATION_MANAGER_PROTOCOL.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:42:25.211Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture",
+    "description": ""
+  },
+  {
+    "name": "ELABORATE SYSTEM ARCHITECTURE",
+    "path": "docs/architecture/ELABORATE_SYSTEM_ARCHITECTURE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.502Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "ELABORATE SYSTEM SUMMARY",
+    "path": "docs/architecture/ELABORATE_SYSTEM_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.499Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "ENRICHMENT SYSTEM SUMMARY",
+    "path": "docs/architecture/ENRICHMENT_SYSTEM_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.498Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "FEATURE MAPPER INTEGRATION",
+    "path": "docs/architecture/FEATURE_MAPPER_INTEGRATION.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.497Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "FEATURE SYNC SYSTEM",
+    "path": "docs/architecture/FEATURE_SYNC_SYSTEM.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:58:20.585Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "HOLON GOVERNANCE ARCHITECTURE",
+    "path": "docs/architecture/HOLON_GOVERNANCE_ARCHITECTURE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.500Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "LIVING ROADMAP",
+    "path": "docs/architecture/LIVING_ROADMAP.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T13:26:13.195Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "REMAINING PHASES ROADMAP",
+    "path": "docs/architecture/REMAINING_PHASES_ROADMAP.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.501Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "SYSTEM ARCHITECTURE",
+    "path": "docs/architecture/SYSTEM_ARCHITECTURE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.501Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "AUDIT COMPLETION",
+    "path": "docs/audits/AUDIT_COMPLETION.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.509Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "AUDIT OPTIMIZATION REPORT",
+    "path": "docs/audits/AUDIT_OPTIMIZATION_REPORT.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.511Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "AUDIT OPTIMIZATION SUMMARY",
+    "path": "docs/audits/AUDIT_OPTIMIZATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.511Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "AUDIT SUMMARY",
+    "path": "docs/audits/AUDIT_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.510Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "COMPREHENSIVE CODE AUDIT",
+    "path": "docs/audits/COMPREHENSIVE_CODE_AUDIT.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.512Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "COMPREHENSIVE OPTIMIZATION JOURNEY SUMMARY",
+    "path": "docs/audits/COMPREHENSIVE_OPTIMIZATION_JOURNEY_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.511Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "COMPREHENSIVE ORGANIZATION RECONCILIATION",
+    "path": "docs/audits/COMPREHENSIVE_ORGANIZATION_RECONCILIATION.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.509Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "FINAL AUDIT AND OPTIMIZATION PLAN",
+    "path": "docs/audits/FINAL_AUDIT_AND_OPTIMIZATION_PLAN.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.510Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "FINAL AUDIT SUMMARY",
+    "path": "docs/audits/FINAL_AUDIT_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.508Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "PRECOMMIT AUDIT ASSESSMENT",
+    "path": "docs/audits/PRECOMMIT_AUDIT_ASSESSMENT.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T00:08:13.509Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "audits"
+    ],
+    "category": "audits"
+  },
+  {
+    "name": "DEPLOYMENT",
+    "path": "docs/deployment/DEPLOYMENT.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.286Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DEPLOYMENT GUIDE",
+    "path": "docs/deployment/DEPLOYMENT_GUIDE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.286Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DEPLOYMENT STATUS",
+    "path": "docs/deployment/DEPLOYMENT_STATUS.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T13:51:36.519Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DEPLOYMENT STRATEGY",
+    "path": "docs/deployment/DEPLOYMENT_STRATEGY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T13:51:35.544Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DEPLOYMENT TROUBLESHOOTING GUIDE",
+    "path": "docs/deployment/DEPLOYMENT_TROUBLESHOOTING_GUIDE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T13:51:33.727Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PRODUCTION DEPLOYMENT STATUS",
+    "path": "docs/deployment/PRODUCTION_DEPLOYMENT_STATUS.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.288Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "MULTI PLATFORM WORKFLOW",
+    "path": "docs/guides/MULTI_PLATFORM_WORKFLOW.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.289Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PLATFORM STRUCTURE EXPLAINED",
+    "path": "docs/guides/PLATFORM_STRUCTURE_EXPLAINED.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.289Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "QUICK REFERENCE",
+    "path": "docs/guides/QUICK_REFERENCE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.289Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 1 PROGRESS SUMMARY",
+    "path": "docs/phases/PHASE_1_PROGRESS_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.290Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 2 OPTIMIZATION SUMMARY",
+    "path": "docs/phases/PHASE_2_OPTIMIZATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.291Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 2 PROGRESS SUMMARY",
+    "path": "docs/phases/PHASE_2_PROGRESS_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.291Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 3 COMPLETION SUMMARY",
+    "path": "docs/phases/PHASE_3_COMPLETION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.291Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 3 DEVELOPER NOTES IMPLEMENTATION",
+    "path": "docs/phases/PHASE_3_DEVELOPER_NOTES_IMPLEMENTATION.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.292Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 3 PROGRESS SUMMARY",
+    "path": "docs/phases/PHASE_3_PROGRESS_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.292Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 4 MEDIALIBRARY OPTIMIZATION SUMMARY",
+    "path": "docs/phases/PHASE_4_MEDIALIBRARY_OPTIMIZATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.293Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 4 PROGRESS SUMMARY",
+    "path": "docs/phases/PHASE_4_PROGRESS_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.293Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 4 READINESS",
+    "path": "docs/phases/PHASE_4_READINESS.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.294Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 5 PLAYERGRID OPTIMIZATION SUMMARY",
+    "path": "docs/phases/PHASE_5_PLAYERGRID_OPTIMIZATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.294Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 6 SYSTEMDASHBOARD OPTIMIZATION SUMMARY",
+    "path": "docs/phases/PHASE_6_SYSTEMDASHBOARD_OPTIMIZATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.295Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PHASE 7 AI OPTIMIZATION SUMMARY",
+    "path": "docs/phases/PHASE_7_AI_OPTIMIZATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.295Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "AI DETECTION IMPROVEMENTS",
+    "path": "docs/platforms/AI_DETECTION_IMPROVEMENTS.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.296Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "AI ENRICHMENT SYSTEM",
+    "path": "docs/platforms/AI_ENRICHMENT_SYSTEM.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.296Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "BATCH UPLOAD IMPROVEMENTS",
+    "path": "docs/platforms/BATCH_UPLOAD_IMPROVEMENTS.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.297Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DATA MANAGEMENT FEATURE",
+    "path": "docs/platforms/DATA_MANAGEMENT_FEATURE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.298Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "FEATURES",
+    "path": "docs/platforms/FEATURES.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.298Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "MEDIA LIBRARY IMPROVEMENTS",
+    "path": "docs/platforms/MEDIA_LIBRARY_IMPROVEMENTS.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.299Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PLAYER GRID DOCUMENTATION",
+    "path": "docs/platforms/PLAYER_GRID_DOCUMENTATION.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.299Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "TEAM PORTAL README",
+    "path": "docs/platforms/TEAM_PORTAL_README.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.300Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "TEAM PORTAL SUMMARY",
+    "path": "docs/platforms/TEAM_PORTAL_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.300Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "ANCHOR COMMAND MIGRATION COMPLETE",
+    "path": "docs/summaries/ANCHOR_COMMAND_MIGRATION_COMPLETE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.301Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DEMONSTRATION GUIDE",
+    "path": "docs/summaries/DEMONSTRATION_GUIDE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.302Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DIRECTORY CLEANUP COMPLETE",
+    "path": "docs/summaries/DIRECTORY_CLEANUP_COMPLETE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.302Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "DIRECTORY CLEANUP PLAN",
+    "path": "docs/summaries/DIRECTORY_CLEANUP_PLAN.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.302Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "END OF CHAT PROTOCOL",
+    "path": "docs/summaries/END_OF_CHAT_PROTOCOL.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.303Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "EXECUTION PLAN COMPLETION SUMMARY",
+    "path": "docs/summaries/EXECUTION_PLAN_COMPLETION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.304Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "NEXT SESSION CONTEXT",
+    "path": "docs/summaries/NEXT_SESSION_CONTEXT.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.304Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "NEXT STEPS IMPLEMENTATION SUMMARY",
+    "path": "docs/summaries/NEXT_STEPS_IMPLEMENTATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.305Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "ONBOARDING",
+    "path": "docs/summaries/ONBOARDING.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.305Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "OPERATIONS MASTER QUICK REFERENCE",
+    "path": "docs/summaries/OPERATIONS_MASTER_QUICK_REFERENCE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.306Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "OPTIMIZATION SUMMARY",
+    "path": "docs/summaries/OPTIMIZATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.306Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PERFORMANCE OPTIMIZATION SUMMARY",
+    "path": "docs/summaries/PERFORMANCE_OPTIMIZATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.307Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PLATFORM UPDATE SUMMARY",
+    "path": "docs/summaries/PLATFORM_UPDATE_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.307Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PROTOCOL GOVERNANCE SYSTEM",
+    "path": "docs/summaries/PROTOCOL_GOVERNANCE_SYSTEM.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.308Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "README FOR CURSOR",
+    "path": "docs/summaries/README_FOR_CURSOR.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.308Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "SYSTEM EVOLUTION INTELLIGENCE",
+    "path": "docs/summaries/SYSTEM_EVOLUTION_INTELLIGENCE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.309Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "TOP BINS EQUALIZATION STATUS",
+    "path": "docs/summaries/TOP_BINS_EQUALIZATION_STATUS.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.309Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "TOP BINS MIGRATION AUDIT",
+    "path": "docs/summaries/TOP_BINS_MIGRATION_AUDIT.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.310Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "TOP BINS MIGRATION COMPLETE",
+    "path": "docs/summaries/TOP_BINS_MIGRATION_COMPLETE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.310Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "TOP BINS SEPARATION COMPLETE",
+    "path": "docs/summaries/TOP_BINS_SEPARATION_COMPLETE.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.311Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "TOP BINS SEPARATION PLAN",
+    "path": "docs/summaries/TOP_BINS_SEPARATION_PLAN.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.311Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "UPDATED EXECUTION PLAN",
+    "path": "docs/summaries/UPDATED_EXECUTION_PLAN.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.312Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "UPGRADE VITE7 LOG",
+    "path": "docs/summaries/UPGRADE_VITE7_LOG.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.312Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "ZOOMABLE CONSOLE IMPLEMENTATION SUMMARY",
+    "path": "docs/summaries/ZOOMABLE_CONSOLE_IMPLEMENTATION_SUMMARY.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T23:13:13.313Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "Console Manager Guide",
+    "path": "docs/research/console_manager_guide.md",
+    "status": "current",
+    "lastUpdated": "2025-07-07T19:22:12.719Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture",
+      "manager"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "Enhanced Platform Specs",
+    "path": "docs/research/enhanced_platform_specs.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T14:57:18.908Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "Greenlight Implementation Plan",
+    "path": "docs/research/greenlight_implementation_plan.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T14:56:53.391Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "Greenlight Portal Specs",
+    "path": "docs/research/greenlight_portal_specs.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T14:56:15.374Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "Greenlight Specs",
+    "path": "docs/research/greenlight_specs.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T14:58:08.863Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "Holon Platform Report",
+    "path": "docs/research/holon_platform_report.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T14:55:30.058Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture",
+      "holon"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "Pm Agent Specs",
+    "path": "docs/research/pm_agent_specs.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T14:53:22.400Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture",
+    "description": "Autonomous product roadmap management with intelligent task unification, prioritization, and visualization"
+  },
+  {
+    "name": "Ui Ux Design Guide 2025",
+    "path": "docs/research/ui_ux_design_guide_2025.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T14:54:45.517Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  },
+  {
+    "name": "PROTOCOL UPDATE REQUIREMENTS",
+    "path": "docs/protocols/PROTOCOL_UPDATE_REQUIREMENTS.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T15:29:10.967Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "protocols",
+      "protocol"
+    ],
+    "category": "protocols"
+  },
+  {
+    "name": "LAUNCH FAILURE RECORD 2025 07 08",
+    "path": "docs/history/LAUNCH_FAILURE_RECORD_2025-07-08.md",
+    "status": "current",
+    "lastUpdated": "2025-07-08T15:59:59.364Z",
+    "owner": "DocumentationManager",
+    "tags": [
+      "architecture"
+    ],
+    "category": "architecture"
+  }
+]

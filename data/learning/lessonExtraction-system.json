@@ -1,0 +1,20 @@
+{
+  "name": "Lesson Extraction System",
+  "description": "Systematic extraction of lessons from fixes and issues",
+  "extraction": {
+    "automated": "Automated extraction from fix logs and reports",
+    "manual": "Manual extraction during post-mortem reviews",
+    "collaborative": "Collaborative extraction during team meetings"
+  },
+  "lessons": {
+    "technical": "Technical lessons about tools, techniques, and approaches",
+    "process": "Process lessons about workflows and methodologies",
+    "communication": "Communication lessons about coordination and collaboration",
+    "strategic": "Strategic lessons about planning and decision-making"
+  },
+  "storage": {
+    "database": "Structured storage in lessons learned database",
+    "documentation": "Documentation in knowledge base",
+    "training": "Integration into training materials"
+  }
+}

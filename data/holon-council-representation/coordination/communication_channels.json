@@ -1,0 +1,33 @@
+{
+  "name": "Holon Communication Channels",
+  "channels": {
+    "holonStatus": {
+      "name": "Holon Status Channel",
+      "purpose": "Real-time holon status updates",
+      "participants": "all_holon_agents",
+      "frequency": "continuous",
+      "format": "structured_status_update"
+    },
+    "holonNeeds": {
+      "name": "Holon Needs Channel",
+      "purpose": "Holon resource and support requests",
+      "participants": "all_holon_agents",
+      "frequency": "as_needed",
+      "format": "structured_request"
+    },
+    "holonCoordination": {
+      "name": "Holon Coordination Channel",
+      "purpose": "Cross-holon coordination and collaboration",
+      "participants": "relevant_holon_agents",
+      "frequency": "scheduled",
+      "format": "coordination_meeting"
+    },
+    "councilDecisions": {
+      "name": "Council Decisions Channel",
+      "purpose": "Council decision announcements and implementation",
+      "participants": "all_holon_agents",
+      "frequency": "as_decided",
+      "format": "decision_announcement"
+    }
+  }
+}

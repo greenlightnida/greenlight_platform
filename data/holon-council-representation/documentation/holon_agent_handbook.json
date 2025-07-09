@@ -1,0 +1,34 @@
+{
+  "name": "Holon Agent Handbook",
+  "description": "Handbook for holon agents participating in Council",
+  "sections": {
+    "responsibilities": {
+      "title": "Agent Responsibilities",
+      "items": [
+        "Represent holon interests in Council",
+        "Participate in constituency balancing",
+        "Coordinate with other holon agents",
+        "Report holon status and needs",
+        "Vote on Council decisions"
+      ]
+    },
+    "protocols": {
+      "title": "Communication Protocols",
+      "items": [
+        "Use standardized communication channels",
+        "Follow coordination protocols",
+        "Participate in decision-making processes",
+        "Engage in conflict resolution when needed"
+      ]
+    },
+    "bestPractices": {
+      "title": "Best Practices",
+      "items": [
+        "Maintain regular communication with holon",
+        "Advocate for holon needs effectively",
+        "Collaborate with other agents constructively",
+        "Follow Council governance procedures"
+      ]
+    }
+  }
+}

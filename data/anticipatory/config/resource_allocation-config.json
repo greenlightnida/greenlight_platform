@@ -1,0 +1,13 @@
+{
+  "allocationStrategy": "optimal",
+  "constraints": {
+    "maxConcurrent": 5,
+    "maxEffort": 40,
+    "maxRisk": 0.3
+  },
+  "optimization": {
+    "efficiency": 0.8,
+    "utilization": 0.9,
+    "balance": 0.7
+  }
+}

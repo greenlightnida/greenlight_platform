@@ -1,0 +1,556 @@
+{
+  "timestamp": "2025-07-09T21:50:09.470Z",
+  "protocolAnalysis": {
+    "complexity": {
+      "scripts/protocols/launch_protocol.cjs": {
+        "size": 52930,
+        "lines": 1337,
+        "functions": 0,
+        "classes": 1,
+        "complexityScore": 443
+      },
+      "scripts/protocols/pre_wrap_audit_protocol.cjs": {
+        "size": 16098,
+        "lines": 450,
+        "functions": 0,
+        "classes": 1,
+        "complexityScore": 233
+      },
+      "scripts/anchor_manager.cjs": {
+        "size": 36380,
+        "lines": 1048,
+        "functions": 0,
+        "classes": 1,
+        "complexityScore": 536
+      },
+      "scripts/command_coordinator.cjs": {
+        "size": 11015,
+        "lines": 330,
+        "functions": 0,
+        "classes": 1,
+        "complexityScore": 119
+      }
+    },
+    "dependencies": {
+      "scripts/protocols/launch_protocol.cjs": {
+        "requires": [
+          "fs",
+          "path",
+          "child_process",
+          "os"
+        ],
+        "imports": [],
+        "execSync": [
+          "execSync('node scripts/protocols/prevention_system.cjs', {\n        encoding: 'utf8',\n        cwd: this.projectRoot,\n        timeout: 60000\n      })",
+          "execSync('cd frontend && npm run build', { stdio: 'pipe' })",
+          "execSync('curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173', { encoding: 'utf8' })",
+          "execSync('cd frontend && npx tsc --noEmit', { stdio: 'pipe' })",
+          "execSync('cd backend && npx tsc --noEmit', { stdio: 'pipe' })",
+          "execSync('curl -s http://localhost:3001/health', { encoding: 'utf8' })",
+          "execSync('curl -s http://localhost:3001/api/status', { encoding: 'utf8' })",
+          "execSync('git status --porcelain', { encoding: 'utf8' })",
+          "execSync('git branch --show-current', { encoding: 'utf8' })",
+          "execSync('git log -1 --oneline', { encoding: 'utf8' })",
+          "execSync('npm run build', { encoding: 'utf8' })",
+          "execSync('git status --porcelain', { encoding: 'utf8' })"
+        ],
+        "fileSystem": [
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.writeFile",
+          "fs.writeFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.writeFile",
+          "fs.existsSync",
+          "fs.writeFile"
+        ]
+      },
+      "scripts/protocols/pre_wrap_audit_protocol.cjs": {
+        "requires": [
+          "fs",
+          "path",
+          "child_process"
+        ],
+        "imports": [],
+        "execSync": [
+          "execSync(`node scripts/extract_session_communication.js --next-session --sessionId ${sessionId} --output NEXT_SESSION_CONTEXT.md`, { stdio: 'inherit' })",
+          "execSync('npm test', { stdio: 'pipe' })",
+          "execSync('npm run lint', { stdio: 'pipe' })",
+          "execSync('npm run build', { stdio: 'pipe' })"
+        ],
+        "fileSystem": [
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.readdirSync"
+        ]
+      },
+      "scripts/anchor_manager.cjs": {
+        "requires": [
+          "fs",
+          "path",
+          "child_process"
+        ],
+        "imports": [],
+        "execSync": [
+          "execSync('git log -1 --format=\"%H %s\"', { \n          cwd: platform.path, \n          encoding: 'utf8',\n          stdio: 'pipe'\n        })",
+          "execSync('npm outdated --json', { \n        cwd: this.projectRoot, \n        encoding: 'utf8',\n        stdio: 'pipe'\n      })",
+          "execSync('npm audit --json', { \n        cwd: this.projectRoot, \n        encoding: 'utf8',\n        stdio: 'pipe'\n      })",
+          "execSync('lsof -i :3000,3001,3002,8080,8081', { \n              encoding: 'utf8',\n              stdio: 'pipe'\n            })",
+          "execSync('node --version', { encoding: 'utf8' })",
+          "execSync('git log --oneline -5', { \n          cwd: this.projectRoot, \n          encoding: 'utf8',\n          stdio: 'pipe'\n        })"
+        ],
+        "fileSystem": [
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.writeFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.writeFile"
+        ]
+      },
+      "scripts/command_coordinator.cjs": {
+        "requires": [
+          "fs",
+          "path",
+          "child_process",
+          "os",
+          "os",
+          "child_process"
+        ],
+        "imports": [],
+        "execSync": [],
+        "fileSystem": [
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.writeFile"
+        ]
+      }
+    },
+    "issues": [
+      {
+        "protocol": "scripts/protocols/launch_protocol.cjs",
+        "type": "high_complexity",
+        "severity": "warning",
+        "value": 443
+      },
+      {
+        "protocol": "scripts/protocols/launch_protocol.cjs",
+        "type": "large_size",
+        "severity": "warning",
+        "value": 52930
+      },
+      {
+        "protocol": "scripts/protocols/end_of_chat_protocol.js",
+        "type": "missing",
+        "severity": "error"
+      },
+      {
+        "protocol": "scripts/protocols/pre_wrap_audit_protocol.cjs",
+        "type": "high_complexity",
+        "severity": "warning",
+        "value": 233
+      },
+      {
+        "protocol": "scripts/anchor_manager.cjs",
+        "type": "high_complexity",
+        "severity": "warning",
+        "value": 536
+      },
+      {
+        "protocol": "scripts/command_coordinator.cjs",
+        "type": "high_complexity",
+        "severity": "warning",
+        "value": 119
+      }
+    ],
+    "dependencyGraph": {
+      "scripts/protocols/launch_protocol.cjs": {
+        "requires": [
+          "fs",
+          "path",
+          "child_process",
+          "os"
+        ],
+        "execSync": [
+          "execSync('node scripts/protocols/prevention_system.cjs', {\n        encoding: 'utf8',\n        cwd: this.projectRoot,\n        timeout: 60000\n      })",
+          "execSync('cd frontend && npm run build', { stdio: 'pipe' })",
+          "execSync('curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173', { encoding: 'utf8' })",
+          "execSync('cd frontend && npx tsc --noEmit', { stdio: 'pipe' })",
+          "execSync('cd backend && npx tsc --noEmit', { stdio: 'pipe' })",
+          "execSync('curl -s http://localhost:3001/health', { encoding: 'utf8' })",
+          "execSync('curl -s http://localhost:3001/api/status', { encoding: 'utf8' })",
+          "execSync('git status --porcelain', { encoding: 'utf8' })",
+          "execSync('git branch --show-current', { encoding: 'utf8' })",
+          "execSync('git log -1 --oneline', { encoding: 'utf8' })",
+          "execSync('npm run build', { encoding: 'utf8' })",
+          "execSync('git status --porcelain', { encoding: 'utf8' })"
+        ],
+        "fileSystem": [
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.writeFile",
+          "fs.writeFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.writeFile",
+          "fs.existsSync",
+          "fs.writeFile"
+        ]
+      },
+      "scripts/protocols/pre_wrap_audit_protocol.cjs": {
+        "requires": [
+          "fs",
+          "path",
+          "child_process"
+        ],
+        "execSync": [
+          "execSync(`node scripts/extract_session_communication.js --next-session --sessionId ${sessionId} --output NEXT_SESSION_CONTEXT.md`, { stdio: 'inherit' })",
+          "execSync('npm test', { stdio: 'pipe' })",
+          "execSync('npm run lint', { stdio: 'pipe' })",
+          "execSync('npm run build', { stdio: 'pipe' })"
+        ],
+        "fileSystem": [
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.readdirSync"
+        ]
+      },
+      "scripts/anchor_manager.cjs": {
+        "requires": [
+          "fs",
+          "path",
+          "child_process"
+        ],
+        "execSync": [
+          "execSync('git log -1 --format=\"%H %s\"', { \n          cwd: platform.path, \n          encoding: 'utf8',\n          stdio: 'pipe'\n        })",
+          "execSync('npm outdated --json', { \n        cwd: this.projectRoot, \n        encoding: 'utf8',\n        stdio: 'pipe'\n      })",
+          "execSync('npm audit --json', { \n        cwd: this.projectRoot, \n        encoding: 'utf8',\n        stdio: 'pipe'\n      })",
+          "execSync('lsof -i :3000,3001,3002,8080,8081', { \n              encoding: 'utf8',\n              stdio: 'pipe'\n            })",
+          "execSync('node --version', { encoding: 'utf8' })",
+          "execSync('git log --oneline -5', { \n          cwd: this.projectRoot, \n          encoding: 'utf8',\n          stdio: 'pipe'\n        })"
+        ],
+        "fileSystem": [
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.readdirSync",
+          "fs.readFile",
+          "fs.existsSync",
+          "fs.writeFile",
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.readFile",
+          "fs.writeFile"
+        ]
+      },
+      "scripts/command_coordinator.cjs": {
+        "requires": [
+          "fs",
+          "path",
+          "child_process",
+          "os",
+          "os",
+          "child_process"
+        ],
+        "execSync": [],
+        "fileSystem": [
+          "fs.existsSync",
+          "fs.existsSync",
+          "fs.writeFile"
+        ]
+      }
+    }
+  },
+  "sessionMetrics": {
+    "totalSessions": 91,
+    "activeSessions": 0,
+    "sessionHistory": [
+      {
+        "file": "transition-memo-2025-07-09T14-13-57-171Z.json",
+        "timestamp": "2025-07-09T14:13:57.171Z",
+        "status": "unknown",
+        "size": 329
+      },
+      {
+        "file": "transition-memo-2025-07-09T14-17-30-000Z.json",
+        "timestamp": "2025-07-09T14:17:30.000Z",
+        "status": "unknown",
+        "size": 4868
+      },
+      {
+        "file": "transition-memo-2025-07-09T14-20-53-302Z.json",
+        "timestamp": "2025-07-09T14:20:53.303Z",
+        "status": "unknown",
+        "size": 329
+      },
+      {
+        "file": "transition-memo-2025-07-09T14-22-10-372Z.json",
+        "timestamp": "2025-07-09T14:22:10.372Z",
+        "status": "unknown",
+        "size": 329
+      },
+      {
+        "file": "transition-memo-2025-07-09T14-23-33-164Z.json",
+        "timestamp": "2025-07-09T14:23:33.164Z",
+        "status": "unknown",
+        "size": 329
+      },
+      {
+        "file": "transition-memo-2025-07-09T17-05-50-880Z.json",
+        "timestamp": "2025-07-09T17:05:50.880Z",
+        "status": "unknown",
+        "size": 329
+      },
+      {
+        "file": "transition-memo-2025-07-09T17-15-52-905Z.json",
+        "timestamp": "2025-07-09T17:15:52.905Z",
+        "status": "unknown",
+        "size": 329
+      },
+      {
+        "file": "transition-memo-2025-07-09T18-57-08-999Z.json",
+        "timestamp": "2025-07-09T18:57:08.999Z",
+        "status": "unknown",
+        "size": 329
+      },
+      {
+        "file": "transition-memo-2025-07-09T19-40-38-615Z.json",
+        "timestamp": "2025-07-09T19:40:38.615Z",
+        "status": "unknown",
+        "size": 329
+      },
+      {
+        "file": "transition-memo-2025-07-09T21-06-15-079Z.json",
+        "timestamp": "2025-07-09T21:06:15.079Z",
+        "status": "unknown",
+        "size": 329
+      }
+    ],
+    "contextPreservation": {
+      "data/context-preservation": {
+        "files": 5,
+        "latest": "wrap-1752093396776-ki30bim71-context.json"
+      },
+      "data/system-state": {
+        "files": 12,
+        "latest": "wrap-1752093396776-ki30bim71-system-state.json"
+      },
+      "data/transitions": {
+        "files": 8,
+        "latest": "wrap-1752093396776-ki30bim71-transition.json"
+      }
+    },
+    "stateTransitions": []
+  },
+  "systemHealth": {
+    "buildStatus": "failed",
+    "gitStatus": "dirty",
+    "fileIntegrity": {
+      "package.json": {
+        "exists": true,
+        "size": 4874,
+        "modified": "2025-07-09T21:38:48.501Z"
+      },
+      "scripts/anchor_manager.cjs": {
+        "exists": true,
+        "size": 36380,
+        "modified": "2025-07-09T18:51:52.561Z"
+      },
+      "scripts/command_coordinator.cjs": {
+        "exists": true,
+        "size": 11015,
+        "modified": "2025-07-09T20:33:44.302Z"
+      },
+      "LIVING_ROADMAP.md": {
+        "exists": true,
+        "size": 13356,
+        "modified": "2025-07-09T11:35:57.084Z"
+      }
+    },
+    "performance": {
+      "cpuUsage": 0,
+      "memoryUsage": 0,
+      "fileCount": 74855,
+      "directoryDepth": 10
+    }
+  },
+  "recommendations": []
+}

@@ -1,0 +1,59 @@
+{
+  "name": "Holon Decision Making Processes",
+  "processes": {
+    "routineDecisions": {
+      "name": "Routine Decisions",
+      "threshold": 0.5,
+      "participants": "relevant_holon_agents",
+      "timeframe": "within_day",
+      "process": [
+        "proposal",
+        "quick_review",
+        "vote",
+        "implementation"
+      ]
+    },
+    "importantDecisions": {
+      "name": "Important Decisions",
+      "threshold": 0.6,
+      "participants": "all_holon_agents",
+      "timeframe": "within_week",
+      "process": [
+        "proposal",
+        "discussion",
+        "stakeholder_input",
+        "vote",
+        "implementation"
+      ]
+    },
+    "criticalDecisions": {
+      "name": "Critical Decisions",
+      "threshold": 0.75,
+      "participants": "all_holon_agents",
+      "timeframe": "within_week",
+      "process": [
+        "proposal",
+        "extensive_discussion",
+        "impact_analysis",
+        "stakeholder_consultation",
+        "vote",
+        "implementation"
+      ]
+    },
+    "strategicDecisions": {
+      "name": "Strategic Decisions",
+      "threshold": 0.9,
+      "participants": "all_holon_agents",
+      "timeframe": "within_month",
+      "process": [
+        "proposal",
+        "strategic_analysis",
+        "stakeholder_consultation",
+        "impact_assessment",
+        "consensus_building",
+        "vote",
+        "implementation"
+      ]
+    }
+  }
+}

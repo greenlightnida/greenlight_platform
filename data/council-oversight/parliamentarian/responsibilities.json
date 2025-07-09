@@ -1,0 +1,45 @@
+{
+  "name": "Parliamentarian Responsibilities",
+  "responsibilities": {
+    "proceduralOversight": {
+      "title": "Procedural Oversight",
+      "description": "Ensure proper parliamentary procedures and rules",
+      "activities": [
+        "Monitor and enforce Council procedural rules",
+        "Ensure fair and consistent application of procedures",
+        "Advise on parliamentary procedure questions",
+        "Maintain procedural integrity and consistency"
+      ]
+    },
+    "efficiencyOptimization": {
+      "title": "Efficiency Optimization",
+      "description": "Optimize Council operations and decision-making efficiency",
+      "activities": [
+        "Analyze and optimize Council workflows",
+        "Identify and eliminate procedural inefficiencies",
+        "Streamline decision-making processes",
+        "Enhance Council operational effectiveness"
+      ]
+    },
+    "communicationOptimization": {
+      "title": "Communication Optimization",
+      "description": "Optimize communication pathways and information flow",
+      "activities": [
+        "Optimize holon agent communication channels",
+        "Ensure effective information routing and distribution",
+        "Monitor communication effectiveness and clarity",
+        "Improve communication protocols and procedures"
+      ]
+    },
+    "continuousImprovement": {
+      "title": "Continuous Improvement Facilitation",
+      "description": "Facilitate continuous improvement of Council operations",
+      "activities": [
+        "Identify improvement opportunities in Council operations",
+        "Design and implement optimization strategies",
+        "Monitor improvement effectiveness and outcomes",
+        "Foster culture of continuous improvement"
+      ]
+    }
+  }
+}

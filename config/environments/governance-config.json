@@ -1,0 +1,7 @@
+{
+  "scanInterval": 300000,
+  "alertThreshold": 5,
+  "autoFix": true,
+  "monitoring": true,
+  "logLevel": "info"
+}

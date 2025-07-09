@@ -1,0 +1,112 @@
+{
+  "systemEvolutions": [
+    {
+      "type": "performance",
+      "description": "Test evolution",
+      "impact": "low",
+      "priority": "low",
+      "estimatedEffort": 1,
+      "metrics": {
+        "before": {
+          "test": 100
+        }
+      },
+      "dependencies": [],
+      "stakeholders": [],
+      "risks": [],
+      "benefits": [],
+      "id": "evolution-1751984960583-pxa8w6mik",
+      "status": "proposed",
+      "createdAt": "2025-07-08T14:29:20.583Z",
+      "updatedAt": "2025-07-08T14:29:20.583Z"
+    },
+    {
+      "type": "performance",
+      "description": "Test evolution",
+      "impact": "low",
+      "priority": "low",
+      "estimatedEffort": 1,
+      "metrics": {
+        "before": {
+          "test": 100
+        }
+      },
+      "dependencies": [],
+      "stakeholders": [],
+      "risks": [],
+      "benefits": [],
+      "id": "evolution-1751985337116-vv9wf5yjd",
+      "status": "proposed",
+      "createdAt": "2025-07-08T14:35:37.116Z",
+      "updatedAt": "2025-07-08T14:35:37.116Z"
+    }
+  ],
+  "protocolOptimizations": [],
+  "governancePolicies": [
+    {
+      "id": "performance-threshold",
+      "name": "Performance Threshold Policy",
+      "category": "performance",
+      "description": "Enforce minimum performance thresholds for protocols and systems",
+      "rules": [
+        {
+          "id": "execution-time",
+          "condition": "executionTime > 1000",
+          "action": "warn",
+          "severity": "medium",
+          "description": "Protocol execution time exceeds 1 second"
+        },
+        {
+          "id": "success-rate",
+          "condition": "successRate < 90",
+          "action": "enforce",
+          "severity": "high",
+          "description": "Protocol success rate below 90%"
+        }
+      ],
+      "enforcement": "strict",
+      "scope": "global",
+      "targetScope": [
+        "all"
+      ],
+      "enabled": true,
+      "compliance": {
+        "score": 100,
+        "lastCheck": "2025-07-08T14:35:37.109Z",
+        "violations": []
+      },
+      "createdAt": "2025-07-08T14:35:37.109Z",
+      "updatedAt": "2025-07-08T14:35:37.109Z"
+    },
+    {
+      "id": "evolution-approval",
+      "name": "Evolution Approval Policy",
+      "category": "system",
+      "description": "Require approval for system evolutions with high impact",
+      "rules": [
+        {
+          "id": "high-impact",
+          "condition": "impact == \"critical\" || impact == \"high\"",
+          "action": "enforce",
+          "severity": "high",
+          "description": "High impact evolutions require approval"
+        }
+      ],
+      "enforcement": "strict",
+      "scope": "global",
+      "targetScope": [
+        "systemMaster",
+        "elaborate"
+      ],
+      "enabled": true,
+      "compliance": {
+        "score": 100,
+        "lastCheck": "2025-07-08T14:35:37.111Z",
+        "violations": []
+      },
+      "createdAt": "2025-07-08T14:35:37.111Z",
+      "updatedAt": "2025-07-08T14:35:37.111Z"
+    }
+  ],
+  "lastUpdated": "2025-07-08T14:35:37.523Z"
+}

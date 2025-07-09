@@ -1,0 +1,611 @@
+#!/usr/bin/env tsx
+
+/**
+ * Server Manager - Operations Core Component
+ * 
+ * PURPOSE: Manage server lifecycle, monitoring, and governance
+ * - Server provisioning and deployment
+ * - Health monitoring and alerting
+ * - Resource management and scaling
+ * - Security and compliance monitoring
+ * - Lifecycle management and maintenance
+ * 
+ * USAGE: import { ServerManager } from './core/operations/ServerManager';
+ */
+
+import fs from 'fs';
+import path from 'path';
+import { EventEmitter } from 'events';
+import { configManager } from '../../config/ConfigManager';
+
+export interface ServerConfig {
+  id: string;
+  name: string;
+  type: 'api' | 'web' | 'database' | 'cache' | 'monitoring' | 'auth';
+  environment: 'development' | 'staging' | 'production';
+  host: string;
+  port: number;
+  protocol: 'http' | 'https';
+  healthCheck: {
+    endpoint: string;
+    interval: number;
+    timeout: number;
+    expectedStatus: number;
+  };
+  resources: {
+    cpu: {
+      min: number;
+      max: number;
+      current: number;
+    };
+    memory: {
+      min: number;
+      max: number;
+      current: number;
+    };
+    disk: {
+      min: number;
+      max: number;
+      current: number;
+    };
+  };
+  security: {
+    sslEnabled: boolean;
+    firewallRules: string[];
+    accessControl: string[];
+    monitoring: boolean;
+  };
+  scaling: {
+    autoScaling: boolean;
+    minInstances: number;
+    maxInstances: number;
+    currentInstances: number;
+    scaleUpThreshold: number;
+    scaleDownThreshold: number;
+  };
+  maintenance: {
+    schedule: string;
+    lastMaintenance: Date;
+    nextMaintenance: Date;
+    maintenanceWindow: number;
+  };
+  dependencies: string[];
+  status: 'running' | 'stopped' | 'maintenance' | 'error' | 'scaling';
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface ServerMetrics {
+  serverId: string;
+  timestamp: Date;
+  cpu: number;
+  memory: number;
+  disk: number;
+  networkIn: number;
+  networkOut: number;
+  responseTime: number;
+  requestsPerSecond: number;
+  errorRate: number;
+  uptime: number;
+}
+
+export interface ServerAlert {
+  id: string;
+  serverId: string;
+  type: 'health' | 'resource' | 'security' | 'performance' | 'maintenance';
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  message: string;
+  timestamp: Date;
+  acknowledged: boolean;
+  resolved: boolean;
+}
+
+export interface ServerLifecycle {
+  phase: 'provisioning' | 'deploying' | 'running' | 'maintenance' | 'scaling' | 'decommissioning';
+  status: 'pending' | 'in_progress' | 'completed' | 'failed';
+  startTime: Date;
+  endTime?: Date;
+  metadata: Record<string, any>;
+}
+
+export class ServerManager extends EventEmitter {
+  private static instance: ServerManager;
+  private servers: Map<string, ServerConfig> = new Map();
+  private metrics: Map<string, ServerMetrics[]> = new Map();
+  private alerts: Map<string, ServerAlert[]> = new Map();
+  private lifecycles: Map<string, ServerLifecycle[]> = new Map();
+  private monitoringInterval: NodeJS.Timeout | null = null;
+  private configPath: string;
+
+  private constructor() {
+    super();
+    this.configPath = path.resolve(process.cwd(), 'config', 'servers');
+    this.initializeServerManager();
+  }
+
+  public static getInstance(): ServerManager {
+    if (!ServerManager.instance) {
+      ServerManager.instance = new ServerManager();
+    }
+    return ServerManager.instance;
+  }
+
+  private async initializeServerManager(): Promise<void> {
+    try {
+      // Create server configuration directory
+      if (!fs.existsSync(this.configPath)) {
+        fs.mkdirSync(this.configPath, { recursive: true });
+      }
+
+      // Load existing server configurations
+      await this.loadServerConfigurations();
+
+      // Start monitoring
+      this.startMonitoring();
+
+      // Emit initialization event
+      this.emit('initialized', {
+        timestamp: new Date(),
+        serversCount: this.servers.size,
+        status: 'ready'
+      });
+
+      console.log('🚀 Server Manager initialized successfully');
+      console.log(`📊 Managing ${this.servers.size} servers`);
+    } catch (error) {
+      console.error('❌ Server Manager initialization failed:', error);
+      throw error;
+    }
+  }
+
+  // Server Lifecycle Management
+  public async provisionServer(config: Omit<ServerConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<ServerConfig> {
+    const serverId = this.generateServerId(config.type, config.name);
+    const server: ServerConfig = {
+      ...config,
+      id: serverId,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    };
+
+    try {
+      // Create lifecycle entry
+      const lifecycle: ServerLifecycle = {
+        phase: 'provisioning',
+        status: 'in_progress',
+        startTime: new Date(),
+        metadata: { config: server }
+      };
+
+      this.lifecycles.set(serverId, [lifecycle]);
+      this.emit('server:provisioning', { serverId, config: server });
+
+      // Simulate server provisioning (replace with actual provisioning logic)
+      await this.simulateProvisioning(server);
+
+      // Update lifecycle
+      lifecycle.status = 'completed';
+      lifecycle.endTime = new Date();
+      server.status = 'running';
+
+      // Save server configuration
+      this.servers.set(serverId, server);
+      await this.saveServerConfiguration(serverId, server);
+
+      // Initialize monitoring
+      this.initializeServerMonitoring(server);
+
+      this.emit('server:provisioned', { serverId, server });
+      console.log(`✅ Server provisioned: ${server.name} (${serverId})`);
+
+      return server;
+    } catch (error) {
+      const lifecycle = this.lifecycles.get(serverId)?.[0];
+      if (lifecycle) {
+        lifecycle.status = 'failed';
+        lifecycle.endTime = new Date();
+        lifecycle.metadata.error = error.message;
+      }
+
+      this.emit('server:provisioning_failed', { serverId, error });
+      throw error;
+    }
+  }
+
+  public async deployServer(serverId: string, deploymentConfig: any): Promise<void> {
+    const server = this.servers.get(serverId);
+    if (!server) {
+      throw new Error(`Server not found: ${serverId}`);
+    }
+
+    const lifecycle: ServerLifecycle = {
+      phase: 'deploying',
+      status: 'in_progress',
+      startTime: new Date(),
+      metadata: { deploymentConfig }
+    };
+
+    this.lifecycles.get(serverId)?.push(lifecycle);
+    this.emit('server:deploying', { serverId, deploymentConfig });
+
+    try {
+      // Simulate deployment (replace with actual deployment logic)
+      await this.simulateDeployment(server, deploymentConfig);
+
+      lifecycle.status = 'completed';
+      lifecycle.endTime = new Date();
+      server.status = 'running';
+      server.updatedAt = new Date();
+
+      await this.saveServerConfiguration(serverId, server);
+      this.emit('server:deployed', { serverId, server });
+    } catch (error) {
+      lifecycle.status = 'failed';
+      lifecycle.endTime = new Date();
+      lifecycle.metadata.error = error.message;
+
+      this.emit('server:deployment_failed', { serverId, error });
+      throw error;
+    }
+  }
+
+  public async stopServer(serverId: string): Promise<void> {
+    const server = this.servers.get(serverId);
+    if (!server) {
+      throw new Error(`Server not found: ${serverId}`);
+    }
+
+    server.status = 'stopped';
+    server.updatedAt = new Date();
+
+    await this.saveServerConfiguration(serverId, server);
+    this.emit('server:stopped', { serverId, server });
+  }
+
+  public async startServer(serverId: string): Promise<void> {
+    const server = this.servers.get(serverId);
+    if (!server) {
+      throw new Error(`Server not found: ${serverId}`);
+    }
+
+    server.status = 'running';
+    server.updatedAt = new Date();
+
+    await this.saveServerConfiguration(serverId, server);
+    this.emit('server:started', { serverId, server });
+  }
+
+  public async scaleServer(serverId: string, scaleConfig: any): Promise<void> {
+    const server = this.servers.get(serverId);
+    if (!server) {
+      throw new Error(`Server not found: ${serverId}`);
+    }
+
+    const lifecycle: ServerLifecycle = {
+      phase: 'scaling',
+      status: 'in_progress',
+      startTime: new Date(),
+      metadata: { scaleConfig }
+    };
+
+    this.lifecycles.get(serverId)?.push(lifecycle);
+    this.emit('server:scaling', { serverId, scaleConfig });
+
+    try {
+      // Simulate scaling (replace with actual scaling logic)
+      await this.simulateScaling(server, scaleConfig);
+
+      lifecycle.status = 'completed';
+      lifecycle.endTime = new Date();
+      server.status = 'running';
+      server.updatedAt = new Date();
+
+      await this.saveServerConfiguration(serverId, server);
+      this.emit('server:scaled', { serverId, server });
+    } catch (error) {
+      lifecycle.status = 'failed';
+      lifecycle.endTime = new Date();
+      lifecycle.metadata.error = error.message;
+
+      this.emit('server:scaling_failed', { serverId, error });
+      throw error;
+    }
+  }
+
+  public async decommissionServer(serverId: string): Promise<void> {
+    const server = this.servers.get(serverId);
+    if (!server) {
+      throw new Error(`Server not found: ${serverId}`);
+    }
+
+    const lifecycle: ServerLifecycle = {
+      phase: 'decommissioning',
+      status: 'in_progress',
+      startTime: new Date(),
+      metadata: {}
+    };
+
+    this.lifecycles.get(serverId)?.push(lifecycle);
+    this.emit('server:decommissioning', { serverId, server });
+
+    try {
+      // Simulate decommissioning (replace with actual decommissioning logic)
+      await this.simulateDecommissioning(server);
+
+      lifecycle.status = 'completed';
+      lifecycle.endTime = new Date();
+
+      // Remove server from management
+      this.servers.delete(serverId);
+      this.metrics.delete(serverId);
+      this.alerts.delete(serverId);
+
+      // Remove configuration file
+      const configFile = path.join(this.configPath, `${serverId}.json`);
+      if (fs.existsSync(configFile)) {
+        fs.unlinkSync(configFile);
+      }
+
+      this.emit('server:decommissioned', { serverId, server });
+    } catch (error) {
+      lifecycle.status = 'failed';
+      lifecycle.endTime = new Date();
+      lifecycle.metadata.error = error.message;
+
+      this.emit('server:decommissioning_failed', { serverId, error });
+      throw error;
+    }
+  }
+
+  // Monitoring and Health Checks
+  private startMonitoring(): void {
+    this.monitoringInterval = setInterval(async () => {
+      for (const [serverId, server] of this.servers) {
+        if (server.status === 'running') {
+          await this.performHealthCheck(serverId, server);
+          await this.collectMetrics(serverId, server);
+          await this.checkResourceUsage(serverId, server);
+        }
+      }
+    }, 30000); // Check every 30 seconds
+  }
+
+  private async performHealthCheck(serverId: string, server: ServerConfig): Promise<void> {
+    try {
+      const url = `${server.protocol}://${server.host}:${server.port}${server.healthCheck.endpoint}`;
+      const response = await fetch(url, { 
+        method: 'GET',
+        signal: AbortSignal.timeout(server.healthCheck.timeout)
+      });
+
+      if (response.status !== server.healthCheck.expectedStatus) {
+        await this.createAlert(serverId, 'health', 'high', 
+          `Health check failed: Expected ${server.healthCheck.expectedStatus}, got ${response.status}`);
+      }
+    } catch (error) {
+      await this.createAlert(serverId, 'health', 'critical', 
+        `Health check failed: ${error.message}`);
+    }
+  }
+
+  private async collectMetrics(serverId: string, server: ServerConfig): Promise<void> {
+    // Simulate metrics collection (replace with actual metrics collection)
+    const metrics: ServerMetrics = {
+      serverId,
+      timestamp: new Date(),
+      cpu: Math.random() * 100,
+      memory: Math.random() * 100,
+      disk: Math.random() * 100,
+      networkIn: Math.random() * 1000,
+      networkOut: Math.random() * 1000,
+      responseTime: Math.random() * 1000,
+      requestsPerSecond: Math.random() * 100,
+      errorRate: Math.random() * 5,
+      uptime: Date.now() - server.createdAt.getTime()
+    };
+
+    if (!this.metrics.has(serverId)) {
+      this.metrics.set(serverId, []);
+    }
+
+    this.metrics.get(serverId)!.push(metrics);
+
+    // Keep only last 1000 metrics per server
+    const serverMetrics = this.metrics.get(serverId)!;
+    if (serverMetrics.length > 1000) {
+      this.metrics.set(serverId, serverMetrics.slice(-1000));
+    }
+
+    this.emit('metrics:collected', { serverId, metrics });
+  }
+
+  private async checkResourceUsage(serverId: string, server: ServerConfig): Promise<void> {
+    const latestMetrics = this.metrics.get(serverId)?.slice(-1)[0];
+    if (!latestMetrics) return;
+
+    // Check CPU usage
+    if (latestMetrics.cpu > server.resources.cpu.max) {
+      await this.createAlert(serverId, 'resource', 'high', 
+        `CPU usage exceeded limit: ${latestMetrics.cpu.toFixed(2)}%`);
+    }
+
+    // Check memory usage
+    if (latestMetrics.memory > server.resources.memory.max) {
+      await this.createAlert(serverId, 'resource', 'high', 
+        `Memory usage exceeded limit: ${latestMetrics.memory.toFixed(2)}%`);
+    }
+
+    // Check disk usage
+    if (latestMetrics.disk > server.resources.disk.max) {
+      await this.createAlert(serverId, 'resource', 'medium', 
+        `Disk usage exceeded limit: ${latestMetrics.disk.toFixed(2)}%`);
+    }
+
+    // Check error rate
+    if (latestMetrics.errorRate > 5) {
+      await this.createAlert(serverId, 'performance', 'high', 
+        `High error rate: ${latestMetrics.errorRate.toFixed(2)}%`);
+    }
+  }
+
+  // Alert Management
+  private async createAlert(serverId: string, type: ServerAlert['type'], severity: ServerAlert['severity'], message: string): Promise<void> {
+    const alert: ServerAlert = {
+      id: this.generateAlertId(),
+      serverId,
+      type,
+      severity,
+      message,
+      timestamp: new Date(),
+      acknowledged: false,
+      resolved: false
+    };
+
+    if (!this.alerts.has(serverId)) {
+      this.alerts.set(serverId, []);
+    }
+
+    this.alerts.get(serverId)!.push(alert);
+    this.emit('alert:created', { serverId, alert });
+
+    // Log critical alerts
+    if (severity === 'critical') {
+      console.error(`🚨 CRITICAL ALERT [${serverId}]: ${message}`);
+    }
+  }
+
+  public async acknowledgeAlert(serverId: string, alertId: string): Promise<void> {
+    const alert = this.alerts.get(serverId)?.find(a => a.id === alertId);
+    if (alert) {
+      alert.acknowledged = true;
+      this.emit('alert:acknowledged', { serverId, alertId });
+    }
+  }
+
+  public async resolveAlert(serverId: string, alertId: string): Promise<void> {
+    const alert = this.alerts.get(serverId)?.find(a => a.id === alertId);
+    if (alert) {
+      alert.resolved = true;
+      this.emit('alert:resolved', { serverId, alertId });
+    }
+  }
+
+  // Configuration Management
+  private async loadServerConfigurations(): Promise<void> {
+    try {
+      const files = fs.readdirSync(this.configPath);
+      for (const file of files) {
+        if (file.endsWith('.json')) {
+          const serverId = file.replace('.json', '');
+          const configPath = path.join(this.configPath, file);
+          const configData = fs.readFileSync(configPath, 'utf8');
+          const serverConfig: ServerConfig = JSON.parse(configData);
+          this.servers.set(serverId, serverConfig);
+        }
+      }
+    } catch (error) {
+      console.warn('No existing server configurations found');
+    }
+  }
+
+  private async saveServerConfiguration(serverId: string, config: ServerConfig): Promise<void> {
+    const configPath = path.join(this.configPath, `${serverId}.json`);
+    fs.writeFileSync(configPath, JSON.stringify(config, null, 2));
+  }
+
+  // Utility Methods
+  private generateServerId(type: string, name: string): string {
+    const timestamp = Date.now();
+    const random = Math.random().toString(36).substring(2, 8);
+    return `${type}-${name}-${timestamp}-${random}`;
+  }
+
+  private generateAlertId(): string {
+    return `alert-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
+  }
+
+  private initializeServerMonitoring(server: ServerConfig): void {
+    // Initialize metrics collection for the server
+    this.metrics.set(server.id, []);
+    this.alerts.set(server.id, []);
+  }
+
+  // Simulation Methods (replace with actual implementations)
+  private async simulateProvisioning(server: ServerConfig): Promise<void> {
+    await new Promise(resolve => setTimeout(resolve, 2000));
+  }
+
+  private async simulateDeployment(server: ServerConfig, config: any): Promise<void> {
+    await new Promise(resolve => setTimeout(resolve, 3000));
+  }
+
+  private async simulateScaling(server: ServerConfig, config: any): Promise<void> {
+    await new Promise(resolve => setTimeout(resolve, 1500));
+  }
+
+  private async simulateDecommissioning(server: ServerConfig): Promise<void> {
+    await new Promise(resolve => setTimeout(resolve, 1000));
+  }
+
+  // Public API Methods
+  public getServers(): ServerConfig[] {
+    return Array.from(this.servers.values());
+  }
+
+  public getServer(serverId: string): ServerConfig | undefined {
+    return this.servers.get(serverId);
+  }
+
+  public getServerMetrics(serverId: string, limit: number = 100): ServerMetrics[] {
+    return this.metrics.get(serverId)?.slice(-limit) || [];
+  }
+
+  public getServerAlerts(serverId: string, unresolved: boolean = true): ServerAlert[] {
+    const alerts = this.alerts.get(serverId) || [];
+    return unresolved ? alerts.filter(a => !a.resolved) : alerts;
+  }
+
+  public getServerLifecycle(serverId: string): ServerLifecycle[] {
+    return this.lifecycles.get(serverId) || [];
+  }
+
+  public getSystemStatus(): any {
+    const servers = this.getServers();
+    const totalAlerts = Array.from(this.alerts.values()).flat().filter(a => !a.resolved).length;
+    const criticalAlerts = Array.from(this.alerts.values()).flat().filter(a => a.severity === 'critical' && !a.resolved).length;
+
+    return {
+      timestamp: new Date(),
+      totalServers: servers.length,
+      runningServers: servers.filter(s => s.status === 'running').length,
+      stoppedServers: servers.filter(s => s.status === 'stopped').length,
+      maintenanceServers: servers.filter(s => s.status === 'maintenance').length,
+      errorServers: servers.filter(s => s.status === 'error').length,
+      totalAlerts,
+      criticalAlerts,
+      systemHealth: criticalAlerts > 0 ? 'critical' : totalAlerts > 5 ? 'warning' : 'healthy'
+    };
+  }
+
+  // Cleanup
+  public async shutdown(): Promise<void> {
+    if (this.monitoringInterval) {
+      clearInterval(this.monitoringInterval);
+    }
+
+    // Save all server configurations
+    for (const [serverId, server] of this.servers) {
+      await this.saveServerConfiguration(serverId, server);
+    }
+
+    this.emit('shutdown', { timestamp: new Date() });
+  }
+}
+
+// Export singleton instance
+export const serverManager = ServerManager.getInstance();
+
+// Export convenience functions
+export const getServers = () => serverManager.getServers();
+export const getServer = (serverId: string) => serverManager.getServer(serverId);
+export const getSystemStatus = () => serverManager.getSystemStatus(); 

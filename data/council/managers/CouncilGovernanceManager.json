@@ -1,0 +1,18 @@
+{
+  "name": "CouncilGovernanceManager",
+  "role": "Council Policy Enforcement and Oversight",
+  "responsibilities": [
+    "Council policy enforcement",
+    "Committee governance oversight",
+    "Council compliance and reporting",
+    "Council risk management"
+  ],
+  "capabilities": [
+    "Policy development and enforcement",
+    "Compliance monitoring and reporting",
+    "Risk assessment and mitigation",
+    "Governance effectiveness measurement"
+  ],
+  "parent": "CouncilMasterManager",
+  "children": []
+}

@@ -1,0 +1,173 @@
+{
+  "knowledgeCategories": [
+    {
+      "name": "System Documentation",
+      "description": "Core system documentation and architecture",
+      "tags": [
+        "system",
+        "documentation",
+        "architecture"
+      ],
+      "metadata": {
+        "icon": "🏗️",
+        "color": "#3B82F6",
+        "priority": 1,
+        "visibility": "public"
+      },
+      "id": "cat-1751984925348-63btpdbuz",
+      "children": [],
+      "statistics": {
+        "itemCount": 0,
+        "totalViews": 0,
+        "averageQuality": 100,
+        "lastActivity": "2025-07-08T14:28:45.348Z"
+      },
+      "createdAt": "2025-07-08T14:28:45.348Z",
+      "updatedAt": "2025-07-08T14:28:45.348Z"
+    },
+    {
+      "name": "User Guides",
+      "description": "User guides and tutorials",
+      "tags": [
+        "user",
+        "guides",
+        "tutorials"
+      ],
+      "metadata": {
+        "icon": "📖",
+        "color": "#10B981",
+        "priority": 2,
+        "visibility": "public"
+      },
+      "id": "cat-1751984925352-b8c7wwdwx",
+      "children": [],
+      "statistics": {
+        "itemCount": 0,
+        "totalViews": 0,
+        "averageQuality": 100,
+        "lastActivity": "2025-07-08T14:28:45.352Z"
+      },
+      "createdAt": "2025-07-08T14:28:45.352Z",
+      "updatedAt": "2025-07-08T14:28:45.352Z"
+    },
+    {
+      "name": "Test Category",
+      "description": "Test category for event handling",
+      "tags": [
+        "test"
+      ],
+      "metadata": {
+        "icon": "🧪",
+        "color": "#FF0000",
+        "priority": 1,
+        "visibility": "public"
+      },
+      "id": "cat-1751984960719-rhvyci53b",
+      "children": [],
+      "statistics": {
+        "itemCount": 0,
+        "totalViews": 0,
+        "averageQuality": 100,
+        "lastActivity": "2025-07-08T14:29:20.719Z"
+      },
+      "createdAt": "2025-07-08T14:29:20.719Z",
+      "updatedAt": "2025-07-08T14:29:20.719Z"
+    },
+    {
+      "name": "Test Category",
+      "description": "Test category for event handling",
+      "tags": [
+        "test"
+      ],
+      "metadata": {
+        "icon": "🧪",
+        "color": "#FF0000",
+        "priority": 1,
+        "visibility": "public"
+      },
+      "id": "cat-1751985337271-8rokdynlv",
+      "children": [],
+      "statistics": {
+        "itemCount": 0,
+        "totalViews": 0,
+        "averageQuality": 100,
+        "lastActivity": "2025-07-08T14:35:37.271Z"
+      },
+      "createdAt": "2025-07-08T14:35:37.271Z",
+      "updatedAt": "2025-07-08T14:35:37.271Z"
+    }
+  ],
+  "knowledgeTags": [
+    {
+      "name": "system",
+      "description": "System-related content",
+      "category": "system",
+      "synonyms": [
+        "platform",
+        "core"
+      ],
+      "metadata": {
+        "color": "#3B82F6",
+        "priority": 1,
+        "autoSuggest": true
+      },
+      "id": "tag-1751984960572-o8jwtcz1i",
+      "usage": {
+        "count": 0,
+        "items": [],
+        "lastUsed": "2025-07-08T14:29:20.572Z"
+      },
+      "createdAt": "2025-07-08T14:29:20.572Z",
+      "updatedAt": "2025-07-08T14:29:20.572Z"
+    },
+    {
+      "name": "documentation",
+      "description": "Documentation content",
+      "category": "content",
+      "synonyms": [
+        "docs",
+        "guide"
+      ],
+      "metadata": {
+        "color": "#10B981",
+        "priority": 2,
+        "autoSuggest": true
+      },
+      "id": "tag-1751984960576-ohc6l168y",
+      "usage": {
+        "count": 0,
+        "items": [],
+        "lastUsed": "2025-07-08T14:29:20.576Z"
+      },
+      "createdAt": "2025-07-08T14:29:20.576Z",
+      "updatedAt": "2025-07-08T14:29:20.576Z"
+    },
+    {
+      "name": "api",
+      "description": "API-related content",
+      "category": "technical",
+      "synonyms": [
+        "endpoint",
+        "interface"
+      ],
+      "metadata": {
+        "color": "#F59E0B",
+        "priority": 3,
+        "autoSuggest": true
+      },
+      "id": "tag-1751984960578-hcxldkxro",
+      "usage": {
+        "count": 0,
+        "items": [],
+        "lastUsed": "2025-07-08T14:29:20.578Z"
+      },
+      "createdAt": "2025-07-08T14:29:20.578Z",
+      "updatedAt": "2025-07-08T14:29:20.578Z"
+    }
+  ],
+  "knowledgeSearches": [],
+  "knowledgeInsights": [],
+  "knowledgeRecommendations": [],
+  "knowledgeQuality": [],
+  "lastUpdated": "2025-07-08T14:35:37.521Z"
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Proportional Representation",
+  "representation": {
+    "votingWeight": {
+      "executive": 0.25,
+      "security": 0.2,
+      "performance": 0.2,
+      "integration": 0.15,
+      "intelligence": 0.15,
+      "governance": 0.05
+    },
+    "resourceAllocation": {
+      "method": "proportional_to_weight",
+      "factors": [
+        "voting_weight",
+        "constituency_size",
+        "priority_level"
+      ],
+      "adjustment": "need_based_modification"
+    },
+    "decisionInfluence": {
+      "method": "weighted_voting",
+      "factors": [
+        "voting_weight",
+        "expertise_level",
+        "stake_level"
+      ],
+      "balance": "fair_representation"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "Performance Committee",
+  "parent": "CouncilMasterManager",
+  "chair": "PerformanceCommitteeManager",
+  "purpose": "Performance optimization and resource management",
+  "managers": [
+    "PerformanceCommitteeManager",
+    "PerformanceOptimizationManager",
+    "PerformanceMonitoringManager",
+    "PerformanceTestingManager",
+    "PerformanceAnalyticsManager",
+    "PerformanceAutomationManager"
+  ]
+}

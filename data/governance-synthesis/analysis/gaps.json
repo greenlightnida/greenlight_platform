@@ -1,0 +1,22 @@
+[
+  {
+    "type": "missing_component",
+    "component": "PolicyEngine",
+    "priority": "high"
+  },
+  {
+    "type": "missing_component",
+    "component": "ComplianceManager",
+    "priority": "high"
+  },
+  {
+    "type": "missing_component",
+    "component": "AuditManager",
+    "priority": "high"
+  },
+  {
+    "type": "missing_component",
+    "component": "RiskManager",
+    "priority": "high"
+  }
+]

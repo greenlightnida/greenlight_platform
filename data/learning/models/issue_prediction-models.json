@@ -1,0 +1,146 @@
+{
+  "dependencyIssues": {
+    "type": "dependency_issues",
+    "indicators": [
+      "outdated_dependencies",
+      "security_vulnerabilities",
+      "version_conflicts",
+      "missing_dependencies",
+      "incompatible_versions"
+    ],
+    "triggers": [
+      "npm_audit_failures",
+      "build_failures",
+      "runtime_errors",
+      "security_alerts",
+      "dependency_updates"
+    ],
+    "predictionFactors": {
+      "timeSinceLastUpdate": 0.3,
+      "securityVulnerabilityCount": 0.4,
+      "dependencyConflictCount": 0.2,
+      "buildFailureRate": 0.1
+    },
+    "confidenceThreshold": 0.7
+  },
+  "compilationIssues": {
+    "type": "compilation_issues",
+    "indicators": [
+      "typescript_errors",
+      "syntax_errors",
+      "import_errors",
+      "type_errors",
+      "build_failures"
+    ],
+    "triggers": [
+      "code_changes",
+      "dependency_updates",
+      "typescript_updates",
+      "import_changes",
+      "refactoring"
+    ],
+    "predictionFactors": {
+      "errorCount": 0.4,
+      "complexityScore": 0.3,
+      "changeFrequency": 0.2,
+      "testCoverage": 0.1
+    },
+    "confidenceThreshold": 0.8
+  },
+  "integrationIssues": {
+    "type": "integration_issues",
+    "indicators": [
+      "api_failures",
+      "timeout_errors",
+      "connection_errors",
+      "data_mismatches",
+      "service_unavailable"
+    ],
+    "triggers": [
+      "api_changes",
+      "service_updates",
+      "network_issues",
+      "load_increases",
+      "configuration_changes"
+    ],
+    "predictionFactors": {
+      "errorRate": 0.4,
+      "responseTime": 0.3,
+      "availability": 0.2,
+      "loadLevel": 0.1
+    },
+    "confidenceThreshold": 0.75
+  },
+  "performanceIssues": {
+    "type": "performance_issues",
+    "indicators": [
+      "high_response_times",
+      "memory_leaks",
+      "cpu_spikes",
+      "slow_queries",
+      "bottlenecks"
+    ],
+    "triggers": [
+      "load_increases",
+      "code_changes",
+      "data_growth",
+      "resource_constraints",
+      "configuration_changes"
+    ],
+    "predictionFactors": {
+      "responseTimeTrend": 0.4,
+      "resourceUtilization": 0.3,
+      "loadPattern": 0.2,
+      "errorRate": 0.1
+    },
+    "confidenceThreshold": 0.7
+  },
+  "securityIssues": {
+    "type": "security_issues",
+    "indicators": [
+      "vulnerability_alerts",
+      "unauthorized_access",
+      "data_exposure",
+      "malicious_activity",
+      "policy_violations"
+    ],
+    "triggers": [
+      "dependency_updates",
+      "code_changes",
+      "configuration_changes",
+      "external_threats",
+      "access_changes"
+    ],
+    "predictionFactors": {
+      "vulnerabilityCount": 0.4,
+      "accessPatterns": 0.3,
+      "threatIntelligence": 0.2,
+      "complianceStatus": 0.1
+    },
+    "confidenceThreshold": 0.9
+  },
+  "governanceIssues": {
+    "type": "governance_issues",
+    "indicators": [
+      "policy_violations",
+      "compliance_failures",
+      "audit_findings",
+      "process_deviations",
+      "documentation_gaps"
+    ],
+    "triggers": [
+      "policy_changes",
+      "process_changes",
+      "compliance_requirements",
+      "audit_schedules",
+      "organizational_changes"
+    ],
+    "predictionFactors": {
+      "violationCount": 0.4,
+      "complianceScore": 0.3,
+      "processAdherence": 0.2,
+      "documentationQuality": 0.1
+    },
+    "confidenceThreshold": 0.8
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Governance Orchestrator Integration",
+  "integration": {
+    "withConstituencyBalancing": {
+      "method": "event_listener_integration",
+      "listeners": [
+        "constituency_events",
+        "balancing_events",
+        "consensus_events"
+      ]
+    },
+    "withPolicyEngine": {
+      "method": "direct_integration",
+      "components": [
+        "PolicyEvaluation",
+        "ComplianceChecking",
+        "ViolationHandling"
+      ]
+    },
+    "withMonitoring": {
+      "method": "metrics_integration",
+      "metrics": [
+        "governance_effectiveness",
+        "constituency_satisfaction",
+        "policy_compliance",
+        "consensus_building_success"
+      ]
+    }
+  }
+}

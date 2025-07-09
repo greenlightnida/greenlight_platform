@@ -1,0 +1,62 @@
+{
+  "systemRisk": {
+    "type": "system_risk",
+    "factors": {
+      "healthScore": 0.3,
+      "errorRate": 0.3,
+      "resourceUtilization": 0.2,
+      "dependencyHealth": 0.2
+    },
+    "riskLevels": {
+      "low": 0.3,
+      "medium": 0.6,
+      "high": 0.8,
+      "critical": 0.95
+    }
+  },
+  "securityRisk": {
+    "type": "security_risk",
+    "factors": {
+      "vulnerabilityCount": 0.4,
+      "accessControl": 0.3,
+      "threatIntelligence": 0.2,
+      "complianceStatus": 0.1
+    },
+    "riskLevels": {
+      "low": 0.2,
+      "medium": 0.5,
+      "high": 0.8,
+      "critical": 0.95
+    }
+  },
+  "performanceRisk": {
+    "type": "performance_risk",
+    "factors": {
+      "responseTime": 0.4,
+      "throughput": 0.3,
+      "resourceUtilization": 0.2,
+      "errorRate": 0.1
+    },
+    "riskLevels": {
+      "low": 0.3,
+      "medium": 0.6,
+      "high": 0.8,
+      "critical": 0.95
+    }
+  },
+  "operationalRisk": {
+    "type": "operational_risk",
+    "factors": {
+      "processAdherence": 0.3,
+      "documentationQuality": 0.3,
+      "teamCapacity": 0.2,
+      "changeFrequency": 0.2
+    },
+    "riskLevels": {
+      "low": 0.3,
+      "medium": 0.6,
+      "high": 0.8,
+      "critical": 0.95
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "council": {
+    "parent": null,
+    "children": [
+      "executive",
+      "security",
+      "performance",
+      "integration",
+      "intelligence",
+      "governance"
+    ]
+  },
+  "executive": {
+    "parent": "council",
+    "children": []
+  },
+  "security": {
+    "parent": "council",
+    "children": []
+  },
+  "performance": {
+    "parent": "council",
+    "children": []
+  },
+  "integration": {
+    "parent": "council",
+    "children": []
+  },
+  "intelligence": {
+    "parent": "council",
+    "children": []
+  },
+  "governance": {
+    "parent": "council",
+    "children": []
+  }
+}

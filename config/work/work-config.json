@@ -1,0 +1,191 @@
+{
+  "workflows": [
+    {
+      "name": "Content Review Workflow",
+      "description": "Standard workflow for reviewing and approving content",
+      "type": "sequential",
+      "version": "1.0.0",
+      "status": "active",
+      "steps": [
+        {
+          "id": "draft",
+          "name": "Create Draft",
+          "description": "Author creates initial content draft",
+          "type": "task",
+          "order": 1,
+          "dependencies": [],
+          "assignee": {
+            "type": "role",
+            "value": "author"
+          },
+          "requirements": {
+            "inputs": [
+              "content"
+            ],
+            "conditions": [],
+            "validations": []
+          },
+          "actions": {
+            "onStart": [],
+            "onComplete": [
+              "notify_reviewer"
+            ],
+            "onError": [],
+            "onTimeout": []
+          },
+          "timeout": 1440,
+          "retries": 0,
+          "estimatedDuration": 120
+        },
+        {
+          "id": "review",
+          "name": "Content Review",
+          "description": "Reviewer reviews and provides feedback",
+          "type": "approval",
+          "order": 2,
+          "dependencies": [
+            "draft"
+          ],
+          "assignee": {
+            "type": "role",
+            "value": "reviewer"
+          },
+          "requirements": {
+            "inputs": [
+              "draft"
+            ],
+            "conditions": [
+              "draft_completed"
+            ],
+            "validations": []
+          },
+          "actions": {
+            "onStart": [
+              "notify_reviewer"
+            ],
+            "onComplete": [
+              "notify_approver"
+            ],
+            "onError": [],
+            "onTimeout": []
+          },
+          "timeout": 720,
+          "retries": 1,
+          "estimatedDuration": 60
+        },
+        {
+          "id": "approval",
+          "name": "Final Approval",
+          "description": "Approver gives final approval",
+          "type": "approval",
+          "order": 3,
+          "dependencies": [
+            "review"
+          ],
+          "assignee": {
+            "type": "role",
+            "value": "approver"
+          },
+          "requirements": {
+            "inputs": [
+              "review"
+            ],
+            "conditions": [
+              "review_approved"
+            ],
+            "validations": []
+          },
+          "actions": {
+            "onStart": [
+              "notify_approver"
+            ],
+            "onComplete": [
+              "publish_content"
+            ],
+            "onError": [],
+            "onTimeout": []
+          },
+          "timeout": 360,
+          "retries": 0,
+          "estimatedDuration": 30
+        }
+      ],
+      "triggers": {
+        "manual": true,
+        "automated": [
+          "content_created"
+        ],
+        "scheduled": [],
+        "eventBased": [
+          "content_submitted"
+        ]
+      },
+      "permissions": {
+        "create": [
+          "admin",
+          "manager"
+        ],
+        "execute": [
+          "author",
+          "reviewer",
+          "approver"
+        ],
+        "modify": [
+          "admin"
+        ],
+        "view": [
+          "all"
+        ]
+      },
+      "metadata": {
+        "category": "content",
+        "tags": [
+          "review",
+          "approval",
+          "content"
+        ],
+        "priority": "medium",
+        "estimatedDuration": 210,
+        "complexity": "moderate"
+      },
+      "id": "wf-1751984925349-sobsthxc2",
+      "metrics": {
+        "executions": 0,
+        "successRate": 100,
+        "averageDuration": 0,
+        "lastExecuted": "2025-07-08T14:28:45.349Z"
+      },
+      "createdAt": "2025-07-08T14:28:45.349Z",
+      "updatedAt": "2025-07-08T14:28:45.349Z"
+    }
+  ],
+  "tasks": [],
+  "collaborations": [],
+  "workAnalytics": {
+    "overall": {
+      "totalTasks": 0,
+      "activeTasks": 0,
+      "completedTasks": 0,
+      "overdueTasks": 0,
+      "averageCompletionTime": 0,
+      "successRate": 100
+    },
+    "workflows": {},
+    "teams": {},
+    "performance": {
+      "productivity": 100,
+      "efficiency": 100,
+      "quality": 100,
+      "collaboration": 100
+    },
+    "trends": {
+      "taskVolume": "stable",
+      "completionRate": "stable",
+      "teamPerformance": "stable",
+      "bottlenecks": []
+    },
+    "insights": []
+  },
+  "workHistory": {},
+  "lastUpdated": "2025-07-08T14:35:37.522Z"
+}

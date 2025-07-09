@@ -1,0 +1,23 @@
+{
+  "name": "Compromise Mechanisms",
+  "mechanisms": {
+    "tradeOffAnalysis": {
+      "method": "cost_benefit_analysis",
+      "participants": "all_constituencies",
+      "output": "trade_off_recommendations",
+      "implementation": "negotiated_compromise"
+    },
+    "winWinSolutions": {
+      "method": "creative_problem_solving",
+      "participants": "all_constituencies",
+      "output": "win_win_solutions",
+      "implementation": "consensus_agreement"
+    },
+    "phasedImplementation": {
+      "method": "staged_implementation",
+      "participants": "all_constituencies",
+      "output": "phased_plans",
+      "implementation": "sequential_execution"
+    }
+  }
+}

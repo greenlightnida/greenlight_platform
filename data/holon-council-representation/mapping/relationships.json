@@ -1,0 +1,64 @@
+{
+  "systemHolons": {
+    "systemMaster": [
+      "elaborate",
+      "articulate",
+      "features",
+      "product"
+    ],
+    "elaborate": [
+      "systemMaster",
+      "articulate"
+    ],
+    "articulate": [
+      "systemMaster",
+      "elaborate"
+    ],
+    "features": [
+      "systemMaster",
+      "product"
+    ],
+    "product": [
+      "systemMaster",
+      "features"
+    ],
+    "testing": [
+      "systemMaster",
+      "features",
+      "product"
+    ]
+  },
+  "productHolons": {
+    "elevate": [
+      "systemMaster",
+      "features"
+    ],
+    "administrate": [
+      "systemMaster",
+      "features"
+    ]
+  },
+  "featureHolons": {
+    "features": [
+      "systemMaster",
+      "product",
+      "testing"
+    ]
+  },
+  "sessionHolons": {
+    "sessionManagement": [
+      "systemMaster",
+      "user"
+    ]
+  },
+  "userHolons": {
+    "auth": [
+      "systemMaster",
+      "sessionManagement"
+    ],
+    "userManagement": [
+      "systemMaster",
+      "auth"
+    ]
+  }
+}

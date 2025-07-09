@@ -1,0 +1,41 @@
+{
+  "name": "Shared Prevention Strategies",
+  "strategies": {
+    "strategicPrevention": {
+      "responsibility": "council-chair",
+      "collaboration": "executive-committee",
+      "focus": "council-wide_risks",
+      "methods": [
+        "strategic_planning",
+        "resource_allocation",
+        "policy_development"
+      ]
+    },
+    "operationalPrevention": {
+      "responsibility": "executive-committee",
+      "collaboration": "council-chair",
+      "focus": "operational_risks",
+      "methods": [
+        "process_optimization",
+        "performance_monitoring",
+        "continuous_improvement"
+      ]
+    },
+    "tacticalPrevention": {
+      "responsibility": "executive-committee",
+      "collaboration": "committee-chairs",
+      "focus": "domain-specific_risks",
+      "methods": [
+        "issue_detection",
+        "rapid_response",
+        "preventive_actions"
+      ]
+    }
+  },
+  "coordination": {
+    "strategyDevelopment": "collaborative",
+    "implementation": "coordinated",
+    "monitoring": "shared",
+    "optimization": "continuous"
+  }
+}

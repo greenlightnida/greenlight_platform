@@ -1,0 +1,20 @@
+{
+  "name": "Holon Council Representation Structure",
+  "description": "Comprehensive representation of all holons in the Council",
+  "totalHolons": 10,
+  "totalAgents": 10,
+  "constituencies": 6,
+  "representation": {
+    "systemHolons": 4,
+    "productHolons": 3,
+    "featureHolons": 1,
+    "sessionHolons": 1,
+    "userHolons": 1
+  },
+  "votingStructure": {
+    "totalVotingWeight": 1,
+    "quorum": 0.6,
+    "supermajority": 0.75,
+    "consensus": 0.9
+  }
+}

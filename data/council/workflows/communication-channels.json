@@ -1,0 +1,22 @@
+{
+  "council_to_committees": {
+    "type": "broadcast",
+    "frequency": "daily",
+    "purpose": "Council directives and strategic guidance"
+  },
+  "committees_to_council": {
+    "type": "reporting",
+    "frequency": "weekly",
+    "purpose": "Committee status and progress reports"
+  },
+  "committee_to_committee": {
+    "type": "peer",
+    "frequency": "as_needed",
+    "purpose": "Cross-committee coordination and collaboration"
+  },
+  "emergency_escalation": {
+    "type": "immediate",
+    "frequency": "immediate",
+    "purpose": "Emergency issue escalation to Council"
+  }
+}

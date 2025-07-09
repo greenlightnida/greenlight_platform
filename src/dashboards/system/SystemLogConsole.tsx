@@ -1,0 +1,419 @@
+import React, { useState, useEffect, useRef } from 'react';
+
+/**
+ * SystemLogConsole - System Logging and Monitoring Interface
+ * 
+ * PURPOSE: Real-time system logging and monitoring
+ * - Live log streaming and display
+ * - Log filtering and search
+ * - Error tracking and alerting
+ * - System health monitoring
+ * - Performance metrics display
+ */
+
+export interface LogEntry {
+  id: string;
+  timestamp: Date;
+  level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
+  source: string;
+  message: string;
+  details?: Record<string, unknown>;
+  tags: string[];
+}
+
+export interface LogFilter {
+  levels: string[];
+  sources: string[];
+  searchTerm: string;
+  timeRange: 'all' | '1h' | '6h' | '24h' | '7d';
+}
+
+interface SystemLogConsoleProps {
+  className?: string;
+  autoScroll?: boolean;
+  maxEntries?: number;
+}
+
+export const SystemLogConsole: React.FC<SystemLogConsoleProps> = ({ 
+  className = '',
+  autoScroll = true,
+  maxEntries = 1000
+}) => {
+  const [logs, setLogs] = useState<LogEntry[]>([
+    {
+      id: '1',
+      timestamp: new Date('2024-05-21T10:30:00'),
+      level: 'info',
+      source: 'SystemManager',
+      message: 'System initialization completed successfully',
+      tags: ['startup', 'system']
+    },
+    {
+      id: '2',
+      timestamp: new Date('2024-05-21T10:31:15'),
+      level: 'warn',
+      source: 'DatabaseManager',
+      message: 'Database connection pool at 80% capacity',
+      details: { poolSize: 80, maxPoolSize: 100 },
+      tags: ['database', 'performance']
+    },
+    {
+      id: '3',
+      timestamp: new Date('2024-05-21T10:32:30'),
+      level: 'error',
+      source: 'AuthService',
+      message: 'Authentication service failed to validate token',
+      details: { tokenId: 'abc123', reason: 'expired' },
+      tags: ['auth', 'security']
+    },
+    {
+      id: '4',
+      timestamp: new Date('2024-05-21T10:33:45'),
+      level: 'debug',
+      source: 'APIGateway',
+      message: 'Processing API request',
+      details: { endpoint: '/api/users', method: 'GET', userId: '123' },
+      tags: ['api', 'request']
+    },
+    {
+      id: '5',
+      timestamp: new Date('2024-05-21T10:34:00'),
+      level: 'critical',
+      source: 'FileSystem',
+      message: 'Disk space critical - only 5% remaining',
+      details: { availableSpace: '5GB', totalSpace: '100GB' },
+      tags: ['storage', 'critical']
+    }
+  ]);
+  const [filter, setFilter] = useState<LogFilter>({
+    levels: ['debug', 'info', 'warn', 'error', 'critical'],
+    sources: [],
+    searchTerm: '',
+    timeRange: '24h'
+  });
+  const [isLive, setIsLive] = useState(true);
+  const [stats, setStats] = useState({
+    totalLogs: 5,
+    errorCount: 1,
+    warningCount: 1,
+    criticalCount: 1,
+    averageResponseTime: 245
+  });
+  const consoleRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Load initial logs
+    loadLogs();
+    
+    // Set up live log streaming
+    if (isLive) {
+      const interval = setInterval(simulateLiveLogs, 5000);
+      return () => clearInterval(interval);
+    }
+  }, [isLive]);
+
+  useEffect(() => {
+    // Auto-scroll to bottom when new logs arrive
+    if (autoScroll && consoleRef.current) {
+      consoleRef.current.scrollTop = consoleRef.current.scrollHeight;
+    }
+  }, [logs, autoScroll]);
+
+  const loadLogs = async () => {
+    // TODO: Implement log loading from log services
+    console.log('Loading system logs...');
+  };
+
+  const simulateLiveLogs = () => {
+    const newLog: LogEntry = {
+      id: Date.now().toString(),
+      timestamp: new Date(),
+      level: Math.random() > 0.8 ? 'error' : Math.random() > 0.6 ? 'warn' : 'info',
+      source: ['SystemManager', 'DatabaseManager', 'AuthService', 'APIGateway'][Math.floor(Math.random() * 4)],
+      message: `Simulated log entry ${Date.now()}`,
+      tags: ['simulated']
+    };
+    setLogs(prev => [...prev.slice(-maxEntries + 1), newLog]);
+  };
+
+  const handleFilterChange = (updates: Partial<LogFilter>) => {
+    setFilter(prev => ({ ...prev, ...updates }));
+  };
+
+  const handleLevelToggle = (level: string) => {
+    setFilter(prev => ({
+      ...prev,
+      levels: prev.levels.includes(level)
+        ? prev.levels.filter(l => l !== level)
+        : [...prev.levels, level]
+    }));
+  };
+
+  const clearLogs = () => {
+    setLogs([]);
+  };
+
+  const exportLogs = () => {
+    const dataStr = JSON.stringify(logs, null, 2);
+    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+    const url = URL.createObjectURL(dataBlob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `system-logs-${new Date().toISOString()}.json`;
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const getLevelColor = (level: string) => {
+    switch (level) {
+      case 'debug': return 'text-gray-500';
+      case 'info': return 'text-blue-600';
+      case 'warn': return 'text-yellow-600';
+      case 'error': return 'text-red-600';
+      case 'critical': return 'text-red-800';
+      default: return 'text-gray-600';
+    }
+  };
+
+  const getLevelBgColor = (level: string) => {
+    switch (level) {
+      case 'debug': return 'bg-gray-50 dark:bg-gray-800';
+      case 'info': return 'bg-blue-50 dark:bg-blue-900';
+      case 'warn': return 'bg-yellow-50 dark:bg-yellow-900';
+      case 'error': return 'bg-red-50 dark:bg-red-900';
+      case 'critical': return 'bg-red-100 dark:bg-red-800';
+      default: return 'bg-white dark:bg-gray-800';
+    }
+  };
+
+  const formatTimestamp = (timestamp: Date) => {
+    return timestamp.toLocaleTimeString();
+  };
+
+  const filteredLogs = logs.filter(log => {
+    // Level filter
+    if (!filter.levels.includes(log.level)) return false;
+    
+    // Source filter
+    if (filter.sources.length > 0 && !filter.sources.includes(log.source)) return false;
+    
+    // Search term filter
+    if (filter.searchTerm && !log.message.toLowerCase().includes(filter.searchTerm.toLowerCase())) return false;
+    
+    // Time range filter
+    const now = new Date();
+    const logTime = log.timestamp;
+    switch (filter.timeRange) {
+      case '1h':
+        if (now.getTime() - logTime.getTime() > 60 * 60 * 1000) return false;
+        break;
+      case '6h':
+        if (now.getTime() - logTime.getTime() > 6 * 60 * 60 * 1000) return false;
+        break;
+      case '24h':
+        if (now.getTime() - logTime.getTime() > 24 * 60 * 60 * 1000) return false;
+        break;
+      case '7d':
+        if (now.getTime() - logTime.getTime() > 7 * 24 * 60 * 60 * 1000) return false;
+        break;
+    }
+    
+    return true;
+  });
+
+  const renderLogEntry = (log: LogEntry) => (
+    <div key={log.id} className={`p-3 border-b border-gray-200 dark:border-gray-700 ${getLevelBgColor(log.level)}`}>
+      <div className="flex items-start space-x-3">
+        <div className="flex-shrink-0">
+          <span className={`text-xs font-mono ${getLevelColor(log.level)}`}>
+            {log.level.toUpperCase()}
+          </span>
+        </div>
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-2">
+              <span className="text-xs text-gray-500 font-mono">
+                {formatTimestamp(log.timestamp)}
+              </span>
+              <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                {log.source}
+              </span>
+            </div>
+            <div className="flex space-x-1">
+              {log.tags.map(tag => (
+                <span key={tag} className="text-xs bg-gray-200 dark:bg-gray-600 px-1 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          <p className="text-sm text-gray-800 dark:text-gray-200 mt-1">
+            {log.message}
+          </p>
+          {log.details && (
+            <details className="mt-2">
+              <summary className="text-xs text-gray-500 cursor-pointer">Details</summary>
+              <pre className="text-xs bg-gray-100 dark:bg-gray-800 p-2 rounded mt-1 overflow-x-auto">
+                {JSON.stringify(log.details, null, 2)}
+              </pre>
+            </details>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderStats = () => (
+    <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-4">
+      <div className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
+        <h3 className="text-xs font-medium text-gray-500">Total Logs</h3>
+        <p className="text-lg font-bold text-blue-600">{stats.totalLogs}</p>
+      </div>
+      <div className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
+        <h3 className="text-xs font-medium text-gray-500">Errors</h3>
+        <p className="text-lg font-bold text-red-600">{stats.errorCount}</p>
+      </div>
+      <div className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
+        <h3 className="text-xs font-medium text-gray-500">Warnings</h3>
+        <p className="text-lg font-bold text-yellow-600">{stats.warningCount}</p>
+      </div>
+      <div className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
+        <h3 className="text-xs font-medium text-gray-500">Critical</h3>
+        <p className="text-lg font-bold text-red-800">{stats.criticalCount}</p>
+      </div>
+      <div className="bg-white dark:bg-gray-800 p-3 rounded-lg shadow">
+        <h3 className="text-xs font-medium text-gray-500">Avg Response</h3>
+        <p className="text-lg font-bold text-green-600">{stats.averageResponseTime}ms</p>
+      </div>
+    </div>
+  );
+
+  const renderFilters = () => (
+    <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow mb-4">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+        {/* Level Filter */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            Log Levels
+          </label>
+          <div className="space-y-1">
+            {['debug', 'info', 'warn', 'error', 'critical'].map(level => (
+              <label key={level} className="flex items-center">
+                <input
+                  type="checkbox"
+                  checked={filter.levels.includes(level)}
+                  onChange={() => handleLevelToggle(level)}
+                  className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                />
+                <span className="ml-2 text-sm capitalize">{level}</span>
+              </label>
+            ))}
+          </div>
+        </div>
+
+        {/* Search */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            Search
+          </label>
+          <input
+            type="text"
+            value={filter.searchTerm}
+            onChange={(e) => handleFilterChange({ searchTerm: e.target.value })}
+            placeholder="Search logs..."
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+          />
+        </div>
+
+        {/* Time Range */}
+        <div>
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+            Time Range
+          </label>
+          <select
+            value={filter.timeRange}
+            onChange={(e) => handleFilterChange({ timeRange: e.target.value as any })}
+            className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-white"
+          >
+            <option value="all">All Time</option>
+            <option value="1h">Last Hour</option>
+            <option value="6h">Last 6 Hours</option>
+            <option value="24h">Last 24 Hours</option>
+            <option value="7d">Last 7 Days</option>
+          </select>
+        </div>
+
+        {/* Actions */}
+        <div className="flex flex-col space-y-2">
+          <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+            Actions
+          </label>
+          <div className="flex space-x-2">
+            <button
+              onClick={() => setIsLive(!isLive)}
+              className={`px-3 py-1 text-xs rounded ${
+                isLive 
+                  ? 'bg-green-600 text-white' 
+                  : 'bg-gray-600 text-white'
+              }`}
+            >
+              {isLive ? 'Live' : 'Paused'}
+            </button>
+            <button
+              onClick={clearLogs}
+              className="px-3 py-1 text-xs bg-red-600 text-white rounded hover:bg-red-700"
+            >
+              Clear
+            </button>
+            <button
+              onClick={exportLogs}
+              className="px-3 py-1 text-xs bg-blue-600 text-white rounded hover:bg-blue-700"
+            >
+              Export
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  return (
+    <div className={`system-log-console ${className}`}>
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">System Log Console</h1>
+        <p className="text-gray-600 dark:text-gray-400">Real-time system logging and monitoring</p>
+      </div>
+
+      {/* Stats */}
+      {renderStats()}
+
+      {/* Filters */}
+      {renderFilters()}
+
+      {/* Log Console */}
+      <div className="bg-white dark:bg-gray-800 rounded-lg shadow">
+        <div className="p-4 border-b border-gray-200 dark:border-gray-700">
+          <div className="flex items-center justify-between">
+            <h2 className="text-lg font-semibold">System Logs</h2>
+            <div className="text-sm text-gray-500">
+              {filteredLogs.length} of {logs.length} entries
+            </div>
+          </div>
+        </div>
+        
+        <div 
+          ref={consoleRef}
+          className="h-96 overflow-y-auto bg-gray-50 dark:bg-gray-900"
+        >
+          {filteredLogs.length > 0 ? (
+            filteredLogs.map(renderLogEntry)
+          ) : (
+            <div className="p-8 text-center text-gray-500">
+              No logs match the current filters
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};

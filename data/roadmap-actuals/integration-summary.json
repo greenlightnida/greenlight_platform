@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-07-09T17:29:29.186Z",
+  "status": "completed",
+  "summary": {
+    "totalPlannedMilestones": 2,
+    "totalActualMilestones": 2,
+    "completedMilestones": 2,
+    "inProgressMilestones": 0,
+    "blockedMilestones": 0,
+    "overallProgress": 100
+  },
+  "executiveSummary": {
+    "overallStatus": "on-track",
+    "keyAchievements": [
+      "2 milestones completed successfully"
+    ],
+    "keyChallenges": [],
+    "recommendations": []
+  },
+  "filesCreated": [
+    "data/roadmap-actuals/tracker-data.json",
+    "data/roadmap-actuals/reports/latest-actuals-summary.json",
+    "data/roadmap-actuals/reports/actuals-report-1752082169186.json"
+  ],
+  "roadmapUpdated": true,
+  "recommendations": []
+}

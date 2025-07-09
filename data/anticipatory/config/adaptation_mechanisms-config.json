@@ -1,0 +1,13 @@
+{
+  "adaptation": {
+    "automatic": true,
+    "speed": "real_time",
+    "validation": true
+  },
+  "triggers": {
+    "performance": true,
+    "accuracy": true,
+    "feedback": true,
+    "environment": true
+  }
+}

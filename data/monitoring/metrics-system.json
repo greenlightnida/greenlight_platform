@@ -1,0 +1,20 @@
+{
+  "name": "Performance Metrics System",
+  "description": "Comprehensive performance metrics for all managers",
+  "metrics": {
+    "technical": "Technical performance metrics",
+    "operational": "Operational performance metrics",
+    "business": "Business impact metrics",
+    "user": "User experience metrics"
+  },
+  "collection": {
+    "automated": "Automated metric collection",
+    "manual": "Manual metric collection",
+    "integration": "Integration with existing monitoring systems"
+  },
+  "analysis": {
+    "realTime": "Real-time metric analysis",
+    "historical": "Historical trend analysis",
+    "predictive": "Predictive analysis and forecasting"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "file": "/Users/home/Developer/greenlight-platform/src/core/session-management/SessionsManager.tsx",
+  "line": 105,
+  "content": "// TODO: Replace with actual data loading logic",
+  "type": "TODO",
+  "priority": "low",
+  "context": "// Data loading implementation\n  try {\n    // TODO: Replace with actual data loading logic\n    return [];\n  } catch (error) {",
+  "archivedAt": "2025-07-09T21:58:13.252Z",
+  "resolution": "archived"
+}

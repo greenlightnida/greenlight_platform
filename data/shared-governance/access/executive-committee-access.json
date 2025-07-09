@@ -1,0 +1,35 @@
+{
+  "role": "Executive Committee Learning Access",
+  "permissions": {
+    "learningSystem": {
+      "read": true,
+      "write": true,
+      "execute": true,
+      "admin": false
+    },
+    "predictionModels": {
+      "view": true,
+      "modify": true,
+      "create": true,
+      "delete": false
+    },
+    "docketGeneration": {
+      "view": true,
+      "modify": true,
+      "approve": true,
+      "override": false
+    },
+    "preventionStrategies": {
+      "view": true,
+      "modify": true,
+      "implement": true,
+      "coordinate": true
+    }
+  },
+  "tools": [
+    "Operational Learning Dashboard",
+    "Committee-specific Learning Analytics",
+    "Learning Implementation Tools",
+    "Learning System Monitoring"
+  ]
+}

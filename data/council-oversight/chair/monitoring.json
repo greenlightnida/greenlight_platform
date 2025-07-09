@@ -1,0 +1,38 @@
+{
+  "name": "Council Chair Monitoring Capabilities",
+  "monitoring": {
+    "holonAgentMetrics": {
+      "title": "Holon Agent Metrics",
+      "metrics": [
+        "Agent participation and engagement levels",
+        "Agent communication effectiveness",
+        "Agent decision-making contribution",
+        "Agent conflict resolution success"
+      ],
+      "frequency": "real_time",
+      "reporting": "automated_dashboards"
+    },
+    "councilEffectiveness": {
+      "title": "Council Effectiveness Metrics",
+      "metrics": [
+        "Decision-making efficiency and quality",
+        "Consensus-building success rates",
+        "Conflict resolution effectiveness",
+        "Overall Council performance scores"
+      ],
+      "frequency": "daily",
+      "reporting": "comprehensive_reports"
+    },
+    "systemIntegration": {
+      "title": "System Integration Metrics",
+      "metrics": [
+        "Holon agent integration effectiveness",
+        "Cross-holon coordination success",
+        "System-wide impact of Council decisions",
+        "Integration pathway optimization"
+      ],
+      "frequency": "weekly",
+      "reporting": "integration_analysis"
+    }
+  }
+}

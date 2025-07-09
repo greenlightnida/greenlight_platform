@@ -1,0 +1,29 @@
+{
+  "name": "Shared Issue Anticipation",
+  "levels": {
+    "strategic": {
+      "responsibility": "council-chair",
+      "collaboration": "executive-committee",
+      "scope": "council-wide",
+      "timeframe": "long-term"
+    },
+    "operational": {
+      "responsibility": "executive-committee",
+      "collaboration": "council-chair",
+      "scope": "committee-specific",
+      "timeframe": "short-term"
+    },
+    "tactical": {
+      "responsibility": "executive-committee",
+      "collaboration": "committee-chairs",
+      "scope": "domain-specific",
+      "timeframe": "immediate"
+    }
+  },
+  "coordination": {
+    "escalation": "automatic",
+    "notification": "real-time",
+    "response": "coordinated",
+    "prevention": "proactive"
+  }
+}

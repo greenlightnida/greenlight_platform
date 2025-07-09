@@ -1,0 +1,16 @@
+{
+  "name": "Manager Insights Database",
+  "description": "Database of insights from all managers",
+  "insights": {
+    "technical": "Technical insights and observations",
+    "process": "Process insights and improvements",
+    "strategic": "Strategic insights and recommendations",
+    "operational": "Operational insights and optimizations"
+  },
+  "features": {
+    "search": "Search across all insights",
+    "categorization": "Categorization and tagging",
+    "trending": "Trending insights and topics",
+    "collaboration": "Collaborative insight development"
+  }
+}

@@ -1,0 +1,1026 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2025-07-08T18:58:50.232Z",
+  "features": [
+    {
+      "featureId": "greenlight-platform",
+      "featureName": "Greenlight Platform",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "system-master",
+      "featureName": "System Master",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "inform-console",
+      "featureName": "Inform Console",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": true
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "resolve-console",
+      "featureName": "Resolve Console",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": true
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "observe-console",
+      "featureName": "Observe Console",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": true
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "elaborate",
+      "featureName": "Elaborate",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "anchor-command-service",
+      "featureName": "Anchor Command Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "deployment-tracker",
+      "featureName": "Deployment Tracker",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "system-evolution-service",
+      "featureName": "System Evolution Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "elevate",
+      "featureName": "Elevate",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "player-service",
+      "featureName": "Player Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "data-import-service",
+      "featureName": "Data Import Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "ai-insights-service",
+      "featureName": "AI Insights Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "administrate",
+      "featureName": "Administrate",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "business-intelligence-service",
+      "featureName": "Business Intelligence Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "reporting-service",
+      "featureName": "Reporting Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "articulate",
+      "featureName": "Articulate",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "knowledge-service",
+      "featureName": "Knowledge Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "nlp-service",
+      "featureName": "NLP Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "developer-notes-service",
+      "featureName": "Developer Notes Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "operations",
+      "featureName": "Operations",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "documentation-manager",
+      "featureName": "Documentation Manager",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "system-log-service",
+      "featureName": "System Log Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "performance-tracking-service",
+      "featureName": "Performance Tracking Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "audit-service",
+      "featureName": "Audit Service",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": false,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "top-bins-platform",
+      "featureName": "Top Bins Platform",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": true
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "media-library",
+      "featureName": "Media Library",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": true
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "batch-upload",
+      "featureName": "Batch Upload",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "ai-detection",
+      "featureName": "AI Detection",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "player-crm",
+      "featureName": "Player CRM",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": true
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "player-grid",
+      "featureName": "Player Grid",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "team-portal",
+      "featureName": "Team Portal",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": true
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": true,
+          "securityTests": true,
+          "accessibilityTests": true
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "cohort-management",
+      "featureName": "Cohort Management",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    },
+    {
+      "featureId": "data-import",
+      "featureName": "Data Import",
+      "protocols": {
+        "preCommit": {
+          "unitTests": true,
+          "linting": true,
+          "typeChecking": true,
+          "securityScan": false
+        },
+        "preDeploy": {
+          "integrationTests": true,
+          "e2eTests": true,
+          "performanceTests": false,
+          "securityTests": false,
+          "accessibilityTests": false
+        },
+        "postDeploy": {
+          "smokeTests": true,
+          "monitoring": true,
+          "alerting": true
+        },
+        "qualityGates": {
+          "testCoverage": 80,
+          "performanceThreshold": "acceptable",
+          "securityScore": "pass",
+          "accessibilityScore": "pass"
+        }
+      }
+    }
+  ]
+}

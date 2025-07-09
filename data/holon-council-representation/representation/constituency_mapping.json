@@ -1,0 +1,220 @@
+{
+  "executive": {
+    "name": "Executive Committee",
+    "holonAgents": [
+      {
+        "id": "agent_system_systemMaster",
+        "holonId": "system_systemMaster",
+        "holonName": "systemMaster",
+        "holonType": "system",
+        "agentName": "systemMasterAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent holon interests in Council",
+          "Participate in constituency balancing",
+          "Coordinate with other holon agents",
+          "Report holon status and needs",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.15,
+        "constituency": "executive"
+      }
+    ],
+    "votingWeight": 0.25,
+    "interests": [
+      "system_operations",
+      "governance",
+      "coordination"
+    ]
+  },
+  "security": {
+    "name": "Security Committee",
+    "holonAgents": [
+      {
+        "id": "agent_user_auth",
+        "holonId": "user_auth",
+        "holonName": "auth",
+        "holonType": "user",
+        "agentName": "authAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent user management interests",
+          "Advocate for security and privacy",
+          "Coordinate access control policies",
+          "Participate in user governance",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.05,
+        "constituency": "security"
+      }
+    ],
+    "votingWeight": 0.2,
+    "interests": [
+      "security",
+      "authentication",
+      "authorization"
+    ]
+  },
+  "performance": {
+    "name": "Performance Committee",
+    "holonAgents": [
+      {
+        "id": "agent_system_features",
+        "holonId": "system_features",
+        "holonName": "features",
+        "holonType": "system",
+        "agentName": "featuresAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent holon interests in Council",
+          "Participate in constituency balancing",
+          "Coordinate with other holon agents",
+          "Report holon status and needs",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.15,
+        "constituency": "performance"
+      }
+    ],
+    "votingWeight": 0.2,
+    "interests": [
+      "performance",
+      "optimization",
+      "quality"
+    ]
+  },
+  "integration": {
+    "name": "Integration Committee",
+    "holonAgents": [
+      {
+        "id": "agent_product_product",
+        "holonId": "product_product",
+        "holonName": "product",
+        "holonType": "product",
+        "agentName": "productAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent product holon interests",
+          "Advocate for product-specific needs",
+          "Coordinate with system holons",
+          "Participate in product governance",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.1,
+        "constituency": "integration"
+      },
+      {
+        "id": "agent_product_elevate",
+        "holonId": "product_elevate",
+        "holonName": "elevate",
+        "holonType": "product",
+        "agentName": "elevateAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent product holon interests",
+          "Advocate for product-specific needs",
+          "Coordinate with system holons",
+          "Participate in product governance",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.1,
+        "constituency": "integration"
+      },
+      {
+        "id": "agent_product_administrate",
+        "holonId": "product_administrate",
+        "holonName": "administrate",
+        "holonType": "product",
+        "agentName": "administrateAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent product holon interests",
+          "Advocate for product-specific needs",
+          "Coordinate with system holons",
+          "Participate in product governance",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.1,
+        "constituency": "integration"
+      },
+      {
+        "id": "agent_feature_features",
+        "holonId": "feature_features",
+        "holonName": "features",
+        "holonType": "feature",
+        "agentName": "featuresAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent feature development interests",
+          "Advocate for technical standards",
+          "Coordinate implementation priorities",
+          "Participate in quality assurance",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.05,
+        "constituency": "integration"
+      }
+    ],
+    "votingWeight": 0.15,
+    "interests": [
+      "integration",
+      "coordination",
+      "delivery"
+    ]
+  },
+  "intelligence": {
+    "name": "Intelligence Committee",
+    "holonAgents": [],
+    "votingWeight": 0.15,
+    "interests": [
+      "knowledge",
+      "learning",
+      "intelligence"
+    ]
+  },
+  "governance": {
+    "name": "Governance Committee",
+    "holonAgents": [
+      {
+        "id": "agent_system_systemMaster",
+        "holonId": "system_systemMaster",
+        "holonName": "systemMaster",
+        "holonType": "system",
+        "agentName": "systemMasterAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent holon interests in Council",
+          "Participate in constituency balancing",
+          "Coordinate with other holon agents",
+          "Report holon status and needs",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.15,
+        "constituency": "executive"
+      },
+      {
+        "id": "agent_system_product",
+        "holonId": "system_product",
+        "holonName": "product",
+        "holonType": "system",
+        "agentName": "productAgent",
+        "agentRole": "holon_representative",
+        "responsibilities": [
+          "Represent holon interests in Council",
+          "Participate in constituency balancing",
+          "Coordinate with other holon agents",
+          "Report holon status and needs",
+          "Vote on Council decisions"
+        ],
+        "votingWeight": 0.15,
+        "constituency": "governance"
+      }
+    ],
+    "votingWeight": 0.05,
+    "interests": [
+      "governance",
+      "compliance",
+      "policy"
+    ]
+  }
+}

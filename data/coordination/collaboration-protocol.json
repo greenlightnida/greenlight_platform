@@ -1,0 +1,22 @@
+{
+  "name": "Cross-Manager Collaboration Protocol",
+  "description": "Structured collaboration between managers",
+  "collaborationTypes": {
+    "project": "Joint project execution",
+    "issue": "Cross-cutting issue resolution",
+    "improvement": "System-wide improvement initiatives",
+    "innovation": "New feature or capability development"
+  },
+  "processes": {
+    "initiation": "Collaboration request and approval",
+    "planning": "Joint planning and resource allocation",
+    "execution": "Coordinated execution with regular check-ins",
+    "review": "Joint review and lessons learned"
+  },
+  "tools": {
+    "projectManagement": "Shared project management tools",
+    "communication": "Dedicated collaboration channels",
+    "documentation": "Shared documentation and knowledge base",
+    "tracking": "Progress tracking and milestone management"
+  }
+}

@@ -1,0 +1,1190 @@
+{
+  "sessionId": "onboarding-1752068839744",
+  "timestamp": "2025-07-09T13:47:19.763Z",
+  "client": "TEST_CLIENT",
+  "type": "client",
+  "summary": {
+    "criteriaScore": 5,
+    "securityScore": 13,
+    "managerParticipation": 10,
+    "holonsConfigured": 5,
+    "systemsGenerated": 5
+  },
+  "details": {
+    "clientInfo": {
+      "name": "TEST_CLIENT",
+      "type": "client",
+      "onboardingDate": "2025-07-09T13:47:19.756Z",
+      "sessionId": "onboarding-1752068839744"
+    },
+    "criteria": {
+      "technical": {
+        "architecture": {
+          "requirements": [
+            "Scalable architecture",
+            "Microservices ready",
+            "API-first design"
+          ],
+          "assessment": {
+            "met": [
+              "Scalable architecture",
+              "API-first design"
+            ],
+            "partiallyMet": [],
+            "notMet": [
+              "Microservices ready"
+            ],
+            "requiresReview": []
+          },
+          "score": 66.66666666666666,
+          "recommendations": []
+        },
+        "security": {
+          "requirements": [
+            "Data encryption",
+            "Access controls",
+            "Audit logging"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "Access controls",
+              "Audit logging"
+            ],
+            "requiresReview": [
+              "Data encryption"
+            ]
+          },
+          "score": 0,
+          "recommendations": []
+        },
+        "performance": {
+          "requirements": [
+            "Response time < 200ms",
+            "99.9% uptime",
+            "Load balancing"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "Response time < 200ms",
+              "99.9% uptime",
+              "Load balancing"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        },
+        "monitoring": {
+          "requirements": [
+            "Real-time monitoring",
+            "Alert systems",
+            "Performance tracking"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [
+              "Real-time monitoring",
+              "Performance tracking"
+            ],
+            "notMet": [
+              "Alert systems"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        }
+      },
+      "business": {
+        "compliance": {
+          "requirements": [
+            "GDPR compliance",
+            "Industry standards",
+            "Legal requirements"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "GDPR compliance",
+              "Industry standards",
+              "Legal requirements"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        },
+        "scalability": {
+          "requirements": [
+            "User growth support",
+            "Feature expansion",
+            "Market adaptation"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "User growth support",
+              "Feature expansion",
+              "Market adaptation"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        },
+        "integration": {
+          "requirements": [
+            "Third-party APIs",
+            "Data migration",
+            "System compatibility"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "Third-party APIs",
+              "Data migration",
+              "System compatibility"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        }
+      },
+      "operational": {
+        "deployment": {
+          "requirements": [
+            "CI/CD pipeline",
+            "Environment management",
+            "Rollback procedures"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "CI/CD pipeline",
+              "Environment management",
+              "Rollback procedures"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        },
+        "maintenance": {
+          "requirements": [
+            "Update procedures",
+            "Backup systems",
+            "Disaster recovery"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "Update procedures",
+              "Backup systems",
+              "Disaster recovery"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        },
+        "support": {
+          "requirements": [
+            "Documentation",
+            "Training materials",
+            "Support processes"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "Documentation",
+              "Training materials",
+              "Support processes"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        }
+      },
+      "governance": {
+        "access": {
+          "requirements": [
+            "Role-based access",
+            "Permission management",
+            "Audit trails"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "Role-based access",
+              "Permission management",
+              "Audit trails"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        },
+        "policies": {
+          "requirements": [
+            "Data policies",
+            "Security policies",
+            "Usage policies"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "Data policies",
+              "Security policies",
+              "Usage policies"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        },
+        "compliance": {
+          "requirements": [
+            "Regulatory compliance",
+            "Industry standards",
+            "Internal policies"
+          ],
+          "assessment": {
+            "met": [],
+            "partiallyMet": [],
+            "notMet": [
+              "Regulatory compliance",
+              "Industry standards",
+              "Internal policies"
+            ],
+            "requiresReview": []
+          },
+          "score": 0,
+          "recommendations": []
+        }
+      }
+    },
+    "validation": {},
+    "holonSetup": {
+      "systemMaster": {
+        "description": "Client system governance and oversight",
+        "managers": [
+          "governance",
+          "security",
+          "monitoring"
+        ],
+        "responsibilities": [
+          "System-wide governance",
+          "Security oversight",
+          "Performance monitoring",
+          "Cross-platform coordination"
+        ],
+        "status": "configured",
+        "setupComplete": false,
+        "integrationPoints": [
+          {
+            "manager": "governance",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Define governance policies",
+              "Establish compliance frameworks",
+              "Set up audit procedures",
+              "Create escalation protocols"
+            ]
+          },
+          {
+            "manager": "security",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Define security requirements",
+              "Set up access controls",
+              "Establish encryption standards",
+              "Create security monitoring"
+            ]
+          },
+          {
+            "manager": "monitoring",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Set up monitoring systems",
+              "Define performance metrics",
+              "Establish health checks",
+              "Create reporting procedures"
+            ]
+          }
+        ]
+      },
+      "elevate": {
+        "description": "Client-specific product governance",
+        "managers": [
+          "protocol",
+          "session",
+          "documentation"
+        ],
+        "responsibilities": [
+          "Product feature governance",
+          "User experience management",
+          "Feature development coordination",
+          "Product roadmap management"
+        ],
+        "status": "configured",
+        "setupComplete": false,
+        "integrationPoints": [
+          {
+            "manager": "protocol",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Define operational protocols",
+              "Set up communication channels",
+              "Establish escalation procedures",
+              "Create incident response plans"
+            ]
+          },
+          {
+            "manager": "session",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Set up session tracking",
+              "Establish context preservation",
+              "Create session recovery procedures",
+              "Define session security"
+            ]
+          },
+          {
+            "manager": "documentation",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Create client documentation",
+              "Establish documentation standards",
+              "Set up knowledge management",
+              "Create training materials"
+            ]
+          }
+        ]
+      },
+      "administrate": {
+        "description": "Client business intelligence and operations",
+        "managers": [
+          "alert",
+          "monitoring",
+          "documentation"
+        ],
+        "responsibilities": [
+          "Business intelligence",
+          "Operational oversight",
+          "Reporting and analytics",
+          "Performance optimization"
+        ],
+        "status": "configured",
+        "setupComplete": false,
+        "integrationPoints": [
+          {
+            "manager": "alert",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Set up alert systems",
+              "Define notification channels",
+              "Establish escalation procedures",
+              "Create alert response protocols"
+            ]
+          },
+          {
+            "manager": "monitoring",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Set up monitoring systems",
+              "Define performance metrics",
+              "Establish health checks",
+              "Create reporting procedures"
+            ]
+          },
+          {
+            "manager": "documentation",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Create client documentation",
+              "Establish documentation standards",
+              "Set up knowledge management",
+              "Create training materials"
+            ]
+          }
+        ]
+      },
+      "elaborate": {
+        "description": "Client system evolution and optimization",
+        "managers": [
+          "boundary",
+          "file",
+          "repo"
+        ],
+        "responsibilities": [
+          "System evolution tracking",
+          "Architecture optimization",
+          "Code quality management",
+          "Technical debt reduction"
+        ],
+        "status": "configured",
+        "setupComplete": false,
+        "integrationPoints": [
+          {
+            "manager": "boundary",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Establish client space boundaries",
+              "Define code separation rules",
+              "Set up monitoring and alerts",
+              "Create boundary violation protocols"
+            ]
+          },
+          {
+            "manager": "file",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Organize client file structure",
+              "Establish naming conventions",
+              "Set up file lifecycle management",
+              "Create backup and recovery procedures"
+            ]
+          },
+          {
+            "manager": "repo",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Create client repository structure",
+              "Set up version control",
+              "Establish branching strategies",
+              "Configure deployment pipelines"
+            ]
+          }
+        ]
+      },
+      "articulate": {
+        "description": "Client knowledge management and communication",
+        "managers": [
+          "documentation",
+          "session",
+          "protocol"
+        ],
+        "responsibilities": [
+          "Knowledge management",
+          "Communication protocols",
+          "Training and documentation",
+          "Information architecture"
+        ],
+        "status": "configured",
+        "setupComplete": false,
+        "integrationPoints": [
+          {
+            "manager": "documentation",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Create client documentation",
+              "Establish documentation standards",
+              "Set up knowledge management",
+              "Create training materials"
+            ]
+          },
+          {
+            "manager": "session",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Set up session tracking",
+              "Establish context preservation",
+              "Create session recovery procedures",
+              "Define session security"
+            ]
+          },
+          {
+            "manager": "protocol",
+            "integrationType": "holon_member",
+            "status": "configured",
+            "responsibilities": [
+              "Define operational protocols",
+              "Set up communication channels",
+              "Establish escalation procedures",
+              "Create incident response plans"
+            ]
+          }
+        ]
+      }
+    },
+    "managerParticipation": {
+      "boundary": {
+        "role": "Boundary Enforcement",
+        "responsibilities": [
+          "Establish client space boundaries",
+          "Define code separation rules",
+          "Set up monitoring and alerts",
+          "Create boundary violation protocols"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "file",
+          "repo",
+          "security",
+          "monitoring"
+        ],
+        "dependencies": [
+          "repo",
+          "security"
+        ]
+      },
+      "file": {
+        "role": "File Management",
+        "responsibilities": [
+          "Organize client file structure",
+          "Establish naming conventions",
+          "Set up file lifecycle management",
+          "Create backup and recovery procedures"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "repo",
+          "boundary",
+          "documentation"
+        ],
+        "dependencies": [
+          "repo"
+        ]
+      },
+      "repo": {
+        "role": "Repository Management",
+        "responsibilities": [
+          "Create client repository structure",
+          "Set up version control",
+          "Establish branching strategies",
+          "Configure deployment pipelines"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "boundary",
+          "file",
+          "governance",
+          "security"
+        ],
+        "dependencies": [
+          "governance"
+        ]
+      },
+      "governance": {
+        "role": "Governance Orchestration",
+        "responsibilities": [
+          "Define governance policies",
+          "Establish compliance frameworks",
+          "Set up audit procedures",
+          "Create escalation protocols"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "repo",
+          "security",
+          "protocol",
+          "alert"
+        ],
+        "dependencies": [
+          "security"
+        ]
+      },
+      "security": {
+        "role": "Security Management",
+        "responsibilities": [
+          "Define security requirements",
+          "Set up access controls",
+          "Establish encryption standards",
+          "Create security monitoring"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "boundary",
+          "repo",
+          "governance",
+          "monitoring"
+        ],
+        "dependencies": [
+          "monitoring"
+        ]
+      },
+      "protocol": {
+        "role": "Protocol Management",
+        "responsibilities": [
+          "Define operational protocols",
+          "Set up communication channels",
+          "Establish escalation procedures",
+          "Create incident response plans"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "governance",
+          "session",
+          "alert"
+        ],
+        "dependencies": [
+          "governance"
+        ]
+      },
+      "session": {
+        "role": "Session Management",
+        "responsibilities": [
+          "Set up session tracking",
+          "Establish context preservation",
+          "Create session recovery procedures",
+          "Define session security"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "protocol",
+          "security",
+          "monitoring"
+        ],
+        "dependencies": [
+          "security"
+        ]
+      },
+      "documentation": {
+        "role": "Documentation Management",
+        "responsibilities": [
+          "Create client documentation",
+          "Establish documentation standards",
+          "Set up knowledge management",
+          "Create training materials"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "file",
+          "governance",
+          "session"
+        ],
+        "dependencies": [
+          "file"
+        ]
+      },
+      "alert": {
+        "role": "Alert Management",
+        "responsibilities": [
+          "Set up alert systems",
+          "Define notification channels",
+          "Establish escalation procedures",
+          "Create alert response protocols"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "monitoring",
+          "security",
+          "protocol"
+        ],
+        "dependencies": [
+          "monitoring"
+        ]
+      },
+      "monitoring": {
+        "role": "Monitoring Management",
+        "responsibilities": [
+          "Set up monitoring systems",
+          "Define performance metrics",
+          "Establish health checks",
+          "Create reporting procedures"
+        ],
+        "participation": "required",
+        "status": "coordinated",
+        "setupComplete": false,
+        "integrationPoints": [
+          "boundary",
+          "security",
+          "alert"
+        ],
+        "dependencies": [
+          "security"
+        ]
+      }
+    },
+    "generatedSystems": {
+      "clientSpace": {
+        "name": "TEST_CLIENT",
+        "type": "client",
+        "repository": "greenlight-test_client",
+        "platform": "greenlight-platform-test_client",
+        "holons": [
+          "systemMaster",
+          "elevate",
+          "administrate",
+          "elaborate",
+          "articulate"
+        ],
+        "managers": [
+          "boundary",
+          "file",
+          "repo",
+          "governance",
+          "security",
+          "protocol",
+          "session",
+          "documentation",
+          "alert",
+          "monitoring"
+        ],
+        "securityProfile": {
+          "access_control": {
+            "requirements": [
+              "Role-based access control",
+              "Multi-factor authentication",
+              "Session management",
+              "Permission granularity"
+            ],
+            "validation": "required",
+            "status": "pending",
+            "results": {
+              "passed": [
+                "Multi-factor authentication"
+              ],
+              "failed": [
+                "Role-based access control",
+                "Session management",
+                "Permission granularity"
+              ],
+              "requiresReview": [],
+              "notApplicable": []
+            },
+            "score": 25,
+            "recommendations": []
+          },
+          "data_protection": {
+            "requirements": [
+              "Data encryption at rest",
+              "Data encryption in transit",
+              "Data backup procedures",
+              "Data retention policies"
+            ],
+            "validation": "required",
+            "status": "pending",
+            "results": {
+              "passed": [],
+              "failed": [
+                "Data backup procedures",
+                "Data retention policies"
+              ],
+              "requiresReview": [
+                "Data encryption at rest",
+                "Data encryption in transit"
+              ],
+              "notApplicable": []
+            },
+            "score": 0,
+            "recommendations": []
+          },
+          "audit_logging": {
+            "requirements": [
+              "Comprehensive audit trails",
+              "Log retention policies",
+              "Log analysis capabilities",
+              "Alert integration"
+            ],
+            "validation": "required",
+            "status": "pending",
+            "results": {
+              "passed": [
+                "Comprehensive audit trails"
+              ],
+              "failed": [
+                "Log retention policies",
+                "Log analysis capabilities",
+                "Alert integration"
+              ],
+              "requiresReview": [],
+              "notApplicable": []
+            },
+            "score": 25,
+            "recommendations": []
+          },
+          "compliance": {
+            "requirements": [
+              "GDPR compliance",
+              "Industry standards",
+              "Legal requirements",
+              "Internal policies"
+            ],
+            "validation": "required",
+            "status": "pending",
+            "results": {
+              "passed": [],
+              "failed": [
+                "Industry standards",
+                "Legal requirements",
+                "Internal policies"
+              ],
+              "requiresReview": [
+                "GDPR compliance"
+              ],
+              "notApplicable": []
+            },
+            "score": 0,
+            "recommendations": []
+          }
+        }
+      },
+      "systemStructure": {
+        "directories": [
+          "greenlight-test_client/src/core/holons/",
+          "greenlight-test_client/src/core/governance/",
+          "greenlight-test_client/src/core/security/",
+          "greenlight-test_client/src/core/monitoring/",
+          "greenlight-test_client/src/components/",
+          "greenlight-test_client/src/services/",
+          "greenlight-test_client/docs/",
+          "greenlight-test_client/scripts/",
+          "greenlight-test_client/config/"
+        ],
+        "files": [
+          "greenlight-test_client/package.json",
+          "greenlight-test_client/README.md",
+          "greenlight-test_client/SECURITY.md",
+          "greenlight-test_client/GOVERNANCE.md",
+          "greenlight-test_client/ONBOARDING.md"
+        ]
+      },
+      "configurationFiles": {
+        "package": {
+          "name": "greenlight-test_client",
+          "version": "1.0.0",
+          "description": "Greenlight Platform for TEST_CLIENT",
+          "type": "module",
+          "scripts": {
+            "dev": "tsx watch src/index.ts",
+            "build": "tsc",
+            "start": "node dist/index.js",
+            "test": "jest",
+            "lint": "eslint src/**/*.ts",
+            "boundary:enforce": "node scripts/protocols/boundary_enforcement_manager.cjs",
+            "boundary:monitor": "node scripts/protocols/boundary_monitor.cjs",
+            "onboarding:validate": "node scripts/protocols/client_onboarding_manager.cjs --validate"
+          }
+        },
+        "typescript": {
+          "compilerOptions": {
+            "target": "ES2020",
+            "module": "ESNext",
+            "moduleResolution": "node",
+            "strict": true,
+            "esModuleInterop": true,
+            "skipLibCheck": true,
+            "forceConsistentCasingInFileNames": true
+          }
+        },
+        "security": {
+          "encryption": "AES-256-GCM",
+          "authentication": "JWT + MFA",
+          "sessionTimeout": 3600,
+          "auditLogging": true,
+          "dataRetention": "7 years"
+        }
+      },
+      "documentation": {
+        "readme": "# TEST_CLIENT - Greenlight Platform\n\n## Overview\nThis is the Greenlight Platform implementation for TEST_CLIENT.\n\n## Security\n- Encryption: 0% compliant\n- Access Control: 25% compliant\n- Audit Logging: 25% compliant\n\n## Holons\n- systemMaster: Client system governance and oversight\n- elevate: Client-specific product governance\n- administrate: Client business intelligence and operations\n- elaborate: Client system evolution and optimization\n- articulate: Client knowledge management and communication\n\n## Managers\n- boundary: Boundary Enforcement\n- file: File Management\n- repo: Repository Management\n- governance: Governance Orchestration\n- security: Security Management\n- protocol: Protocol Management\n- session: Session Management\n- documentation: Documentation Management\n- alert: Alert Management\n- monitoring: Monitoring Management\n",
+        "security": "# Security Profile for TEST_CLIENT\n\n## Security Assessment\n### ACCESS CONTROL\n  Score: 25%\n  Status: pending\n  \n### DATA PROTECTION\n  Score: 0%\n  Status: pending\n  \n### AUDIT LOGGING\n  Score: 25%\n  Status: pending\n  \n### COMPLIANCE\n  Score: 0%\n  Status: pending\n  \n",
+        "governance": "# Governance Framework for TEST_CLIENT\n\n## Governance Structure\n- System Governance: ✅\n- Product Governance: ✅\n- Business Intelligence: ✅\n- System Evolution: ✅\n- Knowledge Management: ✅\n"
+      },
+      "setupScripts": {
+        "init": "#!/bin/bash\n# Initialize TEST_CLIENT Greenlight Platform\n\necho \"Initializing TEST_CLIENT platform...\"\nmkdir -p greenlight-test_client\ncd greenlight-test_client\n\n# Initialize git repository\ngit init\ngit add .\ngit commit -m \"Initial commit: TEST_CLIENT platform\"\n\n# Install dependencies\nnpm install\n\n# Run boundary enforcement\nnpm run boundary:enforce\n\n# Start monitoring\nnpm run boundary:monitor &\n\necho \"TEST_CLIENT platform initialized successfully!\"\n",
+        "validate": "#!/bin/bash\n# Validate TEST_CLIENT platform\n\necho \"Validating TEST_CLIENT platform...\"\n\n# Run security validation\nnpm run onboarding:validate\n\n# Run boundary checks\nnpm run boundary:enforce\n\n# Check system health\nnpm run health:check\n\necho \"Validation complete!\"\n"
+      }
+    },
+    "securityProfile": {
+      "access_control": {
+        "requirements": [
+          "Role-based access control",
+          "Multi-factor authentication",
+          "Session management",
+          "Permission granularity"
+        ],
+        "validation": "required",
+        "status": "pending",
+        "results": {
+          "passed": [
+            "Multi-factor authentication"
+          ],
+          "failed": [
+            "Role-based access control",
+            "Session management",
+            "Permission granularity"
+          ],
+          "requiresReview": [],
+          "notApplicable": []
+        },
+        "score": 25,
+        "recommendations": []
+      },
+      "data_protection": {
+        "requirements": [
+          "Data encryption at rest",
+          "Data encryption in transit",
+          "Data backup procedures",
+          "Data retention policies"
+        ],
+        "validation": "required",
+        "status": "pending",
+        "results": {
+          "passed": [],
+          "failed": [
+            "Data backup procedures",
+            "Data retention policies"
+          ],
+          "requiresReview": [
+            "Data encryption at rest",
+            "Data encryption in transit"
+          ],
+          "notApplicable": []
+        },
+        "score": 0,
+        "recommendations": []
+      },
+      "audit_logging": {
+        "requirements": [
+          "Comprehensive audit trails",
+          "Log retention policies",
+          "Log analysis capabilities",
+          "Alert integration"
+        ],
+        "validation": "required",
+        "status": "pending",
+        "results": {
+          "passed": [
+            "Comprehensive audit trails"
+          ],
+          "failed": [
+            "Log retention policies",
+            "Log analysis capabilities",
+            "Alert integration"
+          ],
+          "requiresReview": [],
+          "notApplicable": []
+        },
+        "score": 25,
+        "recommendations": []
+      },
+      "compliance": {
+        "requirements": [
+          "GDPR compliance",
+          "Industry standards",
+          "Legal requirements",
+          "Internal policies"
+        ],
+        "validation": "required",
+        "status": "pending",
+        "results": {
+          "passed": [],
+          "failed": [
+            "Industry standards",
+            "Legal requirements",
+            "Internal policies"
+          ],
+          "requiresReview": [
+            "GDPR compliance"
+          ],
+          "notApplicable": []
+        },
+        "score": 0,
+        "recommendations": []
+      }
+    },
+    "documentation": {}
+  },
+  "recommendations": [
+    {
+      "type": "criteria",
+      "category": "technical",
+      "subcategory": "architecture",
+      "priority": "medium",
+      "recommendation": "Improve architecture in technical category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "technical",
+      "subcategory": "security",
+      "priority": "high",
+      "recommendation": "Improve security in technical category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "technical",
+      "subcategory": "performance",
+      "priority": "high",
+      "recommendation": "Improve performance in technical category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "technical",
+      "subcategory": "monitoring",
+      "priority": "high",
+      "recommendation": "Improve monitoring in technical category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "business",
+      "subcategory": "compliance",
+      "priority": "high",
+      "recommendation": "Improve compliance in business category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "business",
+      "subcategory": "scalability",
+      "priority": "high",
+      "recommendation": "Improve scalability in business category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "business",
+      "subcategory": "integration",
+      "priority": "high",
+      "recommendation": "Improve integration in business category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "operational",
+      "subcategory": "deployment",
+      "priority": "high",
+      "recommendation": "Improve deployment in operational category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "operational",
+      "subcategory": "maintenance",
+      "priority": "high",
+      "recommendation": "Improve maintenance in operational category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "operational",
+      "subcategory": "support",
+      "priority": "high",
+      "recommendation": "Improve support in operational category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "governance",
+      "subcategory": "access",
+      "priority": "high",
+      "recommendation": "Improve access in governance category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "governance",
+      "subcategory": "policies",
+      "priority": "high",
+      "recommendation": "Improve policies in governance category to meet requirements"
+    },
+    {
+      "type": "criteria",
+      "category": "governance",
+      "subcategory": "compliance",
+      "priority": "high",
+      "recommendation": "Improve compliance in governance category to meet requirements"
+    },
+    {
+      "type": "security",
+      "category": "access_control",
+      "priority": "critical",
+      "recommendation": "Address security gaps in access_control to achieve compliance"
+    },
+    {
+      "type": "security",
+      "category": "data_protection",
+      "priority": "critical",
+      "recommendation": "Address security gaps in data_protection to achieve compliance"
+    },
+    {
+      "type": "security",
+      "category": "audit_logging",
+      "priority": "critical",
+      "recommendation": "Address security gaps in audit_logging to achieve compliance"
+    },
+    {
+      "type": "security",
+      "category": "compliance",
+      "priority": "critical",
+      "recommendation": "Address security gaps in compliance to achieve compliance"
+    }
+  ],
+  "nextSteps": [
+    {
+      "step": 1,
+      "action": "Review onboarding report and recommendations",
+      "timeline": "Immediate",
+      "priority": "high"
+    },
+    {
+      "step": 2,
+      "action": "Address critical security and criteria gaps",
+      "timeline": "1-2 weeks",
+      "priority": "critical"
+    },
+    {
+      "step": 3,
+      "action": "Set up client repository and initial configuration",
+      "timeline": "1 week",
+      "priority": "high"
+    },
+    {
+      "step": 4,
+      "action": "Deploy monitoring and boundary enforcement",
+      "timeline": "1 week",
+      "priority": "high"
+    },
+    {
+      "step": 5,
+      "action": "Conduct security audit and validation",
+      "timeline": "2 weeks",
+      "priority": "high"
+    },
+    {
+      "step": 6,
+      "action": "Begin operational deployment",
+      "timeline": "3-4 weeks",
+      "priority": "medium"
+    }
+  ]
+}

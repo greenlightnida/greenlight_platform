@@ -1,0 +1,23 @@
+{
+  "name": "Negotiation Mechanisms",
+  "mechanisms": {
+    "bilateralNegotiation": {
+      "participants": "two_constituencies",
+      "process": "direct_negotiation",
+      "mediator": "council_chair",
+      "outcome": "bilateral_agreement"
+    },
+    "multilateralNegotiation": {
+      "participants": "multiple_constituencies",
+      "process": "facilitated_negotiation",
+      "mediator": "council_chair",
+      "outcome": "multilateral_agreement"
+    },
+    "consensusBuilding": {
+      "participants": "all_constituencies",
+      "process": "deliberative_consensus",
+      "facilitator": "council_chair",
+      "outcome": "consensus_agreement"
+    }
+  }
+}

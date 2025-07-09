@@ -1,0 +1,48 @@
+{
+  "name": "Collaborative Prediction Models",
+  "models": {
+    "councilWideIssues": {
+      "type": "strategic",
+      "participants": [
+        "council-chair",
+        "executive-committee"
+      ],
+      "factors": [
+        "cross_committee_patterns",
+        "strategic_risks",
+        "resource_constraints"
+      ],
+      "confidence": 0.85
+    },
+    "committeePerformance": {
+      "type": "operational",
+      "participants": [
+        "executive-committee"
+      ],
+      "factors": [
+        "committee_metrics",
+        "performance_trends",
+        "resource_utilization"
+      ],
+      "confidence": 0.8
+    },
+    "strategicOpportunities": {
+      "type": "strategic",
+      "participants": [
+        "council-chair"
+      ],
+      "factors": [
+        "market_trends",
+        "competitive_analysis",
+        "innovation_potential"
+      ],
+      "confidence": 0.9
+    }
+  },
+  "collaboration": {
+    "modelDevelopment": "joint",
+    "modelValidation": "shared",
+    "modelDeployment": "coordinated",
+    "modelMonitoring": "continuous"
+  }
+}

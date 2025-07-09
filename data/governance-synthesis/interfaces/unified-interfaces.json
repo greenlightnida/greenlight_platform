@@ -1,0 +1,37 @@
+{
+  "name": "Unified Governance Interfaces",
+  "version": "1.0.0",
+  "interfaces": {
+    "GovernancePolicy": {
+      "id": "string",
+      "name": "string",
+      "description": "string",
+      "category": "'accessibility' | 'performance' | 'security' | 'maintainability' | 'design' | 'governance'",
+      "severity": "'low' | 'medium' | 'high' | 'critical'",
+      "rules": "GovernanceRule[]",
+      "enabled": "boolean"
+    },
+    "GovernanceRule": {
+      "id": "string",
+      "name": "string",
+      "description": "string",
+      "check": "(target: any) => boolean",
+      "fix": "?(target: any) => any"
+    },
+    "GovernanceEvent": {
+      "id": "string",
+      "ruleId": "string",
+      "timestamp": "Date",
+      "severity": "'low' | 'medium' | 'high' | 'critical'",
+      "message": "string",
+      "context": "Record<string, unknown>",
+      "resolved": "boolean"
+    },
+    "ConstituencyRepresentation": {
+      "constituency": "string",
+      "votingWeight": "number",
+      "interests": "string[]",
+      "priorities": "string[]"
+    }
+  }
+}

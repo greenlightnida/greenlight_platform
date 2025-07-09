@@ -1,0 +1,22 @@
+{
+  "name": "Manager Knowledge Sharing Protocol",
+  "description": "Systematic knowledge sharing between managers",
+  "sharingMethods": {
+    "regular": "Weekly knowledge sharing sessions",
+    "adhoc": "On-demand knowledge sharing for specific issues",
+    "documentation": "Systematic documentation of lessons learned",
+    "training": "Cross-training between managers"
+  },
+  "content": {
+    "lessonsLearned": "Documentation of what worked and what didn't",
+    "bestPractices": "Proven approaches and methodologies",
+    "tools": "Tools and techniques that improve efficiency",
+    "insights": "Strategic insights and observations"
+  },
+  "platforms": {
+    "wiki": "Centralized knowledge base",
+    "meetings": "Regular knowledge sharing meetings",
+    "documentation": "Structured documentation system",
+    "training": "Cross-manager training programs"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Consensus Validation",
+  "validation": {
+    "agreementCheck": {
+      "method": "constituency_confirmation",
+      "participants": "all_constituencies",
+      "threshold": "unanimous",
+      "outcome": "validated_consensus"
+    },
+    "implementationCheck": {
+      "method": "progress_monitoring",
+      "participants": "all_constituencies",
+      "frequency": "weekly",
+      "outcome": "implementation_status"
+    },
+    "effectivenessCheck": {
+      "method": "outcome_evaluation",
+      "participants": "all_constituencies",
+      "frequency": "monthly",
+      "outcome": "effectiveness_assessment"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "CouncilMasterManager",
+  "role": "Council Chair and Meta-system Governance",
+  "responsibilities": [
+    "Council governance and oversight",
+    "Committee coordination and management",
+    "Strategic planning and execution",
+    "Cross-committee communication"
+  ],
+  "capabilities": [
+    "Council-wide decision making",
+    "Committee performance monitoring",
+    "Strategic alignment enforcement",
+    "Resource allocation optimization"
+  ],
+  "parent": null,
+  "children": [
+    "ExecutiveCommitteeManager",
+    "SecurityCommitteeManager",
+    "PerformanceCommitteeManager",
+    "IntegrationCommitteeManager",
+    "IntelligenceCommitteeManager",
+    "GovernanceCommitteeManager"
+  ]
+}

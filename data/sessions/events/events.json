@@ -1,0 +1,17 @@
+[
+  {
+    "type": "session-started",
+    "timestamp": "2025-07-08T15:18:17.329Z",
+    "sessionId": "session-1751987897328",
+    "data": {
+      "sessionId": "session-1751987897328",
+      "user": "test-repo",
+      "context": {
+        "testMode": true,
+        "detailedReporting": true,
+        "repository": "test-repo",
+        "protocol": "launch"
+      }
+    }
+  }
+]

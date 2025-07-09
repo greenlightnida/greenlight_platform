@@ -1,0 +1,60 @@
+{
+  "systemHolons": {
+    "systemMaster": {
+      "purpose": "meta_system_governance",
+      "priority": "critical"
+    },
+    "elaborate": {
+      "purpose": "system_evolution",
+      "priority": "high"
+    },
+    "articulate": {
+      "purpose": "knowledge_management",
+      "priority": "high"
+    },
+    "features": {
+      "purpose": "feature_engineering",
+      "priority": "high"
+    },
+    "product": {
+      "purpose": "product_management",
+      "priority": "high"
+    },
+    "testing": {
+      "purpose": "quality_assurance",
+      "priority": "medium"
+    }
+  },
+  "productHolons": {
+    "elevate": {
+      "purpose": "coaching_platform",
+      "priority": "high"
+    },
+    "administrate": {
+      "purpose": "business_intelligence",
+      "priority": "high"
+    }
+  },
+  "featureHolons": {
+    "features": {
+      "purpose": "feature_development",
+      "priority": "high"
+    }
+  },
+  "sessionHolons": {
+    "sessionManagement": {
+      "purpose": "session_control",
+      "priority": "medium"
+    }
+  },
+  "userHolons": {
+    "auth": {
+      "purpose": "authentication",
+      "priority": "critical"
+    },
+    "userManagement": {
+      "purpose": "user_administration",
+      "priority": "medium"
+    }
+  }
+}

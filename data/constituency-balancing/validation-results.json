@@ -1,0 +1,7 @@
+{
+  "representation": true,
+  "balancing": true,
+  "consensus": true,
+  "allocation": true,
+  "overall": true
+}

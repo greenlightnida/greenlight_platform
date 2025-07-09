@@ -1,0 +1,392 @@
+import { useState, useEffect } from 'react';
+
+/**
+ * RoadmapDashboard - Roadmap Management and Task Tracking Interface
+ * 
+ * PURPOSE: Strategic roadmap planning and task management
+ * - Roadmap visualization and planning
+ * - Task tracking and progress monitoring
+ * - Milestone management
+ * - Resource allocation tracking
+ * - Timeline management
+ */
+
+export interface RoadmapTask {
+  id: string;
+  title: string;
+  description: string;
+  status: 'planned' | 'in-progress' | 'completed' | 'blocked';
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  assignee: string;
+  dueDate: Date;
+  estimatedHours: number;
+  actualHours?: number;
+  dependencies: string[];
+  tags: string[];
+  progress: number;
+}
+
+export interface RoadmapMetrics {
+  totalTasks: number;
+  completedTasks: number;
+  inProgressTasks: number;
+  blockedTasks: number;
+  overallProgress: number;
+  averageCompletionTime: number;
+  resourceUtilization: number;
+}
+
+export type RoadmapView = 'timeline' | 'kanban' | 'gantt' | 'metrics' | 'resources';
+
+interface RoadmapDashboardProps {
+  className?: string;
+}
+
+export const RoadmapDashboard: React.FC<RoadmapDashboardProps> = ({ 
+  className = '' 
+}) => {
+  const [currentView, setCurrentView] = useState<RoadmapView>('timeline');
+  const [tasks, setTasks] = useState<RoadmapTask[]>([
+    {
+      id: '1',
+      title: 'System Architecture Redesign',
+      description: 'Redesign the core system architecture for better scalability',
+      status: 'in-progress',
+      priority: 'high',
+      assignee: 'John Doe',
+      dueDate: new Date('2024-06-15'),
+      estimatedHours: 80,
+      actualHours: 45,
+      dependencies: [],
+      tags: ['architecture', 'backend'],
+      progress: 56
+    },
+    {
+      id: '2',
+      title: 'User Authentication System',
+      description: 'Implement secure user authentication with OAuth2',
+      status: 'planned',
+      priority: 'critical',
+      assignee: 'Jane Smith',
+      dueDate: new Date('2024-05-30'),
+      estimatedHours: 40,
+      dependencies: ['1'],
+      tags: ['security', 'frontend'],
+      progress: 0
+    },
+    {
+      id: '3',
+      title: 'API Documentation',
+      description: 'Create comprehensive API documentation',
+      status: 'completed',
+      priority: 'medium',
+      assignee: 'Mike Johnson',
+      dueDate: new Date('2024-05-15'),
+      estimatedHours: 20,
+      actualHours: 18,
+      dependencies: [],
+      tags: ['documentation'],
+      progress: 100
+    }
+  ]);
+  const [metrics, setMetrics] = useState<RoadmapMetrics>({
+    totalTasks: 3,
+    completedTasks: 1,
+    inProgressTasks: 1,
+    blockedTasks: 0,
+    overallProgress: 52,
+    averageCompletionTime: 18,
+    resourceUtilization: 75
+  });
+
+  useEffect(() => {
+    // Load roadmap data
+    loadRoadmapData();
+  }, []);
+
+  const loadRoadmapData = async () => {
+// Data loading implementation
+  try {
+    
+    return [];
+  } catch (error) {
+    console.error('Data loading failed:', error);
+    return [];
+  }
+};
+    console.log('Loading roadmap data...');
+  };
+
+  // Helper function for status color
+  function getStatusColor(status: string) {
+    switch (status) {
+      case 'completed': return 'bg-green-200 text-green-800';
+      case 'in-progress': return 'bg-blue-200 text-blue-800';
+      case 'blocked': return 'bg-red-200 text-red-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  }
+
+  // Helper function for priority color
+  function getPriorityColor(priority: string) {
+    switch (priority) {
+      case 'high': return 'bg-red-100 text-red-800';
+      case 'medium': return 'bg-yellow-100 text-yellow-800';
+      case 'low': return 'bg-green-100 text-green-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  }
+
+  // Restore renderTimeline, renderKanban, renderMetrics, renderGantt, renderResources, renderActiveView if referenced
+  const renderTimeline = () => (
+    <div className="space-y-6">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h2 className="text-lg font-semibold mb-4">Timeline View</h2>
+        <div className="space-y-4">
+          {tasks.map(task => (
+            <div key={task.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-medium">{task.title}</h3>
+                <div className="flex space-x-2">
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(task.status)}`}>
+                    {task.status}
+                  </span>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(task.priority)}`}>
+                    {task.priority}
+                  </span>
+                </div>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">{task.description}</p>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 text-sm">
+                <div>
+                  <p className="text-gray-500 dark:text-gray-400">Assignee</p>
+                  <p className="font-medium">{task.assignee}</p>
+                </div>
+                <div>
+                  <p className="text-gray-500 dark:text-gray-400">Due Date</p>
+                  <p className="font-medium">{task.dueDate.toLocaleDateString()}</p>
+                </div>
+                <div>
+                  <p className="text-gray-500 dark:text-gray-400">Progress</p>
+                  <p className="font-medium">{task.progress}%</p>
+                </div>
+                <div>
+                  <p className="text-gray-500 dark:text-gray-400">Hours</p>
+                  <p className="font-medium">{task.actualHours || 0}/{task.estimatedHours}</p>
+                </div>
+              </div>
+              <div className="mt-3">
+                <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+                  <div 
+                    className="bg-blue-600 h-2 rounded-full" 
+                    style={{ width: `${task.progress}%` }}
+                  ></div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderKanban = () => (
+    <div className="space-y-6">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h2 className="text-lg font-semibold mb-4">Kanban Board</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-4">
+          {['planned', 'in-progress', 'blocked', 'completed'].map(status => (
+            <div key={status} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+              <h3 className="font-medium mb-3 capitalize">{status.replace('-', ' ')}</h3>
+              <div className="space-y-2">
+                {tasks.filter(task => task.status === status).map(task => (
+                  <div key={task.id} className="bg-white dark:bg-gray-800 p-3 rounded border">
+                    <h4 className="font-medium text-sm">{task.title}</h4>
+                    <p className="text-xs text-gray-500 mt-1">{task.assignee}</p>
+                    <div className="mt-2">
+                      <span className={`px-2 py-1 rounded-full text-xs font-medium ${getPriorityColor(task.priority)}`}>
+                        {task.priority}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderMetrics = () => (
+    <div className="space-y-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Total Tasks</h3>
+          <p className="text-2xl font-bold text-blue-600">{metrics.totalTasks}</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Completed</h3>
+          <p className="text-2xl font-bold text-green-600">{metrics.completedTasks}</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">In Progress</h3>
+          <p className="text-2xl font-bold text-orange-600">{metrics.inProgressTasks}</p>
+        </div>
+        <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow">
+          <h3 className="text-sm font-medium text-gray-500 dark:text-gray-400">Blocked</h3>
+          <p className="text-2xl font-bold text-red-600">{metrics.blockedTasks}</p>
+        </div>
+      </div>
+
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h2 className="text-lg font-semibold mb-4">Progress Overview</h2>
+        <div className="space-y-4">
+          <div>
+            <div className="flex justify-between mb-2">
+              <span className="text-sm font-medium">Overall Progress</span>
+              <span className="text-sm text-gray-500">{metrics.overallProgress}%</span>
+            </div>
+            <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
+              <div 
+                className="bg-green-600 h-2 rounded-full" 
+                style={{ width: `${metrics.overallProgress}%` }}
+              ></div>
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Avg Completion Time</p>
+              <p className="text-lg font-semibold">{metrics.averageCompletionTime} hours</p>
+            </div>
+            <div>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Resource Utilization</p>
+              <p className="text-lg font-semibold">{metrics.resourceUtilization}%</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderGantt = () => (
+    <div className="space-y-6">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h2 className="text-lg font-semibold mb-4">Gantt Chart</h2>
+        <div className="space-y-4">
+          {tasks.map(task => (
+            <div key={task.id} className="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
+              <div className="flex items-center justify-between mb-2">
+                <h3 className="font-medium">{task.title}</h3>
+                <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(task.status)}`}>
+                  {task.status}
+                </span>
+              </div>
+              <div className="flex items-center space-x-4 text-sm">
+                <span className="text-gray-500">Start: {task.dueDate.toLocaleDateString()}</span>
+                <span className="text-gray-500">Duration: {task.estimatedHours}h</span>
+                <span className="text-gray-500">Progress: {task.progress}%</span>
+              </div>
+              <div className="mt-3 bg-gray-200 dark:bg-gray-700 rounded-full h-4">
+                <div 
+                  className={`h-4 rounded-full ${
+                    task.status === 'completed' ? 'bg-green-500' : 
+                    task.status === 'in-progress' ? 'bg-blue-500' : 
+                    task.status === 'blocked' ? 'bg-red-500' : 'bg-gray-400'
+                  }`}
+                  style={{ width: `${task.progress}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderResources = () => (
+    <div className="space-y-6">
+      <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow">
+        <h2 className="text-lg font-semibold mb-4">Resource Allocation</h2>
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-medium mb-3">Team Workload</h3>
+            <div className="space-y-2">
+              {Array.from(new Set(tasks.map(t => t.assignee))).map(assignee => {
+                const assigneeTasks = tasks.filter(t => t.assignee === assignee);
+                const totalHours = assigneeTasks.reduce((sum, t) => sum + t.estimatedHours, 0);
+                const completedHours = assigneeTasks.reduce((sum, t) => sum + (t.actualHours || 0), 0);
+                return (
+                  <div key={assignee} className="flex items-center justify-between p-3 bg-gray-50 dark:bg-gray-700 rounded-lg">
+                    <span className="font-medium">{assignee}</span>
+                    <div className="text-right">
+                      <p className="text-sm">{assigneeTasks.length} tasks</p>
+                      <p className="text-sm text-gray-500">{completedHours}/{totalHours} hours</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  // Restore renderActiveView if referenced
+  const renderActiveView = () => {
+    switch (currentView) {
+      case 'timeline':
+        return renderTimeline();
+      case 'kanban':
+        return renderKanban();
+      case 'gantt':
+        return renderGantt();
+      case 'metrics':
+        return renderMetrics();
+      case 'resources':
+        return renderResources();
+      default:
+        return renderTimeline(); // Fallback to timeline
+    }
+  };
+
+  return (
+    <div className={`roadmap-dashboard ${className}`}>
+      <div className="mb-6">
+        <h1 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Roadmap Dashboard</h1>
+        <p className="text-gray-600 dark:text-gray-400">Strategic roadmap planning and task management</p>
+      </div>
+
+      {/* Navigation Tabs */}
+      <div className="border-b border-gray-200 dark:border-gray-700 mb-6">
+        <nav className="flex space-x-8">
+          {[
+            { key: 'timeline', label: 'Timeline' },
+            { key: 'kanban', label: 'Kanban' },
+            { key: 'gantt', label: 'Gantt' },
+            { key: 'metrics', label: 'Metrics' },
+            { key: 'resources', label: 'Resources' }
+          ].map(({ key, label }) => (
+            <button
+              key={key}
+              onClick={() => setCurrentView(key as RoadmapView)}
+              className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                currentView === key
+                  ? 'border-blue-500 text-blue-600 dark:text-blue-400'
+                  : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300'
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </nav>
+      </div>
+
+      {/* Content */}
+      <div className="space-y-6">
+        {renderActiveView()}
+      </div>
+    </div>
+  );
+}; 

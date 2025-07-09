@@ -1,0 +1,583 @@
+{
+  "testId": "comprehensive_governance_test_1752099372157",
+  "generatedAt": "2025-07-09T22:21:12.184Z",
+  "summary": {
+    "totalLevels": 7,
+    "totalObjectives": 8,
+    "totalKeyResults": 24,
+    "overallProgress": 0.21852054282634864,
+    "crossLevelAlignment": 0.8333333333333334,
+    "governanceHealth": 0.525926938079841
+  },
+  "levelDetails": {
+    "0": {
+      "level": 0,
+      "name": "System",
+      "description": "Entire Greenlight Platform ecosystem",
+      "objectives": [
+        {
+          "id": "sys_obj_1",
+          "title": "Achieve 99.9% system reliability across all platforms",
+          "description": "Ensure the entire Greenlight Platform ecosystem maintains high reliability",
+          "keyResults": [
+            {
+              "id": "sys_kr_1_1",
+              "title": "Maintain 99.9% uptime for all critical services",
+              "target": 99.9,
+              "current": 4.254170901208905
+            },
+            {
+              "id": "sys_kr_1_2",
+              "title": "Reduce system-wide error rate to <0.1%",
+              "target": 0.1,
+              "current": 0.1
+            },
+            {
+              "id": "sys_kr_1_3",
+              "title": "Achieve 95% user satisfaction across all platforms",
+              "target": 95,
+              "current": 4.210752582614064
+            }
+          ]
+        },
+        {
+          "id": "sys_obj_2",
+          "title": "Establish comprehensive governance across all system levels",
+          "description": "Implement OKR framework for all system components",
+          "keyResults": [
+            {
+              "id": "sys_kr_2_1",
+              "title": "Implement OKR framework for 100% of system components",
+              "target": 100,
+              "current": 4.654574373241413
+            },
+            {
+              "id": "sys_kr_2_2",
+              "title": "Achieve 90% OKR completion rate across all levels",
+              "target": 90,
+              "current": 5.424016432466579
+            },
+            {
+              "id": "sys_kr_2_3",
+              "title": "Establish real-time governance monitoring for all levels",
+              "target": 100,
+              "current": 5.104329625553458
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "reliability": {
+          "current": 0.18914719759333445,
+          "target": 99.9
+        },
+        "userSatisfaction": {
+          "current": 0.18914719759333445,
+          "target": 95
+        },
+        "errorRate": {
+          "current": 0.1,
+          "target": 0.1
+        },
+        "governanceCoverage": {
+          "current": 0.18914719759333445,
+          "target": 100
+        }
+      },
+      "status": "active",
+      "createdAt": "2025-07-09T22:16:12.170Z"
+    },
+    "1": {
+      "level": 1,
+      "name": "Platform",
+      "description": "Individual platforms",
+      "objectives": [
+        {
+          "id": "plat_obj_1",
+          "title": "Optimize Greenlight Platform performance and user experience",
+          "description": "Ensure optimal performance and user experience for the Greenlight Platform",
+          "keyResults": [
+            {
+              "id": "plat_kr_1_1",
+              "title": "Reduce average page load time to <2 seconds",
+              "target": 2,
+              "current": 2
+            },
+            {
+              "id": "plat_kr_1_2",
+              "title": "Achieve 95% feature completion rate",
+              "target": 95,
+              "current": 5.861890398474262
+            },
+            {
+              "id": "plat_kr_1_3",
+              "title": "Maintain 90% user engagement rate",
+              "target": 90,
+              "current": 4.932518557675989
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "performance": {
+          "current": 0.29218882613831293,
+          "target": 100
+        },
+        "featureCompletion": {
+          "current": 0.29218882613831293,
+          "target": 95
+        },
+        "userEngagement": {
+          "current": 0.29218882613831293,
+          "target": 90
+        },
+        "quality": {
+          "current": 0.29218882613831293,
+          "target": 95
+        }
+      },
+      "status": "active",
+      "createdAt": "2025-07-09T22:16:12.171Z"
+    },
+    "2": {
+      "level": 2,
+      "name": "Holon",
+      "description": "System holons",
+      "objectives": [
+        {
+          "id": "holon_obj_1",
+          "title": "Establish Testing Holon as the primary quality assurance system",
+          "description": "Ensure Testing Holon provides comprehensive quality assurance",
+          "keyResults": [
+            {
+              "id": "holon_kr_1_1",
+              "title": "Achieve 100% test coverage for critical paths",
+              "target": 100,
+              "current": 5.496558439513291
+            },
+            {
+              "id": "holon_kr_1_2",
+              "title": "Reduce bug detection time to <24 hours",
+              "target": 24,
+              "current": 5.812475739383915
+            },
+            {
+              "id": "holon_kr_1_3",
+              "title": "Maintain 95% test automation rate",
+              "target": 95,
+              "current": 5.934928872503699
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "capabilityEffectiveness": {
+          "current": 0.06777629105789208,
+          "target": 90
+        },
+        "collaborationEffectiveness": {
+          "current": 0.06777629105789208,
+          "target": 90
+        },
+        "operationalExcellence": {
+          "current": 0.06777629105789208,
+          "target": 95
+        },
+        "innovation": {
+          "current": 0.06777629105789208,
+          "target": 85
+        }
+      },
+      "status": "active",
+      "createdAt": "2025-07-09T22:16:12.171Z"
+    },
+    "3": {
+      "level": 3,
+      "name": "Manager",
+      "description": "Managers within holons",
+      "objectives": [
+        {
+          "id": "mgr_obj_1",
+          "title": "Optimize Command Center Manager for maximum efficiency",
+          "description": "Ensure Command Center Manager operates at maximum efficiency",
+          "keyResults": [
+            {
+              "id": "mgr_kr_1_1",
+              "title": "Achieve <200ms average command response time",
+              "target": 200,
+              "current": 7.12773972220535
+            },
+            {
+              "id": "mgr_kr_1_2",
+              "title": "Maintain 99% command execution success rate",
+              "target": 99,
+              "current": 6.894988998409254
+            },
+            {
+              "id": "mgr_kr_1_3",
+              "title": "Reduce user interaction friction by 50%",
+              "target": 50,
+              "current": 6.079518500406402
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "operationalEfficiency": {
+          "current": 0.04188356922458861,
+          "target": 95
+        },
+        "teamPerformance": {
+          "current": 0.04188356922458861,
+          "target": 90
+        },
+        "processOptimization": {
+          "current": 0.04188356922458861,
+          "target": 90
+        },
+        "qualityAssurance": {
+          "current": 0.04188356922458861,
+          "target": 95
+        }
+      },
+      "status": "active",
+      "createdAt": "2025-07-09T22:16:12.171Z"
+    },
+    "4": {
+      "level": 4,
+      "name": "Module",
+      "description": "Modules within managers",
+      "objectives": [
+        {
+          "id": "mod_obj_1",
+          "title": "Optimize Performance Manager OKR tracking module",
+          "description": "Ensure OKR tracking module operates optimally",
+          "keyResults": [
+            {
+              "id": "mod_kr_1_1",
+              "title": "Achieve real-time OKR updates (<1 second latency)",
+              "target": 1,
+              "current": 1
+            },
+            {
+              "id": "mod_kr_1_2",
+              "title": "Maintain 100% data accuracy in OKR tracking",
+              "target": 100,
+              "current": 7.276346186850601
+            },
+            {
+              "id": "mod_kr_1_3",
+              "title": "Support 1000+ concurrent OKR updates",
+              "target": 1000,
+              "current": 6.22942565829148
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "featureDelivery": {
+          "current": 0.33633927674570535,
+          "target": 95
+        },
+        "technicalExcellence": {
+          "current": 0.33633927674570535,
+          "target": 90
+        },
+        "performance": {
+          "current": 0.33633927674570535,
+          "target": 95
+        },
+        "reliability": {
+          "current": 0.33633927674570535,
+          "target": 99
+        }
+      },
+      "status": "active",
+      "createdAt": "2025-07-09T22:16:12.171Z"
+    },
+    "5": {
+      "level": 5,
+      "name": "Component",
+      "description": "Components within modules",
+      "objectives": [
+        {
+          "id": "comp_obj_1",
+          "title": "Ensure OKR Dashboard component reliability",
+          "description": "Ensure OKR Dashboard component operates reliably",
+          "keyResults": [
+            {
+              "id": "comp_kr_1_1",
+              "title": "Achieve 99.9% component uptime",
+              "target": 99.9,
+              "current": 8.189947746814841
+            },
+            {
+              "id": "comp_kr_1_2",
+              "title": "Maintain <100ms component render time",
+              "target": 100,
+              "current": 7.868454845626775
+            },
+            {
+              "id": "comp_kr_1_3",
+              "title": "Support 100% accessibility compliance",
+              "target": 100,
+              "current": 6.895666582539118
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "componentReliability": {
+          "current": 0.04103277654524745,
+          "target": 99.9
+        },
+        "performance": {
+          "current": 0.04103277654524745,
+          "target": 95
+        },
+        "userExperience": {
+          "current": 0.04103277654524745,
+          "target": 90
+        },
+        "accessibility": {
+          "current": 0.04103277654524745,
+          "target": 100
+        }
+      },
+      "status": "active",
+      "createdAt": "2025-07-09T22:16:12.171Z"
+    },
+    "6": {
+      "level": 6,
+      "name": "Atomic",
+      "description": "Atomic units (functions, utilities)",
+      "objectives": [
+        {
+          "id": "atomic_obj_1",
+          "title": "Optimize OKR calculation function performance",
+          "description": "Ensure OKR calculation function performs optimally",
+          "keyResults": [
+            {
+              "id": "atomic_kr_1_1",
+              "title": "Achieve <10ms calculation time for complex OKRs",
+              "target": 10,
+              "current": 7.797614960253172
+            },
+            {
+              "id": "atomic_kr_1_2",
+              "title": "Maintain 100% calculation accuracy",
+              "target": 100,
+              "current": 8.633191433692213
+            },
+            {
+              "id": "atomic_kr_1_3",
+              "title": "Support 100% test coverage",
+              "target": 100,
+              "current": 8.883017890190786
+            }
+          ]
+        }
+      ],
+      "metrics": {
+        "codeQuality": {
+          "current": 0.18328395568472428,
+          "target": 95
+        },
+        "performance": {
+          "current": 0.18328395568472428,
+          "target": 90
+        },
+        "testCoverage": {
+          "current": 0.18328395568472428,
+          "target": 100
+        },
+        "maintainability": {
+          "current": 0.18328395568472428,
+          "target": 90
+        }
+      },
+      "status": "active",
+      "createdAt": "2025-07-09T22:16:12.172Z"
+    }
+  },
+  "crossLevelAlignments": [
+    {
+      "id": "alignment_0_1",
+      "parentLevel": 0,
+      "childLevel": 1,
+      "alignmentType": "strategic",
+      "strength": 0.8,
+      "dependencies": [],
+      "impactMetrics": {},
+      "createdAt": "2025-07-09T22:16:12.172Z"
+    },
+    {
+      "id": "alignment_1_2",
+      "parentLevel": 1,
+      "childLevel": 2,
+      "alignmentType": "platform",
+      "strength": 0.8,
+      "dependencies": [],
+      "impactMetrics": {},
+      "createdAt": "2025-07-09T22:16:12.172Z"
+    },
+    {
+      "id": "alignment_2_3",
+      "parentLevel": 2,
+      "childLevel": 3,
+      "alignmentType": "holon",
+      "strength": 1,
+      "dependencies": [],
+      "impactMetrics": {},
+      "createdAt": "2025-07-09T22:16:12.172Z"
+    },
+    {
+      "id": "alignment_3_4",
+      "parentLevel": 3,
+      "childLevel": 4,
+      "alignmentType": "manager",
+      "strength": 0.8,
+      "dependencies": [],
+      "impactMetrics": {},
+      "createdAt": "2025-07-09T22:16:12.172Z"
+    },
+    {
+      "id": "alignment_4_5",
+      "parentLevel": 4,
+      "childLevel": 5,
+      "alignmentType": "module",
+      "strength": 0.8,
+      "dependencies": [],
+      "impactMetrics": {},
+      "createdAt": "2025-07-09T22:16:12.172Z"
+    },
+    {
+      "id": "alignment_5_6",
+      "parentLevel": 5,
+      "childLevel": 6,
+      "alignmentType": "component",
+      "strength": 0.8,
+      "dependencies": [],
+      "impactMetrics": {},
+      "createdAt": "2025-07-09T22:16:12.172Z"
+    }
+  ],
+  "governanceMetrics": {
+    "overallProgress": 0.21852054282634864,
+    "levelProgress": {
+      "0": 0.20746064898981822,
+      "1": 0.3721699570698598,
+      "2": 0.11987500301205611,
+      "3": 0.0756251407128134,
+      "4": 0.35966429584226584,
+      "5": 0.07654089106957813,
+      "6": 0.3183078630880491
+    },
+    "crossLevelAlignment": 0.8333333333333334,
+    "governanceHealth": 0.525926938079841,
+    "performanceImpact": 0.9781479457173652,
+    "userSatisfaction": 0.29666848854371375
+  },
+  "testResults": {
+    "overallProgress": 0.21852054282634864,
+    "crossLevelAlignment": 0.8333333333333334,
+    "governanceHealth": 0.525926938079841,
+    "performanceImpact": 0.9781479457173652,
+    "userSatisfaction": 0.29666848854371375,
+    "levelResults": {
+      "0": {
+        "progress": 0.20746064898981822,
+        "objectivesCompleted": 0,
+        "totalObjectives": 2
+      },
+      "1": {
+        "progress": 0.3721699570698598,
+        "objectivesCompleted": 0,
+        "totalObjectives": 1
+      },
+      "2": {
+        "progress": 0.11987500301205611,
+        "objectivesCompleted": 0,
+        "totalObjectives": 1
+      },
+      "3": {
+        "progress": 0.0756251407128134,
+        "objectivesCompleted": 0,
+        "totalObjectives": 1
+      },
+      "4": {
+        "progress": 0.35966429584226584,
+        "objectivesCompleted": 0,
+        "totalObjectives": 1
+      },
+      "5": {
+        "progress": 0.07654089106957813,
+        "objectivesCompleted": 0,
+        "totalObjectives": 1
+      },
+      "6": {
+        "progress": 0.3183078630880491,
+        "objectivesCompleted": 0,
+        "totalObjectives": 1
+      }
+    },
+    "alignmentResults": {
+      "alignment_0_1": {
+        "strength": 0.8,
+        "parentLevel": 0,
+        "childLevel": 1,
+        "alignmentType": "strategic"
+      },
+      "alignment_1_2": {
+        "strength": 0.8,
+        "parentLevel": 1,
+        "childLevel": 2,
+        "alignmentType": "platform"
+      },
+      "alignment_2_3": {
+        "strength": 1,
+        "parentLevel": 2,
+        "childLevel": 3,
+        "alignmentType": "holon"
+      },
+      "alignment_3_4": {
+        "strength": 0.8,
+        "parentLevel": 3,
+        "childLevel": 4,
+        "alignmentType": "manager"
+      },
+      "alignment_4_5": {
+        "strength": 0.8,
+        "parentLevel": 4,
+        "childLevel": 5,
+        "alignmentType": "module"
+      },
+      "alignment_5_6": {
+        "strength": 0.8,
+        "parentLevel": 5,
+        "childLevel": 6,
+        "alignmentType": "component"
+      }
+    }
+  },
+  "recommendations": {
+    "immediate": [
+      "Implement comprehensive OKR framework across all system levels",
+      "Establish cross-level alignment mechanisms",
+      "Create governance monitoring dashboards",
+      "Set up automated OKR progress tracking"
+    ],
+    "shortTerm": [
+      "Optimize cross-level alignment algorithms",
+      "Implement real-time governance monitoring",
+      "Create governance performance optimization",
+      "Establish governance training programs"
+    ],
+    "longTerm": [
+      "Implement advanced governance analytics",
+      "Create predictive governance modeling",
+      "Establish continuous governance improvement",
+      "Implement governance automation"
+    ]
+  }
+}

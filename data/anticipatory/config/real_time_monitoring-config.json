@@ -1,0 +1,14 @@
+{
+  "intervals": {
+    "healthCheck": 30000,
+    "performanceCheck": 60000,
+    "securityCheck": 300000,
+    "governanceCheck": 600000
+  },
+  "thresholds": {
+    "health": 80,
+    "performance": 85,
+    "security": 90,
+    "governance": 85
+  }
+}

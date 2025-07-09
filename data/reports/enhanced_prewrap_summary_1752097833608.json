@@ -1,0 +1,15 @@
+{
+  "timestamp": "2025-07-09T21:50:09.470Z",
+  "summary": {
+    "totalIssues": 2,
+    "totalWarnings": 7,
+    "totalSuccesses": 1,
+    "protocolComplexity": 1331,
+    "systemHealth": "failed"
+  },
+  "criticalIssues": [
+    "scripts/protocols/end_of_chat_protocol.js missing",
+    "Build failed"
+  ],
+  "recommendations": []
+}

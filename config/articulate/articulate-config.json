@@ -1,0 +1,210 @@
+{
+  "knowledgeBases": [
+    {
+      "name": "System Documentation",
+      "type": "system",
+      "description": "Core system documentation and architecture",
+      "category": "documentation",
+      "content": {
+        "articles": 0,
+        "documents": 0,
+        "codeSnippets": 0,
+        "processes": 0,
+        "totalItems": 0
+      },
+      "quality": {
+        "score": 100,
+        "lastAudit": "2025-07-08T14:28:45.347Z",
+        "issues": [],
+        "compliance": 100
+      },
+      "access": {
+        "permissions": "restricted",
+        "allowedUsers": [],
+        "allowedRoles": [
+          "admin",
+          "developer"
+        ]
+      },
+      "metadata": {
+        "tags": [
+          "system",
+          "documentation"
+        ],
+        "keywords": [
+          "architecture",
+          "api"
+        ],
+        "lastUpdated": "2025-07-08T14:28:45.347Z",
+        "createdBy": "system"
+      },
+      "status": "active",
+      "id": "kb-1751984925347-t1cu6raar",
+      "createdAt": "2025-07-08T14:28:45.347Z",
+      "updatedAt": "2025-07-08T14:28:45.347Z"
+    },
+    {
+      "name": "User Guides",
+      "type": "user",
+      "description": "User guides and tutorials",
+      "category": "training",
+      "content": {
+        "articles": 0,
+        "documents": 0,
+        "codeSnippets": 0,
+        "processes": 0,
+        "totalItems": 0
+      },
+      "quality": {
+        "score": 100,
+        "lastAudit": "2025-07-08T14:28:45.347Z",
+        "issues": [],
+        "compliance": 100
+      },
+      "access": {
+        "permissions": "public",
+        "allowedUsers": [],
+        "allowedRoles": []
+      },
+      "metadata": {
+        "tags": [
+          "user",
+          "guides"
+        ],
+        "keywords": [
+          "tutorial",
+          "help"
+        ],
+        "lastUpdated": "2025-07-08T14:28:45.347Z",
+        "createdBy": "system"
+      },
+      "status": "active",
+      "id": "kb-1751984925352-p5mwrqtaa",
+      "createdAt": "2025-07-08T14:28:45.352Z",
+      "updatedAt": "2025-07-08T14:28:45.352Z"
+    }
+  ],
+  "knowledgeItems": [],
+  "learningIntegrations": [],
+  "knowledgeWorkflows": [
+    {
+      "name": "Content Review Workflow",
+      "type": "review",
+      "description": "Standard workflow for reviewing new knowledge content",
+      "steps": [
+        {
+          "id": "draft",
+          "name": "Draft Creation",
+          "order": 1,
+          "type": "manual",
+          "assignee": {
+            "type": "role",
+            "value": "author"
+          },
+          "requirements": [
+            "Content created"
+          ],
+          "actions": [
+            "Write content",
+            "Add metadata"
+          ],
+          "estimatedDuration": 60,
+          "dependencies": []
+        },
+        {
+          "id": "review",
+          "name": "Content Review",
+          "order": 2,
+          "type": "approval",
+          "assignee": {
+            "type": "role",
+            "value": "reviewer"
+          },
+          "requirements": [
+            "Draft completed"
+          ],
+          "actions": [
+            "Review content",
+            "Provide feedback"
+          ],
+          "estimatedDuration": 30,
+          "dependencies": [
+            "draft"
+          ]
+        },
+        {
+          "id": "approval",
+          "name": "Final Approval",
+          "order": 3,
+          "type": "approval",
+          "assignee": {
+            "type": "role",
+            "value": "approver"
+          },
+          "requirements": [
+            "Review completed"
+          ],
+          "actions": [
+            "Approve content",
+            "Publish"
+          ],
+          "estimatedDuration": 15,
+          "dependencies": [
+            "review"
+          ]
+        }
+      ],
+      "participants": {
+        "roles": [
+          "author",
+          "reviewer",
+          "approver"
+        ],
+        "users": [],
+        "responsibilities": [
+          "Create content",
+          "Review quality",
+          "Approve publication"
+        ]
+      },
+      "automation": {
+        "enabled": true,
+        "triggers": [
+          "content_created"
+        ],
+        "actions": [
+          "notify_reviewer"
+        ]
+      },
+      "metrics": {
+        "averageDuration": 105,
+        "successRate": 95,
+        "bottlenecks": []
+      },
+      "status": "active",
+      "id": "wf-1751984960572-jhcf49wpe",
+      "createdAt": "2025-07-08T14:29:20.572Z",
+      "updatedAt": "2025-07-08T14:29:20.572Z"
+    }
+  ],
+  "crossPlatformKnowledge": [],
+  "knowledgeAnalytics": {
+    "overall": {
+      "totalItems": 0,
+      "totalBases": 0,
+      "averageQuality": 100,
+      "totalUsage": 0,
+      "lastUpdated": "2025-07-08T14:28:45.343Z"
+    },
+    "bases": {},
+    "items": {},
+    "trends": {
+      "growthRate": 0,
+      "qualityTrend": "stable",
+      "usageTrend": "stable",
+      "popularCategories": []
+    },
+    "insights": []
+  },
+  "lastUpdated": "2025-07-08T14:35:37.521Z"
+}

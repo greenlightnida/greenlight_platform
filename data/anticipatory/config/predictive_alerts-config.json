@@ -1,0 +1,14 @@
+{
+  "predictionWindow": 300000,
+  "confidenceThreshold": 0.7,
+  "alertChannels": [
+    "slack",
+    "email",
+    "dashboard"
+  ],
+  "escalationLevels": {
+    "warning": 0.7,
+    "critical": 0.9,
+    "emergency": 0.95
+  }
+}

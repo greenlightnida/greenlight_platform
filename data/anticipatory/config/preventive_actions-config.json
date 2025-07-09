@@ -1,0 +1,14 @@
+{
+  "actions": {
+    "dependency": "auto_update_safe",
+    "compilation": "auto_fix_syntax",
+    "performance": "auto_optimize",
+    "security": "auto_patch",
+    "governance": "auto_compliance"
+  },
+  "safety": {
+    "validation": true,
+    "rollback": true,
+    "approval": "high_risk_only"
+  }
+}

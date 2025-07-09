@@ -1,0 +1,33 @@
+{
+  "name": "Governance Monitoring Integration",
+  "integration": {
+    "constituencyMonitoring": {
+      "metrics": [
+        "constituency_representation_effectiveness",
+        "interest_balancing_success_rate",
+        "consensus_building_efficiency",
+        "resource_allocation_fairness"
+      ],
+      "alerts": [
+        "constituency_under_represented",
+        "interest_conflict_detected",
+        "consensus_failure",
+        "resource_allocation_unfair"
+      ]
+    },
+    "governanceMonitoring": {
+      "metrics": [
+        "policy_compliance_rate",
+        "governance_effectiveness_score",
+        "audit_success_rate",
+        "risk_mitigation_effectiveness"
+      ],
+      "alerts": [
+        "policy_violation_detected",
+        "governance_effectiveness_declining",
+        "audit_failure",
+        "risk_threshold_exceeded"
+      ]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "file": "/Users/home/Developer/greenlight-platform/scripts/register_all_features.ts",
+  "line": 68,
+  "content": "// TODO: Optionally scan codebase for new features (future enhancement)",
+  "type": "TODO",
+  "priority": "low",
+  "context": "\nasync function discoverFeaturesFromCode(): Promise<FeatureEntry[]> {\n  // TODO: Optionally scan codebase for new features (future enhancement)\n  return [];\n}",
+  "archivedAt": "2025-07-09T21:57:27.188Z",
+  "resolution": "archived"
+}

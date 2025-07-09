@@ -1,0 +1,9 @@
+{
+  "sessionId": "launch-1751990624019",
+  "timestamp": "2025-07-08T16:04:10.911Z",
+  "script": "launch_protocol",
+  "error": {
+    "message": "nextSessionPath is not defined",
+    "stack": "ReferenceError: nextSessionPath is not defined\n    at LaunchProtocol.generateRoadmapAnchor (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:439:23)\n    at LaunchProtocol.generateLaunchReport (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:332:38)\n    at LaunchProtocol.execute (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:59:18)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)"
+  }
+}

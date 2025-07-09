@@ -1,0 +1,40 @@
+{
+  "sessionId": "session-1751987897328",
+  "startTime": "2025-07-08T15:18:17.328Z",
+  "user": "test-repo",
+  "context": {
+    "testMode": true,
+    "detailedReporting": true,
+    "repository": "test-repo",
+    "protocol": "launch"
+  },
+  "roadmapAlignment": 0,
+  "contextPreservation": 0,
+  "systemHealth": {
+    "timestamp": "2025-07-08T15:18:17.328Z",
+    "roadmapExists": true,
+    "migrationsManagerExists": true,
+    "sessionManagerExists": true,
+    "gitStatus": "unknown",
+    "testStatus": "failing"
+  },
+  "completedTasks": [],
+  "pendingTasks": [
+    "Create `greenlight-wiki` repository with restricted access",
+    "Set up secure access controls (nida@greenlight.live only initially)",
+    "Establish version control and backup protocols",
+    "Create basic structure and templates",
+    "Consolidate `LIVING_ROADMAP.md` into `ROADMAP.md`",
+    "Create `MANAGERS.md` with coordination matrix",
+    "Establish `PROTOCOLS.md` with status tracking",
+    "Set up `CONTEXT.md` for session preservation",
+    "Define access control policies",
+    "Create update protocols and approval workflows"
+  ],
+  "migrationContext": {
+    "totalMigrations": 0,
+    "pendingMigrations": 0,
+    "inProgressMigrations": 0,
+    "recentMigrations": []
+  }
+}

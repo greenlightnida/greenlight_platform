@@ -1,0 +1,6 @@
+{
+  "detectionWindow": 300000,
+  "sensitivity": 0.2,
+  "baselinePeriod": 86400000,
+  "alertThreshold": 0.8
+}

@@ -1,0 +1,701 @@
+#!/usr/bin/env tsx
+
+/**
+ * FeatureRegistryEngine - Feature Registry Query and Monitoring
+ * 
+ * PURPOSE: Provide FeaturesHolon with comprehensive feature registry management
+ * - Query interface for feature discovery and metadata
+ * - Feature health, usage, and compliance monitoring
+ * - Cross-platform feature analytics and reporting
+ * - Integration with FeaturesHolon's feature implementation lifecycle
+ * - Self-synchronization with roadmap and component systems
+ * 
+ * USAGE: import { FeatureRegistryEngine } from './modules/FeatureRegistryEngine';
+ */
+
+import { EventEmitter } from 'events';
+import fs from 'fs';
+import path from 'path';
+
+export interface FeatureQuery {
+  platform?: 'greenlight-platform' | 'top-bins' | 'shared';
+  holon?: string;
+  type?: 'feature' | 'component' | 'service' | 'holon' | 'external';
+  status?: 'active' | 'inactive' | 'deprecated' | 'beta' | 'stable';
+  systemId?: string;
+  search?: string;
+  recentlyChanged?: boolean; // Last 7 days
+  stale?: boolean; // >90 days
+}
+
+export interface FeatureMetrics {
+  totalFeatures: number;
+  featuresByPlatform: Record<string, number>;
+  featuresByHolon: Record<string, number>;
+  featuresByType: Record<string, number>;
+  featuresByStatus: Record<string, number>;
+  healthScore: number;
+  complianceRate: number;
+  averageUsage: number;
+  staleFeatures: number;
+  recentlyChangedFeatures: number;
+  roadmapSyncRate: number;
+  componentSyncRate: number;
+}
+
+export interface FeatureReport {
+  timestamp: Date;
+  metrics: FeatureMetrics;
+  topUsedFeatures: Array<{id: string, name: string, usage: number, platform: string}>;
+  healthIssues: Array<{featureId: string, issue: string, severity: string}>;
+  complianceGaps: Array<{featureId: string, issue: string, severity: string}>;
+  roadmapSyncIssues: Array<{featureId: string, issue: string, action: string}>;
+  componentSyncIssues: Array<{featureId: string, componentId: string, issue: string}>;
+  recommendations: Array<{type: string, message: string, priority: string}>;
+}
+
+export interface FeatureEntry {
+  id: string;
+  name: string;
+  type: string;
+  status: string;
+  description: string;
+  path: string;
+  docs?: string | null;
+  children?: FeatureEntry[];
+  components?: string[];
+  lastUpdated?: string;
+  platform?: string;
+  holon?: string;
+  roadmapStatus?: 'synced' | 'outdated' | 'missing';
+  componentSyncStatus?: 'synced' | 'outdated' | 'missing';
+  usageMetrics?: {
+    lastAccessed?: string;
+    accessCount?: number;
+    userRating?: number;
+  };
+  healthMetrics?: {
+    buildStatus?: 'passing' | 'failing' | 'unknown';
+    testCoverage?: number;
+    performanceScore?: number;
+    securityScore?: number;
+  };
+}
+
+interface FeatureRegistryEngineState {
+  isInitialized: boolean;
+  featuresRegistry: Map<string, FeatureEntry>;
+  lastSync: Date;
+  metrics: FeatureMetrics;
+  alerts: Array<{id: string, type: string, message: string, severity: string, timestamp: Date}>;
+  performanceMetrics: {
+    queryCount: number;
+    averageQueryTime: number;
+    lastQueryTime: number;
+    syncCount: number;
+    lastSyncTime: number;
+  };
+  roadmapPath: string;
+  componentRegistryPath: string;
+}
+
+export class FeatureRegistryEngine extends EventEmitter {
+  private static instance: FeatureRegistryEngine;
+  private state: FeatureRegistryEngineState;
+
+  private constructor() {
+    super();
+    this.state = this.initializeState();
+  }
+
+  public static getInstance(): FeatureRegistryEngine {
+    if (!FeatureRegistryEngine.instance) {
+      FeatureRegistryEngine.instance = new FeatureRegistryEngine();
+    }
+    return FeatureRegistryEngine.instance;
+  }
+
+  private initializeState(): FeatureRegistryEngineState {
+    return {
+      isInitialized: false,
+      featuresRegistry: new Map(),
+      lastSync: new Date(),
+      metrics: {
+        totalFeatures: 0,
+        featuresByPlatform: {},
+        featuresByHolon: {},
+        featuresByType: {},
+        featuresByStatus: {},
+        healthScore: 0,
+        complianceRate: 0,
+        averageUsage: 0,
+        staleFeatures: 0,
+        recentlyChangedFeatures: 0,
+        roadmapSyncRate: 0,
+        componentSyncRate: 0
+      },
+      alerts: [],
+      performanceMetrics: {
+        queryCount: 0,
+        averageQueryTime: 0,
+        lastQueryTime: 0,
+        syncCount: 0,
+        lastSyncTime: 0
+      },
+      roadmapPath: path.join(process.cwd(), 'docs/architecture/LIVING_ROADMAP.md'),
+      componentRegistryPath: path.join(process.cwd(), 'data/featuresRegistry.json')
+    };
+  }
+
+  public async initialize(): Promise<void> {
+    if (this.state.isInitialized) return;
+
+    console.log('🔧 Initializing Feature Registry Engine...');
+
+    try {
+      // Load existing features registry
+      await this.loadFeaturesRegistry();
+      
+      // Perform initial sync
+      await this.syncWithRoadmap();
+      await this.syncWithComponents();
+      
+      // Calculate initial metrics
+      this.calculateMetrics();
+      
+      this.state.isInitialized = true;
+      this.state.lastSync = new Date();
+      
+      console.log('✅ Feature Registry Engine initialized successfully');
+      this.emit('initialized');
+      
+    } catch (error) {
+      console.error('❌ Feature Registry Engine initialization failed:', error);
+      throw error;
+    }
+  }
+
+  private async loadFeaturesRegistry(): Promise<void> {
+    const registryPath = path.join(process.cwd(), 'data/featuresRegistry.json');
+    
+    if (fs.existsSync(registryPath)) {
+      try {
+        const data = JSON.parse(fs.readFileSync(registryPath, 'utf-8'));
+        const features = data.features || [];
+        
+        this.state.featuresRegistry.clear();
+        features.forEach((feature: FeatureEntry) => {
+          this.state.featuresRegistry.set(feature.id, feature);
+        });
+        
+        console.log(`📋 Loaded ${features.length} features from registry`);
+      } catch (error) {
+        console.warn('⚠️ Failed to load features registry, starting fresh:', error);
+      }
+    }
+  }
+
+  private async syncWithRoadmap(): Promise<void> {
+    console.log('🔄 Syncing features with roadmap...');
+    
+    if (!fs.existsSync(this.state.roadmapPath)) {
+      console.warn('⚠️ Roadmap file not found, skipping roadmap sync');
+      return;
+    }
+
+    try {
+      const roadmapContent = fs.readFileSync(this.state.roadmapPath, 'utf-8');
+      const roadmapFeatures = this.extractFeaturesFromRoadmap(roadmapContent);
+      
+      let syncCount = 0;
+      for (const roadmapFeature of roadmapFeatures) {
+        const existingFeature = this.state.featuresRegistry.get(roadmapFeature.id);
+        
+        if (!existingFeature) {
+          // New feature from roadmap
+          this.state.featuresRegistry.set(roadmapFeature.id, {
+            ...roadmapFeature,
+            roadmapStatus: 'synced',
+            componentSyncStatus: 'missing'
+          });
+          syncCount++;
+          this.emit('feature-registered', roadmapFeature);
+        } else if (existingFeature.roadmapStatus !== 'synced') {
+          // Update existing feature roadmap status
+          existingFeature.roadmapStatus = 'synced';
+          existingFeature.lastUpdated = new Date().toISOString();
+          syncCount++;
+          this.emit('feature-updated', existingFeature);
+        }
+      }
+      
+      // Mark features not in roadmap as outdated
+      for (const [id, feature] of this.state.featuresRegistry) {
+        if (!roadmapFeatures.find(rf => rf.id === id)) {
+          feature.roadmapStatus = 'outdated';
+        }
+      }
+      
+      console.log(`✅ Roadmap sync completed: ${syncCount} features synced`);
+      
+    } catch (error) {
+      console.error('❌ Roadmap sync failed:', error);
+      this.addAlert('roadmap-sync-failed', 'Roadmap synchronization failed', 'error');
+    }
+  }
+
+  private async syncWithComponents(): Promise<void> {
+    console.log('🔄 Syncing features with component registry...');
+    
+    try {
+      const componentRegistryPath = path.join(process.cwd(), 'data/featuresRegistry.json');
+      if (!fs.existsSync(componentRegistryPath)) {
+        console.warn('⚠️ Component registry not found, skipping component sync');
+        return;
+      }
+
+      const componentData = JSON.parse(fs.readFileSync(componentRegistryPath, 'utf-8'));
+      const components = componentData.features || [];
+      
+      let syncCount = 0;
+      for (const [id, feature] of this.state.featuresRegistry) {
+        const linkedComponents = components.filter((c: any) => 
+          c.path && feature.path && c.path.includes(feature.path)
+        ).map((c: any) => c.name);
+        
+        if (linkedComponents.length > 0) {
+          feature.components = linkedComponents;
+          feature.componentSyncStatus = 'synced';
+          syncCount++;
+        } else {
+          feature.componentSyncStatus = 'missing';
+        }
+      }
+      
+      console.log(`✅ Component sync completed: ${syncCount} features linked to components`);
+      
+    } catch (error) {
+      console.error('❌ Component sync failed:', error);
+      this.addAlert('component-sync-failed', 'Component synchronization failed', 'error');
+    }
+  }
+
+  private extractFeaturesFromRoadmap(content: string): FeatureEntry[] {
+    const features: FeatureEntry[] = [];
+    const lines = content.split('\n');
+    
+    let currentSection = '';
+    let currentFeature: Partial<FeatureEntry> | null = null;
+    
+    for (const line of lines) {
+      // Detect section headers
+      if (line.startsWith('## ')) {
+        currentSection = line.replace('## ', '').trim();
+        if (currentFeature && currentFeature.id) {
+          features.push(currentFeature as FeatureEntry);
+        }
+        currentFeature = {
+          id: currentSection.toLowerCase().replace(/[^a-z0-9]/g, '-'),
+          name: currentSection,
+          type: 'feature',
+          status: 'active',
+          description: `Feature from roadmap: ${currentSection}`,
+          path: this.state.roadmapPath,
+          platform: 'greenlight-platform',
+          holon: 'features',
+          roadmapStatus: 'synced',
+          componentSyncStatus: 'missing',
+          lastUpdated: new Date().toISOString()
+        };
+      }
+      
+      // Detect feature status
+      if (line.includes('✅') && currentFeature) {
+        currentFeature.status = 'active';
+      } else if (line.includes('❌') && currentFeature) {
+        currentFeature.status = 'inactive';
+      } else if (line.includes('⚠️') && currentFeature) {
+        currentFeature.status = 'beta';
+      }
+    }
+    
+    // Add the last feature
+    if (currentFeature && currentFeature.id) {
+      features.push(currentFeature as FeatureEntry);
+    }
+    
+    return features;
+  }
+
+  private calculateMetrics(): void {
+    const features = Array.from(this.state.featuresRegistry.values());
+    const now = Date.now();
+    
+    // Basic counts
+    this.state.metrics.totalFeatures = features.length;
+    
+    // Features by platform
+    this.state.metrics.featuresByPlatform = {};
+    features.forEach(feature => {
+      const platform = feature.platform || 'unknown';
+      this.state.metrics.featuresByPlatform[platform] = 
+        (this.state.metrics.featuresByPlatform[platform] || 0) + 1;
+    });
+    
+    // Features by holon
+    this.state.metrics.featuresByHolon = {};
+    features.forEach(feature => {
+      const holon = feature.holon || 'unknown';
+      this.state.metrics.featuresByHolon[holon] = 
+        (this.state.metrics.featuresByHolon[holon] || 0) + 1;
+    });
+    
+    // Features by type
+    this.state.metrics.featuresByType = {};
+    features.forEach(feature => {
+      this.state.metrics.featuresByType[feature.type] = 
+        (this.state.metrics.featuresByType[feature.type] || 0) + 1;
+    });
+    
+    // Features by status
+    this.state.metrics.featuresByStatus = {};
+    features.forEach(feature => {
+      this.state.metrics.featuresByStatus[feature.status] = 
+        (this.state.metrics.featuresByStatus[feature.status] || 0) + 1;
+    });
+    
+    // Stale and recently changed features
+    this.state.metrics.staleFeatures = features.filter(f => 
+      f.lastUpdated && (now - new Date(f.lastUpdated).getTime()) > 1000 * 60 * 60 * 24 * 90
+    ).length;
+    
+    this.state.metrics.recentlyChangedFeatures = features.filter(f => 
+      f.lastUpdated && (now - new Date(f.lastUpdated).getTime()) < 1000 * 60 * 60 * 24 * 7
+    ).length;
+    
+    // Sync rates
+    const roadmapSynced = features.filter(f => f.roadmapStatus === 'synced').length;
+    const componentSynced = features.filter(f => f.componentSyncStatus === 'synced').length;
+    
+    this.state.metrics.roadmapSyncRate = features.length > 0 ? (roadmapSynced / features.length) * 100 : 100;
+    this.state.metrics.componentSyncRate = features.length > 0 ? (componentSynced / features.length) * 100 : 100;
+    
+    // Health score (based on sync rates and status)
+    const activeFeatures = features.filter(f => f.status === 'active').length;
+    const healthFactors = [
+      this.state.metrics.roadmapSyncRate / 100,
+      this.state.metrics.componentSyncRate / 100,
+      features.length > 0 ? activeFeatures / features.length : 1
+    ];
+    this.state.metrics.healthScore = healthFactors.reduce((sum, factor) => sum + factor, 0) / healthFactors.length * 100;
+    
+    // Compliance rate (based on documentation and sync status)
+    const compliantFeatures = features.filter(f => 
+      f.docs && f.roadmapStatus === 'synced' && f.componentSyncStatus === 'synced'
+    ).length;
+    this.state.metrics.complianceRate = features.length > 0 ? (compliantFeatures / features.length) * 100 : 100;
+    
+    // Average usage (placeholder for future implementation)
+    this.state.metrics.averageUsage = 0;
+    
+    this.emit('metrics-updated', this.state.metrics);
+  }
+
+  // 🔍 Query Methods
+
+  public async queryFeatures(query: FeatureQuery = {}): Promise<FeatureEntry[]> {
+    const startTime = Date.now();
+    
+    try {
+      let features = Array.from(this.state.featuresRegistry.values());
+      
+      // Apply filters
+      if (query.platform) {
+        features = features.filter(f => f.platform === query.platform);
+      }
+      
+      if (query.holon) {
+        features = features.filter(f => f.holon === query.holon);
+      }
+      
+      if (query.type) {
+        features = features.filter(f => f.type === query.type);
+      }
+      
+      if (query.status) {
+        features = features.filter(f => f.status === query.status);
+      }
+      
+      if (query.systemId) {
+        features = features.filter(f => f.path.includes(query.systemId!));
+      }
+      
+      if (query.search) {
+        const searchLower = query.search.toLowerCase();
+        features = features.filter(f => 
+          f.name.toLowerCase().includes(searchLower) ||
+          f.id.toLowerCase().includes(searchLower) ||
+          f.description.toLowerCase().includes(searchLower)
+        );
+      }
+      
+      if (query.recentlyChanged) {
+        const weekAgo = Date.now() - (1000 * 60 * 60 * 24 * 7);
+        features = features.filter(f => 
+          f.lastUpdated && new Date(f.lastUpdated).getTime() > weekAgo
+        );
+      }
+      
+      if (query.stale) {
+        const ninetyDaysAgo = Date.now() - (1000 * 60 * 60 * 24 * 90);
+        features = features.filter(f => 
+          f.lastUpdated && new Date(f.lastUpdated).getTime() < ninetyDaysAgo
+        );
+      }
+      
+      // Update performance metrics
+      const queryTime = Date.now() - startTime;
+      this.state.performanceMetrics.queryCount++;
+      this.state.performanceMetrics.lastQueryTime = queryTime;
+      this.state.performanceMetrics.averageQueryTime = 
+        (this.state.performanceMetrics.averageQueryTime * (this.state.performanceMetrics.queryCount - 1) + queryTime) / 
+        this.state.performanceMetrics.queryCount;
+      
+      return features;
+      
+    } catch (error) {
+      console.error('❌ Feature query failed:', error);
+      throw error;
+    }
+  }
+
+  public getAllFeatures(): FeatureEntry[] {
+    return Array.from(this.state.featuresRegistry.values());
+  }
+
+  public getFeatureById(id: string): FeatureEntry | undefined {
+    return this.state.featuresRegistry.get(id);
+  }
+
+  public getFeaturesByType(type: string): FeatureEntry[] {
+    return Array.from(this.state.featuresRegistry.values()).filter(f => f.type === type);
+  }
+
+  public getFeaturesByStatus(status: string): FeatureEntry[] {
+    return Array.from(this.state.featuresRegistry.values()).filter(f => f.status === status);
+  }
+
+  public getFeaturesByPlatform(platform: string): FeatureEntry[] {
+    return Array.from(this.state.featuresRegistry.values()).filter(f => f.platform === platform);
+  }
+
+  // 📊 Metrics and Reporting
+
+  public getMetrics(): FeatureMetrics {
+    return { ...this.state.metrics };
+  }
+
+  public async generateFeatureReport(): Promise<FeatureReport> {
+    const features = Array.from(this.state.featuresRegistry.values());
+    const metrics = this.getMetrics();
+    
+    // Top used features (placeholder for future implementation)
+    const topUsedFeatures = features
+      .filter(f => f.usageMetrics?.accessCount && f.usageMetrics.accessCount > 0)
+      .sort((a, b) => (b.usageMetrics?.accessCount || 0) - (a.usageMetrics?.accessCount || 0))
+      .slice(0, 10)
+      .map(f => ({
+        id: f.id,
+        name: f.name,
+        usage: f.usageMetrics?.accessCount || 0,
+        platform: f.platform || 'unknown'
+      }));
+    
+    // Health issues
+    const healthIssues = features
+      .filter(f => f.healthMetrics?.buildStatus === 'failing' || f.healthMetrics?.securityScore && f.healthMetrics.securityScore < 70)
+      .map(f => ({
+        featureId: f.id,
+        issue: f.healthMetrics?.buildStatus === 'failing' ? 'Build failing' : 'Low security score',
+        severity: f.healthMetrics?.buildStatus === 'failing' ? 'high' : 'medium'
+      }));
+    
+    // Compliance gaps
+    const complianceGaps = features
+      .filter(f => !f.docs || f.roadmapStatus !== 'synced' || f.componentSyncStatus !== 'synced')
+      .map(f => ({
+        featureId: f.id,
+        issue: !f.docs ? 'Missing documentation' : 
+               f.roadmapStatus !== 'synced' ? 'Roadmap sync issue' : 'Component sync issue',
+        severity: 'medium'
+      }));
+    
+    // Roadmap sync issues
+    const roadmapSyncIssues = features
+      .filter(f => f.roadmapStatus !== 'synced')
+      .map(f => ({
+        featureId: f.id,
+        issue: f.roadmapStatus === 'outdated' ? 'Feature outdated in roadmap' : 'Feature missing from roadmap',
+        action: f.roadmapStatus === 'outdated' ? 'Update roadmap' : 'Add to roadmap'
+      }));
+    
+    // Component sync issues
+    const componentSyncIssues = features
+      .filter(f => f.componentSyncStatus !== 'synced')
+      .map(f => ({
+        featureId: f.id,
+        componentId: 'unknown',
+        issue: f.componentSyncStatus === 'missing' ? 'No linked components' : 'Component sync outdated'
+      }));
+    
+    // Recommendations
+    const recommendations = [];
+    
+    if (metrics.staleFeatures > 0) {
+      recommendations.push({
+        type: 'maintenance',
+        message: `${metrics.staleFeatures} features are stale (>90 days). Consider review or deprecation.`,
+        priority: 'medium'
+      });
+    }
+    
+    if (metrics.roadmapSyncRate < 90) {
+      recommendations.push({
+        type: 'sync',
+        message: `Roadmap sync rate is ${metrics.roadmapSyncRate.toFixed(1)}%. Update roadmap to sync features.`,
+        priority: 'high'
+      });
+    }
+    
+    if (metrics.componentSyncRate < 80) {
+      recommendations.push({
+        type: 'sync',
+        message: `Component sync rate is ${metrics.componentSyncRate.toFixed(1)}%. Link features to components.`,
+        priority: 'medium'
+      });
+    }
+    
+    if (metrics.healthScore < 80) {
+      recommendations.push({
+        type: 'health',
+        message: `System health score is ${metrics.healthScore.toFixed(1)}%. Address health issues.`,
+        priority: 'high'
+      });
+    }
+    
+    const report: FeatureReport = {
+      timestamp: new Date(),
+      metrics,
+      topUsedFeatures,
+      healthIssues,
+      complianceGaps,
+      roadmapSyncIssues,
+      componentSyncIssues,
+      recommendations
+    };
+    
+    this.emit('report-generated', report);
+    return report;
+  }
+
+  // 🚨 Alert Management
+
+  public getAlerts(): Array<{id: string, type: string, message: string, severity: string, timestamp: Date}> {
+    return [...this.state.alerts];
+  }
+
+  public getActiveAlerts(): Array<{id: string, type: string, message: string, severity: string, timestamp: Date}> {
+    return this.state.alerts.filter(alert => alert.severity === 'high' || alert.severity === 'medium');
+  }
+
+  public addAlert(type: string, message: string, severity: string = 'info'): void {
+    const alert = {
+      id: `${type}-${Date.now()}`,
+      type,
+      message,
+      severity,
+      timestamp: new Date()
+    };
+    
+    this.state.alerts.push(alert);
+    this.emit('alert-added', alert);
+  }
+
+  public resolveAlert(alertId: string): void {
+    const index = this.state.alerts.findIndex(alert => alert.id === alertId);
+    if (index !== -1) {
+      this.state.alerts.splice(index, 1);
+      this.emit('alert-resolved', alertId);
+    }
+  }
+
+  // 🔄 Sync Operations
+
+  public async forceSync(): Promise<void> {
+    console.log('🔄 Force syncing feature registry...');
+    
+    const startTime = Date.now();
+    
+    try {
+      await this.syncWithRoadmap();
+      await this.syncWithComponents();
+      this.calculateMetrics();
+      
+      this.state.lastSync = new Date();
+      this.state.performanceMetrics.syncCount++;
+      this.state.performanceMetrics.lastSyncTime = Date.now() - startTime;
+      
+      console.log('✅ Feature registry force sync completed');
+      this.emit('sync-completed');
+      
+    } catch (error) {
+      console.error('❌ Feature registry force sync failed:', error);
+      throw error;
+    }
+  }
+
+  public async healthCheck(): Promise<any> {
+    const metrics = this.getMetrics();
+    const alerts = this.getActiveAlerts();
+    
+    const health = {
+      status: metrics.healthScore >= 80 ? 'healthy' : metrics.healthScore >= 60 ? 'warning' : 'critical',
+      score: metrics.healthScore,
+      metrics,
+      alerts: alerts.length,
+      lastSync: this.state.lastSync,
+      performance: this.state.performanceMetrics
+    };
+    
+    return health;
+  }
+
+  // 🛠️ Utility Methods
+
+  public getState(): FeatureRegistryEngineState {
+    return { ...this.state };
+  }
+
+  public async shutdown(): Promise<void> {
+    console.log('🛑 Shutting down Feature Registry Engine...');
+    
+    // Save current state
+    await this.saveFeaturesRegistry();
+    
+    this.state.isInitialized = false;
+    console.log('✅ Feature Registry Engine shut down successfully');
+  }
+
+  private async saveFeaturesRegistry(): Promise<void> {
+    const features = Array.from(this.state.featuresRegistry.values());
+    const metadata = {
+      version: '2.0.0',
+      lastUpdated: new Date().toISOString(),
+      platform: 'greenlight-platform',
+      description: 'Feature registry for Greenlight Platform - Enhanced with sync capabilities'
+    };
+    
+    const registryPath = path.join(process.cwd(), 'data/featuresRegistry.json');
+    fs.writeFileSync(registryPath, JSON.stringify({ metadata, features }, null, 2));
+  }
+} 

@@ -1,0 +1,32 @@
+{
+  "name": "Continuous Improvement Metrics",
+  "metrics": {
+    "effectivenessMetrics": {
+      "title": "Effectiveness Metrics",
+      "measures": [
+        "Council decision-making effectiveness and quality",
+        "Holon agent satisfaction and engagement levels",
+        "System-wide impact of Council decisions",
+        "Overall Council performance and productivity"
+      ]
+    },
+    "efficiencyMetrics": {
+      "title": "Efficiency Metrics",
+      "measures": [
+        "Council operational efficiency and speed",
+        "Communication pathway effectiveness",
+        "Decision-making process efficiency",
+        "Resource utilization and optimization"
+      ]
+    },
+    "learningMetrics": {
+      "title": "Learning Metrics",
+      "measures": [
+        "Knowledge capture and dissemination effectiveness",
+        "Learning integration and application success",
+        "Improvement implementation and adoption rates",
+        "Continuous learning culture development"
+      ]
+    }
+  }
+}

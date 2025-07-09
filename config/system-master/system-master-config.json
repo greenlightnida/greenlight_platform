@@ -1,0 +1,154 @@
+{
+  "holonRegistry": [
+    {
+      "id": "systemMaster",
+      "name": "SystemMaster",
+      "type": "system",
+      "repository": "greenlight-platform",
+      "managers": [
+        "SystemMasterManager",
+        "GovernanceOrchestrator",
+        "RepositoryGovernor"
+      ],
+      "services": [
+        "auditService",
+        "systemLogService",
+        "performanceTrackingService"
+      ],
+      "status": "active",
+      "health": {
+        "score": 100,
+        "lastCheck": "2025-07-08T14:35:37.108Z",
+        "issues": []
+      },
+      "dependencies": [],
+      "metadata": {
+        "description": "Meta-system governance and oversight"
+      },
+      "createdAt": "2025-07-08T14:35:37.108Z",
+      "updatedAt": "2025-07-08T14:35:37.108Z"
+    },
+    {
+      "id": "elaborate",
+      "name": "Elaborate",
+      "type": "system",
+      "repository": "greenlight-platform",
+      "managers": [
+        "ElaborateManager",
+        "SystemEvolutionManager",
+        "ProtocolManager"
+      ],
+      "services": [
+        "auditService",
+        "deploymentTracker",
+        "systemEvolutionService"
+      ],
+      "status": "active",
+      "health": {
+        "score": 100,
+        "lastCheck": "2025-07-08T14:35:37.108Z",
+        "issues": []
+      },
+      "dependencies": [
+        "systemMaster"
+      ],
+      "metadata": {
+        "description": "System governance and evolution"
+      },
+      "createdAt": "2025-07-08T14:35:37.110Z",
+      "updatedAt": "2025-07-08T14:35:37.110Z"
+    },
+    {
+      "id": "articulate",
+      "name": "Articulate",
+      "type": "system",
+      "repository": "greenlight-platform",
+      "managers": [
+        "ArticulateManager",
+        "KnowledgeManager",
+        "WorkManager"
+      ],
+      "services": [
+        "developerNotesService",
+        "nlpService",
+        "knowledgeService"
+      ],
+      "status": "active",
+      "health": {
+        "score": 100,
+        "lastCheck": "2025-07-08T14:35:37.108Z",
+        "issues": []
+      },
+      "dependencies": [
+        "systemMaster"
+      ],
+      "metadata": {
+        "description": "Knowledge management governance"
+      },
+      "createdAt": "2025-07-08T14:35:37.112Z",
+      "updatedAt": "2025-07-08T14:35:37.112Z"
+    },
+    {
+      "id": "elevate",
+      "name": "Elevate",
+      "type": "product",
+      "repository": "top-bins",
+      "managers": [
+        "ElevateManager",
+        "CoachingManager",
+        "PlayerManager"
+      ],
+      "services": [
+        "playerService",
+        "dataImportService",
+        "aiInsightsService"
+      ],
+      "status": "active",
+      "health": {
+        "score": 100,
+        "lastCheck": "2025-07-08T14:35:37.108Z",
+        "issues": []
+      },
+      "dependencies": [
+        "systemMaster"
+      ],
+      "metadata": {
+        "description": "Coaching product governance"
+      },
+      "createdAt": "2025-07-08T14:35:37.112Z",
+      "updatedAt": "2025-07-08T14:35:37.112Z"
+    },
+    {
+      "id": "administrate",
+      "name": "Administrate",
+      "type": "product",
+      "repository": "top-bins",
+      "managers": [
+        "AdministrateManager",
+        "ExecutiveManager",
+        "BusinessIntelligenceManager"
+      ],
+      "services": [
+        "auditService",
+        "businessIntelligenceService",
+        "reportingService"
+      ],
+      "status": "active",
+      "health": {
+        "score": 100,
+        "lastCheck": "2025-07-08T14:35:37.108Z",
+        "issues": []
+      },
+      "dependencies": [
+        "systemMaster"
+      ],
+      "metadata": {
+        "description": "Business intelligence governance"
+      },
+      "createdAt": "2025-07-08T14:35:37.112Z",
+      "updatedAt": "2025-07-08T14:35:37.112Z"
+    }
+  ],
+  "governancePolicies": [],
+  "lastUpdated": "2025-07-08T14:35:37.522Z"
+}

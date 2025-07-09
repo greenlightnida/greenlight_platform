@@ -1,0 +1,27 @@
+{
+  "issueFrequency": {},
+  "issueSeverity": {
+    "backend": [
+      85
+    ],
+    "frontend": [
+      95
+    ],
+    "api": [
+      88
+    ],
+    "holon": [
+      92
+    ],
+    "governance": [
+      94
+    ]
+  },
+  "resolutionTime": {},
+  "impactAreas": {
+    "compilation": 1,
+    "integration": 1
+  },
+  "seasonalPatterns": {},
+  "correlationPatterns": {}
+}

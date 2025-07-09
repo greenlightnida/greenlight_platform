@@ -1,0 +1,14 @@
+{
+  "name": "Governance Committee",
+  "parent": "CouncilMasterManager",
+  "chair": "GovernanceCommitteeManager",
+  "purpose": "Governance policy enforcement and compliance",
+  "managers": [
+    "GovernanceCommitteeManager",
+    "PolicyManager",
+    "ComplianceManager",
+    "RiskManager",
+    "QualityManager",
+    "StrategyManager"
+  ]
+}

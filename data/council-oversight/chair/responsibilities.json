@@ -1,0 +1,45 @@
+{
+  "name": "Council Chair Responsibilities",
+  "responsibilities": {
+    "strategicOversight": {
+      "title": "Strategic Oversight",
+      "description": "High-level strategic direction and vision for the Council",
+      "activities": [
+        "Define Council strategic objectives and priorities",
+        "Ensure alignment with overall system goals",
+        "Guide long-term Council development and evolution",
+        "Maintain Council effectiveness and relevance"
+      ]
+    },
+    "holonAgentCoordination": {
+      "title": "Holon Agent Coordination",
+      "description": "Ensure effective coordination and communication among all holon agents",
+      "activities": [
+        "Facilitate holon agent understanding and collaboration",
+        "Resolve conflicts between holon agents",
+        "Ensure balanced representation of all holon interests",
+        "Optimize holon agent communication pathways"
+      ]
+    },
+    "decisionMakingOversight": {
+      "title": "Decision-Making Oversight",
+      "description": "Oversee and optimize Council decision-making processes",
+      "activities": [
+        "Ensure fair and effective decision-making procedures",
+        "Monitor decision quality and outcomes",
+        "Optimize voting and consensus-building processes",
+        "Maintain decision-making transparency and accountability"
+      ]
+    },
+    "continuousImprovement": {
+      "title": "Continuous Improvement Leadership",
+      "description": "Drive continuous improvement of Council operations and effectiveness",
+      "activities": [
+        "Monitor Council performance metrics",
+        "Identify improvement opportunities",
+        "Implement optimization strategies",
+        "Foster learning and adaptation culture"
+      ]
+    }
+  }
+}

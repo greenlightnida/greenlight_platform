@@ -1,0 +1,48 @@
+{
+  "name": "Governance Policy Integration",
+  "integration": {
+    "constituencyPolicies": {
+      "representation": {
+        "id": "constituency.representation",
+        "name": "Constituency Representation Policy",
+        "description": "Ensure fair representation across all constituencies",
+        "rules": [
+          {
+            "id": "representation.fair",
+            "name": "Fair Representation",
+            "description": "All constituencies must have proportional representation",
+            "check": "representation_fairness_check"
+          }
+        ]
+      },
+      "balancing": {
+        "id": "constituency.balancing",
+        "name": "Interest Balancing Policy",
+        "description": "Ensure balanced consideration of constituency interests",
+        "rules": [
+          {
+            "id": "balancing.equitable",
+            "name": "Equitable Balancing",
+            "description": "Interests must be balanced equitably across constituencies",
+            "check": "interest_balancing_check"
+          }
+        ]
+      }
+    },
+    "governancePolicies": {
+      "compliance": {
+        "id": "governance.compliance",
+        "name": "Governance Compliance Policy",
+        "description": "Ensure governance compliance across all systems",
+        "rules": [
+          {
+            "id": "compliance.standards",
+            "name": "Compliance Standards",
+            "description": "All governance activities must meet compliance standards",
+            "check": "compliance_standards_check"
+          }
+        ]
+      }
+    }
+  }
+}

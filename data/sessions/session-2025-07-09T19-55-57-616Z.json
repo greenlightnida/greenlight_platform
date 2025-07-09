@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-07-09T19:55:57.617Z",
+  "summary": "Anchor run with updates audit",
+  "platforms": [
+    {
+      "name": "Greenlight Platform",
+      "path": "/Users/home/Developer/greenlight-platform",
+      "type": "main",
+      "status": "analyzed",
+      "analysis": {
+        "features": 0,
+        "components": 91,
+        "services": 220,
+        "tests": 0,
+        "holonGovernance": "active",
+        "buildStatus": "configured",
+        "lastCommit": "71b9d7bbc4f1d0f836511fe9a8bd09ba87c2a27e docs: add build blockers resolution summary and fix scripts"
+      }
+    },
+    {
+      "name": "greenlight-system-governance",
+      "path": "/Users/home/Developer/Greenlight",
+      "type": "client",
+      "status": "analyzed",
+      "analysis": {
+        "features": 0,
+        "components": 15,
+        "services": 22,
+        "tests": 0,
+        "holonGovernance": null,
+        "buildStatus": "unknown",
+        "lastCommit": "No git history"
+      }
+    },
+    {
+      "name": "top-bins-client-space",
+      "path": "/Users/home/Developer/Top_Bins",
+      "type": "client",
+      "status": "analyzed",
+      "analysis": {
+        "features": 2,
+        "components": 78,
+        "services": 153,
+        "tests": 0,
+        "holonGovernance": null,
+        "buildStatus": "configured",
+        "lastCommit": "4729cd723ff1e33a99ccc8e8ec092e7353054890 Precommit: All audits passed, imports fixed, next session context prepared"
+      }
+    },
+    {
+      "name": "top-bins",
+      "path": "/Users/home/Developer/top-bins",
+      "type": "client",
+      "status": "analyzed",
+      "analysis": {
+        "features": 0,
+        "components": 0,
+        "services": 0,
+        "tests": 0,
+        "holonGovernance": null,
+        "buildStatus": "unknown",
+        "lastCommit": "No git history"
+      }
+    }
+  ],
+  "systemHealth": "EXCELLENT",
+  "recommendations": [
+    "Implement holon governance in: greenlight-system-governance, top-bins-client-space, top-bins",
+    "Improve test coverage in: Greenlight Platform, greenlight-system-governance, top-bins-client-space, top-bins",
+    "Initialize git repositories in: greenlight-system-governance, top-bins"
+  ],
+  "auditResults": {
+    "dependencyUpdates": [],
+    "configurationUpdates": [],
+    "launchIssues": [],
+    "contextGaps": [
+      {
+        "type": "missing_documentation",
+        "file": "docs/ARCHITECTURE.md",
+        "priority": "medium"
+      },
+      {
+        "type": "missing_documentation",
+        "file": "docs/DEPLOYMENT.md",
+        "priority": "medium"
+      }
+    ],
+    "roadmapAdditions": []
+  },
+  "roadmapProgress": {
+    "overall": 48,
+    "currentPhase": "Development",
+    "nextMilestone": "Holon Governance",
+    "estimatedCompletion": "Q3 2025",
+    "strategicProgress": 49,
+    "platformMaturity": 100,
+    "onboardingReadiness": 25,
+    "governanceCompliance": 25
+  },
+  "postAuditUpdateRatio": "2 updates / 4 platforms"
+}

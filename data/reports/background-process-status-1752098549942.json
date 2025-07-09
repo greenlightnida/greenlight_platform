@@ -1,0 +1,160 @@
+{
+  "timestamp": "2025-07-09T22:02:08.086Z",
+  "summary": {
+    "total": 11,
+    "running": 11,
+    "stopped": 0,
+    "failed": 0,
+    "pending": 0
+  },
+  "processes": {
+    "running": [
+      {
+        "pid": "71214",
+        "type": "node",
+        "command": "node /Users/home/Developer/greenlight-platform/backend/node_modules/.bin/nodemon src/index.ts",
+        "cpu": "0.0",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "01:36:10",
+        "state": "S+"
+      },
+      {
+        "pid": "69295",
+        "type": "node",
+        "command": "node /Users/home/Developer/greenlight-platform/backend/node_modules/.bin/nodemon src/index.ts",
+        "cpu": "0.0",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "01:59:50",
+        "state": "S+"
+      },
+      {
+        "pid": "68721",
+        "type": "node",
+        "command": "node /Users/home/Developer/greenlight-platform/frontend/node_modules/.bin/vite",
+        "cpu": "0.0",
+        "memory": "0.4",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "02:04:25",
+        "state": "S+"
+      },
+      {
+        "pid": "68149",
+        "type": "node",
+        "command": "node /Users/home/Developer/greenlight-platform/backend/node_modules/.bin/nodemon src/index.ts",
+        "cpu": "0.0",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "02:05:18",
+        "state": "S+"
+      },
+      {
+        "pid": "85604",
+        "type": "npm",
+        "command": "npm run background-status ",
+        "cpu": "0.0",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "00:19",
+        "state": "S+"
+      },
+      {
+        "pid": "69284",
+        "type": "npm",
+        "command": "npm run dev ",
+        "cpu": "0.0",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "01:59:51",
+        "state": "S+"
+      },
+      {
+        "pid": "68710",
+        "type": "npm",
+        "command": "npm run dev ",
+        "cpu": "0.0",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "02:04:26",
+        "state": "S+"
+      },
+      {
+        "pid": "68138",
+        "type": "npm",
+        "command": "npm run dev ",
+        "cpu": "0.0",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "02:05:19",
+        "state": "S+"
+      },
+      {
+        "pid": "71203",
+        "type": "npm",
+        "command": "npm run dev",
+        "cpu": "0.0",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "01:36:11",
+        "state": "S+"
+      },
+      {
+        "pid": "4031",
+        "type": "dev-server",
+        "port": 5173,
+        "command": "Google",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "cpu": "4021",
+        "memory": "1.3",
+        "uptime": "0.2",
+        "state": "06-21:13:51"
+      },
+      {
+        "pid": "85614",
+        "type": "protocol",
+        "protocol": "background_process_status.cjs",
+        "command": "node scripts/protocols/background_process_status.cjs",
+        "cpu": "5.1",
+        "memory": "0.1",
+        "status": "running",
+        "discovered": "2025-07-09T22:02:08.086Z",
+        "lastCheck": "2025-07-09T22:02:08.086Z",
+        "uptime": "00:19",
+        "state": "S+"
+      }
+    ],
+    "stopped": [],
+    "failed": [],
+    "pending": []
+  },
+  "systemInfo": {
+    "cpuUsage": "CPU usage: 5.26% user, 6.51% sys, 88.21% idle",
+    "memoryInfo": "Mach Virtual Memory Statistics: (page size of 4096 bytes)\nPages free:                              640175.\nPages active:                           2799386.\nPages inactive:                         2771290.\nPages speculative:                        26679.\nPages throttled:                              0.\nPages wired down:                       1147630.\nPages purgeable:                          81854.\n\"Translation faults\":                8807131499.\nPages copy-on-write:                  220014531.\nPages zero filled:                   5052751289.\nPages reactivated:                     35051350.\nPages purged:                          48895447.\nFile-backed pages:                       967026.\nAnonymous pages:                        4630329.\nPages stored in compressor:             3977226.\nPages occupied by compressor:           1002369.\nDecompressions:                       181990551.\nCompressions:                         226446172.\nPageins:                               82886615.\nPageouts:                                856784.\nSwapins:                              203329937.\nSwapouts:                             211791782.",
+    "diskUsage": "Filesystem      Size    Used   Avail Capacity iused ifree %iused  Mounted on\n/dev/disk1s1   932Gi   127Gi   786Gi    14%    1.3M  8.2G    0%   /System/Volumes/Data",
+    "timestamp": "2025-07-09T22:02:08.086Z"
+  },
+  "recommendations": [
+    "1 processes using high CPU - consider optimization"
+  ]
+}

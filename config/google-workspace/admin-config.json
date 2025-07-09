@@ -1,0 +1,37 @@
+{
+  "domain": "greenlight.live",
+  "oauth": {
+    "clientId": "your_client_id",
+    "clientSecret": "your_client_secret",
+    "redirectUris": [
+      "https://greenlight.live/auth/google/callback",
+      "https://wiki.greenlight.live/auth/google/callback",
+      "https://www.topbinsid.com/auth/google/callback"
+    ]
+  },
+  "security": {
+    "mfa": {
+      "enabled": true,
+      "methods": [
+        "totp",
+        "sms",
+        "email"
+      ],
+      "backupCodes": 10
+    },
+    "passwordPolicy": {
+      "minLength": 12,
+      "requireComplexity": true,
+      "rotationDays": 90
+    },
+    "sessionPolicy": {
+      "timeoutHours": 8,
+      "inactivityTimeout": 30
+    }
+  },
+  "userGroups": {
+    "admins": "greenlight-admins@greenlight.live",
+    "developers": "greenlight-developers@greenlight.live",
+    "users": "greenlight-users@greenlight.live"
+  }
+}

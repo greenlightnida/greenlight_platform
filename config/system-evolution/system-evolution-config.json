@@ -1,0 +1,127 @@
+{
+  "evolutionMetrics": {
+    "response-time": [
+      {
+        "id": "metric-1751984925347-dws1gd86j",
+        "name": "response-time",
+        "category": "performance",
+        "value": 100,
+        "unit": "ms",
+        "timestamp": "2025-07-08T14:28:45.347Z",
+        "context": {}
+      },
+      {
+        "id": "metric-1751985260648-0zeapb9ub",
+        "name": "response-time",
+        "category": "performance",
+        "value": 58.54786496001889,
+        "unit": "ms",
+        "timestamp": "2025-07-08T14:34:20.648Z",
+        "context": {}
+      },
+      {
+        "id": "metric-1751985560678-lrj4fsv7j",
+        "name": "response-time",
+        "category": "performance",
+        "value": 127.03733024565213,
+        "unit": "ms",
+        "timestamp": "2025-07-08T14:39:20.678Z",
+        "context": {}
+      }
+    ],
+    "success-rate": [
+      {
+        "id": "metric-1751984925351-lgfzspqj4",
+        "name": "success-rate",
+        "category": "reliability",
+        "value": 95,
+        "unit": "%",
+        "timestamp": "2025-07-08T14:28:45.351Z",
+        "context": {}
+      },
+      {
+        "id": "metric-1751985260648-varhicd3p",
+        "name": "success-rate",
+        "category": "reliability",
+        "value": 97.1744486487195,
+        "unit": "%",
+        "timestamp": "2025-07-08T14:34:20.648Z",
+        "context": {}
+      },
+      {
+        "id": "metric-1751985560678-m6jv4zion",
+        "name": "success-rate",
+        "category": "reliability",
+        "value": 93.53461102644371,
+        "unit": "%",
+        "timestamp": "2025-07-08T14:39:20.678Z",
+        "context": {}
+      }
+    ],
+    "error-rate": [
+      {
+        "id": "metric-1751985260649-krv3aq4pk",
+        "name": "error-rate",
+        "category": "reliability",
+        "value": 4.102852780276665,
+        "unit": "%",
+        "timestamp": "2025-07-08T14:34:20.649Z",
+        "context": {}
+      },
+      {
+        "id": "metric-1751985560678-9j2i2dewf",
+        "name": "error-rate",
+        "category": "reliability",
+        "value": 0.8471804406253325,
+        "unit": "%",
+        "timestamp": "2025-07-08T14:39:20.678Z",
+        "context": {}
+      }
+    ],
+    "throughput": [
+      {
+        "id": "metric-1751985260649-rhm68230o",
+        "name": "throughput",
+        "category": "efficiency",
+        "value": 527.667004501787,
+        "unit": "req/s",
+        "timestamp": "2025-07-08T14:34:20.649Z",
+        "context": {}
+      },
+      {
+        "id": "metric-1751985560679-sq1e4fmy0",
+        "name": "throughput",
+        "category": "efficiency",
+        "value": 869.2559501317228,
+        "unit": "req/s",
+        "timestamp": "2025-07-08T14:39:20.679Z",
+        "context": {}
+      }
+    ],
+    "resource-utilization": [
+      {
+        "id": "metric-1751985260649-d37ph63qv",
+        "name": "resource-utilization",
+        "category": "efficiency",
+        "value": 67.10893690933432,
+        "unit": "%",
+        "timestamp": "2025-07-08T14:34:20.649Z",
+        "context": {}
+      },
+      {
+        "id": "metric-1751985560679-14y4si0xv",
+        "name": "resource-utilization",
+        "category": "efficiency",
+        "value": 46.67401365882921,
+        "unit": "%",
+        "timestamp": "2025-07-08T14:39:20.679Z",
+        "context": {}
+      }
+    ]
+  },
+  "evolutionTrends": [],
+  "changeImpacts": [],
+  "evolutionRecommendations": [],
+  "evolutionReports": [],
+  "lastUpdated": "2025-07-08T14:39:20.679Z"
+}

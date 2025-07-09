@@ -1,0 +1,18 @@
+{
+  "name": "CouncilPerformanceManager",
+  "role": "Council Performance Monitoring",
+  "responsibilities": [
+    "Council performance monitoring",
+    "Committee effectiveness assessment",
+    "Council metrics and reporting",
+    "Council optimization strategies"
+  ],
+  "capabilities": [
+    "Performance monitoring and analysis",
+    "Effectiveness assessment and reporting",
+    "Optimization strategy development",
+    "Metrics collection and analysis"
+  ],
+  "parent": "CouncilMasterManager",
+  "children": []
+}

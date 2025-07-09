@@ -1,0 +1,199 @@
+{
+  "timestamp": "2025-07-09T18:55:28.760Z",
+  "summary": "Comprehensive checkpoint analysis",
+  "results": {
+    "platforms": [
+      {
+        "name": "Greenlight Platform",
+        "path": "/Users/home/Developer/greenlight-platform",
+        "type": "main",
+        "status": "analyzed",
+        "analysis": {
+          "features": 0,
+          "components": 89,
+          "services": 213,
+          "tests": 0,
+          "holonGovernance": "active",
+          "buildStatus": "configured",
+          "lastCommit": "71b9d7bbc4f1d0f836511fe9a8bd09ba87c2a27e docs: add build blockers resolution summary and fix scripts"
+        }
+      },
+      {
+        "name": "greenlight-system-governance",
+        "path": "/Users/home/Developer/Greenlight",
+        "type": "client",
+        "status": "analyzed",
+        "analysis": {
+          "features": 0,
+          "components": 15,
+          "services": 22,
+          "tests": 0,
+          "holonGovernance": null,
+          "buildStatus": "unknown",
+          "lastCommit": "No git history"
+        }
+      },
+      {
+        "name": "top-bins-client-space",
+        "path": "/Users/home/Developer/Top_Bins",
+        "type": "client",
+        "status": "analyzed",
+        "analysis": {
+          "features": 2,
+          "components": 78,
+          "services": 153,
+          "tests": 0,
+          "holonGovernance": null,
+          "buildStatus": "configured",
+          "lastCommit": "4729cd723ff1e33a99ccc8e8ec092e7353054890 Precommit: All audits passed, imports fixed, next session context prepared"
+        }
+      },
+      {
+        "name": "top-bins",
+        "path": "/Users/home/Developer/top-bins",
+        "type": "client",
+        "status": "analyzed",
+        "analysis": {
+          "features": 0,
+          "components": 0,
+          "services": 0,
+          "tests": 0,
+          "holonGovernance": null,
+          "buildStatus": "unknown",
+          "lastCommit": "No git history"
+        }
+      }
+    ],
+    "systemHealth": "EXCELLENT",
+    "recommendations": [
+      "Implement holon governance in: greenlight-system-governance, top-bins-client-space, top-bins",
+      "Improve test coverage in: Greenlight Platform, greenlight-system-governance, top-bins-client-space, top-bins",
+      "Initialize git repositories in: greenlight-system-governance, top-bins"
+    ],
+    "executionTime": 5200,
+    "success": true,
+    "governance": {
+      "status": "active",
+      "totalScans": 2,
+      "totalErrors": 4,
+      "totalFixes": 0,
+      "totalAlerts": 0,
+      "lastScanDuration": 49,
+      "reportPath": "/Users/home/Developer/greenlight-platform/data/audits/env_governance_report_1752087328708.json"
+    },
+    "milestones": {
+      "analysis": {
+        "totalMilestones": 102,
+        "completionRate": 100,
+        "averageDurationVariance": -0.00892156862745098,
+        "averageEffortVariance": -0.0196078431372549,
+        "criticalMilestonesCompleted": 55,
+        "governanceMaturity": "mature",
+        "automationLevel": "low",
+        "overallImpact": {
+          "systemHealth": "established",
+          "buildStability": "significantly_improved",
+          "developmentVelocity": "improved",
+          "operationalEfficiency": "significantly_improved",
+          "governanceCompliance": "established",
+          "monitoringCoverage": "unknown"
+        }
+      },
+      "totalMilestones": 102,
+      "completionRate": 100,
+      "governanceMaturity": "mature"
+    },
+    "context": {
+      "recentActivity": [
+        {
+          "timestamp": "2025-07-09T14:20:53.303Z",
+          "description": "Transition Memo: Launch Protocol"
+        },
+        {
+          "timestamp": "2025-07-09T14:22:10.372Z",
+          "description": "Transition Memo: Launch Protocol"
+        },
+        {
+          "timestamp": "2025-07-09T14:23:33.164Z",
+          "description": "Transition Memo: Launch Protocol"
+        },
+        {
+          "timestamp": "2025-07-09T17:05:50.880Z",
+          "description": "Transition Memo: Launch Protocol"
+        },
+        {
+          "timestamp": "2025-07-09T17:15:52.905Z",
+          "description": "Transition Memo: Launch Protocol"
+        },
+        {
+          "timestamp": "Recent",
+          "description": "Git: docs: add build blockers resolution summary and fix scripts"
+        },
+        {
+          "timestamp": "Recent",
+          "description": "Git: docs: add pre-wrap audit summary"
+        },
+        {
+          "timestamp": "Recent",
+          "description": "Git: feat: complete Git governance implementation and roadmap integration"
+        },
+        {
+          "timestamp": "Recent",
+          "description": "Git: emergency: comprehensive backup before Git governance implementation"
+        },
+        {
+          "timestamp": "Recent",
+          "description": "Git: Session history preservation: work session logs and communication errors"
+        }
+      ],
+      "systemState": {
+        "timestamp": "2025-07-09T18:55:28.758Z",
+        "platforms": 4,
+        "systemHealth": "EXCELLENT",
+        "governanceStatus": "active",
+        "milestoneCount": 102
+      },
+      "roadmapProgress": {
+        "overall": 70,
+        "platformMaturity": 100,
+        "governanceCompliance": 25
+      },
+      "timestamp": "2025-07-09T18:55:28.759Z"
+    },
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    }
+  },
+  "deepMode": false,
+  "includeGovernance": true,
+  "includeMilestones": true
+}

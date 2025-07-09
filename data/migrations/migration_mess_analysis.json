@@ -1,0 +1,371 @@
+{
+  "timestamp": "2025-07-07T23:11:29.590Z",
+  "sessionId": "analysis-1751929889592",
+  "summary": {
+    "totalIssues": 7,
+    "criticalIssues": 1,
+    "highIssues": 3,
+    "mediumIssues": 3
+  },
+  "issues": [
+    {
+      "type": "top_bins_remnants",
+      "severity": "high",
+      "description": "Found Top_Bins remnants in directory structure",
+      "items": [
+        "root/CHANGELOG_top_bins.md",
+        "root/DECISION_LOG_top_bins.md",
+        "root/LAUNCH_REPORT_top_bins.json",
+        "root/README_top_bins.md",
+        "root/docs_top_bins",
+        "root/featuresRegistry_top_bins.json",
+        "root/scripts_top_bins",
+        "root/src_top_bins",
+        "root/work_sessions_top_bins"
+      ],
+      "impact": "Confusion about ownership and responsibilities"
+    },
+    {
+      "type": "missing_directories",
+      "severity": "medium",
+      "description": "Missing expected directory structure",
+      "items": [
+        "data/migrations"
+      ],
+      "impact": "Incomplete system organization"
+    },
+    {
+      "type": "symlinks",
+      "severity": "medium",
+      "description": "Found symlinked directories",
+      "items": [
+        {
+          "path": "/Users/home/Developer/greenlight-platform/CHANGELOG_top_bins.md",
+          "target": "../Top_Bins/CHANGELOG.md"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/DECISION_LOG_top_bins.md",
+          "target": "../Top_Bins/DECISION_LOG.md"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/LAUNCH_REPORT_top_bins.json",
+          "target": "../Top_Bins/LAUNCH_REPORT.json"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/LIVING_ROADMAP.md",
+          "target": "docs/architecture/LIVING_ROADMAP.md"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/README_top_bins.md",
+          "target": "../Top_Bins/README.md"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/docs_top_bins",
+          "target": "../Top_Bins/docs"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/featuresRegistry_top_bins.json",
+          "target": "../Top_Bins/featuresRegistry.json"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/scripts_top_bins",
+          "target": "../Top_Bins/scripts"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/src_top_bins",
+          "target": "../Top_Bins/src"
+        },
+        {
+          "path": "/Users/home/Developer/greenlight-platform/work_sessions_top_bins",
+          "target": "../Top_Bins/work_sessions"
+        }
+      ],
+      "impact": "Confusion about file ownership and potential broken links"
+    },
+    {
+      "type": "documentation_duplication",
+      "severity": "medium",
+      "description": "Found duplicate documentation files",
+      "items": [
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/ARCHITECTURE_MIGRATION_PLAN.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/ARCHITECTURE_MIGRATION_PLAN.md",
+          "relativePath": "architecture/ARCHITECTURE_MIGRATION_PLAN.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/ARTICULATE_SYSTEM_DOCUMENTATION.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/ARTICULATE_SYSTEM_DOCUMENTATION.md",
+          "relativePath": "architecture/ARTICULATE_SYSTEM_DOCUMENTATION.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/CORRECT_MIGRATION_PLAN.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/CORRECT_MIGRATION_PLAN.md",
+          "relativePath": "architecture/CORRECT_MIGRATION_PLAN.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/CROSS_REPOSITORY_INTEGRATION_GUIDE.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/CROSS_REPOSITORY_INTEGRATION_GUIDE.md",
+          "relativePath": "architecture/CROSS_REPOSITORY_INTEGRATION_GUIDE.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/ELABORATE_SYSTEM_ARCHITECTURE.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/ELABORATE_SYSTEM_ARCHITECTURE.md",
+          "relativePath": "architecture/ELABORATE_SYSTEM_ARCHITECTURE.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/ELABORATE_SYSTEM_SUMMARY.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/ELABORATE_SYSTEM_SUMMARY.md",
+          "relativePath": "architecture/ELABORATE_SYSTEM_SUMMARY.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/ENRICHMENT_SYSTEM_SUMMARY.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/ENRICHMENT_SYSTEM_SUMMARY.md",
+          "relativePath": "architecture/ENRICHMENT_SYSTEM_SUMMARY.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/FEATURE_MAPPER_INTEGRATION.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/FEATURE_MAPPER_INTEGRATION.md",
+          "relativePath": "architecture/FEATURE_MAPPER_INTEGRATION.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/HOLON_GOVERNANCE_ARCHITECTURE.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/HOLON_GOVERNANCE_ARCHITECTURE.md",
+          "relativePath": "architecture/HOLON_GOVERNANCE_ARCHITECTURE.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/LIVING_ROADMAP.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/LIVING_ROADMAP.md",
+          "relativePath": "architecture/LIVING_ROADMAP.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/REMAINING_PHASES_ROADMAP.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/REMAINING_PHASES_ROADMAP.md",
+          "relativePath": "architecture/REMAINING_PHASES_ROADMAP.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/architecture/SYSTEM_ARCHITECTURE.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/architecture/SYSTEM_ARCHITECTURE.md",
+          "relativePath": "architecture/SYSTEM_ARCHITECTURE.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/AUDIT_COMPLETION.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/AUDIT_COMPLETION.md",
+          "relativePath": "audits/AUDIT_COMPLETION.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/AUDIT_OPTIMIZATION_REPORT.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/AUDIT_OPTIMIZATION_REPORT.md",
+          "relativePath": "audits/AUDIT_OPTIMIZATION_REPORT.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/AUDIT_OPTIMIZATION_SUMMARY.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/AUDIT_OPTIMIZATION_SUMMARY.md",
+          "relativePath": "audits/AUDIT_OPTIMIZATION_SUMMARY.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/AUDIT_SUMMARY.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/AUDIT_SUMMARY.md",
+          "relativePath": "audits/AUDIT_SUMMARY.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/COMPREHENSIVE_CODE_AUDIT.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/COMPREHENSIVE_CODE_AUDIT.md",
+          "relativePath": "audits/COMPREHENSIVE_CODE_AUDIT.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/COMPREHENSIVE_OPTIMIZATION_JOURNEY_SUMMARY.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/COMPREHENSIVE_OPTIMIZATION_JOURNEY_SUMMARY.md",
+          "relativePath": "audits/COMPREHENSIVE_OPTIMIZATION_JOURNEY_SUMMARY.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/COMPREHENSIVE_ORGANIZATION_RECONCILIATION.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/COMPREHENSIVE_ORGANIZATION_RECONCILIATION.md",
+          "relativePath": "audits/COMPREHENSIVE_ORGANIZATION_RECONCILIATION.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/FINAL_AUDIT_AND_OPTIMIZATION_PLAN.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/FINAL_AUDIT_AND_OPTIMIZATION_PLAN.md",
+          "relativePath": "audits/FINAL_AUDIT_AND_OPTIMIZATION_PLAN.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/FINAL_AUDIT_SUMMARY.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/FINAL_AUDIT_SUMMARY.md",
+          "relativePath": "audits/FINAL_AUDIT_SUMMARY.md"
+        },
+        {
+          "greenlight": "/Users/home/Developer/greenlight-platform/docs/audits/PRECOMMIT_AUDIT_ASSESSMENT.md",
+          "topBins": "/Users/home/Developer/greenlight-platform/docs_top_bins/audits/PRECOMMIT_AUDIT_ASSESSMENT.md",
+          "relativePath": "audits/PRECOMMIT_AUDIT_ASSESSMENT.md"
+        }
+      ],
+      "impact": "Confusion about which documentation is current"
+    },
+    {
+      "type": "hardcoded_references",
+      "severity": "high",
+      "description": "Found hardcoded Top_Bins references",
+      "items": [
+        {
+          "file": "/Users/home/Developer/greenlight-platform/README.md",
+          "pattern": "Top_Bins",
+          "context": "onitoring system for the entire ecosystem, with **Top_Bins** operating under its governance framewor"
+        },
+        {
+          "file": "/Users/home/Developer/greenlight-platform/README.md",
+          "pattern": "top-bins",
+          "context": "gs:\n\n```typescript\nconst topBinsConfig = {\n  id: 'top-bins',\n  name: 'Top Bins Platform',\n  path: '."
+        },
+        {
+          "file": "/Users/home/Developer/greenlight-platform/src/core/governance/GovernanceOrchestrator.ts",
+          "pattern": "Top_Bins",
+          "context": "m...');\n      \n      // Initialize governance for Top_Bins (legacy repository)\n      const topBinsCo"
+        },
+        {
+          "file": "/Users/home/Developer/greenlight-platform/src/core/governance/GovernanceOrchestrator.ts",
+          "pattern": "top-bins",
+          "context": " topBinsConfig: RepositoryConfig = {\n        id: 'top-bins',\n        name: 'Top Bins Platform',\n    "
+        }
+      ],
+      "impact": "System not properly genericized for multiple repositories"
+    },
+    {
+      "type": "mixed_responsibilities",
+      "severity": "critical",
+      "description": "Found mixed responsibilities in codebase",
+      "items": [
+        {
+          "type": "system_product_mix",
+          "description": "System governance code mixed with product code",
+          "systemComponents": [
+            "src/core/governance",
+            "src/core/protocols",
+            "src/core/session-management"
+          ],
+          "productComponents": [
+            "src/components/MediaLibrary",
+            "src/components/PlayerGrid",
+            "src/components/TeamPortal"
+          ],
+          "impact": "Architectural confusion and unclear ownership"
+        }
+      ],
+      "impact": "Major architectural issues and confusion"
+    },
+    {
+      "type": "missing_context",
+      "severity": "high",
+      "description": "Missing critical context files",
+      "items": [
+        {
+          "type": "missing_changelog",
+          "description": "Main changelog not found",
+          "impact": "No clear history of changes"
+        }
+      ],
+      "impact": "Loss of context and history"
+    }
+  ],
+  "recommendations": [
+    {
+      "priority": "critical",
+      "action": "Remove all Top_Bins remnants",
+      "description": "Clean up all Top_Bins references and symlinks",
+      "steps": [
+        "Remove symlinked directories",
+        "Update hardcoded references",
+        "Consolidate duplicate documentation"
+      ]
+    },
+    {
+      "priority": "high",
+      "action": "Genericize system",
+      "description": "Remove hardcoded references to make system generic",
+      "steps": [
+        "Update package.json names",
+        "Genericize governance components",
+        "Create configuration system"
+      ]
+    },
+    {
+      "priority": "critical",
+      "action": "Separate system and product code",
+      "description": "Create clear separation between governance and product code",
+      "steps": [
+        "Move system governance to Greenlight Platform",
+        "Keep product code in Top_Bins",
+        "Establish clear API contracts"
+      ]
+    },
+    {
+      "priority": "high",
+      "action": "Restore missing context",
+      "description": "Recreate missing context files and directories",
+      "steps": [
+        "Create proper session management",
+        "Restore roadmap to root directory",
+        "Consolidate changelogs"
+      ]
+    }
+  ],
+  "migrationPlan": {
+    "name": "Greenlight Platform Consolidation and Cleanup",
+    "description": "Fix all migration mess and establish proper system architecture",
+    "type": "consolidation",
+    "priority": "critical",
+    "estimatedDuration": "2-3 weeks",
+    "phases": [
+      {
+        "name": "Phase 1: Context Restoration",
+        "description": "Restore missing context and fix immediate issues",
+        "tasks": [
+          "Create proper session management structure",
+          "Restore roadmap to root directory",
+          "Consolidate duplicate documentation",
+          "Fix symlink issues"
+        ],
+        "estimatedDuration": "3-5 days"
+      },
+      {
+        "name": "Phase 2: System Genericization",
+        "description": "Make system generic and remove hardcoded references",
+        "tasks": [
+          "Update package.json and configuration",
+          "Genericize governance components",
+          "Create configuration system",
+          "Remove Top_Bins hardcoding"
+        ],
+        "estimatedDuration": "5-7 days"
+      },
+      {
+        "name": "Phase 3: Architecture Cleanup",
+        "description": "Establish proper separation of concerns",
+        "tasks": [
+          "Separate system governance from product code",
+          "Create clear API contracts",
+          "Establish proper directory structure",
+          "Update all import paths"
+        ],
+        "estimatedDuration": "7-10 days"
+      },
+      {
+        "name": "Phase 4: Validation and Testing",
+        "description": "Ensure everything works correctly",
+        "tasks": [
+          "Run comprehensive tests",
+          "Validate all integrations",
+          "Test session management",
+          "Verify governance system"
+        ],
+        "estimatedDuration": "3-5 days"
+      }
+    ],
+    "safetyChecks": [
+      "roadmap-current",
+      "session-manager-available",
+      "git-clean",
+      "tests-passing",
+      "backup-available"
+    ],
+    "rollbackPlan": "Restore from git history and backup if issues occur"
+  }
+}

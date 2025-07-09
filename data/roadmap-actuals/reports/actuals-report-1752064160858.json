@@ -1,0 +1,230 @@
+{
+  "reportId": "actuals-1752064160857",
+  "roadmapActuals": {
+    "projectId": "greenlight-platform",
+    "projectName": "Greenlight Platform",
+    "reportingPeriod": {
+      "startDate": "2025-06-09T12:29:20.857Z",
+      "endDate": "2025-07-09T12:29:20.857Z",
+      "period": "monthly"
+    },
+    "summary": {
+      "totalPlannedMilestones": 4,
+      "totalActualMilestones": 1,
+      "completedMilestones": 1,
+      "inProgressMilestones": 0,
+      "blockedMilestones": 0,
+      "overallProgress": 100
+    },
+    "timelinePerformance": {
+      "onTimeMilestones": 1,
+      "aheadOfScheduleMilestones": 0,
+      "behindScheduleMilestones": 0,
+      "averageTimelineVariance": 0,
+      "timelineEfficiency": 100
+    },
+    "effortPerformance": {
+      "underBudgetEffort": 0,
+      "onBudgetEffort": 1,
+      "overBudgetEffort": 0,
+      "averageEffortVariance": 0,
+      "effortEfficiency": 100
+    },
+    "qualityPerformance": {
+      "plannedQualityScore": 85,
+      "actualQualityScore": 90,
+      "qualityVariance": 5,
+      "qualityTrend": "stable"
+    },
+    "riskAssessment": {
+      "highRiskMilestones": 0,
+      "mediumRiskMilestones": 0,
+      "lowRiskMilestones": 1,
+      "riskTrend": "stable"
+    },
+    "plannedMilestones": [
+      {
+        "id": "planned-1",
+        "title": "Testing Protocol Implementation",
+        "description": "No description available",
+        "category": "milestone",
+        "priority": "critical",
+        "plannedStartDate": "2025-07-09T12:29:20.849Z",
+        "plannedEndDate": "2025-07-23T12:29:20.849Z",
+        "plannedDuration": 14,
+        "plannedEffort": 80,
+        "plannedTeamSize": 2,
+        "plannedDependencies": [],
+        "plannedSuccessCriteria": [
+          "Complete milestone objectives",
+          "Meet quality standards"
+        ],
+        "plannedMetrics": {
+          "codeCoverage": 90,
+          "performanceTarget": 100,
+          "qualityScore": 85,
+          "userSatisfaction": 80
+        }
+      },
+      {
+        "id": "planned-2",
+        "title": "Phase 4: Business Intelligence Foundation",
+        "description": "No description available",
+        "category": "milestone",
+        "priority": "low",
+        "plannedStartDate": "2025-07-09T12:29:20.850Z",
+        "plannedEndDate": "2025-08-08T12:29:20.850Z",
+        "plannedDuration": 30,
+        "plannedEffort": 160,
+        "plannedTeamSize": 3,
+        "plannedDependencies": [],
+        "plannedSuccessCriteria": [
+          "Complete milestone objectives",
+          "Meet quality standards"
+        ],
+        "plannedMetrics": {
+          "codeCoverage": 90,
+          "performanceTarget": 100,
+          "qualityScore": 85,
+          "userSatisfaction": 80
+        }
+      },
+      {
+        "id": "planned-3",
+        "title": "Phase 5: Unified Configuration System",
+        "description": "No description available",
+        "category": "milestone",
+        "priority": "low",
+        "plannedStartDate": "2025-07-09T12:29:20.850Z",
+        "plannedEndDate": "2025-08-08T12:29:20.850Z",
+        "plannedDuration": 30,
+        "plannedEffort": 160,
+        "plannedTeamSize": 3,
+        "plannedDependencies": [],
+        "plannedSuccessCriteria": [
+          "Complete milestone objectives",
+          "Meet quality standards"
+        ],
+        "plannedMetrics": {
+          "codeCoverage": 90,
+          "performanceTarget": 100,
+          "qualityScore": 85,
+          "userSatisfaction": 80
+        }
+      },
+      {
+        "id": "planned-4",
+        "title": "Performance Optimization",
+        "description": "No description available",
+        "category": "milestone",
+        "priority": "critical",
+        "plannedStartDate": "2025-07-09T12:29:20.850Z",
+        "plannedEndDate": "2025-07-23T12:29:20.850Z",
+        "plannedDuration": 14,
+        "plannedEffort": 80,
+        "plannedTeamSize": 2,
+        "plannedDependencies": [],
+        "plannedSuccessCriteria": [
+          "Complete milestone objectives",
+          "Meet quality standards"
+        ],
+        "plannedMetrics": {
+          "codeCoverage": 90,
+          "performanceTarget": 100,
+          "qualityScore": 85,
+          "userSatisfaction": 80
+        }
+      }
+    ],
+    "actualMilestones": [
+      {
+        "id": "actual-1",
+        "plannedMilestoneId": "planned-2",
+        "title": "System Launch Protocol",
+        "description": "Greenlight Platform launch protocol execution",
+        "category": "milestone",
+        "priority": "critical",
+        "actualStartDate": "2025-07-09T12:11:03.168Z",
+        "actualEndDate": "2025-07-09T12:11:03.168Z",
+        "actualDuration": 1,
+        "actualEffort": 2,
+        "actualTeamSize": 1,
+        "actualDependencies": [],
+        "status": "completed",
+        "progress": 100,
+        "blockers": [],
+        "actualSuccessCriteria": [
+          "System launched successfully",
+          "All components operational"
+        ],
+        "actualMetrics": {
+          "codeCoverage": 95,
+          "performanceActual": 100,
+          "qualityScore": 90,
+          "userSatisfaction": 85
+        },
+        "timelineVariance": 0,
+        "effortVariance": 0,
+        "lessonsLearned": [
+          "Launch protocol executed successfully"
+        ],
+        "recommendations": [
+          "Continue using current launch protocol"
+        ]
+      }
+    ],
+    "generatedAt": "2025-07-09T12:29:20.858Z"
+  },
+  "executiveSummary": {
+    "overallStatus": "on-track",
+    "keyAchievements": [
+      "1 milestones completed successfully"
+    ],
+    "keyChallenges": [],
+    "recommendations": []
+  },
+  "detailedAnalysis": {
+    "timelineAnalysis": {
+      "onTimePercentage": 100,
+      "averageDelay": 0,
+      "criticalPathImpact": [],
+      "scheduleTrend": "stable",
+      "recommendations": [
+        "Continue monitoring timeline performance"
+      ]
+    },
+    "effortAnalysis": {
+      "effortAccuracy": 100,
+      "averageOverrun": 0,
+      "effortTrend": "stable",
+      "recommendations": [
+        "Continue monitoring effort performance"
+      ]
+    },
+    "qualityAnalysis": {
+      "qualityTargets": {
+        "planned": 85,
+        "actual": 90,
+        "variance": 5
+      },
+      "qualityTrend": "stable",
+      "qualityIssues": [],
+      "recommendations": [
+        "Continue monitoring quality metrics"
+      ]
+    },
+    "riskAnalysis": {
+      "riskLevel": "low",
+      "riskFactors": [],
+      "mitigationStrategies": [],
+      "recommendations": [
+        "Continue monitoring risk factors"
+      ]
+    }
+  },
+  "forecast": {
+    "projectedCompletionDate": "2025-08-08T12:29:20.858Z",
+    "projectedEffort": 320,
+    "confidenceLevel": "low"
+  }
+}

@@ -1,0 +1,511 @@
+{
+  "timestamp": "2025-07-09T21:59:09.114Z",
+  "boundaryBackupFiles": {
+    "total": 0,
+    "removed": 0,
+    "archived": 0,
+    "restored": 0,
+    "files": []
+  },
+  "todoItems": {
+    "total": 9,
+    "resolved": 9,
+    "archived": 0,
+    "deferred": 0,
+    "items": [
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/executive/ExecutiveDashboard.tsx",
+        "line": 92,
+        "content": "// TODO: Implement initiative update logic",
+        "action": "implement",
+        "priority": "low"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/executive/ExecutiveDashboard.tsx",
+        "line": 97,
+        "content": "// TODO: Implement alert resolution logic",
+        "action": "implement",
+        "priority": "low"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemLogConsole.tsx",
+        "line": 123,
+        "content": "// TODO: Implement log loading from log services",
+        "action": "implement",
+        "priority": "low"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/InformConsole.tsx",
+        "line": 6,
+        "content": "* TODO: Implement system information console",
+        "action": "implement",
+        "priority": "low"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/InformConsole.tsx",
+        "line": 21,
+        "content": "<p>TODO: Implement system information interface</p>",
+        "action": "implement",
+        "priority": "low"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/ObserveConsole.tsx",
+        "line": 6,
+        "content": "* TODO: Implement system observation console",
+        "action": "implement",
+        "priority": "low"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/ObserveConsole.tsx",
+        "line": 21,
+        "content": "<p>TODO: Implement system observation interface</p>",
+        "action": "implement",
+        "priority": "low"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/ResolveConsole.tsx",
+        "line": 6,
+        "content": "* TODO: Implement system resolution console",
+        "action": "implement",
+        "priority": "low"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/ResolveConsole.tsx",
+        "line": 21,
+        "content": "<p>TODO: Implement system resolution interface</p>",
+        "action": "implement",
+        "priority": "low"
+      }
+    ]
+  },
+  "unusedCode": {
+    "total": 0,
+    "removed": 0,
+    "optimized": 0,
+    "items": []
+  },
+  "legacyComponents": {
+    "total": 65,
+    "migrated": 65,
+    "archived": 0,
+    "removed": 0,
+    "components": [
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/components/Administrate/index.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/components/Elevate/index.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/InformConsole.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/ResolveConsole.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/config/ConfigManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/governance/EnvironmentGovernance.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/governance/PerformanceManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/DeliveryEngine.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/ImplementationEngine.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/operations/ErrorManagerHolon.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/product/modules/CoordinationEngine.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/security/SecurityHolonManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/FrontendManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/SystemMasterManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/DesignTokens.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/Governance.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/Monitoring.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/holons/testing/TestingHolonManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/operations/OperationsMaster.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/operations/ServerGovernor.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/operations/ServerManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/performance/EmbeddedPerformanceManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/session-management/ImportContextSelector.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/session-management/SessionManager.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/core/session-management/SessionsManager.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/executive/ExecutiveDashboard.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/governance/CommandCenterDashboard.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/governance/PerformanceManagerDashboard.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/product/ProductDashboard.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/roadmap/RoadmapDashboard.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemDashboard.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemFeatures.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemLogConsole.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemOverview.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemStats.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/design-system/atoms/Input/Input.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.stories.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/badge.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/card.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/input.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/select.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/Insights.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/KnowledgeBase.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/TaskEngine.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/Wiki.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/WorkHistory.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/elaborate/components/Elaborate.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/SystemMaster.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/services/performance/performanceTrackingService.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/types/schemas.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/cache/cache.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/AIOptimizationPanel.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/Card/Card.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/ChangelogPanel.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/DeveloperNotesPanel.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/ErrorBoundary.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/FeaturesMapPanel.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/SourceOfTruthConsole.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/SystemAuditPanel.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/common/SystemEvolutionIntelligence.tsx",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/src/utils/logger/logger.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/scripts/protocols/end_of_chat_protocol.js",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/scripts/protocols/planning_criteria_protocol.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      },
+      {
+        "file": "/Users/home/Developer/greenlight-platform/scripts/test-manager-implementation.ts",
+        "pattern": "old",
+        "action": "migrate",
+        "reason": "Legacy pattern detected"
+      }
+    ]
+  },
+  "performance": {
+    "buildTimeBefore": 0,
+    "buildTimeAfter": 0,
+    "bundleSizeBefore": 0,
+    "bundleSizeAfter": 0,
+    "improvement": 0
+  },
+  "errors": [],
+  "warnings": [
+    {
+      "type": "performance_measurement_warning",
+      "message": "Could not measure performance",
+      "error": "Command failed: npm run build",
+      "timestamp": "2025-07-09T21:59:27.458Z"
+    }
+  ],
+  "summary": {
+    "totalItemsProcessed": 74,
+    "totalRemoved": 9,
+    "totalArchived": 0,
+    "totalOptimized": 65,
+    "performanceImprovement": 0,
+    "errorCount": 0,
+    "warningCount": 1,
+    "status": "warning"
+  }
+}

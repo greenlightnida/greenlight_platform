@@ -1,0 +1,23 @@
+{
+  "name": "Conflict Resolution Systems",
+  "resolution": {
+    "mediation": {
+      "mediator": "council_chair",
+      "process": "facilitated_discussion",
+      "outcome": "mediated_agreement",
+      "timeframe": "within_week"
+    },
+    "arbitration": {
+      "arbitrator": "council_chair",
+      "process": "binding_decision",
+      "outcome": "arbitrated_decision",
+      "timeframe": "within_week"
+    },
+    "escalation": {
+      "escalation": "council_vote",
+      "process": "weighted_voting",
+      "outcome": "council_decision",
+      "timeframe": "within_month"
+    }
+  }
+}

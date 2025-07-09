@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit quality gates..."
+
+# Run linting
+npm run lint || exit 1
+
+# Run tests
+npm run test || exit 1
+
+# Run type checking
+npm run type-check || exit 1
+
+echo "✅ All quality gates passed!"

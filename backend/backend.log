@@ -1,0 +1,10 @@
+🚀 Greenlight Platform Backend running on port 3001
+📊 Health check: http://localhost:3001/health
+🔗 Frontend URL: http://localhost:5173
+🌐 Environment: development
+::1 - - [08/Jul/2025:21:22:55 +0000] "GET /health HTTP/1.1" 200 105 "-" "curl/8.7.1"
+::1 - - [08/Jul/2025:21:22:59 +0000] "GET /api/testing/holon-state HTTP/1.1" 200 1240 "-" "curl/8.7.1"
+::1 - - [08/Jul/2025:21:24:25 +0000] "GET /health HTTP/1.1" 200 105 "-" "curl/8.7.1"
+::1 - - [08/Jul/2025:21:24:25 +0000] "GET /api/status HTTP/1.1" 200 122 "-" "curl/8.7.1"
+::1 - - [08/Jul/2025:21:30:19 +0000] "GET /health HTTP/1.1" 200 105 "-" "curl/8.7.1"
+::1 - - [08/Jul/2025:21:30:19 +0000] "GET /api/status HTTP/1.1" 200 122 "-" "curl/8.7.1"

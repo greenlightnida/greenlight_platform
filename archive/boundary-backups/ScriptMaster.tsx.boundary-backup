@@ -1,0 +1,485 @@
+import { 
+  Play, 
+  Square, 
+  RotateCcw, 
+  Save, 
+  Download, 
+  Upload, 
+  Trash2, 
+  Edit3,
+  Eye,
+  Code,
+  Terminal,
+  FileText,
+  Settings,
+  Zap,
+  Database,
+  Globe,
+  Code as CodeIcon,
+  FileText as FileTextIcon
+} from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+
+// Import UI components from the correct locations
+import { Alert, AlertDescription } from '../../../design-system/components/ui/alert';
+import { Badge } from '../../../design-system/components/ui/badge';
+import { Button } from '../../../design-system/components/ui/button';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../../design-system/components/ui/card';
+import { Input } from '../../../design-system/components/ui/input';
+import { Progress } from '../../../design-system/components/ui/progress';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../../../design-system/components/ui/select';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '../../../design-system/components/ui/tabs';
+
+// Types
+interface Script {
+  id: string;
+  name: string;
+  file: string;
+  category: string;
+  priority: 'critical' | 'high' | 'medium' | 'low';
+  safety: 'safe' | 'medium' | 'high';
+  status: 'active' | 'inactive' | 'deprecated';
+  description: string;
+  dependencies: string[];
+  executionTime: string;
+  integrationPoints: string[];
+  appPotential: {
+    dashboard: number;
+    automation: number;
+    integration: number;
+    ui: number;
+  };
+  riskLevel: 'low' | 'medium' | 'high';
+  tags: string[];
+}
+
+interface ScriptExecution {
+  id: string;
+  scriptId: string;
+  timestamp: string;
+  status: 'running' | 'completed' | 'failed' | 'cancelled';
+  duration: number;
+  output: string;
+  error?: string;
+  userId: string;
+}
+
+interface ScriptCatalog {
+  version: string;
+  lastUpdated: string;
+  scripts: Script[];
+  categories: Record<string, { description: string; priority: string; color: string }>;
+  safetyLevels: Record<string, { description: string; color: string; requiresApproval: boolean }>;
+  priorities: Record<string, { description: string; color: string; executionOrder: number }>;
+}
+
+/**
+ *
+ */
+export default function ScriptMaster() {
+  const [scriptCatalog, setScriptCatalog] = useState<ScriptCatalog | null>(null);
+  const [executions, setExecutions] = useState<ScriptExecution[]>([]);
+  const [filteredScripts, setFilteredScripts] = useState<Script[]>([]);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('all');
+  const [safetyFilter, setSafetyFilter] = useState('all');
+  const [priorityFilter, setPriorityFilter] = useState('all');
+  const [activeTab, setActiveTab] = useState('catalog');
+  const [loading, setLoading] = useState(true);
+
+  // Load script catalog
+  useEffect(() => {
+    const loadScriptCatalog = async () => {
+      try {
+        const response = await fetch('/scripts/script_catalog.json');
+        const catalog = await response.json();
+        setScriptCatalog(catalog);
+        setFilteredScripts(catalog.scripts);
+      } catch (error) {
+        console.error('Failed to load script catalog:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadScriptCatalog();
+  }, []);
+
+  // Filter scripts
+  useEffect(() => {
+    if (!scriptCatalog) return;
+
+    let filtered = scriptCatalog.scripts;
+
+    if (searchTerm) {
+      filtered = filtered.filter(script =>
+        script.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        script.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        script.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
+      );
+    }
+
+    if (categoryFilter !== 'all') {
+      filtered = filtered.filter(script => script.category === categoryFilter);
+    }
+
+    if (safetyFilter !== 'all') {
+      filtered = filtered.filter(script => script.safety === safetyFilter);
+    }
+
+    if (priorityFilter !== 'all') {
+      filtered = filtered.filter(script => script.priority === priorityFilter);
+    }
+
+    setFilteredScripts(filtered);
+  }, [scriptCatalog, searchTerm, categoryFilter, safetyFilter, priorityFilter]);
+
+  // Execute script
+  const executeScript = async (script: Script) => {
+    const execution: ScriptExecution = {
+      id: `exec-${Date.now()}`,
+      scriptId: script.id,
+      timestamp: new Date().toISOString(),
+      status: 'running',
+      duration: 0,
+      output: '',
+      userId: 'current-user'
+    };
+
+    setExecutions(prev => [execution, ...prev]);
+
+    try {
+      // Simulate script execution
+      const startTime = Date.now();
+      
+      // In a real implementation, this would call the actual script
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      const duration = Date.now() - startTime;
+      
+      // Update execution status
+      setExecutions(prev => prev.map(exec =>
+        exec.id === execution.id
+          ? { ...exec, status: 'completed', duration, output: 'Script executed successfully' }
+          : exec
+      ));
+    } catch (error) {
+      setExecutions(prev => prev.map(exec =>
+        exec.id === execution.id
+          ? { ...exec, status: 'failed', duration: 0, error: 'Unknown error' }
+          : exec
+      ));
+    }
+  };
+
+  // Get status icon
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'running': return <Square className="h-4 w-4 animate-spin text-blue-500" />;
+      case 'completed': return <Save className="h-4 w-4 text-green-500" />;
+      case 'failed': return <Trash2 className="h-4 w-4 text-red-500" />;
+      case 'cancelled': return <RotateCcw className="h-4 w-4 text-gray-500" />;
+      default: return <Code className="h-4 w-4 text-gray-500" />;
+    }
+  };
+
+  // Get safety icon
+  const getSafetyIcon = (safety: string) => {
+    switch (safety) {
+      case 'safe': return <Globe className="h-4 w-4 text-green-500" />;
+      case 'medium': return <Eye className="h-4 w-4 text-yellow-500" />;
+      case 'high': return <Database className="h-4 w-4 text-red-500" />;
+      default: return <Globe className="h-4 w-4 text-gray-500" />;
+    }
+  };
+
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center h-64">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500"></div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold">ScriptMaster</h1>
+          <p className="text-muted-foreground">
+            Script orchestration and governance system
+          </p>
+        </div>
+        <div className="flex items-center space-x-2">
+          <Button variant="outline" size="sm">
+            <Settings className="h-4 w-4 mr-2" />
+            Settings
+          </Button>
+          <Button variant="outline" size="sm">
+            <Zap className="h-4 w-4 mr-2" />
+            Analytics
+          </Button>
+        </div>
+      </div>
+
+      <Tabs value={activeTab} onValueChange={setActiveTab}>
+        <TabsList className="grid w-full grid-cols-4">
+          <TabsTrigger value="catalog">Script Catalog</TabsTrigger>
+          <TabsTrigger value="executions">Execution History</TabsTrigger>
+          <TabsTrigger value="analytics">Analytics</TabsTrigger>
+          <TabsTrigger value="settings">Settings</TabsTrigger>
+        </TabsList>
+
+        <TabsContent value="catalog" className="space-y-4">
+          {/* Filters */}
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center">
+                <Code className="h-5 w-5 mr-2" />
+                Filters
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div className="relative">
+                  <Code className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                  <Input
+                    placeholder="Search scripts..."
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-10"
+                  />
+                </div>
+                <Select value={categoryFilter} onValueChange={setCategoryFilter}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Category" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Categories</SelectItem>
+                    {scriptCatalog && Object.keys(scriptCatalog.categories).map(category => (
+                      <SelectItem key={category} value={category}>
+                        {category.charAt(0).toUpperCase() + category.slice(1)}
+                      </SelectItem>
+                    ))}
+                  </SelectContent>
+                </Select>
+                <Select value={safetyFilter} onValueChange={setSafetyFilter}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Safety" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Safety Levels</SelectItem>
+                    <SelectItem value="safe">Safe</SelectItem>
+                    <SelectItem value="medium">Medium</SelectItem>
+                    <SelectItem value="high">High</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Select value={priorityFilter} onValueChange={setPriorityFilter}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Priority" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="all">All Priorities</SelectItem>
+                    <SelectItem value="critical">Critical</SelectItem>
+                    <SelectItem value="high">High</SelectItem>
+                    <SelectItem value="medium">Medium</SelectItem>
+                    <SelectItem value="low">Low</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Script Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {filteredScripts.map((script) => (
+              <Card key={script.id} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div className="flex-1">
+                      <CardTitle className="text-lg">{script.name}</CardTitle>
+                      <p className="text-sm text-muted-foreground mt-1">
+                        {script.description}
+                      </p>
+                    </div>
+                    <div className="flex items-center space-x-1">
+                      {getSafetyIcon(script.safety)}
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2 mt-2">
+                    <Badge 
+                      variant="outline" 
+                      style={{ 
+                        color: scriptCatalog?.categories[script.category]?.color,
+                        borderColor: scriptCatalog?.categories[script.category]?.color 
+                      }}
+                    >
+                      {script.category}
+                    </Badge>
+                    <Badge 
+                      variant="outline"
+                      style={{ 
+                        color: scriptCatalog?.priorities[script.priority]?.color,
+                        borderColor: scriptCatalog?.priorities[script.priority]?.color 
+                      }}
+                    >
+                      {script.priority}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-3">
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Execution Time:</span>
+                      <span className="font-mono">{script.executionTime}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Risk Level:</span>
+                      <span className="capitalize">{script.riskLevel}</span>
+                    </div>
+                    <div className="flex items-center justify-between text-sm">
+                      <span>Dependencies:</span>
+                      <span>{script.dependencies.length}</span>
+                    </div>
+                    
+                    {/* App Potential */}
+                    <div className="space-y-2">
+                      <div className="text-sm font-medium">App Potential</div>
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="text-xs">
+                          <div className="flex justify-between">
+                            <span>Dashboard</span>
+                            <span>{script.appPotential.dashboard}/5</span>
+                          </div>
+                          <Progress value={script.appPotential.dashboard * 20} className="h-1" />
+                        </div>
+                        <div className="text-xs">
+                          <div className="flex justify-between">
+                            <span>Automation</span>
+                            <span>{script.appPotential.automation}/5</span>
+                          </div>
+                          <Progress value={script.appPotential.automation * 20} className="h-1" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="flex items-center space-x-2">
+                      <Button 
+                        size="sm" 
+                        onClick={() => executeScript(script)}
+                        disabled={script.safety === 'high'}
+                      >
+                        <Play className="h-4 w-4 mr-1" />
+                        Execute
+                      </Button>
+                      {script.safety === 'high' && (
+                        <Alert className="p-2">
+                          <Eye className="h-3 w-3" />
+                          <AlertDescription className="text-xs">
+                            Requires approval
+                          </AlertDescription>
+                        </Alert>
+                      )}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </TabsContent>
+
+        <TabsContent value="executions" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center">
+                <FileText className="h-5 w-5 mr-2" />
+                Recent Executions
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="space-y-4">
+                {executions.map((execution) => {
+                  const script = scriptCatalog?.scripts.find(s => s.id === execution.scriptId);
+                  return (
+                    <div key={execution.id} className="flex items-center justify-between p-4 border rounded-lg">
+                      <div className="flex items-center space-x-4">
+                        {getStatusIcon(execution.status)}
+                        <div>
+                          <div className="font-medium">{script?.name || execution.scriptId}</div>
+                          <div className="text-sm text-muted-foreground">
+                            {new Date(execution.timestamp).toLocaleString()}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-sm font-mono">
+                          {execution.duration}ms
+                        </div>
+                        <div className="text-xs text-muted-foreground">
+                          {execution.status}
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                {executions.length === 0 && (
+                  <div className="text-center text-muted-foreground py-8">
+                    No executions yet
+                  </div>
+                )}
+              </div>
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="analytics" className="space-y-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Total Scripts</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-3xl font-bold">{scriptCatalog?.scripts.length || 0}</div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Active Executions</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-3xl font-bold">
+                  {executions.filter(e => e.status === 'running').length}
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Success Rate</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="text-3xl font-bold">
+                  {executions.length > 0 
+                    ? Math.round((executions.filter(e => e.status === 'completed').length / executions.length) * 100)
+                    : 0}%
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </TabsContent>
+
+        <TabsContent value="settings" className="space-y-4">
+          <Card>
+            <CardHeader>
+              <CardTitle>ScriptMaster Settings</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Configuration options for ScriptMaster will be available here.
+              </p>
+            </CardContent>
+          </Card>
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
+} 

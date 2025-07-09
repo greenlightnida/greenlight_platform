@@ -1,0 +1,29 @@
+{
+  "name": "Council Chair Powers",
+  "powers": {
+    "strategicAuthority": {
+      "title": "Strategic Authority",
+      "description": "Authority to set strategic direction and priorities",
+      "scope": "Council-wide strategic decisions",
+      "limitations": "Must consult with Parliamentarian on procedural matters"
+    },
+    "coordinationAuthority": {
+      "title": "Coordination Authority",
+      "description": "Authority to coordinate and facilitate holon agent interactions",
+      "scope": "All holon agent coordination and communication",
+      "limitations": "Must respect holon agent autonomy and interests"
+    },
+    "decisionAuthority": {
+      "title": "Decision Authority",
+      "description": "Authority to make executive decisions when consensus cannot be reached",
+      "scope": "Emergency and time-critical decisions",
+      "limitations": "Must report to Council and seek ratification"
+    },
+    "improvementAuthority": {
+      "title": "Improvement Authority",
+      "description": "Authority to implement continuous improvement initiatives",
+      "scope": "Council operations and procedures optimization",
+      "limitations": "Must consult with Parliamentarian on procedural changes"
+    }
+  }
+}

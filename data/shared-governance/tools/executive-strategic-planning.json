@@ -1,0 +1,32 @@
+{
+  "name": "Strategic Planning Tools",
+  "tools": {
+    "strategicAnalyzer": {
+      "purpose": "Strategic analysis and planning",
+      "features": [
+        "swot_analysis",
+        "competitive_analysis",
+        "trend_analysis"
+      ],
+      "output": "strategic_insights"
+    },
+    "goalTracker": {
+      "purpose": "Strategic goal tracking and measurement",
+      "features": [
+        "goal_setting",
+        "progress_tracking",
+        "outcome_measurement"
+      ],
+      "output": "goal_reports"
+    },
+    "scenarioPlanner": {
+      "purpose": "Scenario planning and what-if analysis",
+      "features": [
+        "scenario_modeling",
+        "impact_analysis",
+        "risk_assessment"
+      ],
+      "output": "scenario_recommendations"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-07-09T20:33:56.948Z",
+  "sessionId": "wrap-1752093236790-h41seh3uq",
+  "protocol": "wrap_annihilate",
+  "handoff": {
+    "nextProtocol": "launch_annihilate",
+    "files": {
+      "transitionFile": "/Users/home/Developer/greenlight-platform/data/transitions/wrap-1752093236790-h41seh3uq-transition.json",
+      "systemStateFile": "/Users/home/Developer/greenlight-platform/data/system-state/wrap-1752093236790-h41seh3uq-system-state.json",
+      "contextFile": "/Users/home/Developer/greenlight-platform/data/context-preservation/wrap-1752093236790-h41seh3uq-context.json"
+    },
+    "command": "npm run anchor launch-annihilate --session-id=wrap-1752093236790-h41seh3uq",
+    "instructions": [
+      "1. Start new chat session",
+      "2. Run: npm run anchor launch-annihilate",
+      "3. System will automatically restore context",
+      "4. Continue with plan execution",
+      "5. Monitor system health and performance"
+    ]
+  },
+  "quickStart": {
+    "command": "npm run anchor launch-annihilate --session-id=wrap-1752093236790-h41seh3uq",
+    "description": "Launch with context restoration"
+  }
+}

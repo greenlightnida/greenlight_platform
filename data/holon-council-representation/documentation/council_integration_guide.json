@@ -1,0 +1,33 @@
+{
+  "name": "Council Integration Guide",
+  "description": "Guide for integrating holon agents with the Council",
+  "sections": {
+    "setup": {
+      "title": "Setup and Configuration",
+      "steps": [
+        "Register holon agents with Council",
+        "Assign constituency memberships",
+        "Configure voting weights",
+        "Establish communication channels"
+      ]
+    },
+    "operations": {
+      "title": "Daily Operations",
+      "activities": [
+        "Holon status reporting",
+        "Constituency meetings",
+        "Council decision participation",
+        "Coordination with other agents"
+      ]
+    },
+    "maintenance": {
+      "title": "Maintenance and Updates",
+      "tasks": [
+        "Regular representation audits",
+        "Voting weight adjustments",
+        "Constituency rebalancing",
+        "Protocol updates"
+      ]
+    }
+  }
+}

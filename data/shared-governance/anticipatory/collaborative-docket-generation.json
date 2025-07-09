@@ -1,0 +1,54 @@
+{
+  "name": "Collaborative Docket Generation",
+  "process": {
+    "identification": {
+      "participants": [
+        "council-chair",
+        "executive-committee"
+      ],
+      "method": "collaborative_analysis",
+      "criteria": [
+        "strategic_importance",
+        "operational_impact",
+        "resource_availability"
+      ]
+    },
+    "prioritization": {
+      "participants": [
+        "council-chair",
+        "executive-committee"
+      ],
+      "method": "joint_assessment",
+      "factors": [
+        "urgency",
+        "impact",
+        "effort",
+        "risk"
+      ]
+    },
+    "assignment": {
+      "participants": [
+        "executive-committee"
+      ],
+      "oversight": "council-chair",
+      "method": "optimal_allocation",
+      "criteria": [
+        "expertise",
+        "capacity",
+        "availability"
+      ]
+    },
+    "monitoring": {
+      "participants": [
+        "council-chair",
+        "executive-committee"
+      ],
+      "method": "continuous_tracking",
+      "metrics": [
+        "progress",
+        "performance",
+        "outcomes"
+      ]
+    }
+  }
+}

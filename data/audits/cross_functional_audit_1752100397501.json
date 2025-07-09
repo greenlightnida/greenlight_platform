@@ -1,0 +1,96 @@
+{
+  "timestamp": "2025-07-09T22:33:17.455Z",
+  "overallHealth": 87.79166666666666,
+  "layers": {
+    "backend": {
+      "compilationErrors": 724,
+      "dependencyIssues": 0,
+      "apiEndpoints": 15,
+      "operational": true,
+      "health": 85
+    },
+    "frontend": {
+      "compilationErrors": 0,
+      "dependencyIssues": 0,
+      "components": 65,
+      "operational": true,
+      "health": 95
+    },
+    "api": {
+      "integrationIssues": 2,
+      "endpoints": 20,
+      "websocketConnections": 5,
+      "operational": true,
+      "health": 88
+    },
+    "holon": {
+      "holonCount": 8,
+      "communicationIssues": 1,
+      "councilSystem": true,
+      "operational": true,
+      "health": 92
+    },
+    "governance": {
+      "policies": 12,
+      "complianceRate": 94,
+      "auditTrails": true,
+      "operational": true,
+      "health": 94
+    }
+  },
+  "criticalIssues": [],
+  "recommendations": [
+    {
+      "priority": "high",
+      "category": "compilation",
+      "action": "Establish TypeScript compilation gate in CI/CD pipeline",
+      "impact": "high",
+      "effort": "low"
+    },
+    {
+      "priority": "high",
+      "category": "integration",
+      "action": "Implement integration health checks and circuit breakers",
+      "impact": "high",
+      "effort": "medium"
+    }
+  ],
+  "repairActions": [],
+  "metrics": {
+    "compilation": {
+      "backend": 70,
+      "frontend": 95,
+      "overall": 82.5
+    },
+    "dependencies": {
+      "backend": 90,
+      "frontend": 92,
+      "security": 88,
+      "overall": 90
+    },
+    "communication": {
+      "api": 85,
+      "websocket": 90,
+      "events": 92,
+      "overall": 89
+    },
+    "performance": {
+      "responseTimes": 85,
+      "memoryUsage": 90,
+      "cpuUsage": 87,
+      "overall": 87
+    },
+    "security": {
+      "dependencies": 95,
+      "code": 88,
+      "access": 92,
+      "overall": 91.66666666666667
+    },
+    "governance": {
+      "compliance": 94,
+      "audit": 89,
+      "metrics": 91,
+      "overall": 91.33333333333333
+    }
+  }
+}

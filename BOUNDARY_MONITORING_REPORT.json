@@ -1,0 +1,28 @@
+{
+  "sessionId": "monitor-1752067953010",
+  "timestamp": "2025-07-09T13:32:36.698Z",
+  "monitoring": {
+    "isRunning": false,
+    "lastCheck": "2025-07-09T13:32:33.222Z",
+    "totalChecks": 1,
+    "averageViolations": 169,
+    "trend": "insufficient_data"
+  },
+  "history": [
+    {
+      "timestamp": "2025-07-09T13:32:33.216Z",
+      "violations": 169,
+      "recommendations": 62,
+      "duration": 195
+    }
+  ],
+  "config": {
+    "checkInterval": 30000,
+    "reportInterval": 300000,
+    "maxHistory": 100,
+    "alertChannels": [
+      "console",
+      "file"
+    ]
+  }
+}

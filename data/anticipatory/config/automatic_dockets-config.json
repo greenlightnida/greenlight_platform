@@ -1,0 +1,10 @@
+{
+  "creationTriggers": {
+    "predictionConfidence": 0.8,
+    "riskLevel": "medium",
+    "impactScore": 0.6
+  },
+  "autoAssignment": true,
+  "priorityCalculation": true,
+  "resourceEstimation": true
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Constituency Balancing Integration",
+  "integration": {
+    "withGovernanceOrchestrator": {
+      "method": "event_driven_integration",
+      "events": [
+        "constituency_interest_change",
+        "constituency_vote_cast",
+        "consensus_reached",
+        "resource_allocation_update"
+      ]
+    },
+    "withPolicyEngine": {
+      "method": "policy_extension",
+      "policies": [
+        "constituency_representation_policy",
+        "interest_balancing_policy",
+        "consensus_building_policy",
+        "resource_allocation_policy"
+      ]
+    },
+    "withCouncilManagement": {
+      "method": "direct_integration",
+      "components": [
+        "CouncilChair",
+        "ExecutiveCommittee",
+        "CommitteeRepresentatives"
+      ]
+    }
+  }
+}

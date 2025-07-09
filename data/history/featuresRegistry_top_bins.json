@@ -1,0 +1,508 @@
+{
+  "features": [
+    {
+      "id": "App",
+      "name": "App.tsx",
+      "type": "other",
+      "path": "src/App.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "detectJerseyNumbers",
+      "name": "detectJerseyNumbers.ts",
+      "type": "api",
+      "path": "src/api/detectJerseyNumbers.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "AIDetectionSettings",
+      "name": "AIDetectionSettings.tsx",
+      "type": "component",
+      "path": "src/components/AIDetectionSettings.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "AccessibilityProvider",
+      "name": "AccessibilityProvider.tsx",
+      "type": "component",
+      "path": "src/components/AccessibilityProvider.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "BatchUpload",
+      "name": "BatchUpload.tsx",
+      "type": "component",
+      "path": "src/components/BatchUpload.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "BatchUploadSettings",
+      "name": "BatchUploadSettings.tsx",
+      "type": "component",
+      "path": "src/components/BatchUploadSettings.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "CohortManagement",
+      "name": "CohortManagement.tsx",
+      "type": "component",
+      "path": "src/components/CohortManagement.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "ConnectionStatus",
+      "name": "ConnectionStatus.tsx",
+      "type": "component",
+      "path": "src/components/ConnectionStatus.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "DataImport",
+      "name": "DataImport.tsx",
+      "type": "component",
+      "path": "src/components/DataImport.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "DataManagement",
+      "name": "DataManagement.tsx",
+      "type": "component",
+      "path": "src/components/DataManagement.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "ErrorBoundary",
+      "name": "ErrorBoundary.tsx",
+      "type": "component",
+      "path": "src/components/ErrorBoundary.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "ImportContextSelector",
+      "name": "ImportContextSelector.tsx",
+      "type": "component",
+      "path": "src/components/ImportContextSelector.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "KeyboardNav",
+      "name": "KeyboardNav.tsx",
+      "type": "component",
+      "path": "src/components/KeyboardNav.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "MediaLibrary",
+      "name": "MediaLibrary.tsx",
+      "type": "component",
+      "path": "src/components/MediaLibrary.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "OutreachTracker",
+      "name": "OutreachTracker.tsx",
+      "type": "component",
+      "path": "src/components/OutreachTracker.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "PhotoCorrection",
+      "name": "PhotoCorrection.tsx",
+      "type": "component",
+      "path": "src/components/PhotoCorrection.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "PhotoDetectionVisualizer",
+      "name": "PhotoDetectionVisualizer.tsx",
+      "type": "component",
+      "path": "src/components/PhotoDetectionVisualizer.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "PhotoGallery",
+      "name": "PhotoGallery.tsx",
+      "type": "component",
+      "path": "src/components/PhotoGallery.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "PhotoUpload",
+      "name": "PhotoUpload.tsx",
+      "type": "component",
+      "path": "src/components/PhotoUpload.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "PlayerCRM",
+      "name": "PlayerCRM.tsx",
+      "type": "component",
+      "path": "src/components/PlayerCRM.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "PlayerCard",
+      "name": "PlayerCard.tsx",
+      "type": "component",
+      "path": "src/components/PlayerCard.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "PlayerGrid",
+      "name": "PlayerGrid.tsx",
+      "type": "component",
+      "path": "src/components/PlayerGrid.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "SourceOfTruthConsole",
+      "name": "SourceOfTruthConsole.tsx",
+      "type": "component",
+      "path": "src/components/SourceOfTruthConsole.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "StatsCard",
+      "name": "StatsCard.tsx",
+      "type": "component",
+      "path": "src/components/StatsCard.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "StorageDashboard",
+      "name": "StorageDashboard.tsx",
+      "type": "component",
+      "path": "src/components/StorageDashboard.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "SystemAuditPanel",
+      "name": "SystemAuditPanel.tsx",
+      "type": "component",
+      "path": "src/components/SystemAuditPanel.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "SystemDashboard",
+      "name": "SystemDashboard.tsx",
+      "type": "component",
+      "path": "src/components/SystemDashboard.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "TagManager",
+      "name": "TagManager.tsx",
+      "type": "component",
+      "path": "src/components/TagManager.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "TeamPortal",
+      "name": "TeamPortal.tsx",
+      "type": "component",
+      "path": "src/components/TeamPortal.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "ThemeProvider",
+      "name": "ThemeProvider.tsx",
+      "type": "component",
+      "path": "src/components/ThemeProvider.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "ErrorBoundary.test",
+      "name": "ErrorBoundary.test.tsx",
+      "type": "component",
+      "path": "src/components/__tests__/ErrorBoundary.test.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "system_spec",
+      "name": "system_spec.ts",
+      "type": "component",
+      "path": "src/components/system_spec.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "themeConstants",
+      "name": "themeConstants.ts",
+      "type": "component",
+      "path": "src/components/themeConstants.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "aiDetection",
+      "name": "aiDetection.ts",
+      "type": "other",
+      "path": "src/config/aiDetection.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "useAccessibility",
+      "name": "useAccessibility.ts",
+      "type": "other",
+      "path": "src/hooks/useAccessibility.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "usePhotoUpload",
+      "name": "usePhotoUpload.ts",
+      "type": "other",
+      "path": "src/hooks/usePhotoUpload.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "useSupabaseData",
+      "name": "useSupabaseData.ts",
+      "type": "other",
+      "path": "src/hooks/useSupabaseData.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "database.types",
+      "name": "database.types.ts",
+      "type": "other",
+      "path": "src/lib/database.types.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "supabase",
+      "name": "supabase.ts",
+      "type": "other",
+      "path": "src/lib/supabase.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "main",
+      "name": "main.tsx",
+      "type": "other",
+      "path": "src/main.tsx",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "auditService",
+      "name": "auditService.ts",
+      "type": "service",
+      "path": "src/services/auditService.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "dataImportService",
+      "name": "dataImportService.ts",
+      "type": "service",
+      "path": "src/services/dataImportService.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "nlpService",
+      "name": "nlpService.ts",
+      "type": "service",
+      "path": "src/services/nlpService.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "openRouterService",
+      "name": "openRouterService.ts",
+      "type": "service",
+      "path": "src/services/openRouterService.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "playerService",
+      "name": "playerService.ts",
+      "type": "service",
+      "path": "src/services/playerService.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "setup",
+      "name": "setup.ts",
+      "type": "other",
+      "path": "src/test/setup.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "index",
+      "name": "index.ts",
+      "type": "other",
+      "path": "src/types/index.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "advancedDataEnrichment",
+      "name": "advancedDataEnrichment.ts",
+      "type": "utility",
+      "path": "src/utils/advancedDataEnrichment.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "aiDetection",
+      "name": "aiDetection.ts",
+      "type": "utility",
+      "path": "src/utils/aiDetection.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "aiSimulator",
+      "name": "aiSimulator.ts",
+      "type": "utility",
+      "path": "src/utils/aiSimulator.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "batchProcessor",
+      "name": "batchProcessor.ts",
+      "type": "utility",
+      "path": "src/utils/batchProcessor.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "cache",
+      "name": "cache.ts",
+      "type": "utility",
+      "path": "src/utils/cache.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "csvImport",
+      "name": "csvImport.ts",
+      "type": "utility",
+      "path": "src/utils/csvImport.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "dataEnrichment",
+      "name": "dataEnrichment.ts",
+      "type": "utility",
+      "path": "src/utils/dataEnrichment.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "deploymentTracker",
+      "name": "deploymentTracker.ts",
+      "type": "utility",
+      "path": "src/utils/deploymentTracker.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "fileStatus",
+      "name": "fileStatus.ts",
+      "type": "utility",
+      "path": "src/utils/fileStatus.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "helpers",
+      "name": "helpers.ts",
+      "type": "utility",
+      "path": "src/utils/helpers.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "intelligentCsvImport",
+      "name": "intelligentCsvImport.ts",
+      "type": "utility",
+      "path": "src/utils/intelligentCsvImport.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "logger",
+      "name": "logger.ts",
+      "type": "utility",
+      "path": "src/utils/logger.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "mattDataLoader",
+      "name": "mattDataLoader.ts",
+      "type": "utility",
+      "path": "src/utils/mattDataLoader.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "performance",
+      "name": "performance.ts",
+      "type": "utility",
+      "path": "src/utils/performance.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "playerProgress",
+      "name": "playerProgress.ts",
+      "type": "utility",
+      "path": "src/utils/playerProgress.ts",
+      "status": "unknown",
+      "docs": null
+    },
+    {
+      "id": "vite-env.d",
+      "name": "vite-env.d.ts",
+      "type": "other",
+      "path": "src/vite-env.d.ts",
+      "status": "unknown",
+      "docs": null
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "systemHolons": {
+    "systemMaster": 0.15,
+    "elaborate": 0.1,
+    "articulate": 0.1,
+    "features": 0.1,
+    "product": 0.1,
+    "testing": 0.05
+  },
+  "productHolons": {
+    "elevate": 0.1,
+    "administrate": 0.1
+  },
+  "featureHolons": {
+    "features": 0.05
+  },
+  "sessionHolons": {
+    "sessionManagement": 0.05
+  },
+  "userHolons": {
+    "auth": 0.05,
+    "userManagement": 0.05
+  }
+}

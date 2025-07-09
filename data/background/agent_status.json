@@ -1,0 +1,57 @@
+{
+  "timestamp": "2025-07-08T18:07:09.337Z",
+  "agents": {
+    "healthMonitoring": {
+      "name": "Health Monitoring Agent",
+      "script": "scripts/background/agents/health_monitor.cjs",
+      "description": "Continuous system health monitoring",
+      "status": "running"
+    },
+    "fileManagement": {
+      "name": "File Management Agent",
+      "script": "scripts/background/agents/file_manager.cjs",
+      "description": "File organization and cleanup monitoring",
+      "status": "running"
+    },
+    "buildMonitoring": {
+      "name": "Build Monitoring Agent",
+      "script": "scripts/background/agents/build_monitor.cjs",
+      "description": "Build system and code quality monitoring",
+      "status": "running"
+    },
+    "documentation": {
+      "name": "Documentation Agent",
+      "script": "scripts/background/agents/documentation_manager.cjs",
+      "description": "Documentation maintenance and governance monitoring",
+      "status": "running"
+    },
+    "integration": {
+      "name": "Integration Agent",
+      "script": "scripts/background/agents/integration_monitor.cjs",
+      "description": "System integration and continuous improvement monitoring",
+      "status": "running"
+    }
+  },
+  "processes": [
+    {
+      "agent": "healthMonitoring",
+      "pid": 22365
+    },
+    {
+      "agent": "fileManagement",
+      "pid": 22366
+    },
+    {
+      "agent": "buildMonitoring",
+      "pid": 22367
+    },
+    {
+      "agent": "documentation",
+      "pid": 22368
+    },
+    {
+      "agent": "integration",
+      "pid": 22369
+    }
+  ]
+}

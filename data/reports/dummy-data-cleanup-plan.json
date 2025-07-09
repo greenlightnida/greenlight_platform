@@ -1,0 +1,2651 @@
+{
+  "summary": {
+    "totalFiles": 662,
+    "filesWithIssues": 89,
+    "totalIssues": 206,
+    "mockDataIssues": 107,
+    "placeholderIssues": 85,
+    "dummyFunctionIssues": 5,
+    "dummyValueIssues": 9
+  },
+  "files": [
+    {
+      "file": "backend/src/routes/managers.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 2,
+            "lines": [
+              54,
+              72
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "backend/src/routes/tasks.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 6,
+            "lines": [
+              8,
+              66,
+              89,
+              107,
+              124,
+              142
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "backend/src/services/socketHandler.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 4,
+            "lines": [
+              12,
+              19,
+              26,
+              33
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "config/services/auth/google-audit-service.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 4,
+            "lines": [
+              26,
+              30,
+              38,
+              44
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "config/services/auth/google-auth-service.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 4,
+            "lines": [
+              13,
+              17,
+              31,
+              37
+            ]
+          },
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              20
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              20
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/history/LAUNCH_REPORT_top_bins.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "generateSample",
+            "matches": 3,
+            "lines": [
+              88,
+              138
+            ]
+          },
+          {
+            "pattern": "getMock",
+            "matches": 10,
+            "lines": [
+              97,
+              99,
+              101,
+              103,
+              105
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 8,
+            "lines": [
+              94,
+              98,
+              105,
+              113,
+              118,
+              135
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 5,
+            "lines": [
+              88,
+              90,
+              92,
+              138
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              145
+            ]
+          }
+        ],
+        "dummyFunctions": [
+          {
+            "pattern": "generateSample\\w+",
+            "matches": 3,
+            "lines": [
+              88,
+              138
+            ]
+          },
+          {
+            "pattern": "getMock\\w+",
+            "matches": 10,
+            "lines": [
+              97,
+              99,
+              101,
+              103,
+              105
+            ]
+          }
+        ],
+        "dummyValues": []
+      },
+      "totalIssues": 7,
+      "priority": "HIGH"
+    },
+    {
+      "file": "data/protocols/prevention-report-1752007962808.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/prevention-report-1752007979431.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/prevention-report-1752008037209.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/prevention-report-1752008071254.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/prevention-report-1752008173402.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/prevention-report-1752008215198.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/prevention-report-1752009152614.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/prevention-report-1752009224703.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              14
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 4,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752007936064.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752007970811.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752008031076.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752008062687.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752008145460.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752008208259.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752009124415.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752009197544.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752009398566.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752009407688.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752009853600.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752010302436.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752010430824.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752010480292.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752018943671.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752060683226.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752060926410.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/protocols/safety-check-end_of_chat-1752060960520.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              9
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 1,
+            "lines": [
+              9
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "data/roadmap-actuals/comprehensive-milestone-timeline.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              7247
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "data/roadmap-actuals/milestone-timeline.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 2,
+            "lines": [
+              7643,
+              7697
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "data/roadmap-actuals/retroactive-milestone-timeline.json",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "mock.*data",
+            "matches": 2,
+            "lines": [
+              7933,
+              7987
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "frontend/src/components/RoadmapDashboard.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              78
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGrid.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "generateSample",
+            "matches": 6,
+            "lines": [
+              11,
+              61,
+              65,
+              92,
+              100
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              60
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [
+          {
+            "pattern": "generateSample\\w+",
+            "matches": 6,
+            "lines": [
+              11,
+              61,
+              65,
+              92,
+              100
+            ]
+          }
+        ],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "platforms/greenlight-platform/team/TeamPortal/AIAssistant.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              134
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/background/agents/documentation_manager.cjs",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              20
+            ]
+          },
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              15
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/background/agents/file_manager.cjs",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              20
+            ]
+          },
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              15
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/background/agents/health_monitor.cjs",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              20
+            ]
+          },
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              15
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/background/agents/integration_monitor.cjs",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              20
+            ]
+          },
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              15
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/background/start_background_agents.cjs",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              211
+            ]
+          },
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              206
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/dummy-data-cleanup.cjs",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "generateSample",
+            "matches": 2,
+            "lines": [
+              23,
+              38
+            ]
+          },
+          {
+            "pattern": "getMock",
+            "matches": 2,
+            "lines": [
+              24,
+              39
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 18,
+            "lines": [
+              6,
+              18,
+              20,
+              21,
+              25,
+              41,
+              131,
+              138,
+              142,
+              186,
+              215,
+              223,
+              247,
+              294
+            ]
+          },
+          {
+            "pattern": "sample.*data",
+            "matches": 2,
+            "lines": [
+              26,
+              42
+            ]
+          },
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              27
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              372
+            ]
+          },
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 2,
+            "lines": [
+              8,
+              34
+            ]
+          },
+          {
+            "pattern": "temporary.*implementation",
+            "matches": 1,
+            "lines": [
+              35
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": [
+          {
+            "pattern": "'placeholder'",
+            "matches": 1,
+            "lines": [
+              45
+            ]
+          },
+          {
+            "pattern": "\"placeholder\"",
+            "matches": 1,
+            "lines": [
+              46
+            ]
+          },
+          {
+            "pattern": "'temporary'",
+            "matches": 1,
+            "lines": [
+              47
+            ]
+          },
+          {
+            "pattern": "\"temporary\"",
+            "matches": 1,
+            "lines": [
+              48
+            ]
+          },
+          {
+            "pattern": "'mock'",
+            "matches": 1,
+            "lines": [
+              49
+            ]
+          },
+          {
+            "pattern": "\"mock\"",
+            "matches": 1,
+            "lines": [
+              50
+            ]
+          },
+          {
+            "pattern": "'sample'",
+            "matches": 1,
+            "lines": [
+              51
+            ]
+          },
+          {
+            "pattern": "\"sample\"",
+            "matches": 1,
+            "lines": [
+              52
+            ]
+          }
+        ]
+      },
+      "totalIssues": 16,
+      "priority": "HIGH"
+    },
+    {
+      "file": "scripts/implement_phase1_modularization.cjs",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              431,
+              472
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/protocols/planning_criteria_protocol.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              62,
+              89
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/protocols/prevention_system.cjs",
+      "issues": {
+        "mockData": [],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": [
+          {
+            "pattern": "'mock'",
+            "matches": 2,
+            "lines": [
+              177
+            ]
+          }
+        ]
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/register_all_features.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              68
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "scripts/wiki_holon_setup.cjs",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "placeholder.*data",
+            "matches": 1,
+            "lines": [
+              591
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/components/CoachingToolkit/CoachingToolkit.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock data",
+            "matches": 1,
+            "lines": [
+              46
+            ]
+          },
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 3,
+            "lines": [
+              46,
+              52,
+              183
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 5,
+            "lines": [
+              46,
+              48,
+              51,
+              183
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/components/CoachingToolkit/CoachingToolkit.tsx.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock data",
+            "matches": 1,
+            "lines": [
+              45
+            ]
+          },
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 3,
+            "lines": [
+              45,
+              51,
+              106
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 5,
+            "lines": [
+              45,
+              47,
+              50,
+              106
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/core/holons/features/modules/DeliveryEngine.ts",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 2,
+            "lines": [
+              430,
+              491
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/features/modules/DeliveryEngine.ts.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 2,
+            "lines": [
+              430,
+              491
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/features/modules/FeatureRegistryEngine.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 2,
+            "lines": [
+              398,
+              502
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/features/modules/FeatureRegistryEngine.ts.boundary-backup",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "placeholder.*implementation",
+            "matches": 2,
+            "lines": [
+              398,
+              502
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/features/modules/ImplementationEngine.ts",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              297
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/features/modules/ImplementationEngine.ts.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              286
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/features/modules/TechnicalEngine.ts",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 2,
+            "lines": [
+              338,
+              425
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/features/modules/TechnicalEngine.ts.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 2,
+            "lines": [
+              338,
+              425
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/product/modules/CoordinationEngine.ts",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              291
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              398
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/product/modules/CoordinationEngine.ts.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              291
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              398
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/product/modules/GovernanceEngine.ts",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              319
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/product/modules/GovernanceEngine.ts.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              319
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/product/modules/RequirementsEngine.ts",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 1,
+            "lines": [
+              224
+            ]
+          }
+        ],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              303
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/systemMaster/modules/Governance.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 2,
+            "lines": [
+              64,
+              105
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/testing/TestingHolonManager.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              847
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/holons/testing/TestingHolonManager.ts.boundary-backup",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              849
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/session-management/SessionsManager.tsx",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              103
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/core/session-management/SessionsManager.tsx.boundary-backup",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              103
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 3,
+            "lines": [
+              80,
+              85,
+              90
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx.boundary-backup",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 3,
+            "lines": [
+              80,
+              85,
+              90
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/dashboards/product/ProductDashboard.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock data",
+            "matches": 1,
+            "lines": [
+              458
+            ]
+          },
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              458
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              458
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/dashboards/product/ProductDashboard.tsx.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock data",
+            "matches": 1,
+            "lines": [
+              459
+            ]
+          },
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              459
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              459
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/dashboards/roadmap/RoadmapActualsDashboard.tsx.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "sample.*data",
+            "matches": 3,
+            "lines": [
+              41,
+              58
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/dashboards/roadmap/RoadmapDashboard.tsx",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              108
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/dashboards/roadmap/RoadmapDashboard.tsx.boundary-backup",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              108
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/dashboards/system/EnvironmentVariableDashboard.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock data",
+            "matches": 1,
+            "lines": [
+              75
+            ]
+          },
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              75
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              75
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/dashboards/system/SystemLogConsole.tsx",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              123
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/dashboards/system/SystemLogConsole.tsx.boundary-backup",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ TODO:",
+            "matches": 1,
+            "lines": [
+              123
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock data",
+            "matches": 1,
+            "lines": [
+              334
+            ]
+          },
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              334
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              334
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.tsx.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock data",
+            "matches": 1,
+            "lines": [
+              334
+            ]
+          },
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              334
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              334
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/platforms/articulate/components/TaskEngine.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              30
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              30
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/platforms/articulate/components/TaskEngine.tsx.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              30
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              30
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/platforms/articulate/components/WorkHistory.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              36
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              36
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/platforms/articulate/components/WorkHistory.tsx.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              36
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              36
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 2,
+      "priority": "LOW"
+    },
+    {
+      "file": "src/services/integrations/supabaseSchemaService.ts",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "getMock",
+            "matches": 3,
+            "lines": [
+              198,
+              221,
+              228
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              197
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [
+          {
+            "pattern": "getMock\\w+",
+            "matches": 3,
+            "lines": [
+              198,
+              221,
+              228
+            ]
+          }
+        ],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/services/integrations/supabaseSchemaService.ts.boundary-backup",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "getMock",
+            "matches": 3,
+            "lines": [
+              198,
+              221,
+              228
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              197
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [
+          {
+            "pattern": "getMock\\w+",
+            "matches": 3,
+            "lines": [
+              198,
+              221,
+              228
+            ]
+          }
+        ],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/utils/common/DeveloperNotesPanel.tsx",
+      "issues": {
+        "mockData": [
+          {
+            "pattern": "\\/\\/ Mock data",
+            "matches": 1,
+            "lines": [
+              40
+            ]
+          },
+          {
+            "pattern": "\\/\\/ Mock.*data",
+            "matches": 1,
+            "lines": [
+              40
+            ]
+          },
+          {
+            "pattern": "mock.*data",
+            "matches": 1,
+            "lines": [
+              40
+            ]
+          }
+        ],
+        "placeholders": [],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 3,
+      "priority": "MEDIUM"
+    },
+    {
+      "file": "src/utils/logger/logger.ts",
+      "issues": {
+        "mockData": [],
+        "placeholders": [
+          {
+            "pattern": "\\/\\/ placeholder",
+            "matches": 1,
+            "lines": [
+              181
+            ]
+          }
+        ],
+        "dummyFunctions": [],
+        "dummyValues": []
+      },
+      "totalIssues": 1,
+      "priority": "LOW"
+    }
+  ]
+}

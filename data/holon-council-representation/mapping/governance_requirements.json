@@ -1,0 +1,72 @@
+{
+  "systemHolons": {
+    "systemMaster": {
+      "governanceLevel": "critical",
+      "complianceRequired": true,
+      "auditFrequency": "daily"
+    },
+    "elaborate": {
+      "governanceLevel": "high",
+      "complianceRequired": true,
+      "auditFrequency": "weekly"
+    },
+    "articulate": {
+      "governanceLevel": "high",
+      "complianceRequired": true,
+      "auditFrequency": "weekly"
+    },
+    "features": {
+      "governanceLevel": "high",
+      "complianceRequired": true,
+      "auditFrequency": "weekly"
+    },
+    "product": {
+      "governanceLevel": "high",
+      "complianceRequired": true,
+      "auditFrequency": "weekly"
+    },
+    "testing": {
+      "governanceLevel": "medium",
+      "complianceRequired": true,
+      "auditFrequency": "monthly"
+    }
+  },
+  "productHolons": {
+    "elevate": {
+      "governanceLevel": "high",
+      "complianceRequired": true,
+      "auditFrequency": "weekly"
+    },
+    "administrate": {
+      "governanceLevel": "high",
+      "complianceRequired": true,
+      "auditFrequency": "weekly"
+    }
+  },
+  "featureHolons": {
+    "features": {
+      "governanceLevel": "high",
+      "complianceRequired": true,
+      "auditFrequency": "weekly"
+    }
+  },
+  "sessionHolons": {
+    "sessionManagement": {
+      "governanceLevel": "medium",
+      "complianceRequired": true,
+      "auditFrequency": "monthly"
+    }
+  },
+  "userHolons": {
+    "auth": {
+      "governanceLevel": "critical",
+      "complianceRequired": true,
+      "auditFrequency": "daily"
+    },
+    "userManagement": {
+      "governanceLevel": "medium",
+      "complianceRequired": true,
+      "auditFrequency": "monthly"
+    }
+  }
+}

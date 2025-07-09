@@ -1,0 +1,99 @@
+{
+  "name": "Constituency Representation Structure",
+  "description": "Multi-agent representative assembly with constituency balancing",
+  "constituencies": {
+    "executive": {
+      "name": "Executive Committee",
+      "representation": "operational_governance",
+      "votingWeight": 0.25,
+      "interests": [
+        "system_operations",
+        "performance_optimization",
+        "resource_management"
+      ],
+      "priorities": [
+        "efficiency",
+        "reliability",
+        "scalability"
+      ]
+    },
+    "security": {
+      "name": "Security Committee",
+      "representation": "security_governance",
+      "votingWeight": 0.2,
+      "interests": [
+        "security_compliance",
+        "threat_management",
+        "access_control"
+      ],
+      "priorities": [
+        "security",
+        "compliance",
+        "risk_mitigation"
+      ]
+    },
+    "performance": {
+      "name": "Performance Committee",
+      "representation": "performance_governance",
+      "votingWeight": 0.2,
+      "interests": [
+        "performance_optimization",
+        "resource_utilization",
+        "scalability"
+      ],
+      "priorities": [
+        "performance",
+        "efficiency",
+        "optimization"
+      ]
+    },
+    "integration": {
+      "name": "Integration Committee",
+      "representation": "integration_governance",
+      "votingWeight": 0.15,
+      "interests": [
+        "service_integration",
+        "api_governance",
+        "connectivity"
+      ],
+      "priorities": [
+        "integration",
+        "connectivity",
+        "interoperability"
+      ]
+    },
+    "intelligence": {
+      "name": "Intelligence Committee",
+      "representation": "intelligence_governance",
+      "votingWeight": 0.15,
+      "interests": [
+        "learning_systems",
+        "anticipatory_capabilities",
+        "innovation"
+      ],
+      "priorities": [
+        "learning",
+        "innovation",
+        "anticipation"
+      ]
+    },
+    "governance": {
+      "name": "Governance Committee",
+      "representation": "policy_governance",
+      "votingWeight": 0.05,
+      "interests": [
+        "policy_enforcement",
+        "compliance_management",
+        "risk_governance"
+      ],
+      "priorities": [
+        "compliance",
+        "policy",
+        "risk_management"
+      ]
+    }
+  },
+  "totalVotingWeight": 1,
+  "quorum": 0.6,
+  "supermajority": 0.75
+}

@@ -1,0 +1,744 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-07T20:30:00Z",
+  "scripts": [
+    {
+      "id": "protocol-validation",
+      "name": "Protocol Validation",
+      "file": "scripts/protocols/protocol_validation.cjs",
+      "category": "protocol",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "Protocol validation and integrity checking system",
+      "dependencies": [],
+      "executionTime": "10-25s",
+      "integrationPoints": ["PreventionSystem", "PreExecutionSafety"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 5,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["validation", "integrity", "protocol", "checking"]
+    },
+    {
+      "id": "product-manager",
+      "name": "Product Manager",
+      "file": "src/core/holons/product/ProductManager.ts",
+      "category": "governance",
+      "priority": "critical",
+      "safety": "safe",
+      "status": "active",
+      "description": "Product holon governance and feature-level PM management with full transparency",
+      "dependencies": ["CoordinationEngine", "ProductHolon", "AllFeaturePMs"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["CoordinationEngine", "ProductHolon", "AllProductManagers", "ProductComponents"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 5,
+        "integration": 5,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["holon", "product", "governance", "feature-management", "transparency", "no-redundancy"]
+    },
+    {
+      "id": "system-master-manager",
+      "name": "System Master Manager",
+      "file": "src/core/holons/systemMaster/SystemMasterManager.ts",
+      "category": "governance",
+      "priority": "critical",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Meta-system governance and oversight management",
+      "dependencies": ["GovernanceOrchestrator", "RepositoryGovernor"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["AllManagers", "SystemMasterComponents"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 5,
+        "integration": 5,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["holon", "system-master", "governance", "meta-system"]
+    },
+    {
+      "id": "governance-orchestrator",
+      "name": "Governance Orchestrator",
+      "file": "src/core/governance/GovernanceOrchestrator.ts",
+      "category": "governance",
+      "priority": "critical",
+      "safety": "safe",
+      "status": "missing",
+      "description": "High-level governance coordination and orchestration",
+      "dependencies": ["RepositoryGovernor", "PolicyEngine"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["AllManagers", "GovernanceSystem"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 5,
+        "integration": 5,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["governance", "orchestration", "coordination", "critical"]
+    },
+    {
+      "id": "repository-governor",
+      "name": "Repository Governor",
+      "file": "src/core/governance/RepositoryGovernor.ts",
+      "category": "governance",
+      "priority": "critical",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Repository governance and monitoring management",
+      "dependencies": ["RepositoryMonitor", "PolicyEngine"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["RepositoryMonitor", "AlertManager"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 5,
+        "integration": 5,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["governance", "repository", "monitoring", "critical"]
+    },
+    {
+      "id": "repository-monitor",
+      "name": "Repository Monitor",
+      "file": "src/core/governance/monitors/RepositoryMonitor.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Repository monitoring and health tracking",
+      "dependencies": ["AlertManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["RepositoryGovernor", "AlertManager"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["monitoring", "repository", "health", "tracking"]
+    },
+    {
+      "id": "policy-engine",
+      "name": "Policy Engine",
+      "file": "src/core/governance/policies/PolicyEngine.ts",
+      "category": "governance",
+      "priority": "critical",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Automated policy enforcement and compliance management",
+      "dependencies": ["AlertManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["GovernanceOrchestrator", "AlertManager"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 5,
+        "integration": 5,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["policy", "enforcement", "compliance", "critical"]
+    },
+    {
+      "id": "elevate-manager",
+      "name": "Elevate Manager",
+      "file": "Top_Bins/src/core/holons/elevate/ElevateManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Coaching product governance and management",
+      "dependencies": ["CoachingManager", "PlayerManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["ElevateComponents", "PlayerService"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["holon", "elevate", "coaching", "product"]
+    },
+    {
+      "id": "coaching-manager",
+      "name": "Coaching Manager",
+      "file": "Top_Bins/src/core/holons/elevate/CoachingManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Coaching workflow and process management",
+      "dependencies": ["PlayerManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["ElevateManager", "CoachingComponents"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["coaching", "workflow", "process", "management"]
+    },
+    {
+      "id": "player-manager",
+      "name": "Player Manager",
+      "file": "Top_Bins/src/core/holons/elevate/PlayerManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Player data and profile management",
+      "dependencies": [],
+      "executionTime": "5-15s",
+      "integrationPoints": ["ElevateManager", "PlayerService"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["player", "data", "profile", "management"]
+    },
+    {
+      "id": "administrate-manager",
+      "name": "Administrate Manager",
+      "file": "Top_Bins/src/core/holons/administrate/AdministrateManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Business intelligence and executive governance",
+      "dependencies": ["ExecutiveManager", "BusinessIntelligenceManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["AdministrateComponents", "BusinessIntelligenceService"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["holon", "administrate", "business-intelligence", "executive"]
+    },
+    {
+      "id": "executive-manager",
+      "name": "Executive Manager",
+      "file": "Top_Bins/src/core/holons/administrate/ExecutiveManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Executive oversight and decision support",
+      "dependencies": ["BusinessIntelligenceManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["AdministrateManager", "ExecutiveComponents"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["executive", "oversight", "decision-support", "management"]
+    },
+    {
+      "id": "business-intelligence-manager",
+      "name": "Business Intelligence Manager",
+      "file": "Top_Bins/src/core/holons/administrate/BusinessIntelligenceManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Analytics and business intelligence management",
+      "dependencies": [],
+      "executionTime": "5-15s",
+      "integrationPoints": ["AdministrateManager", "BusinessIntelligenceService"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["business-intelligence", "analytics", "reporting", "management"]
+    },
+    {
+      "id": "system-evolution-manager",
+      "name": "System Evolution Manager",
+      "file": "src/core/holons/elaborate/SystemEvolutionManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "System evolution tracking and management",
+      "dependencies": ["ProtocolManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["ElaborateManager", "SystemEvolutionService"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["system-evolution", "tracking", "management", "elaborate"]
+    },
+    {
+      "id": "articulate-manager",
+      "name": "Articulate Manager",
+      "file": "src/core/holons/articulate/ArticulateManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Knowledge management governance and coordination",
+      "dependencies": ["KnowledgeManager", "WorkManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["ArticulateComponents", "KnowledgeService"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["holon", "articulate", "knowledge", "governance"]
+    },
+    {
+      "id": "knowledge-manager",
+      "name": "Knowledge Manager",
+      "file": "src/core/holons/articulate/KnowledgeManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Knowledge base and content management",
+      "dependencies": [],
+      "executionTime": "5-15s",
+      "integrationPoints": ["ArticulateManager", "KnowledgeService"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["knowledge", "content", "base", "management"]
+    },
+    {
+      "id": "work-manager",
+      "name": "Work Manager",
+      "file": "src/core/holons/articulate/WorkManager.ts",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "missing",
+      "description": "Workflow and task management",
+      "dependencies": [],
+      "executionTime": "5-15s",
+      "integrationPoints": ["ArticulateManager", "TaskEngine"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["work", "workflow", "task", "management"]
+    },
+    {
+      "id": "migrations-manager",
+      "name": "Migrations Manager",
+      "file": "src/core/migrations/MigrationsManager.ts",
+      "category": "governance",
+      "priority": "critical",
+      "safety": "safe",
+      "status": "active",
+      "description": "Manages system migrations with safety checks and rollback capabilities",
+      "dependencies": ["SessionManager"],
+      "executionTime": "30-120s",
+      "integrationPoints": ["SessionManager", "GovernanceOrchestrator"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 5,
+        "integration": 5,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["migration", "safety", "rollback", "governance"]
+    },
+    {
+      "id": "account-migration-mess",
+      "name": "Migration Mess Analysis",
+      "file": "scripts/migrations/account_migration_mess.cjs",
+      "category": "migration",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "Analyzes migration mess and identifies issues for cleanup",
+      "dependencies": [],
+      "executionTime": "10-30s",
+      "integrationPoints": ["MigrationsManager"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 3,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["analysis", "migration", "cleanup"]
+    },
+    {
+      "id": "execute-cleanup-migration",
+      "name": "Cleanup Migration Executor",
+      "file": "scripts/migrations/execute_cleanup_migration.cjs",
+      "category": "migration",
+      "priority": "high",
+      "safety": "medium",
+      "status": "active",
+      "description": "Executes cleanup migration with safety checks and validation",
+      "dependencies": ["MigrationsManager"],
+      "executionTime": "60-300s",
+      "integrationPoints": ["MigrationsManager", "SessionManager"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 5,
+        "integration": 5,
+        "ui": 4
+      },
+      "riskLevel": "medium",
+      "tags": ["migration", "cleanup", "safety", "validation"]
+    },
+    {
+      "id": "remove-symlinks",
+      "name": "Symlink Cleanup",
+      "file": "scripts/cleanup/remove_symlinks.js",
+      "category": "cleanup",
+      "priority": "medium",
+      "safety": "medium",
+      "status": "active",
+      "description": "Removes symlinks and consolidates file structure",
+      "dependencies": [],
+      "executionTime": "5-15s",
+      "integrationPoints": ["MigrationsManager"],
+      "appPotential": {
+        "dashboard": 3,
+        "automation": 4,
+        "integration": 3,
+        "ui": 2
+      },
+      "riskLevel": "medium",
+      "tags": ["cleanup", "symlinks", "structure"]
+    },
+    {
+      "id": "precommit-audit",
+      "name": "Precommit Audit",
+      "file": "scripts/governance/precommit_audit.cjs",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "Comprehensive precommit validation for system readiness",
+      "dependencies": ["npm", "typescript", "eslint"],
+      "executionTime": "30-60s",
+      "integrationPoints": ["CustodianProtocol", "CI/CD"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 5,
+        "integration": 5,
+        "ui": 5
+      },
+      "riskLevel": "low",
+      "tags": ["audit", "validation", "quality", "precommit"]
+    },
+    {
+      "id": "custodian-protocol",
+      "name": "Custodian Protocol",
+      "file": "scripts/governance/custodian_protocol.cjs",
+      "category": "governance",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "Safe maintenance and monitoring protocol",
+      "dependencies": [],
+      "executionTime": "60-180s",
+      "integrationPoints": ["ScriptMaster", "SystemMaster"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 5,
+        "integration": 5,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["maintenance", "monitoring", "safety", "protocol"]
+    },
+    {
+      "id": "audit-and-optimize",
+      "name": "Audit and Optimize",
+      "file": "scripts/maintenance/audit_and_optimize.js",
+      "category": "maintenance",
+      "priority": "medium",
+      "safety": "medium",
+      "status": "active",
+      "description": "Comprehensive system audit and optimization",
+      "dependencies": [],
+      "executionTime": "120-300s",
+      "integrationPoints": ["CustodianProtocol"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 3
+      },
+      "riskLevel": "medium",
+      "tags": ["audit", "optimization", "maintenance"]
+    },
+    {
+      "id": "launch-protocol",
+      "name": "Launch Protocol",
+      "file": "scripts/protocols/launch_protocol.cjs",
+      "category": "protocol",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "System launch and initialization protocol",
+      "dependencies": [],
+      "executionTime": "10-30s",
+      "integrationPoints": ["SessionManager", "SystemMaster"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["launch", "initialization", "protocol"]
+    },
+    {
+      "id": "end-of-chat-protocol",
+      "name": "End of Chat Protocol",
+      "file": "scripts/protocols/end_of_chat_protocol.js",
+      "category": "protocol",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "Session cleanup and context preservation protocol",
+      "dependencies": ["SessionManager"],
+      "executionTime": "5-15s",
+      "integrationPoints": ["SessionManager", "SystemMaster"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["session", "cleanup", "protocol"]
+    },
+    {
+      "id": "pre-wrap-audit-protocol",
+      "name": "Pre-wrap Audit Protocol",
+      "file": "scripts/protocols/pre_wrap_audit_protocol.cjs",
+      "category": "protocol",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "Pre-session wrap audit and validation",
+      "dependencies": [],
+      "executionTime": "15-45s",
+      "integrationPoints": ["SessionManager", "CustodianProtocol"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 4,
+        "integration": 4,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["audit", "validation", "protocol"]
+    },
+    {
+      "id": "extract-session-communication",
+      "name": "Session Communication Extractor",
+      "file": "scripts/protocols/extract_session_communication.js",
+      "category": "protocol",
+      "priority": "medium",
+      "safety": "safe",
+      "status": "active",
+      "description": "Extracts and processes session communication data",
+      "dependencies": [],
+      "executionTime": "5-15s",
+      "integrationPoints": ["SessionManager"],
+      "appPotential": {
+        "dashboard": 3,
+        "automation": 3,
+        "integration": 3,
+        "ui": 2
+      },
+      "riskLevel": "low",
+      "tags": ["session", "extraction", "communication"]
+    },
+    {
+      "id": "protocol-update",
+      "name": "Protocol Update Script",
+      "file": "scripts/protocols/update_protocols.cjs",
+      "category": "protocol",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "Updates protocols to reflect current system state between sessions",
+      "dependencies": [],
+      "executionTime": "30-60s",
+      "integrationPoints": ["PrecommitAudit", "CustodianProtocol"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 5,
+        "integration": 4,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["protocol", "update", "maintenance", "automation"]
+    },
+    {
+      "id": "prevention-system",
+      "name": "Prevention System",
+      "file": "scripts/protocols/prevention_system.cjs",
+      "category": "protocol",
+      "priority": "critical",
+      "safety": "safe",
+      "status": "active",
+      "description": "Comprehensive prevention system for blocking unsafe protocol executions",
+      "dependencies": [],
+      "executionTime": "5-15s",
+      "integrationPoints": ["LaunchProtocol", "ProtocolManager"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 5,
+        "integration": 5,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["prevention", "safety", "protocol", "validation"]
+    },
+    {
+      "id": "protocol-monitor",
+      "name": "Protocol Monitor",
+      "file": "scripts/protocols/protocol_monitor.cjs",
+      "category": "protocol",
+      "priority": "high",
+      "safety": "safe",
+      "status": "active",
+      "description": "Real-time protocol monitoring and health tracking system",
+      "dependencies": [],
+      "executionTime": "10-30s",
+      "integrationPoints": ["PreventionSystem", "CustodianProtocol"],
+      "appPotential": {
+        "dashboard": 5,
+        "automation": 4,
+        "integration": 4,
+        "ui": 4
+      },
+      "riskLevel": "low",
+      "tags": ["monitoring", "health", "protocol", "tracking"]
+    },
+    {
+      "id": "pre-execution-safety",
+      "name": "Pre-execution Safety",
+      "file": "scripts/protocols/pre_execution_safety.cjs",
+      "category": "protocol",
+      "priority": "critical",
+      "safety": "safe",
+      "status": "active",
+      "description": "Pre-execution safety checks and validation system",
+      "dependencies": [],
+      "executionTime": "5-15s",
+      "integrationPoints": ["PreventionSystem", "ProtocolManager"],
+      "appPotential": {
+        "dashboard": 4,
+        "automation": 5,
+        "integration": 5,
+        "ui": 3
+      },
+      "riskLevel": "low",
+      "tags": ["safety", "validation", "pre-execution", "protocol"]
+    }
+  ],
+  "categories": {
+    "governance": {
+      "description": "System governance and oversight scripts",
+      "priority": "high",
+      "color": "#3B82F6"
+    },
+    "migration": {
+      "description": "System migration and transformation scripts",
+      "priority": "critical",
+      "color": "#EF4444"
+    },
+    "cleanup": {
+      "description": "System cleanup and maintenance scripts",
+      "priority": "medium",
+      "color": "#10B981"
+    },
+    "maintenance": {
+      "description": "Ongoing maintenance and optimization scripts",
+      "priority": "medium",
+      "color": "#F59E0B"
+    },
+    "protocol": {
+      "description": "System protocol and workflow scripts",
+      "priority": "high",
+      "color": "#8B5CF6"
+    }
+  },
+  "safetyLevels": {
+    "safe": {
+      "description": "Read-only operations, no system changes",
+      "color": "#10B981",
+      "requiresApproval": false
+    },
+    "medium": {
+      "description": "Controlled changes with safety checks",
+      "color": "#F59E0B",
+      "requiresApproval": true
+    },
+    "high": {
+      "description": "Significant system changes, requires review",
+      "color": "#EF4444",
+      "requiresApproval": true
+    }
+  },
+  "priorities": {
+    "critical": {
+      "description": "System-critical operations",
+      "color": "#EF4444",
+      "executionOrder": 1
+    },
+    "high": {
+      "description": "High-priority operations",
+      "color": "#F59E0B",
+      "executionOrder": 2
+    },
+    "medium": {
+      "description": "Standard operations",
+      "color": "#3B82F6",
+      "executionOrder": 3
+    },
+    "low": {
+      "description": "Low-priority operations",
+      "color": "#6B7280",
+      "executionOrder": 4
+    }
+  }
+} 

@@ -1,0 +1,42 @@
+{
+  "name": "Council Chair Handbook",
+  "description": "Comprehensive handbook for Council Chair responsibilities and powers",
+  "sections": {
+    "responsibilities": {
+      "title": "Council Chair Responsibilities",
+      "items": [
+        "Strategic oversight and direction setting",
+        "Holon agent coordination and facilitation",
+        "Decision-making oversight and optimization",
+        "Continuous improvement leadership"
+      ]
+    },
+    "powers": {
+      "title": "Council Chair Powers",
+      "items": [
+        "Strategic authority for Council direction",
+        "Coordination authority for holon agents",
+        "Decision authority for critical matters",
+        "Improvement authority for Council operations"
+      ]
+    },
+    "monitoring": {
+      "title": "Monitoring Capabilities",
+      "items": [
+        "Real-time holon agent metrics monitoring",
+        "Council effectiveness tracking",
+        "System integration analysis",
+        "Performance optimization oversight"
+      ]
+    },
+    "improvement": {
+      "title": "Improvement Mechanisms",
+      "items": [
+        "Performance optimization strategies",
+        "Learning integration methods",
+        "Feedback integration processes",
+        "Continuous enhancement approaches"
+      ]
+    }
+  }
+}

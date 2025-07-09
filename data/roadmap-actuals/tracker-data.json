@@ -1,0 +1,124 @@
+{
+  "projectId": "greenlight-platform",
+  "projectName": "Greenlight Platform",
+  "plannedMilestones": [
+    {
+      "id": "planned-1",
+      "title": "Git Governance Next Steps",
+      "description": "No description available",
+      "category": "milestone",
+      "priority": "low",
+      "plannedStartDate": "2025-07-09T17:29:29.135Z",
+      "plannedEndDate": "2025-07-23T17:29:29.135Z",
+      "plannedDuration": 14,
+      "plannedEffort": 80,
+      "plannedTeamSize": 2,
+      "plannedDependencies": [],
+      "plannedSuccessCriteria": [
+        "Complete milestone objectives",
+        "Meet quality standards"
+      ],
+      "plannedMetrics": {
+        "codeCoverage": 90,
+        "performanceTarget": 100,
+        "qualityScore": 85,
+        "userSatisfaction": 80
+      }
+    },
+    {
+      "id": "planned-2",
+      "title": "Performance Optimization",
+      "description": "No description available",
+      "category": "milestone",
+      "priority": "critical",
+      "plannedStartDate": "2025-07-09T17:29:29.136Z",
+      "plannedEndDate": "2025-07-23T17:29:29.136Z",
+      "plannedDuration": 14,
+      "plannedEffort": 80,
+      "plannedTeamSize": 2,
+      "plannedDependencies": [],
+      "plannedSuccessCriteria": [
+        "Complete milestone objectives",
+        "Meet quality standards"
+      ],
+      "plannedMetrics": {
+        "codeCoverage": 90,
+        "performanceTarget": 100,
+        "qualityScore": 85,
+        "userSatisfaction": 80
+      }
+    }
+  ],
+  "actualMilestones": [
+    {
+      "id": "actual-1",
+      "plannedMilestoneId": "planned-2",
+      "title": "System Launch Protocol",
+      "description": "Greenlight Platform launch protocol execution",
+      "category": "milestone",
+      "priority": "critical",
+      "actualStartDate": "2025-07-09T17:15:52.903Z",
+      "actualEndDate": "2025-07-09T17:15:52.903Z",
+      "actualDuration": 1,
+      "actualEffort": 2,
+      "actualTeamSize": 1,
+      "actualDependencies": [],
+      "status": "completed",
+      "progress": 100,
+      "blockers": [],
+      "actualSuccessCriteria": [
+        "System launched successfully",
+        "All components operational"
+      ],
+      "actualMetrics": {
+        "codeCoverage": 95,
+        "performanceActual": 100,
+        "qualityScore": 90,
+        "userSatisfaction": 85
+      },
+      "timelineVariance": 0,
+      "effortVariance": 0,
+      "lessonsLearned": [
+        "Launch protocol executed successfully"
+      ],
+      "recommendations": [
+        "Continue using current launch protocol"
+      ]
+    },
+    {
+      "id": "actual-2",
+      "plannedMilestoneId": "planned-3",
+      "title": "Session: roadmap-actuals-implementation-1752064200000",
+      "description": "Development session with 8 events",
+      "category": "task",
+      "priority": "medium",
+      "actualStartDate": "2025-07-09T12:30:00.000Z",
+      "actualEndDate": "2025-07-09T12:30:00.000Z",
+      "actualDuration": 1,
+      "actualEffort": 1,
+      "actualTeamSize": 1,
+      "actualDependencies": [],
+      "status": "completed",
+      "progress": 100,
+      "blockers": [],
+      "actualSuccessCriteria": [
+        "Session completed successfully"
+      ],
+      "actualMetrics": {
+        "codeCoverage": 80,
+        "performanceActual": 90,
+        "qualityScore": 85,
+        "userSatisfaction": 80
+      },
+      "timelineVariance": 0,
+      "effortVariance": 0,
+      "lessonsLearned": [
+        "Session completed as planned"
+      ],
+      "recommendations": [
+        "Continue current development approach"
+      ]
+    }
+  ],
+  "createdAt": "2025-07-09T17:29:29.156Z"
+}

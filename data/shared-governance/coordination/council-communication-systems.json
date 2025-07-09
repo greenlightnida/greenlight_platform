@@ -1,0 +1,35 @@
+{
+  "name": "Communication Systems",
+  "systems": {
+    "councilWideCommunication": {
+      "channels": [
+        "council_broadcast",
+        "committee_reports",
+        "strategic_updates"
+      ],
+      "frequency": "daily",
+      "participants": "all_council_members"
+    },
+    "executiveCommunication": {
+      "channels": [
+        "executive_meetings",
+        "performance_reviews",
+        "strategic_planning"
+      ],
+      "frequency": "weekly",
+      "participants": [
+        "council-chair",
+        "executive-committee"
+      ]
+    },
+    "emergencyCommunication": {
+      "channels": [
+        "emergency_alerts",
+        "immediate_escalation",
+        "crisis_coordination"
+      ],
+      "frequency": "immediate",
+      "participants": "all_council_members"
+    }
+  }
+}

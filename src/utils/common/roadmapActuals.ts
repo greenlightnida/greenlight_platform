@@ -1,0 +1,904 @@
+/**
+ * Roadmap Actuals Tracking System
+ * Compares planned vs. actual development progress and timelines
+ * Similar to accounting practices for project performance tracking
+ */
+
+export interface PlannedMilestone {
+  id: string;
+  title: string;
+  description: string;
+  category: 'phase' | 'milestone' | 'task' | 'epic';
+  priority: 'critical' | 'high' | 'medium' | 'low';
+  
+  // Planned Timeline
+  plannedStartDate: Date;
+  plannedEndDate: Date;
+  plannedDuration: number; // in days
+  plannedEffort: number; // in hours
+  
+  // Planned Resources
+  plannedTeamSize: number;
+  plannedBudget?: number;
+  plannedDependencies: string[];
+  
+  // Planned Success Criteria
+  plannedSuccessCriteria: string[];
+  plannedMetrics: {
+    codeCoverage?: number;
+    performanceTarget?: number;
+    qualityScore?: number;
+    userSatisfaction?: number;
+  };
+}
+
+export interface ActualMilestone {
+  id: string;
+  plannedMilestoneId: string;
+  title: string;
+  description: string;
+  category: 'phase' | 'milestone' | 'task' | 'epic';
+  priority: 'critical' | 'high' | 'medium' | 'low';
+  
+  // Actual Timeline
+  actualStartDate: Date;
+  actualEndDate?: Date;
+  actualDuration?: number; // in days
+  actualEffort?: number; // in hours
+  
+  // Actual Resources
+  actualTeamSize: number;
+  actualBudget?: number;
+  actualDependencies: string[];
+  
+  // Actual Progress
+  status: 'not-started' | 'in-progress' | 'completed' | 'blocked' | 'cancelled';
+  progress: number; // 0-100
+  blockers: string[];
+  
+  // Actual Success Criteria
+  actualSuccessCriteria: string[];
+  actualMetrics: {
+    codeCoverage?: number;
+    performanceActual?: number;
+    qualityScore?: number;
+    userSatisfaction?: number;
+  };
+  
+  // Variance Analysis
+  timelineVariance: number; // days (positive = ahead, negative = behind)
+  effortVariance: number; // hours (positive = over, negative = under)
+  budgetVariance?: number; // dollars (positive = over, negative = under)
+  
+  // Lessons Learned
+  lessonsLearned: string[];
+  recommendations: string[];
+}
+
+export interface RoadmapActuals {
+  projectId: string;
+  projectName: string;
+  reportingPeriod: {
+    startDate: Date;
+    endDate: Date;
+    period: 'weekly' | 'monthly' | 'quarterly';
+  };
+  
+  // Planned vs Actual Summary
+  summary: {
+    totalPlannedMilestones: number;
+    totalActualMilestones: number;
+    completedMilestones: number;
+    inProgressMilestones: number;
+    blockedMilestones: number;
+    overallProgress: number;
+  };
+  
+  // Timeline Performance
+  timelinePerformance: {
+    onTimeMilestones: number;
+    aheadOfScheduleMilestones: number;
+    behindScheduleMilestones: number;
+    averageTimelineVariance: number;
+    timelineEfficiency: number; // percentage
+  };
+  
+  // Effort Performance
+  effortPerformance: {
+    underBudgetEffort: number;
+    onBudgetEffort: number;
+    overBudgetEffort: number;
+    averageEffortVariance: number;
+    effortEfficiency: number; // percentage
+  };
+  
+  // Budget Performance (if applicable)
+  budgetPerformance: {
+    underBudgetItems: number;
+    onBudgetItems: number;
+    overBudgetItems: number;
+    averageBudgetVariance: number;
+    budgetEfficiency: number; // percentage
+  };
+  
+  // Quality Performance
+  qualityPerformance: {
+    plannedQualityScore: number;
+    actualQualityScore: number;
+    qualityVariance: number;
+    qualityTrend: 'improving' | 'stable' | 'declining';
+  };
+  
+  // Risk Assessment
+  riskAssessment: {
+    highRiskMilestones: number;
+    mediumRiskMilestones: number;
+    lowRiskMilestones: number;
+    riskTrend: 'increasing' | 'stable' | 'decreasing';
+  };
+  
+  // Detailed Data
+  plannedMilestones: PlannedMilestone[];
+  actualMilestones: ActualMilestone[];
+  
+  // Generated Date
+  generatedAt: Date;
+}
+
+export interface ActualsReport {
+  reportId: string;
+  roadmapActuals: RoadmapActuals;
+  
+  // Executive Summary
+  executiveSummary: {
+    overallStatus: 'on-track' | 'ahead' | 'behind' | 'at-risk';
+    keyAchievements: string[];
+    keyChallenges: string[];
+    recommendations: string[];
+  };
+  
+  // Detailed Analysis
+  detailedAnalysis: {
+    timelineAnalysis: TimelineAnalysis;
+    effortAnalysis: EffortAnalysis;
+    qualityAnalysis: QualityAnalysis;
+    riskAnalysis: RiskAnalysis;
+  };
+  
+  // Forecast
+  forecast: {
+    projectedCompletionDate: Date;
+    projectedEffort: number;
+    projectedBudget?: number;
+    confidenceLevel: 'high' | 'medium' | 'low';
+  };
+}
+
+export interface TimelineAnalysis {
+  onTimePercentage: number;
+  averageDelay: number;
+  criticalPathImpact: string[];
+  scheduleTrend: 'improving' | 'stable' | 'declining';
+  recommendations: string[];
+}
+
+export interface EffortAnalysis {
+  effortAccuracy: number; // percentage
+  averageOverrun: number;
+  effortTrend: 'improving' | 'stable' | 'declining';
+  recommendations: string[];
+}
+
+export interface QualityAnalysis {
+  qualityTargets: {
+    planned: number;
+    actual: number;
+    variance: number;
+  };
+  qualityTrend: 'improving' | 'stable' | 'declining';
+  qualityIssues: string[];
+  recommendations: string[];
+}
+
+export interface RiskAnalysis {
+  riskLevel: 'low' | 'medium' | 'high' | 'critical';
+  riskFactors: string[];
+  mitigationStrategies: string[];
+  recommendations: string[];
+}
+
+export class RoadmapActualsTracker {
+  private plannedMilestones: Map<string, PlannedMilestone> = new Map();
+  private actualMilestones: Map<string, ActualMilestone> = new Map();
+  private projectId: string;
+  private projectName: string;
+
+  constructor(projectId: string, projectName: string) {
+    this.projectId = projectId;
+    this.projectName = projectName;
+  }
+
+  /**
+   * Add a planned milestone
+   */
+  addPlannedMilestone(milestone: PlannedMilestone): void {
+    this.plannedMilestones.set(milestone.id, milestone);
+  }
+
+  /**
+   * Add an actual milestone
+   */
+  addActualMilestone(milestone: ActualMilestone): void {
+    this.actualMilestones.set(milestone.id, milestone);
+  }
+
+  /**
+   * Update actual milestone progress
+   */
+  updateActualMilestone(
+    milestoneId: string,
+    updates: Partial<ActualMilestone>
+  ): void {
+    const milestone = this.actualMilestones.get(milestoneId);
+    if (milestone) {
+      const updatedMilestone = { ...milestone, ...updates };
+      
+      // Recalculate variances
+      const plannedMilestone = this.plannedMilestones.get(milestone.plannedMilestoneId);
+      if (plannedMilestone) {
+        updatedMilestone.timelineVariance = this.calculateTimelineVariance(
+          plannedMilestone,
+          updatedMilestone
+        );
+        updatedMilestone.effortVariance = this.calculateEffortVariance(
+          plannedMilestone,
+          updatedMilestone
+        );
+        if (plannedMilestone.plannedBudget && updatedMilestone.actualBudget) {
+          updatedMilestone.budgetVariance = this.calculateBudgetVariance(
+            plannedMilestone,
+            updatedMilestone
+          );
+        }
+      }
+      
+      this.actualMilestones.set(milestoneId, updatedMilestone);
+    }
+  }
+
+  /**
+   * Generate roadmap actuals report
+   */
+  generateActualsReport(
+    startDate: Date,
+    endDate: Date,
+    period: 'weekly' | 'monthly' | 'quarterly' = 'monthly'
+  ): ActualsReport {
+    const roadmapActuals = this.generateRoadmapActuals(startDate, endDate, period);
+    
+    const executiveSummary = this.generateExecutiveSummary(roadmapActuals);
+    const detailedAnalysis = this.generateDetailedAnalysis(roadmapActuals);
+    const forecast = this.generateForecast(roadmapActuals);
+    
+    return {
+      reportId: `actuals-${Date.now()}`,
+      roadmapActuals,
+      executiveSummary,
+      detailedAnalysis,
+      forecast
+    };
+  }
+
+  /**
+   * Generate roadmap actuals data
+   */
+  private generateRoadmapActuals(
+    startDate: Date,
+    endDate: Date,
+    period: 'weekly' | 'monthly' | 'quarterly'
+  ): RoadmapActuals {
+    const plannedMilestones = Array.from(this.plannedMilestones.values());
+    const actualMilestones = Array.from(this.actualMilestones.values());
+    
+    const summary = this.calculateSummary(plannedMilestones, actualMilestones);
+    const timelinePerformance = this.calculateTimelinePerformance(actualMilestones);
+    const effortPerformance = this.calculateEffortPerformance(actualMilestones);
+    const budgetPerformance = this.calculateBudgetPerformance(actualMilestones);
+    const qualityPerformance = this.calculateQualityPerformance(plannedMilestones, actualMilestones);
+    const riskAssessment = this.calculateRiskAssessment(actualMilestones);
+    
+    return {
+      projectId: this.projectId,
+      projectName: this.projectName,
+      reportingPeriod: { startDate, endDate, period },
+      summary,
+      timelinePerformance,
+      effortPerformance,
+      budgetPerformance,
+      qualityPerformance,
+      riskAssessment,
+      plannedMilestones,
+      actualMilestones,
+      generatedAt: new Date()
+    };
+  }
+
+  /**
+   * Calculate summary metrics
+   */
+  private calculateSummary(
+    plannedMilestones: PlannedMilestone[],
+    actualMilestones: ActualMilestone[]
+  ) {
+    const completedMilestones = actualMilestones.filter(m => m.status === 'completed').length;
+    const inProgressMilestones = actualMilestones.filter(m => m.status === 'in-progress').length;
+    const blockedMilestones = actualMilestones.filter(m => m.status === 'blocked').length;
+    
+    const overallProgress = actualMilestones.length > 0 
+      ? (completedMilestones / actualMilestones.length) * 100 
+      : 0;
+    
+    return {
+      totalPlannedMilestones: plannedMilestones.length,
+      totalActualMilestones: actualMilestones.length,
+      completedMilestones,
+      inProgressMilestones,
+      blockedMilestones,
+      overallProgress
+    };
+  }
+
+  /**
+   * Calculate timeline performance
+   */
+  private calculateTimelinePerformance(actualMilestones: ActualMilestone[]) {
+    const onTimeMilestones = actualMilestones.filter(m => m.timelineVariance === 0).length;
+    const aheadOfScheduleMilestones = actualMilestones.filter(m => m.timelineVariance > 0).length;
+    const behindScheduleMilestones = actualMilestones.filter(m => m.timelineVariance < 0).length;
+    
+    const averageTimelineVariance = actualMilestones.length > 0
+      ? actualMilestones.reduce((sum, m) => sum + m.timelineVariance, 0) / actualMilestones.length
+      : 0;
+    
+    const timelineEfficiency = actualMilestones.length > 0
+      ? ((onTimeMilestones + aheadOfScheduleMilestones) / actualMilestones.length) * 100
+      : 0;
+    
+    return {
+      onTimeMilestones,
+      aheadOfScheduleMilestones,
+      behindScheduleMilestones,
+      averageTimelineVariance,
+      timelineEfficiency
+    };
+  }
+
+  /**
+   * Calculate effort performance
+   */
+  private calculateEffortPerformance(actualMilestones: ActualMilestone[]) {
+    const underBudgetEffort = actualMilestones.filter(m => m.effortVariance < 0).length;
+    const onBudgetEffort = actualMilestones.filter(m => m.effortVariance === 0).length;
+    const overBudgetEffort = actualMilestones.filter(m => m.effortVariance > 0).length;
+    
+    const averageEffortVariance = actualMilestones.length > 0
+      ? actualMilestones.reduce((sum, m) => sum + (m.effortVariance || 0), 0) / actualMilestones.length
+      : 0;
+    
+    const effortEfficiency = actualMilestones.length > 0
+      ? ((underBudgetEffort + onBudgetEffort) / actualMilestones.length) * 100
+      : 0;
+    
+    return {
+      underBudgetEffort,
+      onBudgetEffort,
+      overBudgetEffort,
+      averageEffortVariance,
+      effortEfficiency
+    };
+  }
+
+  /**
+   * Calculate budget performance
+   */
+  private calculateBudgetPerformance(actualMilestones: ActualMilestone[]) {
+    const milestonesWithBudget = actualMilestones.filter(m => m.budgetVariance !== undefined);
+    
+    if (milestonesWithBudget.length === 0) {
+      return {
+        underBudgetItems: 0,
+        onBudgetItems: 0,
+        overBudgetItems: 0,
+        averageBudgetVariance: 0,
+        budgetEfficiency: 0
+      };
+    }
+    
+    const underBudgetItems = milestonesWithBudget.filter(m => (m.budgetVariance || 0) < 0).length;
+    const onBudgetItems = milestonesWithBudget.filter(m => m.budgetVariance === 0).length;
+    const overBudgetItems = milestonesWithBudget.filter(m => (m.budgetVariance || 0) > 0).length;
+    
+    const averageBudgetVariance = milestonesWithBudget.reduce((sum, m) => sum + (m.budgetVariance || 0), 0) / milestonesWithBudget.length;
+    
+    const budgetEfficiency = ((underBudgetItems + onBudgetItems) / milestonesWithBudget.length) * 100;
+    
+    return {
+      underBudgetItems,
+      onBudgetItems,
+      overBudgetItems,
+      averageBudgetVariance,
+      budgetEfficiency
+    };
+  }
+
+  /**
+   * Calculate quality performance
+   */
+  private calculateQualityPerformance(
+    plannedMilestones: PlannedMilestone[],
+    actualMilestones: ActualMilestone[]
+  ) {
+    const plannedQualityScore = plannedMilestones.reduce((sum, m) => sum + (m.plannedMetrics.qualityScore || 0), 0) / plannedMilestones.length;
+    const actualQualityScore = actualMilestones.reduce((sum, m) => sum + (m.actualMetrics.qualityScore || 0), 0) / actualMilestones.length;
+    
+    const qualityVariance = actualQualityScore - plannedQualityScore;
+    
+    // Determine quality trend based on recent milestones
+    const recentMilestones = actualMilestones
+      .filter(m => m.actualEndDate && m.actualEndDate > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000))
+      .sort((a, b) => (a.actualEndDate?.getTime() || 0) - (b.actualEndDate?.getTime() || 0));
+    
+    let qualityTrend: 'improving' | 'stable' | 'declining' = 'stable';
+    if (recentMilestones.length >= 2) {
+      const firstHalf = recentMilestones.slice(0, Math.floor(recentMilestones.length / 2));
+      const secondHalf = recentMilestones.slice(Math.floor(recentMilestones.length / 2));
+      
+      const firstHalfAvg = firstHalf.reduce((sum, m) => sum + (m.actualMetrics.qualityScore || 0), 0) / firstHalf.length;
+      const secondHalfAvg = secondHalf.reduce((sum, m) => sum + (m.actualMetrics.qualityScore || 0), 0) / secondHalf.length;
+      
+      if (secondHalfAvg > firstHalfAvg + 0.1) qualityTrend = 'improving';
+      else if (secondHalfAvg < firstHalfAvg - 0.1) qualityTrend = 'declining';
+    }
+    
+    return {
+      plannedQualityScore,
+      actualQualityScore,
+      qualityVariance,
+      qualityTrend
+    };
+  }
+
+  /**
+   * Calculate risk assessment
+   */
+  private calculateRiskAssessment(actualMilestones: ActualMilestone[]) {
+    const highRiskMilestones = actualMilestones.filter(m => 
+      m.status === 'blocked' || m.timelineVariance < -7 || (m.effortVariance || 0) > 40
+    ).length;
+    
+    const mediumRiskMilestones = actualMilestones.filter(m => 
+      m.status === 'in-progress' && (m.timelineVariance < -3 || (m.effortVariance || 0) > 20)
+    ).length;
+    
+    const lowRiskMilestones = actualMilestones.length - highRiskMilestones - mediumRiskMilestones;
+    
+    // Determine risk trend
+    const recentMilestones = actualMilestones
+      .filter(m => m.actualEndDate && m.actualEndDate > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+    
+    const recentHighRisk = recentMilestones.filter(m => 
+      m.status === 'blocked' || m.timelineVariance < -7 || (m.effortVariance || 0) > 40
+    ).length;
+    
+    let riskTrend: 'increasing' | 'stable' | 'decreasing' = 'stable';
+    if (recentMilestones.length > 0) {
+      const recentRiskRatio = recentHighRisk / recentMilestones.length;
+      const overallRiskRatio = highRiskMilestones / actualMilestones.length;
+      
+      if (recentRiskRatio > overallRiskRatio + 0.1) riskTrend = 'increasing';
+      else if (recentRiskRatio < overallRiskRatio - 0.1) riskTrend = 'decreasing';
+    }
+    
+    return {
+      highRiskMilestones,
+      mediumRiskMilestones,
+      lowRiskMilestones,
+      riskTrend
+    };
+  }
+
+  /**
+   * Calculate timeline variance
+   */
+  private calculateTimelineVariance(
+    planned: PlannedMilestone,
+    actual: ActualMilestone
+  ): number {
+    if (!actual.actualEndDate) return 0;
+    
+    const plannedEnd = planned.plannedEndDate.getTime();
+    const actualEnd = actual.actualEndDate.getTime();
+    const varianceMs = actualEnd - plannedEnd;
+    
+    return Math.round(varianceMs / (1000 * 60 * 60 * 24)); // Convert to days
+  }
+
+  /**
+   * Calculate effort variance
+   */
+  private calculateEffortVariance(
+    planned: PlannedMilestone,
+    actual: ActualMilestone
+  ): number {
+    if (!actual.actualEffort) return 0;
+    
+    return actual.actualEffort - planned.plannedEffort;
+  }
+
+  /**
+   * Calculate budget variance
+   */
+  private calculateBudgetVariance(
+    planned: PlannedMilestone,
+    actual: ActualMilestone
+  ): number {
+    if (!planned.plannedBudget || !actual.actualBudget) return 0;
+    
+    return actual.actualBudget - planned.plannedBudget;
+  }
+
+  /**
+   * Generate executive summary
+   */
+  private generateExecutiveSummary(roadmapActuals: RoadmapActuals) {
+    const { summary, timelinePerformance, effortPerformance, riskAssessment } = roadmapActuals;
+    
+    // Determine overall status
+    let overallStatus: 'on-track' | 'ahead' | 'behind' | 'at-risk' = 'on-track';
+    
+    if (riskAssessment.highRiskMilestones > summary.totalActualMilestones * 0.2) {
+      overallStatus = 'at-risk';
+    } else if (timelinePerformance.behindScheduleMilestones > summary.totalActualMilestones * 0.3) {
+      overallStatus = 'behind';
+    } else if (timelinePerformance.aheadOfScheduleMilestones > summary.totalActualMilestones * 0.3) {
+      overallStatus = 'ahead';
+    }
+    
+    // Generate key achievements
+    const keyAchievements: string[] = [];
+    if (summary.completedMilestones > 0) {
+      keyAchievements.push(`${summary.completedMilestones} milestones completed successfully`);
+    }
+    if (timelinePerformance.aheadOfScheduleMilestones > 0) {
+      keyAchievements.push(`${timelinePerformance.aheadOfScheduleMilestones} milestones ahead of schedule`);
+    }
+    if (effortPerformance.underBudgetEffort > 0) {
+      keyAchievements.push(`${effortPerformance.underBudgetEffort} milestones under effort budget`);
+    }
+    
+    // Generate key challenges
+    const keyChallenges: string[] = [];
+    if (summary.blockedMilestones > 0) {
+      keyChallenges.push(`${summary.blockedMilestones} milestones currently blocked`);
+    }
+    if (timelinePerformance.behindScheduleMilestones > 0) {
+      keyChallenges.push(`${timelinePerformance.behindScheduleMilestones} milestones behind schedule`);
+    }
+    if (effortPerformance.overBudgetEffort > 0) {
+      keyChallenges.push(`${effortPerformance.overBudgetEffort} milestones over effort budget`);
+    }
+    
+    // Generate recommendations
+    const recommendations: string[] = [];
+    if (summary.blockedMilestones > 0) {
+      recommendations.push('Address blockers immediately to prevent further delays');
+    }
+    if (timelinePerformance.behindScheduleMilestones > 0) {
+      recommendations.push('Review timeline estimates and consider resource reallocation');
+    }
+    if (effortPerformance.overBudgetEffort > 0) {
+      recommendations.push('Analyze effort estimation accuracy and improve planning processes');
+    }
+    
+    return {
+      overallStatus,
+      keyAchievements,
+      keyChallenges,
+      recommendations
+    };
+  }
+
+  /**
+   * Generate detailed analysis
+   */
+  private generateDetailedAnalysis(roadmapActuals: RoadmapActuals) {
+    const timelineAnalysis = this.generateTimelineAnalysis(roadmapActuals);
+    const effortAnalysis = this.generateEffortAnalysis(roadmapActuals);
+    const qualityAnalysis = this.generateQualityAnalysis(roadmapActuals);
+    const riskAnalysis = this.generateRiskAnalysis(roadmapActuals);
+    
+    return {
+      timelineAnalysis,
+      effortAnalysis,
+      qualityAnalysis,
+      riskAnalysis
+    };
+  }
+
+  /**
+   * Generate timeline analysis
+   */
+  private generateTimelineAnalysis(roadmapActuals: RoadmapActuals): TimelineAnalysis {
+    const { timelinePerformance, actualMilestones } = roadmapActuals;
+    
+    const onTimePercentage = timelinePerformance.timelineEfficiency;
+    const averageDelay = Math.abs(timelinePerformance.averageTimelineVariance);
+    
+    // Identify critical path impact
+    const criticalPathImpact = actualMilestones
+      .filter(m => m.timelineVariance < -7)
+      .map(m => `${m.title} (${m.timelineVariance} days behind)`);
+    
+    // Determine schedule trend
+    const recentMilestones = actualMilestones
+      .filter(m => m.actualEndDate && m.actualEndDate > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+    
+    let scheduleTrend: 'improving' | 'stable' | 'declining' = 'stable';
+    if (recentMilestones.length >= 2) {
+      const firstHalf = recentMilestones.slice(0, Math.floor(recentMilestones.length / 2));
+      const secondHalf = recentMilestones.slice(Math.floor(recentMilestones.length / 2));
+      
+      const firstHalfAvg = firstHalf.reduce((sum, m) => sum + m.timelineVariance, 0) / firstHalf.length;
+      const secondHalfAvg = secondHalf.reduce((sum, m) => sum + m.timelineVariance, 0) / secondHalf.length;
+      
+      if (secondHalfAvg > firstHalfAvg + 1) scheduleTrend = 'improving';
+      else if (secondHalfAvg < firstHalfAvg - 1) scheduleTrend = 'declining';
+    }
+    
+    // Generate recommendations
+    const recommendations: string[] = [];
+    if (timelinePerformance.behindScheduleMilestones > 0) {
+      recommendations.push('Implement more aggressive timeline tracking and early warning systems');
+    }
+    if (averageDelay > 5) {
+      recommendations.push('Review and improve timeline estimation processes');
+    }
+    if (criticalPathImpact.length > 0) {
+      recommendations.push('Prioritize resolution of critical path delays');
+    }
+    
+    return {
+      onTimePercentage,
+      averageDelay,
+      criticalPathImpact,
+      scheduleTrend,
+      recommendations
+    };
+  }
+
+  /**
+   * Generate effort analysis
+   */
+  private generateEffortAnalysis(roadmapActuals: RoadmapActuals): EffortAnalysis {
+    const { effortPerformance, actualMilestones } = roadmapActuals;
+    
+    const effortAccuracy = effortPerformance.effortEfficiency;
+    const averageOverrun = Math.abs(effortPerformance.averageEffortVariance);
+    
+    // Determine effort trend
+    const recentMilestones = actualMilestones
+      .filter(m => m.actualEndDate && m.actualEndDate > new Date(Date.now() - 30 * 24 * 60 * 60 * 1000));
+    
+    let effortTrend: 'improving' | 'stable' | 'declining' = 'stable';
+    if (recentMilestones.length >= 2) {
+      const firstHalf = recentMilestones.slice(0, Math.floor(recentMilestones.length / 2));
+      const secondHalf = recentMilestones.slice(Math.floor(recentMilestones.length / 2));
+      
+      const firstHalfAvg = firstHalf.reduce((sum, m) => sum + (m.effortVariance || 0), 0) / firstHalf.length;
+      const secondHalfAvg = secondHalf.reduce((sum, m) => sum + (m.effortVariance || 0), 0) / secondHalf.length;
+      
+      if (secondHalfAvg < firstHalfAvg - 5) effortTrend = 'improving';
+      else if (secondHalfAvg > firstHalfAvg + 5) effortTrend = 'declining';
+    }
+    
+    // Generate recommendations
+    const recommendations: string[] = [];
+    if (effortPerformance.overBudgetEffort > 0) {
+      recommendations.push('Improve effort estimation accuracy through historical data analysis');
+    }
+    if (averageOverrun > 20) {
+      recommendations.push('Implement buffer time in effort estimates');
+    }
+    if (effortTrend === 'declining') {
+      recommendations.push('Review recent effort overruns and adjust estimation processes');
+    }
+    
+    return {
+      effortAccuracy,
+      averageOverrun,
+      effortTrend,
+      recommendations
+    };
+  }
+
+  /**
+   * Generate quality analysis
+   */
+  private generateQualityAnalysis(roadmapActuals: RoadmapActuals): QualityAnalysis {
+    const { qualityPerformance, actualMilestones } = roadmapActuals;
+    
+    const qualityTargets = {
+      planned: qualityPerformance.plannedQualityScore,
+      actual: qualityPerformance.actualQualityScore,
+      variance: qualityPerformance.qualityVariance
+    };
+    
+    // Identify quality issues
+    const qualityIssues = actualMilestones
+      .filter(m => (m.actualMetrics.qualityScore || 0) < 0.8)
+      .map(m => `${m.title} (quality score: ${m.actualMetrics.qualityScore})`);
+    
+    // Generate recommendations
+    const recommendations: string[] = [];
+    if (qualityPerformance.qualityVariance < 0) {
+      recommendations.push('Implement additional quality gates and review processes');
+    }
+    if (qualityIssues.length > 0) {
+      recommendations.push('Address quality issues in low-scoring milestones');
+    }
+    if (qualityPerformance.qualityTrend === 'declining') {
+      recommendations.push('Review quality processes and implement corrective actions');
+    }
+    
+    return {
+      qualityTargets,
+      qualityTrend: qualityPerformance.qualityTrend,
+      qualityIssues,
+      recommendations
+    };
+  }
+
+  /**
+   * Generate risk analysis
+   */
+  private generateRiskAnalysis(roadmapActuals: RoadmapActuals): RiskAnalysis {
+    const { riskAssessment, actualMilestones } = roadmapActuals;
+    
+    // Determine risk level
+    let riskLevel: 'low' | 'medium' | 'high' | 'critical' = 'low';
+    const riskRatio = riskAssessment.highRiskMilestones / actualMilestones.length;
+    
+    if (riskRatio > 0.3) riskLevel = 'critical';
+    else if (riskRatio > 0.2) riskLevel = 'high';
+    else if (riskRatio > 0.1) riskLevel = 'medium';
+    
+    // Identify risk factors
+    const riskFactors: string[] = [];
+    if (riskAssessment.highRiskMilestones > 0) {
+      riskFactors.push(`${riskAssessment.highRiskMilestones} high-risk milestones`);
+    }
+    if (riskAssessment.riskTrend === 'increasing') {
+      riskFactors.push('Risk trend is increasing');
+    }
+    
+    // Generate mitigation strategies
+    const mitigationStrategies: string[] = [];
+    if (riskLevel === 'critical' || riskLevel === 'high') {
+      mitigationStrategies.push('Implement daily risk reviews');
+    }
+    if (riskAssessment.highRiskMilestones > 0) {
+      mitigationStrategies.push('Develop contingency plans for high-risk milestones');
+    }
+    if (riskAssessment.riskTrend === 'increasing') {
+      mitigationStrategies.push('Increase monitoring frequency for at-risk items');
+    }
+    
+    // Generate recommendations
+    const recommendations: string[] = [];
+    if (riskLevel === 'critical') {
+      recommendations.push('Immediate intervention required - review all high-risk items');
+    }
+    if (riskAssessment.riskTrend === 'increasing') {
+      recommendations.push('Implement proactive risk management processes');
+    }
+    
+    return {
+      riskLevel,
+      riskFactors,
+      mitigationStrategies,
+      recommendations
+    };
+  }
+
+  /**
+   * Generate forecast
+   */
+  private generateForecast(roadmapActuals: RoadmapActuals) {
+    const { actualMilestones, plannedMilestones } = roadmapActuals;
+    
+    // Calculate projected completion date
+    const completedMilestones = actualMilestones.filter(m => m.status === 'completed');
+    const inProgressMilestones = actualMilestones.filter(m => m.status === 'in-progress');
+    
+    const averageCompletionTime = completedMilestones.length > 0
+      ? completedMilestones.reduce((sum, m) => {
+          if (m.actualStartDate && m.actualEndDate) {
+            return sum + (m.actualEndDate.getTime() - m.actualStartDate.getTime());
+          }
+          return sum;
+        }, 0) / completedMilestones.length
+      : 0;
+    
+    const projectedCompletionDate = new Date(Date.now() + averageCompletionTime);
+    
+    // Calculate projected effort
+    const remainingMilestones = actualMilestones.filter(m => m.status !== 'completed');
+    const averageEffort = completedMilestones.length > 0
+      ? completedMilestones.reduce((sum, m) => sum + (m.actualEffort || 0), 0) / completedMilestones.length
+      : 0;
+    
+    const projectedEffort = remainingMilestones.length * averageEffort;
+    
+    // Calculate confidence level
+    let confidenceLevel: 'high' | 'medium' | 'low' = 'medium';
+    if (completedMilestones.length > 10 && averageCompletionTime > 0) {
+      confidenceLevel = 'high';
+    } else if (completedMilestones.length < 5) {
+      confidenceLevel = 'low';
+    }
+    
+    return {
+      projectedCompletionDate,
+      projectedEffort,
+      confidenceLevel
+    };
+  }
+
+  /**
+   * Export actuals data to JSON
+   */
+  exportActualsData(): string {
+    const data = {
+      projectId: this.projectId,
+      projectName: this.projectName,
+      plannedMilestones: Array.from(this.plannedMilestones.values()),
+      actualMilestones: Array.from(this.actualMilestones.values()),
+      exportedAt: new Date().toISOString()
+    };
+    
+    return JSON.stringify(data, null, 2);
+  }
+
+  /**
+   * Import actuals data from JSON
+   */
+  importActualsData(jsonData: string): void {
+    try {
+      const data = JSON.parse(jsonData);
+      
+      if (data.plannedMilestones) {
+        data.plannedMilestones.forEach((milestone: PlannedMilestone) => {
+          this.plannedMilestones.set(milestone.id, {
+            ...milestone,
+            plannedStartDate: new Date(milestone.plannedStartDate),
+            plannedEndDate: new Date(milestone.plannedEndDate)
+          });
+        });
+      }
+      
+      if (data.actualMilestones) {
+        data.actualMilestones.forEach((milestone: ActualMilestone) => {
+          this.actualMilestones.set(milestone.id, {
+            ...milestone,
+            actualStartDate: new Date(milestone.actualStartDate),
+            actualEndDate: milestone.actualEndDate ? new Date(milestone.actualEndDate) : undefined
+          });
+        });
+      }
+    } catch (error) {
+      console.error('Error importing actuals data:', error);
+    }
+  }
+}
+
+// Export singleton instance for global use

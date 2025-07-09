@@ -1,0 +1,836 @@
+import React, { useState, useEffect } from 'react';
+
+import { RoadmapActualsTracker, ActualsReport, PlannedMilestone, ActualMilestone } from '../../utils/common/roadmapActuals';
+
+/**
+ * RoadmapActualsDashboard - Planned vs. Actual Development Progress Tracking
+ * 
+ * PURPOSE: Track and visualize planned vs. actual development progress
+ * - Planned vs. actual timeline comparisons
+ * - Effort variance analysis
+ * - Budget performance tracking
+ * - Quality metrics comparison
+ * - Risk assessment and forecasting
+ * - Executive summary and recommendations
+ */
+
+export interface RoadmapActualsDashboardProps {
+  className?: string;
+  projectId?: string;
+  projectName?: string;
+}
+
+export const RoadmapActualsDashboard: React.FC<RoadmapActualsDashboardProps> = ({ 
+  className = '',
+  projectId = 'greenlight-platform',
+  projectName = 'Greenlight Platform'
+}) => {
+  const [actualsTracker] = useState(() => new RoadmapActualsTracker(projectId, projectName));
+  const [currentReport, setCurrentReport] = useState<ActualsReport | null>(null);
+  const [selectedPeriod, setSelectedPeriod] = useState<'weekly' | 'monthly' | 'quarterly'>('monthly');
+  const [selectedView, setSelectedView] = useState<'summary' | 'timeline' | 'effort' | 'quality' | 'risk' | 'forecast'>('summary');
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    loadActualsData();
+  }, []);
+
+  const loadActualsData = async () => {
+    setIsLoading(true);
+    try {
+      // Load sample data for demonstration
+      await loadSampleData();
+      
+      // Generate report for current period
+      const endDate = new Date();
+      const startDate = new Date();
+      startDate.setMonth(startDate.getMonth() - 1); // Last month
+      
+      const report = actualsTracker.generateActualsReport(startDate, endDate, selectedPeriod);
+      setCurrentReport(report);
+    } catch (error) {
+      console.error('Error loading actuals data:', error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const loadSampleData = async () => {
+    // Add sample planned milestones
+    const samplePlannedMilestones: PlannedMilestone[] = [
+      {
+        id: 'planned-1',
+        title: 'System Architecture Redesign',
+        description: 'Redesign core system architecture for better scalability',
+        category: 'milestone',
+        priority: 'high',
+        plannedStartDate: new Date('2024-01-01'),
+        plannedEndDate: new Date('2024-02-15'),
+        plannedDuration: 45,
+        plannedEffort: 80,
+        plannedTeamSize: 3,
+        plannedDependencies: [],
+        plannedSuccessCriteria: ['90% code coverage', 'Performance improvement >50%'],
+        plannedMetrics: {
+          codeCoverage: 90,
+          performanceTarget: 50,
+          qualityScore: 85,
+          userSatisfaction: 80
+        }
+      },
+      {
+        id: 'planned-2',
+        title: 'User Authentication System',
+        description: 'Implement secure user authentication with OAuth2',
+        category: 'milestone',
+        priority: 'critical',
+        plannedStartDate: new Date('2024-02-01'),
+        plannedEndDate: new Date('2024-03-15'),
+        plannedDuration: 42,
+        plannedEffort: 60,
+        plannedTeamSize: 2,
+        plannedDependencies: ['planned-1'],
+        plannedSuccessCriteria: ['100% security compliance', 'Zero authentication failures'],
+        plannedMetrics: {
+          codeCoverage: 95,
+          performanceTarget: 100,
+          qualityScore: 90,
+          userSatisfaction: 85
+        }
+      },
+      {
+        id: 'planned-3',
+        title: 'API Documentation',
+        description: 'Create comprehensive API documentation',
+        category: 'task',
+        priority: 'medium',
+        plannedStartDate: new Date('2024-01-15'),
+        plannedEndDate: new Date('2024-02-01'),
+        plannedDuration: 17,
+        plannedEffort: 20,
+        plannedTeamSize: 1,
+        plannedDependencies: [],
+        plannedSuccessCriteria: ['100% API coverage', 'Developer satisfaction >90%'],
+        plannedMetrics: {
+          codeCoverage: 100,
+          performanceTarget: 100,
+          qualityScore: 95,
+          userSatisfaction: 90
+        }
+      }
+    ];
+
+    // Add sample actual milestones
+    const sampleActualMilestones: ActualMilestone[] = [
+      {
+        id: 'actual-1',
+        plannedMilestoneId: 'planned-1',
+        title: 'System Architecture Redesign',
+        description: 'Redesign core system architecture for better scalability',
+        category: 'milestone',
+        priority: 'high',
+        actualStartDate: new Date('2024-01-01'),
+        actualEndDate: new Date('2024-02-20'),
+        actualDuration: 50,
+        actualEffort: 85,
+        actualTeamSize: 3,
+        actualDependencies: [],
+        status: 'completed',
+        progress: 100,
+        blockers: [],
+        actualSuccessCriteria: ['90% code coverage', 'Performance improvement >50%'],
+        actualMetrics: {
+          codeCoverage: 92,
+          performanceActual: 55,
+          qualityScore: 88,
+          userSatisfaction: 82
+        },
+        timelineVariance: 5, // 5 days behind
+        effortVariance: 5, // 5 hours over
+        lessonsLearned: ['Architecture decisions took longer than expected'],
+        recommendations: ['Allow more time for architectural planning']
+      },
+      {
+        id: 'actual-2',
+        plannedMilestoneId: 'planned-2',
+        title: 'User Authentication System',
+        description: 'Implement secure user authentication with OAuth2',
+        category: 'milestone',
+        priority: 'critical',
+        actualStartDate: new Date('2024-02-05'),
+        actualEndDate: undefined,
+        actualDuration: undefined,
+        actualEffort: 35,
+        actualTeamSize: 2,
+        actualDependencies: ['planned-1'],
+        status: 'in-progress',
+        progress: 58,
+        blockers: ['OAuth2 provider integration delays'],
+        actualSuccessCriteria: ['100% security compliance', 'Zero authentication failures'],
+        actualMetrics: {
+          codeCoverage: 85,
+          performanceActual: 95,
+          qualityScore: 82,
+          userSatisfaction: 75
+        },
+        timelineVariance: -10, // 10 days behind
+        effortVariance: -25, // 25 hours under (but not complete)
+        lessonsLearned: ['OAuth2 integration more complex than anticipated'],
+        recommendations: ['Research OAuth2 providers more thoroughly in planning']
+      },
+      {
+        id: 'actual-3',
+        plannedMilestoneId: 'planned-3',
+        title: 'API Documentation',
+        description: 'Create comprehensive API documentation',
+        category: 'task',
+        priority: 'medium',
+        actualStartDate: new Date('2024-01-15'),
+        actualEndDate: new Date('2024-01-28'),
+        actualDuration: 13,
+        actualEffort: 18,
+        actualTeamSize: 1,
+        actualDependencies: [],
+        status: 'completed',
+        progress: 100,
+        blockers: [],
+        actualSuccessCriteria: ['100% API coverage', 'Developer satisfaction >90%'],
+        actualMetrics: {
+          codeCoverage: 100,
+          performanceActual: 100,
+          qualityScore: 95,
+          userSatisfaction: 92
+        },
+        timelineVariance: -4, // 4 days ahead
+        effortVariance: -2, // 2 hours under
+        lessonsLearned: ['Documentation tools were more efficient than expected'],
+        recommendations: ['Continue using current documentation approach']
+      }
+    ];
+
+    // Add data to tracker
+    samplePlannedMilestones.forEach(milestone => {
+      actualsTracker.addPlannedMilestone(milestone);
+    });
+
+    sampleActualMilestones.forEach(milestone => {
+      actualsTracker.addActualMilestone(milestone);
+    });
+  };
+
+  const generateReport = () => {
+    const endDate = new Date();
+    const startDate = new Date();
+    startDate.setMonth(startDate.getMonth() - 1);
+    
+    const report = actualsTracker.generateActualsReport(startDate, endDate, selectedPeriod);
+    setCurrentReport(report);
+  };
+
+  const renderSummaryView = () => {
+    if (!currentReport) return null;
+    
+    const { summary, timelinePerformance, effortPerformance, executiveSummary } = currentReport.roadmapActuals;
+    
+    return (
+      <div className="space-y-6">
+        {/* Executive Summary */}
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-lg font-semibold mb-4">Executive Summary</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="text-center">
+              <div className={`text-2xl font-bold ${
+                executiveSummary.overallStatus === 'ahead' ? 'text-green-600' :
+                executiveSummary.overallStatus === 'on-track' ? 'text-blue-600' :
+                executiveSummary.overallStatus === 'behind' ? 'text-yellow-600' :
+                'text-red-600'
+              }`}>
+                {executiveSummary.overallStatus.toUpperCase()}
+              </div>
+              <div className="text-sm text-gray-600">Overall Status</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-600">{summary.overallProgress.toFixed(1)}%</div>
+              <div className="text-sm text-gray-600">Overall Progress</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-green-600">{timelinePerformance.timelineEfficiency.toFixed(1)}%</div>
+              <div className="text-sm text-gray-600">Timeline Efficiency</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-600">{effortPerformance.effortEfficiency.toFixed(1)}%</div>
+              <div className="text-sm text-gray-600">Effort Efficiency</div>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Metrics */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="bg-white rounded-lg shadow p-6">
+            <h4 className="text-md font-semibold mb-4">Timeline Performance</h4>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span>On Time:</span>
+                <span className="font-semibold text-green-600">{timelinePerformance.onTimeMilestones}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Ahead of Schedule:</span>
+                <span className="font-semibold text-blue-600">{timelinePerformance.aheadOfScheduleMilestones}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Behind Schedule:</span>
+                <span className="font-semibold text-red-600">{timelinePerformance.behindScheduleMilestones}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Average Variance:</span>
+                <span className={`font-semibold ${
+                  timelinePerformance.averageTimelineVariance > 0 ? 'text-green-600' : 'text-red-600'
+                }`}>
+                  {timelinePerformance.averageTimelineVariance > 0 ? '+' : ''}{timelinePerformance.averageTimelineVariance.toFixed(1)} days
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-lg shadow p-6">
+            <h4 className="text-md font-semibold mb-4">Effort Performance</h4>
+            <div className="space-y-3">
+              <div className="flex justify-between">
+                <span>Under Budget:</span>
+                <span className="font-semibold text-green-600">{effortPerformance.underBudgetEffort}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>On Budget:</span>
+                <span className="font-semibold text-blue-600">{effortPerformance.onBudgetEffort}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Over Budget:</span>
+                <span className="font-semibold text-red-600">{effortPerformance.overBudgetEffort}</span>
+              </div>
+              <div className="flex justify-between">
+                <span>Average Variance:</span>
+                <span className={`font-semibold ${
+                  effortPerformance.averageEffortVariance > 0 ? 'text-red-600' : 'text-green-600'
+                }`}>
+                  {effortPerformance.averageEffortVariance > 0 ? '+' : ''}{effortPerformance.averageEffortVariance.toFixed(1)} hours
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Recommendations */}
+        <div className="bg-white rounded-lg shadow p-6">
+          <h4 className="text-md font-semibold mb-4">Key Recommendations</h4>
+          <ul className="space-y-2">
+            {executiveSummary.recommendations.map((recommendation, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-blue-600 mr-2">•</span>
+                <span>{recommendation}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  };
+
+  const renderTimelineView = () => {
+    if (!currentReport) return null;
+    
+    const { actualMilestones } = currentReport.roadmapActuals;
+    const { timelineAnalysis } = currentReport.detailedAnalysis;
+    
+    return (
+      <div className="space-y-6">
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-lg font-semibold mb-4">Timeline Analysis</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-600">{timelineAnalysis.onTimePercentage.toFixed(1)}%</div>
+              <div className="text-sm text-gray-600">On Time Percentage</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-orange-600">{timelineAnalysis.averageDelay.toFixed(1)}</div>
+              <div className="text-sm text-gray-600">Average Delay (days)</div>
+            </div>
+            <div className="text-center">
+              <div className={`text-2xl font-bold ${
+                timelineAnalysis.scheduleTrend === 'improving' ? 'text-green-600' :
+                timelineAnalysis.scheduleTrend === 'stable' ? 'text-blue-600' :
+                'text-red-600'
+              }`}>
+                {timelineAnalysis.scheduleTrend.toUpperCase()}
+              </div>
+              <div className="text-sm text-gray-600">Schedule Trend</div>
+            </div>
+          </div>
+          
+          <h4 className="text-md font-semibold mb-3">Critical Path Impact</h4>
+          <ul className="space-y-2 mb-4">
+            {timelineAnalysis.criticalPathImpact.map((impact, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-red-600 mr-2">⚠</span>
+                <span>{impact}</span>
+              </li>
+            ))}
+          </ul>
+          
+          <h4 className="text-md font-semibold mb-3">Timeline Recommendations</h4>
+          <ul className="space-y-2">
+            {timelineAnalysis.recommendations.map((recommendation, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-blue-600 mr-2">•</span>
+                <span>{recommendation}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-lg font-semibold mb-4">Milestone Timeline Comparison</h3>
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="border-b">
+                  <th className="text-left py-2">Milestone</th>
+                  <th className="text-left py-2">Planned End</th>
+                  <th className="text-left py-2">Actual End</th>
+                  <th className="text-left py-2">Variance</th>
+                  <th className="text-left py-2">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {actualMilestones.map((milestone) => {
+                  const plannedMilestone = currentReport.roadmapActuals.plannedMilestones.find(
+                    p => p.id === milestone.plannedMilestoneId
+                  );
+                  
+                  return (
+                    <tr key={milestone.id} className="border-b">
+                      <td className="py-2">{milestone.title}</td>
+                      <td className="py-2">
+                        {plannedMilestone?.plannedEndDate.toLocaleDateString()}
+                      </td>
+                      <td className="py-2">
+                        {milestone.actualEndDate?.toLocaleDateString() || 'In Progress'}
+                      </td>
+                      <td className="py-2">
+                        <span className={`font-semibold ${
+                          milestone.timelineVariance > 0 ? 'text-green-600' :
+                          milestone.timelineVariance < 0 ? 'text-red-600' :
+                          'text-blue-600'
+                        }`}>
+                          {milestone.timelineVariance > 0 ? '+' : ''}{milestone.timelineVariance} days
+                        </span>
+                      </td>
+                      <td className="py-2">
+                        <span className={`px-2 py-1 rounded text-xs ${
+                          milestone.status === 'completed' ? 'bg-green-100 text-green-800' :
+                          milestone.status === 'in-progress' ? 'bg-blue-100 text-blue-800' :
+                          milestone.status === 'blocked' ? 'bg-red-100 text-red-800' :
+                          'bg-gray-100 text-gray-800'
+                        }`}>
+                          {milestone.status}
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderEffortView = () => {
+    if (!currentReport) return null;
+    
+    const { actualMilestones } = currentReport.roadmapActuals;
+    const { effortAnalysis } = currentReport.detailedAnalysis;
+    
+    return (
+      <div className="space-y-6">
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-lg font-semibold mb-4">Effort Analysis</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-600">{effortAnalysis.effortAccuracy.toFixed(1)}%</div>
+              <div className="text-sm text-gray-600">Effort Accuracy</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-orange-600">{effortAnalysis.averageOverrun.toFixed(1)}</div>
+              <div className="text-sm text-gray-600">Average Overrun (hours)</div>
+            </div>
+            <div className="text-center">
+              <div className={`text-2xl font-bold ${
+                effortAnalysis.effortTrend === 'improving' ? 'text-green-600' :
+                effortAnalysis.effortTrend === 'stable' ? 'text-blue-600' :
+                'text-red-600'
+              }`}>
+                {effortAnalysis.effortTrend.toUpperCase()}
+              </div>
+              <div className="text-sm text-gray-600">Effort Trend</div>
+            </div>
+          </div>
+          
+          <h4 className="text-md font-semibold mb-3">Effort Recommendations</h4>
+          <ul className="space-y-2">
+            {effortAnalysis.recommendations.map((recommendation, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-blue-600 mr-2">•</span>
+                <span>{recommendation}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-lg font-semibold mb-4">Milestone Effort Comparison</h3>
+          <div className="overflow-x-auto">
+            <table className="min-w-full">
+              <thead>
+                <tr className="border-b">
+                  <th className="text-left py-2">Milestone</th>
+                  <th className="text-left py-2">Planned Effort</th>
+                  <th className="text-left py-2">Actual Effort</th>
+                  <th className="text-left py-2">Variance</th>
+                  <th className="text-left py-2">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {actualMilestones.map((milestone) => {
+                  const plannedMilestone = currentReport.roadmapActuals.plannedMilestones.find(
+                    p => p.id === milestone.plannedMilestoneId
+                  );
+                  
+                  return (
+                    <tr key={milestone.id} className="border-b">
+                      <td className="py-2">{milestone.title}</td>
+                      <td className="py-2">{plannedMilestone?.plannedEffort || 0} hours</td>
+                      <td className="py-2">{milestone.actualEffort || 0} hours</td>
+                      <td className="py-2">
+                        <span className={`font-semibold ${
+                          milestone.effortVariance > 0 ? 'text-red-600' :
+                          milestone.effortVariance < 0 ? 'text-green-600' :
+                          'text-blue-600'
+                        }`}>
+                          {milestone.effortVariance > 0 ? '+' : ''}{milestone.effortVariance} hours
+                        </span>
+                      </td>
+                      <td className="py-2">
+                        <span className={`px-2 py-1 rounded text-xs ${
+                          milestone.status === 'completed' ? 'bg-green-100 text-green-800' :
+                          milestone.status === 'in-progress' ? 'bg-blue-100 text-blue-800' :
+                          milestone.status === 'blocked' ? 'bg-red-100 text-red-800' :
+                          'bg-gray-100 text-gray-800'
+                        }`}>
+                          {milestone.status}
+                        </span>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderQualityView = () => {
+    if (!currentReport) return null;
+    
+    const { qualityAnalysis } = currentReport.detailedAnalysis;
+    
+    return (
+      <div className="space-y-6">
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-lg font-semibold mb-4">Quality Analysis</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <h4 className="text-md font-semibold mb-3">Quality Targets</h4>
+              <div className="space-y-3">
+                <div className="flex justify-between">
+                  <span>Planned Quality Score:</span>
+                  <span className="font-semibold">{qualityAnalysis.qualityTargets.planned.toFixed(1)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Actual Quality Score:</span>
+                  <span className="font-semibold">{qualityAnalysis.qualityTargets.actual.toFixed(1)}</span>
+                </div>
+                <div className="flex justify-between">
+                  <span>Variance:</span>
+                  <span className={`font-semibold ${
+                    qualityAnalysis.qualityTargets.variance > 0 ? 'text-green-600' : 'text-red-600'
+                  }`}>
+                    {qualityAnalysis.qualityTargets.variance > 0 ? '+' : ''}{qualityAnalysis.qualityTargets.variance.toFixed(1)}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h4 className="text-md font-semibold mb-3">Quality Trend</h4>
+              <div className="text-center">
+                <div className={`text-2xl font-bold ${
+                  qualityAnalysis.qualityTrend === 'improving' ? 'text-green-600' :
+                  qualityAnalysis.qualityTrend === 'stable' ? 'text-blue-600' :
+                  'text-red-600'
+                }`}>
+                  {qualityAnalysis.qualityTrend.toUpperCase()}
+                </div>
+                <div className="text-sm text-gray-600">Quality Trend</div>
+              </div>
+            </div>
+          </div>
+          
+          {qualityAnalysis.qualityIssues.length > 0 && (
+            <div className="mb-4">
+              <h4 className="text-md font-semibold mb-3">Quality Issues</h4>
+              <ul className="space-y-2">
+                {qualityAnalysis.qualityIssues.map((issue, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-red-600 mr-2">⚠</span>
+                    <span>{issue}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          <h4 className="text-md font-semibold mb-3">Quality Recommendations</h4>
+          <ul className="space-y-2">
+            {qualityAnalysis.recommendations.map((recommendation, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-blue-600 mr-2">•</span>
+                <span>{recommendation}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  };
+
+  const renderRiskView = () => {
+    if (!currentReport) return null;
+    
+    const { riskAnalysis } = currentReport.detailedAnalysis;
+    const { riskAssessment } = currentReport.roadmapActuals;
+    
+    return (
+      <div className="space-y-6">
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-lg font-semibold mb-4">Risk Assessment</h3>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+            <div className="text-center">
+              <div className={`text-2xl font-bold ${
+                riskAnalysis.riskLevel === 'critical' ? 'text-red-600' :
+                riskAnalysis.riskLevel === 'high' ? 'text-orange-600' :
+                riskAnalysis.riskLevel === 'medium' ? 'text-yellow-600' :
+                'text-green-600'
+              }`}>
+                {riskAnalysis.riskLevel.toUpperCase()}
+              </div>
+              <div className="text-sm text-gray-600">Risk Level</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-red-600">{riskAssessment.highRiskMilestones}</div>
+              <div className="text-sm text-gray-600">High Risk</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-yellow-600">{riskAssessment.mediumRiskMilestones}</div>
+              <div className="text-sm text-gray-600">Medium Risk</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-green-600">{riskAssessment.lowRiskMilestones}</div>
+              <div className="text-sm text-gray-600">Low Risk</div>
+            </div>
+          </div>
+          
+          {riskAnalysis.riskFactors.length > 0 && (
+            <div className="mb-4">
+              <h4 className="text-md font-semibold mb-3">Risk Factors</h4>
+              <ul className="space-y-2">
+                {riskAnalysis.riskFactors.map((factor, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-red-600 mr-2">⚠</span>
+                    <span>{factor}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          {riskAnalysis.mitigationStrategies.length > 0 && (
+            <div className="mb-4">
+              <h4 className="text-md font-semibold mb-3">Mitigation Strategies</h4>
+              <ul className="space-y-2">
+                {riskAnalysis.mitigationStrategies.map((strategy, index) => (
+                  <li key={index} className="flex items-start">
+                    <span className="text-blue-600 mr-2">•</span>
+                    <span>{strategy}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+          
+          <h4 className="text-md font-semibold mb-3">Risk Recommendations</h4>
+          <ul className="space-y-2">
+            {riskAnalysis.recommendations.map((recommendation, index) => (
+              <li key={index} className="flex items-start">
+                <span className="text-blue-600 mr-2">•</span>
+                <span>{recommendation}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    );
+  };
+
+  const renderForecastView = () => {
+    if (!currentReport) return null;
+    
+    const { forecast } = currentReport;
+    
+    return (
+      <div className="space-y-6">
+        <div className="bg-white rounded-lg shadow p-6">
+          <h3 className="text-lg font-semibold mb-4">Project Forecast</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+            <div className="text-center">
+              <div className="text-2xl font-bold text-blue-600">
+                {forecast.projectedCompletionDate.toLocaleDateString()}
+              </div>
+              <div className="text-sm text-gray-600">Projected Completion</div>
+            </div>
+            <div className="text-center">
+              <div className="text-2xl font-bold text-purple-600">
+                {forecast.projectedEffort.toFixed(0)} hours
+              </div>
+              <div className="text-sm text-gray-600">Projected Effort</div>
+            </div>
+            <div className="text-center">
+              <div className={`text-2xl font-bold ${
+                forecast.confidenceLevel === 'high' ? 'text-green-600' :
+                forecast.confidenceLevel === 'medium' ? 'text-yellow-600' :
+                'text-red-600'
+              }`}>
+                {forecast.confidenceLevel.toUpperCase()}
+              </div>
+              <div className="text-sm text-gray-600">Confidence Level</div>
+            </div>
+          </div>
+          
+          <div className="bg-blue-50 p-4 rounded-lg">
+            <h4 className="text-md font-semibold mb-2">Forecast Notes</h4>
+            <p className="text-sm text-gray-700">
+              This forecast is based on historical performance data and current project progress. 
+              The confidence level indicates the reliability of these projections based on the 
+              amount and consistency of historical data available.
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  const renderView = () => {
+    switch (selectedView) {
+      case 'summary':
+        return renderSummaryView();
+      case 'timeline':
+        return renderTimelineView();
+      case 'effort':
+        return renderEffortView();
+      case 'quality':
+        return renderQualityView();
+      case 'risk':
+        return renderRiskView();
+      case 'forecast':
+        return renderForecastView();
+      default:
+        return renderSummaryView();
+    }
+  };
+
+  return (
+    <div className={`roadmap-actuals-dashboard ${className}`}>
+      <div className="bg-white rounded-lg shadow p-6 mb-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">Roadmap Actuals Dashboard</h1>
+            <p className="text-gray-600">Planned vs. Actual Development Progress Tracking</p>
+          </div>
+          <div className="flex space-x-4 mt-4 md:mt-0">
+            <select
+              value={selectedPeriod}
+              onChange={(e) => setSelectedPeriod(e.target.value as 'weekly' | 'monthly' | 'quarterly')}
+              className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            >
+              <option value="weekly">Weekly</option>
+              <option value="monthly">Monthly</option>
+              <option value="quarterly">Quarterly</option>
+            </select>
+            <button
+              onClick={generateReport}
+              disabled={isLoading}
+              className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+            >
+              {isLoading ? 'Generating...' : 'Generate Report'}
+            </button>
+          </div>
+        </div>
+
+        {/* Navigation Tabs */}
+        <div className="border-b border-gray-200">
+          <nav className="-mb-px flex space-x-8">
+            {[
+              { id: 'summary', label: 'Summary' },
+              { id: 'timeline', label: 'Timeline' },
+              { id: 'effort', label: 'Effort' },
+              { id: 'quality', label: 'Quality' },
+              { id: 'risk', label: 'Risk' },
+              { id: 'forecast', label: 'Forecast' }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setSelectedView(tab.id as any)}
+                className={`py-2 px-1 border-b-2 font-medium text-sm ${
+                  selectedView === tab.id
+                    ? 'border-blue-500 text-blue-600'
+                    : 'border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300'
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </nav>
+        </div>
+      </div>
+
+      {/* Content Area */}
+      <div className="min-h-screen">
+        {isLoading ? (
+          <div className="flex items-center justify-center h-64">
+            <div className="text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+              <p className="text-gray-600">Loading actuals data...</p>
+            </div>
+          </div>
+        ) : currentReport ? (
+          renderView()
+        ) : (
+          <div className="text-center py-12">
+            <p className="text-gray-600">No actuals data available. Generate a report to view metrics.</p>
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}; 

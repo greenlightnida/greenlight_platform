@@ -1,0 +1,1 @@
+./docs/summaries/NEXT_SESSION_CONTEXT.md

@@ -1,0 +1,20 @@
+{
+  "name": "Automated Alerting System",
+  "description": "Automated alerting for issues and improvements",
+  "alerts": {
+    "immediate": "Immediate alerts for critical issues",
+    "scheduled": "Scheduled alerts for regular updates",
+    "predictive": "Predictive alerts for potential issues"
+  },
+  "channels": {
+    "slack": "Slack notifications",
+    "email": "Email notifications",
+    "dashboard": "Dashboard notifications",
+    "phone": "Phone notifications for critical issues"
+  },
+  "targeting": {
+    "manager": "Targeted alerts to relevant managers",
+    "team": "Team-wide alerts for team issues",
+    "system": "System-wide alerts for system issues"
+  }
+}

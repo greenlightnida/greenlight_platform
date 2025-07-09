@@ -1,0 +1,33 @@
+{
+  "testId": "comprehensive_governance_test_1752090148612",
+  "generatedAt": "2025-07-09T19:42:28.615Z",
+  "summary": {
+    "totalLevels": 7,
+    "totalObjectives": 0,
+    "totalKeyResults": 0
+  },
+  "levelDetails": {},
+  "crossLevelAlignments": [],
+  "governanceMetrics": {},
+  "testResults": {},
+  "recommendations": {
+    "immediate": [
+      "Implement comprehensive OKR framework across all system levels",
+      "Establish cross-level alignment mechanisms",
+      "Create governance monitoring dashboards",
+      "Set up automated OKR progress tracking"
+    ],
+    "shortTerm": [
+      "Optimize cross-level alignment algorithms",
+      "Implement real-time governance monitoring",
+      "Create governance performance optimization",
+      "Establish governance training programs"
+    ],
+    "longTerm": [
+      "Implement advanced governance analytics",
+      "Create predictive governance modeling",
+      "Establish continuous governance improvement",
+      "Implement governance automation"
+    ]
+  }
+}

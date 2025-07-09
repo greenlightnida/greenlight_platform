@@ -1,0 +1,13 @@
+{
+  "refinement": {
+    "automatic": true,
+    "frequency": "weekly",
+    "validation": true
+  },
+  "metrics": {
+    "accuracy": 0.9,
+    "precision": 0.8,
+    "recall": 0.8,
+    "f1Score": 0.8
+  }
+}

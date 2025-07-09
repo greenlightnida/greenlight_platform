@@ -1,0 +1,9 @@
+{
+  "timestamp": "2025-07-09T13:32:33.217Z",
+  "sessionId": "monitor-1752067953010",
+  "type": "boundary_violation_threshold",
+  "severity": "high",
+  "violations": 169,
+  "threshold": 5,
+  "message": "Boundary violation threshold exceeded: 169 violations found"
+}

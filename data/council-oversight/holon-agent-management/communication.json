@@ -1,0 +1,32 @@
+{
+  "name": "Holon Agent Communication Pathways",
+  "pathways": {
+    "directCommunication": {
+      "title": "Direct Communication",
+      "channels": [
+        "One-on-one agent communication channels",
+        "Direct messaging and consultation systems",
+        "Personalized communication protocols",
+        "Individual agent feedback and support channels"
+      ]
+    },
+    "groupCommunication": {
+      "title": "Group Communication",
+      "channels": [
+        "Constituency-based communication groups",
+        "Cross-constituency coordination channels",
+        "Council-wide communication platforms",
+        "Multi-agent collaboration spaces"
+      ]
+    },
+    "broadcastCommunication": {
+      "title": "Broadcast Communication",
+      "channels": [
+        "Council-wide announcements and updates",
+        "System-wide information distribution",
+        "Policy and procedure communications",
+        "Strategic direction and vision sharing"
+      ]
+    }
+  }
+}

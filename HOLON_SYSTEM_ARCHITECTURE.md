@@ -1,0 +1,1 @@
+./docs/architecture/HOLON_GOVERNANCE_ARCHITECTURE.md

@@ -1,0 +1,32 @@
+{
+  "name": "Representation Protocols",
+  "protocols": {
+    "constituencyMeetings": {
+      "frequency": "weekly",
+      "participants": "constituency_representatives",
+      "purpose": "constituency_interest_articulation",
+      "outcomes": [
+        "interest_prioritization",
+        "constituency_positions"
+      ]
+    },
+    "crossConstituencyMeetings": {
+      "frequency": "bi-weekly",
+      "participants": "all_constituencies",
+      "purpose": "interest_negotiation_and_balancing",
+      "outcomes": [
+        "compromise_agreements",
+        "consensus_positions"
+      ]
+    },
+    "councilMeetings": {
+      "frequency": "monthly",
+      "participants": "all_constituencies",
+      "purpose": "final_decision_making_and_approval",
+      "outcomes": [
+        "council_decisions",
+        "implementation_plans"
+      ]
+    }
+  }
+}

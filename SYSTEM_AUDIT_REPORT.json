@@ -1,0 +1,1612 @@
+{
+  "timestamp": "2025-07-09T00:41:12.885Z",
+  "buildIssues": [
+    {
+      "type": "typescript",
+      "message": "config/security/auth-middleware.ts(3,35): error TS2307: Cannot find module '../services/auth/google-auth-service' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "config/security/auth-middleware.ts(4,36): error TS2307: Cannot find module '../services/auth/google-audit-service' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "config/security/auth-middleware.ts(86,19): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "config/security/auth-middleware.ts(87,18): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "config/security/auth-middleware.ts(92,25): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "config/security/auth-middleware.ts(93,18): error TS2339: Property 'user' does not exist on type 'Request<ParamsDictionary, any, any, ParsedQs, Record<string, any>>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/ErrorBoundary.test.tsx(3,31): error TS2307: Cannot find module '../ErrorBoundary' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/ErrorBoundary.test.tsx(21,46): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/ErrorBoundary.test.tsx(34,54): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/ErrorBoundary.test.tsx(35,44): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/ErrorBoundary.test.tsx(49,54): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/ErrorBoundary.test.tsx(50,60): error TS2339: Property 'toBeInTheDocument' does not exist on type 'Assertion<HTMLElement | null>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(1,1): error TS6133: 'React' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(47,11): error TS2322: Type '{ currentUser: { id: string; name: string; role: string; }; onSessionAction: Mock<Procedure>; onSystemAction: Mock<Procedure>; }' is not assignable to type 'IntrinsicAttributes & SessionsManagerProps'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'currentUser' does not exist on type 'IntrinsicAttributes & SessionsManagerProps'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(60,52): error TS2339: Property 'toBeInTheDocument' does not exist on type 'JestMatchers<HTMLElement>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(63,58): error TS2339: Property 'toBeInTheDocument' does not exist on type 'JestMatchers<HTMLElement>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(70,11): error TS2322: Type '{ currentUser: { id: string; name: string; role: string; }; onSessionAction: Mock<Procedure>; onSystemAction: Mock<Procedure>; }' is not assignable to type 'IntrinsicAttributes & SessionsManagerProps'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'currentUser' does not exist on type 'IntrinsicAttributes & SessionsManagerProps'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(83,60): error TS2339: Property 'toBeInTheDocument' does not exist on type 'JestMatchers<HTMLElement>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(95,14): error TS18048: 'fetchCall' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(96,14): error TS18048: 'fetchCall' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(96,14): error TS2532: Object is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(97,14): error TS18048: 'fetchCall' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(97,14): error TS2532: Object is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(97,14): error TS2532: Object is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(97,14): error TS7053: Element implicitly has an 'any' type because expression of type '\"Content-Type\"' can't be used to index type 'HeadersInit'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'Content-Type' does not exist on type 'HeadersInit'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(98,31): error TS18048: 'fetchCall' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(98,31): error TS2532: Object is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(98,31): error TS2345: Argument of type 'BodyInit | null | undefined' is not assignable to parameter of type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(110,11): error TS2322: Type '{ currentUser: { id: string; name: string; role: string; }; onSessionAction: Mock<Procedure>; onSystemAction: Mock<Procedure>; }' is not assignable to type 'IntrinsicAttributes & SessionsManagerProps'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'currentUser' does not exist on type 'IntrinsicAttributes & SessionsManagerProps'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/__tests__/SessionsManager.test.tsx(123,60): error TS2339: Property 'toBeInTheDocument' does not exist on type 'JestMatchers<HTMLElement>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(23,3): error TS2339: Property 'className' does not exist on type 'ElevateConsoleProps'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(24,3): error TS2339: Property 'initialView' does not exist on type 'ElevateConsoleProps'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(35,5): error TS2322: Type 'never[]' is not assignable to type 'number'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(41,5): error TS2353: Object literal may only specify known properties, and 'searchQuery' does not exist in type 'PlayerFilterState | (() => PlayerFilterState)'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(59,9): error TS2739: Type '{ technical: number; tactical: number; physical: number; mental: number; }' is missing the following properties from type 'PlayerProgress': id, playerId, category, score, date",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(76,9): error TS2739: Type '{ technical: number; tactical: number; physical: number; mental: number; }' is missing the following properties from type 'PlayerProgress': id, playerId, category, score, date",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(93,9): error TS2739: Type '{ technical: number; tactical: number; physical: number; mental: number; }' is missing the following properties from type 'PlayerProgress': id, playerId, category, score, date",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(116,19): error TS2322: Type 'string' is not assignable to type 'User'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(116,34): error TS2322: Type 'string' is not assignable to type 'User'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(128,19): error TS2322: Type 'string' is not assignable to type 'User'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(128,34): error TS2322: Type 'string' is not assignable to type 'User'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(156,7): error TS2322: Type '{ type: string; player: string; time: string; }[]' is not assignable to type 'number'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(176,23): error TS2339: Property 'searchQuery' does not exist on type 'PlayerFilterState'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(176,88): error TS2339: Property 'searchQuery' does not exist on type 'PlayerFilterState'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(212,89): error TS2339: Property 'totalSessions' does not exist on type 'CoachingStats'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(237,33): error TS2339: Property 'map' does not exist on type 'number'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(237,38): error TS7006: Parameter 'activity' implicitly has an 'any' type.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(237,48): error TS7006: Parameter 'index' implicitly has an 'any' type.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(262,34): error TS2339: Property 'searchQuery' does not exist on type 'PlayerFilterState'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(263,57): error TS2353: Object literal may only specify known properties, and 'searchQuery' does not exist in type 'Partial<PlayerFilterState>'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/CoachingToolkit/CoachingToolkit.tsx(349,71): error TS2339: Property 'description' does not exist on type 'CohortWithPlayers'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/DesignSystemDashboard/DesignSystemDashboard.tsx(279,5): error TS2532: Object is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/DesignSystemDashboard/DesignSystemDashboard.tsx(434,8): error TS2375: Type '{ data: DashboardOverview | undefined; }' is not assignable to type '{ data?: DashboardOverview; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'data' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'DashboardOverview | undefined' is not assignable to type 'DashboardOverview'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'DashboardOverview'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/DesignSystemDashboard/DesignSystemDashboard.tsx(435,8): error TS2375: Type '{ data: ComponentData[] | undefined; }' is not assignable to type '{ data?: ComponentData[]; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'data' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'ComponentData[] | undefined' is not assignable to type 'ComponentData[]'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'ComponentData[]'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/DesignSystemDashboard/DesignSystemDashboard.tsx(436,8): error TS2375: Type '{ data: GovernanceData | undefined; }' is not assignable to type '{ data?: GovernanceData; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'data' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'GovernanceData | undefined' is not assignable to type 'GovernanceData'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'GovernanceData'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/DesignSystemDashboard/DesignSystemDashboard.tsx(437,8): error TS2375: Type '{ data: TokenData[] | undefined; }' is not assignable to type '{ data?: TokenData[]; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'data' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'TokenData[] | undefined' is not assignable to type 'TokenData[]'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'TokenData[]'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/DeveloperNotes/DeveloperNotesPanel.tsx(35,10): error TS6133: 'isEditing' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/ExecutiveDashboard/ExecutiveDashboard.tsx(22,19): error TS6133: 'setMetrics' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/ExecutiveDashboard/ExecutiveDashboard.tsx(32,24): error TS6133: 'setSystemHealth' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/ExecutiveDashboard/ExecutiveDashboard.tsx(83,9): error TS6133: 'handleInitiativeUpdate' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/FeaturesDashboard/FeaturesDashboard.tsx(47,9): error TS6133: 'handleStartImplementation' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.stories.tsx(2,41): error TS6133: 'StatusIcon' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.stories.tsx(2,53): error TS6133: 'PriorityIcon' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.tsx(79,3): error TS1117: An object literal cannot have multiple properties with the same name.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.tsx(80,3): error TS1117: An object literal cannot have multiple properties with the same name.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.tsx(81,3): error TS1117: An object literal cannot have multiple properties with the same name.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.tsx(82,3): error TS1117: An object literal cannot have multiple properties with the same name.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.tsx(132,3): error TS1117: An object literal cannot have multiple properties with the same name.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.tsx(134,3): error TS1117: An object literal cannot have multiple properties with the same name.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/IconSystem/IconSystem.tsx(135,3): error TS1117: An object literal cannot have multiple properties with the same name.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/ProductDashboard/ProductDashboard.tsx(255,9): error TS6133: 'handleSort' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/ProductDashboard/ProductDashboard.tsx(554,8): error TS2375: Type '{ data: GovernanceData | undefined; }' is not assignable to type '{ data?: GovernanceData; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'data' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'GovernanceData | undefined' is not assignable to type 'GovernanceData'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'GovernanceData'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/ProductDashboard/ProductDashboard.tsx(555,8): error TS2375: Type '{ data: RequirementData[] | undefined; }' is not assignable to type '{ data?: RequirementData[]; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'data' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'RequirementData[] | undefined' is not assignable to type 'RequirementData[]'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'RequirementData[]'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/ProductDashboard/ProductDashboard.tsx(556,8): error TS2375: Type '{ data: InitiativeData[] | undefined; }' is not assignable to type '{ data?: InitiativeData[]; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'data' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'InitiativeData[] | undefined' is not assignable to type 'InitiativeData[]'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'InitiativeData[]'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/ProductDashboard/ProductDashboard.tsx(557,8): error TS2375: Type '{ data: GovernanceData | undefined; }' is not assignable to type '{ data?: GovernanceData; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'data' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'GovernanceData | undefined' is not assignable to type 'GovernanceData'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'GovernanceData'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/RoadmapDashboard/RoadmapDashboard.tsx(92,19): error TS6133: 'setMetrics' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/RoadmapDashboard/RoadmapDashboard.tsx(118,9): error TS6133: 'handleTaskStatusChange' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SessionsManager/SessionsManager.tsx(87,19): error TS6133: 'setMetrics' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(8,31): error TS2307: Cannot find module '../../utils/fileStatus' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(9,38): error TS2307: Cannot find module '../SourceOfTruthConsole' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(10,29): error TS2307: Cannot find module '../ThemeToggle' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(11,34): error TS2307: Cannot find module '../SystemAuditPanel' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(12,34): error TS2307: Cannot find module '../FeaturesMapPanel' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(13,32): error TS2307: Cannot find module '../ChangelogPanel' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(14,45): error TS2307: Cannot find module '../SystemEvolutionIntelligence' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(16,37): error TS2307: Cannot find module '../AIOptimizationPanel' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(23,45): error TS2307: Cannot find module '../../utils/windowManager' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemDashboard.tsx(27,82): error TS2375: Type '{ name: string; status: \"online\" | \"offline\" | \"in development\"; location: string; description: string; repoRef: string; codeRefs: never[]; stateSummary: string; tags: string[]; lastDeployed: string | undefined; uptime: string; version: string | undefined; fileLinks: never[]; }' is not assignable to type 'SystemFeature' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'lastDeployed' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemFeatures.tsx(2,10): error TS2305: Module '\"@heroicons/react/24/outline\"' has no exported member 'ExternalLinkIcon'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemOverview.tsx(11,3): error TS6133: 'onFileClick' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemOverview.tsx(13,3): error TS6133: 'onRepoClick' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemDashboard/SystemStats.tsx(5,3): error TS2305: Module '\"@heroicons/react/24/outline\"' has no exported member 'DatabaseIcon'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemLogConsole/SystemLogConsole.tsx(95,17): error TS6133: 'setStats' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemLogConsole/SystemLogConsole.tsx(104,13): error TS7030: Not all code paths return a value.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemLogConsole/SystemLogConsole.tsx(132,7): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/index.ts(4,43): error TS2307: Cannot find module './ResolveConsole' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/index.ts(5,42): error TS2307: Cannot find module './InformConsole' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/index.ts(6,43): error TS2307: Cannot find module './ObserveConsole' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/index.ts(9,15): error TS2307: Cannot find module './types' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(1,8): error TS6133: 'React' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(2,58): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(3,23): error TS2307: Cannot find module '@/components/ui/badge' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(4,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(5,23): error TS2307: Cannot find module '@/components/ui/input' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(6,79): error TS2307: Cannot find module '@/components/ui/select' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(7,58): error TS2307: Cannot find module '@/components/ui/tabs' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(8,26): error TS2307: Cannot find module '@/components/ui/progress' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(9,41): error TS2307: Cannot find module '@/components/ui/alert' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(158,65): error TS2304: Cannot find name 'startTime'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(158,83): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/ScriptMaster.tsx(238,32): error TS7006: Parameter 'e' implicitly has an 'any' type.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(1,8): error TS6133: 'React' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(1,27): error TS6133: 'useEffect' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(2,58): error TS2307: Cannot find module '@/components/ui/card' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(3,23): error TS2307: Cannot find module '@/components/ui/badge' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(4,24): error TS2307: Cannot find module '@/components/ui/button' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(5,58): error TS2307: Cannot find module '@/components/ui/tabs' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(6,26): error TS2307: Cannot find module '@/components/ui/progress' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(7,41): error TS2307: Cannot find module '@/components/ui/alert' or its corresponding type declarations.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(16,3): error TS6133: 'Zap' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(17,3): error TS6133: 'Database' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(18,3): error TS6133: 'Globe' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(19,3): error TS6133: 'Code' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(20,3): error TS6133: 'FileText' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(50,24): error TS6133: 'setSystemStatus' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(81,19): error TS6133: 'setMetrics' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(90,18): error TS6133: 'setAlerts' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/SystemMaster/SystemMaster.tsx(120,9): error TS6133: 'getStatusColor' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/components/theme/ThemeContext.tsx(19,13): error TS7030: Not all code paths return a value.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(149,32): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(151,9): error TS2412: Type 'string | undefined' is not assignable to type 'string' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the type of the target.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(153,49): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(155,49): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(157,9): error TS2322: Type '{ port: number; url?: string; host?: string; name?: string; user?: string; password?: string; }' is not assignable to type '{ url: string; host: string; port: number; name: string; user: string; password: string; }'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'url' is optional in type '{ port: number; url?: string; host?: string; name?: string; user?: string; password?: string; }' but required in type '{ url: string; host: string; port: number; name: string; user: string; password: string; }'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(157,64): error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(159,49): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(161,49): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(163,49): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(165,41): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(167,41): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(169,41): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(171,39): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/config/ConfigManager.ts(173,39): error TS2322: Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/governance/GovernanceOrchestrator.ts(185,47): error TS6133: 'eventsCount' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/features/FeaturesHolon.ts(566,11): error TS6133: 'deliveryMetrics' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/features/modules/FeatureRegistryEngine.ts(261,19): error TS6133: 'id' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/features/modules/ImplementationEngine.ts(154,12): error TS18048: 'oldImplementation' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/features/modules/ImplementationEngine.ts(159,5): error TS2322: Type '{ metadata: { updatedAt: string; createdAt: string; createdBy: string; tags: string[]; category: string; }; id?: string; name?: string; description?: string; type?: \"component\" | \"service\" | \"utility\" | \"integration\" | \"api\"; status?: \"planned\" | \"in-development\" | \"testing\" | \"ready\" | \"deployed\" | \"maintenance\"; priority?: \"critical\" | \"high\" | \"medium\" | \"low\"; requirementId?: string; initiativeId?: string; technicalSpecs?: { framework: string; language: string; dependencies: string[]; architecture: string; testingStrategy: string; }; implementation?: { startDate?: string; targetDate: string; actualStartDate?: string; actualEndDate?: string; estimatedHours: number; actualHours?: number; developer: string; repository: string; branch: string; }; quality?: { testCoverage: number; codeQuality: number; performance: number; security: number; }; }' is not assignable to type 'FeatureImplementation'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'id' is optional in type '{ metadata: { updatedAt: string; createdAt: string; createdBy: string; tags: string[]; category: string; }; id?: string; name?: string; description?: string; type?: \"api\" | \"integration\" | \"component\" | \"service\" | \"utility\"; status?: \"maintenance\" | \"testing\" | \"planned\" | \"in-development\" | \"ready\" | \"deployed\"; priority?: \"low\" | \"medium\" | \"high\" | \"critical\"; requirementId?: string; initiativeId?: string; technicalSpecs?: { framework: string; language: string; dependencies: string[]; architecture: string; testingStrategy: string; }; implementation?: { startDate?: string; targetDate: string; actualStartDate?: string; actualEndDate?: string; estimatedHours: number; actualHours?: number; developer: string; repository: string; branch: string; }; quality?: { testCoverage: number; codeQuality: number; performance: number; security: number; }; }' but required in type 'FeatureImplementation'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/features/modules/ImplementationEngine.ts(160,25): error TS2345: Argument of type '{ metadata: { updatedAt: string; createdAt: string; createdBy: string; tags: string[]; category: string; }; id?: string; name?: string; description?: string; type?: \"component\" | \"service\" | \"utility\" | \"integration\" | \"api\"; status?: \"planned\" | \"in-development\" | \"testing\" | \"ready\" | \"deployed\" | \"maintenance\"; priority?: \"critical\" | \"high\" | \"medium\" | \"low\"; requirementId?: string; initiativeId?: string; technicalSpecs?: { framework: string; language: string; dependencies: string[]; architecture: string; testingStrategy: string; }; implementation?: { startDate?: string; targetDate: string; actualStartDate?: string; actualEndDate?: string; estimatedHours: number; actualHours?: number; developer: string; repository: string; branch: string; }; quality?: { testCoverage: number; codeQuality: number; performance: number; security: number; }; }' is not assignable to parameter of type 'FeatureImplementation'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'id' is optional in type '{ metadata: { updatedAt: string; createdAt: string; createdBy: string; tags: string[]; category: string; }; id?: string; name?: string; description?: string; type?: \"api\" | \"integration\" | \"component\" | \"service\" | \"utility\"; status?: \"maintenance\" | \"testing\" | \"planned\" | \"in-development\" | \"ready\" | \"deployed\"; priority?: \"low\" | \"medium\" | \"high\" | \"critical\"; requirementId?: string; initiativeId?: string; technicalSpecs?: { framework: string; language: string; dependencies: string[]; architecture: string; testingStrategy: string; }; implementation?: { startDate?: string; targetDate: string; actualStartDate?: string; actualEndDate?: string; estimatedHours: number; actualHours?: number; developer: string; repository: string; branch: string; }; quality?: { testCoverage: number; codeQuality: number; performance: number; security: number; }; }' but required in type 'FeatureImplementation'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/features/modules/ImplementationEngine.ts(164,5): error TS2322: Type '{ metadata: { updatedAt: string; createdAt: string; createdBy: string; tags: string[]; category: string; }; id?: string; name?: string; description?: string; type?: \"component\" | \"service\" | \"utility\" | \"integration\" | \"api\"; status?: \"planned\" | \"in-development\" | \"testing\" | \"ready\" | \"deployed\" | \"maintenance\"; priority?: \"critical\" | \"high\" | \"medium\" | \"low\"; requirementId?: string; initiativeId?: string; technicalSpecs?: { framework: string; language: string; dependencies: string[]; architecture: string; testingStrategy: string; }; implementation?: { startDate?: string; targetDate: string; actualStartDate?: string; actualEndDate?: string; estimatedHours: number; actualHours?: number; developer: string; repository: string; branch: string; }; quality?: { testCoverage: number; codeQuality: number; performance: number; security: number; }; }' is not assignable to type 'FeatureImplementation'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'id' is optional in type '{ metadata: { updatedAt: string; createdAt: string; createdBy: string; tags: string[]; category: string; }; id?: string; name?: string; description?: string; type?: \"api\" | \"integration\" | \"component\" | \"service\" | \"utility\"; status?: \"maintenance\" | \"testing\" | \"planned\" | \"in-development\" | \"ready\" | \"deployed\"; priority?: \"low\" | \"medium\" | \"high\" | \"critical\"; requirementId?: string; initiativeId?: string; technicalSpecs?: { framework: string; language: string; dependencies: string[]; architecture: string; testingStrategy: string; }; implementation?: { startDate?: string; targetDate: string; actualStartDate?: string; actualEndDate?: string; estimatedHours: number; actualHours?: number; developer: string; repository: string; branch: string; }; quality?: { testCoverage: number; codeQuality: number; performance: number; security: number; }; }' but required in type 'FeatureImplementation'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/product/modules/CoordinationEngine.ts(344,25): error TS6133: 'initiative' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/product/ProductManager.ts(3,30): error TS6133: 'ProductInitiative' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/product/ProductManager.ts(223,52): error TS6133: 'params' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/product/ProductManager.ts(250,13): error TS6133: 'healthStatus' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/BackendManager.ts(1042,27): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/DesignSystemManager.ts(983,61): error TS2345: Argument of type 'never[]' is not assignable to parameter of type 'ComponentCategory'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/DesignSystemManager.ts(985,60): error TS2339: Property 'push' does not exist on type 'ComponentCategory'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'push' does not exist on type '\"atoms\"'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/DesignSystemManager.ts(1018,25): error TS2339: Property 'map' does not exist on type 'never[] | \"atoms\" | \"molecules\" | \"organisms\" | \"templates\" | \"pages\" | \"forms\" | \"navigation\" | \"feedback\" | \"data-display\" | \"layout\"'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Property 'map' does not exist on type '\"atoms\"'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/DesignSystemManager.ts(1018,29): error TS7006: Parameter 'id' implicitly has an 'any' type.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/DesignSystemManager.ts(1120,27): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/FrontendManager.ts(1089,27): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/modules/Governance.ts(62,19): error TS6133: 'target' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/systemMaster/modules/Governance.ts(103,19): error TS6133: 'target' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/testing/TestingHolonManager.ts(106,11): error TS6133: 'isProcessingQueue' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/testing/TestingHolonManager.ts(559,48): error TS6133: 'layer' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/testing/TestingHolonManager.ts(607,9): error TS2412: Type 'string | undefined' is not assignable to type 'string' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the type of the target.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/testing/TestingHolonManager.ts(924,28): error TS6133: 'managerName' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/holons/testing/TestingHolonManager.ts(1155,11): error TS6133: 'testSuiteConfig' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(17,39): error TS6133: 'ServerMetrics' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(17,54): error TS6133: 'ServerAlert' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(18,1): error TS6133: 'configManager' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(298,16): error TS18048: 'latestMetrics' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(300,16): error TS18048: 'latestMetrics' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(302,16): error TS18048: 'latestMetrics' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(304,16): error TS18048: 'latestMetrics' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(306,16): error TS18048: 'latestMetrics' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(308,16): error TS18048: 'latestMetrics' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(455,27): error TS2304: Cannot find name 'currentCost'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(477,27): error TS2304: Cannot find name 'currentCost'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(519,17): error TS18048: 'latestReport' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(532,33): error TS18048: 'latestReport' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(537,37): error TS2345: Argument of type 'string' is not assignable to parameter of type 'never'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(537,40): error TS18048: 'latestReport' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(548,31): error TS18048: 'latestOptimization' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(549,35): error TS18048: 'latestOptimization' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(550,33): error TS18048: 'latestOptimization' is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(566,68): error TS6133: 'server' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerGovernor.ts(572,67): error TS6133: 'metrics' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(19,1): error TS6133: 'configManager' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(207,36): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(245,34): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(308,34): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(353,34): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(387,33): error TS18046: 'error' is of type 'unknown'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(534,38): error TS6133: 'server' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(538,36): error TS6133: 'server' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(538,58): error TS6133: 'config' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(542,33): error TS6133: 'server' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(542,55): error TS6133: 'config' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/operations/ServerManager.ts(546,41): error TS6133: 'server' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/protocols/ProtocolManager.ts(83,13): error TS6133: 'filePath' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/protocols/ProtocolManager.ts(248,51): error TS6133: 'execution' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/protocols/ProtocolManager.ts(254,55): error TS6133: 'execution' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/protocols/ProtocolManager.ts(259,57): error TS6133: 'execution' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/core/protocols/ProtocolManager.ts(264,53): error TS6133: 'execution' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/index.ts(62,19): error TS6133: 'repoId' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/services/performanceTrackingService.ts(90,11): error TS2375: Type '{ id: string; featureId: string; type: \"load-time\" | \"memory-usage\" | \"bundle-size\" | \"api-calls\" | \"user-interactions\"; value: number; unit: string; timestamp: string; metadata: Record<string, unknown> | undefined; }' is not assignable to type 'PerformanceMetric' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'metadata' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'Record<string, unknown> | undefined' is not assignable to type 'Record<string, unknown>'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'Record<string, unknown>'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/services/performanceTrackingService.ts(130,11): error TS2375: Type '{ id: string; featureId: string; userId: string | undefined; sessionId: string; action: string; timestamp: string; duration: number | undefined; success: boolean; error: string | undefined; metadata: Record<string, unknown> | undefined; }' is not assignable to type 'UsageMetric' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'userId' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/services/performanceTrackingService.ts(206,9): error TS2532: Object is possibly 'undefined'.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/services/performanceTrackingService.ts(396,11): error TS2375: Type '{ id: string; featureId: string; type: \"threshold-exceeded\"; severity: \"high\" | \"critical\"; title: string; description: string; threshold: number; currentValue: number; timestamp: string; resolved: false; metadata: Record<string, unknown> | undefined; }' is not assignable to type 'PerformanceAlert' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'metadata' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'Record<string, unknown> | undefined' is not assignable to type 'Record<string, unknown>'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'Record<string, unknown>'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/services/performanceTrackingService.ts(414,11): error TS2375: Type '{ id: string; featureId: string; type: \"threshold-exceeded\"; severity: \"high\" | \"critical\"; title: string; description: string; threshold: number; currentValue: number; timestamp: string; resolved: false; metadata: Record<string, unknown> | undefined; }' is not assignable to type 'PerformanceAlert' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'metadata' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'Record<string, unknown> | undefined' is not assignable to type 'Record<string, unknown>'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'Record<string, unknown>'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/utils/cache.ts(175,20): error TS6133: 'target' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/utils/cache.ts(175,37): error TS6133: 'propertyName' is declared but its value is never read.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "src/utils/common/validation.ts(199,3): error TS2375: Type '{ isValid: boolean; error: string | undefined; }' is not assignable to type '{ isValid: boolean; error?: string; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'error' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/utils/common/validation.ts(316,3): error TS2375: Type '{ isValid: boolean; sanitized: string | undefined; }' is not assignable to type '{ isValid: boolean; sanitized?: string; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'sanitized' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "src/utils/common/validation.ts(329,3): error TS2375: Type '{ isValid: boolean; sanitized: string | undefined; }' is not assignable to type '{ isValid: boolean; sanitized?: string; }' with 'exactOptionalPropertyTypes: true'. Consider adding 'undefined' to the types of the target's properties.",
+      "severity": "error"
+    },
+    {
+      "type": "typescript",
+      "message": "  Types of property 'sanitized' are incompatible.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "    Type 'string | undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    },
+    {
+      "type": "typescript",
+      "message": "      Type 'undefined' is not assignable to type 'string'.",
+      "severity": "info"
+    }
+  ],
+  "missingFiles": [
+    {
+      "type": "config_file",
+      "path": "src/services/openRouterService.ts",
+      "severity": "high",
+      "description": "Configuration file src/services/openRouterService.ts is missing"
+    },
+    {
+      "type": "utility_file",
+      "path": "src/utils/common/constants.ts",
+      "severity": "medium",
+      "description": "Utility file src/utils/common/constants.ts is missing"
+    },
+    {
+      "type": "utility_file",
+      "path": "src/api/detectJerseyNumbers.ts",
+      "severity": "medium",
+      "description": "Utility file src/api/detectJerseyNumbers.ts is missing"
+    }
+  ],
+  "structuralIssues": [
+    {
+      "type": "large_file",
+      "path": "src/components/Articulate/TaskEngine.tsx",
+      "severity": "medium",
+      "description": "Large file (558 lines) may need refactoring",
+      "lines": 558
+    },
+    {
+      "type": "large_file",
+      "path": "src/components/Articulate/Wiki.tsx",
+      "severity": "medium",
+      "description": "Large file (580 lines) may need refactoring",
+      "lines": 580
+    },
+    {
+      "type": "large_file",
+      "path": "src/components/ProductDashboard/ProductDashboard.tsx",
+      "severity": "medium",
+      "description": "Large file (560 lines) may need refactoring",
+      "lines": 560
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/features/FeaturesHolon.ts",
+      "severity": "medium",
+      "description": "Large file (695 lines) may need refactoring",
+      "lines": 695
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/features/modules/ComponentRegistryEngine.ts",
+      "severity": "medium",
+      "description": "Large file (584 lines) may need refactoring",
+      "lines": 584
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/features/modules/DeliveryEngine.ts",
+      "severity": "medium",
+      "description": "Large file (614 lines) may need refactoring",
+      "lines": 614
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/features/modules/FeatureRegistryEngine.ts",
+      "severity": "medium",
+      "description": "Large file (701 lines) may need refactoring",
+      "lines": 701
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/features/modules/TechnicalEngine.ts",
+      "severity": "medium",
+      "description": "Large file (572 lines) may need refactoring",
+      "lines": 572
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/systemMaster/BackendManager.ts",
+      "severity": "medium",
+      "description": "Large file (1048 lines) may need refactoring",
+      "lines": 1048
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/systemMaster/DesignSystemManager.ts",
+      "severity": "medium",
+      "description": "Large file (1126 lines) may need refactoring",
+      "lines": 1126
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/systemMaster/FrontendManager.ts",
+      "severity": "medium",
+      "description": "Large file (1095 lines) may need refactoring",
+      "lines": 1095
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/holons/testing/TestingHolonManager.ts",
+      "severity": "medium",
+      "description": "Large file (1320 lines) may need refactoring",
+      "lines": 1320
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/operations/ServerGovernor.ts",
+      "severity": "medium",
+      "description": "Large file (730 lines) may need refactoring",
+      "lines": 730
+    },
+    {
+      "type": "large_file",
+      "path": "src/core/operations/ServerManager.ts",
+      "severity": "medium",
+      "description": "Large file (611 lines) may need refactoring",
+      "lines": 611
+    },
+    {
+      "type": "large_file",
+      "path": "src/services/aiInsightsService.ts",
+      "severity": "medium",
+      "description": "Large file (547 lines) may need refactoring",
+      "lines": 547
+    },
+    {
+      "type": "large_file",
+      "path": "src/services/performanceTrackingService.ts",
+      "severity": "medium",
+      "description": "Large file (609 lines) may need refactoring",
+      "lines": 609
+    }
+  ],
+  "duplicateFiles": [],
+  "recommendations": [
+    "Fix TypeScript compilation errors - highest priority",
+    "Install missing dependencies (@types/uuid, recharts, @supabase/supabase-js)",
+    "Fix type annotations and null safety issues",
+    "Create missing configuration files (oauth-config.ts, supabase.ts)",
+    "Implement missing utility functions and constants",
+    "Create missing API endpoints and services",
+    "Refactor large files (>500 lines) into smaller modules",
+    "Address TODO/FIXME comments with proper implementations",
+    "Improve code organization and modularity",
+    "Implement comprehensive error handling",
+    "Add proper TypeScript types throughout the codebase",
+    "Create automated testing for critical components",
+    "Establish code quality standards and linting rules"
+  ],
+  "summary": {
+    "totalIssues": 309,
+    "criticalIssues": 0,
+    "highPriorityIssues": 1,
+    "mediumPriorityIssues": 18,
+    "lowPriorityIssues": 0
+  }
+}

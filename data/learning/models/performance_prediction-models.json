@@ -1,0 +1,65 @@
+{
+  "responseTimePrediction": {
+    "type": "response_time_prediction",
+    "factors": {
+      "currentLoad": 0.3,
+      "historicalTrend": 0.3,
+      "resourceUtilization": 0.2,
+      "errorRate": 0.1,
+      "networkLatency": 0.1
+    },
+    "thresholds": {
+      "warning": 200,
+      "critical": 500,
+      "timeout": 1000
+    },
+    "predictionWindow": 300000
+  },
+  "throughputPrediction": {
+    "type": "throughput_prediction",
+    "factors": {
+      "currentThroughput": 0.4,
+      "resourceCapacity": 0.3,
+      "errorRate": 0.2,
+      "loadPattern": 0.1
+    },
+    "thresholds": {
+      "optimal": 0.8,
+      "warning": 0.9,
+      "critical": 0.95
+    },
+    "predictionWindow": 600000
+  },
+  "resourceUtilizationPrediction": {
+    "type": "resource_utilization_prediction",
+    "factors": {
+      "currentUtilization": 0.4,
+      "trend": 0.3,
+      "loadPattern": 0.2,
+      "capacity": 0.1
+    },
+    "thresholds": {
+      "optimal": 0.7,
+      "warning": 0.85,
+      "critical": 0.95
+    },
+    "predictionWindow": 300000
+  },
+  "bottleneckPrediction": {
+    "type": "bottleneck_prediction",
+    "factors": {
+      "resourceUtilization": 0.4,
+      "responseTime": 0.3,
+      "errorRate": 0.2,
+      "queueLength": 0.1
+    },
+    "indicators": [
+      "high_cpu_usage",
+      "high_memory_usage",
+      "slow_database_queries",
+      "network_congestion",
+      "disk_io_bottlenecks"
+    ],
+    "predictionWindow": 120000
+  }
+}

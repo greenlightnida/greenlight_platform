@@ -1,0 +1,21 @@
+{
+  "name": "Improvement Suggestion System",
+  "description": "Automated generation of improvement suggestions",
+  "generation": {
+    "patternBased": "Suggestions based on recognized patterns",
+    "metricBased": "Suggestions based on performance metrics",
+    "feedbackBased": "Suggestions based on user and system feedback",
+    "trendBased": "Suggestions based on trend analysis"
+  },
+  "suggestions": {
+    "technical": "Technical improvements and optimizations",
+    "process": "Process improvements and workflow optimizations",
+    "tooling": "Tool and technology improvements",
+    "training": "Training and skill development suggestions"
+  },
+  "implementation": {
+    "automated": "Automated implementation of simple improvements",
+    "guided": "Guided implementation with step-by-step instructions",
+    "manual": "Manual implementation with detailed guidance"
+  }
+}

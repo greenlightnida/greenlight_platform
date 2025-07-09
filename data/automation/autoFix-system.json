@@ -1,0 +1,21 @@
+{
+  "name": "Automated Fix System",
+  "description": "Automated fixing of common issues",
+  "capabilities": {
+    "dependency": "Automated dependency updates and fixes",
+    "compilation": "Automated compilation error fixes",
+    "configuration": "Automated configuration fixes",
+    "security": "Automated security vulnerability fixes"
+  },
+  "safety": {
+    "validation": "Validation of fixes before application",
+    "rollback": "Automatic rollback if fixes cause issues",
+    "testing": "Automated testing of fixes",
+    "approval": "Manager approval for critical fixes"
+  },
+  "monitoring": {
+    "success": "Monitoring of fix success rates",
+    "impact": "Monitoring of fix impact on system health",
+    "learning": "Learning from fix outcomes"
+  }
+}

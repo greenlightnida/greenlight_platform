@@ -1,0 +1,14 @@
+{
+  "name": "Security Committee",
+  "parent": "CouncilMasterManager",
+  "chair": "SecurityCommitteeManager",
+  "purpose": "Comprehensive security governance and threat management",
+  "managers": [
+    "SecurityCommitteeManager",
+    "SecurityGovernanceManager",
+    "ThreatDetectionManager",
+    "AccessControlManager",
+    "SecurityTestingManager",
+    "SecurityAnalyticsManager"
+  ]
+}

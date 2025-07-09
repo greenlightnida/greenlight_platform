@@ -1,0 +1,28 @@
+{
+  "name": "Cross-Manager Communication Protocol",
+  "description": "Standardized communication between managers",
+  "channels": {
+    "immediate": [
+      "slack",
+      "email"
+    ],
+    "scheduled": [
+      "weekly-meeting",
+      "monthly-review"
+    ],
+    "emergency": [
+      "phone",
+      "slack-urgent"
+    ]
+  },
+  "escalation": {
+    "level1": "Manager-to-manager direct communication",
+    "level2": "Escalation to system coordinator",
+    "level3": "Emergency response team activation"
+  },
+  "templates": {
+    "issueReport": "Standardized issue reporting template",
+    "statusUpdate": "Regular status update format",
+    "collaboration": "Cross-manager collaboration request"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Allocation Oversight",
+  "oversight": {
+    "transparency": {
+      "method": "public_reporting",
+      "frequency": "monthly",
+      "participants": "all_constituencies",
+      "outcome": "allocation_transparency"
+    },
+    "fairness": {
+      "method": "fairness_audit",
+      "frequency": "quarterly",
+      "participants": "independent_auditor",
+      "outcome": "fairness_assessment"
+    },
+    "effectiveness": {
+      "method": "effectiveness_evaluation",
+      "frequency": "quarterly",
+      "participants": "all_constituencies",
+      "outcome": "effectiveness_report"
+    }
+  }
+}

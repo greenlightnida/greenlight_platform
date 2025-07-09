@@ -1,0 +1,27 @@
+{
+  "intervals": {
+    "healthCheck": 300000,
+    "fullAudit": 3600000,
+    "patternAnalysis": 86400000
+  },
+  "thresholds": {
+    "criticalHealth": 70,
+    "warningHealth": 85,
+    "performanceDegradation": 20,
+    "errorRate": 5
+  },
+  "alerts": {
+    "critical": [
+      "slack",
+      "email",
+      "dashboard"
+    ],
+    "warning": [
+      "dashboard",
+      "log"
+    ],
+    "info": [
+      "log"
+    ]
+  }
+}

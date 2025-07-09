@@ -1,0 +1,1246 @@
+{
+  "timestamp": "2025-07-08T20:22:19.349Z",
+  "summary": {
+    "totalManagers": 22,
+    "totalComponents": 103,
+    "totalServices": 4,
+    "missingManagers": 21,
+    "missingComponents": 7,
+    "missingServices": 15,
+    "missingFiles": 11
+  },
+  "found": {
+    "managers": [
+      {
+        "className": "ScopeManager",
+        "file": "frontend/node_modules/@typescript-eslint/scope-manager/dist/ScopeManager.js",
+        "type": "class"
+      },
+      {
+        "className": "InterceptorManager",
+        "file": "frontend/node_modules/axios/lib/core/InterceptorManager.js",
+        "type": "class"
+      },
+      {
+        "className": "createAnimateManager",
+        "file": "frontend/node_modules/recharts/es6/animation/AnimationManager.js",
+        "type": "function"
+      },
+      {
+        "className": "ScopeManager",
+        "file": "node_modules/@typescript-eslint/scope-manager/dist/ScopeManager.js",
+        "type": "class"
+      },
+      {
+        "className": "InterceptorManager",
+        "file": "node_modules/axios/lib/core/InterceptorManager.js",
+        "type": "class"
+      },
+      {
+        "className": "createAnimateManager",
+        "file": "node_modules/recharts/es6/animation/AnimationManager.js",
+        "type": "function"
+      },
+      {
+        "className": "HelperManager",
+        "file": "node_modules/sucrase/dist/HelperManager.js",
+        "type": "class"
+      },
+      {
+        "className": "NameManager",
+        "file": "node_modules/sucrase/dist/NameManager.js",
+        "type": "class"
+      },
+      {
+        "className": "HelperManager",
+        "file": "node_modules/sucrase/dist/esm/HelperManager.js",
+        "type": "class"
+      },
+      {
+        "className": "NameManager",
+        "file": "node_modules/sucrase/dist/esm/NameManager.js",
+        "type": "class"
+      },
+      {
+        "className": "ConfigManager",
+        "file": "src/config/ConfigManager.ts",
+        "type": "class"
+      },
+      {
+        "className": "configManager",
+        "file": "src/config/ConfigManager.ts",
+        "type": "function"
+      },
+      {
+        "className": "BackendManager",
+        "file": "src/core/holons/systemMaster/BackendManager.ts",
+        "type": "class"
+      },
+      {
+        "className": "DesignSystemManager",
+        "file": "src/core/holons/systemMaster/DesignSystemManager.ts",
+        "type": "class"
+      },
+      {
+        "className": "FrontendManager",
+        "file": "src/core/holons/systemMaster/FrontendManager.ts",
+        "type": "class"
+      },
+      {
+        "className": "TestingHolonManager",
+        "file": "src/core/holons/testing/TestingHolonManager.ts",
+        "type": "class"
+      },
+      {
+        "className": "ServerManager",
+        "file": "src/core/operations/ServerManager.ts",
+        "type": "class"
+      },
+      {
+        "className": "serverManager",
+        "file": "src/core/operations/ServerManager.ts",
+        "type": "function"
+      },
+      {
+        "className": "ProtocolManager",
+        "file": "src/core/protocols/ProtocolManager.ts",
+        "type": "class"
+      },
+      {
+        "className": "protocolManager",
+        "file": "src/core/protocols/ProtocolManager.ts",
+        "type": "function"
+      },
+      {
+        "className": "SessionManager",
+        "file": "src/core/session-management/SessionManager.ts",
+        "type": "class"
+      },
+      {
+        "className": "sessionManager",
+        "file": "src/core/session-management/SessionManager.ts",
+        "type": "function"
+      }
+    ],
+    "components": [
+      {
+        "name": "FocusRing",
+        "file": "frontend/node_modules/@react-aria/focus/src/FocusRing.tsx"
+      },
+      {
+        "name": "FocusScope",
+        "file": "frontend/node_modules/@react-aria/focus/src/FocusScope.tsx"
+      },
+      {
+        "name": "isElementInChildOfActiveScope",
+        "file": "frontend/node_modules/@react-aria/focus/src/FocusScope.tsx"
+      },
+      {
+        "name": "getFocusableTreeWalker",
+        "file": "frontend/node_modules/@react-aria/focus/src/FocusScope.tsx"
+      },
+      {
+        "name": "PressResponder",
+        "file": "frontend/node_modules/@react-aria/interactions/src/PressResponder.tsx"
+      },
+      {
+        "name": "ClearPressResponder",
+        "file": "frontend/node_modules/@react-aria/interactions/src/PressResponder.tsx"
+      },
+      {
+        "name": "Pressable",
+        "file": "frontend/node_modules/@react-aria/interactions/src/Pressable.tsx"
+      },
+      {
+        "name": "FocusableProvider",
+        "file": "frontend/node_modules/@react-aria/interactions/src/useFocusable.tsx"
+      },
+      {
+        "name": "useFocusable",
+        "file": "frontend/node_modules/@react-aria/interactions/src/useFocusable.tsx"
+      },
+      {
+        "name": "Focusable",
+        "file": "frontend/node_modules/@react-aria/interactions/src/useFocusable.tsx"
+      },
+      {
+        "name": "SSRProvider",
+        "file": "frontend/node_modules/@react-aria/ssr/src/SSRProvider.tsx"
+      },
+      {
+        "name": "useSSRSafeId",
+        "file": "frontend/node_modules/@react-aria/ssr/src/SSRProvider.tsx"
+      },
+      {
+        "name": "useIsSSR",
+        "file": "frontend/node_modules/@react-aria/ssr/src/SSRProvider.tsx"
+      },
+      {
+        "name": "isCtrlKeyPressed",
+        "file": "frontend/node_modules/@react-aria/utils/src/keyboard.tsx"
+      },
+      {
+        "name": "RouterProvider",
+        "file": "frontend/node_modules/@react-aria/utils/src/openLink.tsx"
+      },
+      {
+        "name": "useRouter",
+        "file": "frontend/node_modules/@react-aria/utils/src/openLink.tsx"
+      },
+      {
+        "name": "shouldClientNavigate",
+        "file": "frontend/node_modules/@react-aria/utils/src/openLink.tsx"
+      },
+      {
+        "name": "openLink",
+        "file": "frontend/node_modules/@react-aria/utils/src/openLink.tsx"
+      },
+      {
+        "name": "useSyntheticLinkProps",
+        "file": "frontend/node_modules/@react-aria/utils/src/openLink.tsx"
+      },
+      {
+        "name": "getSyntheticLinkProps",
+        "file": "frontend/node_modules/@react-aria/utils/src/openLink.tsx"
+      },
+      {
+        "name": "useLinkProps",
+        "file": "frontend/node_modules/@react-aria/utils/src/openLink.tsx"
+      },
+      {
+        "name": "ApiProvider",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/query/react/ApiProvider.tsx"
+      },
+      {
+        "name": "ANY",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "DEFAULT_DELAY_MS",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "getSerializedHeaders",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "waitForFakeTimer",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "withProvider",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "hookWaitFor",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "fakeTimerWaitFor",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "useRenderCounter",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "actionsReducer",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "setupApiStore",
+        "file": "frontend/node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "useVirtualizer",
+        "file": "frontend/node_modules/@tanstack/react-virtual/src/index.tsx"
+      },
+      {
+        "name": "useWindowVirtualizer",
+        "file": "frontend/node_modules/@tanstack/react-virtual/src/index.tsx"
+      },
+      {
+        "name": "App",
+        "file": "frontend/node_modules/react-beautiful-dnd/src/view/drag-drop-context/app.jsx"
+      },
+      {
+        "name": "resetServerContext",
+        "file": "frontend/node_modules/react-beautiful-dnd/src/view/drag-drop-context/drag-drop-context.jsx"
+      },
+      {
+        "name": "DragDropContext",
+        "file": "frontend/node_modules/react-beautiful-dnd/src/view/drag-drop-context/drag-drop-context.jsx"
+      },
+      {
+        "name": "PrivateDraggable",
+        "file": "frontend/node_modules/react-beautiful-dnd/src/view/draggable/draggable-api.jsx"
+      },
+      {
+        "name": "PublicDraggable",
+        "file": "frontend/node_modules/react-beautiful-dnd/src/view/draggable/draggable-api.jsx"
+      },
+      {
+        "name": "Draggable",
+        "file": "frontend/node_modules/react-beautiful-dnd/src/view/draggable/draggable.jsx"
+      },
+      {
+        "name": "Droppable",
+        "file": "frontend/node_modules/react-beautiful-dnd/src/view/droppable/droppable.jsx"
+      },
+      {
+        "name": "WithoutMemo",
+        "file": "frontend/node_modules/react-beautiful-dnd/src/view/placeholder/placeholder.jsx"
+      },
+      {
+        "name": "Header",
+        "file": "frontend/src/components/Header.tsx"
+      },
+      {
+        "name": "RoadmapDashboard",
+        "file": "frontend/src/components/RoadmapDashboard.tsx"
+      },
+      {
+        "name": "Sidebar",
+        "file": "frontend/src/components/Sidebar.tsx"
+      },
+      {
+        "name": "Administrate",
+        "file": "frontend/src/pages/Administrate.tsx"
+      },
+      {
+        "name": "Articulate",
+        "file": "frontend/src/pages/Articulate.tsx"
+      },
+      {
+        "name": "Dashboard",
+        "file": "frontend/src/pages/Dashboard.tsx"
+      },
+      {
+        "name": "Elevate",
+        "file": "frontend/src/pages/Elevate.tsx"
+      },
+      {
+        "name": "Roadmap",
+        "file": "frontend/src/pages/Roadmap.tsx"
+      },
+      {
+        "name": "SystemMaster",
+        "file": "frontend/src/pages/SystemMaster.tsx"
+      },
+      {
+        "name": "TeamPortal",
+        "file": "frontend/src/pages/TeamPortal.tsx"
+      },
+      {
+        "name": "ApiProvider",
+        "file": "node_modules/@reduxjs/toolkit/src/query/react/ApiProvider.tsx"
+      },
+      {
+        "name": "ANY",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "DEFAULT_DELAY_MS",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "getSerializedHeaders",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "waitForFakeTimer",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "withProvider",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "hookWaitFor",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "fakeTimerWaitFor",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "useRenderCounter",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "actionsReducer",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "setupApiStore",
+        "file": "node_modules/@reduxjs/toolkit/src/tests/utils/helpers.tsx"
+      },
+      {
+        "name": "Button",
+        "file": "node_modules/@storybook/react/template/cli/js/Button.jsx"
+      },
+      {
+        "name": "Header",
+        "file": "node_modules/@storybook/react/template/cli/js/Header.jsx"
+      },
+      {
+        "name": "Page",
+        "file": "node_modules/@storybook/react/template/cli/js/Page.jsx"
+      },
+      {
+        "name": "Button",
+        "file": "node_modules/@storybook/react/template/cli/ts/Button.tsx"
+      },
+      {
+        "name": "Header",
+        "file": "node_modules/@storybook/react/template/cli/ts/Header.tsx"
+      },
+      {
+        "name": "Page",
+        "file": "node_modules/@storybook/react/template/cli/ts/Page.tsx"
+      },
+      {
+        "name": "PlayerCard",
+        "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerCard.tsx"
+      },
+      {
+        "name": "PlayerGrid",
+        "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGrid.tsx"
+      },
+      {
+        "name": "PlayerGridCells",
+        "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGridCells.tsx"
+      },
+      {
+        "name": "PlayerGridFilters",
+        "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGridFilters.tsx"
+      },
+      {
+        "name": "PlayerGridHeader",
+        "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGridHeader.tsx"
+      },
+      {
+        "name": "MediaActions",
+        "file": "platforms/greenlight-platform/media/MediaLibrary/MediaActions.tsx"
+      },
+      {
+        "name": "MediaSort",
+        "file": "platforms/greenlight-platform/media/MediaLibrary/MediaActions.tsx"
+      },
+      {
+        "name": "ViewModeToggle",
+        "file": "platforms/greenlight-platform/media/MediaLibrary/MediaActions.tsx"
+      },
+      {
+        "name": "MediaFilters",
+        "file": "platforms/greenlight-platform/media/MediaLibrary/MediaFilters.tsx"
+      },
+      {
+        "name": "MediaGallery",
+        "file": "platforms/greenlight-platform/media/MediaLibrary/MediaGallery.tsx"
+      },
+      {
+        "name": "MediaLibrary",
+        "file": "platforms/greenlight-platform/media/MediaLibrary/MediaLibrary.tsx"
+      },
+      {
+        "name": "PhotoCard",
+        "file": "platforms/greenlight-platform/media/MediaLibrary/PhotoCard.tsx"
+      },
+      {
+        "name": "PhotoListItem",
+        "file": "platforms/greenlight-platform/media/MediaLibrary/PhotoListItem.tsx"
+      },
+      {
+        "name": "AIAssistant",
+        "file": "platforms/greenlight-platform/team/TeamPortal/AIAssistant.tsx"
+      },
+      {
+        "name": "TeamDashboard",
+        "file": "platforms/greenlight-platform/team/TeamPortal/TeamDashboard.tsx"
+      },
+      {
+        "name": "TeamPortal",
+        "file": "platforms/greenlight-platform/team/TeamPortal/TeamPortal.tsx"
+      },
+      {
+        "name": "TeamSettings",
+        "file": "platforms/greenlight-platform/team/TeamPortal/TeamSettings.tsx"
+      },
+      {
+        "name": "AccessibilityContext",
+        "file": "src/components/AccessibilityContext.tsx"
+      },
+      {
+        "name": "Insights",
+        "file": "src/components/Articulate/Insights.tsx"
+      },
+      {
+        "name": "KnowledgeBase",
+        "file": "src/components/Articulate/KnowledgeBase.tsx"
+      },
+      {
+        "name": "TaskEngine",
+        "file": "src/components/Articulate/TaskEngine.tsx"
+      },
+      {
+        "name": "Wiki",
+        "file": "src/components/Articulate/Wiki.tsx"
+      },
+      {
+        "name": "WorkHistory",
+        "file": "src/components/Articulate/WorkHistory.tsx"
+      },
+      {
+        "name": "FeaturesDashboard",
+        "file": "src/components/FeaturesDashboard/FeaturesDashboard.tsx"
+      },
+      {
+        "name": "ImportContextSelector",
+        "file": "src/components/ImportContextSelector.tsx"
+      },
+      {
+        "name": "PhotoCorrection",
+        "file": "src/components/PhotoCorrection.tsx"
+      },
+      {
+        "name": "SystemDashboard",
+        "file": "src/components/SystemDashboard/SystemDashboard.tsx"
+      },
+      {
+        "name": "SystemFeatures",
+        "file": "src/components/SystemDashboard/SystemFeatures.tsx"
+      },
+      {
+        "name": "SystemNavigation",
+        "file": "src/components/SystemDashboard/SystemNavigation.tsx"
+      },
+      {
+        "name": "SystemOverview",
+        "file": "src/components/SystemDashboard/SystemOverview.tsx"
+      },
+      {
+        "name": "SystemStats",
+        "file": "src/components/SystemDashboard/SystemStats.tsx"
+      },
+      {
+        "name": "ScriptMaster",
+        "file": "src/components/SystemMaster/ScriptMaster.tsx"
+      },
+      {
+        "name": "ThemeContextProvider",
+        "file": "src/components/theme/ThemeContext.tsx"
+      },
+      {
+        "name": "ThemeContext",
+        "file": "src/components/theme/ThemeContextDefinition.tsx"
+      }
+    ],
+    "services": [
+      {
+        "name": "AIInsightsService",
+        "file": "src/services/aiInsightsService.ts",
+        "type": "class"
+      },
+      {
+        "name": "GitHubIntegrationService",
+        "file": "src/services/githubIntegrationService.ts",
+        "type": "class"
+      },
+      {
+        "name": "PerformanceTrackingService",
+        "file": "src/services/performanceTrackingService.ts",
+        "type": "class"
+      },
+      {
+        "name": "SupabaseSchemaService",
+        "file": "src/services/supabaseSchemaService.ts",
+        "type": "class"
+      }
+    ]
+  },
+  "expected": {
+    "principleHolons": {
+      "systemMaster": {
+        "description": "Meta-system governance and oversight",
+        "expectedManagers": [
+          "SystemMaster",
+          "GovernanceOrchestrator",
+          "RepositoryGovernor"
+        ],
+        "expectedComponents": [
+          "SystemMaster",
+          "SystemDashboard",
+          "SystemEvolutionIntelligence"
+        ],
+        "expectedServices": [
+          "auditService",
+          "systemLogService",
+          "performanceTrackingService"
+        ]
+      },
+      "elevate": {
+        "description": "Coaching product governance",
+        "expectedManagers": [
+          "ElevateManager",
+          "CoachingManager",
+          "PlayerManager"
+        ],
+        "expectedComponents": [
+          "CoachingToolkit",
+          "PlayerGrid",
+          "MediaLibrary",
+          "PhotoUpload"
+        ],
+        "expectedServices": [
+          "playerService",
+          "dataImportService",
+          "aiInsightsService"
+        ]
+      },
+      "administrate": {
+        "description": "Business intelligence governance",
+        "expectedManagers": [
+          "AdministrateManager",
+          "ExecutiveManager",
+          "BusinessIntelligenceManager"
+        ],
+        "expectedComponents": [
+          "ExecutiveDashboard",
+          "SystemAuditPanel",
+          "StorageDashboard"
+        ],
+        "expectedServices": [
+          "auditService",
+          "businessIntelligenceService",
+          "reportingService"
+        ]
+      },
+      "elaborate": {
+        "description": "System governance and evolution",
+        "expectedManagers": [
+          "ElaborateManager",
+          "SystemEvolutionManager",
+          "ProtocolManager"
+        ],
+        "expectedComponents": [
+          "SystemMaster",
+          "SystemDashboard",
+          "SystemEvolutionIntelligence"
+        ],
+        "expectedServices": [
+          "auditService",
+          "deploymentTracker",
+          "systemEvolutionService"
+        ]
+      },
+      "articulate": {
+        "description": "Knowledge management governance",
+        "expectedManagers": [
+          "ArticulateManager",
+          "KnowledgeManager",
+          "WorkManager"
+        ],
+        "expectedComponents": [
+          "KnowledgeBase",
+          "TaskEngine",
+          "Wiki",
+          "WorkHistory",
+          "Insights"
+        ],
+        "expectedServices": [
+          "developerNotesService",
+          "nlpService",
+          "knowledgeService"
+        ]
+      }
+    },
+    "coreManagers": {
+      "sessionManager": {
+        "description": "Session management and protocol orchestration",
+        "expectedLocation": "src/core/session-management/",
+        "expectedFiles": [
+          "SessionManager.ts"
+        ]
+      },
+      "migrationsManager": {
+        "description": "System migration management with safety checks",
+        "expectedLocation": "src/core/migrations/",
+        "expectedFiles": [
+          "MigrationsManager.ts"
+        ]
+      },
+      "protocolManager": {
+        "description": "Protocol management and execution",
+        "expectedLocation": "src/core/protocols/",
+        "expectedFiles": [
+          "ProtocolManager.ts"
+        ]
+      },
+      "governanceOrchestrator": {
+        "description": "High-level governance coordination",
+        "expectedLocation": "src/core/governance/",
+        "expectedFiles": [
+          "GovernanceOrchestrator.ts"
+        ]
+      },
+      "repositoryGovernor": {
+        "description": "Repository governance and monitoring",
+        "expectedLocation": "src/core/governance/",
+        "expectedFiles": [
+          "RepositoryGovernor.ts"
+        ]
+      },
+      "repositoryMonitor": {
+        "description": "Repository monitoring and health tracking",
+        "expectedLocation": "src/core/governance/monitors/",
+        "expectedFiles": [
+          "RepositoryMonitor.ts"
+        ]
+      },
+      "alertManager": {
+        "description": "Multi-channel alerting and notification",
+        "expectedLocation": "src/core/governance/alerts/",
+        "expectedFiles": [
+          "AlertManager.ts"
+        ]
+      },
+      "policyEngine": {
+        "description": "Automated policy enforcement and compliance",
+        "expectedLocation": "src/core/governance/policies/",
+        "expectedFiles": [
+          "PolicyEngine.ts"
+        ]
+      },
+      "apiGraphManager": {
+        "description": "API graph management and optimization",
+        "expectedLocation": "src/api-gateway/graph-manager/",
+        "expectedFiles": [
+          "APIGraphManager.ts"
+        ]
+      }
+    },
+    "scriptMaster": {
+      "description": "Script orchestration and governance system",
+      "expectedComponents": [
+        "ScriptMaster",
+        "SystemMaster"
+      ],
+      "expectedFiles": [
+        "scripts/script_catalog.json",
+        "src/components/SystemMaster/ScriptMaster.tsx",
+        "src/components/SystemMaster/SystemMaster.tsx",
+        "src/components/SystemMaster/types.ts",
+        "src/components/SystemMaster/index.ts"
+      ]
+    }
+  },
+  "analysis": {
+    "principleHolons": {
+      "systemMaster": {
+        "description": "Meta-system governance and oversight",
+        "expected": {
+          "managers": [
+            "SystemMaster",
+            "GovernanceOrchestrator",
+            "RepositoryGovernor"
+          ],
+          "components": [
+            "SystemMaster",
+            "SystemDashboard",
+            "SystemEvolutionIntelligence"
+          ],
+          "services": [
+            "auditService",
+            "systemLogService",
+            "performanceTrackingService"
+          ]
+        },
+        "found": {
+          "managers": [],
+          "components": [
+            {
+              "name": "SystemMaster",
+              "file": "frontend/src/pages/SystemMaster.tsx"
+            },
+            {
+              "name": "SystemDashboard",
+              "file": "src/components/SystemDashboard/SystemDashboard.tsx"
+            }
+          ],
+          "services": []
+        },
+        "missing": {
+          "managers": [
+            "SystemMaster",
+            "GovernanceOrchestrator",
+            "RepositoryGovernor"
+          ],
+          "components": [
+            "SystemEvolutionIntelligence"
+          ],
+          "services": [
+            "auditService",
+            "systemLogService",
+            "performanceTrackingService"
+          ]
+        }
+      },
+      "elevate": {
+        "description": "Coaching product governance",
+        "expected": {
+          "managers": [
+            "ElevateManager",
+            "CoachingManager",
+            "PlayerManager"
+          ],
+          "components": [
+            "CoachingToolkit",
+            "PlayerGrid",
+            "MediaLibrary",
+            "PhotoUpload"
+          ],
+          "services": [
+            "playerService",
+            "dataImportService",
+            "aiInsightsService"
+          ]
+        },
+        "found": {
+          "managers": [],
+          "components": [
+            {
+              "name": "PlayerGrid",
+              "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGrid.tsx"
+            },
+            {
+              "name": "PlayerGridCells",
+              "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGridCells.tsx"
+            },
+            {
+              "name": "PlayerGridFilters",
+              "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGridFilters.tsx"
+            },
+            {
+              "name": "PlayerGridHeader",
+              "file": "platforms/greenlight-platform/grid/PlayerGrid/PlayerGridHeader.tsx"
+            },
+            {
+              "name": "MediaLibrary",
+              "file": "platforms/greenlight-platform/media/MediaLibrary/MediaLibrary.tsx"
+            }
+          ],
+          "services": []
+        },
+        "missing": {
+          "managers": [
+            "ElevateManager",
+            "CoachingManager",
+            "PlayerManager"
+          ],
+          "components": [
+            "CoachingToolkit",
+            "PhotoUpload"
+          ],
+          "services": [
+            "playerService",
+            "dataImportService",
+            "aiInsightsService"
+          ]
+        }
+      },
+      "administrate": {
+        "description": "Business intelligence governance",
+        "expected": {
+          "managers": [
+            "AdministrateManager",
+            "ExecutiveManager",
+            "BusinessIntelligenceManager"
+          ],
+          "components": [
+            "ExecutiveDashboard",
+            "SystemAuditPanel",
+            "StorageDashboard"
+          ],
+          "services": [
+            "auditService",
+            "businessIntelligenceService",
+            "reportingService"
+          ]
+        },
+        "found": {
+          "managers": [],
+          "components": [],
+          "services": []
+        },
+        "missing": {
+          "managers": [
+            "AdministrateManager",
+            "ExecutiveManager",
+            "BusinessIntelligenceManager"
+          ],
+          "components": [
+            "ExecutiveDashboard",
+            "SystemAuditPanel",
+            "StorageDashboard"
+          ],
+          "services": [
+            "auditService",
+            "businessIntelligenceService",
+            "reportingService"
+          ]
+        }
+      },
+      "elaborate": {
+        "description": "System governance and evolution",
+        "expected": {
+          "managers": [
+            "ElaborateManager",
+            "SystemEvolutionManager",
+            "ProtocolManager"
+          ],
+          "components": [
+            "SystemMaster",
+            "SystemDashboard",
+            "SystemEvolutionIntelligence"
+          ],
+          "services": [
+            "auditService",
+            "deploymentTracker",
+            "systemEvolutionService"
+          ]
+        },
+        "found": {
+          "managers": [
+            {
+              "className": "ProtocolManager",
+              "file": "src/core/protocols/ProtocolManager.ts",
+              "type": "class"
+            }
+          ],
+          "components": [
+            {
+              "name": "SystemMaster",
+              "file": "frontend/src/pages/SystemMaster.tsx"
+            },
+            {
+              "name": "SystemDashboard",
+              "file": "src/components/SystemDashboard/SystemDashboard.tsx"
+            }
+          ],
+          "services": []
+        },
+        "missing": {
+          "managers": [
+            "ElaborateManager",
+            "SystemEvolutionManager"
+          ],
+          "components": [
+            "SystemEvolutionIntelligence"
+          ],
+          "services": [
+            "auditService",
+            "deploymentTracker",
+            "systemEvolutionService"
+          ]
+        }
+      },
+      "articulate": {
+        "description": "Knowledge management governance",
+        "expected": {
+          "managers": [
+            "ArticulateManager",
+            "KnowledgeManager",
+            "WorkManager"
+          ],
+          "components": [
+            "KnowledgeBase",
+            "TaskEngine",
+            "Wiki",
+            "WorkHistory",
+            "Insights"
+          ],
+          "services": [
+            "developerNotesService",
+            "nlpService",
+            "knowledgeService"
+          ]
+        },
+        "found": {
+          "managers": [],
+          "components": [
+            {
+              "name": "Insights",
+              "file": "src/components/Articulate/Insights.tsx"
+            },
+            {
+              "name": "KnowledgeBase",
+              "file": "src/components/Articulate/KnowledgeBase.tsx"
+            },
+            {
+              "name": "TaskEngine",
+              "file": "src/components/Articulate/TaskEngine.tsx"
+            },
+            {
+              "name": "Wiki",
+              "file": "src/components/Articulate/Wiki.tsx"
+            },
+            {
+              "name": "WorkHistory",
+              "file": "src/components/Articulate/WorkHistory.tsx"
+            }
+          ],
+          "services": []
+        },
+        "missing": {
+          "managers": [
+            "ArticulateManager",
+            "KnowledgeManager",
+            "WorkManager"
+          ],
+          "components": [],
+          "services": [
+            "developerNotesService",
+            "nlpService",
+            "knowledgeService"
+          ]
+        }
+      }
+    },
+    "coreManagers": {
+      "sessionManager": {
+        "description": "Session management and protocol orchestration",
+        "expectedLocation": "src/core/session-management/",
+        "expectedFiles": [
+          "SessionManager.ts"
+        ],
+        "found": {
+          "managers": [
+            {
+              "className": "SessionManager",
+              "file": "src/core/session-management/SessionManager.ts",
+              "type": "class"
+            },
+            {
+              "className": "sessionManager",
+              "file": "src/core/session-management/SessionManager.ts",
+              "type": "function"
+            }
+          ],
+          "files": []
+        },
+        "missing": {
+          "managers": [],
+          "files": [
+            "SessionManager.ts"
+          ]
+        }
+      },
+      "migrationsManager": {
+        "description": "System migration management with safety checks",
+        "expectedLocation": "src/core/migrations/",
+        "expectedFiles": [
+          "MigrationsManager.ts"
+        ],
+        "found": {
+          "managers": [],
+          "files": []
+        },
+        "missing": {
+          "managers": [
+            "migrationsManager"
+          ],
+          "files": [
+            "MigrationsManager.ts"
+          ]
+        }
+      },
+      "protocolManager": {
+        "description": "Protocol management and execution",
+        "expectedLocation": "src/core/protocols/",
+        "expectedFiles": [
+          "ProtocolManager.ts"
+        ],
+        "found": {
+          "managers": [
+            {
+              "className": "ProtocolManager",
+              "file": "src/core/protocols/ProtocolManager.ts",
+              "type": "class"
+            },
+            {
+              "className": "protocolManager",
+              "file": "src/core/protocols/ProtocolManager.ts",
+              "type": "function"
+            }
+          ],
+          "files": []
+        },
+        "missing": {
+          "managers": [],
+          "files": [
+            "ProtocolManager.ts"
+          ]
+        }
+      },
+      "governanceOrchestrator": {
+        "description": "High-level governance coordination",
+        "expectedLocation": "src/core/governance/",
+        "expectedFiles": [
+          "GovernanceOrchestrator.ts"
+        ],
+        "found": {
+          "managers": [],
+          "files": []
+        },
+        "missing": {
+          "managers": [
+            "governanceOrchestrator"
+          ],
+          "files": [
+            "GovernanceOrchestrator.ts"
+          ]
+        }
+      },
+      "repositoryGovernor": {
+        "description": "Repository governance and monitoring",
+        "expectedLocation": "src/core/governance/",
+        "expectedFiles": [
+          "RepositoryGovernor.ts"
+        ],
+        "found": {
+          "managers": [],
+          "files": []
+        },
+        "missing": {
+          "managers": [
+            "repositoryGovernor"
+          ],
+          "files": [
+            "RepositoryGovernor.ts"
+          ]
+        }
+      },
+      "repositoryMonitor": {
+        "description": "Repository monitoring and health tracking",
+        "expectedLocation": "src/core/governance/monitors/",
+        "expectedFiles": [
+          "RepositoryMonitor.ts"
+        ],
+        "found": {
+          "managers": [],
+          "files": []
+        },
+        "missing": {
+          "managers": [
+            "repositoryMonitor"
+          ],
+          "files": [
+            "RepositoryMonitor.ts"
+          ]
+        }
+      },
+      "alertManager": {
+        "description": "Multi-channel alerting and notification",
+        "expectedLocation": "src/core/governance/alerts/",
+        "expectedFiles": [
+          "AlertManager.ts"
+        ],
+        "found": {
+          "managers": [],
+          "files": []
+        },
+        "missing": {
+          "managers": [
+            "alertManager"
+          ],
+          "files": [
+            "AlertManager.ts"
+          ]
+        }
+      },
+      "policyEngine": {
+        "description": "Automated policy enforcement and compliance",
+        "expectedLocation": "src/core/governance/policies/",
+        "expectedFiles": [
+          "PolicyEngine.ts"
+        ],
+        "found": {
+          "managers": [],
+          "files": []
+        },
+        "missing": {
+          "managers": [
+            "policyEngine"
+          ],
+          "files": [
+            "PolicyEngine.ts"
+          ]
+        }
+      },
+      "apiGraphManager": {
+        "description": "API graph management and optimization",
+        "expectedLocation": "src/api-gateway/graph-manager/",
+        "expectedFiles": [
+          "APIGraphManager.ts"
+        ],
+        "found": {
+          "managers": [],
+          "files": []
+        },
+        "missing": {
+          "managers": [
+            "apiGraphManager"
+          ],
+          "files": [
+            "APIGraphManager.ts"
+          ]
+        }
+      }
+    },
+    "scriptMaster": {
+      "description": "Script orchestration and governance system",
+      "expectedFiles": [
+        "scripts/script_catalog.json",
+        "src/components/SystemMaster/ScriptMaster.tsx",
+        "src/components/SystemMaster/SystemMaster.tsx",
+        "src/components/SystemMaster/types.ts",
+        "src/components/SystemMaster/index.ts"
+      ],
+      "expectedComponents": [
+        "ScriptMaster",
+        "SystemMaster"
+      ],
+      "found": {
+        "files": [
+          "scripts/script_catalog.json",
+          "src/components/SystemMaster/ScriptMaster.tsx",
+          "src/components/SystemMaster/index.ts"
+        ],
+        "components": [
+          {
+            "name": "SystemMaster",
+            "file": "frontend/src/pages/SystemMaster.tsx"
+          },
+          {
+            "name": "ScriptMaster",
+            "file": "src/components/SystemMaster/ScriptMaster.tsx"
+          }
+        ]
+      },
+      "missing": {
+        "files": [
+          "src/components/SystemMaster/SystemMaster.tsx",
+          "src/components/SystemMaster/types.ts"
+        ],
+        "components": []
+      }
+    },
+    "missing": {
+      "managers": [],
+      "components": [],
+      "services": [],
+      "files": []
+    }
+  }
+}

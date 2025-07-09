@@ -1,0 +1,520 @@
+{
+  "metadata": {
+    "sessionId": "big-picture-1752071222082-8d8i23lmb",
+    "timestamp": "2025-07-09T14:27:02.080Z",
+    "command": "big_picture",
+    "version": "1.0.0",
+    "projectRoot": "/Users/home/Developer/greenlight-platform",
+    "environment": "development"
+  },
+  "holons": {
+    "articulate": {
+      "type": "platforms",
+      "path": "src/platforms/articulate",
+      "exists": true,
+      "components": [
+        "index.ts"
+      ],
+      "managers": [],
+      "modules": [
+        "components",
+        "services"
+      ],
+      "status": "active",
+      "lastModified": "2025-07-09T00:49:48.450Z"
+    },
+    "elaborate": {
+      "type": "platforms",
+      "path": "src/platforms/elaborate",
+      "exists": true,
+      "components": [
+        "index.ts"
+      ],
+      "managers": [],
+      "modules": [
+        "components"
+      ],
+      "status": "active",
+      "lastModified": "2025-07-09T00:49:57.802Z"
+    },
+    "knowledge": {
+      "type": "platforms",
+      "path": "src/platforms/knowledge",
+      "exists": true,
+      "components": [],
+      "managers": [],
+      "modules": [
+        "components"
+      ],
+      "status": "incomplete",
+      "lastModified": "2025-07-09T00:48:00.428Z"
+    },
+    "system-master": {
+      "type": "platforms",
+      "path": "src/platforms/system-master",
+      "exists": true,
+      "components": [
+        "index.ts"
+      ],
+      "managers": [],
+      "modules": [
+        "components"
+      ],
+      "status": "active",
+      "lastModified": "2025-07-09T00:50:03.789Z"
+    },
+    "work": {
+      "type": "platforms",
+      "path": "src/platforms/work",
+      "exists": true,
+      "components": [],
+      "managers": [],
+      "modules": [
+        "components"
+      ],
+      "status": "incomplete",
+      "lastModified": "2025-07-09T00:48:00.428Z"
+    },
+    "SystemMaster": {
+      "type": "components",
+      "path": "src/components/SystemMaster",
+      "exists": true,
+      "components": [
+        "InformConsole.tsx",
+        "ObserveConsole.tsx",
+        "ResolveConsole.tsx",
+        "SystemMaster.tsx"
+      ],
+      "managers": [],
+      "modules": [],
+      "status": "incomplete",
+      "lastModified": "2025-07-09T13:29:02.514Z"
+    },
+    "CoachingToolkit": {
+      "type": "components",
+      "path": "src/components/CoachingToolkit",
+      "exists": true,
+      "components": [
+        "CoachingToolkit.tsx",
+        "index.ts",
+        "types.ts"
+      ],
+      "managers": [],
+      "modules": [],
+      "status": "active",
+      "lastModified": "2025-07-09T13:29:02.513Z"
+    },
+    "Elevate": {
+      "type": "components",
+      "path": "src/components/Elevate",
+      "exists": true,
+      "components": [
+        "index.tsx"
+      ],
+      "managers": [],
+      "modules": [],
+      "status": "active",
+      "lastModified": "2025-07-09T13:29:02.514Z"
+    },
+    "Administrate": {
+      "type": "components",
+      "path": "src/components/Administrate",
+      "exists": true,
+      "components": [
+        "index.tsx"
+      ],
+      "managers": [],
+      "modules": [],
+      "status": "active",
+      "lastModified": "2025-07-07T23:07:18.484Z"
+    }
+  },
+  "managers": {
+    "anchor_manager": {
+      "path": "scripts/anchor_manager.cjs",
+      "exists": true,
+      "size": 35202,
+      "lastModified": "2025-07-09T14:05:41.666Z",
+      "purpose": "Provides system-wide anchor command functionality for spot checks",
+      "dependencies": [
+        "fs",
+        "path",
+        "child_process"
+      ]
+    },
+    "boundary_enforcement_manager": {
+      "path": "scripts/protocols/boundary_enforcement_manager.cjs",
+      "exists": true,
+      "size": 16103,
+      "lastModified": "2025-07-09T13:59:21.653Z",
+      "purpose": "Constantly monitors and enforces boundaries between Top_Bins and greenlight-platform",
+      "dependencies": [
+        "fs",
+        "path",
+        "child_process"
+      ]
+    },
+    "client_onboarding_manager": {
+      "path": "scripts/protocols/client_onboarding_manager.cjs",
+      "exists": true,
+      "size": 32562,
+      "lastModified": "2025-07-09T14:00:40.904Z",
+      "purpose": "Comprehensive onboarding system for new client spaces and agent entities",
+      "dependencies": [
+        "fs",
+        "path",
+        "child_process"
+      ]
+    },
+    "prevention_system": {
+      "path": "scripts/protocols/prevention_system.cjs",
+      "exists": true,
+      "size": 18074,
+      "lastModified": "2025-07-09T13:28:57.941Z",
+      "purpose": "Integrates all prevention mechanisms to prevent protocol execution errors,",
+      "dependencies": [
+        "fs",
+        "path",
+        "child_process"
+      ]
+    }
+  },
+  "modules": {
+    "core": {
+      "path": "src/core",
+      "exists": true,
+      "files": [],
+      "submodules": [
+        "auth",
+        "database",
+        "events",
+        "governance",
+        "holons",
+        "operations",
+        "protocols",
+        "session-management",
+        "utils"
+      ],
+      "exports": [],
+      "lastModified": "2025-07-08T20:00:40.028Z"
+    },
+    "services": {
+      "path": "src/services",
+      "exists": true,
+      "files": [
+        "index.ts"
+      ],
+      "submodules": [
+        "ai",
+        "auth",
+        "integrations",
+        "performance"
+      ],
+      "exports": [],
+      "lastModified": "2025-07-09T00:50:46.893Z"
+    },
+    "utils": {
+      "path": "src/utils",
+      "exists": true,
+      "files": [
+        "index.ts"
+      ],
+      "submodules": [
+        "cache",
+        "common",
+        "logger"
+      ],
+      "exports": [],
+      "lastModified": "2025-07-09T00:50:52.537Z"
+    },
+    "hooks": {
+      "path": "src/hooks",
+      "exists": true,
+      "files": [],
+      "submodules": [],
+      "exports": [],
+      "lastModified": "2025-07-08T18:36:13.360Z"
+    },
+    "types": {
+      "path": "src/types",
+      "exists": true,
+      "files": [
+        "global.d.ts",
+        "index.ts",
+        "index.ts.boundary-backup",
+        "schemas.ts",
+        "schemas.ts.boundary-backup"
+      ],
+      "submodules": [],
+      "exports": [
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "type",
+        "type",
+        "type",
+        "interface",
+        "enum",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "interface",
+        "type",
+        "type"
+      ],
+      "lastModified": "2025-07-09T13:29:02.546Z"
+    },
+    "config": {
+      "path": "src/config",
+      "exists": true,
+      "files": [
+        "ConfigManager.ts"
+      ],
+      "submodules": [],
+      "exports": [],
+      "lastModified": "2025-07-08T19:59:31.414Z"
+    },
+    "context-awareness": {
+      "path": "src/context-awareness",
+      "exists": true,
+      "files": [],
+      "submodules": [],
+      "exports": [],
+      "lastModified": "2025-07-07T22:58:03.978Z"
+    },
+    "session-management": {
+      "path": "src/session-management",
+      "exists": true,
+      "files": [],
+      "submodules": [],
+      "exports": [],
+      "lastModified": "2025-07-07T22:58:03.978Z"
+    }
+  },
+  "administrativeUnits": {
+    "governance": {
+      "path": "src/core/governance",
+      "exists": true,
+      "structure": {
+        "GovernanceOrchestrator.ts": "file",
+        "GovernanceOrchestrator.ts.boundary-backup": "file",
+        "ReferenceManager.ts": "file",
+        "documentation": "directory"
+      },
+      "responsibilities": "System governance, policies, and compliance",
+      "lastModified": "2025-07-09T13:29:02.515Z"
+    },
+    "protocols": {
+      "path": "src/protocols",
+      "exists": true,
+      "structure": {},
+      "responsibilities": "System protocols and procedures",
+      "lastModified": "2025-07-07T22:58:03.978Z"
+    },
+    "config": {
+      "path": "config",
+      "exists": true,
+      "structure": {
+        ".gitignore": "file",
+        "README.md": "file",
+        "articulate": "directory",
+        "design-system": "directory",
+        "elaborate": "directory",
+        "environments": "directory",
+        "frontend.gitignore": "file",
+        "google-workspace": "directory",
+        "knowledge": "directory",
+        "security": "directory",
+        "services": "directory",
+        "system-evolution": "directory",
+        "system-master": "directory",
+        "work": "directory"
+      },
+      "responsibilities": "Configuration management and environment setup",
+      "lastModified": "2025-07-09T13:15:33.974Z"
+    },
+    "docs": {
+      "path": "docs",
+      "exists": true,
+      "structure": {
+        "ARCHITECTURE_RECONCILIATION_SUMMARY.md": "file",
+        "ARTICULATE_ROADMAP_INTEGRATION_PLAN.md": "file",
+        "DOCS_INDEX.md": "file",
+        "OPERATIONAL_HOLON_SPECIFICATION.md": "file",
+        "PDF_CONTENT.txt": "file",
+        "SCRIPTMASTER_RULES_AND_SYSTEM.md": "file",
+        "architecture": "directory",
+        "audits": "directory",
+        "deployment": "directory",
+        "design-system": "directory",
+        "guides": "directory",
+        "history": "directory",
+        "linting-migration-context.md": "file",
+        "phases": "directory",
+        "platforms": "directory",
+        "protocols": "directory",
+        "reference": "directory",
+        "research": "directory",
+        "summaries": "directory"
+      },
+      "responsibilities": "Documentation and knowledge management",
+      "lastModified": "2025-07-09T01:29:35.638Z"
+    },
+    "scripts": {
+      "path": "scripts",
+      "exists": true,
+      "structure": {
+        "CHANGELOG.md": "file",
+        "NEXT_SESSION_CONTEXT.md": "file",
+        "anchor_manager.cjs": "file",
+        "audit": "directory",
+        "audit_and_optimize.cjs": "file",
+        "background": "directory",
+        "big_picture.cjs": "file",
+        "cadence": "directory",
+        "cleanup": "directory",
+        "end_of_chat_protocol.js": "file",
+        "file_management_cleanup.ts": "file",
+        "file_management_scan.ts": "file",
+        "google_workspace_sso_setup.cjs": "file",
+        "governance": "directory",
+        "implement_phase1_modularization.cjs": "file",
+        "inventory": "directory",
+        "maintenance": "directory",
+        "migrations": "directory",
+        "protocols": "directory",
+        "register_all_components.ts": "file",
+        "register_all_features.ts": "file",
+        "script_catalog.json": "file",
+        "serve-roadmap.cjs": "file",
+        "serve-roadmap.js": "file",
+        "start_holon_implementation.cjs": "file",
+        "strategic_initiative_1_foundation_setup.cjs": "file",
+        "test-cicd-integration.ts": "file",
+        "test-google-sso.cjs": "file",
+        "test-manager-implementation.ts": "file",
+        "test-product-manager.ts": "file",
+        "test-testing-holon.ts": "file",
+        "test_component_registry_sync.ts": "file",
+        "test_session_tracking.cjs": "file",
+        "update-references.cjs": "file",
+        "wiki_holon_setup.cjs": "file",
+        "wiki_holon_ssl_setup.cjs": "file",
+        "work_sessions": "directory"
+      },
+      "responsibilities": "Automation and utility scripts",
+      "lastModified": "2025-07-09T14:26:46.708Z"
+    },
+    "data": {
+      "path": "data",
+      "exists": true,
+      "structure": {
+        "GOOGLE_SSO_TEST_REPORT.json": "file",
+        "GOOGLE_WORKSPACE_SSO_REPORT.json": "file",
+        "LAUNCH_ERROR.json": "file",
+        "SYSTEM_INVENTORY_REPORT.json": "file",
+        "audits": "directory",
+        "background": "directory",
+        "cicd-protocols.json": "file",
+        "featuresDashboard.json": "file",
+        "featuresRegistry.json": "file",
+        "foundation_setup_report.json": "file",
+        "governance": "directory",
+        "history": "directory",
+        "holon-implementation-status.json": "file",
+        "migrations": "directory",
+        "protocols": "directory",
+        "roadmap-actuals": "directory",
+        "sessions": "directory",
+        "testing": "directory"
+      },
+      "responsibilities": "Data storage and session management",
+      "lastModified": "2025-07-09T12:29:20.836Z"
+    }
+  },
+  "protocols": {
+    "launch_protocol": {
+      "path": "scripts/protocols/launch_protocol.cjs",
+      "exists": true,
+      "version": "2.0.0",
+      "purpose": "Comprehensive protocol for starting new chat sessions with full context preservation,",
+      "status": "active",
+      "lastModified": "2025-07-09T14:22:52.687Z"
+    },
+    "pre_wrap_audit_protocol": {
+      "path": "scripts/protocols/pre_wrap_audit_protocol.cjs",
+      "exists": true,
+      "version": "unknown",
+      "purpose": "Purpose not documented",
+      "status": "active",
+      "lastModified": "2025-07-08T21:27:36.900Z"
+    },
+    "boundary_enforcement_manager": {
+      "path": "scripts/protocols/boundary_enforcement_manager.cjs",
+      "exists": true,
+      "version": "1.0.0",
+      "purpose": "Constantly monitors and enforces boundaries between Top_Bins and greenlight-platform",
+      "status": "active",
+      "lastModified": "2025-07-09T13:59:21.653Z"
+    },
+    "client_onboarding_manager": {
+      "path": "scripts/protocols/client_onboarding_manager.cjs",
+      "exists": true,
+      "version": "1.0.0",
+      "purpose": "Comprehensive onboarding system for new client spaces and agent entities",
+      "status": "active",
+      "lastModified": "2025-07-09T14:00:40.904Z"
+    },
+    "prevention_system": {
+      "path": "scripts/protocols/prevention_system.cjs",
+      "exists": true,
+      "version": "unknown",
+      "purpose": "Integrates all prevention mechanisms to prevent protocol execution errors,",
+      "status": "active",
+      "lastModified": "2025-07-09T13:28:57.941Z"
+    }
+  },
+  "systemHealth": {
+    "buildStatus": "failed",
+    "gitStatus": {
+      "hasChanges": true,
+      "changeCount": 701
+    },
+    "fileStructure": {
+      "src": true,
+      "scripts": true,
+      "config": true,
+      "docs": true,
+      "data": true
+    }
+  },
+  "gaps": [
+    "Incomplete holon: knowledge - missing main component",
+    "Incomplete holon: work - missing main component",
+    "Incomplete holon: SystemMaster - missing main component",
+    "Build system failing - requires immediate attention"
+  ],
+  "recommendations": [
+    "Address identified gaps before proceeding with new features",
+    "Complete development of holons: knowledge, work, SystemMaster",
+    "Fix build issues to ensure system stability",
+    "Implement comprehensive testing for all holons",
+    "Establish monitoring and alerting for system health",
+    "Create documentation for all administrative units"
+  ]
+}

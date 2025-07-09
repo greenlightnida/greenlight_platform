@@ -1,0 +1,24 @@
+{
+  "name": "Cross-Functional Coordination Protocol",
+  "description": "Coordinate improvements across all managers and layers",
+  "triggers": [
+    "cross-functional-issue",
+    "integration-problem",
+    "system-wide-impact"
+  ],
+  "actions": [
+    "Identify affected managers",
+    "Coordinate response plans",
+    "Share knowledge and insights",
+    "Implement coordinated fixes",
+    "Validate cross-functional health",
+    "Update coordination protocols"
+  ],
+  "coordinationPoints": [
+    "Backend-Frontend integration",
+    "API-Holon communication",
+    "Governance-Cross-layer enforcement",
+    "Security-Across-all-layers",
+    "Performance-System-wide optimization"
+  ]
+}

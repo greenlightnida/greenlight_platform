@@ -1,0 +1,21 @@
+{
+  "name": "Manager Knowledge Base",
+  "description": "Centralized knowledge base for all managers",
+  "structure": {
+    "technical": "Technical knowledge and documentation",
+    "process": "Process and workflow documentation",
+    "governance": "Governance and compliance documentation",
+    "bestPractices": "Best practices and guidelines"
+  },
+  "access": {
+    "read": "All managers have read access",
+    "write": "Managers can contribute to their areas of expertise",
+    "admin": "System administrators manage structure and organization"
+  },
+  "features": {
+    "search": "Full-text search across all content",
+    "tagging": "Tag-based organization and filtering",
+    "versioning": "Version control for all content",
+    "collaboration": "Collaborative editing and commenting"
+  }
+}

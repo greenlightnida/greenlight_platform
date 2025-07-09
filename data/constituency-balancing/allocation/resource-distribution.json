@@ -1,0 +1,32 @@
+{
+  "name": "Resource Distribution Mechanisms",
+  "distribution": {
+    "automatic": {
+      "method": "algorithm_based",
+      "frequency": "monthly",
+      "factors": [
+        "allocation_algorithm",
+        "constituency_needs"
+      ],
+      "oversight": "council_chair"
+    },
+    "negotiated": {
+      "method": "constituency_negotiation",
+      "frequency": "quarterly",
+      "factors": [
+        "constituency_priorities",
+        "council_goals"
+      ],
+      "oversight": "council_chair"
+    },
+    "emergency": {
+      "method": "council_decision",
+      "frequency": "as_needed",
+      "factors": [
+        "emergency_priority",
+        "constituency_capacity"
+      ],
+      "oversight": "council_chair"
+    }
+  }
+}

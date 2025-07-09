@@ -1,0 +1,35 @@
+{
+  "name": "Voting and Representation Mechanisms",
+  "mechanisms": {
+    "simpleMajority": {
+      "threshold": 0.5,
+      "use": "routine_decisions",
+      "constituencies": "all",
+      "process": "direct_voting"
+    },
+    "qualifiedMajority": {
+      "threshold": 0.6,
+      "use": "important_decisions",
+      "constituencies": "all",
+      "process": "weighted_voting"
+    },
+    "supermajority": {
+      "threshold": 0.75,
+      "use": "critical_decisions",
+      "constituencies": "all",
+      "process": "weighted_voting"
+    },
+    "consensus": {
+      "threshold": 0.9,
+      "use": "strategic_decisions",
+      "constituencies": "all",
+      "process": "consensus_building"
+    }
+  },
+  "votingProcess": {
+    "proposal": "any_constituency",
+    "deliberation": "all_constituencies",
+    "voting": "weighted_by_constituency",
+    "implementation": "approved_proposals"
+  }
+}

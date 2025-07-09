@@ -1,0 +1,23 @@
+{
+  "name": "Deliberation Mechanisms",
+  "mechanisms": {
+    "structuredDiscussion": {
+      "format": "round_robin",
+      "timeLimit": "per_constituency",
+      "facilitator": "council_chair",
+      "outcome": "position_clarification"
+    },
+    "interestArticulation": {
+      "format": "interest_based",
+      "participants": "all_constituencies",
+      "facilitator": "council_chair",
+      "outcome": "interest_understanding"
+    },
+    "solutionExploration": {
+      "format": "brainstorming",
+      "participants": "all_constituencies",
+      "facilitator": "council_chair",
+      "outcome": "solution_options"
+    }
+  }
+}

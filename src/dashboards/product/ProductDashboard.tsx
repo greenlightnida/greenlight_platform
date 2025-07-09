@@ -1,0 +1,559 @@
+import { useState, useEffect } from 'react';
+import './ProductDashboard.css';
+
+// Types
+interface RequirementData {
+  id: string;
+  title: string;
+  description: string;
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  status: 'draft' | 'review' | 'approved' | 'in-progress' | 'completed';
+  category: string;
+  assignedTo?: string;
+  estimatedEffort: number;
+  actualEffort?: number;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+interface InitiativeData {
+  id: string;
+  name: string;
+  description: string;
+  status: 'planning' | 'active' | 'paused' | 'completed' | 'cancelled';
+  priority: 'low' | 'medium' | 'high' | 'critical';
+  startDate: Date;
+  endDate?: Date;
+  requirements: string[];
+  progress: number;
+  budget: number;
+  spentBudget?: number;
+  team: string[];
+}
+
+interface GovernanceData {
+  totalRequirements: number;
+  approvedRequirements: number;
+  inProgressRequirements: number;
+  completedRequirements: number;
+  totalInitiatives: number;
+  activeInitiatives: number;
+  completedInitiatives: number;
+  complianceRate: number;
+  recommendations: string[];
+}
+
+// Components
+const DashboardHeader: React.FC = () => (
+  <header className="dashboard-header">
+    <h1>Product Management Dashboard</h1>
+    <p>Professional product requirements and initiative management</p>
+  </header>
+);
+
+const MetricsOverview: React.FC<{ data?: GovernanceData | undefined }> = ({ data }) => {
+  if (!data) return <div className="metrics-overview loading">Loading metrics...</div>;
+
+  return (
+    <div className="metrics-overview">
+      <div className="metrics-grid">
+        <div className="metric-card">
+          <div className="metric-value">{data.totalRequirements}</div>
+          <div className="metric-label">Total Requirements</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-value">{data.approvedRequirements}</div>
+          <div className="metric-label">Approved</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-value">{data.inProgressRequirements}</div>
+          <div className="metric-label">In Progress</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-value">{data.completedRequirements}</div>
+          <div className="metric-label">Completed</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-value">{data.totalInitiatives}</div>
+          <div className="metric-label">Total Initiatives</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-value">{data.activeInitiatives}</div>
+          <div className="metric-label">Active Initiatives</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-value">{data.completedInitiatives}</div>
+          <div className="metric-label">Completed Initiatives</div>
+        </div>
+        <div className="metric-card">
+          <div className="metric-value">{data.complianceRate}%</div>
+          <div className="metric-label">Compliance Rate</div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const RequirementsTable: React.FC<{ data?: RequirementData[] | undefined }> = ({ data }) => {
+  const [sortField, setSortField] = useState<keyof RequirementData>('title');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+  const [filterStatus, setFilterStatus] = useState<string>('all');
+  const [filterPriority, setFilterPriority] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+
+  if (!data) return <div className="requirements-table loading">Loading requirements...</div>;
+
+  // const handleSort = () => {}; // Unused function
+
+  const filteredData = data
+    .filter(req => 
+      filterStatus === 'all' || req.status === filterStatus
+    )
+    .filter(req =>
+      filterPriority === 'all' || req.priority === filterPriority
+    )
+    .filter(req =>
+      req.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      req.description.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .sort((a, b) => {
+      const aValue = a[sortField];
+      const bValue = b[sortField];
+      
+      if (typeof aValue === 'string' && typeof bValue === 'string') {
+        return sortDirection === 'asc' 
+          ? aValue.localeCompare(bValue)
+          : bValue.localeCompare(aValue);
+      }
+      
+      if (typeof aValue === 'number' && typeof bValue === 'number') {
+        return sortDirection === 'asc' ? aValue - bValue : bValue - aValue;
+      }
+      
+      if (aValue instanceof Date && bValue instanceof Date) {
+        return sortDirection === 'asc' ? aValue.getTime() - bValue.getTime() : bValue.getTime() - aValue.getTime();
+      }
+      
+      return 0;
+    });
+
+  // const getStatusBadge = () => {}; // Unused function
+
+  // const getPriorityBadge = () => {}; // Unused function
+
+  const statuses = Array.from(new Set(data.map(r => r.status)));
+  const priorities = Array.from(new Set(data.map(r => r.priority)));
+
+  return (
+    <div className="requirements-section">
+      <div className="section-header">
+        <h2>Requirements</h2>
+        <div className="controls">
+          <select 
+            value={filterStatus} 
+            onChange={(e) => setFilterStatus(e.target.value)}
+            className="filter-select"
+          >
+            <option value="all">All Statuses</option>
+            {statuses.map(status => (
+              <option key={status} value={status}>{status}</option>
+            ))}
+          </select>
+          <select 
+            value={filterPriority} 
+            onChange={(e) => setFilterPriority(e.target.value)}
+            className="filter-select"
+          >
+            <option value="all">All Priorities</option>
+            {priorities.map(priority => (
+              <option key={priority} value={priority}>{priority}</option>
+            ))}
+          </select>
+          <input
+            type="text"
+            placeholder="Search requirements..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+        </div>
+      </div>
+      
+      <div className="table-container">
+        <table className="professional-table">
+          <thead>
+            <tr>
+              <th onClick={() => handleSort('title')} className="sortable">
+                Title {sortField === 'title' && (sortDirection === 'asc' ? '↑' : '↓')}
+              </th>
+              <th onClick={() => handleSort('status')} className="sortable">
+                Status {sortField === 'status' && (sortDirection === 'asc' ? '↑' : '↓')}
+              </th>
+              <th onClick={() => handleSort('priority')} className="sortable">
+                Priority {sortField === 'priority' && (sortDirection === 'asc' ? '↑' : '↓')}
+              </th>
+              <th onClick={() => handleSort('category')} className="sortable">
+                Category {sortField === 'category' && (sortDirection === 'asc' ? '↑' : '↓')}
+              </th>
+              <th onClick={() => handleSort('estimatedEffort')} className="sortable">
+                Est. Effort {sortField === 'estimatedEffort' && (sortDirection === 'asc' ? '↑' : '↓')}
+              </th>
+              <th onClick={() => handleSort('createdAt')} className="sortable">
+                Created {sortField === 'createdAt' && (sortDirection === 'asc' ? '↑' : '↓')}
+              </th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredData.map(requirement => (
+              <tr key={requirement.id}>
+                <td>
+                  <div className="requirement-title">
+                    <strong>{requirement.title}</strong>
+                    <small>{requirement.description.substring(0, 60)}...</small>
+                  </div>
+                </td>
+                <td>{getStatusBadge(requirement.status)}</td>
+                <td>{getPriorityBadge(requirement.priority)}</td>
+                <td>{requirement.category}</td>
+                <td>{requirement.estimatedEffort} days</td>
+                <td>{requirement.createdAt.toLocaleDateString()}</td>
+                <td>
+                  <button className="action-button">View</button>
+                  <button className="action-button">Edit</button>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
+const InitiativesTable: React.FC<{ data?: InitiativeData[] | undefined }> = ({ data }) => {
+  const [sortField, setSortField] = useState<keyof InitiativeData>('name');
+  const [sortDirection, setSortDirection] = useState<'asc' | 'desc'>('asc');
+  const [filterStatus, setFilterStatus] = useState<string>('all');
+  const [searchTerm, setSearchTerm] = useState<string>('');
+
+  if (!data) return <div className="initiatives-table loading">Loading initiatives...</div>;
+
+  // const handleSort = () => {}; // Unused function
+
+  const filteredData = data
+    .filter(init => 
+      filterStatus === 'all' || init.status === filterStatus
+    )
+    .filter(init =>
+      init.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      init.description.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .sort((a, b) => {
+      const aValue = a[sortField];
+      const bValue = b[sortField];
+      
+      if (typeof aValue === 'string' && typeof bValue === 'string') {
+        return sortDirection === 'asc' 
+          ? aValue.localeCompare(bValue)
+          : bValue.localeCompare(aValue);
+      }
+      
+      if (typeof aValue === 'number' && typeof bValue === 'number') {
+        return sortDirection === 'asc' ? aValue - bValue : bValue - aValue;
+      }
+      
+      return 0;
+    });
+
+  // const getStatusBadge = () => {}; // Unused function
+
+  // const getPriorityBadge = () => {}; // Unused function
+
+  const statuses = Array.from(new Set(data.map(i => i.status)));
+
+  return (
+    <div className="initiatives-section">
+      <div className="section-header">
+        <h2>Initiatives</h2>
+        <div className="controls">
+          <select 
+            value={filterStatus} 
+            onChange={(e) => setFilterStatus(e.target.value)}
+            className="filter-select"
+          >
+            <option value="all">All Statuses</option>
+            {statuses.map(status => (
+              <option key={status} value={status}>{status}</option>
+            ))}
+          </select>
+          <input
+            type="text"
+            placeholder="Search initiatives..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+        </div>
+      </div>
+      
+      <div className="initiatives-grid">
+        {filteredData.map(initiative => (
+          <div key={initiative.id} className="initiative-card">
+            <div className="card-header">
+              <h3>{initiative.name}</h3>
+              <div className="badges">
+                {getStatusBadge(initiative.status)}
+                {getPriorityBadge(initiative.priority)}
+              </div>
+            </div>
+            
+            <p className="description">{initiative.description}</p>
+            
+            <div className="progress-section">
+              <div className="progress-bar">
+                <div 
+                  className="progress-fill" 
+                  style={{ width: `${initiative.progress}%` }}
+                />
+                <span className="progress-text">{initiative.progress}%</span>
+              </div>
+            </div>
+            
+            <div className="initiative-details">
+              <div className="detail-item">
+                <strong>Start Date:</strong>
+                <span>{initiative.startDate.toLocaleDateString()}</span>
+              </div>
+              {initiative.endDate && (
+                <div className="detail-item">
+                  <strong>End Date:</strong>
+                  <span>{initiative.endDate.toLocaleDateString()}</span>
+                </div>
+              )}
+              <div className="detail-item">
+                <strong>Requirements:</strong>
+                <span>{initiative.requirements.length}</span>
+              </div>
+              <div className="detail-item">
+                <strong>Team Size:</strong>
+                <span>{initiative.team.length}</span>
+              </div>
+              <div className="detail-item">
+                <strong>Budget:</strong>
+                <span>${initiative.budget.toLocaleString()}</span>
+              </div>
+              {initiative.spentBudget && (
+                <div className="detail-item">
+                  <strong>Spent:</strong>
+                  <span>${initiative.spentBudget.toLocaleString()}</span>
+                </div>
+              )}
+            </div>
+            
+            <div className="card-actions">
+              <button className="action-button">View Details</button>
+              <button className="action-button">Update Progress</button>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const GovernancePanel: React.FC<{ data?: GovernanceData | undefined }> = ({ data }) => {
+  if (!data) return <div className="governance-panel loading">Loading governance data...</div>;
+
+  return (
+    <div className="governance-section">
+      <div className="section-header">
+        <h2>Governance & Compliance</h2>
+      </div>
+      
+      <div className="compliance-summary">
+        <div className="compliance-metric">
+          <div className="compliance-circle">
+            <div className="compliance-value">{data.complianceRate}%</div>
+            <div className="compliance-label">Compliance Rate</div>
+          </div>
+        </div>
+        
+        <div className="compliance-breakdown">
+          <div className="breakdown-item">
+            <div className="breakdown-label">Requirements</div>
+            <div className="breakdown-bar">
+              <div 
+                className="breakdown-fill" 
+                style={{ width: `${(data.approvedRequirements / data.totalRequirements) * 100}%` }}
+              />
+            </div>
+            <div className="breakdown-value">{data.approvedRequirements}/{data.totalRequirements}</div>
+          </div>
+          
+          <div className="breakdown-item">
+            <div className="breakdown-label">Initiatives</div>
+            <div className="breakdown-bar">
+              <div 
+                className="breakdown-fill" 
+                style={{ width: `${(data.activeInitiatives / data.totalInitiatives) * 100}%` }}
+              />
+            </div>
+            <div className="breakdown-value">{data.activeInitiatives}/{data.totalInitiatives}</div>
+          </div>
+        </div>
+      </div>
+
+      {data.recommendations.length > 0 && (
+        <div className="recommendations">
+          <h3>Recommendations</h3>
+          <ul>
+            {data.recommendations.map((rec, index) => (
+              <li key={index}>{rec}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+};
+
+// Helper function for status badge
+function getStatusBadge(status: string) {
+  switch (status) {
+    case 'active': return <span className="bg-green-200 text-green-800 px-2 py-1 rounded">Active</span>;
+    case 'inactive': return <span className="bg-gray-200 text-gray-800 px-2 py-1 rounded">Inactive</span>;
+    case 'pending': return <span className="bg-yellow-200 text-yellow-800 px-2 py-1 rounded">Pending</span>;
+    default: return <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded">Unknown</span>;
+  }
+}
+
+// Helper function for priority badge
+function getPriorityBadge(priority: string) {
+  switch (priority) {
+    case 'high': return <span className="bg-red-100 text-red-800 px-2 py-1 rounded">High</span>;
+    case 'medium': return <span className="bg-yellow-100 text-yellow-800 px-2 py-1 rounded">Medium</span>;
+    case 'low': return <span className="bg-green-100 text-green-800 px-2 py-1 rounded">Low</span>;
+    default: return <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded">Unknown</span>;
+  }
+}
+
+// Restore handleSort if referenced
+const handleSort = (field: string) => {
+  // Implementation placeholder
+};
+
+// Main Dashboard Component
+export const ProductDashboard: React.FC = () => {
+  const [requirements, setRequirements] = useState<RequirementData[]>();
+  const [initiatives, setInitiatives] = useState<InitiativeData[]>();
+  const [governance, setGovernance] = useState<GovernanceData>();
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Simulate loading data
+    const loadDashboardData = async () => {
+      setLoading(true);
+      
+      // Mock data for demonstration
+      setTimeout(() => {
+        setRequirements([
+          {
+            id: 'req-001',
+            title: 'User Authentication System',
+            description: 'Implement secure user authentication with multi-factor support',
+            priority: 'high',
+            status: 'approved',
+            category: 'Security',
+            assignedTo: 'Team Alpha',
+            estimatedEffort: 15,
+            createdAt: new Date('2025-01-01'),
+            updatedAt: new Date('2025-01-08')
+          },
+          {
+            id: 'req-002',
+            title: 'Dashboard Analytics',
+            description: 'Create comprehensive analytics dashboard for user insights',
+            priority: 'medium',
+            status: 'in-progress',
+            category: 'Analytics',
+            assignedTo: 'Team Beta',
+            estimatedEffort: 20,
+            actualEffort: 12,
+            createdAt: new Date('2025-01-02'),
+            updatedAt: new Date('2025-01-08')
+          }
+        ]);
+
+        setInitiatives([
+          {
+            id: 'init-001',
+            name: 'Security Enhancement',
+            description: 'Comprehensive security improvements across the platform',
+            status: 'active',
+            priority: 'critical',
+            startDate: new Date('2025-01-01'),
+            endDate: new Date('2025-03-31'),
+            requirements: ['req-001'],
+            progress: 65,
+            budget: 50000,
+            spentBudget: 32500,
+            team: ['Alice', 'Bob', 'Charlie']
+          },
+          {
+            id: 'init-002',
+            name: 'Analytics Platform',
+            description: 'Build advanced analytics and reporting capabilities',
+            status: 'active',
+            priority: 'high',
+            startDate: new Date('2025-01-15'),
+            endDate: new Date('2025-04-30'),
+            requirements: ['req-002'],
+            progress: 35,
+            budget: 75000,
+            spentBudget: 26250,
+            team: ['David', 'Eve', 'Frank']
+          }
+        ]);
+
+        setGovernance({
+          totalRequirements: 25,
+          approvedRequirements: 18,
+          inProgressRequirements: 5,
+          completedRequirements: 2,
+          totalInitiatives: 8,
+          activeInitiatives: 5,
+          completedInitiatives: 2,
+          complianceRate: 85,
+          recommendations: [
+            'Accelerate completion of high-priority requirements',
+            'Review and update initiative timelines',
+            'Consider additional resources for critical initiatives'
+          ]
+        });
+
+        setLoading(false);
+      }, 1000);
+    };
+
+    loadDashboardData();
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="product-dashboard loading">
+        <div className="loading-spinner">Loading Product Dashboard...</div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="product-dashboard">
+      <DashboardHeader />
+      <MetricsOverview data={governance || undefined} />
+      <RequirementsTable data={requirements || undefined} />
+      <InitiativesTable data={initiatives || undefined} />
+      <GovernancePanel data={governance || undefined} />
+    </div>
+  );
+}; 

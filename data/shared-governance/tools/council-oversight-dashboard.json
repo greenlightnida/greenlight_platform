@@ -1,0 +1,46 @@
+{
+  "name": "Council Oversight Dashboard",
+  "access": [
+    "council-chair",
+    "executive-committee"
+  ],
+  "features": {
+    "committeePerformance": {
+      "metrics": [
+        "effectiveness",
+        "efficiency",
+        "innovation",
+        "learning"
+      ],
+      "visualization": "real-time_charts",
+      "alerts": "threshold_based"
+    },
+    "resourceUtilization": {
+      "metrics": [
+        "allocation",
+        "efficiency",
+        "availability"
+      ],
+      "visualization": "resource_maps",
+      "optimization": "automated_recommendations"
+    },
+    "strategicAlignment": {
+      "metrics": [
+        "alignment_score",
+        "goal_progress",
+        "strategic_impact"
+      ],
+      "visualization": "alignment_matrix",
+      "insights": "trend_analysis"
+    },
+    "riskManagement": {
+      "metrics": [
+        "risk_level",
+        "mitigation_effectiveness",
+        "emerging_risks"
+      ],
+      "visualization": "risk_heatmap",
+      "alerts": "risk_thresholds"
+    }
+  }
+}

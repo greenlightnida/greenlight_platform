@@ -1,0 +1,16 @@
+{
+  "planning": {
+    "horizon": 30,
+    "granularity": "daily",
+    "factors": [
+      "load",
+      "growth",
+      "seasonality"
+    ]
+  },
+  "optimization": {
+    "efficiency": 0.9,
+    "cost": 0.8,
+    "performance": 0.9
+  }
+}

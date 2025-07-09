@@ -1,0 +1,16 @@
+{
+  "name": "Manager Collaboration Tools",
+  "description": "Tools for collaboration between managers",
+  "tools": {
+    "communication": "Communication tools and channels",
+    "project": "Project management and coordination tools",
+    "documentation": "Collaborative documentation tools",
+    "decision": "Decision-making and consensus tools"
+  },
+  "features": {
+    "realTime": "Real-time collaboration features",
+    "async": "Asynchronous collaboration features",
+    "tracking": "Progress tracking and accountability",
+    "integration": "Integration with existing tools and systems"
+  }
+}

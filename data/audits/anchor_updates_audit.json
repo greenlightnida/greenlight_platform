@@ -1,0 +1,1894 @@
+[
+  {
+    "timestamp": "2025-07-09T14:06:31.724Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T15:57:16.200Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:02:33.388Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:03:34.436Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:11:52.650Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:17:17.241Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:29:04.913Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:31:37.566Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:32:16.117Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:33:29.943Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:35:21.694Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:36:20.693Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:38:57.838Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T16:42:03.012Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:07:04.076Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:14:41.471Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:20:04.891Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:29:46.598Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:31:02.409Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:31:53.846Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:33:08.100Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:43:11.550Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:44:17.609Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:46:07.716Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:46:38.144Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:46:58.132Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T17:50:11.040Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:01:49.337Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:03:00.352Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:07:53.389Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:09:01.908Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:14:10.484Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:43:18.345Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:44:38.352Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:45:24.110Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:45:56.783Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:46:47.477Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:54:55.132Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T18:55:28.596Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T19:01:55.618Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T19:08:15.347Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T19:35:13.738Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T19:55:57.617Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T20:50:16.948Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T20:55:47.591Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:03:14.856Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:04:42.290Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:36:38.815Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:37:34.132Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:43:54.031Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:45:41.730Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:46:54.344Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:47:27.296Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:48:47.205Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T21:51:32.290Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T22:00:07.054Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": []
+    },
+    "postAuditUpdateRatio": "2 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T22:24:49.603Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  },
+  {
+    "timestamp": "2025-07-09T22:27:36.512Z",
+    "auditResults": {
+      "dependencyUpdates": [],
+      "configurationUpdates": [],
+      "launchIssues": [
+        {
+          "name": "Port Conflicts",
+          "issue": "Ports may be in use",
+          "priority": "medium"
+        }
+      ],
+      "contextGaps": [
+        {
+          "type": "missing_documentation",
+          "file": "docs/ARCHITECTURE.md",
+          "priority": "medium"
+        },
+        {
+          "type": "missing_documentation",
+          "file": "docs/DEPLOYMENT.md",
+          "priority": "medium"
+        }
+      ],
+      "roadmapAdditions": [
+        {
+          "type": "fix",
+          "title": "Fix launch issue: Port Conflicts",
+          "description": "Ports may be in use",
+          "priority": "high",
+          "estimatedEffort": "1-2 hours"
+        }
+      ]
+    },
+    "postAuditUpdateRatio": "3 updates / 4 platforms"
+  }
+]

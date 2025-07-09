@@ -1,0 +1,9 @@
+{
+  "analysisWindow": 86400000,
+  "trendDetection": {
+    "shortTerm": 3600000,
+    "mediumTerm": 86400000,
+    "longTerm": 604800000
+  },
+  "sensitivity": 0.1
+}

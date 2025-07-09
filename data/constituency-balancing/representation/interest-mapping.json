@@ -1,0 +1,95 @@
+{
+  "name": "Constituency Interest Mapping",
+  "interests": {
+    "system_operations": {
+      "constituencies": [
+        "executive",
+        "performance"
+      ],
+      "priority": "high",
+      "conflicts": [
+        "security_constraints",
+        "resource_limitations"
+      ],
+      "synergies": [
+        "performance_optimization",
+        "efficiency_improvement"
+      ]
+    },
+    "security_compliance": {
+      "constituencies": [
+        "security",
+        "governance"
+      ],
+      "priority": "critical",
+      "conflicts": [
+        "operational_flexibility",
+        "performance_optimization"
+      ],
+      "synergies": [
+        "risk_management",
+        "compliance_assurance"
+      ]
+    },
+    "performance_optimization": {
+      "constituencies": [
+        "performance",
+        "executive"
+      ],
+      "priority": "high",
+      "conflicts": [
+        "security_constraints",
+        "resource_limitations"
+      ],
+      "synergies": [
+        "efficiency_improvement",
+        "user_experience"
+      ]
+    },
+    "service_integration": {
+      "constituencies": [
+        "integration",
+        "executive"
+      ],
+      "priority": "medium",
+      "conflicts": [
+        "security_constraints",
+        "performance_requirements"
+      ],
+      "synergies": [
+        "connectivity_improvement",
+        "operational_efficiency"
+      ]
+    },
+    "learning_systems": {
+      "constituencies": [
+        "intelligence",
+        "executive"
+      ],
+      "priority": "medium",
+      "conflicts": [
+        "resource_limitations",
+        "performance_requirements"
+      ],
+      "synergies": [
+        "innovation_improvement",
+        "anticipatory_capabilities"
+      ]
+    },
+    "policy_enforcement": {
+      "constituencies": [
+        "governance",
+        "security"
+      ],
+      "priority": "high",
+      "conflicts": [
+        "operational_flexibility",
+        "innovation_requirements"
+      ],
+      "synergies": [
+        "compliance_assurance",
+        "risk_management"
+      ]
+    }
+  }
+}

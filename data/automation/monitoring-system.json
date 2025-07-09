@@ -1,0 +1,20 @@
+{
+  "name": "Automated Monitoring System",
+  "description": "Automated monitoring across all manager domains",
+  "monitoring": {
+    "health": "System health monitoring",
+    "performance": "Performance monitoring",
+    "security": "Security monitoring",
+    "compliance": "Compliance monitoring"
+  },
+  "alerts": {
+    "critical": "Critical issue alerts",
+    "warning": "Warning alerts",
+    "info": "Informational alerts"
+  },
+  "actions": {
+    "autoFix": "Automatic fixing of common issues",
+    "escalation": "Automatic escalation of critical issues",
+    "notification": "Automatic notification of relevant managers"
+  }
+}

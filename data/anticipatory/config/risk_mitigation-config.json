@@ -1,0 +1,13 @@
+{
+  "mitigation": {
+    "automatic": true,
+    "manual": true,
+    "escalation": "high_risk"
+  },
+  "strategies": {
+    "avoidance": 0.4,
+    "reduction": 0.3,
+    "transfer": 0.2,
+    "acceptance": 0.1
+  }
+}

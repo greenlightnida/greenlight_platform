@@ -1,0 +1,14 @@
+{
+  "name": "Integration Committee",
+  "parent": "CouncilMasterManager",
+  "chair": "IntegrationCommitteeManager",
+  "purpose": "Integration governance and service connectivity",
+  "managers": [
+    "IntegrationCommitteeManager",
+    "APIGovernanceManager",
+    "ServiceIntegrationManager",
+    "IntegrationTestingManager",
+    "IntegrationMonitoringManager",
+    "IntegrationAutomationManager"
+  ]
+}

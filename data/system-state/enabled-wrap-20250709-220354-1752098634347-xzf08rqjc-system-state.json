@@ -1,0 +1,12 @@
+{
+  "timestamp": "2025-07-09T22:04:51.744Z",
+  "nodeVersion": "v22.16.0",
+  "platform": "darwin",
+  "cwd": "/Users/home/Developer/greenlight-platform",
+  "env": "development",
+  "warnings": 5,
+  "issues": 0,
+  "successes": 1,
+  "contextPreserved": true,
+  "userEnabled": true
+}

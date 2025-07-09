@@ -1,0 +1,20 @@
+{
+  "lastUpdated": "2025-07-09T17:29:29.160Z",
+  "summary": {
+    "totalPlannedMilestones": 2,
+    "totalActualMilestones": 2,
+    "completedMilestones": 2,
+    "inProgressMilestones": 0,
+    "blockedMilestones": 0,
+    "overallProgress": 100
+  },
+  "executiveSummary": {
+    "overallStatus": "on-track",
+    "keyAchievements": [
+      "2 milestones completed successfully"
+    ],
+    "keyChallenges": [],
+    "recommendations": []
+  },
+  "reportPath": "data/roadmap-actuals/reports/actuals-report-1752082169159.json"
+}

@@ -1,0 +1,35 @@
+{
+  "name": "Fair Allocation Algorithms",
+  "algorithms": {
+    "proportionalAllocation": {
+      "method": "voting_weight_based",
+      "factors": [
+        "constituency_size",
+        "voting_weight",
+        "priority_level"
+      ],
+      "output": "proportional_resources",
+      "fairness": "weighted_equity"
+    },
+    "needBasedAllocation": {
+      "method": "need_assessment",
+      "factors": [
+        "constituency_needs",
+        "priority_level",
+        "impact_potential"
+      ],
+      "output": "need_based_resources",
+      "fairness": "need_equity"
+    },
+    "meritBasedAllocation": {
+      "method": "performance_assessment",
+      "factors": [
+        "constituency_performance",
+        "efficiency",
+        "effectiveness"
+      ],
+      "output": "merit_based_resources",
+      "fairness": "merit_equity"
+    }
+  }
+}

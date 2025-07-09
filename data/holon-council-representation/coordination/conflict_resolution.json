@@ -1,0 +1,26 @@
+{
+  "name": "Holon Conflict Resolution",
+  "resolution": {
+    "mediation": {
+      "name": "Mediation",
+      "mediator": "CouncilChair",
+      "process": "facilitated_discussion",
+      "timeframe": "within_week",
+      "outcome": "mediated_agreement"
+    },
+    "arbitration": {
+      "name": "Arbitration",
+      "arbitrator": "CouncilChair",
+      "process": "binding_decision",
+      "timeframe": "within_week",
+      "outcome": "arbitrated_decision"
+    },
+    "escalation": {
+      "name": "Escalation",
+      "escalation": "CouncilVote",
+      "process": "weighted_voting",
+      "timeframe": "within_month",
+      "outcome": "council_decision"
+    }
+  }
+}

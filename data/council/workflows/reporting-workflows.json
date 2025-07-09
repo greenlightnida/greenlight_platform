@@ -1,0 +1,42 @@
+{
+  "daily_reporting": {
+    "committees": [
+      "executive",
+      "security",
+      "performance"
+    ],
+    "content": [
+      "status",
+      "issues",
+      "progress"
+    ],
+    "format": "automated_dashboard"
+  },
+  "weekly_reporting": {
+    "committees": "all",
+    "content": [
+      "detailed_progress",
+      "metrics",
+      "challenges"
+    ],
+    "format": "comprehensive_report"
+  },
+  "monthly_reporting": {
+    "committees": "all",
+    "content": [
+      "strategic_progress",
+      "performance_analysis",
+      "planning"
+    ],
+    "format": "executive_summary"
+  },
+  "quarterly_reporting": {
+    "committees": "all",
+    "content": [
+      "strategic_review",
+      "performance_evaluation",
+      "planning"
+    ],
+    "format": "strategic_report"
+  }
+}

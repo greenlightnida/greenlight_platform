@@ -1,0 +1,43 @@
+{
+  "name": "Shared Learning System Governance",
+  "description": "Shared governance of learning system between Council Chair and Executive Committee",
+  "participants": {
+    "councilChair": {
+      "role": "Strategic Learning Oversight",
+      "permissions": [
+        "full_access",
+        "strategic_planning",
+        "resource_allocation"
+      ],
+      "responsibilities": [
+        "Strategic learning direction and planning",
+        "Learning system resource allocation",
+        "Cross-committee learning coordination",
+        "Learning system performance oversight"
+      ]
+    },
+    "executiveCommittee": {
+      "role": "Operational Learning Management",
+      "permissions": [
+        "operational_access",
+        "implementation",
+        "monitoring"
+      ],
+      "responsibilities": [
+        "Operational learning system management",
+        "Learning implementation and execution",
+        "Learning system monitoring and optimization",
+        "Committee-specific learning coordination"
+      ]
+    }
+  },
+  "coordination": {
+    "frequency": "continuous",
+    "mechanisms": [
+      "Shared learning dashboard",
+      "Collaborative learning sessions",
+      "Joint decision-making processes",
+      "Performance review meetings"
+    ]
+  }
+}

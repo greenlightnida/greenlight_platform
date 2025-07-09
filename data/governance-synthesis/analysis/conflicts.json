@@ -1,0 +1,9 @@
+[
+  {
+    "type": "duplicate_interface",
+    "name": "CommandExecution",
+    "files": [
+      "src/core/governance/CommandCenterCoach.ts"
+    ]
+  }
+]

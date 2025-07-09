@@ -1,0 +1,27 @@
+{
+  "name": "Governance Integration Summary",
+  "timestamp": "2025-07-09T23:01:11.059Z",
+  "status": {
+    "synthesis": false,
+    "consolidation": true,
+    "integration": true,
+    "validation": false
+  },
+  "elements": {
+    "total": 56,
+    "core": 8,
+    "holons": 1,
+    "scripts": 9,
+    "configs": 11,
+    "docs": 5,
+    "data": 22,
+    "orphaned": 0
+  },
+  "integration": {
+    "constituency_balancing": "integrated",
+    "governance_orchestrator": "integrated",
+    "policy_engine": "integrated",
+    "monitoring": "integrated",
+    "reporting": "integrated"
+  }
+}

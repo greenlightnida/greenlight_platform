@@ -1,0 +1,2468 @@
+{
+  "assessmentId": "system_assessment_1752090226468",
+  "generatedAt": "2025-07-09T19:43:46.503Z",
+  "summary": {
+    "totalHolons": 6,
+    "readyHolons": 5,
+    "totalManagers": 5,
+    "readyManagers": 4
+  },
+  "holonAssessment": {
+    "TestingHolon": {
+      "name": "TestingHolon",
+      "status": "ready",
+      "requirements": [
+        "Performance metrics collection integration",
+        "Test result correlation with OKRs",
+        "Quality gate integration with objectives"
+      ],
+      "constraints": [
+        "Must not interfere with existing test execution",
+        "Test data must be preserved for historical analysis"
+      ],
+      "recommendations": [
+        "Integrate test results with Performance Manager metrics",
+        "Create test-to-objective mapping system",
+        "Implement quality gates based on OKR progress"
+      ],
+      "integrationPoints": [
+        "src/core/testing/TestManager.ts",
+        "src/core/testing/QualityGates.ts",
+        "src/core/testing/MetricsCollector.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [
+        {
+          "file": "src/core/testing/TestManager.ts",
+          "snippet": "\n// Integration with Performance Manager\nasync function integrateWithPerformanceManager(testResult: TestResult): Promise<void> {\n    const performanceMetrics = await PerformanceManager.recordTestResult(testResult);\n    await OKRManager.updateProgressFromTest(testResult.objectiveId, testResult);\n}\n                            "
+        }
+      ],
+      "variables": []
+    },
+    "CommandCenterHolon": {
+      "name": "CommandCenterHolon",
+      "status": "ready",
+      "requirements": [
+        "Command execution tracking with OKRs",
+        "User interaction correlation with objectives",
+        "Real-time performance monitoring"
+      ],
+      "constraints": [
+        "Must maintain command execution speed",
+        "User experience must not be degraded"
+      ],
+      "recommendations": [
+        "Track command success rates against objectives",
+        "Correlate user interactions with OKR progress",
+        "Implement real-time performance dashboards"
+      ],
+      "integrationPoints": [
+        "src/core/command/CommandManager.ts",
+        "src/core/command/UserInteractionTracker.ts",
+        "src/core/command/PerformanceMonitor.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [
+        {
+          "file": "src/core/command/CommandManager.ts",
+          "snippet": "\n// Performance Manager integration\nasync function executeCommandWithTracking(command: Command): Promise<CommandResult> {\n    const startTime = Date.now();\n    const result = await executeCommand(command);\n    const duration = Date.now() - startTime;\n    \n    await PerformanceManager.recordCommandExecution({\n        command: command.name,\n        duration,\n        success: result.success,\n        objectiveId: command.objectiveId\n    });\n    \n    return result;\n}\n                            "
+        }
+      ],
+      "variables": []
+    },
+    "GovernanceHolon": {
+      "name": "GovernanceHolon",
+      "status": "ready",
+      "requirements": [
+        "Policy compliance tracking with objectives",
+        "Standards enforcement monitoring",
+        "Risk assessment integration"
+      ],
+      "constraints": [
+        "Must maintain governance integrity",
+        "Compliance reporting must be accurate"
+      ],
+      "recommendations": [
+        "Link governance policies to OKR objectives",
+        "Track compliance metrics against targets",
+        "Integrate risk assessment with performance monitoring"
+      ],
+      "integrationPoints": [
+        "src/core/governance/PolicyManager.ts",
+        "src/core/governance/ComplianceTracker.ts",
+        "src/core/governance/RiskManager.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [
+        {
+          "file": "src/core/governance/PolicyManager.ts",
+          "snippet": "\n// Performance Manager integration\nasync function enforcePolicyWithTracking(policy: Policy, context: Context): Promise<PolicyResult> {\n    const result = await enforcePolicy(policy, context);\n    \n    await PerformanceManager.recordPolicyEnforcement({\n        policyId: policy.id,\n        compliance: result.compliant,\n        objectiveId: policy.objectiveId,\n        riskLevel: result.riskLevel\n    });\n    \n    return result;\n}\n                            "
+        }
+      ],
+      "variables": []
+    },
+    "WorkHolon": {
+      "name": "WorkHolon",
+      "status": "ready",
+      "requirements": [
+        "Workflow performance tracking",
+        "Task completion correlation with objectives",
+        "Resource utilization monitoring"
+      ],
+      "constraints": [
+        "Must not slow down workflow execution",
+        "Task tracking must be accurate"
+      ],
+      "recommendations": [
+        "Track workflow completion against OKRs",
+        "Monitor resource utilization efficiency",
+        "Correlate task outcomes with objectives"
+      ],
+      "integrationPoints": [
+        "src/core/work/WorkflowManager.ts",
+        "src/core/work/TaskTracker.ts",
+        "src/core/work/ResourceMonitor.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [
+        {
+          "file": "src/core/work/WorkflowManager.ts",
+          "snippet": "\n// Performance Manager integration\nasync function executeWorkflowWithTracking(workflow: Workflow): Promise<WorkflowResult> {\n    const startTime = Date.now();\n    const result = await executeWorkflow(workflow);\n    const duration = Date.now() - startTime;\n    \n    await PerformanceManager.recordWorkflowExecution({\n        workflowId: workflow.id,\n        duration,\n        success: result.success,\n        objectiveId: workflow.objectiveId,\n        resourceUtilization: result.resourceUsage\n    });\n    \n    return result;\n}\n                            "
+        }
+      ],
+      "variables": []
+    },
+    "KnowledgeHolon": {
+      "name": "KnowledgeHolon",
+      "status": "ready",
+      "requirements": [
+        "Learning progress tracking with objectives",
+        "Knowledge sharing effectiveness monitoring",
+        "Documentation quality assessment"
+      ],
+      "constraints": [
+        "Must preserve knowledge integrity",
+        "Learning paths must remain flexible"
+      ],
+      "recommendations": [
+        "Track learning progress against OKRs",
+        "Monitor knowledge sharing effectiveness",
+        "Assess documentation quality impact"
+      ],
+      "integrationPoints": [
+        "src/core/knowledge/LearningManager.ts",
+        "src/core/knowledge/KnowledgeSharing.ts",
+        "src/core/knowledge/DocumentationQuality.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [
+        {
+          "file": "src/core/knowledge/LearningManager.ts",
+          "snippet": "\n// Performance Manager integration\nasync function trackLearningProgress(learning: Learning, objectiveId: string): Promise<void> {\n    const progress = await calculateLearningProgress(learning);\n    \n    await PerformanceManager.recordLearningProgress({\n        learningId: learning.id,\n        progress: progress.percentage,\n        objectiveId,\n        skillsAcquired: progress.skills,\n        timeSpent: progress.duration\n    });\n}\n                            "
+        }
+      ],
+      "variables": []
+    },
+    "PerformanceHolon": {
+      "name": "PerformanceHolon",
+      "status": "in_progress",
+      "requirements": [
+        "OKR framework implementation",
+        "Metrics collection system",
+        "Performance dashboard integration"
+      ],
+      "constraints": [
+        "Must integrate with all existing holons",
+        "Performance impact must be minimal"
+      ],
+      "recommendations": [
+        "Implement comprehensive OKR framework",
+        "Create real-time metrics collection",
+        "Build performance dashboards"
+      ],
+      "integrationPoints": [
+        "src/core/performance/OKRManager.ts",
+        "src/core/performance/MetricsCollector.ts",
+        "src/core/performance/PerformanceDashboard.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [
+        {
+          "file": "src/core/performance/OKRManager.ts",
+          "snippet": "\n// Core OKR management\nexport class OKRManager {\n    async createObjective(objective: Objective): Promise<Objective> {\n        const created = await this.objectiveRepository.create(objective);\n        await this.notifyHolons('objective_created', created);\n        return created;\n    }\n    \n    async updateProgress(objectiveId: string, progress: number): Promise<void> {\n        await this.objectiveRepository.updateProgress(objectiveId, progress);\n        await this.notifyHolons('progress_updated', { objectiveId, progress });\n    }\n}\n                            "
+        }
+      ],
+      "variables": []
+    }
+  },
+  "managerAssessment": {
+    "CommandCenterManager": {
+      "name": "CommandCenterManager",
+      "status": "ready",
+      "requirements": [
+        "Command execution performance tracking",
+        "User interaction correlation with OKRs",
+        "Real-time optimization recommendations"
+      ],
+      "constraints": [
+        "Must maintain command execution speed",
+        "User experience must not be degraded"
+      ],
+      "recommendations": [
+        "Implement command performance monitoring",
+        "Correlate user interactions with objectives",
+        "Provide real-time optimization suggestions"
+      ],
+      "integrationPoints": [
+        "src/core/command/CommandCenterManager.ts",
+        "src/core/command/PerformanceOptimizer.ts",
+        "src/core/command/UserInteractionAnalyzer.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [],
+      "variables": []
+    },
+    "GovernanceManager": {
+      "name": "GovernanceManager",
+      "status": "ready",
+      "requirements": [
+        "Policy compliance tracking",
+        "Standards enforcement monitoring",
+        "Risk assessment integration"
+      ],
+      "constraints": [
+        "Must maintain governance integrity",
+        "Compliance reporting must be accurate"
+      ],
+      "recommendations": [
+        "Track policy compliance against objectives",
+        "Monitor standards enforcement effectiveness",
+        "Integrate risk assessment with performance"
+      ],
+      "integrationPoints": [
+        "src/core/governance/GovernanceManager.ts",
+        "src/core/governance/ComplianceMonitor.ts",
+        "src/core/governance/RiskAssessor.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [],
+      "variables": []
+    },
+    "WorkManager": {
+      "name": "WorkManager",
+      "status": "ready",
+      "requirements": [
+        "Workflow performance optimization",
+        "Task completion tracking",
+        "Resource utilization monitoring"
+      ],
+      "constraints": [
+        "Must not slow down workflow execution",
+        "Task tracking must be accurate"
+      ],
+      "recommendations": [
+        "Optimize workflow performance",
+        "Track task completion against objectives",
+        "Monitor resource utilization efficiency"
+      ],
+      "integrationPoints": [
+        "src/core/work/WorkManager.ts",
+        "src/core/work/PerformanceOptimizer.ts",
+        "src/core/work/ResourceMonitor.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [],
+      "variables": []
+    },
+    "KnowledgeManager": {
+      "name": "KnowledgeManager",
+      "status": "ready",
+      "requirements": [
+        "Learning effectiveness tracking",
+        "Knowledge sharing optimization",
+        "Documentation quality monitoring"
+      ],
+      "constraints": [
+        "Must preserve knowledge integrity",
+        "Learning paths must remain flexible"
+      ],
+      "recommendations": [
+        "Track learning effectiveness against objectives",
+        "Optimize knowledge sharing processes",
+        "Monitor documentation quality impact"
+      ],
+      "integrationPoints": [
+        "src/core/knowledge/KnowledgeManager.ts",
+        "src/core/knowledge/LearningOptimizer.ts",
+        "src/core/knowledge/QualityMonitor.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [],
+      "variables": []
+    },
+    "PerformanceManager": {
+      "name": "PerformanceManager",
+      "status": "in_progress",
+      "requirements": [
+        "OKR framework management",
+        "Metrics collection and analysis",
+        "Performance optimization recommendations"
+      ],
+      "constraints": [
+        "Must integrate with all existing managers",
+        "Performance impact must be minimal"
+      ],
+      "recommendations": [
+        "Implement comprehensive OKR management",
+        "Create efficient metrics collection",
+        "Provide actionable optimization recommendations"
+      ],
+      "integrationPoints": [
+        "src/core/performance/PerformanceManager.ts",
+        "src/core/performance/MetricsAnalyzer.ts",
+        "src/core/performance/OptimizationEngine.ts"
+      ],
+      "dependencies": [],
+      "codeSnippets": [],
+      "variables": []
+    }
+  },
+  "integrationRequirements": {
+    "databaseRequirements": [
+      "Performance metrics storage",
+      "OKR data persistence",
+      "Cross-holon communication logs",
+      "Historical performance data"
+    ],
+    "apiRequirements": [
+      "RESTful APIs for all Performance Manager operations",
+      "Real-time WebSocket connections for live updates",
+      "GraphQL interface for complex queries",
+      "Event-driven architecture for cross-system communication"
+    ],
+    "securityRequirements": [
+      "Role-based access control for Performance Manager",
+      "Data encryption for sensitive metrics",
+      "Audit logging for all performance operations",
+      "Secure communication between holons"
+    ],
+    "performanceRequirements": [
+      "Sub-200ms API response times",
+      "99.9% system uptime",
+      "Real-time metrics collection",
+      "Efficient data synchronization"
+    ],
+    "fileConventions": [
+      "Use kebab-case for file names",
+      "Use PascalCase for class names",
+      "Use camelCase for variables and functions",
+      "Use UPPER_SNAKE_CASE for constants",
+      "Group related files in feature directories",
+      "Use index.ts files for clean exports"
+    ],
+    "codeConventions": [
+      "Use TypeScript for all new code",
+      "Implement comprehensive error handling",
+      "Use async/await for asynchronous operations",
+      "Implement proper logging and monitoring",
+      "Use dependency injection for testability",
+      "Follow SOLID principles"
+    ]
+  },
+  "codeAssessment": {
+    "existingPatterns": [
+      "Class-based components",
+      "Async/await usage",
+      "Module exports",
+      "Module imports"
+    ],
+    "recommendedPatterns": [
+      "Use repository pattern for data access",
+      "Implement service layer for business logic",
+      "Use event-driven architecture for cross-system communication",
+      "Implement comprehensive error handling",
+      "Use dependency injection for testability",
+      "Follow consistent naming conventions"
+    ],
+    "codeSnippets": [
+      {
+        "pattern": "Repository Pattern",
+        "snippet": "\nexport interface PerformanceRepository {\n    saveMetric(metric: PerformanceMetric): Promise<void>;\n    getMetricsByObjective(objectiveId: string): Promise<PerformanceMetric[]>;\n    updateObjective(objective: Objective): Promise<void>;\n}\n\nexport class PerformanceRepositoryImpl implements PerformanceRepository {\n    async saveMetric(metric: PerformanceMetric): Promise<void> {\n        // Implementation\n    }\n}\n                "
+      },
+      {
+        "pattern": "Service Layer",
+        "snippet": "\nexport class PerformanceService {\n    constructor(\n        private repository: PerformanceRepository,\n        private eventBus: EventBus\n    ) {}\n    \n    async recordMetric(metric: PerformanceMetric): Promise<void> {\n        await this.repository.saveMetric(metric);\n        await this.eventBus.publish('metric_recorded', metric);\n    }\n}\n                "
+      },
+      {
+        "pattern": "Event-Driven Architecture",
+        "snippet": "\nexport class PerformanceEventBus {\n    async publish(event: string, data: any): Promise<void> {\n        // Publish to all subscribers\n    }\n    \n    async subscribe(event: string, handler: Function): Promise<void> {\n        // Subscribe to events\n    }\n}\n                "
+      }
+    ],
+    "fileStructure": [
+      {
+        "type": "directory",
+        "name": "admin",
+        "path": "/Users/home/Developer/greenlight-platform/src/admin",
+        "children": [
+          {
+            "type": "directory",
+            "name": "dashboard",
+            "path": "/Users/home/Developer/greenlight-platform/src/admin/dashboard",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "system-health",
+            "path": "/Users/home/Developer/greenlight-platform/src/admin/system-health",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "user-management",
+            "path": "/Users/home/Developer/greenlight-platform/src/admin/user-management",
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "api-gateway",
+        "path": "/Users/home/Developer/greenlight-platform/src/api-gateway",
+        "children": [
+          {
+            "type": "directory",
+            "name": "graph-manager",
+            "path": "/Users/home/Developer/greenlight-platform/src/api-gateway/graph-manager",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "monitoring",
+            "path": "/Users/home/Developer/greenlight-platform/src/api-gateway/monitoring",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "optimization",
+            "path": "/Users/home/Developer/greenlight-platform/src/api-gateway/optimization",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "policies",
+            "path": "/Users/home/Developer/greenlight-platform/src/api-gateway/policies",
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "architecture",
+        "path": "/Users/home/Developer/greenlight-platform/src/architecture",
+        "children": [
+          {
+            "type": "file",
+            "name": "holonSystem.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/architecture/holonSystem.ts",
+            "extension": ".ts"
+          },
+          {
+            "type": "file",
+            "name": "holonSystem.ts.boundary-backup",
+            "path": "/Users/home/Developer/greenlight-platform/src/architecture/holonSystem.ts.boundary-backup",
+            "extension": ".boundary-backup"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "components",
+        "path": "/Users/home/Developer/greenlight-platform/src/components",
+        "children": [
+          {
+            "type": "directory",
+            "name": "Administrate",
+            "path": "/Users/home/Developer/greenlight-platform/src/components/Administrate",
+            "children": [
+              {
+                "type": "file",
+                "name": "index.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/Administrate/index.tsx",
+                "extension": ".tsx"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "CoachingToolkit",
+            "path": "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit",
+            "children": [
+              {
+                "type": "file",
+                "name": "CoachingToolkit.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/CoachingToolkit.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "CoachingToolkit.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/CoachingToolkit.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/index.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "types.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/types.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "types.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/types.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "Elevate",
+            "path": "/Users/home/Developer/greenlight-platform/src/components/Elevate",
+            "children": [
+              {
+                "type": "file",
+                "name": "index.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/Elevate/index.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "index.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/Elevate/index.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "SecurityDashboard",
+            "path": "/Users/home/Developer/greenlight-platform/src/components/SecurityDashboard",
+            "children": [
+              {
+                "type": "file",
+                "name": "SecurityDashboard.css",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/SecurityDashboard/SecurityDashboard.css",
+                "extension": ".css"
+              },
+              {
+                "type": "file",
+                "name": "SecurityDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/SecurityDashboard/SecurityDashboard.tsx",
+                "extension": ".tsx"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "SystemMaster",
+            "path": "/Users/home/Developer/greenlight-platform/src/components/SystemMaster",
+            "children": [
+              {
+                "type": "file",
+                "name": "InformConsole.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/InformConsole.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "ObserveConsole.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/ObserveConsole.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "ResolveConsole.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/ResolveConsole.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "ResolveConsole.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/ResolveConsole.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "SystemMaster.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/SystemMaster.tsx",
+                "extension": ".tsx"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "__tests__",
+            "path": "/Users/home/Developer/greenlight-platform/src/components/__tests__",
+            "children": [
+              {
+                "type": "file",
+                "name": "ErrorBoundary.test.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/__tests__/ErrorBoundary.test.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SessionsManager.test.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/__tests__/SessionsManager.test.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SessionsManager.test.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/__tests__/SessionsManager.test.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/components/__tests__/index.ts",
+                "extension": ".ts"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "config",
+        "path": "/Users/home/Developer/greenlight-platform/src/config",
+        "children": [
+          {
+            "type": "file",
+            "name": "ConfigManager.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/config/ConfigManager.ts",
+            "extension": ".ts"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "context-awareness",
+        "path": "/Users/home/Developer/greenlight-platform/src/context-awareness",
+        "children": []
+      },
+      {
+        "type": "directory",
+        "name": "core",
+        "path": "/Users/home/Developer/greenlight-platform/src/core",
+        "children": [
+          {
+            "type": "directory",
+            "name": "auth",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/auth",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "database",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/database",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "events",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/events",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "governance",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/governance",
+            "children": [
+              {
+                "type": "file",
+                "name": "CommandCenter.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/CommandCenter.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "CommandCenterCoach.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/CommandCenterCoach.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "CommandCenterMetrics.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/CommandCenterMetrics.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "EnvironmentGovernance.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/EnvironmentGovernance.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "EnvironmentGovernance.ts.backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/EnvironmentGovernance.ts.backup",
+                "extension": ".backup"
+              },
+              {
+                "type": "file",
+                "name": "EnvironmentVariableManager.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/EnvironmentVariableManager.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "GovernanceOrchestrator.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/GovernanceOrchestrator.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "GovernanceOrchestrator.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/GovernanceOrchestrator.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "PerformanceManager.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/PerformanceManager.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "ReferenceManager.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/ReferenceManager.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "directory",
+                "name": "documentation",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/governance/documentation",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "docsRegistry.json",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/governance/documentation/docsRegistry.json",
+                    "extension": ".json"
+                  },
+                  {
+                    "type": "file",
+                    "name": "events.json",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/governance/documentation/events.json",
+                    "extension": ".json"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "holons",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/holons",
+            "children": [
+              {
+                "type": "directory",
+                "name": "features",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "FeaturesHolon.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/FeaturesHolon.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "FeaturesHolon.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/FeaturesHolon.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "modules",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "ComponentRegistryEngine.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/ComponentRegistryEngine.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "ComponentRegistryEngine.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/ComponentRegistryEngine.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      },
+                      {
+                        "type": "file",
+                        "name": "DeliveryEngine.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/DeliveryEngine.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "DeliveryEngine.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/DeliveryEngine.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      },
+                      {
+                        "type": "file",
+                        "name": "FeatureRegistryEngine.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/FeatureRegistryEngine.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "FeatureRegistryEngine.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/FeatureRegistryEngine.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      },
+                      {
+                        "type": "file",
+                        "name": "ImplementationEngine.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/ImplementationEngine.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "ImplementationEngine.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/ImplementationEngine.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      },
+                      {
+                        "type": "file",
+                        "name": "TechnicalEngine.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/TechnicalEngine.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "TechnicalEngine.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/features/modules/TechnicalEngine.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "operations",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/operations",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "ErrorManagerHolon.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/operations/ErrorManagerHolon.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "product",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "ProductHolon.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/ProductHolon.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ProductHolon.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/ProductHolon.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ProductManager.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/ProductManager.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ProductManager.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/ProductManager.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "modules",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/modules",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "CoordinationEngine.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/modules/CoordinationEngine.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "CoordinationEngine.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/modules/CoordinationEngine.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      },
+                      {
+                        "type": "file",
+                        "name": "GovernanceEngine.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/modules/GovernanceEngine.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "GovernanceEngine.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/modules/GovernanceEngine.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      },
+                      {
+                        "type": "file",
+                        "name": "RequirementsEngine.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/product/modules/RequirementsEngine.ts",
+                        "extension": ".ts"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "security",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/security",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "SecurityHolonManager.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/security/SecurityHolonManager.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "SecurityManagementTeam.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/security/SecurityManagementTeam.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "session-holon",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/session-holon",
+                "children": []
+              },
+              {
+                "type": "directory",
+                "name": "system-holon",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/system-holon",
+                "children": []
+              },
+              {
+                "type": "directory",
+                "name": "systemMaster",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "BackendManager.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/BackendManager.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "BackendManager.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/BackendManager.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "DesignSystemManager.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/DesignSystemManager.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "DesignSystemManager.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/DesignSystemManager.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "FrontendManager.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/FrontendManager.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "FrontendManager.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/FrontendManager.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "SystemMasterManager.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/SystemMasterManager.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "directory",
+                    "name": "modules",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules",
+                    "children": [
+                      {
+                        "type": "file",
+                        "name": "ComponentRegistry.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/ComponentRegistry.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "ComponentRegistry.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/ComponentRegistry.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      },
+                      {
+                        "type": "file",
+                        "name": "DesignTokens.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/DesignTokens.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "Governance.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/Governance.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "Monitoring.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/Monitoring.ts",
+                        "extension": ".ts"
+                      },
+                      {
+                        "type": "file",
+                        "name": "Monitoring.ts.boundary-backup",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/Monitoring.ts.boundary-backup",
+                        "extension": ".boundary-backup"
+                      },
+                      {
+                        "type": "file",
+                        "name": "index.ts",
+                        "path": "/Users/home/Developer/greenlight-platform/src/core/holons/systemMaster/modules/index.ts",
+                        "extension": ".ts"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "testing",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/testing",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "TestingHolonManager.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/testing/TestingHolonManager.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "TestingHolonManager.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/core/holons/testing/TestingHolonManager.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "user-holon",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/holons/user-holon",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "operations",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/operations",
+            "children": [
+              {
+                "type": "file",
+                "name": "OperationsMaster.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/operations/OperationsMaster.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "ServerGovernor.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/operations/ServerGovernor.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "ServerGovernor.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/operations/ServerGovernor.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "ServerManager.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/operations/ServerManager.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "ServerManager.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/operations/ServerManager.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "performance",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/performance",
+            "children": [
+              {
+                "type": "file",
+                "name": "EmbeddedPerformanceManager.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/performance/EmbeddedPerformanceManager.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "protocols",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/protocols",
+            "children": [
+              {
+                "type": "file",
+                "name": "ProtocolManager.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/protocols/ProtocolManager.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "session-management",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/session-management",
+            "children": [
+              {
+                "type": "file",
+                "name": "ImportContextSelector.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/ImportContextSelector.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "ImportContextSelector.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/ImportContextSelector.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "SessionContext.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/SessionContext.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SessionManager.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/SessionManager.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "SessionsManager.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/SessionsManager.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SessionsManager.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/SessionsManager.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/index.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "types.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/types.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "utils",
+            "path": "/Users/home/Developer/greenlight-platform/src/core/utils",
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "dashboards",
+        "path": "/Users/home/Developer/greenlight-platform/src/dashboards",
+        "children": [
+          {
+            "type": "directory",
+            "name": "executive",
+            "path": "/Users/home/Developer/greenlight-platform/src/dashboards/executive",
+            "children": [
+              {
+                "type": "file",
+                "name": "ExecutiveDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/executive/ExecutiveDashboard.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "ExecutiveDashboard.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/executive/ExecutiveDashboard.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/executive/index.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "types.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/executive/types.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "types.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/executive/types.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "features",
+            "path": "/Users/home/Developer/greenlight-platform/src/dashboards/features",
+            "children": [
+              {
+                "type": "file",
+                "name": "FeaturesDashboard.css",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/features/FeaturesDashboard.css",
+                "extension": ".css"
+              },
+              {
+                "type": "file",
+                "name": "FeaturesDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/features/FeaturesDashboard.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "FeaturesDashboard.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/features/FeaturesDashboard.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/features/index.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "governance",
+            "path": "/Users/home/Developer/greenlight-platform/src/dashboards/governance",
+            "children": [
+              {
+                "type": "file",
+                "name": "CommandCenterDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/governance/CommandCenterDashboard.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "PerformanceManagerDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/governance/PerformanceManagerDashboard.tsx",
+                "extension": ".tsx"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "product",
+            "path": "/Users/home/Developer/greenlight-platform/src/dashboards/product",
+            "children": [
+              {
+                "type": "file",
+                "name": "ProductDashboard.css",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/product/ProductDashboard.css",
+                "extension": ".css"
+              },
+              {
+                "type": "file",
+                "name": "ProductDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/product/ProductDashboard.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "ProductDashboard.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/product/ProductDashboard.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/product/index.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "roadmap",
+            "path": "/Users/home/Developer/greenlight-platform/src/dashboards/roadmap",
+            "children": [
+              {
+                "type": "file",
+                "name": "RoadmapActualsDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/roadmap/RoadmapActualsDashboard.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "RoadmapActualsDashboard.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/roadmap/RoadmapActualsDashboard.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "RoadmapDashboard.css",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/roadmap/RoadmapDashboard.css",
+                "extension": ".css"
+              },
+              {
+                "type": "file",
+                "name": "RoadmapDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/roadmap/RoadmapDashboard.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "RoadmapDashboard.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/roadmap/RoadmapDashboard.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/roadmap/index.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "system",
+            "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system",
+            "children": [
+              {
+                "type": "file",
+                "name": "EnvironmentVariableDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/EnvironmentVariableDashboard.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemDashboard.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemDashboard.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemFeatures.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemFeatures.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemLogConsole.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemLogConsole.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemLogConsole.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemLogConsole.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "SystemNavigation.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemNavigation.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemOverview.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemOverview.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemStats.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/SystemStats.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/index.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "types.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/dashboards/system/types.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "testing",
+            "path": "/Users/home/Developer/greenlight-platform/src/dashboards/testing",
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "design-system",
+        "path": "/Users/home/Developer/greenlight-platform/src/design-system",
+        "children": [
+          {
+            "type": "directory",
+            "name": "atoms",
+            "path": "/Users/home/Developer/greenlight-platform/src/design-system/atoms",
+            "children": [
+              {
+                "type": "directory",
+                "name": "Button",
+                "path": "/Users/home/Developer/greenlight-platform/src/design-system/atoms/Button",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Button.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/atoms/Button/Button.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/atoms/Button/index.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "Input",
+                "path": "/Users/home/Developer/greenlight-platform/src/design-system/atoms/Input",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Input.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/atoms/Input/Input.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/atoms/Input/index.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/design-system/atoms/index.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "components",
+            "path": "/Users/home/Developer/greenlight-platform/src/design-system/components",
+            "children": [
+              {
+                "type": "directory",
+                "name": "DesignSystemDashboard",
+                "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "DesignSystemDashboard.css",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.css",
+                    "extension": ".css"
+                  },
+                  {
+                    "type": "file",
+                    "name": "DesignSystemDashboard.stories.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.stories.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "DesignSystemDashboard.stories.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.stories.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "DesignSystemDashboard.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "DesignSystemDashboard.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/DesignSystemDashboard/index.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "IconSystem",
+                "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/IconSystem",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "IconSystem.stories.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/IconSystem/IconSystem.stories.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "IconSystem.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/IconSystem/IconSystem.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "IconSystem.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/IconSystem/IconSystem.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "theme",
+                "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/theme",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "AccessibilityContext.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/theme/AccessibilityContext.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ThemeContext.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/theme/ThemeContext.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ThemeContextDefinition.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/theme/ThemeContextDefinition.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ThemeToggle.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/theme/ThemeToggle.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "constants.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/theme/constants.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/theme/index.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "useTheme.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/theme/useTheme.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "ui",
+                "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "alert.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/alert.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "badge.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/badge.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "button.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/button.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "card.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/card.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/index.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/index.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "input.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/input.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "progress.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/progress.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "select.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/select.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "tabs.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/design-system/components/ui/tabs.tsx",
+                    "extension": ".tsx"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "index.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/design-system/index.ts",
+            "extension": ".ts"
+          },
+          {
+            "type": "directory",
+            "name": "styles",
+            "path": "/Users/home/Developer/greenlight-platform/src/design-system/styles",
+            "children": [
+              {
+                "type": "file",
+                "name": "professional-design-system.css",
+                "path": "/Users/home/Developer/greenlight-platform/src/design-system/styles/professional-design-system.css",
+                "extension": ".css"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "hooks",
+        "path": "/Users/home/Developer/greenlight-platform/src/hooks",
+        "children": []
+      },
+      {
+        "type": "file",
+        "name": "index.ts",
+        "path": "/Users/home/Developer/greenlight-platform/src/index.ts",
+        "extension": ".ts"
+      },
+      {
+        "type": "file",
+        "name": "index.ts.boundary-backup",
+        "path": "/Users/home/Developer/greenlight-platform/src/index.ts.boundary-backup",
+        "extension": ".boundary-backup"
+      },
+      {
+        "type": "directory",
+        "name": "integrations",
+        "path": "/Users/home/Developer/greenlight-platform/src/integrations",
+        "children": [
+          {
+            "type": "directory",
+            "name": "slack",
+            "path": "/Users/home/Developer/greenlight-platform/src/integrations/slack",
+            "children": []
+          },
+          {
+            "type": "directory",
+            "name": "webhooks",
+            "path": "/Users/home/Developer/greenlight-platform/src/integrations/webhooks",
+            "children": []
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "legacy",
+        "path": "/Users/home/Developer/greenlight-platform/src/legacy",
+        "children": []
+      },
+      {
+        "type": "directory",
+        "name": "lib",
+        "path": "/Users/home/Developer/greenlight-platform/src/lib",
+        "children": [
+          {
+            "type": "file",
+            "name": "database.types.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/lib/database.types.ts",
+            "extension": ".ts"
+          },
+          {
+            "type": "file",
+            "name": "database.types.ts.boundary-backup",
+            "path": "/Users/home/Developer/greenlight-platform/src/lib/database.types.ts.boundary-backup",
+            "extension": ".boundary-backup"
+          },
+          {
+            "type": "file",
+            "name": "supabase.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/lib/supabase.ts",
+            "extension": ".ts"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "platforms",
+        "path": "/Users/home/Developer/greenlight-platform/src/platforms",
+        "children": [
+          {
+            "type": "directory",
+            "name": "articulate",
+            "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate",
+            "children": [
+              {
+                "type": "directory",
+                "name": "components",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Articulate.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/Articulate.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "Articulate.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/Articulate.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "Insights.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/Insights.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "Insights.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/Insights.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "KnowledgeBase.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/KnowledgeBase.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "KnowledgeBase.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/KnowledgeBase.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "TaskEngine.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/TaskEngine.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "TaskEngine.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/TaskEngine.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "Wiki.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/Wiki.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "Wiki.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/Wiki.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "WorkHistory.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/WorkHistory.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "WorkHistory.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/WorkHistory.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/index.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "types.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/types.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "types.ts.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/types.ts.boundary-backup",
+                    "extension": ".boundary-backup"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/index.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "directory",
+                "name": "services",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/articulate/services",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "elaborate",
+            "path": "/Users/home/Developer/greenlight-platform/src/platforms/elaborate",
+            "children": [
+              {
+                "type": "directory",
+                "name": "components",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/elaborate/components",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Elaborate.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/elaborate/components/Elaborate.tsx",
+                    "extension": ".tsx"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/elaborate/index.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "knowledge",
+            "path": "/Users/home/Developer/greenlight-platform/src/platforms/knowledge",
+            "children": [
+              {
+                "type": "directory",
+                "name": "components",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/knowledge/components",
+                "children": []
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "system-master",
+            "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master",
+            "children": [
+              {
+                "type": "directory",
+                "name": "components",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "InformConsole.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/InformConsole.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ObserveConsole.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/ObserveConsole.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ResolveConsole.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/ResolveConsole.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ScriptMaster.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/ScriptMaster.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "ScriptMaster.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/ScriptMaster.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "SystemMaster.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/SystemMaster.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "SystemMaster.tsx.boundary-backup",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/SystemMaster.tsx.boundary-backup",
+                    "extension": ".boundary-backup"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/index.ts",
+                    "extension": ".ts"
+                  },
+                  {
+                    "type": "file",
+                    "name": "types.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/components/types.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/system-master/index.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "work",
+            "path": "/Users/home/Developer/greenlight-platform/src/platforms/work",
+            "children": [
+              {
+                "type": "directory",
+                "name": "components",
+                "path": "/Users/home/Developer/greenlight-platform/src/platforms/work/components",
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "protocols",
+        "path": "/Users/home/Developer/greenlight-platform/src/protocols",
+        "children": []
+      },
+      {
+        "type": "directory",
+        "name": "services",
+        "path": "/Users/home/Developer/greenlight-platform/src/services",
+        "children": [
+          {
+            "type": "directory",
+            "name": "ai",
+            "path": "/Users/home/Developer/greenlight-platform/src/services/ai",
+            "children": [
+              {
+                "type": "file",
+                "name": "aiInsightsService.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/services/ai/aiInsightsService.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "aiInsightsService.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/services/ai/aiInsightsService.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "auth",
+            "path": "/Users/home/Developer/greenlight-platform/src/services/auth",
+            "children": [
+              {
+                "type": "file",
+                "name": "google-auth-service.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/services/auth/google-auth-service.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "index.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/services/index.ts",
+            "extension": ".ts"
+          },
+          {
+            "type": "directory",
+            "name": "integrations",
+            "path": "/Users/home/Developer/greenlight-platform/src/services/integrations",
+            "children": [
+              {
+                "type": "file",
+                "name": "githubIntegrationService.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/services/integrations/githubIntegrationService.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "supabaseSchemaService.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/services/integrations/supabaseSchemaService.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "supabaseSchemaService.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/services/integrations/supabaseSchemaService.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "performance",
+            "path": "/Users/home/Developer/greenlight-platform/src/services/performance",
+            "children": [
+              {
+                "type": "file",
+                "name": "performanceTrackingService.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/services/performance/performanceTrackingService.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "performanceTrackingService.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/services/performance/performanceTrackingService.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "session-management",
+        "path": "/Users/home/Developer/greenlight-platform/src/session-management",
+        "children": []
+      },
+      {
+        "type": "directory",
+        "name": "shared",
+        "path": "/Users/home/Developer/greenlight-platform/src/shared",
+        "children": []
+      },
+      {
+        "type": "directory",
+        "name": "styles",
+        "path": "/Users/home/Developer/greenlight-platform/src/styles",
+        "children": []
+      },
+      {
+        "type": "directory",
+        "name": "types",
+        "path": "/Users/home/Developer/greenlight-platform/src/types",
+        "children": [
+          {
+            "type": "file",
+            "name": "global.d.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/types/global.d.ts",
+            "extension": ".ts"
+          },
+          {
+            "type": "file",
+            "name": "index.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/types/index.ts",
+            "extension": ".ts"
+          },
+          {
+            "type": "file",
+            "name": "index.ts.boundary-backup",
+            "path": "/Users/home/Developer/greenlight-platform/src/types/index.ts.boundary-backup",
+            "extension": ".boundary-backup"
+          },
+          {
+            "type": "file",
+            "name": "schemas.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/types/schemas.ts",
+            "extension": ".ts"
+          },
+          {
+            "type": "file",
+            "name": "schemas.ts.boundary-backup",
+            "path": "/Users/home/Developer/greenlight-platform/src/types/schemas.ts.boundary-backup",
+            "extension": ".boundary-backup"
+          }
+        ]
+      },
+      {
+        "type": "directory",
+        "name": "utils",
+        "path": "/Users/home/Developer/greenlight-platform/src/utils",
+        "children": [
+          {
+            "type": "directory",
+            "name": "cache",
+            "path": "/Users/home/Developer/greenlight-platform/src/utils/cache",
+            "children": [
+              {
+                "type": "file",
+                "name": "cache.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/cache/cache.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "cache.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/cache/cache.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              }
+            ]
+          },
+          {
+            "type": "directory",
+            "name": "common",
+            "path": "/Users/home/Developer/greenlight-platform/src/utils/common",
+            "children": [
+              {
+                "type": "file",
+                "name": "AIOptimizationPanel.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/AIOptimizationPanel.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "directory",
+                "name": "Button",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/Button",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Button.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/utils/common/Button/Button.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/utils/common/Button/index.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "directory",
+                "name": "Card",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/Card",
+                "children": [
+                  {
+                    "type": "file",
+                    "name": "Card.tsx",
+                    "path": "/Users/home/Developer/greenlight-platform/src/utils/common/Card/Card.tsx",
+                    "extension": ".tsx"
+                  },
+                  {
+                    "type": "file",
+                    "name": "index.ts",
+                    "path": "/Users/home/Developer/greenlight-platform/src/utils/common/Card/index.ts",
+                    "extension": ".ts"
+                  }
+                ]
+              },
+              {
+                "type": "file",
+                "name": "ChangelogPanel.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/ChangelogPanel.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "DeveloperNotesPanel.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/DeveloperNotesPanel.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "ErrorBoundary.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/ErrorBoundary.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "FeaturesMapPanel.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/FeaturesMapPanel.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SourceOfTruthConsole.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/SourceOfTruthConsole.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemAuditPanel.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/SystemAuditPanel.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemEvolutionIntelligence.tsx",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/SystemEvolutionIntelligence.tsx",
+                "extension": ".tsx"
+              },
+              {
+                "type": "file",
+                "name": "SystemEvolutionIntelligence.tsx.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/SystemEvolutionIntelligence.tsx.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "cn.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/cn.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "fileStatus.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/fileStatus.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "fileStatus.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/fileStatus.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "formatting.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/formatting.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "index.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/index.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "roadmapActuals.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/roadmapActuals.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "roadmapActuals.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/roadmapActuals.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "sessionTracking.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/sessionTracking.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "validation.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/validation.ts",
+                "extension": ".ts"
+              },
+              {
+                "type": "file",
+                "name": "validation.ts.boundary-backup",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/validation.ts.boundary-backup",
+                "extension": ".boundary-backup"
+              },
+              {
+                "type": "file",
+                "name": "windowManager.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/common/windowManager.ts",
+                "extension": ".ts"
+              }
+            ]
+          },
+          {
+            "type": "file",
+            "name": "index.ts",
+            "path": "/Users/home/Developer/greenlight-platform/src/utils/index.ts",
+            "extension": ".ts"
+          },
+          {
+            "type": "directory",
+            "name": "logger",
+            "path": "/Users/home/Developer/greenlight-platform/src/utils/logger",
+            "children": [
+              {
+                "type": "file",
+                "name": "logger.ts",
+                "path": "/Users/home/Developer/greenlight-platform/src/utils/logger/logger.ts",
+                "extension": ".ts"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "variableAssessment": {
+    "actualVariables": [
+      "PERFORMANCE_METRICS_DB_URL",
+      "OKR_DATABASE_CONNECTION",
+      "REAL_TIME_ANALYTICS_ENABLED",
+      "PERFORMANCE_DASHBOARD_PORT",
+      "METRICS_COLLECTION_INTERVAL",
+      "OBJECTIVE_TRACKING_ENABLED",
+      "CROSS_HOLON_COMMUNICATION_ENABLED",
+      "PERFORMANCE_OPTIMIZATION_ENABLED"
+    ],
+    "unusedVariables": [
+      "LEGACY_METRICS_SYSTEM",
+      "OLD_PERFORMANCE_TRACKING",
+      "DEPRECATED_ANALYTICS_ENDPOINT"
+    ],
+    "configurationFiles": [
+      "config/performance/performance-config.json",
+      "config/database/performance-db-config.json",
+      "config/api/performance-api-config.json",
+      "config/security/performance-security-config.json"
+    ],
+    "environmentVariables": [
+      "NODE_ENV=production",
+      "PERFORMANCE_METRICS_ENABLED=true",
+      "OKR_TRACKING_ENABLED=true",
+      "REAL_TIME_UPDATES_ENABLED=true",
+      "PERFORMANCE_DASHBOARD_ENABLED=true"
+    ]
+  },
+  "recommendations": {
+    "immediate": [
+      "Implement Performance Manager core infrastructure",
+      "Set up database schema for OKR tracking",
+      "Create API endpoints for Performance Manager operations",
+      "Establish cross-holon communication protocols"
+    ],
+    "shortTerm": [
+      "Integrate Performance Manager with all existing holons",
+      "Implement real-time metrics collection",
+      "Create performance dashboards",
+      "Set up automated testing for Performance Manager"
+    ],
+    "longTerm": [
+      "Optimize Performance Manager based on usage patterns",
+      "Implement advanced analytics and predictive modeling",
+      "Create comprehensive reporting and insights",
+      "Establish continuous improvement processes"
+    ]
+  },
+  "nextSteps": [
+    "Review and approve assessment report",
+    "Prioritize implementation based on holon readiness",
+    "Begin Performance Manager core implementation",
+    "Set up development environment and tooling",
+    "Start integration with ready holons",
+    "Implement automated testing and monitoring"
+  ]
+}

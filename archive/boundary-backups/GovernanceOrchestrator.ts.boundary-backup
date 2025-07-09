@@ -1,0 +1,240 @@
+import { EventEmitter } from 'events';
+import { Logger } from '../../utils/logger/logger';
+
+export interface GovernanceRule {
+  id: string;
+  name: string;
+  description: string;
+  type: 'validation' | 'enforcement' | 'monitoring';
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  enabled: boolean;
+  conditions: GovernanceCondition[];
+  actions: GovernanceAction[];
+}
+
+export interface GovernanceCondition {
+  field: string;
+  operator: 'equals' | 'not_equals' | 'contains' | 'greater_than' | 'less_than' | 'exists' | 'not_exists';
+  value: unknown;
+}
+
+export interface GovernanceAction {
+  type: 'log' | 'alert' | 'block' | 'auto_fix' | 'notify';
+  target: string;
+  message: string;
+  metadata?: Record<string, unknown>;
+}
+
+export interface GovernanceEvent {
+  id: string;
+  ruleId: string;
+  timestamp: Date;
+  severity: 'low' | 'medium' | 'high' | 'critical';
+  message: string;
+  context: Record<string, unknown>;
+  resolved: boolean;
+}
+
+export interface GovernanceMetrics {
+  totalRules: number;
+  activeRules: number;
+  eventsToday: number;
+  eventsThisWeek: number;
+  eventsThisMonth: number;
+  averageResponseTime: number;
+  complianceScore: number;
+}
+
+class GovernanceOrchestrator extends EventEmitter {
+  private logger: Logger;
+  private rules: Map<string, GovernanceRule> = new Map();
+  private events: GovernanceEvent[] = [];
+  private metrics: GovernanceMetrics;
+
+  constructor() {
+    super();
+    this.logger = new Logger();
+    this.metrics = {
+      totalRules: 0,
+      activeRules: 0,
+      eventsToday: 0,
+      eventsThisWeek: 0,
+      eventsThisMonth: 0,
+      averageResponseTime: 0,
+      complianceScore: 100
+    };
+  }
+
+  addRule(rule: GovernanceRule): void {
+    this.rules.set(rule.id, rule);
+    this.metrics.totalRules = this.rules.size;
+    this.metrics.activeRules = Array.from(this.rules.values()).filter(r => r.enabled).length;
+    this.logger.info(`Added governance rule: ${rule.name}`);
+  }
+
+  removeRule(ruleId: string): boolean {
+    const removed = this.rules.delete(ruleId);
+    if (removed) {
+      this.metrics.totalRules = this.rules.size;
+      this.metrics.activeRules = Array.from(this.rules.values()).filter(r => r.enabled).length;
+      this.logger.info(`Removed governance rule: ${ruleId}`);
+    }
+    return removed;
+  }
+
+  evaluateRules(context: Record<string, unknown>): GovernanceEvent[] {
+    const startTime = Date.now();
+    const triggeredEvents: GovernanceEvent[] = [];
+
+    for (const rule of this.rules.values()) {
+      if (!rule.enabled) continue;
+
+      try {
+        if (this.evaluateConditions(rule.conditions, context)) {
+          const event = this.createEvent(rule, context);
+          triggeredEvents.push(event);
+          this.events.push(event);
+          this.executeActions(rule.actions, event);
+        }
+      } catch (error) {
+        this.logger.error(`Error evaluating rule ${rule.id}:`, error instanceof Error ? error : new Error(String(error)));
+      }
+    }
+
+    const responseTime = Date.now() - startTime;
+    this.updateMetrics(responseTime, triggeredEvents.length);
+    
+    return triggeredEvents;
+  }
+
+  private evaluateConditions(conditions: GovernanceCondition[], context: Record<string, unknown>): boolean {
+    return conditions.every(condition => {
+      const value = this.getNestedValue(context, condition.field);
+      
+      switch (condition.operator) {
+        case 'equals':
+          return value === condition.value;
+        case 'not_equals':
+          return value !== condition.value;
+        case 'contains':
+          return typeof value === 'string' && typeof condition.value === 'string' 
+            ? value.includes(condition.value)
+            : false;
+        case 'greater_than':
+          return typeof value === 'number' && typeof condition.value === 'number'
+            ? value > condition.value
+            : false;
+        case 'less_than':
+          return typeof value === 'number' && typeof condition.value === 'number'
+            ? value < condition.value
+            : false;
+        case 'exists':
+          return value !== undefined && value !== null;
+        case 'not_exists':
+          return value === undefined || value === null;
+        default:
+          return false;
+      }
+    });
+  }
+
+  private getNestedValue(obj: Record<string, unknown>, path: string): unknown {
+    return path.split('.').reduce((current, key) => {
+      return current && typeof current === 'object' ? (current as Record<string, unknown>)[key] : undefined;
+    }, obj as unknown);
+  }
+
+  private createEvent(rule: GovernanceRule, context: Record<string, unknown>): GovernanceEvent {
+    return {
+      id: `event_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      ruleId: rule.id,
+      timestamp: new Date(),
+      severity: rule.severity,
+      message: `Governance rule "${rule.name}" triggered`,
+      context,
+      resolved: false
+    };
+  }
+
+  private executeActions(actions: GovernanceAction[], event: GovernanceEvent): void {
+    for (const action of actions) {
+      try {
+        switch (action.type) {
+          case 'log':
+            this.logger.info(`Governance action: ${action.message}`, { event, action });
+            break;
+          case 'alert':
+            this.emit('governance-alert', { event, action });
+            break;
+          case 'block':
+            this.emit('governance-block', { event, action });
+            break;
+          case 'auto_fix':
+            this.emit('governance-auto-fix', { event, action });
+            break;
+          case 'notify':
+            this.emit('governance-notify', { event, action });
+            break;
+        }
+      } catch (error) {
+        this.logger.error(`Error executing governance action: ${action.type}`, error instanceof Error ? error : new Error(String(error)));
+      }
+    }
+  }
+
+  private updateMetrics(responseTime: number, eventsCount: number): void {
+    // Update response time (rolling average)
+    const currentAvg = this.metrics.averageResponseTime;
+    const totalRules = this.metrics.totalRules;
+    this.metrics.averageResponseTime = totalRules > 0 
+      ? (currentAvg * (totalRules - 1) + responseTime) / totalRules 
+      : responseTime;
+
+    // Update event counts
+    const now = new Date();
+    const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+    const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+    const monthAgo = new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000);
+
+    this.metrics.eventsToday = this.events.filter(e => e.timestamp >= today).length;
+    this.metrics.eventsThisWeek = this.events.filter(e => e.timestamp >= weekAgo).length;
+    this.metrics.eventsThisMonth = this.events.filter(e => e.timestamp >= monthAgo).length;
+
+    // Update compliance score
+    const totalEvents = this.events.length;
+    const resolvedEvents = this.events.filter(e => e.resolved).length;
+    this.metrics.complianceScore = totalEvents > 0 
+      ? Math.max(0, 100 - ((totalEvents - resolvedEvents) / totalEvents) * 100)
+      : 100;
+  }
+
+  getRules(): GovernanceRule[] {
+    return Array.from(this.rules.values());
+  }
+
+  getEvents(limit?: number): GovernanceEvent[] {
+    const sortedEvents = this.events.sort((a, b) => b.timestamp.getTime() - a.timestamp.getTime());
+    return limit ? sortedEvents.slice(0, limit) : sortedEvents;
+  }
+
+  getMetrics(): GovernanceMetrics {
+    return { ...this.metrics };
+  }
+
+  resolveEvent(eventId: string): boolean {
+    const event = this.events.find(e => e.id === eventId);
+    if (event) {
+      event.resolved = true;
+      this.updateMetrics(0, 0); // Recalculate compliance score
+      return true;
+    }
+    return false;
+  }
+
+  clearEvents(): void {
+    this.events = [];
+    this.updateMetrics(0, 0);
+  }
+}
+
+export const governanceOrchestrator = new GovernanceOrchestrator(); 

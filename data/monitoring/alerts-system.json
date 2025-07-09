@@ -1,0 +1,15 @@
+{
+  "name": "Performance Alerting System",
+  "description": "Alerting system for performance issues and improvements",
+  "alerts": {
+    "degradation": "Performance degradation alerts",
+    "improvement": "Performance improvement alerts",
+    "threshold": "Threshold-based alerts",
+    "trend": "Trend-based alerts"
+  },
+  "targeting": {
+    "manager": "Manager-specific alerts",
+    "team": "Team-specific alerts",
+    "system": "System-wide alerts"
+  }
+}

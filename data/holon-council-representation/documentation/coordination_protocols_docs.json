@@ -1,0 +1,55 @@
+{
+  "name": "Coordination Protocols Documentation",
+  "description": "Documentation for holon agent coordination protocols",
+  "protocols": {
+    "name": "Holon Agent Coordination Protocols",
+    "protocols": {
+      "holonCommunication": {
+        "name": "Holon Communication Protocol",
+        "description": "Standardized communication between holon agents",
+        "method": "event_driven_messaging",
+        "channels": [
+          "holon_status",
+          "holon_needs",
+          "holon_coordination"
+        ],
+        "frequency": "real_time"
+      },
+      "decisionMaking": {
+        "name": "Holon Decision Making Protocol",
+        "description": "Collective decision making among holon agents",
+        "method": "weighted_voting",
+        "process": [
+          "proposal",
+          "discussion",
+          "voting",
+          "implementation"
+        ],
+        "quorum": 0.6
+      },
+      "conflictResolution": {
+        "name": "Holon Conflict Resolution Protocol",
+        "description": "Resolution of conflicts between holon agents",
+        "method": "mediated_negotiation",
+        "mediator": "CouncilChair",
+        "escalation": "CouncilVote"
+      },
+      "resourceAllocation": {
+        "name": "Holon Resource Allocation Protocol",
+        "description": "Fair allocation of resources among holons",
+        "method": "need_based_allocation",
+        "factors": [
+          "priority",
+          "capability",
+          "impact"
+        ],
+        "oversight": "CouncilChair"
+      }
+    }
+  },
+  "implementation": {
+    "setup": "Configure communication channels and protocols",
+    "monitoring": "Monitor protocol effectiveness and usage",
+    "optimization": "Continuously improve coordination mechanisms"
+  }
+}

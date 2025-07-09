@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-07-08T13:59:46.743Z",
+  "status": "completed",
+  "tests": {
+    "serviceAccountKey": "passed",
+    "oauthClient": "passed",
+    "adminSDK": "partial"
+  },
+  "credentials": {
+    "clientId": "937255927800-6ssi2bu2q3a7dbg1rt5vdaidefsr7raa.apps.googleusercontent.com",
+    "adminEmail": "gl-admin@fine-elf-460516-g0.iam.gserviceaccount.com",
+    "domain": "greenlight.live",
+    "keyFile": "./fine-elf-460516-g0-f6ddf6c8be67.json"
+  },
+  "configuration": {
+    "redirectUris": [
+      "https://greenlight.live/auth/google/callback",
+      "https://wiki.greenlight.live/auth/google/callback",
+      "https://www.topbinsid.com/auth/google/callback"
+    ],
+    "authorizedOrigins": [
+      "https://greenlight.live",
+      "https://wiki.greenlight.live",
+      "https://www.topbinsid.com"
+    ],
+    "scopes": [
+      "openid",
+      "email",
+      "profile",
+      "https://www.googleapis.com/auth/admin.directory.user.readonly"
+    ]
+  },
+  "nextSteps": [
+    "Configure Google Admin Console user groups",
+    "Set up domain verification in Google Cloud Console",
+    "Test authentication flow with real users",
+    "Deploy SSO to production platforms"
+  ],
+  "notes": [
+    "OAuth credentials are valid and properly configured",
+    "Service account key is accessible and valid",
+    "Admin SDK access may require additional domain verification",
+    "Ready for SSO implementation across all platforms"
+  ]
+}

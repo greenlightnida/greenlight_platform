@@ -1,0 +1,7 @@
+{
+  "council": true,
+  "committees": true,
+  "relationships": true,
+  "workflows": false,
+  "overall": false
+}

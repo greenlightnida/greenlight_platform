@@ -1,0 +1,35 @@
+{
+  "name": "Cross-Committee Coordination",
+  "mechanisms": {
+    "coordinationMeetings": {
+      "frequency": "weekly",
+      "participants": [
+        "council-chair",
+        "executive-committee",
+        "committee-chairs"
+      ],
+      "purpose": "Cross-committee coordination and alignment",
+      "outcomes": [
+        "coordination_plans",
+        "resource_sharing",
+        "best_practices"
+      ]
+    },
+    "sharedProjects": {
+      "identification": "collaborative",
+      "execution": "coordinated",
+      "monitoring": "shared",
+      "outcomes": "joint_ownership"
+    },
+    "knowledgeSharing": {
+      "platform": "shared_knowledge_base",
+      "frequency": "continuous",
+      "participants": "all_committees",
+      "benefits": [
+        "best_practices",
+        "lessons_learned",
+        "innovation_ideas"
+      ]
+    }
+  }
+}

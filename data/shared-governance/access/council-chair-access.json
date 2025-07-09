@@ -1,0 +1,35 @@
+{
+  "role": "Council Chair Learning Access",
+  "permissions": {
+    "learningSystem": {
+      "read": true,
+      "write": true,
+      "execute": true,
+      "admin": true
+    },
+    "predictionModels": {
+      "view": true,
+      "modify": true,
+      "create": true,
+      "delete": true
+    },
+    "docketGeneration": {
+      "view": true,
+      "modify": true,
+      "approve": true,
+      "override": true
+    },
+    "preventionStrategies": {
+      "view": true,
+      "modify": true,
+      "implement": true,
+      "coordinate": true
+    }
+  },
+  "tools": [
+    "Strategic Learning Dashboard",
+    "Council-wide Learning Analytics",
+    "Cross-committee Learning Coordination",
+    "Learning System Performance Monitoring"
+  ]
+}

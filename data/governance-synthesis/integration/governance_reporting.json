@@ -1,0 +1,33 @@
+{
+  "name": "Governance Reporting Integration",
+  "integration": {
+    "constituencyReports": {
+      "types": [
+        "constituency_representation_report",
+        "interest_balancing_report",
+        "consensus_building_report",
+        "resource_allocation_report"
+      ],
+      "frequency": "weekly",
+      "recipients": [
+        "CouncilChair",
+        "ExecutiveCommittee",
+        "CommitteeRepresentatives"
+      ]
+    },
+    "governanceReports": {
+      "types": [
+        "policy_compliance_report",
+        "governance_effectiveness_report",
+        "audit_report",
+        "risk_assessment_report"
+      ],
+      "frequency": "monthly",
+      "recipients": [
+        "CouncilChair",
+        "ExecutiveCommittee",
+        "AllManagers"
+      ]
+    }
+  }
+}

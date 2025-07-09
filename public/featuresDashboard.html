@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Features Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f8f9fa; color: #222; margin: 20px; }
+    h1, h2, h3 { color: #2a7ae2; }
+    .header { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-bottom: 20px; }
+    .metric-card { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); text-align: center; }
+    .metric-value { font-size: 2em; font-weight: bold; color: #2a7ae2; }
+    .metric-label { color: #666; margin-top: 5px; }
+    .sync-status { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .sync-bar { background: #e9ecef; border-radius: 10px; height: 20px; margin: 10px 0; }
+    .sync-fill { background: #28a745; height: 100%; border-radius: 10px; transition: width 0.3s; }
+    .sync-fill.warning { background: #ffc107; }
+    .sync-fill.danger { background: #dc3545; }
+    table { border-collapse: collapse; width: 100%; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background: #2a7ae2; color: #fff; }
+    tr:nth-child(even) { background: #f8f9fa; }
+    .status-active { color: #28a745; font-weight: bold; }
+    .status-inactive { color: #dc3545; font-weight: bold; }
+    .status-deprecated { color: #ffc107; font-weight: bold; }
+    .alerts { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .alert { padding: 10px; margin: 5px 0; border-radius: 5px; }
+    .alert.high { background: #f8d7da; color: #721c24; border: 1px solid #f5c6cb; }
+    .alert.medium { background: #fff3cd; color: #856404; border: 1px solid #ffeaa7; }
+    .recommendations { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .recommendation { padding: 10px; margin: 5px 0; border-left: 4px solid #2a7ae2; background: #f8f9fa; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Enhanced Features Dashboard</h1>
+    <p>Generated at: 2025-07-08T23:03:32.756Z</p>
+    <p>Last Sync: Tue Jul 08 2025 19:03:32 GMT-0400 (Eastern Daylight Time)</p>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metric-card">
+      <div class="metric-value">82</div>
+      <div class="metric-label">Total Features</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">64.9%</div>
+      <div class="metric-label">Health Score</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">22.8%</div>
+      <div class="metric-label">Roadmap Sync</div>
+    </div>
+    <div class="metric-card">
+      <div class="metric-value">71.9%</div>
+      <div class="metric-label">Component Sync</div>
+    </div>
+  </div>
+
+  <div class="sync-status">
+    <h3>Synchronization Status</h3>
+    <div>
+      <strong>Roadmap Sync Rate:</strong>
+      <div class="sync-bar">
+        <div class="sync-fill warning" 
+             style="width: 22.807017543859647%"></div>
+      </div>
+      22.8%
+    </div>
+    <div>
+      <strong>Component Sync Rate:</strong>
+      <div class="sync-bar">
+        <div class="sync-fill warning" 
+             style="width: 71.9298245614035%"></div>
+      </div>
+      71.9%
+    </div>
+  </div>
+
+  
+
+  
+    <div class="recommendations">
+      <h3>Recommendations</h3>
+      
+        <div class="recommendation">
+          <strong>HIGH:</strong> Roadmap sync rate is 22.8%. Update roadmap to sync features.
+        </div>
+      
+        <div class="recommendation">
+          <strong>MEDIUM:</strong> Component sync rate is 71.9%. Link features to components.
+        </div>
+      
+        <div class="recommendation">
+          <strong>HIGH:</strong> System health score is 64.9%. Address health issues.
+        </div>
+      
+    </div>
+  
+
+  <h2>Features List</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Description</th>
+        <th>Path</th>
+        <th>Components</th>
+        <th>Roadmap Sync</th>
+        <th>Component Sync</th>
+        <th>Last Updated</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr>
+          <td>greenlight-platform</td>
+          <td>Greenlight Platform</td>
+          <td>system</td>
+          <td class="status-active">active</td>
+          <td>System governance and holon management platform</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>system-master</td>
+          <td>System Master</td>
+          <td>principle</td>
+          <td class="status-active">active</td>
+          <td>Core system governance and orchestration</td>
+          <td>src/components/SystemMaster/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>inform-console</td>
+          <td>Inform Console</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Information and notification management</td>
+          <td>src/components/SystemMaster/InformConsole.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>resolve-console</td>
+          <td>Resolve Console</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Issue resolution and conflict management</td>
+          <td>src/components/SystemMaster/ResolveConsole.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>observe-console</td>
+          <td>Observe Console</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>System monitoring and observation</td>
+          <td>src/components/SystemMaster/ObserveConsole.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>elaborate</td>
+          <td>Elaborate</td>
+          <td>principle</td>
+          <td class="status-active">active</td>
+          <td>System evolution and development management</td>
+          <td>src/core/governance/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>anchor-command-service</td>
+          <td>Anchor Command Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Context awareness and anchor command service</td>
+          <td>src/services/anchorCommandService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>deployment-tracker</td>
+          <td>Deployment Tracker</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>System deployment tracking and monitoring</td>
+          <td>src/utils/deploymentTracker.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>system-evolution-service</td>
+          <td>System Evolution Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>System evolution tracking and optimization</td>
+          <td>src/services/performanceTrackingService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>elevate</td>
+          <td>Elevate</td>
+          <td>principle</td>
+          <td class="status-active">active</td>
+          <td>Performance optimization and enhancement</td>
+          <td>src/core/governance/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>player-service</td>
+          <td>Player Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Player data management and tracking service</td>
+          <td>src/services/playerService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>data-import-service</td>
+          <td>Data Import Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Data import and processing service</td>
+          <td>src/services/dataImportService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>ai-insights-service</td>
+          <td>AI Insights Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>AI-powered insights and analysis service</td>
+          <td>src/services/aiInsightsService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>administrate</td>
+          <td>Administrate</td>
+          <td>principle</td>
+          <td class="status-active">active</td>
+          <td>Administrative and operational management</td>
+          <td>src/core/governance/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>business-intelligence-service</td>
+          <td>Business Intelligence Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Business intelligence and analytics service</td>
+          <td>src/services/businessIntelligenceService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>reporting-service</td>
+          <td>Reporting Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Report generation and distribution service</td>
+          <td>src/services/reportingService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>articulate</td>
+          <td>Articulate</td>
+          <td>principle</td>
+          <td class="status-active">active</td>
+          <td>Knowledge management and communication</td>
+          <td>src/core/governance/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>knowledge-service</td>
+          <td>Knowledge Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Knowledge management and organization service</td>
+          <td>src/services/knowledgeService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>nlp-service</td>
+          <td>NLP Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Natural language processing service</td>
+          <td>src/services/nlpService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>developer-notes-service</td>
+          <td>Developer Notes Service</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Developer notes and documentation service</td>
+          <td>src/services/developerNotesService.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>operations</td>
+          <td>Operations</td>
+          <td>principle</td>
+          <td class="status-active">active</td>
+          <td>System operations and maintenance</td>
+          <td>src/core/operations/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>server-governor</td>
+          <td>Server Governor</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Server governance and management service</td>
+          <td>src/core/operations/ServerGovernor.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>server-manager</td>
+          <td>Server Manager</td>
+          <td>service</td>
+          <td class="status-active">active</td>
+          <td>Server management and monitoring service</td>
+          <td>src/core/operations/ServerManager.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>top-bins-platform</td>
+          <td>Top Bins Platform</td>
+          <td>product</td>
+          <td class="status-active">active</td>
+          <td>Product features and client-specific functionality</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>media-library</td>
+          <td>Media Library</td>
+          <td>product</td>
+          <td class="status-active">active</td>
+          <td>Media management and AI detection features</td>
+          <td>src/components/MediaLibrary/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>batch-upload</td>
+          <td>Batch Upload</td>
+          <td>feature</td>
+          <td class="status-active">active</td>
+          <td>Bulk media upload functionality</td>
+          <td>src/components/BatchUpload.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>ai-detection</td>
+          <td>AI Detection</td>
+          <td>feature</td>
+          <td class="status-active">active</td>
+          <td>AI-powered media analysis and detection</td>
+          <td>src/utils/aiDetection.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>player-crm</td>
+          <td>Player CRM</td>
+          <td>product</td>
+          <td class="status-active">active</td>
+          <td>Player relationship management and tracking</td>
+          <td>src/components/PlayerCRM.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>player-grid</td>
+          <td>Player Grid</td>
+          <td>feature</td>
+          <td class="status-active">active</td>
+          <td>Visual player management interface</td>
+          <td>src/components/PlayerGrid/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>team-portal</td>
+          <td>Team Portal</td>
+          <td>product</td>
+          <td class="status-active">active</td>
+          <td>Team collaboration and management platform</td>
+          <td>src/components/TeamPortal/</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>cohort-management</td>
+          <td>Cohort Management</td>
+          <td>feature</td>
+          <td class="status-active">active</td>
+          <td>Program and camp lifecycle management</td>
+          <td>src/components/CohortManagement.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>data-import</td>
+          <td>Data Import</td>
+          <td>feature</td>
+          <td class="status-active">active</td>
+          <td>Import player data from CSV</td>
+          <td>src/components/DataImport.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>external-features</td>
+          <td>External Features</td>
+          <td>external</td>
+          <td class="status-active">active</td>
+          <td>External platform features and integrations</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td></td>
+        </tr>
+      
+        <tr>
+          <td>top-bins-coaching-toolkit</td>
+          <td>Coaching Toolkit</td>
+          <td>external</td>
+          <td class="status-online">online</td>
+          <td>Unified coaching interface for sports teams</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-01-07T00:00:00Z</td>
+        </tr>
+      
+        <tr>
+          <td>top-bins-player-grid</td>
+          <td>Player Grid</td>
+          <td>external</td>
+          <td class="status-online">online</td>
+          <td>Visual player progress tracking and management</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-01-07T00:00:00Z</td>
+        </tr>
+      
+        <tr>
+          <td>top-bins-media-library</td>
+          <td>Media Library</td>
+          <td>external</td>
+          <td class="status-online">online</td>
+          <td>Photo management and OCR-based media tagging</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-01-07T00:00:00Z</td>
+        </tr>
+      
+        <tr>
+          <td>top-bins-team-portal</td>
+          <td>Team Portal</td>
+          <td>external</td>
+          <td class="status-online">online</td>
+          <td>Unified team collaboration and management</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-01-07T00:00:00Z</td>
+        </tr>
+      
+        <tr>
+          <td>top-bins-cohort-management</td>
+          <td>Cohort Management</td>
+          <td>external</td>
+          <td class="status-online">online</td>
+          <td>Program and camp lifecycle management</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-01-07T00:00:00Z</td>
+        </tr>
+      
+        <tr>
+          <td>top-bins-batch-upload</td>
+          <td>Batch Upload</td>
+          <td>external</td>
+          <td class="status-online">online</td>
+          <td>Data import and batch processing capabilities</td>
+          <td>undefined</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-01-07T00:00:00Z</td>
+        </tr>
+      
+        <tr>
+          <td>featuresholon</td>
+          <td>FeaturesHolon</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features</td>
+          <td>src/core/holons/features/FeaturesHolon.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:30:01.037Z</td>
+        </tr>
+      
+        <tr>
+          <td>componentregistryengine</td>
+          <td>ComponentRegistryEngine</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules</td>
+          <td>src/core/holons/features/modules/ComponentRegistryEngine.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:31:04.419Z</td>
+        </tr>
+      
+        <tr>
+          <td>deliveryengine</td>
+          <td>DeliveryEngine</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules</td>
+          <td>src/core/holons/features/modules/DeliveryEngine.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:06:51.796Z</td>
+        </tr>
+      
+        <tr>
+          <td>implementationengine</td>
+          <td>ImplementationEngine</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules</td>
+          <td>src/core/holons/features/modules/ImplementationEngine.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:07:12.727Z</td>
+        </tr>
+      
+        <tr>
+          <td>technicalengine</td>
+          <td>TechnicalEngine</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules</td>
+          <td>src/core/holons/features/modules/TechnicalEngine.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:08:07.482Z</td>
+        </tr>
+      
+        <tr>
+          <td>productholon</td>
+          <td>ProductHolon</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product</td>
+          <td>src/core/holons/product/ProductHolon.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T19:23:09.940Z</td>
+        </tr>
+      
+        <tr>
+          <td>productmanager</td>
+          <td>ProductManager</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product</td>
+          <td>src/core/holons/product/ProductManager.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T20:28:07.844Z</td>
+        </tr>
+      
+        <tr>
+          <td>coordinationengine</td>
+          <td>CoordinationEngine</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product/modules</td>
+          <td>src/core/holons/product/modules/CoordinationEngine.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:08:01.061Z</td>
+        </tr>
+      
+        <tr>
+          <td>governanceengine</td>
+          <td>GovernanceEngine</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product/modules</td>
+          <td>src/core/holons/product/modules/GovernanceEngine.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:08:04.198Z</td>
+        </tr>
+      
+        <tr>
+          <td>requirementsengine</td>
+          <td>RequirementsEngine</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/product/modules</td>
+          <td>src/core/holons/product/modules/RequirementsEngine.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:07:57.688Z</td>
+        </tr>
+      
+        <tr>
+          <td>backendmanager</td>
+          <td>BackendManager</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/systemMaster</td>
+          <td>src/core/holons/systemMaster/BackendManager.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T17:02:10.002Z</td>
+        </tr>
+      
+        <tr>
+          <td>designsystemmanager</td>
+          <td>DesignSystemManager</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/systemMaster</td>
+          <td>src/core/holons/systemMaster/DesignSystemManager.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T17:09:57.409Z</td>
+        </tr>
+      
+        <tr>
+          <td>frontendmanager</td>
+          <td>FrontendManager</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/systemMaster</td>
+          <td>src/core/holons/systemMaster/FrontendManager.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T17:01:09.210Z</td>
+        </tr>
+      
+        <tr>
+          <td>testingholonmanager</td>
+          <td>TestingHolonManager</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/testing</td>
+          <td>src/core/holons/testing/TestingHolonManager.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T18:55:24.381Z</td>
+        </tr>
+      
+        <tr>
+          <td>accessibilitycontext</td>
+          <td>AccessibilityContext</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components</td>
+          <td>src/components/AccessibilityContext.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.483Z</td>
+        </tr>
+      
+        <tr>
+          <td>insights</td>
+          <td>Insights</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate</td>
+          <td>src/components/Articulate/Insights.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.486Z</td>
+        </tr>
+      
+        <tr>
+          <td>knowledgebase</td>
+          <td>KnowledgeBase</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate</td>
+          <td>src/components/Articulate/KnowledgeBase.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.486Z</td>
+        </tr>
+      
+        <tr>
+          <td>taskengine</td>
+          <td>TaskEngine</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate</td>
+          <td>src/components/Articulate/TaskEngine.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.487Z</td>
+        </tr>
+      
+        <tr>
+          <td>wiki</td>
+          <td>Wiki</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate</td>
+          <td>src/components/Articulate/Wiki.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.485Z</td>
+        </tr>
+      
+        <tr>
+          <td>workhistory</td>
+          <td>WorkHistory</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/Articulate</td>
+          <td>src/components/Articulate/WorkHistory.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.488Z</td>
+        </tr>
+      
+        <tr>
+          <td>coachingtoolkit</td>
+          <td>CoachingToolkit</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/CoachingToolkit</td>
+          <td>src/components/CoachingToolkit/CoachingToolkit.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:13:15.158Z</td>
+        </tr>
+      
+        <tr>
+          <td>developernotespanel</td>
+          <td>DeveloperNotesPanel</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/DeveloperNotes</td>
+          <td>src/components/DeveloperNotes/DeveloperNotesPanel.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:15:54.376Z</td>
+        </tr>
+      
+        <tr>
+          <td>executivedashboard</td>
+          <td>ExecutiveDashboard</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/ExecutiveDashboard</td>
+          <td>src/components/ExecutiveDashboard/ExecutiveDashboard.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:18:41.600Z</td>
+        </tr>
+      
+        <tr>
+          <td>featuresdashboard</td>
+          <td>FeaturesDashboard</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/FeaturesDashboard</td>
+          <td>src/components/FeaturesDashboard/FeaturesDashboard.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T19:30:30.399Z</td>
+        </tr>
+      
+        <tr>
+          <td>importcontextselector</td>
+          <td>ImportContextSelector</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components</td>
+          <td>src/components/ImportContextSelector.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:28:14.097Z</td>
+        </tr>
+      
+        <tr>
+          <td>photocorrection</td>
+          <td>PhotoCorrection</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components</td>
+          <td>src/components/PhotoCorrection.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:28:14.097Z</td>
+        </tr>
+      
+        <tr>
+          <td>roadmapdashboard</td>
+          <td>RoadmapDashboard</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/RoadmapDashboard</td>
+          <td>src/components/RoadmapDashboard/RoadmapDashboard.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:19:49.469Z</td>
+        </tr>
+      
+        <tr>
+          <td>sessionsmanager</td>
+          <td>SessionsManager</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SessionsManager</td>
+          <td>src/components/SessionsManager/SessionsManager.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:20:41.186Z</td>
+        </tr>
+      
+        <tr>
+          <td>systemdashboard</td>
+          <td>SystemDashboard</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard</td>
+          <td>src/components/SystemDashboard/SystemDashboard.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:06:15.977Z</td>
+        </tr>
+      
+        <tr>
+          <td>systemfeatures</td>
+          <td>SystemFeatures</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard</td>
+          <td>src/components/SystemDashboard/SystemFeatures.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.510Z</td>
+        </tr>
+      
+        <tr>
+          <td>systemnavigation</td>
+          <td>SystemNavigation</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard</td>
+          <td>src/components/SystemDashboard/SystemNavigation.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.510Z</td>
+        </tr>
+      
+        <tr>
+          <td>systemoverview</td>
+          <td>SystemOverview</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard</td>
+          <td>src/components/SystemDashboard/SystemOverview.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.509Z</td>
+        </tr>
+      
+        <tr>
+          <td>systemstats</td>
+          <td>SystemStats</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemDashboard</td>
+          <td>src/components/SystemDashboard/SystemStats.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.511Z</td>
+        </tr>
+      
+        <tr>
+          <td>systemlogconsole</td>
+          <td>SystemLogConsole</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemLogConsole</td>
+          <td>src/components/SystemLogConsole/SystemLogConsole.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:21:26.200Z</td>
+        </tr>
+      
+        <tr>
+          <td>scriptmaster</td>
+          <td>ScriptMaster</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemMaster</td>
+          <td>src/components/SystemMaster/ScriptMaster.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:18:10.429Z</td>
+        </tr>
+      
+        <tr>
+          <td>systemmaster</td>
+          <td>SystemMaster</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/SystemMaster</td>
+          <td>src/components/SystemMaster/SystemMaster.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T21:16:15.686Z</td>
+        </tr>
+      
+        <tr>
+          <td>button</td>
+          <td>Button</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/design-system/atoms/Button</td>
+          <td>src/components/design-system/atoms/Button/Button.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T17:14:03.705Z</td>
+        </tr>
+      
+        <tr>
+          <td>input</td>
+          <td>Input</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/design-system/atoms/Input</td>
+          <td>src/components/design-system/atoms/Input/Input.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:13:59.291Z</td>
+        </tr>
+      
+        <tr>
+          <td>button</td>
+          <td>Button</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/shared/Button</td>
+          <td>src/components/shared/Button/Button.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:22:12.747Z</td>
+        </tr>
+      
+        <tr>
+          <td>card</td>
+          <td>Card</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/shared/Card</td>
+          <td>src/components/shared/Card/Card.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T22:22:30.967Z</td>
+        </tr>
+      
+        <tr>
+          <td>themecontext</td>
+          <td>ThemeContext</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/theme</td>
+          <td>src/components/theme/ThemeContext.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.518Z</td>
+        </tr>
+      
+        <tr>
+          <td>themecontextdefinition</td>
+          <td>ThemeContextDefinition</td>
+          <td>component</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/components/theme</td>
+          <td>src/components/theme/ThemeContextDefinition.tsx</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-07T23:07:18.518Z</td>
+        </tr>
+      
+        <tr>
+          <td>featureregistryengine</td>
+          <td>FeatureRegistryEngine</td>
+          <td>holon</td>
+          <td class="status-active">active</td>
+          <td>Auto-discovered feature/component from /Users/home/Developer/greenlight-platform/src/core/holons/features/modules</td>
+          <td>src/core/holons/features/modules/FeatureRegistryEngine.ts</td>
+          <td></td>
+          <td>unknown</td>
+          <td>unknown</td>
+          <td>2025-07-08T23:00:55.306Z</td>
+        </tr>
+      
+    </tbody>
+  </table>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "Lessons Learned Repository",
+  "description": "Repository of lessons learned from all managers",
+  "lessons": {
+    "success": "Lessons from successful initiatives",
+    "failure": "Lessons from failed initiatives",
+    "improvement": "Lessons from improvement efforts",
+    "innovation": "Lessons from innovation efforts"
+  },
+  "features": {
+    "search": "Search across all lessons",
+    "categorization": "Categorization by type and impact",
+    "application": "Application tracking and success metrics",
+    "sharing": "Sharing and collaboration features"
+  }
+}

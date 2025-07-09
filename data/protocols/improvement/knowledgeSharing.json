@@ -1,0 +1,24 @@
+{
+  "name": "Knowledge Sharing Protocol",
+  "description": "Share lessons learned and best practices across teams",
+  "triggers": [
+    "fix-completion",
+    "pattern-discovery",
+    "insight-generation"
+  ],
+  "actions": [
+    "Document lessons learned",
+    "Share insights with relevant managers",
+    "Update best practices",
+    "Create knowledge base entries",
+    "Schedule knowledge sharing sessions",
+    "Implement learning automation"
+  ],
+  "sharingChannels": [
+    "Manager insights database",
+    "Cross-functional meetings",
+    "Documentation updates",
+    "Training materials",
+    "Automated notifications"
+  ]
+}

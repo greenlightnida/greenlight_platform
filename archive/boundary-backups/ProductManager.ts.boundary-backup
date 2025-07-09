@@ -1,0 +1,312 @@
+import { EventEmitter } from 'events';
+import { ProductHolon } from './ProductHolon';
+import { CoordinationEngine, ProductInitiative } from './modules/CoordinationEngine';
+
+/**
+ * ProductManager - Manages the Product Holon and all feature-level PM holons
+ * 
+ * This manager lives at the greenlight system level since we produce products internally,
+ * and coordinates all feature-level product managers across repositories.
+ * 
+ * Integrates with the existing CoordinationEngine for full product systems transparency.
+ */
+export class ProductManager extends EventEmitter {
+  private static instance: ProductManager;
+  private productHolon: ProductHolon;
+  private coordinationEngine: CoordinationEngine;
+  private featurePMs: Map<string, any> = new Map(); // Feature-level PM managers
+  private logger: any;
+
+  private constructor() {
+    super();
+    this.productHolon = ProductHolon.getInstance();
+    this.coordinationEngine = CoordinationEngine.getInstance();
+    this.logger = console;
+  }
+
+  public static getInstance(): ProductManager {
+    if (!ProductManager.instance) {
+      ProductManager.instance = new ProductManager();
+    }
+    return ProductManager.instance;
+  }
+
+  /**
+   * Initialize the Product Manager and register all feature PMs
+   */
+  public async initialize(): Promise<void> {
+    try {
+      // Initialize Product Holon (includes CoordinationEngine)
+      await this.productHolon.initialize();
+      
+      // Register feature-level PM managers
+      await this.registerFeaturePMs();
+      
+      // Setup coordination with feature PMs
+      await this.setupFeaturePMCoordination();
+      
+      this.logger.info('ProductManager initialized successfully');
+    } catch (error) {
+      this.logger.error('Failed to initialize ProductManager:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Register all feature-level product managers
+   */
+  private async registerFeaturePMs(): Promise<void> {
+    const featurePMs = [
+      { name: 'ElevateManager', repository: 'Top_Bins', category: 'coaching' },
+      { name: 'CoachingManager', repository: 'Top_Bins', category: 'coaching' },
+      { name: 'PlayerManager', repository: 'Top_Bins', category: 'player-management' },
+      { name: 'AdministrateManager', repository: 'Top_Bins', category: 'administration' },
+      { name: 'ExecutiveManager', repository: 'Top_Bins', category: 'administration' },
+      { name: 'BusinessIntelligenceManager', repository: 'Top_Bins', category: 'analytics' }
+    ];
+
+    for (const pm of featurePMs) {
+      this.featurePMs.set(pm.name, {
+        repository: pm.repository,
+        category: pm.category,
+        status: 'registered',
+        lastUpdated: new Date().toISOString()
+      });
+    }
+
+    this.logger.info(`Registered ${featurePMs.length} feature PMs`);
+  }
+
+  /**
+   * Setup coordination between ProductManager and feature PMs
+   */
+  private async setupFeaturePMCoordination(): Promise<void> {
+    try {
+      // Create initiatives for each feature PM category
+      const categories = ['coaching', 'player-management', 'administration', 'analytics'];
+      
+      for (const category of categories) {
+        const categoryPMs = Array.from(this.featurePMs.entries())
+          .filter(([_, info]) => info.category === category);
+        
+        if (categoryPMs.length > 0) {
+          // Create coordination initiative for this category
+          await this.coordinationEngine.createInitiative({
+            title: `${category} Feature PM Coordination`,
+            description: `Coordinate all ${category} feature-level product managers`,
+            type: 'feature',
+            priority: 'high',
+            status: 'planning',
+            version: '1.0.0',
+            requirements: [],
+            specifications: [],
+            engineering: [],
+            systems: [],
+            dependencies: [],
+            timeline: {
+              startDate: new Date().toISOString(),
+              targetDate: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000).toISOString() // 30 days
+            },
+            resources: {
+              team: categoryPMs.map(([name, _]) => name),
+              budget: 0,
+              effort: 40 // 40 hours
+            }
+          });
+        }
+      }
+
+      this.logger.info('Feature PM coordination initiatives created');
+    } catch (error) {
+      this.logger.error('Failed to setup feature PM coordination:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get status of all feature PMs
+   */
+  public getFeaturePMStatus(): Map<string, any> {
+    return new Map(this.featurePMs);
+  }
+
+  /**
+   * Coordinate feature PM activities using CoordinationEngine
+   */
+  public async coordinateFeaturePMs(): Promise<void> {
+    try {
+      // Get all initiatives from CoordinationEngine
+      const initiatives = this.coordinationEngine.getInitiatives();
+      const coordinationInitiatives = initiatives.filter(i => 
+        i.title.includes('Feature PM Coordination')
+      );
+
+      // Get feature PM statuses
+      const statuses = Array.from(this.featurePMs.entries()).map(([name, info]) => ({
+        name,
+        repository: info.repository,
+        category: info.category,
+        status: info.status
+      }));
+
+      // Update coordination initiatives based on feature PM status
+      for (const initiative of coordinationInitiatives) {
+        const category = initiative.title.split(' ')[0]; // Extract category from title
+        const categoryPMs = statuses.filter(s => s.category === category);
+        
+        if (categoryPMs.length > 0) {
+          // Update initiative with current PM status
+          await this.coordinationEngine.updateInitiative(initiative.id, {
+            description: `Coordinate ${categoryPMs.length} ${category} feature-level product managers`,
+            resources: {
+              ...initiative.resources,
+              team: categoryPMs.map(pm => pm.name)
+            }
+          });
+        }
+      }
+
+      this.logger.info('Feature PM coordination updated with CoordinationEngine');
+      this.logger.info('Coordination status:', {
+        totalInitiatives: initiatives.length,
+        coordinationInitiatives: coordinationInitiatives.length,
+        featurePMs: statuses.length
+      });
+    } catch (error) {
+      this.logger.error('Failed to coordinate feature PMs:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get Product Holon health status with full transparency
+   */
+  public async getHealthStatus(): Promise<any> {
+    try {
+      await this.productHolon.runHealthCheck();
+      const holonHealth = this.productHolon.getPerformanceMetrics();
+      const coordinationMetrics = this.coordinationEngine.getPerformanceMetrics();
+      const featurePMStatus = this.getFeaturePMStatus();
+      
+      // Get coordination initiatives
+      const initiatives = this.coordinationEngine.getInitiatives();
+      const coordinationInitiatives = initiatives.filter(i => 
+        i.title.includes('Feature PM Coordination')
+      );
+      
+      return {
+        holon: holonHealth,
+        coordination: {
+          metrics: coordinationMetrics,
+          initiatives: coordinationInitiatives.length,
+          totalInitiatives: initiatives.length
+        },
+        featurePMs: Array.from(featurePMStatus.entries()),
+        totalFeaturePMs: featurePMStatus.size,
+        transparency: {
+          productHolon: true,
+          coordinationEngine: true,
+          featurePMs: true,
+          crossRepository: true
+        },
+        lastUpdated: new Date().toISOString()
+      };
+    } catch (error) {
+      this.logger.error('Failed to get health status:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Execute product-level operations
+   */
+  public async executeOperation(operation: string, params?: any): Promise<any> {
+    try {
+      this.logger.info(`Executing product operation: ${operation}`);
+      
+      switch (operation) {
+        case 'coordinate':
+          return await this.coordinateFeaturePMs();
+        case 'health':
+          return await this.getHealthStatus();
+        case 'transparency':
+          return await this.getFullTransparency();
+        case 'register':
+          return await this.registerFeaturePMs();
+        default:
+          throw new Error(`Unknown operation: ${operation}`);
+      }
+    } catch (error) {
+      this.logger.error(`Failed to execute operation ${operation}:`, error);
+      throw error;
+    }
+  }
+
+  /**
+   * Get full product systems transparency
+   */
+  public async getFullTransparency(): Promise<any> {
+    try {
+      const healthStatus = await this.getHealthStatus();
+      const initiatives = this.coordinationEngine.getInitiatives();
+      const featurePMs = this.getFeaturePMStatus();
+      
+      return {
+        productManager: {
+          status: 'active',
+          featurePMs: Array.from(featurePMs.entries()),
+          lastUpdated: new Date().toISOString()
+        },
+        productHolon: {
+          state: this.productHolon.getState(),
+          performanceMetrics: this.productHolon.getPerformanceMetrics(),
+          modules: {
+            requirements: true,
+            coordination: true,
+            governance: true
+          }
+        },
+        coordinationEngine: {
+          initiatives: initiatives.length,
+          activeInitiatives: initiatives.filter(i => i.status === 'in-progress').length,
+          completedInitiatives: initiatives.filter(i => i.status === 'completed').length,
+          performanceMetrics: this.coordinationEngine.getPerformanceMetrics()
+        },
+        featurePMCoordination: {
+          categories: ['coaching', 'player-management', 'administration', 'analytics'],
+          coordinationInitiatives: initiatives.filter(i => 
+            i.title.includes('Feature PM Coordination')
+          ).length,
+          crossRepository: true
+        },
+        transparency: {
+          productHolon: true,
+          coordinationEngine: true,
+          featurePMs: true,
+          crossRepository: true,
+          noRedundancy: true
+        },
+        lastUpdated: new Date().toISOString()
+      };
+    } catch (error) {
+      this.logger.error('Failed to get full transparency:', error);
+      throw error;
+    }
+  }
+
+  /**
+   * Cleanup resources
+   */
+  public async cleanup(): Promise<void> {
+    try {
+      await this.productHolon.shutdown();
+      this.featurePMs.clear();
+      this.logger.info('ProductManager cleaned up successfully');
+    } catch (error) {
+      this.logger.error('Failed to cleanup ProductManager:', error);
+      throw error;
+    }
+  }
+}
+
+export default ProductManager; 

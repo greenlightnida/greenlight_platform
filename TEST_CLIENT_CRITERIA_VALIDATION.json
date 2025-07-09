@@ -1,0 +1,1077 @@
+{
+  "clientInfo": {
+    "name": "TEST_CLIENT",
+    "validationDate": "2025-07-09T13:47:33.479Z",
+    "sessionId": "criteria-validator-1752068853467",
+    "strictMode": true
+  },
+  "criteria": {
+    "legitimacy": {
+      "description": "Ensures the build is legitimate and compliant",
+      "weight": 25,
+      "categories": {
+        "legal": {
+          "requirements": [
+            "Business registration and licensing",
+            "Intellectual property compliance",
+            "Data protection regulations (GDPR, CCPA)",
+            "Industry-specific compliance",
+            "Contractual obligations"
+          ],
+          "weight": 30,
+          "assessments": {
+            "Business registration and licensing": {
+              "requirement": "Business registration and licensing",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Intellectual property compliance": {
+              "requirement": "Intellectual property compliance",
+              "status": "requires_review",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Requires legal review and documentation"
+            },
+            "Data protection regulations (GDPR, CCPA)": {
+              "requirement": "Data protection regulations (GDPR, CCPA)",
+              "status": "requires_review",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Requires legal review and documentation"
+            },
+            "Industry-specific compliance": {
+              "requirement": "Industry-specific compliance",
+              "status": "requires_review",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Requires legal review and documentation"
+            },
+            "Contractual obligations": {
+              "requirement": "Contractual obligations",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Engage legal counsel for compliance review",
+            "Establish compliance monitoring system",
+            "Create compliance documentation framework"
+          ]
+        },
+        "ethical": {
+          "requirements": [
+            "Ethical AI usage policies",
+            "Bias prevention measures",
+            "Transparency in data usage",
+            "Fair treatment policies",
+            "Social responsibility commitments"
+          ],
+          "weight": 25,
+          "assessments": {
+            "Ethical AI usage policies": {
+              "requirement": "Ethical AI usage policies",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Bias prevention measures": {
+              "requirement": "Bias prevention measures",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Transparency in data usage": {
+              "requirement": "Transparency in data usage",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Fair treatment policies": {
+              "requirement": "Fair treatment policies",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Social responsibility commitments": {
+              "requirement": "Social responsibility commitments",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Develop ethical AI usage guidelines",
+            "Implement bias detection systems",
+            "Create transparency reporting framework"
+          ]
+        },
+        "financial": {
+          "requirements": [
+            "Financial stability verification",
+            "Budget allocation for security",
+            "Investment in quality assurance",
+            "Sustainable business model",
+            "Risk management framework"
+          ],
+          "weight": 25,
+          "assessments": {
+            "Financial stability verification": {
+              "requirement": "Financial stability verification",
+              "status": "partially_met",
+              "confidence": 70,
+              "evidence": [],
+              "notes": "Partial verification available"
+            },
+            "Budget allocation for security": {
+              "requirement": "Budget allocation for security",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Investment in quality assurance": {
+              "requirement": "Investment in quality assurance",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Sustainable business model": {
+              "requirement": "Sustainable business model",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Risk management framework": {
+              "requirement": "Risk management framework",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            }
+          },
+          "score": 10,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "operational": {
+          "requirements": [
+            "Operational capacity verification",
+            "Team expertise validation",
+            "Infrastructure readiness",
+            "Process maturity assessment",
+            "Quality management systems"
+          ],
+          "weight": 20,
+          "assessments": {
+            "Operational capacity verification": {
+              "requirement": "Operational capacity verification",
+              "status": "partially_met",
+              "confidence": 70,
+              "evidence": [],
+              "notes": "Partial verification available"
+            },
+            "Team expertise validation": {
+              "requirement": "Team expertise validation",
+              "status": "partially_met",
+              "confidence": 70,
+              "evidence": [],
+              "notes": "Partial verification available"
+            },
+            "Infrastructure readiness": {
+              "requirement": "Infrastructure readiness",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Process maturity assessment": {
+              "requirement": "Process maturity assessment",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            },
+            "Quality management systems": {
+              "requirement": "Quality management systems",
+              "status": "not_met",
+              "confidence": 50,
+              "evidence": [],
+              "notes": "Requires implementation"
+            }
+          },
+          "score": 20,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        }
+      },
+      "score": 7,
+      "status": "unacceptable"
+    },
+    "coolness": {
+      "description": "Ensures the build is innovative and engaging",
+      "weight": 20,
+      "categories": {
+        "innovation": {
+          "requirements": [
+            "Cutting-edge technology adoption",
+            "Unique value proposition",
+            "Creative problem-solving approach",
+            "User experience innovation",
+            "Market differentiation strategy"
+          ],
+          "weight": 30,
+          "assessments": {
+            "Cutting-edge technology adoption": {
+              "requirement": "Cutting-edge technology adoption",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Unique value proposition": {
+              "requirement": "Unique value proposition",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Creative problem-solving approach": {
+              "requirement": "Creative problem-solving approach",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "User experience innovation": {
+              "requirement": "User experience innovation",
+              "status": "requires_review",
+              "confidence": 65,
+              "evidence": [],
+              "notes": "Requires innovation assessment"
+            },
+            "Market differentiation strategy": {
+              "requirement": "Market differentiation strategy",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct market research for innovation opportunities",
+            "Establish innovation pipeline",
+            "Create user feedback collection system"
+          ]
+        },
+        "user_experience": {
+          "requirements": [
+            "Intuitive interface design",
+            "Seamless user workflows",
+            "Accessibility compliance",
+            "Performance optimization",
+            "Mobile responsiveness"
+          ],
+          "weight": 25,
+          "assessments": {
+            "Intuitive interface design": {
+              "requirement": "Intuitive interface design",
+              "status": "partially_met",
+              "confidence": 75,
+              "evidence": [],
+              "notes": "Basic implementation available"
+            },
+            "Seamless user workflows": {
+              "requirement": "Seamless user workflows",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Accessibility compliance": {
+              "requirement": "Accessibility compliance",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Performance optimization": {
+              "requirement": "Performance optimization",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Mobile responsiveness": {
+              "requirement": "Mobile responsiveness",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            }
+          },
+          "score": 10,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "engagement": {
+          "requirements": [
+            "Interactive features",
+            "Gamification elements",
+            "Personalization capabilities",
+            "Social integration",
+            "Content engagement metrics"
+          ],
+          "weight": 25,
+          "assessments": {
+            "Interactive features": {
+              "requirement": "Interactive features",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Gamification elements": {
+              "requirement": "Gamification elements",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Personalization capabilities": {
+              "requirement": "Personalization capabilities",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Social integration": {
+              "requirement": "Social integration",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Content engagement metrics": {
+              "requirement": "Content engagement metrics",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "aesthetics": {
+          "requirements": [
+            "Modern design language",
+            "Visual appeal and branding",
+            "Consistent design system",
+            "Professional presentation",
+            "Brand alignment"
+          ],
+          "weight": 20,
+          "assessments": {
+            "Modern design language": {
+              "requirement": "Modern design language",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Visual appeal and branding": {
+              "requirement": "Visual appeal and branding",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Consistent design system": {
+              "requirement": "Consistent design system",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Professional presentation": {
+              "requirement": "Professional presentation",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            },
+            "Brand alignment": {
+              "requirement": "Brand alignment",
+              "status": "not_met",
+              "confidence": 40,
+              "evidence": [],
+              "notes": "Requires design and implementation"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        }
+      },
+      "score": 3,
+      "status": "unacceptable"
+    },
+    "thoroughness": {
+      "description": "Ensures comprehensive and complete implementation",
+      "weight": 30,
+      "categories": {
+        "architecture": {
+          "requirements": [
+            "Scalable system architecture",
+            "Microservices design",
+            "API-first approach",
+            "Database optimization",
+            "Performance engineering"
+          ],
+          "weight": 25,
+          "assessments": {
+            "Scalable system architecture": {
+              "requirement": "Scalable system architecture",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Microservices design": {
+              "requirement": "Microservices design",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "API-first approach": {
+              "requirement": "API-first approach",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Database optimization": {
+              "requirement": "Database optimization",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Performance engineering": {
+              "requirement": "Performance engineering",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct architecture review and optimization",
+            "Implement microservices design patterns",
+            "Establish API governance framework"
+          ]
+        },
+        "functionality": {
+          "requirements": [
+            "Complete feature implementation",
+            "Edge case handling",
+            "Error management",
+            "Data validation",
+            "Business logic completeness"
+          ],
+          "weight": 25,
+          "assessments": {
+            "Complete feature implementation": {
+              "requirement": "Complete feature implementation",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Edge case handling": {
+              "requirement": "Edge case handling",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Error management": {
+              "requirement": "Error management",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Data validation": {
+              "requirement": "Data validation",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Business logic completeness": {
+              "requirement": "Business logic completeness",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "testing": {
+          "requirements": [
+            "Comprehensive test coverage",
+            "Automated testing pipeline",
+            "Performance testing",
+            "Security testing",
+            "User acceptance testing"
+          ],
+          "weight": 20,
+          "assessments": {
+            "Comprehensive test coverage": {
+              "requirement": "Comprehensive test coverage",
+              "status": "partially_met",
+              "confidence": 70,
+              "evidence": [],
+              "notes": "Basic testing framework available"
+            },
+            "Automated testing pipeline": {
+              "requirement": "Automated testing pipeline",
+              "status": "partially_met",
+              "confidence": 70,
+              "evidence": [],
+              "notes": "Basic testing framework available"
+            },
+            "Performance testing": {
+              "requirement": "Performance testing",
+              "status": "partially_met",
+              "confidence": 70,
+              "evidence": [],
+              "notes": "Basic testing framework available"
+            },
+            "Security testing": {
+              "requirement": "Security testing",
+              "status": "partially_met",
+              "confidence": 70,
+              "evidence": [],
+              "notes": "Basic testing framework available"
+            },
+            "User acceptance testing": {
+              "requirement": "User acceptance testing",
+              "status": "partially_met",
+              "confidence": 70,
+              "evidence": [],
+              "notes": "Basic testing framework available"
+            }
+          },
+          "score": 50,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "documentation": {
+          "requirements": [
+            "Complete technical documentation",
+            "User guides and manuals",
+            "API documentation",
+            "Deployment guides",
+            "Maintenance procedures"
+          ],
+          "weight": 15,
+          "assessments": {
+            "Complete technical documentation": {
+              "requirement": "Complete technical documentation",
+              "status": "not_met",
+              "confidence": 30,
+              "evidence": [],
+              "notes": "Requires comprehensive implementation"
+            },
+            "User guides and manuals": {
+              "requirement": "User guides and manuals",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "API documentation": {
+              "requirement": "API documentation",
+              "status": "not_met",
+              "confidence": 30,
+              "evidence": [],
+              "notes": "Requires comprehensive implementation"
+            },
+            "Deployment guides": {
+              "requirement": "Deployment guides",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Maintenance procedures": {
+              "requirement": "Maintenance procedures",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "monitoring": {
+          "requirements": [
+            "Real-time system monitoring",
+            "Performance metrics tracking",
+            "Error tracking and alerting",
+            "User behavior analytics",
+            "Business metrics dashboard"
+          ],
+          "weight": 15,
+          "assessments": {
+            "Real-time system monitoring": {
+              "requirement": "Real-time system monitoring",
+              "status": "not_met",
+              "confidence": 30,
+              "evidence": [],
+              "notes": "Requires comprehensive implementation"
+            },
+            "Performance metrics tracking": {
+              "requirement": "Performance metrics tracking",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Error tracking and alerting": {
+              "requirement": "Error tracking and alerting",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "User behavior analytics": {
+              "requirement": "User behavior analytics",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            },
+            "Business metrics dashboard": {
+              "requirement": "Business metrics dashboard",
+              "status": "requires_review",
+              "confidence": 55,
+              "evidence": [],
+              "notes": "Requires technical assessment"
+            }
+          },
+          "score": 0,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        }
+      },
+      "score": 10,
+      "status": "unacceptable"
+    },
+    "security": {
+      "description": "Ensures robust security and data protection",
+      "weight": 25,
+      "categories": {
+        "data_protection": {
+          "requirements": [
+            "Data encryption at rest and in transit",
+            "Secure data storage practices",
+            "Data backup and recovery",
+            "Data retention policies",
+            "Data privacy compliance"
+          ],
+          "weight": 25,
+          "assessments": {
+            "Data encryption at rest and in transit": {
+              "requirement": "Data encryption at rest and in transit",
+              "status": "requires_review",
+              "confidence": 80,
+              "evidence": [],
+              "notes": "Requires security audit"
+            },
+            "Secure data storage practices": {
+              "requirement": "Secure data storage practices",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Data backup and recovery": {
+              "requirement": "Data backup and recovery",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Data retention policies": {
+              "requirement": "Data retention policies",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Data privacy compliance": {
+              "requirement": "Data privacy compliance",
+              "status": "not_met",
+              "confidence": 45,
+              "evidence": [],
+              "notes": "Requires compliance implementation"
+            }
+          },
+          "score": 30,
+          "status": "unacceptable",
+          "recommendations": [
+            "Implement comprehensive encryption strategy",
+            "Establish data governance framework",
+            "Create data protection impact assessments"
+          ]
+        },
+        "access_control": {
+          "requirements": [
+            "Role-based access control (RBAC)",
+            "Multi-factor authentication (MFA)",
+            "Session management",
+            "Permission granularity",
+            "Access audit logging"
+          ],
+          "weight": 25,
+          "assessments": {
+            "Role-based access control (RBAC)": {
+              "requirement": "Role-based access control (RBAC)",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Multi-factor authentication (MFA)": {
+              "requirement": "Multi-factor authentication (MFA)",
+              "status": "requires_review",
+              "confidence": 80,
+              "evidence": [],
+              "notes": "Requires security audit"
+            },
+            "Session management": {
+              "requirement": "Session management",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Permission granularity": {
+              "requirement": "Permission granularity",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Access audit logging": {
+              "requirement": "Access audit logging",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            }
+          },
+          "score": 40,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "application_security": {
+          "requirements": [
+            "OWASP Top 10 compliance",
+            "Secure coding practices",
+            "Input validation and sanitization",
+            "SQL injection prevention",
+            "XSS protection"
+          ],
+          "weight": 20,
+          "assessments": {
+            "OWASP Top 10 compliance": {
+              "requirement": "OWASP Top 10 compliance",
+              "status": "not_met",
+              "confidence": 45,
+              "evidence": [],
+              "notes": "Requires compliance implementation"
+            },
+            "Secure coding practices": {
+              "requirement": "Secure coding practices",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Input validation and sanitization": {
+              "requirement": "Input validation and sanitization",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "SQL injection prevention": {
+              "requirement": "SQL injection prevention",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "XSS protection": {
+              "requirement": "XSS protection",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            }
+          },
+          "score": 40,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "infrastructure_security": {
+          "requirements": [
+            "Network security measures",
+            "Firewall configuration",
+            "Intrusion detection systems",
+            "Vulnerability management",
+            "Security monitoring"
+          ],
+          "weight": 15,
+          "assessments": {
+            "Network security measures": {
+              "requirement": "Network security measures",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Firewall configuration": {
+              "requirement": "Firewall configuration",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Intrusion detection systems": {
+              "requirement": "Intrusion detection systems",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Vulnerability management": {
+              "requirement": "Vulnerability management",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Security monitoring": {
+              "requirement": "Security monitoring",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            }
+          },
+          "score": 50,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        },
+        "compliance": {
+          "requirements": [
+            "Industry security standards",
+            "Regulatory compliance",
+            "Security certifications",
+            "Regular security audits",
+            "Incident response procedures"
+          ],
+          "weight": 15,
+          "assessments": {
+            "Industry security standards": {
+              "requirement": "Industry security standards",
+              "status": "not_met",
+              "confidence": 45,
+              "evidence": [],
+              "notes": "Requires compliance implementation"
+            },
+            "Regulatory compliance": {
+              "requirement": "Regulatory compliance",
+              "status": "not_met",
+              "confidence": 45,
+              "evidence": [],
+              "notes": "Requires compliance implementation"
+            },
+            "Security certifications": {
+              "requirement": "Security certifications",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Regular security audits": {
+              "requirement": "Regular security audits",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            },
+            "Incident response procedures": {
+              "requirement": "Incident response procedures",
+              "status": "partially_met",
+              "confidence": 60,
+              "evidence": [],
+              "notes": "Basic security measures available"
+            }
+          },
+          "score": 30,
+          "status": "unacceptable",
+          "recommendations": [
+            "Conduct detailed assessment of requirements",
+            "Develop implementation roadmap",
+            "Establish monitoring and validation processes"
+          ]
+        }
+      },
+      "score": 38,
+      "status": "unacceptable"
+    }
+  },
+  "overallScore": 15,
+  "recommendations": [
+    {
+      "category": "legitimacy",
+      "priority": "critical",
+      "score": 7,
+      "recommendations": [
+        "Conduct detailed assessment of requirements",
+        "Develop implementation roadmap",
+        "Establish monitoring and validation processes"
+      ]
+    },
+    {
+      "category": "coolness",
+      "priority": "critical",
+      "score": 3,
+      "recommendations": [
+        "Conduct detailed assessment of requirements",
+        "Develop implementation roadmap",
+        "Establish monitoring and validation processes"
+      ]
+    },
+    {
+      "category": "thoroughness",
+      "priority": "critical",
+      "score": 10,
+      "recommendations": [
+        "Conduct detailed assessment of requirements",
+        "Develop implementation roadmap",
+        "Establish monitoring and validation processes"
+      ]
+    },
+    {
+      "category": "security",
+      "priority": "critical",
+      "score": 38,
+      "recommendations": [
+        "Conduct detailed assessment of requirements",
+        "Develop implementation roadmap",
+        "Establish monitoring and validation processes"
+      ]
+    },
+    {
+      "category": "overall",
+      "priority": "critical",
+      "score": 15,
+      "recommendations": [
+        "Implement comprehensive improvement plan",
+        "Focus on lowest-scoring categories first",
+        "Establish regular validation cycles",
+        "Engage stakeholders for buy-in"
+      ]
+    }
+  ],
+  "compliance": {
+    "overall": 15,
+    "legitimacy": 7,
+    "coolness": 3,
+    "thoroughness": 10,
+    "security": 38
+  },
+  "riskAssessment": {},
+  "overallStatus": "unacceptable"
+}

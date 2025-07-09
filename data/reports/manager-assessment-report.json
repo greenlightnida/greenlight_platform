@@ -1,0 +1,44 @@
+{
+  "timestamp": "2025-07-09T17:18:07.384Z",
+  "summary": {
+    "total": 23,
+    "implemented": 1,
+    "partial": 3,
+    "missing": 19,
+    "criticalMissing": 1
+  },
+  "details": {
+    "implemented": [
+      "ProductManager"
+    ],
+    "partial": [
+      "GovernanceOrchestrator",
+      "SessionManager",
+      "ProtocolManager"
+    ],
+    "missing": [
+      "SystemMasterManager",
+      "RepositoryGovernor",
+      "RepositoryMonitor",
+      "PolicyEngine",
+      "DocumentationManager",
+      "AlertManager",
+      "MigrationsManager",
+      "APIGraphManager",
+      "ElaborateManager",
+      "SystemEvolutionManager",
+      "ArticulateManager",
+      "KnowledgeManager",
+      "WorkManager",
+      "ElevateManager",
+      "CoachingManager",
+      "PlayerManager",
+      "AdministrateManager",
+      "ExecutiveManager",
+      "BusinessIntelligenceManager"
+    ],
+    "criticalMissing": [
+      "SystemMasterManager"
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "collection": {
+    "automatic": true,
+    "manual": true,
+    "frequency": "real_time"
+  },
+  "sources": {
+    "system": true,
+    "users": true,
+    "managers": true,
+    "external": true
+  }
+}

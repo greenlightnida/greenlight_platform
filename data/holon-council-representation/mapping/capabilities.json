@@ -1,0 +1,82 @@
+{
+  "systemHolons": {
+    "systemMaster": [
+      "governance",
+      "coordination",
+      "monitoring",
+      "orchestration"
+    ],
+    "elaborate": [
+      "evolution",
+      "adaptation",
+      "learning",
+      "optimization"
+    ],
+    "articulate": [
+      "knowledge_base",
+      "documentation",
+      "communication",
+      "collaboration"
+    ],
+    "features": [
+      "implementation",
+      "deployment",
+      "maintenance",
+      "quality"
+    ],
+    "product": [
+      "requirements",
+      "coordination",
+      "governance",
+      "delivery"
+    ],
+    "testing": [
+      "validation",
+      "verification",
+      "quality_assurance",
+      "compliance"
+    ]
+  },
+  "productHolons": {
+    "elevate": [
+      "coaching_tools",
+      "player_management",
+      "media_intelligence",
+      "cohort_management"
+    ],
+    "administrate": [
+      "business_intelligence",
+      "analytics",
+      "reporting",
+      "executive_oversight"
+    ]
+  },
+  "featureHolons": {
+    "features": [
+      "feature_development",
+      "technical_standards",
+      "deployment",
+      "maintenance"
+    ]
+  },
+  "sessionHolons": {
+    "sessionManagement": [
+      "session_control",
+      "state_management",
+      "context_preservation"
+    ]
+  },
+  "userHolons": {
+    "auth": [
+      "authentication",
+      "authorization",
+      "security",
+      "access_control"
+    ],
+    "userManagement": [
+      "user_administration",
+      "profile_management",
+      "permissions"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Performance Dashboards",
+  "description": "Dashboards for monitoring and analyzing performance",
+  "dashboards": {
+    "manager": "Individual manager dashboards",
+    "team": "Team performance dashboards",
+    "system": "System-wide performance dashboards",
+    "executive": "Executive summary dashboards"
+  },
+  "features": {
+    "realTime": "Real-time data updates",
+    "customization": "Customizable dashboard layouts",
+    "drillDown": "Drill-down capabilities for detailed analysis",
+    "export": "Export and reporting capabilities"
+  }
+}

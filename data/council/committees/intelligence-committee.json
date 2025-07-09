@@ -1,0 +1,14 @@
+{
+  "name": "Intelligence Committee",
+  "parent": "CouncilMasterManager",
+  "chair": "IntelligenceCommitteeManager",
+  "purpose": "Intelligence, learning, and anticipatory capabilities",
+  "managers": [
+    "IntelligenceCommitteeManager",
+    "AnticipatoryLearningManager",
+    "KnowledgeManagementManager",
+    "AnalyticsManager",
+    "ContinuousImprovementManager",
+    "InnovationManager"
+  ]
+}

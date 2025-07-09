@@ -1,0 +1,19 @@
+{
+  "name": "Automated Reporting System",
+  "description": "Automated generation of reports and insights",
+  "reports": {
+    "daily": "Daily health and status reports",
+    "weekly": "Weekly performance and improvement reports",
+    "monthly": "Monthly strategic and trend reports"
+  },
+  "insights": {
+    "trends": "Trend analysis and insights",
+    "patterns": "Pattern recognition and insights",
+    "recommendations": "Automated recommendations and suggestions"
+  },
+  "distribution": {
+    "managers": "Reports distributed to relevant managers",
+    "teams": "Team reports distributed to team members",
+    "stakeholders": "Stakeholder reports distributed to stakeholders"
+  }
+}

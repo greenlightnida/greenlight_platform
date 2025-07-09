@@ -1,0 +1,43 @@
+{
+  "name": "Shared Decision-Making",
+  "processes": {
+    "strategicDecisions": {
+      "participants": [
+        "council-chair",
+        "executive-committee"
+      ],
+      "process": "collaborative_decision_making",
+      "criteria": [
+        "strategic_impact",
+        "resource_requirements",
+        "risk_assessment"
+      ],
+      "approval": "council-chair_final_approval"
+    },
+    "operationalDecisions": {
+      "participants": [
+        "executive-committee"
+      ],
+      "oversight": "council-chair",
+      "process": "executive_decision_making",
+      "criteria": [
+        "operational_impact",
+        "feasibility",
+        "efficiency"
+      ],
+      "escalation": "council-chair_if_needed"
+    },
+    "tacticalDecisions": {
+      "participants": [
+        "committee-chairs"
+      ],
+      "oversight": "executive-committee",
+      "process": "committee_decision_making",
+      "criteria": [
+        "domain_impact",
+        "implementation_feasibility"
+      ],
+      "escalation": "executive-committee_if_needed"
+    }
+  }
+}

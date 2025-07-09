@@ -1,0 +1,23 @@
+{
+  "name": "Consensus Building Protocols",
+  "protocols": {
+    "deliberation": {
+      "method": "structured_discussion",
+      "participants": "all_constituencies",
+      "facilitator": "council_chair",
+      "outcome": "shared_understanding"
+    },
+    "compromise": {
+      "method": "interest_based_negotiation",
+      "participants": "all_constituencies",
+      "facilitator": "council_chair",
+      "outcome": "compromise_agreement"
+    },
+    "consensus": {
+      "method": "unanimous_agreement",
+      "participants": "all_constituencies",
+      "facilitator": "council_chair",
+      "outcome": "consensus_decision"
+    }
+  }
+}

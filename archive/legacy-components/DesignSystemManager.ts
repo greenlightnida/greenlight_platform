@@ -1,0 +1,1126 @@
+#!/usr/bin/env tsx
+
+/**
+ * DesignSystemManager - Design System Governance and Indexing
+ * 
+ * PURPOSE: Index and govern all design systems across the platform
+ * - Centralized design system registry and governance
+ * - Component library management and versioning
+ * - Design token management and distribution
+ * - Cross-platform design consistency
+ * - Design system documentation and standards
+ * 
+ * USAGE: import { DesignSystemManager } from './core/holons/systemMaster/DesignSystemManager';
+ */
+
+import { EventEmitter } from 'events';
+import fs from 'fs';
+import path from 'path';
+
+// Types
+export interface DesignSystem {
+  id: string;
+  name: string;
+  version: string;
+  platform: 'greenlight-platform' | 'top-bins' | 'shared';
+  holon: string;
+  status: 'active' | 'deprecated' | 'experimental';
+  description: string;
+  maintainer: string;
+  lastUpdated: Date;
+  components: ComponentRegistry[];
+  tokens: DesignTokens;
+  documentation: DesignSystemDocumentation;
+  dependencies: string[];
+  metadata: Record<string, any>;
+}
+
+export interface ComponentRegistry {
+  id: string;
+  name: string;
+  category: ComponentCategory;
+  version: string;
+  status: 'stable' | 'beta' | 'deprecated';
+  path: string;
+  props: ComponentProps[];
+  examples: ComponentExample[];
+  documentation: string;
+  tests: ComponentTests;
+  accessibility: ComponentAccessibility;
+}
+
+export type ComponentCategory = 
+  | 'atoms' | 'molecules' | 'organisms' | 'templates' | 'pages'
+  | 'forms' | 'navigation' | 'feedback' | 'data-display' | 'layout';
+
+export interface ComponentProps {
+  name: string;
+  type: string;
+  required: boolean;
+  defaultValue?: any;
+  description: string;
+  examples: any[];
+}
+
+export interface ComponentExample {
+  name: string;
+  description: string;
+  code: string;
+  preview: string;
+}
+
+export interface ComponentTests {
+  unit: boolean;
+  integration: boolean;
+  visual: boolean;
+  accessibility: boolean;
+  coverage: number;
+}
+
+export interface ComponentAccessibility {
+  wcagLevel: 'A' | 'AA' | 'AAA';
+  keyboardNavigation: boolean;
+  screenReader: boolean;
+  colorContrast: boolean;
+  focusManagement: boolean;
+  ariaLabels: boolean;
+}
+
+export interface DesignTokens {
+  colors: ColorTokens;
+  typography: TypographyTokens;
+  spacing: SpacingTokens;
+  shadows: ShadowTokens;
+  borders: BorderTokens;
+  animations: AnimationTokens;
+  breakpoints: BreakpointTokens;
+}
+
+export interface ColorTokens {
+  primary: ColorPalette;
+  secondary: ColorPalette;
+  neutral: ColorPalette;
+  success: ColorPalette;
+  warning: ColorPalette;
+  error: ColorPalette;
+  semantic: SemanticColors;
+}
+
+export interface ColorPalette {
+  [key: string]: string; // e.g., "50": "#f8fafc", "100": "#f1f5f9", etc.
+}
+
+export interface SemanticColors {
+  text: {
+    primary: string;
+    secondary: string;
+    disabled: string;
+    inverse: string;
+  };
+  background: {
+    primary: string;
+    secondary: string;
+    tertiary: string;
+    inverse: string;
+  };
+  border: {
+    primary: string;
+    secondary: string;
+    focus: string;
+    error: string;
+  };
+}
+
+export interface TypographyTokens {
+  fontFamily: {
+    primary: string;
+    secondary: string;
+    mono: string;
+  };
+  fontSize: {
+    [key: string]: string; // e.g., "xs": "0.75rem", "sm": "0.875rem", etc.
+  };
+  fontWeight: {
+    [key: string]: number; // e.g., "light": 300, "normal": 400, etc.
+  };
+  lineHeight: {
+    [key: string]: string; // e.g., "tight": "1.25", "normal": "1.5", etc.
+  };
+}
+
+export interface SpacingTokens {
+  [key: string]: string; // e.g., "xs": "0.25rem", "sm": "0.5rem", etc.
+}
+
+export interface ShadowTokens {
+  [key: string]: string; // e.g., "sm": "0 1px 2px 0 rgb(0 0 0 / 0.05)", etc.
+}
+
+export interface BorderTokens {
+  radius: {
+    [key: string]: string; // e.g., "sm": "0.125rem", "md": "0.375rem", etc.
+  };
+  width: {
+    [key: string]: string; // e.g., "thin": "1px", "thick": "3px", etc.
+  };
+}
+
+export interface AnimationTokens {
+  duration: {
+    [key: string]: string; // e.g., "fast": "150ms", "normal": "300ms", etc.
+  };
+  easing: {
+    [key: string]: string; // e.g., "ease-in": "cubic-bezier(0.4, 0, 1, 1)", etc.
+  };
+}
+
+export interface BreakpointTokens {
+  [key: string]: string; // e.g., "sm": "640px", "md": "768px", etc.
+}
+
+export interface DesignSystemDocumentation {
+  storybook: StorybookConfig;
+  examples: ExampleConfig;
+  guidelines: GuidelineConfig;
+  changelog: ChangelogConfig;
+}
+
+export interface StorybookConfig {
+  url: string;
+  version: string;
+  stories: StoryConfig[];
+}
+
+export interface StoryConfig {
+  name: string;
+  description: string;
+  category: string;
+  component: string;
+}
+
+export interface ExampleConfig {
+  playground: boolean;
+  codeExamples: boolean;
+  interactive: boolean;
+}
+
+export interface GuidelineConfig {
+  usage: boolean;
+  accessibility: boolean;
+  bestPractices: boolean;
+  doAndDont: boolean;
+}
+
+export interface ChangelogConfig {
+  versioning: boolean;
+  migration: boolean;
+  breaking: boolean;
+}
+
+export interface DesignSystemIndex {
+  systems: Map<string, DesignSystem>;
+  components: Map<string, ComponentRegistry>;
+  tokens: Map<string, DesignTokens>;
+  categories: Map<ComponentCategory, string[]>;
+  platforms: Map<string, string[]>;
+  holons: Map<string, string[]>;
+}
+
+export interface DesignSystemGovernance {
+  standards: DesignSystemStandards;
+  policies: DesignSystemPolicies;
+  compliance: DesignSystemCompliance;
+  quality: DesignSystemQuality;
+}
+
+export interface DesignSystemStandards {
+  naming: NamingStandards;
+  structure: StructureStandards;
+  documentation: DocumentationStandards;
+  testing: TestingStandards;
+}
+
+export interface NamingStandards {
+  components: 'PascalCase' | 'kebab-case' | 'camelCase';
+  tokens: 'kebab-case' | 'camelCase' | 'snake_case';
+  files: 'kebab-case' | 'PascalCase' | 'camelCase';
+  folders: 'kebab-case' | 'PascalCase' | 'camelCase';
+}
+
+export interface StructureStandards {
+  organization: 'atomic' | 'functional' | 'hybrid';
+  nesting: boolean;
+  flat: boolean;
+  modular: boolean;
+}
+
+export interface DocumentationStandards {
+  required: boolean;
+  format: 'markdown' | 'jsdoc' | 'storybook';
+  examples: boolean;
+  props: boolean;
+  accessibility: boolean;
+}
+
+export interface TestingStandards {
+  unit: boolean;
+  integration: boolean;
+  visual: boolean;
+  accessibility: boolean;
+  coverage: number;
+}
+
+export interface DesignSystemPolicies {
+  versioning: VersioningPolicy;
+  deprecation: DeprecationPolicy;
+  breaking: BreakingChangePolicy;
+  migration: MigrationPolicy;
+}
+
+export interface VersioningPolicy {
+  strategy: 'semantic' | 'calendar' | 'sequential';
+  major: string[];
+  minor: string[];
+  patch: string[];
+}
+
+export interface DeprecationPolicy {
+  notice: number; // days
+  grace: number; // days
+  removal: number; // days
+}
+
+export interface BreakingChangePolicy {
+  approval: boolean;
+  notification: boolean;
+  migration: boolean;
+}
+
+export interface MigrationPolicy {
+  automated: boolean;
+  manual: boolean;
+  documentation: boolean;
+  support: boolean;
+}
+
+export interface DesignSystemCompliance {
+  accessibility: AccessibilityCompliance;
+  performance: PerformanceCompliance;
+  security: SecurityCompliance;
+  branding: BrandingCompliance;
+}
+
+export interface AccessibilityCompliance {
+  wcag: 'A' | 'AA' | 'AAA';
+  required: boolean;
+  testing: boolean;
+  documentation: boolean;
+}
+
+export interface PerformanceCompliance {
+  bundleSize: number; // KB
+  renderTime: number; // ms
+  memoryUsage: number; // MB
+  required: boolean;
+}
+
+export interface SecurityCompliance {
+  sanitization: boolean;
+  validation: boolean;
+  xss: boolean;
+  required: boolean;
+}
+
+export interface BrandingCompliance {
+  colors: boolean;
+  typography: boolean;
+  spacing: boolean;
+  required: boolean;
+}
+
+export interface DesignSystemQuality {
+  metrics: QualityMetrics;
+  reviews: QualityReviews;
+  automation: QualityAutomation;
+}
+
+export interface QualityMetrics {
+  coverage: number;
+  documentation: number;
+  accessibility: number;
+  performance: number;
+  consistency: number;
+}
+
+export interface QualityReviews {
+  required: boolean;
+  frequency: 'per-component' | 'per-release' | 'monthly';
+  approvers: string[];
+  checklist: string[];
+}
+
+export interface QualityAutomation {
+  linting: boolean;
+  testing: boolean;
+  visual: boolean;
+  accessibility: boolean;
+}
+
+export interface DesignSystemManagerState {
+  index: DesignSystemIndex;
+  governance: DesignSystemGovernance;
+  registry: Map<string, DesignSystem>;
+  components: Map<string, ComponentRegistry>;
+  tokens: Map<string, DesignTokens>;
+  monitoring: DesignSystemMonitoring;
+}
+
+export interface DesignSystemMonitoring {
+  health: DesignSystemHealth;
+  usage: DesignSystemUsage;
+  performance: DesignSystemPerformance;
+  alerts: DesignSystemAlert[];
+}
+
+export interface DesignSystemHealth {
+  overall: 'healthy' | 'degraded' | 'unhealthy';
+  systems: Record<string, string>;
+  components: Record<string, string>;
+  documentation: Record<string, string>;
+  tests: Record<string, string>;
+}
+
+export interface DesignSystemUsage {
+  components: Record<string, number>;
+  systems: Record<string, number>;
+  platforms: Record<string, number>;
+  trends: UsageTrend[];
+}
+
+export interface UsageTrend {
+  component: string;
+  usage: number;
+  trend: 'up' | 'down' | 'stable';
+  period: string;
+}
+
+export interface DesignSystemPerformance {
+  bundleSize: number;
+  renderTime: number;
+  memoryUsage: number;
+  loadTime: number;
+}
+
+export interface DesignSystemAlert {
+  id: string;
+  type: 'error' | 'warning' | 'info';
+  message: string;
+  component?: string;
+  system?: string;
+  timestamp: Date;
+  resolved: boolean;
+}
+
+export class DesignSystemManager extends EventEmitter {
+  private static instance: DesignSystemManager;
+  private state: DesignSystemManagerState;
+  private configPath: string;
+
+  private constructor() {
+    super();
+    this.configPath = path.resolve(process.cwd(), 'config', 'design-system');
+    this.state = this.initializeState();
+    this.initializeDesignSystemManager();
+  }
+
+  public static getInstance(): DesignSystemManager {
+    if (!DesignSystemManager.instance) {
+      DesignSystemManager.instance = new DesignSystemManager();
+    }
+    return DesignSystemManager.instance;
+  }
+
+  private initializeState(): DesignSystemManagerState {
+    return {
+      index: {
+        systems: new Map(),
+        components: new Map(),
+        tokens: new Map(),
+        categories: new Map(),
+        platforms: new Map(),
+        holons: new Map()
+      },
+      governance: {
+        standards: {
+          naming: {
+            components: 'PascalCase',
+            tokens: 'kebab-case',
+            files: 'kebab-case',
+            folders: 'kebab-case'
+          },
+          structure: {
+            organization: 'atomic',
+            nesting: true,
+            flat: false,
+            modular: true
+          },
+          documentation: {
+            required: true,
+            format: 'storybook',
+            examples: true,
+            props: true,
+            accessibility: true
+          },
+          testing: {
+            unit: true,
+            integration: true,
+            visual: true,
+            accessibility: true,
+            coverage: 90
+          }
+        },
+        policies: {
+          versioning: {
+            strategy: 'semantic',
+            major: ['breaking changes'],
+            minor: ['new features'],
+            patch: ['bug fixes']
+          },
+          deprecation: {
+            notice: 30, // days
+            grace: 60, // days
+            removal: 90 // days
+          },
+          breaking: {
+            approval: true,
+            notification: true,
+            migration: true
+          },
+          migration: {
+            automated: true,
+            manual: true,
+            documentation: true,
+            support: true
+          }
+        },
+        compliance: {
+          accessibility: {
+            wcag: 'AA',
+            required: true,
+            testing: true,
+            documentation: true
+          },
+          performance: {
+            bundleSize: 50, // KB
+            renderTime: 100, // ms
+            memoryUsage: 10, // MB
+            required: true
+          },
+          security: {
+            sanitization: true,
+            validation: true,
+            xss: true,
+            required: true
+          },
+          branding: {
+            colors: true,
+            typography: true,
+            spacing: true,
+            required: true
+          }
+        },
+        quality: {
+          metrics: {
+            coverage: 90,
+            documentation: 95,
+            accessibility: 100,
+            performance: 95,
+            consistency: 90
+          },
+          reviews: {
+            required: true,
+            frequency: 'per-component',
+            approvers: ['design-lead', 'tech-lead'],
+            checklist: [
+              'Design review completed',
+              'Accessibility audit passed',
+              'Performance benchmarks met',
+              'Documentation updated',
+              'Tests written and passing'
+            ]
+          },
+          automation: {
+            linting: true,
+            testing: true,
+            visual: true,
+            accessibility: true
+          }
+        }
+      },
+      registry: new Map(),
+      components: new Map(),
+      tokens: new Map(),
+      monitoring: {
+        health: {
+          overall: 'healthy',
+          systems: {},
+          components: {},
+          documentation: {},
+          tests: {}
+        },
+        usage: {
+          components: {},
+          systems: {},
+          platforms: {},
+          trends: []
+        },
+        performance: {
+          bundleSize: 0,
+          renderTime: 0,
+          memoryUsage: 0,
+          loadTime: 0
+        },
+        alerts: []
+      }
+    };
+  }
+
+  private async initializeDesignSystemManager(): Promise<void> {
+    try {
+      // Ensure config directory exists
+      if (!fs.existsSync(this.configPath)) {
+        fs.mkdirSync(this.configPath, { recursive: true });
+      }
+
+      // Initialize default design systems
+      await this.initializeDefaultDesignSystems();
+
+      // Save initial configuration
+      await this.saveConfiguration();
+
+      // Start monitoring
+      await this.startMonitoring();
+
+      console.log('✅ DesignSystemManager initialized successfully');
+      this.emit('initialized');
+    } catch (error) {
+      console.error('❌ Failed to initialize DesignSystemManager:', error);
+      throw error;
+    }
+  }
+
+  private async initializeDefaultDesignSystems(): Promise<void> {
+    // Greenlight Platform Design System
+    const greenlightDesignSystem: DesignSystem = {
+      id: 'greenlight-platform',
+      name: 'Greenlight Platform Design System',
+      version: '1.0.0',
+      platform: 'greenlight-platform',
+      holon: 'systemMaster',
+      status: 'active',
+      description: 'Core design system for Greenlight Platform',
+      maintainer: 'system-master',
+      lastUpdated: new Date(),
+      components: [],
+      tokens: this.getDefaultTokens(),
+      documentation: {
+        storybook: {
+          url: 'https://storybook.greenlight-platform.com',
+          version: '1.0.0',
+          stories: []
+        },
+        examples: {
+          playground: true,
+          codeExamples: true,
+          interactive: true
+        },
+        guidelines: {
+          usage: true,
+          accessibility: true,
+          bestPractices: true,
+          doAndDont: true
+        },
+        changelog: {
+          versioning: true,
+          migration: true,
+          breaking: true
+        }
+      },
+      dependencies: [],
+      metadata: {
+        repository: 'greenlight-platform',
+        maintainers: ['system-master'],
+        contributors: []
+      }
+    };
+
+    // Top_Bins Design System
+    const topBinsDesignSystem: DesignSystem = {
+      id: 'top-bins',
+      name: 'Top_Bins Design System',
+      version: '1.0.0',
+      platform: 'top-bins',
+      holon: 'elevate',
+      status: 'active',
+      description: 'Design system for Top_Bins coaching platform',
+      maintainer: 'elevate-manager',
+      lastUpdated: new Date(),
+      components: [],
+      tokens: this.getDefaultTokens(),
+      documentation: {
+        storybook: {
+          url: 'https://storybook.top-bins.com',
+          version: '1.0.0',
+          stories: []
+        },
+        examples: {
+          playground: true,
+          codeExamples: true,
+          interactive: true
+        },
+        guidelines: {
+          usage: true,
+          accessibility: true,
+          bestPractices: true,
+          doAndDont: true
+        },
+        changelog: {
+          versioning: true,
+          migration: true,
+          breaking: true
+        }
+      },
+      dependencies: ['greenlight-platform'],
+      metadata: {
+        repository: 'top-bins',
+        maintainers: ['elevate-manager'],
+        contributors: []
+      }
+    };
+
+    // Register design systems
+    await this.registerDesignSystem(greenlightDesignSystem);
+    await this.registerDesignSystem(topBinsDesignSystem);
+  }
+
+  private getDefaultTokens(): DesignTokens {
+    return {
+      colors: {
+        primary: {
+          '50': '#eff6ff',
+          '100': '#dbeafe',
+          '500': '#3b82f6',
+          '600': '#2563eb',
+          '700': '#1d4ed8',
+          '900': '#1e3a8a'
+        },
+        secondary: {
+          '50': '#faf5ff',
+          '100': '#f3e8ff',
+          '500': '#8b5cf6',
+          '600': '#7c3aed',
+          '700': '#6d28d9',
+          '900': '#581c87'
+        },
+        neutral: {
+          '50': '#f9fafb',
+          '100': '#f3f4f6',
+          '200': '#e5e7eb',
+          '300': '#d1d5db',
+          '400': '#9ca3af',
+          '500': '#6b7280',
+          '600': '#4b5563',
+          '700': '#374151',
+          '800': '#1f2937',
+          '900': '#111827'
+        },
+        success: {
+          '50': '#ecfdf5',
+          '100': '#d1fae5',
+          '500': '#10b981',
+          '600': '#059669',
+          '700': '#047857',
+          '900': '#064e3b'
+        },
+        warning: {
+          '50': '#fffbeb',
+          '100': '#fef3c7',
+          '500': '#f59e0b',
+          '600': '#d97706',
+          '700': '#b45309',
+          '900': '#92400e'
+        },
+        error: {
+          '50': '#fef2f2',
+          '100': '#fee2e2',
+          '500': '#ef4444',
+          '600': '#dc2626',
+          '700': '#b91c1c',
+          '900': '#7f1d1d'
+        },
+        semantic: {
+          text: {
+            primary: '#111827',
+            secondary: '#6b7280',
+            disabled: '#9ca3af',
+            inverse: '#ffffff'
+          },
+          background: {
+            primary: '#ffffff',
+            secondary: '#f9fafb',
+            tertiary: '#f3f4f6',
+            inverse: '#111827'
+          },
+          border: {
+            primary: '#e5e7eb',
+            secondary: '#f3f4f6',
+            focus: '#3b82f6',
+            error: '#ef4444'
+          }
+        }
+      },
+      typography: {
+        fontFamily: {
+          primary: 'Inter, system-ui, sans-serif',
+          secondary: 'Inter, system-ui, sans-serif',
+          mono: 'ui-monospace, SFMono-Regular, "SF Mono", Consolas, "Liberation Mono", Menlo, monospace'
+        },
+        fontSize: {
+          'xs': '0.75rem',
+          'sm': '0.875rem',
+          'base': '1rem',
+          'lg': '1.125rem',
+          'xl': '1.25rem',
+          '2xl': '1.5rem',
+          '3xl': '1.875rem',
+          '4xl': '2.25rem',
+          '5xl': '3rem',
+          '6xl': '3.75rem'
+        },
+        fontWeight: {
+          'light': 300,
+          'normal': 400,
+          'medium': 500,
+          'semibold': 600,
+          'bold': 700,
+          'extrabold': 800,
+          'black': 900
+        },
+        lineHeight: {
+          'tight': '1.25',
+          'normal': '1.5',
+          'relaxed': '1.75'
+        }
+      },
+      spacing: {
+        '0': '0',
+        'px': '1px',
+        '0.5': '0.125rem',
+        '1': '0.25rem',
+        '1.5': '0.375rem',
+        '2': '0.5rem',
+        '2.5': '0.625rem',
+        '3': '0.75rem',
+        '3.5': '0.875rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '7': '1.75rem',
+        '8': '2rem',
+        '9': '2.25rem',
+        '10': '2.5rem',
+        '11': '2.75rem',
+        '12': '3rem',
+        '14': '3.5rem',
+        '16': '4rem',
+        '20': '5rem',
+        '24': '6rem',
+        '28': '7rem',
+        '32': '8rem',
+        '36': '9rem',
+        '40': '10rem',
+        '44': '11rem',
+        '48': '12rem',
+        '52': '13rem',
+        '56': '14rem',
+        '60': '15rem',
+        '64': '16rem',
+        '72': '18rem',
+        '80': '20rem',
+        '96': '24rem'
+      },
+      shadows: {
+        'sm': '0 1px 2px 0 rgb(0 0 0 / 0.05)',
+        'base': '0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)',
+        'md': '0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)',
+        'lg': '0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)',
+        'xl': '0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1)',
+        '2xl': '0 25px 50px -12px rgb(0 0 0 / 0.25)',
+        'inner': 'inset 0 2px 4px 0 rgb(0 0 0 / 0.05)',
+        'none': '0 0 #0000'
+      },
+      borders: {
+        radius: {
+          'none': '0',
+          'sm': '0.125rem',
+          'base': '0.25rem',
+          'md': '0.375rem',
+          'lg': '0.5rem',
+          'xl': '0.75rem',
+          '2xl': '1rem',
+          '3xl': '1.5rem',
+          'full': '9999px'
+        },
+        width: {
+          '0': '0',
+          'thin': '1px',
+          'base': '1px',
+          'thick': '2px',
+          'thicker': '3px',
+          'thickest': '4px'
+        }
+      },
+      animations: {
+        duration: {
+          'fast': '150ms',
+          'normal': '300ms',
+          'slow': '500ms',
+          'slower': '700ms',
+          'slowest': '1000ms'
+        },
+        easing: {
+          'linear': 'linear',
+          'ease-in': 'cubic-bezier(0.4, 0, 1, 1)',
+          'ease-out': 'cubic-bezier(0, 0, 0.2, 1)',
+          'ease-in-out': 'cubic-bezier(0.4, 0, 0.2, 1)'
+        }
+      },
+      breakpoints: {
+        'sm': '640px',
+        'md': '768px',
+        'lg': '1024px',
+        'xl': '1280px',
+        '2xl': '1536px'
+      }
+    };
+  }
+
+  private async saveConfiguration(): Promise<void> {
+    try {
+      const configFile = path.join(this.configPath, 'design-system-config.json');
+      await fs.promises.writeFile(
+        configFile,
+        JSON.stringify(this.state, null, 2)
+      );
+    } catch (error) {
+      console.error('Failed to save design system configuration:', error);
+    }
+  }
+
+  private async startMonitoring(): Promise<void> {
+    // Start design system monitoring
+    setInterval(() => {
+      this.updateDesignSystemMonitoring();
+    }, 30000); // Every 30 seconds
+  }
+
+  private updateDesignSystemMonitoring(): void {
+    // Update design system monitoring metrics
+    this.emit('monitoring-updated', {
+      timestamp: new Date(),
+      health: this.state.monitoring.health,
+      usage: this.state.monitoring.usage,
+      performance: this.state.monitoring.performance
+    });
+  }
+
+  // Public methods
+  public getState(): DesignSystemManagerState {
+    return this.state;
+  }
+
+  public async registerDesignSystem(designSystem: DesignSystem): Promise<void> {
+    try {
+      this.state.registry.set(designSystem.id, designSystem);
+      this.state.index.systems.set(designSystem.id, designSystem);
+      
+      // Update platform and holon mappings
+      if (!this.state.index.platforms.has(designSystem.platform)) {
+        this.state.index.platforms.set(designSystem.platform, []);
+      }
+      this.state.index.platforms.get(designSystem.platform)!.push(designSystem.id);
+
+      if (!this.state.index.holons.has(designSystem.holon)) {
+        this.state.index.holons.set(designSystem.holon, []);
+      }
+      this.state.index.holons.get(designSystem.holon)!.push(designSystem.id);
+
+      // Register components
+      for (const component of designSystem.components) {
+        await this.registerComponent(component, designSystem.id);
+      }
+
+      // Register tokens
+      this.state.index.tokens.set(designSystem.id, designSystem.tokens);
+      this.state.tokens.set(designSystem.id, designSystem.tokens);
+
+      this.emit('design-system-registered', designSystem);
+      await this.saveConfiguration();
+    } catch (error) {
+      console.error('Failed to register design system:', error);
+      throw error;
+    }
+  }
+
+  public async registerComponent(component: ComponentRegistry, systemId: string): Promise<void> {
+    try {
+      const componentId = `${systemId}:${component.id}`;
+      this.state.components.set(componentId, component);
+      this.state.index.components.set(componentId, component);
+
+      // Update category mapping
+      if (!this.state.index.categories.has(component.category)) {
+        this.state.index.categories.set(component.category, []);
+      }
+      this.state.index.categories.get(component.category)!.push(componentId);
+
+      this.emit('component-registered', { component, systemId });
+    } catch (error) {
+      console.error('Failed to register component:', error);
+      throw error;
+    }
+  }
+
+  public getDesignSystem(id: string): DesignSystem | undefined {
+    return this.state.registry.get(id);
+  }
+
+  public getAllDesignSystems(): DesignSystem[] {
+    return Array.from(this.state.registry.values());
+  }
+
+  public getDesignSystemsByPlatform(platform: string): DesignSystem[] {
+    const systemIds = this.state.index.platforms.get(platform) || [];
+    return systemIds.map(id => this.state.registry.get(id)!);
+  }
+
+  public getDesignSystemsByHolon(holon: string): DesignSystem[] {
+    const systemIds = this.state.index.holons.get(holon) || [];
+    return systemIds.map(id => this.state.registry.get(id)!);
+  }
+
+  public getComponent(id: string): ComponentRegistry | undefined {
+    return this.state.components.get(id);
+  }
+
+  public getComponentsByCategory(category: ComponentCategory): ComponentRegistry[] {
+    const componentIds = this.state.index.categories.get(category) || [];
+    return componentIds.map(id => this.state.components.get(id)!);
+  }
+
+  public getComponentsBySystem(systemId: string): ComponentRegistry[] {
+    return Array.from(this.state.components.values()).filter(
+      component => component.id.startsWith(`${systemId}:`)
+    );
+  }
+
+  public getTokens(systemId: string): DesignTokens | undefined {
+    return this.state.tokens.get(systemId);
+  }
+
+  public updateDesignSystem(id: string, updates: Partial<DesignSystem>): void {
+    const designSystem = this.state.registry.get(id);
+    if (designSystem) {
+      const updatedSystem = { ...designSystem, ...updates, lastUpdated: new Date() };
+      this.state.registry.set(id, updatedSystem);
+      this.state.index.systems.set(id, updatedSystem);
+      this.emit('design-system-updated', updatedSystem);
+    }
+  }
+
+  public updateComponent(id: string, updates: Partial<ComponentRegistry>): void {
+    const component = this.state.components.get(id);
+    if (component) {
+      const updatedComponent = { ...component, ...updates };
+      this.state.components.set(id, updatedComponent);
+      this.state.index.components.set(id, updatedComponent);
+      this.emit('component-updated', updatedComponent);
+    }
+  }
+
+  public updateTokens(systemId: string, updates: Partial<DesignTokens>): void {
+    const tokens = this.state.tokens.get(systemId);
+    if (tokens) {
+      const updatedTokens = { ...tokens, ...updates };
+      this.state.tokens.set(systemId, updatedTokens);
+      this.state.index.tokens.set(systemId, updatedTokens);
+      this.emit('tokens-updated', { systemId, tokens: updatedTokens });
+    }
+  }
+
+  public getGovernance(): DesignSystemGovernance {
+    return this.state.governance;
+  }
+
+  public updateGovernance(governance: Partial<DesignSystemGovernance>): void {
+    this.state.governance = {
+      ...this.state.governance,
+      ...governance
+    };
+    this.emit('governance-updated', this.state.governance);
+  }
+
+  public getMonitoring(): DesignSystemMonitoring {
+    return this.state.monitoring;
+  }
+
+  public addAlert(alert: Omit<DesignSystemAlert, 'id' | 'timestamp' | 'resolved'>): void {
+    const newAlert: DesignSystemAlert = {
+      ...alert,
+      id: `alert-${Date.now()}`,
+      timestamp: new Date(),
+      resolved: false
+    };
+    this.state.monitoring.alerts.push(newAlert);
+    this.emit('alert-added', newAlert);
+  }
+
+  public resolveAlert(alertId: string): void {
+    const alert = this.state.monitoring.alerts.find(a => a.id === alertId);
+    if (alert) {
+      alert.resolved = true;
+      this.emit('alert-resolved', alert);
+    }
+  }
+
+  // Health check
+  public async healthCheck(): Promise<{
+    status: 'healthy' | 'degraded' | 'unhealthy';
+    timestamp: Date;
+    metrics: Record<string, any>;
+  }> {
+    try {
+      const metrics = {
+        designSystems: this.state.registry.size,
+        components: this.state.components.size,
+        tokens: this.state.tokens.size,
+        governance: this.state.governance,
+        monitoring: this.state.monitoring
+      };
+
+      return {
+        status: 'healthy',
+        timestamp: new Date(),
+        metrics
+      };
+    } catch (error) {
+      return {
+        status: 'unhealthy',
+        timestamp: new Date(),
+        metrics: { error: error instanceof Error ? error.message : String(error) }
+      };
+    }
+  }
+}
+
+export default DesignSystemManager; 

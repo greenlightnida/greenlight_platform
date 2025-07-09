@@ -1,0 +1,26 @@
+{
+  "name": "Manager Escalation Protocol",
+  "description": "Escalation procedures for cross-manager issues",
+  "levels": {
+    "level1": {
+      "trigger": "Single manager issue affecting others",
+      "response": "Direct manager communication within 1 hour",
+      "resolution": "Manager-to-manager resolution"
+    },
+    "level2": {
+      "trigger": "Multiple managers affected, business impact",
+      "response": "System coordinator involvement within 30 minutes",
+      "resolution": "Coordinated multi-manager response"
+    },
+    "level3": {
+      "trigger": "Critical system failure, business operations at risk",
+      "response": "Emergency response team activation within 15 minutes",
+      "resolution": "All-hands emergency response"
+    }
+  },
+  "contacts": {
+    "systemCoordinator": "system-coordinator@greenlight-platform.com",
+    "emergencyTeam": "emergency-response@greenlight-platform.com",
+    "management": "management@greenlight-platform.com"
+  }
+}

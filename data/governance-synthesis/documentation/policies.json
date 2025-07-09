@@ -1,0 +1,33 @@
+{
+  "name": "Unified Governance Policies",
+  "description": "Comprehensive governance policies covering all governance aspects",
+  "categories": {
+    "constituency": {
+      "description": "Constituency representation and balancing policies",
+      "policies": [
+        "constituency.representation",
+        "constituency.balancing",
+        "constituency.consensus",
+        "constituency.resource_allocation"
+      ]
+    },
+    "governance": {
+      "description": "Core governance and compliance policies",
+      "policies": [
+        "governance.compliance",
+        "governance.audit",
+        "governance.risk",
+        "governance.effectiveness"
+      ]
+    },
+    "security": {
+      "description": "Security and access control policies",
+      "policies": [
+        "security.authentication",
+        "security.authorization",
+        "security.data_protection",
+        "security.threat_mitigation"
+      ]
+    }
+  }
+}

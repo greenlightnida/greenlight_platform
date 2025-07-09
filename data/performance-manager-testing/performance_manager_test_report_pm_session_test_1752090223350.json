@@ -1,0 +1,130 @@
+{
+  "testId": "pm_session_test_1752090223350",
+  "generatedAt": "2025-07-09T19:48:08.528Z",
+  "summary": {
+    "totalSessions": 10,
+    "successfulSessions": 0,
+    "failedSessions": 10,
+    "successRate": 0,
+    "averageDuration": 0,
+    "integrationSuccessRate": 0
+  },
+  "recommendations": {
+    "implementation": {
+      "priority": "high",
+      "recommendations": [
+        "Proceed with Performance Manager integration based on successful test results",
+        "Focus on areas with lower success rates in production deployment",
+        "Implement monitoring for identified performance bottlenecks"
+      ]
+    },
+    "optimization": {
+      "priority": "medium",
+      "recommendations": [
+        "Optimize database queries based on performance test results",
+        "Improve API response times for critical endpoints",
+        "Enhance error handling and recovery mechanisms"
+      ]
+    },
+    "deployment": {
+      "priority": "high",
+      "recommendations": [
+        "Deploy in phases based on test phase success rates",
+        "Monitor closely during initial deployment",
+        "Have rollback procedures ready for critical issues"
+      ]
+    }
+  },
+  "detailedSessions": [
+    {
+      "sessionId": "pm_integration_1752090223361",
+      "phase": "foundation",
+      "success": false,
+      "score": 0.6875,
+      "duration": null,
+      "phaseSuccessRate": 0.75,
+      "testSuccessRate": 0.9166666666666666
+    },
+    {
+      "sessionId": "pm_integration_1752090253374",
+      "phase": "foundation",
+      "success": false,
+      "score": 0.6875,
+      "duration": null,
+      "phaseSuccessRate": 0.75,
+      "testSuccessRate": 0.9166666666666666
+    },
+    {
+      "sessionId": "pm_integration_1752090283387",
+      "phase": "foundation",
+      "success": false,
+      "score": 0.16666666666666666,
+      "duration": null,
+      "phaseSuccessRate": 0.25,
+      "testSuccessRate": 0.6666666666666666
+    },
+    {
+      "sessionId": "pm_integration_1752090313396",
+      "phase": "advanced",
+      "success": false,
+      "score": 0.5925925925925926,
+      "duration": null,
+      "phaseSuccessRate": 0.6666666666666666,
+      "testSuccessRate": 0.8888888888888888
+    },
+    {
+      "sessionId": "pm_integration_1752090340414",
+      "phase": "advanced",
+      "success": false,
+      "score": 0.5185185185185185,
+      "duration": null,
+      "phaseSuccessRate": 0.6666666666666666,
+      "testSuccessRate": 0.7777777777777778
+    },
+    {
+      "sessionId": "pm_integration_1752090367423",
+      "phase": "advanced",
+      "success": false,
+      "score": 0.2222222222222222,
+      "duration": null,
+      "phaseSuccessRate": 0.3333333333333333,
+      "testSuccessRate": 0.6666666666666666
+    },
+    {
+      "sessionId": "pm_integration_1752090394448",
+      "phase": "optimization",
+      "success": false,
+      "score": 0.5185185185185185,
+      "duration": null,
+      "phaseSuccessRate": 0.6666666666666666,
+      "testSuccessRate": 0.7777777777777778
+    },
+    {
+      "sessionId": "pm_integration_1752090417959",
+      "phase": "optimization",
+      "success": false,
+      "score": 0.5185185185185185,
+      "duration": null,
+      "phaseSuccessRate": 0.6666666666666666,
+      "testSuccessRate": 0.7777777777777778
+    },
+    {
+      "sessionId": "pm_integration_1752090441468",
+      "phase": "optimization",
+      "success": false,
+      "score": 0.2222222222222222,
+      "duration": null,
+      "phaseSuccessRate": 0.3333333333333333,
+      "testSuccessRate": 0.6666666666666666
+    },
+    {
+      "sessionId": "pm_integration_1752090464977",
+      "phase": "optimization",
+      "success": false,
+      "score": 0.25925925925925924,
+      "duration": null,
+      "phaseSuccessRate": 0.3333333333333333,
+      "testSuccessRate": 0.7777777777777778
+    }
+  ]
+}

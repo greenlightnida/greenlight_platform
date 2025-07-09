@@ -1,0 +1,70 @@
+{
+  "maintenanceDockets": {
+    "type": "maintenance_dockets",
+    "triggers": [
+      "dependency_updates_needed",
+      "compilation_errors_accumulating",
+      "performance_degradation",
+      "resource_utilization_high",
+      "error_rate_increasing"
+    ],
+    "priorityFactors": {
+      "impact": 0.4,
+      "urgency": 0.3,
+      "effort": 0.2,
+      "risk": 0.1
+    },
+    "frequency": "weekly"
+  },
+  "optimizationDockets": {
+    "type": "optimization_dockets",
+    "triggers": [
+      "performance_below_threshold",
+      "resource_utilization_inefficient",
+      "response_time_slow",
+      "throughput_limited",
+      "bottlenecks_detected"
+    ],
+    "priorityFactors": {
+      "performanceGain": 0.4,
+      "userImpact": 0.3,
+      "effort": 0.2,
+      "risk": 0.1
+    },
+    "frequency": "bi-weekly"
+  },
+  "securityDockets": {
+    "type": "security_dockets",
+    "triggers": [
+      "vulnerabilities_detected",
+      "security_alerts",
+      "compliance_violations",
+      "access_control_issues",
+      "threat_intelligence_alerts"
+    ],
+    "priorityFactors": {
+      "severity": 0.5,
+      "exposure": 0.3,
+      "effort": 0.1,
+      "compliance": 0.1
+    },
+    "frequency": "immediate"
+  },
+  "governanceDockets": {
+    "type": "governance_dockets",
+    "triggers": [
+      "policy_violations",
+      "compliance_deadlines",
+      "audit_findings",
+      "process_deviations",
+      "documentation_gaps"
+    ],
+    "priorityFactors": {
+      "compliance": 0.4,
+      "deadline": 0.3,
+      "impact": 0.2,
+      "effort": 0.1
+    },
+    "frequency": "monthly"
+  }
+}
