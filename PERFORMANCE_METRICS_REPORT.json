@@ -1,0 +1,1424 @@
+{
+  "timestamp": "2025-07-10T15:16:53.128Z",
+  "overallScore": 0.723888888888889,
+  "holonScores": {
+    "systemMaster": 0.7166666666666668,
+    "elaborate": 0.7472222222222222,
+    "articulate": 0.7138888888888889,
+    "elevate": 0.7444444444444445,
+    "administrate": 0.6972222222222223
+  },
+  "componentScores": {
+    "SystemMasterManager": 0.7666666666666667,
+    "GovernanceOrchestrator": 0.6916666666666668,
+    "RepositoryGovernor": 0.6916666666666668,
+    "ElaborateManager": 0.8083333333333332,
+    "SystemEvolutionManager": 0.7083333333333334,
+    "ProtocolManager": 0.7250000000000001,
+    "ArticulateManager": 0.775,
+    "KnowledgeManager": 0.6583333333333333,
+    "WorkManager": 0.7083333333333334,
+    "ElevateManager": 0.7083333333333334,
+    "CoachingManager": 0.7666666666666667,
+    "PlayerManager": 0.7583333333333333,
+    "AdministrateManager": 0.6583333333333333,
+    "ExecutiveManager": 0.725,
+    "BusinessIntelligenceManager": 0.7083333333333334
+  },
+  "metrics": {
+    "SystemMasterManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 320.8476781591107,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "throughput": {
+          "value": 961.9732345635841,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "resource_usage": {
+          "value": 64.97771483055226,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "optimization_rate": {
+          "value": 87.39315278925648,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "governance": {
+        "compliance_rate": {
+          "value": 96.65850506057899,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "policy_violations": {
+          "value": 4,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "audit_success": {
+          "value": 91.24488757987855,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 85.00570584476077,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 68.16205522632927,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "prediction_accuracy": {
+          "value": 80.7334097630246,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "learning_rate": {
+          "value": 78.33688829794932,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "adaptation_speed": {
+          "value": 25.975895230152382,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "GovernanceOrchestrator": {
+      "efficiency": {
+        "response_time": {
+          "value": 301.0745103074318,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "throughput": {
+          "value": 1007.7725274353459,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 52.192745485818826,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 80.70006316433484,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "governance": {
+        "compliance_rate": {
+          "value": 90.14643769234496,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "policy_violations": {
+          "value": 0,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "audit_success": {
+          "value": 99.41834679642473,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 81.10431013226328,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 98.84260246407783,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 0.4916786929032835,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 57.14159870831687,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "consistency": {
+          "value": 92.93557016605682,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "RepositoryGovernor": {
+      "governance": {
+        "compliance_rate": {
+          "value": 93.155768899239,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "policy_violations": {
+          "value": 2,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "audit_success": {
+          "value": 95.4832037120124,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 80.27579716036132,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 99.86025776759882,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 1.0323604273461906,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 35.02249303032771,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consistency": {
+          "value": 95.05018643888998,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "efficiency": {
+        "response_time": {
+          "value": 159.19393468415805,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "throughput": {
+          "value": 629.2486412596006,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "resource_usage": {
+          "value": 36.67129698335647,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "optimization_rate": {
+          "value": 70.74583731893088,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "ElaborateManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 303.98537949636295,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "throughput": {
+          "value": 1475.7079726937918,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 48.494005359392595,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 99.317167405424,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "governance": {
+        "compliance_rate": {
+          "value": 99.11398696309182,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "policy_violations": {
+          "value": 0,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "audit_success": {
+          "value": 96.96867258883208,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 83.69425043301993,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 61.82220522634766,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "prediction_accuracy": {
+          "value": 84.92725923255348,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "learning_rate": {
+          "value": 81.36266131846452,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "adaptation_speed": {
+          "value": 28.658855372048574,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "SystemEvolutionManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 285.16633362118665,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "throughput": {
+          "value": 1629.7234264625447,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 36.051927485531905,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "optimization_rate": {
+          "value": 86.34645256723354,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 62.51232047628773,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "prediction_accuracy": {
+          "value": 79.59214125565863,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "learning_rate": {
+          "value": 71.43760786693224,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "adaptation_speed": {
+          "value": 42.92213584188556,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "poor"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 95.3603874229136,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 0.5447966932663486,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 18.770447596159315,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "consistency": {
+          "value": 99.54705069176173,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      }
+    },
+    "ProtocolManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 284.3446406010486,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "throughput": {
+          "value": 1105.9243080452566,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 39.48625378590518,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "optimization_rate": {
+          "value": 97.56881960600404,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 96.29590454737335,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 0.7769219078785303,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 13.015097471818077,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "consistency": {
+          "value": 93.885459959721,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "governance": {
+        "compliance_rate": {
+          "value": 99.95348878855243,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "policy_violations": {
+          "value": 3,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "audit_success": {
+          "value": 98.18327252223915,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 89.90818358291142,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "ArticulateManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 139.88984368965345,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "throughput": {
+          "value": 1162.7006377364378,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 54.69791717335476,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 96.1465961498481,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 63.31146728202935,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "prediction_accuracy": {
+          "value": 82.65659720976547,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "learning_rate": {
+          "value": 72.63150273715169,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "adaptation_speed": {
+          "value": 31.213288421862746,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "fair"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 99.11571753584018,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 1.132470641480118,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 15.906212501973966,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "consistency": {
+          "value": 91.0685128840347,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "KnowledgeManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 215.7504877677931,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "throughput": {
+          "value": 581.414450758667,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "resource_usage": {
+          "value": 55.76958724247281,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 80.89334831558664,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 96.00309419274453,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 0.8297312311904883,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 21.9612318204147,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "consistency": {
+          "value": 93.29402691422561,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 62.07687901636794,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "prediction_accuracy": {
+          "value": 80.71228277828114,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "learning_rate": {
+          "value": 69.18675668897974,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "adaptation_speed": {
+          "value": 44.64334329405765,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "poor"
+        }
+      }
+    },
+    "WorkManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 330.36823708640827,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "throughput": {
+          "value": 1868.3943138501536,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 65.88146632663603,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "optimization_rate": {
+          "value": 94.75416018262557,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 96.66816913509498,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 0.8317768388756916,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 41.71080389024722,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "consistency": {
+          "value": 92.0291684511383,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "governance": {
+        "compliance_rate": {
+          "value": 97.30232126222919,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "policy_violations": {
+          "value": 3,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "audit_success": {
+          "value": 91.86893134966526,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 89.15092307344773,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "ElevateManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 287.0914867587687,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "throughput": {
+          "value": 720.2307199506687,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "resource_usage": {
+          "value": 53.175918973607004,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 97.43006596106193,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 68.38187179205131,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "prediction_accuracy": {
+          "value": 82.89523549933897,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "learning_rate": {
+          "value": 72.46896196570653,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "adaptation_speed": {
+          "value": 26.974893573326693,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 98.01455656571673,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 1.0139568637128162,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 44.03298050094165,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "consistency": {
+          "value": 92.38164564602043,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "CoachingManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 81.85697964637082,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "throughput": {
+          "value": 1755.6600470149976,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 53.901459381130685,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 84.64872074830062,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 97.54360640366275,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 0.9542883682204333,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 18.84004496964838,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "consistency": {
+          "value": 92.40131662650779,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 73.21270982267595,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "prediction_accuracy": {
+          "value": 88.58042077547515,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "learning_rate": {
+          "value": 73.34633927040272,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "adaptation_speed": {
+          "value": 55.87386588384756,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "poor"
+        }
+      }
+    },
+    "PlayerManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 168.33219607594498,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "throughput": {
+          "value": 1188.4542055062288,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 69.33755834177502,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "optimization_rate": {
+          "value": 95.55739401842172,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 99.8892878636304,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 1.2295193049461441,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 61.811335521753676,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "consistency": {
+          "value": 90.66656150621218,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "governance": {
+        "compliance_rate": {
+          "value": 98.51132999167191,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "policy_violations": {
+          "value": 2,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "audit_success": {
+          "value": 94.53897459237803,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 92.8586545843557,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      }
+    },
+    "AdministrateManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 297.2663933797053,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "throughput": {
+          "value": 594.9741771355914,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "resource_usage": {
+          "value": 48.45809320137341,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 87.98238753442611,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 63.84720257751777,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "prediction_accuracy": {
+          "value": 80.74214921190266,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "learning_rate": {
+          "value": 60.293685247486835,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "adaptation_speed": {
+          "value": 47.326137321469744,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "poor"
+        }
+      },
+      "governance": {
+        "compliance_rate": {
+          "value": 97.40855099078335,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "policy_violations": {
+          "value": 4,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "audit_success": {
+          "value": 94.32997128419419,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 88.76223507892338,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "ExecutiveManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 345.464457122247,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "throughput": {
+          "value": 1900.313114287164,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "resource_usage": {
+          "value": 43.24482571522505,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 76.4132102090645,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 80.28801373277486,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "prediction_accuracy": {
+          "value": 94.74922991750698,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "learning_rate": {
+          "value": 60.53042272028299,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "adaptation_speed": {
+          "value": 59.44821749629433,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "poor"
+        }
+      },
+      "governance": {
+        "compliance_rate": {
+          "value": 96.3174394976771,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "policy_violations": {
+          "value": 3,
+          "target": 0,
+          "unit": "count",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "audit_success": {
+          "value": 91.80628572818257,
+          "target": 100,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "consensus_rate": {
+          "value": 88.33236705934374,
+          "target": 90,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    },
+    "BusinessIntelligenceManager": {
+      "efficiency": {
+        "response_time": {
+          "value": 340.0197628114003,
+          "target": 200,
+          "unit": "ms",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "throughput": {
+          "value": 944.2126507656417,
+          "target": 1000,
+          "unit": "ops/sec",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "resource_usage": {
+          "value": 54.001332021993214,
+          "target": 70,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "fair"
+        },
+        "optimization_rate": {
+          "value": 86.50278581110035,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        }
+      },
+      "intelligence": {
+        "automation_level": {
+          "value": 81.03824133255043,
+          "target": 80,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "prediction_accuracy": {
+          "value": 80.89085448720292,
+          "target": 85,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "learning_rate": {
+          "value": 69.2146058418817,
+          "target": 75,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "adaptation_speed": {
+          "value": 37.31641142576224,
+          "target": 24,
+          "unit": "hours",
+          "weight": 0.25,
+          "status": "poor"
+        }
+      },
+      "reliability": {
+        "uptime": {
+          "value": 97.07433623125381,
+          "target": 99.9,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        },
+        "error_rate": {
+          "value": 1.0258568362291114,
+          "target": 0.1,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "poor"
+        },
+        "recovery_time": {
+          "value": 24.588683897731812,
+          "target": 30,
+          "unit": "s",
+          "weight": 0.25,
+          "status": "excellent"
+        },
+        "consistency": {
+          "value": 90.42612757346494,
+          "target": 95,
+          "unit": "%",
+          "weight": 0.25,
+          "status": "good"
+        }
+      }
+    }
+  },
+  "recommendations": [
+    {
+      "type": "warning",
+      "message": "Optimize performance of components: SystemMasterManager, GovernanceOrchestrator, RepositoryGovernor, SystemEvolutionManager, ProtocolManager, ArticulateManager, KnowledgeManager, WorkManager, ElevateManager, CoachingManager, PlayerManager, AdministrateManager, ExecutiveManager, BusinessIntelligenceManager",
+      "action": "Performance optimization recommended"
+    }
+  ],
+  "summary": {
+    "totalComponents": 15,
+    "excellentComponents": 0,
+    "goodComponents": 1,
+    "fairComponents": 14,
+    "poorComponents": 0
+  }
+}

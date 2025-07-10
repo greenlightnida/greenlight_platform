@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-07-10T15:54:35.112Z",
+  "manager": "productManager",
+  "domain": "products",
+  "regulatoryRole": "Product Strategy and Market Alignment",
+  "complianceScore": 92,
+  "monitoringData": {
+    "product_strategy": {
+      "status": "passed",
+      "score": 92,
+      "data": {
+        "strategyScore": 0.92
+      }
+    },
+    "market_alignment": {
+      "status": "passed",
+      "score": 89,
+      "data": {
+        "alignmentScore": 0.89
+      }
+    },
+    "product_quality": {
+      "status": "passed",
+      "score": 94,
+      "data": {
+        "qualityScore": 0.94
+      }
+    }
+  },
+  "status": "active"
+}

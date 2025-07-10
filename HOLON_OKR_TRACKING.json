@@ -1,0 +1,26 @@
+{
+  "SM-OKR-001": {
+    "title": "Establish Basic System Governance",
+    "description": "Implement foundational governance capabilities for SystemMaster Holon",
+    "progress": 1,
+    "keyResults": [
+      "Achieve 80% milestone completion rate",
+      "Implement all core governance functions",
+      "Establish committee consensus validation"
+    ],
+    "holon": "systemMaster",
+    "component": "SystemMasterManager"
+  },
+  "EL-OKR-001": {
+    "title": "Enable System Evolution Tracking",
+    "description": "Implement comprehensive system evolution monitoring and tracking",
+    "progress": 1,
+    "keyResults": [
+      "Track 100% of system changes",
+      "Generate evolution reports",
+      "Identify optimization opportunities"
+    ],
+    "holon": "elaborate",
+    "component": "SystemEvolutionManager"
+  }
+}

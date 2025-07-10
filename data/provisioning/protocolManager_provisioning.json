@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-07-10T15:54:35.108Z",
+  "manager": "protocolManager",
+  "domain": "protocols",
+  "regulatoryRole": "Protocol Regulation and Compliance",
+  "complianceScore": 95,
+  "monitoringData": {
+    "protocol_execution": {
+      "status": "passed",
+      "score": 95,
+      "data": {
+        "protocolCount": 59
+      }
+    },
+    "protocol_compliance": {
+      "status": "passed",
+      "score": 98,
+      "data": {
+        "complianceRate": 0.98
+      }
+    },
+    "protocol_optimization": {
+      "status": "passed",
+      "score": 92,
+      "data": {
+        "optimizationRate": 0.92
+      }
+    }
+  },
+  "status": "active"
+}

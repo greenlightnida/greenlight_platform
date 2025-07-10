@@ -1,382 +1,170 @@
 {
-  "timestamp": "2025-07-10T02:38:16.867Z",
-  "buildIssues": [
-    {
-      "type": "typescript",
-      "message": "src/core/operations/ServerGovernor.ts(314,5): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/core/operations/ServerGovernor.ts(503,7): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/core/operations/ServerGovernor.ts(534,7): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/core/operations/ServerGovernor.ts(697,7): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/core/session-management/SessionsManager.tsx(395,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/dashboards/executive/ExecutiveDashboard.tsx(94,3): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/dashboards/executive/ExecutiveDashboard.tsx(176,3): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/dashboards/executive/ExecutiveDashboard.tsx(201,3): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/dashboards/executive/ExecutiveDashboard.tsx(238,3): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/dashboards/executive/ExecutiveDashboard.tsx(255,3): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/dashboards/executive/ExecutiveDashboard.tsx(298,3): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/dashboards/executive/ExecutiveDashboard.tsx(342,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/dashboards/roadmap/RoadmapDashboard.tsx(392,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(150,10): error TS1005: ';' expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(151,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(151,2): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(154,10): error TS1005: ';' expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(155,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(155,2): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(158,10): error TS1005: ';' expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(159,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/cache/cache.ts(159,2): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/common/formatting.ts(154,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/common/formatting.ts(169,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/common/formatting.ts(173,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/common/formatting.ts(177,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/common/formatting.ts(181,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/common/formatting.ts(186,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/common/formatting.ts(191,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    },
-    {
-      "type": "typescript",
-      "message": "src/utils/common/formatting.ts(196,1): error TS1128: Declaration or statement expected.",
-      "severity": "error"
-    }
+  "timestamp": "2025-07-10T15:11:01.185Z",
+  "scannedFiles": 195,
+  "orphans": [
+    "src/architecture/holonSystem.ts",
+    "src/components/CoachingToolkit/types.ts",
+    "src/components/SecurityDashboard/SecurityDashboard.tsx",
+    "src/components/SystemMaster/SystemMaster.tsx",
+    "src/components/monitoring/UserMonitoringDashboard.tsx",
+    "src/config/ConfigManager.ts",
+    "src/core/governance/CommandCenter.ts",
+    "src/core/governance/CommandCenterCoach.ts",
+    "src/core/governance/Committee.ts",
+    "src/core/governance/ConnectivityIntegrationManager.ts",
+    "src/core/governance/DataTelemetryManager.ts",
+    "src/core/governance/EnvironmentGovernance.ts",
+    "src/core/governance/ExecutiveCommitteeManager.ts",
+    "src/core/governance/GovernanceOrchestrator.ts",
+    "src/core/governance/PerformanceManager.ts",
+    "src/core/governance/ReferenceManager.ts",
+    "src/core/governance/UserConstituencyManager.ts",
+    "src/core/holons/features/FeaturesHolon.ts",
+    "src/core/holons/operations/ErrorManagerHolon.ts",
+    "src/core/holons/product/ProductHolon.ts",
+    "src/core/holons/protocols/ProtocolManager.ts",
+    "src/core/holons/security/SecurityComplianceManager.ts",
+    "src/core/holons/security/SecurityManagementTeam.ts",
+    "src/core/holons/systemMaster/FrontendManager.ts",
+    "src/core/holons/systemMaster/SystemMasterManager.ts",
+    "src/core/holons/systemMaster/modules/ComponentRegistry.ts",
+    "src/core/holons/systemMaster/modules/DesignTokens.ts",
+    "src/core/holons/systemMaster/modules/Governance.ts",
+    "src/core/holons/systemMaster/modules/Monitoring.ts",
+    "src/core/holons/testing/TestingHolonManager.ts",
+    "src/core/operations/OperationsMaster.ts",
+    "src/core/performance/EmbeddedPerformanceManager.ts",
+    "src/core/protocols/ProtocolManager.ts",
+    "src/core/session-management/ImportContextSelector.tsx",
+    "src/core/session-management/IntegratedSessionManager.ts",
+    "src/core/session-management/SessionContext.tsx",
+    "src/core/session-management/SessionsManager.tsx",
+    "src/core/session-management/types.ts",
+    "src/dashboards/executive/ExecutiveDashboard.tsx",
+    "src/dashboards/executive/types.ts",
+    "src/dashboards/features/FeaturesDashboard.tsx",
+    "src/dashboards/governance/CommandCenterDashboard.tsx",
+    "src/dashboards/governance/PerformanceManagerDashboard.tsx",
+    "src/dashboards/product/ProductDashboard.tsx",
+    "src/dashboards/roadmap/RoadmapActualsDashboard.tsx",
+    "src/dashboards/roadmap/RoadmapDashboard.tsx",
+    "src/dashboards/system/EnvironmentVariableDashboard.tsx",
+    "src/dashboards/system/SystemDashboard.tsx",
+    "src/dashboards/system/SystemFeatures.tsx",
+    "src/dashboards/system/SystemStats.tsx",
+    "src/design-system/atoms/Button/Button.tsx",
+    "src/design-system/atoms/Input/Input.tsx",
+    "src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.stories.tsx",
+    "src/design-system/components/IconSystem/IconSystem.stories.tsx",
+    "src/design-system/components/theme/AccessibilityContext.tsx",
+    "src/design-system/components/theme/ThemeContext.tsx",
+    "src/design-system/components/theme/ThemeToggle.tsx",
+    "src/design-system/components/theme/useTheme.ts",
+    "src/design-system/components/ui/alert.tsx",
+    "src/design-system/components/ui/badge.tsx",
+    "src/design-system/components/ui/button.tsx",
+    "src/design-system/components/ui/card.tsx",
+    "src/design-system/components/ui/input.tsx",
+    "src/design-system/components/ui/progress.tsx",
+    "src/design-system/components/ui/select.tsx",
+    "src/design-system/components/ui/tabs.tsx",
+    "src/holons/data/data-backup.ts",
+    "src/holons/data/data-cleanup.ts",
+    "src/holons/data/data-validation.ts",
+    "src/holons/protocols/protocol-manager.ts",
+    "src/holons/shared-utils/integration-interfaces.ts",
+    "src/holons/shared-utils/test-utils.ts",
+    "src/lib/database.types.ts",
+    "src/lib/supabase.ts",
+    "src/platforms/articulate/components/Articulate.tsx",
+    "src/platforms/elaborate/components/Elaborate.tsx",
+    "src/platforms/system-master/components/InformConsole.tsx",
+    "src/platforms/system-master/components/ObserveConsole.tsx",
+    "src/platforms/system-master/components/ResolveConsole.tsx",
+    "src/platforms/system-master/components/SystemMaster.tsx",
+    "src/platforms/system-master/components/types.ts",
+    "src/services/ai/aiInsightsService.ts",
+    "src/services/auth/google-auth-service.ts",
+    "src/services/integrations/githubIntegrationService.ts",
+    "src/services/integrations/supabaseSchemaService.ts",
+    "src/services/monitoring/UserMonitoringService.ts",
+    "src/services/performance/performanceTrackingService.ts",
+    "src/types/global.d.ts",
+    "src/types/schemas.ts",
+    "src/utils/cache/cache.ts",
+    "src/utils/common/AIOptimizationPanel.tsx",
+    "src/utils/common/Button/Button.tsx",
+    "src/utils/common/Card/Card.tsx",
+    "src/utils/common/ChangelogPanel.tsx",
+    "src/utils/common/DeveloperNotesPanel.tsx",
+    "src/utils/common/ErrorBoundary.tsx",
+    "src/utils/common/FeaturesMapPanel.tsx",
+    "src/utils/common/SourceOfTruthConsole.tsx",
+    "src/utils/common/SystemAuditPanel.tsx",
+    "src/utils/common/SystemEvolutionIntelligence.tsx",
+    "src/utils/common/cn.ts",
+    "src/utils/common/roadmapActuals.ts",
+    "src/utils/common/sessionTracking.ts",
+    "src/utils/common/validation.ts",
+    "src/utils/common/windowManager.ts",
+    "src/utils/logger/logger.ts",
+    "frontend/src/App.tsx",
+    "frontend/src/components/Header.tsx",
+    "frontend/src/components/RoadmapDashboard.tsx",
+    "frontend/src/components/Sidebar.tsx",
+    "frontend/src/components/ui/Button/Button.tsx",
+    "frontend/src/pages/Administrate.tsx",
+    "frontend/src/pages/Articulate.tsx",
+    "frontend/src/pages/Dashboard.tsx",
+    "frontend/src/pages/Elevate.tsx",
+    "frontend/src/pages/Operations.tsx",
+    "frontend/src/pages/Roadmap.tsx",
+    "frontend/src/pages/SystemMaster.tsx",
+    "frontend/src/pages/TeamPortal.tsx",
+    "frontend/src/types.d.ts"
   ],
-  "missingFiles": [
-    {
-      "type": "config_file",
-      "path": "src/services/openRouterService.ts",
-      "severity": "high",
-      "description": "Configuration file src/services/openRouterService.ts is missing"
-    },
-    {
-      "type": "utility_file",
-      "path": "src/utils/common/constants.ts",
-      "severity": "medium",
-      "description": "Utility file src/utils/common/constants.ts is missing"
-    },
-    {
-      "type": "utility_file",
-      "path": "src/api/detectJerseyNumbers.ts",
-      "severity": "medium",
-      "description": "Utility file src/api/detectJerseyNumbers.ts is missing"
-    }
-  ],
-  "structuralIssues": [
-    {
-      "type": "large_file",
-      "path": "src/components/SecurityDashboard/SecurityDashboard.tsx",
-      "severity": "medium",
-      "description": "Large file (506 lines) may need refactoring",
-      "lines": 506
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/governance/CodeCzarManager.ts",
-      "severity": "medium",
-      "description": "Large file (639 lines) may need refactoring",
-      "lines": 639
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/governance/CommandCenter.ts",
-      "severity": "medium",
-      "description": "Large file (727 lines) may need refactoring",
-      "lines": 727
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/governance/CommandCenterCoach.ts",
-      "severity": "medium",
-      "description": "Large file (631 lines) may need refactoring",
-      "lines": 631
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/governance/CommandCenterMetrics.ts",
-      "severity": "medium",
-      "description": "Large file (561 lines) may need refactoring",
-      "lines": 561
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/governance/EnvironmentGovernance.ts",
-      "severity": "medium",
-      "description": "Large file (691 lines) may need refactoring",
-      "lines": 691
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/governance/ExecutiveCommitteeManager.ts",
-      "severity": "medium",
-      "description": "Large file (635 lines) may need refactoring",
-      "lines": 635
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/governance/PerformanceManager.ts",
-      "severity": "medium",
-      "description": "Large file (980 lines) may need refactoring",
-      "lines": 980
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/governance/UserConstituencyManager.ts",
-      "severity": "medium",
-      "description": "Large file (941 lines) may need refactoring",
-      "lines": 941
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/holons/features/FeaturesHolon.ts",
-      "severity": "medium",
-      "description": "Large file (709 lines) may need refactoring",
-      "lines": 709
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/holons/features/modules/DeliveryEngine.ts",
-      "severity": "medium",
-      "description": "Large file (614 lines) may need refactoring",
-      "lines": 614
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/holons/operations/ErrorManagerHolon.ts",
-      "severity": "medium",
-      "description": "Large file (871 lines) may need refactoring",
-      "lines": 871
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/holons/security/SecurityHolonManager.ts",
-      "severity": "medium",
-      "description": "Large file (708 lines) may need refactoring",
-      "lines": 708
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/holons/security/SecurityManagementTeam.ts",
-      "severity": "medium",
-      "description": "Large file (634 lines) may need refactoring",
-      "lines": 634
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/holons/systemMaster/FrontendManager.ts",
-      "severity": "medium",
-      "description": "Large file (1095 lines) may need refactoring",
-      "lines": 1095
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/holons/systemMaster/SystemMasterManager.ts",
-      "severity": "medium",
-      "description": "Large file (590 lines) may need refactoring",
-      "lines": 590
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/holons/testing/TestingHolonManager.ts",
-      "severity": "medium",
-      "description": "Large file (1289 lines) may need refactoring",
-      "lines": 1289
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/operations/OperationsMaster.ts",
-      "severity": "medium",
-      "description": "Large file (571 lines) may need refactoring",
-      "lines": 571
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/operations/ServerGovernor.ts",
-      "severity": "medium",
-      "description": "Large file (712 lines) may need refactoring",
-      "lines": 712
-    },
-    {
-      "type": "large_file",
-      "path": "src/core/operations/ServerManager.ts",
-      "severity": "medium",
-      "description": "Large file (589 lines) may need refactoring",
-      "lines": 589
-    },
-    {
-      "type": "large_file",
-      "path": "src/dashboards/governance/CommandCenterDashboard.tsx",
-      "severity": "medium",
-      "description": "Large file (680 lines) may need refactoring",
-      "lines": 680
-    },
-    {
-      "type": "large_file",
-      "path": "src/dashboards/governance/PerformanceManagerDashboard.tsx",
-      "severity": "medium",
-      "description": "Large file (856 lines) may need refactoring",
-      "lines": 856
-    },
-    {
-      "type": "large_file",
-      "path": "src/dashboards/product/ProductDashboard.tsx",
-      "severity": "medium",
-      "description": "Large file (567 lines) may need refactoring",
-      "lines": 567
-    },
-    {
-      "type": "large_file",
-      "path": "src/platforms/articulate/components/TaskEngine.tsx",
-      "severity": "medium",
-      "description": "Large file (559 lines) may need refactoring",
-      "lines": 559
-    },
-    {
-      "type": "large_file",
-      "path": "src/platforms/articulate/components/Wiki.tsx",
-      "severity": "medium",
-      "description": "Large file (581 lines) may need refactoring",
-      "lines": 581
-    },
-    {
-      "type": "large_file",
-      "path": "src/utils/common/roadmapActuals.ts",
-      "severity": "medium",
-      "description": "Large file (936 lines) may need refactoring",
-      "lines": 936
-    }
-  ],
-  "duplicateFiles": [],
-  "recommendations": [
-    "Fix TypeScript compilation errors - highest priority",
-    "Install missing dependencies (@types/uuid, recharts, @supabase/supabase-js)",
-    "Fix type annotations and null safety issues",
-    "Create missing configuration files (oauth-config.ts, supabase.ts)",
-    "Implement missing utility functions and constants",
-    "Create missing API endpoints and services",
-    "Refactor large files (>500 lines) into smaller modules",
-    "Address TODO/FIXME comments with proper implementations",
-    "Improve code organization and modularity",
-    "Implement comprehensive error handling",
-    "Add proper TypeScript types throughout the codebase",
-    "Create automated testing for critical components",
-    "Establish code quality standards and linting rules"
-  ],
-  "summary": {
-    "totalIssues": 59,
-    "criticalIssues": 0,
-    "highPriorityIssues": 1,
-    "mediumPriorityIssues": 28,
-    "lowPriorityIssues": 0
-  }
+  "duplicates": [],
+  "referenced": [
+    "src/components/SystemMaster/InformConsole.tsx",
+    "src/components/SystemMaster/ObserveConsole.tsx",
+    "src/components/SystemMaster/ResolveConsole.tsx",
+    "src/core/governance/CodeCzarManager.ts",
+    "src/core/governance/CommandCenterMetrics.ts",
+    "src/core/governance/ProcessManager.ts",
+    "src/core/governance/SteeringManager.ts",
+    "src/core/holons/features/modules/DeliveryEngine.ts",
+    "src/core/holons/features/modules/ImplementationEngine.ts",
+    "src/core/holons/product/modules/CoordinationEngine.ts",
+    "src/core/holons/protocols/Protocol.ts",
+    "src/core/holons/security/SecurityHolonManager.ts",
+    "src/core/operations/ServerGovernor.ts",
+    "src/core/operations/ServerManager.ts",
+    "src/core/session-management/EnhancedSessionManager.ts",
+    "src/core/session-management/SessionManager.ts",
+    "src/dashboards/system/SystemLogConsole.tsx",
+    "src/dashboards/system/SystemNavigation.tsx",
+    "src/dashboards/system/SystemOverview.tsx",
+    "src/dashboards/system/types.ts",
+    "src/design-system/components/DesignSystemDashboard/DesignSystemDashboard.tsx",
+    "src/design-system/components/IconSystem/IconSystem.tsx",
+    "src/design-system/components/theme/ThemeContextDefinition.tsx",
+    "src/design-system/components/theme/constants.ts",
+    "src/holons/protocols/base-protocol.ts",
+    "src/holons/protocols/council-protocol.ts",
+    "src/holons/protocols/launch-protocol.ts",
+    "src/holons/protocols/wrap-protocol.ts",
+    "src/holons/shared-utils/command-utils.ts",
+    "src/holons/shared-utils/config-utils.ts",
+    "src/holons/shared-utils/file-utils.ts",
+    "src/holons/shared-utils/logging-utils.ts",
+    "src/holons/shared-utils/validation-utils.ts",
+    "src/platforms/articulate/components/Insights.tsx",
+    "src/platforms/articulate/components/KnowledgeBase.tsx",
+    "src/platforms/articulate/components/TaskEngine.tsx",
+    "src/platforms/articulate/components/Wiki.tsx",
+    "src/platforms/articulate/components/WorkHistory.tsx",
+    "src/platforms/articulate/components/types.ts",
+    "src/utils/common/formatting.ts",
+    "frontend/src/components/TestingDashboard/TestingDashboard.tsx"
+  ]
 }

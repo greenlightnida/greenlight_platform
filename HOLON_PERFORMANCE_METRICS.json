@@ -1,0 +1,98 @@
+{
+  "efficiency": {
+    "name": "Efficiency",
+    "description": "Resource utilization and performance optimization",
+    "metrics": [
+      "response_time",
+      "throughput",
+      "resource_usage",
+      "optimization_rate"
+    ],
+    "scores": {
+      "commandCenter": {
+        "score": 1,
+        "status": "good"
+      },
+      "sessionManager": {
+        "score": 1,
+        "status": "good"
+      },
+      "protocolManager": {
+        "score": 1,
+        "status": "good"
+      }
+    }
+  },
+  "reliability": {
+    "name": "Reliability",
+    "description": "System stability and error handling",
+    "metrics": [
+      "uptime",
+      "error_rate",
+      "recovery_time",
+      "consistency"
+    ],
+    "scores": {
+      "commandCenter": {
+        "score": 1,
+        "status": "good"
+      },
+      "sessionManager": {
+        "score": 1,
+        "status": "good"
+      },
+      "protocolManager": {
+        "score": 1,
+        "status": "good"
+      }
+    }
+  },
+  "governance": {
+    "name": "Governance",
+    "description": "Compliance and policy enforcement",
+    "metrics": [
+      "compliance_rate",
+      "policy_violations",
+      "audit_success",
+      "consensus_rate"
+    ],
+    "scores": {
+      "commandCenter": {
+        "score": 1,
+        "status": "good"
+      },
+      "sessionManager": {
+        "score": 1,
+        "status": "good"
+      },
+      "protocolManager": {
+        "score": 1,
+        "status": "good"
+      }
+    }
+  },
+  "intelligence": {
+    "name": "Intelligence",
+    "description": "Autonomous capabilities and learning",
+    "metrics": [
+      "automation_level",
+      "prediction_accuracy",
+      "learning_rate",
+      "adaptation_speed"
+    ],
+    "scores": {
+      "commandCenter": {
+        "score": 1,
+        "status": "good"
+      },
+      "sessionManager": {
+        "score": 1,
+        "status": "good"
+      },
+      "protocolManager": {
+        "score": 1,
+        "status": "good"
+      }
+    }
+  }
+}

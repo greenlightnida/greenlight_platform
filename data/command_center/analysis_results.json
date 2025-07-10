@@ -1,0 +1,99 @@
+{
+  "timestamp": "2025-07-10T15:54:25.996Z",
+  "systemHealth": {},
+  "agentStatus": {
+    "systemMonitor": {
+      "name": "System Monitor",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    },
+    "performanceAnalyzer": {
+      "name": "Performance Analyzer",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    },
+    "governanceEnforcer": {
+      "name": "Governance Enforcer",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    },
+    "optimizationEngine": {
+      "name": "Optimization Engine",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    },
+    "predictiveAnalyst": {
+      "name": "Predictive Analyst",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    },
+    "cascadingAuditor": {
+      "name": "Cascading Auditor",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    },
+    "executiveCommittee": {
+      "name": "Executive Committee",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    },
+    "regulatoryMonitor": {
+      "name": "Regulatory Monitor",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    },
+    "commandAligner": {
+      "name": "Command Aligner",
+      "status": "active",
+      "lastPing": 1752162881010,
+      "performance": {
+        "responseTime": 0,
+        "successRate": 1,
+        "lastError": null
+      }
+    }
+  },
+  "performanceMetrics": {},
+  "recommendations": [],
+  "predictiveInsights": []
+}

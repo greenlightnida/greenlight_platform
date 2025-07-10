@@ -1,0 +1,31 @@
+{
+  "timestamp": "2025-07-10T15:54:35.108Z",
+  "manager": "steeringManager",
+  "domain": "steering",
+  "regulatoryRole": "Strategic Direction and Navigation",
+  "complianceScore": 94,
+  "monitoringData": {
+    "strategic_alignment": {
+      "status": "passed",
+      "score": 96,
+      "data": {
+        "alignmentScore": 0.96
+      }
+    },
+    "direction_control": {
+      "status": "passed",
+      "score": 94,
+      "data": {
+        "controlScore": 0.94
+      }
+    },
+    "navigation_optimization": {
+      "status": "passed",
+      "score": 93,
+      "data": {
+        "navigationScore": 0.93
+      }
+    }
+  },
+  "status": "active"
+}
