@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-10T13:27:54.638Z",
+  "last_updated": "2025-07-10T13:31:45.933Z",
   "session_id": "codebase_optimization_planning_1752115453000",
   "commands": [
     {
@@ -79,13 +79,18 @@
       "timestamp": "2025-07-10T03:24:36.570Z",
       "command": "anchor",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:25:06.793Z",
       "command": "anchor",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:25:09.255Z",
@@ -93,13 +98,21 @@
       "options": [
         "launch"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:25:29.935Z",
       "command": "launch",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:25:39.466Z",
@@ -107,13 +120,15 @@
       "options": [
         "launch"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:26:00.754Z",
       "command": "launch",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:27:31.573Z",
@@ -121,7 +136,11 @@
       "options": [
         "--urgent"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:27:31.597Z",
@@ -129,7 +148,8 @@
       "options": [
         "--urgent"
       ],
-      "status": "failed"
+      "status": "failed",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:29:27.833Z",
@@ -137,13 +157,21 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:29:28.743Z",
       "command": "anchor",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:29:46.444Z",
@@ -151,7 +179,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:29:47.098Z",
@@ -159,13 +188,18 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:29:58.936Z",
       "command": "anchor",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:30:15.882Z",
@@ -173,7 +207,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:34:28.201Z",
@@ -181,7 +216,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:34:50.604Z",
@@ -189,7 +228,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:34:50.953Z",
@@ -197,7 +237,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:35:01.575Z",
@@ -205,7 +249,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:38:04.234Z",
@@ -216,7 +261,11 @@
         "--status",
         "completed"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:39:28.035Z",
@@ -224,7 +273,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:39:54.326Z",
@@ -232,7 +285,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:39:55.172Z",
@@ -240,7 +294,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:40:16.217Z",
@@ -248,7 +306,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:44:28.053Z",
@@ -256,7 +315,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:44:50.763Z",
@@ -264,7 +327,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:44:51.353Z",
@@ -272,7 +336,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:45:13.668Z",
@@ -280,7 +348,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:49:27.999Z",
@@ -288,7 +357,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:49:42.290Z",
@@ -296,7 +369,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:49:42.770Z",
@@ -304,7 +378,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:50:01.159Z",
@@ -312,7 +390,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:54:27.959Z",
@@ -320,7 +399,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:54:42.490Z",
@@ -328,7 +411,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:54:42.918Z",
@@ -336,7 +420,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:54:57.427Z",
@@ -344,7 +432,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:58:50.309Z",
@@ -352,7 +441,11 @@
       "options": [
         "prewrap"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:59:10.719Z",
@@ -360,7 +453,11 @@
       "options": [
         "wrap"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:59:20.456Z",
@@ -368,7 +465,8 @@
       "options": [
         "prewrap"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:59:27.772Z",
@@ -376,7 +474,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:59:37.108Z",
@@ -384,7 +486,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:59:37.387Z",
@@ -392,7 +495,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T03:59:40.868Z",
@@ -400,7 +507,8 @@
       "options": [
         "wrap"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:59:47.474Z",
@@ -408,7 +516,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T03:59:47.775Z",
@@ -416,7 +525,11 @@
       "options": [
         "status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T04:00:13.518Z",
@@ -425,7 +538,11 @@
         "wrap",
         "--continue"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T04:00:43.670Z",
@@ -434,7 +551,8 @@
         "wrap",
         "--continue"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T04:00:50.970Z",
@@ -442,7 +560,11 @@
       "options": [
         "status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T04:01:21.146Z",
@@ -450,7 +572,8 @@
       "options": [
         "status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T04:01:25.321Z",
@@ -459,7 +582,11 @@
         "wrap",
         "--consolidate-holons"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T11:00:08.985Z",
@@ -467,7 +594,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T11:00:20.816Z",
@@ -475,7 +606,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T11:00:21.068Z",
@@ -483,7 +615,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T11:00:29.179Z",
@@ -491,31 +627,42 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T12:54:47.023Z",
       "command": "anchor",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T12:55:17.164Z",
       "command": "anchor",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T12:55:47.037Z",
       "command": "launch",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T12:56:13.057Z",
       "command": "launch",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T12:57:05.313Z",
@@ -523,7 +670,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T12:57:18.024Z",
@@ -531,7 +682,8 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T12:57:18.300Z",
@@ -539,7 +691,11 @@
       "options": [
         "--status"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T12:57:29.713Z",
@@ -547,13 +703,18 @@
       "options": [
         "--status"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T12:57:54.887Z",
       "command": "anchor",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T12:57:59.022Z",
@@ -561,13 +722,18 @@
       "options": [
         "--force"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T12:58:24.982Z",
       "command": "anchor",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T12:58:26.645Z",
@@ -575,19 +741,25 @@
       "options": [
         "--force"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:06:31.767Z",
       "command": "anchor",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T13:07:44.318Z",
       "command": "anchor",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:08:56.696Z",
@@ -595,7 +767,11 @@
       "options": [
         "--comprehensive"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T13:10:00.937Z",
@@ -603,19 +779,25 @@
       "options": [
         "--comprehensive"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:19:12.266Z",
       "command": "anchor",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T13:20:18.122Z",
       "command": "anchor",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:22:12.347Z",
@@ -623,7 +805,11 @@
       "options": [
         "--force"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T13:23:10.993Z",
@@ -631,19 +817,25 @@
       "options": [
         "--force"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:24:02.047Z",
       "command": "launch",
       "options": [],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T13:24:58.791Z",
       "command": "launch",
       "options": [],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:25:18.242Z",
@@ -651,7 +843,11 @@
       "options": [
         "--force"
       ],
-      "status": "started"
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T13:26:17.364Z",
@@ -659,7 +855,8 @@
       "options": [
         "--force"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:27:18.782Z",
@@ -667,7 +864,8 @@
       "options": [
         "--force"
       ],
-      "status": "started"
+      "status": "started",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:27:18.907Z",
@@ -677,7 +875,8 @@
       ],
       "status": "completed",
       "sessionId": "anchor_1752154038883",
-      "summary": "Anchored session with 8 events and 2 next steps"
+      "summary": "Anchored session with 8 events and 2 next steps",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:27:43.941Z",
@@ -685,7 +884,8 @@
       "options": [
         "--force"
       ],
-      "status": "started"
+      "status": "started",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T13:27:54.638Z",
@@ -693,7 +893,32 @@
       "options": [
         "--force"
       ],
-      "status": "success"
+      "status": "success",
+      "details": {}
+    },
+    {
+      "timestamp": "2025-07-10T13:28:50.836Z",
+      "command": "launch",
+      "options": [
+        "--force"
+      ],
+      "status": "success",
+      "details": {}
+    },
+    {
+      "timestamp": "2025-07-10T13:31:45.813Z",
+      "command": "anchor",
+      "options": [],
+      "status": "started",
+      "details": {}
+    },
+    {
+      "timestamp": "2025-07-10T13:31:45.933Z",
+      "command": "anchor",
+      "options": [],
+      "status": "completed",
+      "sessionId": "anchor_1752154305909",
+      "summary": "Anchored session with 8 events and 2 next steps"
     }
   ],
   "next_session_commands": [
@@ -708,5 +933,9 @@
     "total_expected_reduction": "15-20%",
     "files_to_optimize": 15,
     "lines_to_optimize": 4350
-  }
+  },
+  "cleanup_performed": "2025-07-10T13:31:26.121Z",
+  "original_count": 85,
+  "cleaned_count": 85,
+  "removed_count": 0
 }

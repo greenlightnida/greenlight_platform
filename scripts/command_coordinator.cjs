@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Command Coordinator v2.0.0
+ * Command Coordinator v3.0.0
  * 
  * PURPOSE: Central command routing system that delegates to specific protocols
  * without creating circular dependencies or overlapping responsibilities.
  * 
  * PROTOCOL RESPONSIBILITIES:
- * - anchor: System analysis and health checks only
+ * - anchor: Session anchoring and context restoration
  * - launch: Session initialization and context setup
  * - wrap: Session completion and context preservation
  * - council: Governance and decision-making
@@ -18,11 +18,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-
-// Committee integration
-// const { Committee } = require('../src/core/governance');
-// const committee = new Committee();
+const { execSync, spawn } = require('child_process');
 
 // Import new streamlined components
 const GitManager = require('./git/git_manager.cjs');
@@ -31,7 +27,7 @@ const HealthMonitor = require('./monitoring/health_monitor.cjs');
 
 const COMMAND_CENTER_LOG = path.join(process.cwd(), 'data/command_center/command_history.json');
 
-// Command coordination to prevent conflicts
+// Enhanced command coordination with intelligent conflict detection
 function checkCommandConflicts(command, options) {
   try {
     if (!fs.existsSync(COMMAND_CENTER_LOG)) {
@@ -39,19 +35,19 @@ function checkCommandConflicts(command, options) {
     }
     
     const history = JSON.parse(fs.readFileSync(COMMAND_CENTER_LOG, 'utf8'));
-    const recentCommands = history.commands?.slice(-3) || [];
+    const recentCommands = history.commands?.slice(-5) || [];
     
-    // Check for conflicting commands
+    // Only check for truly conflicting commands that can't run simultaneously
     const conflictingCommands = {
-      'anchor': ['launch'],
-      'launch': ['anchor']
+      'launch': ['launch'], // Can't have multiple launches
+      'wrap': ['wrap']      // Can't have multiple wraps
     };
     
     const conflicts = conflictingCommands[command] || [];
     const recentConflict = recentCommands.find(cmd => 
       conflicts.includes(cmd.command) && 
       cmd.status === 'started' && 
-      new Date(cmd.timestamp) > new Date(Date.now() - 120000) // Within last 2 minutes
+      new Date(cmd.timestamp) > new Date(Date.now() - 300000) // Within last 5 minutes
     );
     
     if (recentConflict) {
@@ -69,12 +65,13 @@ function checkCommandConflicts(command, options) {
   }
 }
 
-function logCommandCenter(command, options, status) {
+function logCommandCenter(command, options, status, details = {}) {
   const entry = {
     timestamp: new Date().toISOString(),
     command,
     options,
-    status
+    status,
+    details
   };
   const dir = path.dirname(COMMAND_CENTER_LOG);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
@@ -153,7 +150,7 @@ class CommandCoordinator {
     await this.preExecutionChecks(command, options);
 
     logCommandCenter(command, options, 'started');
-    console.log(`🚀 Command Coordinator v2.0.0`);
+    console.log(`🚀 Command Coordinator v3.0.0`);
     console.log(`📋 Executing: ${command}`);
     console.log(`⚙️  Options: ${options.join(' ')}`);
     
@@ -215,12 +212,16 @@ class CommandCoordinator {
           this.showHelp();
           process.exit(1);
       }
+      
       // Post-execution processing
       await this.postExecutionProcessing(command, options, startTime);
 
-      logCommandCenter(command, options, 'success');
+      logCommandCenter(command, options, 'success', { executionTime: Date.now() - startTime });
     } catch (error) {
-      logCommandCenter(command, options, 'failed');
+      logCommandCenter(command, options, 'failed', { 
+        error: error.message, 
+        executionTime: Date.now() - startTime 
+      });
       console.error(`❌ Command execution failed: ${error.message}`);
       
       // Handle command error
@@ -300,57 +301,57 @@ class CommandCoordinator {
   }
 
   async executeAnchor(options) {
-    console.log('🔍 Executing Anchor Protocol (System Analysis)');
+    console.log('⚓ Executing Anchor Protocol (Session Anchoring)');
     const protocolPath = path.join(this.protocolsDir, this.commands.anchor);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 60000); // 60 second timeout
   }
 
   async executeLaunch(options) {
     console.log('🚀 Executing Launch Protocol (Session Initialization)');
     const protocolPath = path.join(this.protocolsDir, this.commands.launch);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 120000); // 2 minute timeout
   }
 
   async executeWrap(options) {
     console.log('📦 Executing Wrap Protocol (Session Completion)');
     const protocolPath = path.join(this.protocolsDir, this.commands.wrap);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 60000); // 60 second timeout
   }
 
   async executeCouncil(options) {
     console.log('🏛️  Executing Council Protocol (Governance)');
     const protocolPath = path.join(this.protocolsDir, this.commands.council);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 180000); // 3 minute timeout
   }
 
   async executeAudit(options) {
     console.log('🔍 Executing Audit Protocol (Content Regulation)');
     const protocolPath = path.join(this.protocolsDir, this.commands.audit);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 120000); // 2 minute timeout
   }
 
   async executePrecommit(options) {
     console.log('✅ Executing Precommit Protocol (Pre-commit Checks)');
     const protocolPath = path.join(this.projectRoot, 'scripts/governance', this.commands.precommit);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 60000); // 60 second timeout
   }
 
   async executePrewrap(options) {
     console.log('📋 Executing Prewrap Protocol (Pre-wrap Preparation)');
     const protocolPath = path.join(this.protocolsDir, this.commands.prewrap);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 60000); // 60 second timeout
   }
 
   async executeMonitor(options) {
     console.log('🔍 Executing User Monitoring Protocol (Real-time User Analytics)');
     const protocolPath = path.join(this.projectRoot, 'scripts/monitoring', this.commands.monitor);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 60000); // 60 second timeout
   }
 
   async executeOptimize(options) {
     console.log('🔧 Executing TypeScript Optimization Protocol (Error Mitigation & Effectiveness Tracking)');
     const protocolPath = path.join(this.projectRoot, 'scripts/optimization', this.commands.optimize);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 180000); // 3 minute timeout
   }
 
   async executeStatus(options) {
@@ -362,43 +363,44 @@ class CommandCoordinator {
       // Remove 'assessment' and pass the target directly
       const target = options[1];
       const remainingOptions = options.slice(2);
-      this.executeProtocol(protocolPath, [target, ...remainingOptions]);
+      await this.executeProtocolWithTimeout(protocolPath, [target, ...remainingOptions], 60000);
     } else {
-      this.executeProtocol(protocolPath, options);
+      await this.executeProtocolWithTimeout(protocolPath, options, 60000);
     }
   }
 
   async executeCodeCzarIntegration(options) {
     console.log('👑 Executing Code Czar and Executive Committee Integration (Language & Compilation Governance)');
     const integrationPath = path.join(this.projectRoot, 'scripts/integration/code_czar_executive_integration.cjs');
-    this.executeProtocol(integrationPath, options);
+    await this.executeProtocolWithTimeout(integrationPath, options, 120000); // 2 minute timeout
   }
 
   async executeErrorCustodianFileIntegration(options) {
     console.log('🔗 Executing Error Manager, Custodian, and File Manager Integration (System Health Coordination)');
     const integrationPath = path.join(this.projectRoot, 'scripts/integration/error_custodian_file_integration.cjs');
-    this.executeProtocol(integrationPath, options);
+    await this.executeProtocolWithTimeout(integrationPath, options, 120000); // 2 minute timeout
   }
 
   async executeRunItBack(options) {
     console.log('🔁 Executing Run It Back Protocol (Session & Task Summary)');
     const protocolPath = path.join(this.protocolsDir, this.commands['run-it-back']);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 60000); // 60 second timeout
   }
 
   async executeDecisionLog(options) {
     console.log('📋 Executing Decision Log Protocol (Decision Tracking & Agenda Management)');
     const protocolPath = path.join(this.protocolsDir, this.commands['decision-log']);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 60000); // 60 second timeout
   }
 
   async executeStandards(options) {
     console.log('📋 Executing Standards Manager (Standards Compliance & Harmonization)');
     const protocolPath = path.join(this.commandCenterDir, this.commands.standards);
-    this.executeProtocol(protocolPath, options);
+    await this.executeProtocolWithTimeout(protocolPath, options, 60000); // 60 second timeout
   }
 
-  executeProtocol(protocolPath, options) {
+  // Enhanced protocol execution with timeout protection
+  async executeProtocolWithTimeout(protocolPath, options, timeoutMs = 60000) {
     if (!fs.existsSync(protocolPath)) {
       throw new Error(`Protocol not found: ${protocolPath}`);
     }
@@ -406,26 +408,43 @@ class CommandCoordinator {
     const command = `node "${protocolPath}" ${options.join(' ')}`;
     console.log(`📋 Executing: ${command}`);
     
-    try {
-      execSync(command, { 
-        stdio: 'inherit', 
+    return new Promise((resolve, reject) => {
+      const child = spawn('node', [protocolPath, ...options], {
+        stdio: 'inherit',
         cwd: this.projectRoot,
         env: { ...process.env, COMMAND_COORDINATOR: 'true' }
       });
-    } catch (error) {
-      throw new Error(`Protocol execution failed: ${error.message}`);
-    }
+
+      const timeout = setTimeout(() => {
+        child.kill('SIGTERM');
+        reject(new Error(`Protocol execution timed out after ${timeoutMs}ms`));
+      }, timeoutMs);
+
+      child.on('close', (code) => {
+        clearTimeout(timeout);
+        if (code === 0) {
+          resolve();
+        } else {
+          reject(new Error(`Protocol execution failed with exit code ${code}`));
+        }
+      });
+
+      child.on('error', (error) => {
+        clearTimeout(timeout);
+        reject(new Error(`Protocol execution failed: ${error.message}`));
+      });
+    });
   }
 
   showHelp() {
     console.log(`
-📋 Command Coordinator v2.0.0
+📋 Command Coordinator v3.0.0
 ==============================
 
 USAGE: node scripts/command_coordinator.cjs <command> [options]
 
 COMMANDS:
-  anchor     System analysis and health checks
+  anchor     Session anchoring and context restoration
   launch     Session initialization and context setup
   wrap       Session completion and context preservation
   council    Governance and decision-making
@@ -463,8 +482,8 @@ EXAMPLES:
   node scripts/command_coordinator.cjs standards harmonize
 
 PROTOCOL RESPONSIBILITIES:
-  • anchor: System analysis only - no session management
-  • launch: Session initialization - creates new sessions
+  • anchor: Session anchoring - captures recent events and restores context
+  • launch: Session initialization - creates new sessions and sets up context
   • wrap: Session completion - preserves context and ends sessions
   • council: Governance - decision making and oversight
   • audit: Content regulation - quality and format control
@@ -475,6 +494,13 @@ PROTOCOL RESPONSIBILITIES:
   • code-czar: Language and compilation governance with executive oversight
   • error-custodian-file: System health coordination between error management, custodial maintenance, and file management
   • standards: System-wide standards compliance, harmonization, and council integration
+
+IMPROVEMENTS IN v3.0.0:
+  • Enhanced conflict detection - only blocks truly conflicting commands
+  • Protocol timeout protection - prevents hanging executions
+  • Improved error handling and logging
+  • Better command status tracking
+  • Session anchoring focus for anchor command
 `);
   }
 }
