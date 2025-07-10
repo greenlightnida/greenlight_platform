@@ -312,7 +312,19 @@ class CommandCoordinator {
 
   async executeLaunch(options) {
     console.log('🚀 Executing Launch Protocol (Session Initialization)');
-    const protocolPath = path.join(this.protocolsDir, this.commands.launch);
+    
+    // Check if fixed version exists, otherwise fall back to original
+    const fixedProtocolPath = path.join(this.protocolsDir, 'launch_protocol_fixed.cjs');
+    const originalProtocolPath = path.join(this.protocolsDir, this.commands.launch);
+    
+    const protocolPath = fs.existsSync(fixedProtocolPath) ? fixedProtocolPath : originalProtocolPath;
+    
+    if (protocolPath === fixedProtocolPath) {
+      console.log('✅ Using fixed launch protocol version');
+    } else {
+      console.log('⚠️  Using original launch protocol (fixed version not found)');
+    }
+    
     await this.executeProtocolWithTimeout(protocolPath, options, 120000); // 2 minute timeout
   }
 
