@@ -2,7 +2,7 @@
   "systemMonitor": {
     "name": "System Monitor",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401799,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -12,7 +12,7 @@
   "performanceAnalyzer": {
     "name": "Performance Analyzer",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401799,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -22,7 +22,7 @@
   "governanceEnforcer": {
     "name": "Governance Enforcer",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401799,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -32,7 +32,7 @@
   "optimizationEngine": {
     "name": "Optimization Engine",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401799,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -42,7 +42,7 @@
   "predictiveAnalyst": {
     "name": "Predictive Analyst",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401799,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -52,7 +52,7 @@
   "cascadingAuditor": {
     "name": "Cascading Auditor",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401799,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -62,7 +62,7 @@
   "executiveCommittee": {
     "name": "Executive Committee",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401799,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -72,9 +72,9 @@
   "regulatoryMonitor": {
     "name": "Regulatory Monitor",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401800,
     "performance": {
-      "responseTime": 0,
+      "responseTime": 1,
       "successRate": 1,
       "lastError": null
     }
@@ -82,9 +82,9 @@
   "commandAligner": {
     "name": "Command Aligner",
     "status": "active",
-    "lastPing": 1752163471706,
+    "lastPing": 1752164401800,
     "performance": {
-      "responseTime": 0,
+      "responseTime": 1,
       "successRate": 1,
       "lastError": null
     }

@@ -1,0 +1,19 @@
+{
+  "sessionId": "enabled-wrap-20250710-160610-1752163570363-rzkbnaj8z",
+  "timestamp": "2025-07-10T16:06:10.379Z",
+  "userEnabled": true,
+  "contextPreserved": true,
+  "transitionReady": false,
+  "systemInfo": {
+    "nodeVersion": "v22.16.0",
+    "platform": "darwin",
+    "cwd": "/Users/home/Developer/greenlight-platform",
+    "env": "development"
+  },
+  "sessionMetrics": {
+    "warnings": 0,
+    "issues": 0,
+    "successes": 1,
+    "duration": 14
+  }
+}

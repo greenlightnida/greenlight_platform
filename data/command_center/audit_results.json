@@ -6046,5 +6046,2525 @@
     },
     "overallHealth": 100,
     "recommendations": []
+  },
+  "cascading_audit_1752163516665": {
+    "auditId": "cascading_audit_1752163516665",
+    "timestamp": "2025-07-10T16:05:16.666Z",
+    "level": "quick",
+    "duration": 1,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:05:16.665Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:05:16.666Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:05:16.666Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:05:16.666Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752163576667": {
+    "auditId": "cascading_audit_1752163576667",
+    "timestamp": "2025-07-10T16:06:16.669Z",
+    "level": "quick",
+    "duration": 2,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:06:16.668Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:06:16.669Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:06:16.669Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:06:16.669Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752163636669": {
+    "auditId": "cascading_audit_1752163636669",
+    "timestamp": "2025-07-10T16:07:16.671Z",
+    "level": "quick",
+    "duration": 2,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:07:16.670Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:07:16.670Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:07:16.670Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:07:16.671Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752163696671": {
+    "auditId": "cascading_audit_1752163696671",
+    "timestamp": "2025-07-10T16:08:16.673Z",
+    "level": "quick",
+    "duration": 2,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:08:16.672Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:08:16.672Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:08:16.672Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:08:16.673Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752163756673": {
+    "auditId": "cascading_audit_1752163756673",
+    "timestamp": "2025-07-10T16:09:16.675Z",
+    "level": "quick",
+    "duration": 2,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:09:16.674Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:09:16.674Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:09:16.674Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:09:16.675Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752163816674": {
+    "auditId": "cascading_audit_1752163816674",
+    "timestamp": "2025-07-10T16:10:16.675Z",
+    "level": "quick",
+    "duration": 1,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:10:16.675Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:10:16.675Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:10:16.675Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:10:16.675Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752163876675": {
+    "auditId": "cascading_audit_1752163876675",
+    "timestamp": "2025-07-10T16:11:16.677Z",
+    "level": "quick",
+    "duration": 2,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:11:16.676Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:11:16.676Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:11:16.677Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:11:16.677Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752163936676": {
+    "auditId": "cascading_audit_1752163936676",
+    "timestamp": "2025-07-10T16:12:16.677Z",
+    "level": "quick",
+    "duration": 1,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:12:16.676Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:12:16.676Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:12:16.677Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:12:16.677Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752163996677": {
+    "auditId": "cascading_audit_1752163996677",
+    "timestamp": "2025-07-10T16:13:16.677Z",
+    "level": "quick",
+    "duration": 0,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:13:16.677Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:13:16.677Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:13:16.677Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:13:16.677Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752164056679": {
+    "auditId": "cascading_audit_1752164056679",
+    "timestamp": "2025-07-10T16:14:16.680Z",
+    "level": "quick",
+    "duration": 1,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:14:16.680Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:14:16.680Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:14:16.680Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:14:16.680Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752164116680": {
+    "auditId": "cascading_audit_1752164116680",
+    "timestamp": "2025-07-10T16:15:16.682Z",
+    "level": "quick",
+    "duration": 2,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:15:16.681Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:15:16.682Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:15:16.682Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:15:16.682Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752164176682": {
+    "auditId": "cascading_audit_1752164176682",
+    "timestamp": "2025-07-10T16:16:16.683Z",
+    "level": "quick",
+    "duration": 1,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:16:16.682Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:16:16.683Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:16:16.683Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:16:16.683Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752164236685": {
+    "auditId": "cascading_audit_1752164236685",
+    "timestamp": "2025-07-10T16:17:16.686Z",
+    "level": "quick",
+    "duration": 1,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:17:16.685Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:17:16.686Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:17:16.686Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:17:16.686Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752164296685": {
+    "auditId": "cascading_audit_1752164296685",
+    "timestamp": "2025-07-10T16:18:16.686Z",
+    "level": "quick",
+    "duration": 1,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:18:16.685Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:18:16.686Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:18:16.686Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:18:16.686Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
+  },
+  "cascading_audit_1752164356687": {
+    "auditId": "cascading_audit_1752164356687",
+    "timestamp": "2025-07-10T16:19:16.687Z",
+    "level": "quick",
+    "duration": 0,
+    "levels": {
+      "basic": {
+        "level": "basic",
+        "timestamp": "2025-07-10T16:19:16.687Z",
+        "checks": [
+          {
+            "name": "File System",
+            "status": "passed",
+            "data": {
+              "directories": 4,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Node.js Environment",
+            "status": "passed",
+            "data": {
+              "nodeVersion": "v22.16.0",
+              "platform": "darwin",
+              "arch": "x64",
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Package Dependencies",
+            "status": "passed",
+            "data": {
+              "dependencies": 23,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Git Repository",
+            "status": "passed",
+            "data": {
+              "gitAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "structural": {
+        "level": "structural",
+        "timestamp": "2025-07-10T16:19:16.687Z",
+        "checks": [
+          {
+            "name": "Command Center Structure",
+            "status": "passed",
+            "data": {
+              "files": 3,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Protocol Organization",
+            "status": "passed",
+            "data": {
+              "protocols": 59,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Data Directory Structure",
+            "status": "passed",
+            "data": {
+              "subdirectories": 60,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Configuration Files",
+            "status": "passed",
+            "data": {
+              "configurations": 15,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "governance": {
+        "level": "governance",
+        "timestamp": "2025-07-10T16:19:16.687Z",
+        "checks": [
+          {
+            "name": "Enterprise Committee",
+            "status": "passed",
+            "data": {
+              "committeeAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Governance Policies",
+            "status": "passed",
+            "data": {
+              "policies": 8,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Pre-commit Hooks",
+            "status": "passed",
+            "data": {
+              "hookAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Custodian System",
+            "status": "passed",
+            "data": {
+              "custodianAvailable": true,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      },
+      "enterprise": {
+        "level": "enterprise",
+        "timestamp": "2025-07-10T16:19:16.687Z",
+        "checks": [
+          {
+            "name": "Holon Milestone Framework",
+            "status": "passed",
+            "data": {
+              "frameworkAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "OKR Tracking System",
+            "status": "passed",
+            "data": {
+              "okrSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "Performance Management",
+            "status": "passed",
+            "data": {
+              "performanceSystemAvailable": true,
+              "status": "healthy"
+            }
+          },
+          {
+            "name": "System Integration",
+            "status": "passed",
+            "data": {
+              "integrations": 3,
+              "status": "healthy"
+            }
+          }
+        ],
+        "overallHealth": 100
+      }
+    },
+    "overallHealth": 100,
+    "recommendations": []
   }
 }
