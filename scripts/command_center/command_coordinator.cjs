@@ -330,6 +330,40 @@ async function main() {
         });
         break;
         
+      case 'anchor':
+        logInfo('Executing anchor command...');
+        try {
+          const AnchorManager = require('../protocols/anchor_manager.cjs');
+          const anchorManager = new AnchorManager();
+          const result = await anchorManager.executeAnchorCommand();
+          
+          if (result.success) {
+            logSuccess(`Anchor command completed successfully in ${result.executionTime}ms`);
+          } else {
+            logError(`Anchor command failed after ${result.executionTime}ms`);
+          }
+        } catch (error) {
+          logError(`Failed to execute anchor command: ${error.message}`);
+        }
+        break;
+        
+      case 'launch':
+        logInfo('Executing launch protocol...');
+        try {
+          const result = coordinator.executeCommand('node scripts/protocols/launch_protocol.cjs', {
+            description: 'Launch Protocol',
+            timeout: 120000, // 2 minutes for launch protocol
+            allowFailure: false
+          });
+          
+          if (result) {
+            logSuccess('Launch protocol completed successfully');
+          }
+        } catch (error) {
+          logError(`Launch protocol failed: ${error.message}`);
+        }
+        break;
+        
       case 'logs':
         logInfo('Running comprehensive log check...');
         try {
