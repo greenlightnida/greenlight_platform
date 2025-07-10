@@ -2,7 +2,7 @@
   "systemMonitor": {
     "name": "System Monitor",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931705,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -12,7 +12,7 @@
   "performanceAnalyzer": {
     "name": "Performance Analyzer",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931705,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -22,7 +22,7 @@
   "governanceEnforcer": {
     "name": "Governance Enforcer",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931705,
     "performance": {
       "responseTime": 0,
       "successRate": 1,
@@ -32,9 +32,9 @@
   "optimizationEngine": {
     "name": "Optimization Engine",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931706,
     "performance": {
-      "responseTime": 0,
+      "responseTime": 1,
       "successRate": 1,
       "lastError": null
     }
@@ -42,9 +42,9 @@
   "predictiveAnalyst": {
     "name": "Predictive Analyst",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931706,
     "performance": {
-      "responseTime": 0,
+      "responseTime": 1,
       "successRate": 1,
       "lastError": null
     }
@@ -52,9 +52,9 @@
   "cascadingAuditor": {
     "name": "Cascading Auditor",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931706,
     "performance": {
-      "responseTime": 0,
+      "responseTime": 1,
       "successRate": 1,
       "lastError": null
     }
@@ -62,9 +62,9 @@
   "executiveCommittee": {
     "name": "Executive Committee",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931706,
     "performance": {
-      "responseTime": 0,
+      "responseTime": 1,
       "successRate": 1,
       "lastError": null
     }
@@ -72,9 +72,9 @@
   "regulatoryMonitor": {
     "name": "Regulatory Monitor",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931706,
     "performance": {
-      "responseTime": 0,
+      "responseTime": 1,
       "successRate": 1,
       "lastError": null
     }
@@ -82,9 +82,9 @@
   "commandAligner": {
     "name": "Command Aligner",
     "status": "active",
-    "lastPing": 1752162881010,
+    "lastPing": 1752162931706,
     "performance": {
-      "responseTime": 0,
+      "responseTime": 1,
       "successRate": 1,
       "lastError": null
     }
