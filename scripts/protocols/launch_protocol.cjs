@@ -1421,22 +1421,54 @@ class LaunchProtocol {
 
     const memoFile = path.join(sessionsDir, `transition-memo-${new Date().toISOString().replace(/[:.]/g, '-')}.json`);
 
-    // Collect data from all phases
+    // Safely collect data from all phases with null checks
     const memo = {
       timestamp: new Date().toISOString(),
       sessionId: this.sessionId,
       summary: 'Transition Memo: Launch Protocol',
-      sessionSummary: this.contextAwarenessResults ?
+      sessionSummary: this.contextAwarenessResults && this.contextAwarenessResults.tests ?
         `Context awareness: ${this.contextAwarenessResults.tests.filter(t => t.passed).length}/${this.contextAwarenessResults.tests.length} tests passed` : 'N/A',
       auditSummary: this.layerTestResults && this.layerTestResults.overallHealth ?
         `Layer health: ${this.layerTestResults.overallHealth.averageScore || this.layerTestResults.overallHealth}/100` : 'N/A',
       nextSteps: this.recommendations || [], // Use recommendations from this protocol
       context: {
-        systemHealth: this.systemState,
-        launchReadiness: this.launchReadiness,
-        sessionDuration: this.calculateSessionDuration()
+        systemHealth: this.systemState || {},
+        launchReadiness: this.launchReadiness || {},
+        sessionDuration: this.calculateSessionDuration(),
+        fastMode: this.fastMode || false,
+        protocolVersion: this.protocolVersion
+      },
+      // Add prewrap audit notes section for efficient note requests
+      prewrapNotes: {
+        criticalIssues: [],
+        recommendations: [],
+        nextSessionPriorities: [],
+        contextPreservation: 'ready',
+        systemHealth: 'healthy'
       }
     };
+
+    // Populate prewrap notes based on available data
+    if (this.contextAwarenessResults && this.contextAwarenessResults.tests) {
+      const failedTests = this.contextAwarenessResults.tests.filter(t => !t.passed);
+      if (failedTests.length > 0) {
+        memo.prewrapNotes.criticalIssues = failedTests.map(t => `${t.name}: ${t.details || 'Failed'}`);
+      }
+    }
+
+    if (this.recommendations && this.recommendations.length > 0) {
+      memo.prewrapNotes.recommendations = this.recommendations.slice(0, 5); // Top 5 recommendations
+    }
+
+    if (this.layerTestResults && this.layerTestResults.layers) {
+      const criticalLayers = Object.entries(this.layerTestResults.layers)
+        .filter(([_, data]) => data.health === 'critical')
+        .map(([layer, _]) => layer);
+      
+      if (criticalLayers.length > 0) {
+        memo.prewrapNotes.criticalIssues.push(`Critical layers: ${criticalLayers.join(', ')}`);
+      }
+    }
 
     fs.writeFileSync(memoFile, JSON.stringify(memo, null, 2));
     console.log(`📝 Transition memo generated and logged: ${memoFile}`);
