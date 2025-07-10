@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-10T15:10:30.325Z",
+  "timestamp": "2025-07-10T15:10:33.883Z",
   "dryRun": true,
   "projectStructure": {
     "root": "/Users/home/Developer/greenlight-platform",
@@ -80,8 +80,8 @@
   ],
   "fileManagement": {
     "scanReport": {
-      "timestamp": "2025-07-10T15:10:30.267Z",
-      "scannedFiles": 196,
+      "timestamp": "2025-07-10T15:10:33.824Z",
+      "scannedFiles": 195,
       "orphans": [
         "src/architecture/holonSystem.ts",
         "src/components/CoachingToolkit/types.ts",
@@ -170,7 +170,6 @@
         "src/services/integrations/supabaseSchemaService.ts",
         "src/services/monitoring/UserMonitoringService.ts",
         "src/services/performance/performanceTrackingService.ts",
-        "src/test_orphan_manager.ts",
         "src/types/global.d.ts",
         "src/types/schemas.ts",
         "src/utils/cache/cache.ts",
