@@ -1,0 +1,129 @@
+{
+  "timestamp": "2025-07-10T16:05:45.000Z",
+  "sessionId": "launch-protocol-incident-1752163545000",
+  "incidentType": "launch_protocol_cleanup_failure",
+  "severity": "medium",
+  "summary": "Launch command failed due to stale background agents and multiple launch protocols that should have been cleaned out",
+  
+  "incidentDetails": {
+    "initialFailure": {
+      "timestamp": "2025-07-10T15:57:57.637Z",
+      "issue": "New chat failed to launch and ran anchor again",
+      "rootCause": "Background agent status was 165086s old (max: 600s), indicating agents weren't running properly",
+      "impact": "Launch command timed out and failed repeatedly"
+    },
+    
+    "resolutionSteps": [
+      {
+        "step": 1,
+        "action": "Restarted background agents",
+        "command": "node scripts/background/start_background_agents.cjs",
+        "result": "All 5 background agents started successfully",
+        "timestamp": "2025-07-10T15:58:35.000Z"
+      },
+      {
+        "step": 2,
+        "action": "Verified system health",
+        "command": "node scripts/command_center/command_coordinator.cjs health",
+        "result": "System health restored to healthy status",
+        "timestamp": "2025-07-10T16:00:48.000Z"
+      },
+      {
+        "step": 3,
+        "action": "Successfully launched system",
+        "command": "npm run anchor launch",
+        "result": "Launch completed successfully with context awareness",
+        "timestamp": "2025-07-10T16:01:13.000Z"
+      }
+    ],
+    
+    "criticalDiscovery": {
+      "issue": "Multiple launch protocols found when they should have been cleaned out",
+      "location": "scripts/protocols/",
+      "protocolsFound": [
+        "launch_protocol.cjs (74KB, 1922 lines)",
+        "launch_protocol_fixed.cjs (17KB, 491 lines)",
+        "launch_annihilate_protocol.cjs (2.5KB, 65 lines)",
+        "context_enabled_launch_protocol.cjs (2.4KB, 65 lines)"
+      ],
+      "expectedState": "Should have been consolidated into single launch protocol",
+      "impact": "Confusion about which protocol to use, potential for inconsistent behavior"
+    }
+  },
+  
+  "systemIssues": {
+    "backgroundAgents": {
+      "status": "resolved",
+      "issue": "Agents not updating status properly",
+      "solution": "Restarted agent system",
+      "prevention": "Need monitoring for agent status staleness"
+    },
+    
+    "launchProtocols": {
+      "status": "pending_cleanup",
+      "issue": "Multiple duplicate launch protocols",
+      "actionRequired": "Consolidate into single launch protocol",
+      "priority": "high"
+    },
+    
+    "prewrapAuditIssues": {
+      "testFailures": "npm test failing",
+      "lintErrors": "ESLint plugin conflicts",
+      "buildErrors": "npm run build failing",
+      "missingDirectories": ["elevate", "administrate", "elaborate"],
+      "orphanedScripts": "28 orphaned scripts identified"
+    }
+  },
+  
+  "contextAwarenessTest": {
+    "status": "successful",
+    "testsPassed": "6/6",
+    "score": "100%",
+    "details": {
+      "roadmapAwareness": "PASSED",
+      "architectureAwareness": "PASSED", 
+      "currentStateAwareness": "PASSED",
+      "holonSystemAwareness": "PASSED",
+      "recentWorkAwareness": "PASSED",
+      "priorityAwareness": "PASSED"
+    }
+  },
+  
+  "nextSteps": {
+    "immediate": [
+      "Consolidate launch protocols into single protocol",
+      "Fix ESLint plugin conflicts",
+      "Resolve build errors",
+      "Create missing required directories"
+    ],
+    "shortTerm": [
+      "Implement background agent monitoring",
+      "Clean up orphaned scripts",
+      "Fix test failures"
+    ],
+    "longTerm": [
+      "Establish protocol cleanup automation",
+      "Implement protocol versioning system",
+      "Create protocol dependency tracking"
+    ]
+  },
+  
+  "lessonsLearned": [
+    "Background agent status monitoring is critical for system health",
+    "Protocol cleanup should be automated and enforced",
+    "Multiple similar protocols create confusion and maintenance overhead",
+    "Context awareness testing is working correctly despite system issues"
+  ],
+  
+  "recommendations": [
+    "Implement automated background agent health checks",
+    "Create protocol consolidation workflow",
+    "Establish protocol naming conventions",
+    "Add protocol dependency validation",
+    "Implement protocol version control"
+  ],
+  
+  "status": "resolved_with_cleanup_needed",
+  "nextSessionReady": true,
+  "contextPreserved": true
+} 
