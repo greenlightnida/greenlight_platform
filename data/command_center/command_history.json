@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-10T14:10:31.046Z",
+  "last_updated": "2025-07-10T14:12:58.654Z",
   "session_id": "codebase_optimization_planning_1752115453000",
   "commands": [
     {
@@ -988,8 +988,11 @@
       "options": [
         "--force"
       ],
-      "status": "started",
-      "details": {}
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T13:42:20.433Z",
@@ -1009,8 +1012,11 @@
       "options": [
         "--force"
       ],
-      "status": "started",
-      "details": {}
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T13:43:45.824Z",
@@ -1108,8 +1114,11 @@
       "options": [
         "prewrap"
       ],
-      "status": "started",
-      "details": {}
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T14:04:17.431Z",
@@ -1119,7 +1128,8 @@
       ],
       "status": "completed",
       "sessionId": "anchor_1752156257404",
-      "summary": "Anchored session with 8 events and 2 next steps"
+      "summary": "Anchored session with 8 events and 2 next steps",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T14:04:54.868Z",
@@ -1138,8 +1148,11 @@
       "options": [
         "wrap"
       ],
-      "status": "started",
-      "details": {}
+      "status": "failed",
+      "details": {
+        "error": "Command timed out or was interrupted",
+        "cleanupReason": "stale_started_status"
+      }
     },
     {
       "timestamp": "2025-07-10T14:05:16.634Z",
@@ -1149,7 +1162,8 @@
       ],
       "status": "completed",
       "sessionId": "anchor_1752156316606",
-      "summary": "Anchored session with 8 events and 2 next steps"
+      "summary": "Anchored session with 8 events and 2 next steps",
+      "details": {}
     },
     {
       "timestamp": "2025-07-10T14:05:55.099Z",
@@ -1166,8 +1180,13 @@
       "timestamp": "2025-07-10T14:08:15.491Z",
       "command": "launch",
       "options": [],
-      "status": "started",
-      "details": {}
+      "status": "failed",
+      "details": {
+        "error": "Command timed out, interrupted, or process not found",
+        "cleanupReason": "stale_started_status",
+        "cleanupTimestamp": "2025-07-10T14:12:40.609Z",
+        "cleanupNote": "No PID, exceeded timeout (2 min)"
+      }
     },
     {
       "timestamp": "2025-07-10T14:08:16.565Z",
@@ -1185,8 +1204,13 @@
       "options": [
         "--force"
       ],
-      "status": "started",
-      "details": {}
+      "status": "failed",
+      "details": {
+        "error": "Command timed out, interrupted, or process not found",
+        "cleanupReason": "stale_started_status",
+        "cleanupTimestamp": "2025-07-10T14:12:40.610Z",
+        "cleanupNote": "No PID, exceeded timeout (2 min)"
+      }
     },
     {
       "timestamp": "2025-07-10T14:10:11.008Z",
@@ -1203,8 +1227,13 @@
       "timestamp": "2025-07-10T14:10:30.928Z",
       "command": "anchor",
       "options": [],
-      "status": "started",
-      "details": {}
+      "status": "failed",
+      "details": {
+        "error": "Command timed out, interrupted, or process not found",
+        "cleanupReason": "stale_started_status",
+        "cleanupTimestamp": "2025-07-10T14:12:40.610Z",
+        "cleanupNote": "No PID, exceeded timeout (2 min)"
+      }
     },
     {
       "timestamp": "2025-07-10T14:10:31.046Z",
@@ -1212,7 +1241,24 @@
       "options": [],
       "status": "completed",
       "sessionId": "anchor_1752156631023",
-      "summary": "Anchored session with 8 events and 2 next steps"
+      "summary": "Anchored session with 8 events and 2 next steps",
+      "details": {}
+    },
+    {
+      "timestamp": "2025-07-10T14:11:02.400Z",
+      "command": "anchor",
+      "options": [],
+      "status": "success",
+      "details": {
+        "executionTime": 48879
+      }
+    },
+    {
+      "timestamp": "2025-07-10T14:12:58.654Z",
+      "command": "launch",
+      "options": [],
+      "status": "started",
+      "details": {}
     }
   ],
   "next_session_commands": [
@@ -1228,8 +1274,26 @@
     "files_to_optimize": 15,
     "lines_to_optimize": 4350
   },
-  "cleanup_performed": "2025-07-10T13:45:04.708Z",
-  "original_count": 96,
-  "cleaned_count": 96,
-  "removed_count": 0
+  "cleanup_performed": "2025-07-10T14:12:40.610Z",
+  "original_count": 113,
+  "cleaned_count": 113,
+  "removed_count": 0,
+  "fixed_stale_count": 3,
+  "stale_commands_fixed": [
+    {
+      "command": "launch",
+      "timestamp": "2025-07-10T14:08:15.491Z",
+      "reason": "No PID, exceeded timeout (2 min)"
+    },
+    {
+      "command": "launch",
+      "timestamp": "2025-07-10T14:09:30.325Z",
+      "reason": "No PID, exceeded timeout (2 min)"
+    },
+    {
+      "command": "anchor",
+      "timestamp": "2025-07-10T14:10:30.928Z",
+      "reason": "No PID, exceeded timeout (2 min)"
+    }
+  ]
 }
