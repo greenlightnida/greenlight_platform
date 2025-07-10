@@ -1,0 +1,21 @@
+{
+  "name": "greenlight-platform",
+  "version": "1.0.0",
+  "type": "platform",
+  "sourcePath": "/Users/home/Developer/greenlight-platform",
+  "build": [
+    "npm run build"
+  ],
+  "deploy": [
+    "npm run deploy"
+  ],
+  "dependencies": [],
+  "healthCheck": {
+    "url": "/health",
+    "timeout": 30000
+  },
+  "metadata": {
+    "createdAt": "2025-07-09T23:53:08.792Z",
+    "createdBy": "home"
+  }
+}

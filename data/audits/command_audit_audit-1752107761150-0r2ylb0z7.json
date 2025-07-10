@@ -1,0 +1,629 @@
+{
+  "auditId": "audit-1752107761150-0r2ylb0z7",
+  "timestamp": "2025-07-10T00:36:01.184Z",
+  "summary": {
+    "commands": {
+      "issues": 4,
+      "recommendations": 0
+    },
+    "protocols": {
+      "issues": 5,
+      "recommendations": 0
+    },
+    "system": {
+      "issues": 0,
+      "recommendations": 0
+    }
+  },
+  "details": {
+    "commands": {
+      "coordinator": {
+        "file": "scripts/command_coordinator.cjs",
+        "exists": true,
+        "issues": [
+          "Missing feature: conflict detection",
+          "Missing feature: resource checking",
+          "Missing feature: error handling",
+          "Missing feature: timeout management"
+        ],
+        "recommendations": []
+      },
+      "individual": {
+        "commands": [
+          {
+            "file": "anchor_manager.cjs",
+            "exists": true,
+            "issues": [],
+            "recommendations": [],
+            "score": 25,
+            "maxScore": 25
+          },
+          {
+            "file": "checkpoint_manager.cjs",
+            "exists": true,
+            "issues": [],
+            "recommendations": [],
+            "score": 25,
+            "maxScore": 25
+          },
+          {
+            "file": "launch_protocol.cjs",
+            "exists": false,
+            "issues": [
+              "File not found"
+            ],
+            "recommendations": [
+              "Create missing file: scripts/launch_protocol.cjs"
+            ],
+            "score": 0,
+            "maxScore": 25
+          },
+          {
+            "file": "wrap_protocol.cjs",
+            "exists": false,
+            "issues": [
+              "File not found"
+            ],
+            "recommendations": [
+              "Create missing file: scripts/wrap_protocol.cjs"
+            ],
+            "score": 0,
+            "maxScore": 25
+          }
+        ],
+        "issues": [],
+        "recommendations": [],
+        "score": 50,
+        "maxScore": 100
+      },
+      "output": {
+        "formatCompliance": {},
+        "contentQuality": {},
+        "issues": [],
+        "recommendations": []
+      },
+      "dependencies": {
+        "conflicts": [
+          "manager-assessment.cjs: Potential path conflicts detected",
+          "milestone_merger.cjs: Potential path conflicts detected",
+          "test_session_tracking.cjs: Potential path conflicts detected"
+        ],
+        "missing": [],
+        "recommendations": []
+      }
+    },
+    "protocols": {
+      "directory": {
+        "exists": true,
+        "files": [
+          "anticipatory_integration.cjs",
+          "anticipatory_learning_system.cjs",
+          "automated_command_cycle_test.cjs",
+          "background_process_status.cjs",
+          "boundary_enforcement_manager.cjs",
+          "boundary_monitor.cjs",
+          "client_onboarding_manager.cjs",
+          "comprehensive_governance_test.cjs",
+          "constituency_balancing_system.cjs",
+          "context_enabled_launch_protocol.cjs",
+          "context_enabled_pre_wrap_protocol.cjs",
+          "context_enabled_wrap_protocol.cjs",
+          "context_extraction_api.cjs",
+          "context_integration.cjs",
+          "continuous_improvement_manager.cjs",
+          "council_chair_parliamentarian_oversight.cjs",
+          "council_command.cjs",
+          "council_committee_implementation.cjs",
+          "cross_functional_systems_audit.cjs",
+          "custodian_protocol.cjs",
+          "custodian_reconciliation_module.cjs",
+          "database_manager.cjs",
+          "design-system-management.cjs",
+          "documentation_health_check.cjs",
+          "end_of_chat_protocol.cjs",
+          "end_of_chat_protocol.js",
+          "enhanced-update-protocols.cjs",
+          "enhanced_prewrap_audit_protocol.cjs",
+          "environment_variable_governance.cjs",
+          "error_resolution_continuity_protocol.cjs",
+          "extract_session_communication.js",
+          "governance_synthesis_and_integration.cjs",
+          "holon_council_representation_system.cjs",
+          "intelligent_docket_generator.cjs",
+          "launch_annihilate_protocol.cjs",
+          "launch_protocol.cjs",
+          "manager_empowerment_system.cjs",
+          "onboarding_criteria_validator.cjs",
+          "performance_manager_session_test.cjs",
+          "planning_criteria_protocol.ts",
+          "pre_execution_safety.cjs",
+          "pre_wrap_audit_protocol.cjs",
+          "prevention_system.cjs",
+          "protocol_monitor.cjs",
+          "protocol_validation.cjs",
+          "roadmap_actuals_integration.cjs",
+          "session_optimization_collaboration.cjs",
+          "session_optimization_study.cjs",
+          "shared_governance_implementation.cjs",
+          "system_wide_assessment.cjs",
+          "test_error_manager_integration.cjs",
+          "update_protocols.cjs",
+          "wrap_annihilate_protocol.cjs",
+          "wrap_protocol.cjs"
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "manager": {
+        "file": "src/core/holons/protocols/ProtocolManager.ts",
+        "exists": true,
+        "issues": [
+          "Missing feature: protocol registration",
+          "Missing feature: protocol validation",
+          "Missing feature: protocol coordination"
+        ],
+        "recommendations": []
+      },
+      "individual": {
+        "protocols": [
+          {
+            "file": "anticipatory_integration.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "anticipatory_learning_system.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "automated_command_cycle_test.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "background_process_status.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "boundary_enforcement_manager.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "boundary_monitor.cjs",
+            "issues": [
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "client_onboarding_manager.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "comprehensive_governance_test.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected",
+              "Missing error handling"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "constituency_balancing_system.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "context_enabled_launch_protocol.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected",
+              "Missing error handling"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "context_enabled_pre_wrap_protocol.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "context_enabled_wrap_protocol.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "context_extraction_api.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "context_integration.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "continuous_improvement_manager.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "council_chair_parliamentarian_oversight.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "Missing error handling"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "council_command.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "council_committee_implementation.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "cross_functional_systems_audit.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "custodian_protocol.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "custodian_reconciliation_module.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "database_manager.cjs",
+            "issues": [
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "design-system-management.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "documentation_health_check.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "end_of_chat_protocol.cjs",
+            "issues": [
+              "No clear structure detected",
+              "Insufficient documentation",
+              "No phase structure detected",
+              "Missing error handling",
+              "No output formatting"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "enhanced-update-protocols.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "enhanced_prewrap_audit_protocol.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "environment_variable_governance.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "error_resolution_continuity_protocol.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "governance_synthesis_and_integration.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "Missing error handling"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "holon_council_representation_system.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "intelligent_docket_generator.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "launch_annihilate_protocol.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected",
+              "Missing error handling"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "launch_protocol.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "manager_empowerment_system.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "onboarding_criteria_validator.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "performance_manager_session_test.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "pre_execution_safety.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "pre_wrap_audit_protocol.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "prevention_system.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "protocol_monitor.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "protocol_validation.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "roadmap_actuals_integration.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "session_optimization_collaboration.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected",
+              "Missing error handling"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "session_optimization_study.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "Missing error handling"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "shared_governance_implementation.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "system_wide_assessment.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "test_error_manager_integration.cjs",
+            "issues": [
+              "Insufficient documentation",
+              "No phase structure detected"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "update_protocols.cjs",
+            "issues": [],
+            "recommendations": []
+          },
+          {
+            "file": "wrap_annihilate_protocol.cjs",
+            "issues": [
+              "Insufficient documentation"
+            ],
+            "recommendations": []
+          },
+          {
+            "file": "wrap_protocol.cjs",
+            "issues": [],
+            "recommendations": []
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "integration": {
+        "coordination": {},
+        "dependencies": {},
+        "issues": [
+          "context_enabled_launch_protocol.cjs: Potential dependency path issues",
+          "launch_annihilate_protocol.cjs: Potential dependency path issues"
+        ],
+        "recommendations": []
+      }
+    },
+    "system": {
+      "coordination": {},
+      "conflicts": [
+        "scripts/anchor_manager.cjs: Missing coordination mechanisms",
+        "scripts/checkpoint_manager.cjs: Missing coordination mechanisms"
+      ],
+      "recommendations": []
+    },
+    "recommendations": [],
+    "optimizations": [],
+    "regulations": []
+  },
+  "recommendations": [
+    "Implement conflict detection using checkForConflicts method",
+    "Add resource checking with checkSystemResources method",
+    "Enhance error handling with try-catch blocks and process.exit(1)",
+    "Add timeout management with setTimeout and process termination",
+    "Implement command history tracking with recordCommandExecution",
+    "Create missing file: launch_protocol.cjs",
+    "Create missing file: wrap_protocol.cjs",
+    "Add PURPOSE and USAGE documentation to anticipatory_integration.cjs",
+    "Add PURPOSE and USAGE documentation to anticipatory_learning_system.cjs",
+    "Add PURPOSE and USAGE documentation to automated_command_cycle_test.cjs",
+    "Add phase structure to automated_command_cycle_test.cjs",
+    "Add PURPOSE and USAGE documentation to background_process_status.cjs",
+    "Add phase structure to boundary_monitor.cjs",
+    "Add PURPOSE and USAGE documentation to comprehensive_governance_test.cjs",
+    "Add phase structure to comprehensive_governance_test.cjs",
+    "Add try-catch error handling to comprehensive_governance_test.cjs",
+    "Add PURPOSE and USAGE documentation to constituency_balancing_system.cjs",
+    "Add PURPOSE and USAGE documentation to context_enabled_launch_protocol.cjs",
+    "Add phase structure to context_enabled_launch_protocol.cjs",
+    "Add try-catch error handling to context_enabled_launch_protocol.cjs",
+    "Add PURPOSE and USAGE documentation to context_extraction_api.cjs",
+    "Add phase structure to context_extraction_api.cjs",
+    "Add PURPOSE and USAGE documentation to context_integration.cjs",
+    "Add PURPOSE and USAGE documentation to continuous_improvement_manager.cjs",
+    "Add PURPOSE and USAGE documentation to council_chair_parliamentarian_oversight.cjs",
+    "Add try-catch error handling to council_chair_parliamentarian_oversight.cjs",
+    "Add PURPOSE and USAGE documentation to council_command.cjs",
+    "Add PURPOSE and USAGE documentation to council_committee_implementation.cjs",
+    "Add PURPOSE and USAGE documentation to cross_functional_systems_audit.cjs",
+    "Add PURPOSE and USAGE documentation to custodian_protocol.cjs",
+    "Add phase structure to custodian_protocol.cjs",
+    "Add PURPOSE and USAGE documentation to custodian_reconciliation_module.cjs",
+    "Add phase structure to database_manager.cjs",
+    "Add PURPOSE and USAGE documentation to documentation_health_check.cjs",
+    "Add PURPOSE and USAGE documentation to end_of_chat_protocol.cjs",
+    "Add phase structure to end_of_chat_protocol.cjs",
+    "Add try-catch error handling to end_of_chat_protocol.cjs",
+    "Add console.log statements to end_of_chat_protocol.cjs",
+    "Add PURPOSE and USAGE documentation to enhanced_prewrap_audit_protocol.cjs",
+    "Add PURPOSE and USAGE documentation to environment_variable_governance.cjs",
+    "Add phase structure to environment_variable_governance.cjs",
+    "Add PURPOSE and USAGE documentation to error_resolution_continuity_protocol.cjs",
+    "Add phase structure to error_resolution_continuity_protocol.cjs",
+    "Add PURPOSE and USAGE documentation to governance_synthesis_and_integration.cjs",
+    "Add try-catch error handling to governance_synthesis_and_integration.cjs",
+    "Add PURPOSE and USAGE documentation to holon_council_representation_system.cjs",
+    "Add PURPOSE and USAGE documentation to intelligent_docket_generator.cjs",
+    "Add PURPOSE and USAGE documentation to launch_annihilate_protocol.cjs",
+    "Add phase structure to launch_annihilate_protocol.cjs",
+    "Add try-catch error handling to launch_annihilate_protocol.cjs",
+    "Add PURPOSE and USAGE documentation to manager_empowerment_system.cjs",
+    "Add PURPOSE and USAGE documentation to performance_manager_session_test.cjs",
+    "Add PURPOSE and USAGE documentation to pre_execution_safety.cjs",
+    "Add PURPOSE and USAGE documentation to pre_wrap_audit_protocol.cjs",
+    "Add phase structure to pre_wrap_audit_protocol.cjs",
+    "Add PURPOSE and USAGE documentation to prevention_system.cjs",
+    "Add PURPOSE and USAGE documentation to protocol_monitor.cjs",
+    "Add phase structure to protocol_monitor.cjs",
+    "Add PURPOSE and USAGE documentation to protocol_validation.cjs",
+    "Add PURPOSE and USAGE documentation to roadmap_actuals_integration.cjs",
+    "Add PURPOSE and USAGE documentation to session_optimization_collaboration.cjs",
+    "Add phase structure to session_optimization_collaboration.cjs",
+    "Add try-catch error handling to session_optimization_collaboration.cjs",
+    "Add PURPOSE and USAGE documentation to session_optimization_study.cjs",
+    "Add try-catch error handling to session_optimization_study.cjs",
+    "Add PURPOSE and USAGE documentation to shared_governance_implementation.cjs",
+    "Add PURPOSE and USAGE documentation to system_wide_assessment.cjs",
+    "Add PURPOSE and USAGE documentation to test_error_manager_integration.cjs",
+    "Add phase structure to test_error_manager_integration.cjs",
+    "Add PURPOSE and USAGE documentation to wrap_annihilate_protocol.cjs",
+    "Resolve path conflicts in manager-assessment.cjs, milestone_merger.cjs, test_session_tracking.cjs"
+  ],
+  "optimizations": []
+}

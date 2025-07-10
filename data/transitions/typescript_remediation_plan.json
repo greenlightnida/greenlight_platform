@@ -1,0 +1,127 @@
+{
+  "id": "typescript-remediation-plan-2025-07-10",
+  "timestamp": "2025-07-10T00:05:00.000Z",
+  "context": "typescript-remediation",
+  "type": "transition-memo",
+  "status": "active",
+  "priority": "critical",
+  "title": "Comprehensive TypeScript Error Remediation Plan",
+  "description": "Systematic approach to fix TypeScript compilation errors and restore build functionality",
+  
+  "current_state": {
+    "total_errors": 197,
+    "affected_files": 7,
+    "compilation_status": "failed",
+    "launch_blocked": true,
+    "error_types": {
+      "syntax_errors": "majority",
+      "type_errors": "masked_by_syntax",
+      "structural_issues": "present"
+    }
+  },
+  
+  "prioritized_files": [
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "priority": "critical",
+      "error_count": 167,
+      "error_types": ["syntax", "declaration", "expression"],
+      "business_impact": "high"
+    },
+    {
+      "file": "src/core/operations/ServerGovernor.ts", 
+      "priority": "critical",
+      "error_count": 4,
+      "error_types": ["declaration"],
+      "business_impact": "high"
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "priority": "high",
+      "error_count": 7,
+      "error_types": ["declaration"],
+      "business_impact": "medium"
+    },
+    {
+      "file": "src/dashboards/roadmap/RoadmapDashboard.tsx",
+      "priority": "high", 
+      "error_count": 1,
+      "error_types": ["declaration"],
+      "business_impact": "medium"
+    },
+    {
+      "file": "src/core/session-management/SessionsManager.tsx",
+      "priority": "medium",
+      "error_count": 1,
+      "error_types": ["declaration"],
+      "business_impact": "medium"
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "priority": "medium",
+      "error_count": 9,
+      "error_types": ["syntax"],
+      "business_impact": "low"
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "priority": "low",
+      "error_count": 8,
+      "error_types": ["syntax"],
+      "business_impact": "low"
+    }
+  ],
+  
+  "root_causes": [
+    "incomplete_merges_or_refactors",
+    "abandoned_code_changes", 
+    "lack_of_linting_enforcement",
+    "large_uncommitted_changes",
+    "missing_ci_type_checks"
+  ],
+  
+  "remediation_approach": {
+    "phase_1": "immediate_triage",
+    "phase_2": "file_by_file_repair", 
+    "phase_3": "project_wide_improvements",
+    "methodology": "syntax_fixes_first_then_types",
+    "testing": "incremental_compilation_checks"
+  },
+  
+  "success_metrics": [
+    "reduce_error_count_incrementally",
+    "restore_typescript_compilation",
+    "enable_successful_launch",
+    "prevent_future_error_accumulation"
+  ],
+  
+  "council_consultation": {
+    "requested": true,
+    "pending_feedback": [
+      "clarification_of_intended_logic",
+      "recent_design_documentation", 
+      "identification_of_incomplete_refactors",
+      "prioritization_of_critical_files"
+    ]
+  },
+  
+  "next_steps": [
+    "begin_with_ServerManager.ts_analysis",
+    "fix_syntax_errors_first",
+    "re_run_compiler_after_each_file",
+    "document_all_fixes_and_remaining_issues"
+  ],
+  
+  "estimated_effort": {
+    "total_hours": "4-8",
+    "files_per_round": "1-2",
+    "rounds_needed": "4-7"
+  },
+  
+  "risk_mitigation": [
+    "exclude_broken_files_temporarily",
+    "maintain_backup_of_original_files",
+    "test_after_each_fix",
+    "document_all_changes"
+  ]
+} 

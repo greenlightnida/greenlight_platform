@@ -20,6 +20,7 @@ class ReferenceManager {
 
   /**
    * Add a new reference entry
+   * @param entry
    */
   addReference(entry: Omit<ReferenceEntry, 'id' | 'lastModified' | 'referencedBy'>): string {
     const id = this.generateId(entry.path);
@@ -36,6 +37,7 @@ class ReferenceManager {
 
   /**
    * Get a reference entry by ID
+   * @param id
    */
   getReference(id: string): ReferenceEntry | undefined {
     return this.references.get(id);
@@ -50,6 +52,7 @@ class ReferenceManager {
 
   /**
    * Get references by type
+   * @param type
    */
   getReferencesByType(type: ReferenceEntry['type']): ReferenceEntry[] {
     return Array.from(this.references.values()).filter(ref => ref.type === type);
@@ -57,6 +60,7 @@ class ReferenceManager {
 
   /**
    * Get references by tag
+   * @param tag
    */
   getReferencesByTag(tag: string): ReferenceEntry[] {
     return Array.from(this.references.values()).filter(ref => ref.tags.includes(tag));
@@ -64,6 +68,8 @@ class ReferenceManager {
 
   /**
    * Add a reference relationship
+   * @param fromId
+   * @param toId
    */
   addReferenceRelationship(fromId: string, toId: string): boolean {
     const fromRef = this.references.get(fromId);
@@ -88,6 +94,8 @@ class ReferenceManager {
 
   /**
    * Remove a reference relationship
+   * @param fromId
+   * @param toId
    */
   removeReferenceRelationship(fromId: string, toId: string): boolean {
     const fromRef = this.references.get(fromId);
@@ -108,6 +116,7 @@ class ReferenceManager {
 
   /**
    * Get all references that reference a specific entry
+   * @param id
    */
   getReferencedBy(id: string): ReferenceEntry[] {
     const entry = this.references.get(id);
@@ -120,6 +129,7 @@ class ReferenceManager {
 
   /**
    * Get all references that are referenced by a specific entry
+   * @param id
    */
   getReferences(id: string): ReferenceEntry[] {
     const entry = this.references.get(id);
@@ -132,6 +142,8 @@ class ReferenceManager {
 
   /**
    * Update a reference entry
+   * @param id
+   * @param updates
    */
   updateReference(id: string, updates: Partial<Omit<ReferenceEntry, 'id' | 'lastModified'>>): boolean {
     const entry = this.references.get(id);
@@ -149,6 +161,7 @@ class ReferenceManager {
 
   /**
    * Remove a reference entry
+   * @param id
    */
   removeReference(id: string): boolean {
     const entry = this.references.get(id);
@@ -168,6 +181,7 @@ class ReferenceManager {
 
   /**
    * Generate a unique ID for a reference
+   * @param path
    */
   private generateId(path: string): string {
     const timestamp = Date.now();
@@ -177,6 +191,7 @@ class ReferenceManager {
 
   /**
    * Simple hash function for generating IDs
+   * @param str
    */
   private simpleHash(str: string): string {
     let hash = 0;
@@ -197,6 +212,7 @@ class ReferenceManager {
 
   /**
    * Import references from JSON
+   * @param json
    */
   importFromJSON(json: string): void {
     try {

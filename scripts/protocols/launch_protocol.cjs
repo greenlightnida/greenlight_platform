@@ -18,6 +18,7 @@
  * - Context preservation verification
  * - Launch readiness assessment
  * - Layer-specific improvement recommendations
+ * - Coordination with anchor command to prevent conflicts
  */
 
 const fs = require('fs');
@@ -36,6 +37,30 @@ class LaunchProtocol {
     this.layerTestResults = {};
     this.sessionMetadata = this.generateSessionMetadata();
     this.sessionStartTime = Date.now();
+    
+    // Coordination with anchor command
+    this.isAnchorRunning = this.checkAnchorStatus();
+    this.coordinationMode = process.env.COMMAND_COORDINATOR === 'true';
+  }
+
+  checkAnchorStatus() {
+    // Check if anchor command is currently running
+    try {
+      const commandHistoryPath = path.join(this.projectRoot, 'data/command_center/command_history.json');
+      if (fs.existsSync(commandHistoryPath)) {
+        const history = JSON.parse(fs.readFileSync(commandHistoryPath, 'utf8'));
+        const recentCommands = history.commands?.slice(-5) || [];
+        const anchorRunning = recentCommands.some(cmd => 
+          cmd.command === 'anchor' && 
+          cmd.status === 'started' && 
+          new Date(cmd.timestamp) > new Date(Date.now() - 60000) // Within last minute
+        );
+        return anchorRunning;
+      }
+    } catch (error) {
+      // If we can't check, assume no conflict
+    }
+    return false;
   }
 
   generateEnhancedSessionId() {
@@ -43,7 +68,7 @@ class LaunchProtocol {
     const random = Math.random().toString(36).substr(2, 9);
     const date = new Date().toISOString().split('T')[0].replace(/-/g, '');
     const time = new Date().toISOString().split('T')[1].split('.')[0].replace(/:/g, '');
-    return `launch-${date}-${time}-${timestamp}-${random}`;
+    return `launch-session-${date}-${time}-${timestamp}-${random}`;
   }
 
   generateSessionMetadata() {
@@ -62,7 +87,9 @@ class LaunchProtocol {
       hostname: require('os').hostname(),
       platform: process.platform,
       nodeVersion: process.version,
-      cwd: this.projectRoot
+      cwd: this.projectRoot,
+      coordinationMode: this.coordinationMode,
+      anchorConflict: this.isAnchorRunning
     };
   }
 
@@ -83,6 +110,15 @@ class LaunchProtocol {
     console.log('====================================');
     console.log(`Session ID: ${this.sessionId}`);
     console.log(`Protocol Version: ${this.protocolVersion}`);
+    
+    if (this.isAnchorRunning) {
+      console.log('⚠️  Anchor command detected - coordinating execution');
+    }
+    
+    if (this.coordinationMode) {
+      console.log('🔄 Running in coordination mode');
+    }
+    
     console.log('');
 
     try {
@@ -1093,11 +1129,12 @@ class LaunchProtocol {
       ]
     };
 
-    const reportPath = path.join(this.projectRoot, 'LAUNCH_REPORT.json');
+    // Use unique file names to avoid conflicts with anchor command
+    const reportPath = path.join(this.projectRoot, 'LAUNCH_SESSION_REPORT.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
     
     // Also generate a separate roadmap anchor file for easy access
-    const anchorPath = path.join(this.projectRoot, 'ROADMAP_ANCHOR.json');
+    const anchorPath = path.join(this.projectRoot, 'LAUNCH_ROADMAP_ANCHOR.json');
     fs.writeFileSync(anchorPath, JSON.stringify(roadmapAnchor, null, 2));
     
     console.log(`✅ Launch report generated: ${reportPath}`);
@@ -1312,10 +1349,10 @@ class LaunchProtocol {
         `Context awareness: ${this.contextAwarenessResults.tests.filter(t => t.passed).length}/${this.contextAwarenessResults.tests.length} tests passed` : 'N/A',
       auditSummary: this.layerTestResults && this.layerTestResults.overallHealth ? 
         `Layer health: ${this.layerTestResults.overallHealth.averageScore || this.layerTestResults.overallHealth}/100` : 'N/A',
-      nextSteps: this.roadmapPriorities || [],
+      nextSteps: this.recommendations || [], // Use recommendations from this protocol
       context: {
-        systemHealth: this.systemStateResults || {},
-        launchReadiness: this.launchReadinessResults || {},
+        systemHealth: this.systemState,
+        launchReadiness: this.launchReadiness,
         sessionDuration: this.calculateSessionDuration()
       }
     };

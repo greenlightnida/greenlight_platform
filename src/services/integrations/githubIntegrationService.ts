@@ -36,6 +36,7 @@ class GitHubIntegrationService {
 
   /**
    * Initialize the GitHub integration service
+   * @param token
    */
   async initialize(token: string): Promise<void> {
     this.config.token = token;
@@ -44,6 +45,7 @@ class GitHubIntegrationService {
 
   /**
    * Search for issues and pull requests
+   * @param query
    */
   async searchIssues(query: string): Promise<GitHubIssue[]> {
     try {
@@ -71,6 +73,8 @@ class GitHubIntegrationService {
 
   /**
    * Get repository information
+   * @param owner
+   * @param repo
    */
   async getRepository(owner: string, repo: string): Promise<any> {
     try {
@@ -97,6 +101,7 @@ class GitHubIntegrationService {
 
   /**
    * Update service configuration
+   * @param config
    */
   updateConfig(config: Partial<GitHubConfig>): void {
     this.config = { ...this.config, ...config };

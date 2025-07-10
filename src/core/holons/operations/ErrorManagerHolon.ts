@@ -1,8 +1,9 @@
-import { BaseHolon } from '../../architecture/holonSystem';
+import { execSync } from 'child_process';
 import { EventEmitter } from 'events';
 import * as fs from 'fs';
 import * as path from 'path';
-import { execSync } from 'child_process';
+
+import { BaseHolon } from '../../architecture/holonSystem';
 
 export interface ErrorEntry {
   id: string;

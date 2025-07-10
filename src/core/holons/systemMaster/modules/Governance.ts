@@ -127,12 +127,12 @@ export class Governance {
 
   public enforcePolicy(_policyId: string, _target: any): boolean {
     const _policy = this.policies.get(policyId);
-    if (!policy || !policy.enabled) {
+    if (!policy?.enabled) {
       return true;
     }
 
     const _violations: string[] = [];
-    let _compliant = true;
+    const _compliant = true;
 
     policy.rules.forEach(rule => {
       if (!rule.check(target)) {
@@ -151,7 +151,7 @@ export class Governance {
     this.policies.forEach(policy => {
       if (policy.enabled) {
         const _violations: string[] = [];
-        let _compliant = true;
+        const _compliant = true;
 
         policy.rules.forEach(rule => {
           if (!rule.check(target)) {

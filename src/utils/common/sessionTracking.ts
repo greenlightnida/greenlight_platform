@@ -34,6 +34,12 @@ export class SessionTracker {
 
   /**
    * Create a new session with enhanced tracking
+   * @param type
+   * @param label
+   * @param category
+   * @param priority
+   * @param tags
+   * @param metadata
    */
   createSession(
     type: string,
@@ -72,6 +78,7 @@ export class SessionTracker {
 
   /**
    * Create a launch session
+   * @param metadata
    */
   createLaunchSession(metadata: Record<string, unknown> = {}): SessionInfo {
     const sessionId = generateLaunchSessionId();
@@ -104,6 +111,8 @@ export class SessionTracker {
 
   /**
    * Create a work session
+   * @param context
+   * @param metadata
    */
   createWorkSession(context: string, metadata: Record<string, unknown> = {}): SessionInfo {
     const sessionId = generateWorkSessionId(context);
@@ -136,6 +145,7 @@ export class SessionTracker {
 
   /**
    * Create an audit session
+   * @param metadata
    */
   createAuditSession(metadata: Record<string, unknown> = {}): SessionInfo {
     const sessionId = generateAuditSessionId();
@@ -167,6 +177,8 @@ export class SessionTracker {
 
   /**
    * Complete a session
+   * @param sessionId
+   * @param status
    */
   completeSession(sessionId: string, status: 'completed' | 'failed' | 'cancelled' = 'completed'): SessionInfo | null {
     const session = this.sessions.get(sessionId);
@@ -182,6 +194,7 @@ export class SessionTracker {
 
   /**
    * Get session by ID
+   * @param sessionId
    */
   getSession(sessionId: string): SessionInfo | undefined {
     return this.sessions.get(sessionId);
@@ -203,6 +216,7 @@ export class SessionTracker {
 
   /**
    * Get sessions by type
+   * @param type
    */
   getSessionsByType(type: string): SessionInfo[] {
     return Array.from(this.sessions.values()).filter(s => s.type === type);
@@ -210,6 +224,7 @@ export class SessionTracker {
 
   /**
    * Get sessions by category
+   * @param category
    */
   getSessionsByCategory(category: string): SessionInfo[] {
     return Array.from(this.sessions.values()).filter(s => s.category === category);
@@ -250,6 +265,7 @@ export class SessionTracker {
 
   /**
    * Validate session ID
+   * @param sessionId
    */
   validateSessionId(sessionId: string): boolean {
     return validateSessionId(sessionId);
@@ -257,6 +273,7 @@ export class SessionTracker {
 
   /**
    * Extract session type from ID
+   * @param sessionId
    */
   extractSessionType(sessionId: string): string {
     return extractSessionType(sessionId);
@@ -264,6 +281,7 @@ export class SessionTracker {
 
   /**
    * Extract timestamp from session ID
+   * @param sessionId
    */
   extractSessionTimestamp(sessionId: string): number | null {
     return extractSessionTimestamp(sessionId);
@@ -271,6 +289,8 @@ export class SessionTracker {
 
   /**
    * Calculate duration between two dates
+   * @param startTime
+   * @param endTime
    */
   private calculateDuration(startTime: Date, endTime: Date): string {
     const duration = endTime.getTime() - startTime.getTime();
@@ -279,6 +299,7 @@ export class SessionTracker {
 
   /**
    * Format duration in milliseconds to human readable string
+   * @param ms
    */
   private formatDuration(ms: number): string {
     const seconds = Math.floor(ms / 1000);
@@ -298,6 +319,7 @@ export class SessionTracker {
 
   /**
    * Parse duration string back to milliseconds
+   * @param duration
    */
   private parseDuration(duration: string): number {
     const parts = duration.split(' ');

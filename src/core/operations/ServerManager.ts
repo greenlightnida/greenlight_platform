@@ -1,17 +1,17 @@
-#!/usr/bin/env tsx
+#!/usr/bin/env tsx;
 
-/**
- * Server Manager - Operations Core Component
- * 
- * _PURPOSE: Manage server lifecycle, monitoring, and governance
- * - Server provisioning and deployment
- * - Health monitoring and alerting
- * - Resource management and scaling
- * - Security and compliance monitoring
- * - Lifecycle management and maintenance
- * 
+/**;
+ * Server Manager - Operations Core Component;
+ * ;
+ * _PURPOSE: Manage server lifecycle, monitoring, and governance;
+ * - Server provisioning and deployment;
+ * - Health monitoring and alerting;
+ * - Resource management and scaling;
+ * - Security and compliance monitoring;
+ * - Lifecycle management and maintenance;
+ * ;
  * _USAGE: import { ServerManager } from './core/operations/ServerManager';
- */
+ */;
 
 import fs from 'fs';
 import path from 'path';
@@ -132,18 +132,18 @@ export class ServerManager extends EventEmitter {
 
   private async initializeServerManager(): Promise<void> {
     try {
-      // Create server configuration directory
+      // Create server configuration directory;
       if (!fs.existsSync(this.configPath)) {
         fs.mkdirSync(this.configPath, { recursive: true });
       }
 
-      // Load existing server configurations
+      // Load existing server configurations;
       await this.loadServerConfigurations();
 
-      // Start monitoring
+      // Start monitoring;
       this.startMonitoring();
 
-      // Emit initialization event
+      // Emit initialization event;
       this.emit('initialized', {
         _timestamp: new Date(),
         _serversCount: this.servers.size,
@@ -158,7 +158,7 @@ export class ServerManager extends EventEmitter {
     }
   }
 
-  // Server Lifecycle Management
+  // Server Lifecycle Management;
   public async provisionServer(_config: Omit<ServerConfig, 'id' | 'createdAt' | 'updatedAt'>): Promise<ServerConfig> {
     const _serverId = this.generateServerId(_config.type, _config.name);
     const _server: ServerConfig = {
@@ -169,7 +169,7 @@ export class ServerManager extends EventEmitter {
     };
 
     try {
-      // Create lifecycle entry
+      // Create lifecycle entry;
       const _lifecycle: ServerLifecycle = {
         phase: 'provisioning',
         status: 'in_progress',
@@ -180,19 +180,19 @@ export class ServerManager extends EventEmitter {
       this._lifecycles.set(_serverId, [_lifecycle]);
       this.emit('_server: provisioning', { serverId: _serverId, _config: _server });
 
-      // Simulate server provisioning (replace with actual provisioning logic)
+      // Simulate server provisioning (replace with actual provisioning logic);
       await this.simulateProvisioning(_server);
 
-      // Update lifecycle
+      // Update lifecycle;
       _lifecycle.status = 'completed';
       _lifecycle.endTime = new Date();
       _server.status = 'running';
 
-      // Save server configuration
+      // Save server configuration;
       this.servers.set(_serverId, _server);
       await this.saveServerConfiguration(_serverId, _server);
 
-      // Initialize monitoring
+      // Initialize monitoring;
       this.initializeServerMonitoring(_server);
 
       this.emit('_server: provisioned', { serverId: _serverId, server: _server });
@@ -200,165 +200,166 @@ export class ServerManager extends EventEmitter {
 
       return _server;
     } catch (error) {
-      const _lifecycle = this.lifecycles.get(serverId)?.[0];
-      if (lifecycle) {
-        lifecycle.status = 'failed';
-        lifecycle.endTime = new Date();
-        lifecycle.metadata.error = error instanceof Error ? error.message : String(error);
+      const _lifecycle = this._lifecycles.get(_serverId)?.[0];
+      if (_lifecycle) {
+        _lifecycle.status = 'failed';
+        _lifecycle.endTime = new Date();
+        _lifecycle.metadata.error = error instanceof Error ? error.message : String(error);
       }
 
-      this.emit('_server: provisioning_failed', { serverId, error });
+      this.emit('_server: provisioning_failed', { serverId: _serverId, error });
       throw error;
     }
   }
 
   public async deployServer(_serverId: string, _deploymentConfig: any): Promise<void> {
-    const _server = this.servers.get(serverId);
-    if (!server) {
-      throw new Error(`Server not _found: ${serverId}`);
+    const _server = this.servers.get(_serverId);
+    if (!_server) {
+      throw new Error(`Server not _found: ${_serverId}`);
     }
 
     const _lifecycle: ServerLifecycle = {
       phase: 'deploying',
-      _status: 'in_progress',
-      _startTime: new Date(),
-      _metadata: { deploymentConfig }
+      status: 'in_progress',
+      startTime: new Date(),
+      metadata: { deploymentConfig: _deploymentConfig }
     };
 
-    this.lifecycles.get(serverId)?.push(lifecycle);
-    this.emit('_server: deploying', { serverId, deploymentConfig });
+    this._lifecycles.get(_serverId)?.push(_lifecycle);
+    this.emit('_server: deploying', { serverId: _serverId, deploymentConfig: _deploymentConfig });
 
     try {
       // Simulate deployment (replace with actual deployment logic)
-      await this.simulateDeployment(server, deploymentConfig);
+      await this.simulateDeployment(_server, _deploymentConfig);
 
-      lifecycle.status = 'completed';
-      lifecycle.endTime = new Date();
-      server.status = 'running';
-      server.updatedAt = new Date();
+      _lifecycle.status = 'completed';
+      _lifecycle.endTime = new Date();
+      _server.status = 'running';
+      _server.updatedAt = new Date();
 
-      await this.saveServerConfiguration(serverId, server);
-      this.emit('_server: deployed', { serverId, server });
+      await this.saveServerConfiguration(_serverId, _server);
+      this.emit('_server: deployed', { serverId: _serverId, server: _server });
     } catch (error) {
-      lifecycle.status = 'failed';
-      lifecycle.endTime = new Date();
-      lifecycle.metadata.error = error instanceof Error ? error.message : String(error);
+      _lifecycle.status = 'failed';
+      _lifecycle.endTime = new Date();
+      _lifecycle.metadata.error = error instanceof Error ? error.message : String(error);
 
-      this.emit('_server: deployment_failed', { serverId, error });
+      this.emit('_server: deployment_failed', { serverId: _serverId, error });
       throw error;
     }
   }
 
   public async stopServer(_serverId: string): Promise<void> {
-    const _server = this.servers.get(serverId);
-    if (!server) {
-      throw new Error(`Server not _found: ${serverId}`);
+    const _server = this.servers.get(_serverId);
+    if (!_server) {
+      throw new Error(`Server not _found: ${_serverId}`);
     }
 
-    server.status = 'stopped';
-    server.updatedAt = new Date();
+    _server.status = 'stopped';
+    _server.updatedAt = new Date();
 
-    await this.saveServerConfiguration(serverId, server);
-    this.emit('_server: stopped', { serverId, server });
+    await this.saveServerConfiguration(_serverId, _server);
+    this.emit('_server: stopped', { serverId: _serverId, server: _server });
   }
 
   public async startServer(_serverId: string): Promise<void> {
-    const _server = this.servers.get(serverId);
-    if (!server) {
-      throw new Error(`Server not _found: ${serverId}`);
+    const _server = this.servers.get(_serverId);
+    if (!_server) {
+      throw new Error(`Server not _found: ${_serverId}`);
     }
 
-    server.status = 'running';
-    server.updatedAt = new Date();
+    _server.status = 'running';
+    _server.updatedAt = new Date();
 
-    await this.saveServerConfiguration(serverId, server);
-    this.emit('_server: started', { serverId, server });
+    await this.saveServerConfiguration(_serverId, _server);
+    this.emit('_server: started', { serverId: _serverId, server: _server });
   }
 
   public async scaleServer(_serverId: string, _scaleConfig: any): Promise<void> {
-    const _server = this.servers.get(serverId);
-    if (!server) {
-      throw new Error(`Server not _found: ${serverId}`);
+    const _server = this.servers.get(_serverId);
+    if (!_server) {
+      throw new Error(`Server not _found: ${_serverId}`);
     }
 
     const _lifecycle: ServerLifecycle = {
       phase: 'scaling',
-      _status: 'in_progress',
-      _startTime: new Date(),
-      _metadata: { scaleConfig }
+      status: 'in_progress',
+      startTime: new Date(),
+      metadata: { scaleConfig: _scaleConfig }
     };
 
-    this.lifecycles.get(serverId)?.push(lifecycle);
-    this.emit('_server: scaling', { serverId, scaleConfig });
+    this._lifecycles.get(_serverId)?.push(_lifecycle);
+    this.emit('_server: scaling', { serverId: _serverId, scaleConfig: _scaleConfig });
 
     try {
       // Simulate scaling (replace with actual scaling logic)
-      await this.simulateScaling(server, scaleConfig);
+      await this.simulateScaling(_server, _scaleConfig);
 
-      lifecycle.status = 'completed';
-      lifecycle.endTime = new Date();
-      server.status = 'running';
-      server.updatedAt = new Date();
+      _lifecycle.status = 'completed';
+      _lifecycle.endTime = new Date();
+      _server.status = 'running';
+      _server.updatedAt = new Date();
 
-      await this.saveServerConfiguration(serverId, server);
-      this.emit('_server: scaled', { serverId, server });
+      await this.saveServerConfiguration(_serverId, _server);
+      this.emit('_server: scaled', { serverId: _serverId, server: _server });
     } catch (error) {
-      lifecycle.status = 'failed';
-      lifecycle.endTime = new Date();
-      lifecycle.metadata.error = error instanceof Error ? error.message : String(error);
+      _lifecycle.status = 'failed';
+      _lifecycle.endTime = new Date();
+      _lifecycle.metadata.error = error instanceof Error ? error.message : String(error);
 
-      this.emit('_server: scaling_failed', { serverId, error });
+      this.emit('_server: scaling_failed', { serverId: _serverId, error });
       throw error;
     }
   }
 
   public async decommissionServer(_serverId: string): Promise<void> {
-    const _server = this.servers.get(serverId);
-    if (!server) {
-      throw new Error(`Server not _found: ${serverId}`);
+    const _server = this.servers.get(_serverId);
+    if (!_server) {
+      throw new Error(`Server not _found: ${_serverId}`);
     }
 
     const _lifecycle: ServerLifecycle = {
       phase: 'decommissioning',
-      _status: 'in_progress',
-      _startTime: new Date(),
-      _metadata: {}
+      status: 'in_progress',
+      startTime: new Date(),
+      metadata: {}
     };
 
-    this.lifecycles.get(serverId)?.push(lifecycle);
-    this.emit('_server: decommissioning', { serverId, server });
+    this._lifecycles.get(_serverId)?.push(_lifecycle);
+    this.emit('_server: decommissioning', { serverId: _serverId, server: _server });
 
     try {
       // Simulate decommissioning (replace with actual decommissioning logic)
-      await this.simulateDecommissioning(server);
+      await this.simulateDecommissioning(_server);
 
-      lifecycle.status = 'completed';
-      lifecycle.endTime = new Date();
+      _lifecycle.status = 'completed';
+      _lifecycle.endTime = new Date();
 
       // Remove server from management
-      this.servers.delete(serverId);
-      this.metrics.delete(serverId);
-      this.alerts.delete(serverId);
+      this.servers.delete(_serverId);
+      this._metrics.delete(_serverId);
+      this._alerts.delete(_serverId);
 
       // Remove configuration file
-      if (fs.existsSync(configFile)) {
-        fs.unlinkSync(configFile);
+      const _configPath = path.join(this.configPath, `${_serverId}.json`);
+      if (fs.existsSync(_configPath)) {
+        fs.unlinkSync(_configPath);
       }
 
-      this.emit('_server: decommissioned', { serverId, server });
+      this.emit('_server: decommissioned', { serverId: _serverId, server: _server });
     } catch (error) {
-      lifecycle.status = 'failed';
-      lifecycle.endTime = new Date();
-      lifecycle.metadata.error = error instanceof Error ? error.message : String(error);
+      _lifecycle.status = 'failed';
+      _lifecycle.endTime = new Date();
+      _lifecycle.metadata.error = error instanceof Error ? error.message : String(error);
 
-      this.emit('_server: decommissioning_failed', { serverId, error });
+      this.emit('_server: decommissioning_failed', { serverId: _serverId, error });
       throw error;
     }
   }
 
   // Monitoring and Health Checks
   private startMonitoring(): void {
-    this.monitoringInterval = setInterval(async () => {
+    this._monitoringInterval = setInterval(async () => {
       for (const [serverId, server] of this.servers) {
         if (server.status === 'running') {
           await this.performHealthCheck(serverId, server);
@@ -371,129 +372,126 @@ export class ServerManager extends EventEmitter {
 
   private async performHealthCheck(_serverId: string, _server: ServerConfig): Promise<void> {
     try {
-        _method: 'GET',
-        _signal: AbortSignal.timeout(server.healthCheck.timeout)
+      const _response = await fetch(`${_server.protocol}://${_server.host}:${_server.port}${_server.healthCheck.endpoint}`, {
+        method: 'GET',
+        signal: AbortSignal.timeout(_server.healthCheck.timeout)
       });
 
-      if (response.status !== server.healthCheck.expectedStatus) {
-        await this.createAlert(serverId, 'health', 'high', 
-          `Health check _failed: Expected ${server.healthCheck.expectedStatus}, got ${response.status}`);
+      if (_response.status !== _server.healthCheck.expectedStatus) {
+        await this.createAlert(_serverId, 'health', 'high', `Health check failed: Expected ${_server.healthCheck.expectedStatus}, got ${_response.status}`);
       }
     } catch (error) {
-      await this.createAlert(serverId, 'health', 'critical', 
-        `Health check _failed: ${error instanceof Error ? error.message : String(error)}`);
+      await this.createAlert(_serverId, 'health', 'critical', `Health check failed: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 
   private async collectMetrics(_serverId: string, _server: ServerConfig): Promise<void> {
     // Simulate metrics collection (replace with actual metrics collection)
     const _metrics: ServerMetrics = {
-      serverId,
-      _timestamp: new Date(),
-      _cpu: Math.random() * 100,
-      _memory: Math.random() * 100,
-      _disk: Math.random() * 100,
-      _networkIn: Math.random() * 1000,
-      _networkOut: Math.random() * 1000,
-      _responseTime: Math.random() * 1000,
-      _requestsPerSecond: Math.random() * 100,
-      _errorRate: Math.random() * 5,
-      _uptime: Date.now() - server.createdAt.getTime()
+      serverId: _serverId,
+      timestamp: new Date(),
+      cpu: Math.random() * 100,
+      memory: Math.random() * 100,
+      disk: Math.random() * 100,
+      networkIn: Math.random() * 1000,
+      networkOut: Math.random() * 1000,
+      responseTime: Math.random() * 1000,
+      requestsPerSecond: Math.random() * 100,
+      errorRate: Math.random() * 5,
+      uptime: Date.now() - _server.createdAt.getTime()
     };
 
-    if (!this.metrics.has(serverId)) {
-      this.metrics.set(serverId, []);
+    if (!this._metrics.has(_serverId)) {
+      this._metrics.set(_serverId, []);
     }
 
-    this.metrics.get(serverId)!.push(metrics);
+    this._metrics.get(_serverId)!.push(_metrics);
 
     // Keep only last 1000 metrics per server
-    if (serverMetrics.length > 1000) {
-      this.metrics.set(serverId, serverMetrics.slice(-1000));
+    if (this._metrics.get(_serverId)!.length > 1000) {
+      this._metrics.set(_serverId, this._metrics.get(_serverId)!.slice(-1000));
     }
 
-    this.emit('_metrics: collected', { serverId, metrics });
+    this.emit('_metrics: collected', { serverId: _serverId, metrics: _metrics });
   }
 
   private async checkResourceUsage(_serverId: string, _server: ServerConfig): Promise<void> {
-    if (!latestMetrics) return;
+    const _latestMetrics = this._metrics.get(_serverId)?.slice(-1)[0];
+    if (!_latestMetrics) return;
 
     // Check CPU usage
-    if (latestMetrics.cpu > server.resources.cpu.max) {
-      await this.createAlert(serverId, 'resource', 'high', 
-        `CPU usage exceeded _limit: ${latestMetrics.cpu.toFixed(2)}%`);
+    if (_latestMetrics.cpu > _server.resources.cpu.max) {
+      await this.createAlert(_serverId, 'resource', 'high', `CPU usage exceeded limit: ${_latestMetrics.cpu.toFixed(2)}%`);
     }
 
     // Check memory usage
-    if (latestMetrics.memory > server.resources.memory.max) {
-      await this.createAlert(serverId, 'resource', 'high', 
-        `Memory usage exceeded _limit: ${latestMetrics.memory.toFixed(2)}%`);
+    if (_latestMetrics.memory > _server.resources.memory.max) {
+      await this.createAlert(_serverId, 'resource', 'high', `Memory usage exceeded limit: ${_latestMetrics.memory.toFixed(2)}%`);
     }
 
     // Check disk usage
-    if (latestMetrics.disk > server.resources.disk.max) {
-      await this.createAlert(serverId, 'resource', 'medium', 
-        `Disk usage exceeded _limit: ${latestMetrics.disk.toFixed(2)}%`);
+    if (_latestMetrics.disk > _server.resources.disk.max) {
+      await this.createAlert(_serverId, 'resource', 'medium', `Disk usage exceeded limit: ${_latestMetrics.disk.toFixed(2)}%`);
     }
 
     // Check error rate
-    if (latestMetrics.errorRate > 5) {
-      await this.createAlert(serverId, 'performance', 'high', 
-        `High error _rate: ${latestMetrics.errorRate.toFixed(2)}%`);
+    if (_latestMetrics.errorRate > 5) {
+      await this.createAlert(_serverId, 'performance', 'high', `High error rate: ${_latestMetrics.errorRate.toFixed(2)}%`);
     }
   }
 
-  // Alert Management
   private async createAlert(_serverId: string, _type: ServerAlert['type'], _severity: ServerAlert['severity'], _message: string): Promise<void> {
     const _alert: ServerAlert = {
       id: this.generateAlertId(),
-      serverId,
-      type,
-      severity,
-      message,
-      _timestamp: new Date(),
-      _acknowledged: false,
-      _resolved: false
+      serverId: _serverId,
+      type: _type,
+      severity: _severity,
+      message: _message,
+      timestamp: new Date(),
+      acknowledged: false,
+      resolved: false
     };
 
-    if (!this.alerts.has(serverId)) {
-      this.alerts.set(serverId, []);
+    if (!this._alerts.has(_serverId)) {
+      this._alerts.set(_serverId, []);
     }
 
-    this.alerts.get(serverId)!.push(alert);
-    this.emit('_alert: created', { serverId, alert });
+    this._alerts.get(_serverId)!.push(_alert);
+    this.emit('_alert: created', { serverId: _serverId, alert: _alert });
 
     // Log critical alerts
-    if (severity === 'critical') {
-      console.error(`🚨 CRITICAL ALERT [${serverId}]: ${message}`);
+    if (_severity === 'critical') {
+      console.error(`🚨 CRITICAL ALERT [${_serverId}]: ${_message}`);
     }
   }
 
   public async acknowledgeAlert(_serverId: string, _alertId: string): Promise<void> {
-    const _alert = this.alerts.get(serverId)?.find(a => a.id === alertId);
-    if (alert) {
-      alert.acknowledged = true;
-      this.emit('_alert: acknowledged', { serverId, alertId });
+    const _alert = this._alerts.get(_serverId)?.find(a => a.id === _alertId);
+    if (_alert) {
+      _alert.acknowledged = true;
+      this.emit('_alert: acknowledged', { serverId: _serverId, alertId: _alertId });
     }
   }
 
   public async resolveAlert(_serverId: string, _alertId: string): Promise<void> {
-    const _alert = this.alerts.get(serverId)?.find(a => a.id === alertId);
-    if (alert) {
-      alert.resolved = true;
-      this.emit('_alert: resolved', { serverId, alertId });
+    const _alert = this._alerts.get(_serverId)?.find(a => a.id === _alertId);
+    if (_alert) {
+      _alert.resolved = true;
+      this.emit('_alert: resolved', { serverId: _serverId, alertId: _alertId });
     }
   }
 
   // Configuration Management
   private async loadServerConfigurations(): Promise<void> {
     try {
-      for (const file of files) {
-        if (file.endsWith('.json')) {
-          const _serverId = file.replace('.json', '');
-          const _configPath = path.join(this.configPath, file);
-          const _serverConfig: ServerConfig = JSON.parse(configData);
-          this.servers.set(serverId, serverConfig);
+      const _files = fs.readdirSync(this.configPath);
+      for (const _file of _files) {
+        if (_file.endsWith('.json')) {
+          const _serverId = _file.replace('.json', '');
+          const _configPath = path.join(this.configPath, _file);
+          const _configData = fs.readFileSync(_configPath, 'utf8');
+          const _serverConfig: ServerConfig = JSON.parse(_configData);
+          this.servers.set(_serverId, _serverConfig);
         }
       }
     } catch (error) {
@@ -508,17 +506,15 @@ export class ServerManager extends EventEmitter {
 
   // Utility Methods
   private generateServerId(_type: string, _name: string): string {
-    const _timestamp = Date.now();
-    const _random = Math.random().toString(36).substring(2, 8);
-    return `${_type}-${_name}-${_timestamp}-${_random}`;
+    return `${_type}-${_name}-${Date.now()}`;
   }
 
   private generateAlertId(): string {
-    return `alert-${Date.now()}-${Math.random().toString(36).substring(2, 8)}`;
+    return `alert-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
   }
 
   private initializeServerMonitoring(_server: ServerConfig): void {
-    // Initialize metrics collection for the server
+    // Initialize metrics and alerts collections for the server
     this._metrics.set(_server.id, []);
     this._alerts.set(_server.id, []);
   }
@@ -550,12 +546,12 @@ export class ServerManager extends EventEmitter {
   }
 
   public getServerMetrics(_serverId: string, _limit: number = 100): ServerMetrics[] {
-    return this.metrics.get(serverId)?.slice(-limit) || [];
+    return this._metrics.get(_serverId)?.slice(-_limit) || [];
   }
 
   public getServerAlerts(_serverId: string, _unresolved: boolean = true): ServerAlert[] {
-    const alerts = this._alerts.get(_serverId) || [];
-    return _unresolved ? alerts.filter((a: any) => !a.resolved) : alerts;
+    const _alerts = this._alerts.get(_serverId) || [];
+    return _unresolved ? _alerts.filter((a: any) => !a.resolved) : _alerts;
   }
 
   public getServerLifecycle(_serverId: string): ServerLifecycle[] {
@@ -563,38 +559,31 @@ export class ServerManager extends EventEmitter {
   }
 
   public getSystemStatus(): any {
-    const servers = this.getServers();
-    const totalAlerts = Array.from(this._alerts.values()).flat().filter((a: any) => !a.resolved).length;
-    const criticalAlerts = Array.from(this._alerts.values()).flat().filter((a: any) => a.severity === 'critical' && !a.resolved).length;
+    const _servers = this.getServers();
+    const _totalAlerts = Array.from(this._alerts.values()).flat().filter((a: any) => !a.resolved).length;
+    const _criticalAlerts = Array.from(this._alerts.values()).flat().filter((a: any) => a.severity === 'critical' && !a.resolved).length;
 
     return {
       _timestamp: new Date(),
-      totalServers: servers.length,
-      runningServers: servers.filter((s: any) => s.status === 'running').length,
-      stoppedServers: servers.filter((s: any) => s.status === 'stopped').length,
-      maintenanceServers: servers.filter((s: any) => s.status === 'maintenance').length,
-      errorServers: servers.filter((s: any) => s.status === 'error').length,
-      totalAlerts,
-      criticalAlerts,
-      _systemHealth: criticalAlerts > 0 ? 'critical' : totalAlerts > 5 ? 'warning' : 'healthy'
+      totalServers: _servers.length,
+      runningServers: _servers.filter((s: any) => s.status === 'running').length,
+      stoppedServers: _servers.filter((s: any) => s.status === 'stopped').length,
+      maintenanceServers: _servers.filter((s: any) => s.status === 'maintenance').length,
+      errorServers: _servers.filter((s: any) => s.status === 'error').length,
+      totalAlerts: _totalAlerts,
+      criticalAlerts: _criticalAlerts,
+      _systemHealth: _criticalAlerts > 0 ? 'critical' : _totalAlerts > 5 ? 'warning' : 'healthy'
     };
   }
 
-  // Cleanup
   public async shutdown(): Promise<void> {
     if (this._monitoringInterval) {
       clearInterval(this._monitoringInterval);
+      this._monitoringInterval = null;
     }
-
-    // Save all server configurations
-    for (const [serverId, server] of this.servers) {
-      await this.saveServerConfiguration(serverId, server);
-    }
-
-    this.emit('shutdown', { _timestamp: new Date() });
   }
 }
 
-// Export singleton instance
+// Export singleton instance;
 
-// Export convenience functions
+// Export convenience functions;

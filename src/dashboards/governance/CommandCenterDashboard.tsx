@@ -1,12 +1,12 @@
+import { 
+  PlayIcon, ClockIcon, CheckCircleIcon, ExclamationTriangleIcon, 
+  XCircleIcon, ChartBarIcon, CogIcon, LightBulbIcon 
+} from '@heroicons/react/24/outline';
 import React, { useState, useEffect } from 'react';
 import { 
   BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
   LineChart, Line, PieChart, Pie, Cell, AreaChart, Area
 } from 'recharts';
-import { 
-  PlayIcon, ClockIcon, CheckCircleIcon, ExclamationTriangleIcon, 
-  XCircleIcon, ChartBarIcon, CogIcon, LightBulbIcon 
-} from '@heroicons/react/24/outline';
 
 interface CommandDefinition {
   id: string;
@@ -76,6 +76,9 @@ const CATEGORY_COLORS = {
   session: '#F59E0B'
 };
 
+/**
+ *
+ */
 export default function CommandCenterDashboard() {
   const [commands, setCommands] = useState<CommandDefinition[]>([]);
   const [analytics, setAnalytics] = useState<Map<string, CommandAnalytics>>(new Map());

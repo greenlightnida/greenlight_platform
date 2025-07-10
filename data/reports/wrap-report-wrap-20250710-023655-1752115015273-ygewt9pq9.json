@@ -1,0 +1,14 @@
+{
+  "sessionId": "wrap-20250710-023655-1752115015273-ygewt9pq9",
+  "timestamp": "2025-07-10T02:36:58.690Z",
+  "protocolVersion": "1.0.0",
+  "duration": "3s",
+  "results": {},
+  "files": {
+    "session": "data/sessions/wrap-session-wrap-20250710-023655-1752115015273-ygewt9pq9.json",
+    "context": "data/context-preservation/wrap-context-wrap-20250710-023655-1752115015273-ygewt9pq9.json",
+    "summary": "data/reports/work-summary-wrap-20250710-023655-1752115015273-ygewt9pq9.json",
+    "handoff": "data/transitions/handoff-wrap-20250710-023655-1752115015273-ygewt9pq9.json"
+  },
+  "status": "completed"
+}

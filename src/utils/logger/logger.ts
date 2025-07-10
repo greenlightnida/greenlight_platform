@@ -7,10 +7,13 @@ export enum LogLevel {
 }
 
 // Utility to safely detect environment
+/**
+ *
+ */
 function getLogLevel(): LogLevel {
   try {
     // @ts-ignore
-    if (typeof import.meta !== 'undefined' && import.meta.env && typeof import.meta.env.DEV !== 'undefined') {
+    if (typeof import.meta.env.DEV !== 'undefined') {
       // @ts-ignore
       return import.meta.env.DEV ? LogLevel.DEBUG : LogLevel.INFO;
     }
@@ -19,6 +22,9 @@ function getLogLevel(): LogLevel {
   return LogLevel.INFO;
 }
 
+/**
+ *
+ */
 function isProdEnv(): boolean {
   try {
     // @ts-ignore

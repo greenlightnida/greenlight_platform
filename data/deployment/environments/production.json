@@ -1,0 +1,11 @@
+{
+  "name": "production",
+  "type": "production",
+  "url": "https://greenlight.live",
+  "status": "active",
+  "healthCheckUrl": "https://greenlight.live/health",
+  "deployCommands": [
+    "npm run build",
+    "npm run deploy:production"
+  ]
+}

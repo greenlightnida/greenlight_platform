@@ -284,6 +284,7 @@ export class SystemMasterManager extends EventEmitter {
 
   /**
    * Register a manager with the system
+   * @param manager
    */
   public async registerManager(manager: SystemManager): Promise<void> {
     try {
@@ -307,6 +308,7 @@ export class SystemMasterManager extends EventEmitter {
 
   /**
    * Unregister a manager from the system
+   * @param managerName
    */
   public async unregisterManager(managerName: string): Promise<void> {
     try {
@@ -350,6 +352,7 @@ export class SystemMasterManager extends EventEmitter {
 
   /**
    * Emit a system event
+   * @param event
    */
   public async emitSystemEvent(event: Omit<SystemEvent, 'id' | 'timestamp'>): Promise<void> {
     const systemEvent: SystemEvent = {

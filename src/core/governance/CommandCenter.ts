@@ -16,10 +16,10 @@
  * - Predictive command suggestions
  */
 
+import { execSync } from 'child_process';
 import { EventEmitter } from 'events';
 import * as fs from 'fs';
 import * as path from 'path';
-import { execSync } from 'child_process';
 
 export interface CommandDefinition {
   id: string;
@@ -649,7 +649,7 @@ export class CommandCenter extends EventEmitter {
   private async checkConflicts(command: CommandDefinition) {
     for (const conflictId of command.conflicts) {
       const conflictingCommand = this.commands.get(conflictId);
-      if (conflictingCommand && conflictingCommand.lastExecuted) {
+      if (conflictingCommand?.lastExecuted) {
         const timeSinceLastExecution = Date.now() - conflictingCommand.lastExecuted.getTime();
         if (timeSinceLastExecution < 60000) { // Within last minute
           throw new Error(`Command conflict: ${conflictId} was recently executed`);

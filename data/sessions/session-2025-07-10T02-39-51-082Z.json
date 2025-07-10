@@ -1,0 +1,130 @@
+{
+  "timestamp": "2025-07-10T02:39:51.083Z",
+  "summary": "Anchor run with updates audit",
+  "platforms": [
+    {
+      "name": "Greenlight Platform",
+      "path": "/Users/home/Developer/greenlight-platform",
+      "type": "main",
+      "status": "analyzed",
+      "analysis": {
+        "features": 0,
+        "components": 66,
+        "services": 163,
+        "tests": 0,
+        "holonGovernance": "active",
+        "buildStatus": "configured",
+        "lastCommit": "f31352d42782b281d2c3f36dcf8725ba28cde069 Initialize clean main branch with all secrets and sensitive files removed from history"
+      }
+    },
+    {
+      "name": "greenlight-system-governance",
+      "path": "/Users/home/Developer/Greenlight",
+      "type": "client",
+      "status": "analyzed",
+      "analysis": {
+        "features": 0,
+        "components": 15,
+        "services": 22,
+        "tests": 0,
+        "holonGovernance": null,
+        "buildStatus": "unknown",
+        "lastCommit": "No git history"
+      }
+    },
+    {
+      "name": "top-bins-client-space",
+      "path": "/Users/home/Developer/Top_Bins",
+      "type": "client",
+      "status": "analyzed",
+      "analysis": {
+        "features": 2,
+        "components": 78,
+        "services": 153,
+        "tests": 0,
+        "holonGovernance": null,
+        "buildStatus": "configured",
+        "lastCommit": "4729cd723ff1e33a99ccc8e8ec092e7353054890 Precommit: All audits passed, imports fixed, next session context prepared"
+      }
+    },
+    {
+      "name": "greenlight-platform-backup",
+      "path": "/Users/home/Developer/greenlight-platform-backup",
+      "type": "client",
+      "status": "analyzed",
+      "analysis": {
+        "features": 0,
+        "components": 65,
+        "services": 148,
+        "tests": 0,
+        "holonGovernance": "active",
+        "buildStatus": "configured",
+        "lastCommit": "71b9d7bbc4f1d0f836511fe9a8bd09ba87c2a27e docs: add build blockers resolution summary and fix scripts"
+      }
+    },
+    {
+      "name": "top-bins",
+      "path": "/Users/home/Developer/top-bins",
+      "type": "client",
+      "status": "analyzed",
+      "analysis": {
+        "features": 0,
+        "components": 0,
+        "services": 0,
+        "tests": 0,
+        "holonGovernance": null,
+        "buildStatus": "unknown",
+        "lastCommit": "No git history"
+      }
+    }
+  ],
+  "systemHealth": "EXCELLENT",
+  "recommendations": [
+    "Implement holon governance in: greenlight-system-governance, top-bins-client-space, top-bins",
+    "Improve test coverage in: Greenlight Platform, greenlight-system-governance, top-bins-client-space, greenlight-platform-backup, top-bins",
+    "Initialize git repositories in: greenlight-system-governance, top-bins"
+  ],
+  "auditResults": {
+    "dependencyUpdates": [],
+    "configurationUpdates": [],
+    "launchIssues": [
+      {
+        "name": "Port Conflicts",
+        "issue": "Ports may be in use",
+        "priority": "medium"
+      }
+    ],
+    "contextGaps": [
+      {
+        "type": "missing_documentation",
+        "file": "docs/ARCHITECTURE.md",
+        "priority": "medium"
+      },
+      {
+        "type": "missing_documentation",
+        "file": "docs/DEPLOYMENT.md",
+        "priority": "medium"
+      }
+    ],
+    "roadmapAdditions": [
+      {
+        "type": "fix",
+        "title": "Fix launch issue: Port Conflicts",
+        "description": "Ports may be in use",
+        "priority": "high",
+        "estimatedEffort": "1-2 hours"
+      }
+    ]
+  },
+  "roadmapProgress": {
+    "overall": 52,
+    "currentPhase": "Development",
+    "nextMilestone": "Holon Governance",
+    "estimatedCompletion": "Q3 2025",
+    "strategicProgress": 51,
+    "platformMaturity": 100,
+    "onboardingReadiness": 40,
+    "governanceCompliance": 40
+  },
+  "postAuditUpdateRatio": "3 updates / 5 platforms"
+}

@@ -1,0 +1,10 @@
+{
+  "name": "development",
+  "type": "local",
+  "url": "http://localhost:3000",
+  "status": "active",
+  "healthCheckUrl": "http://localhost:3000/health",
+  "deployCommands": [
+    "npm run dev"
+  ]
+}

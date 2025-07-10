@@ -1,9 +1,9 @@
 {
-  "sessionId": "boundary-1752098729218",
-  "timestamp": "2025-07-09T22:05:29.309Z",
+  "sessionId": "boundary-1752152279462",
+  "timestamp": "2025-07-10T12:57:59.605Z",
   "summary": {
-    "violations": 172,
-    "recommendations": 65,
+    "violations": 212,
+    "recommendations": 77,
     "actions": 0
   },
   "violations": [
@@ -51,6 +51,20 @@
     },
     {
       "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/components/monitoring/UserMonitoringDashboard.tsx",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/CodeCzarManager.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/CommandCenter.ts",
       "severity": "high",
       "description": "Top Bins code found in greenlight-platform",
@@ -72,7 +86,28 @@
     },
     {
       "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ConnectivityIntegrationManager.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/DataTelemetryManager.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/EnvironmentGovernance.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ExecutiveCommitteeManager.ts",
       "severity": "high",
       "description": "Top Bins code found in greenlight-platform",
       "recommendation": "Move to Top_Bins repository or refactor to system governance"
@@ -93,7 +128,21 @@
     },
     {
       "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ProcessManager.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/SteeringManager.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/UserConstituencyManager.ts",
       "severity": "high",
       "description": "Top Bins code found in greenlight-platform",
       "recommendation": "Move to Top_Bins repository or refactor to system governance"
@@ -317,6 +366,34 @@
     },
     {
       "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/data/data-validation.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/council-protocol.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/launch-protocol.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/wrap-protocol.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
       "file": "/Users/home/Developer/greenlight-platform/src/index.ts",
       "severity": "high",
       "description": "Top Bins code found in greenlight-platform",
@@ -395,6 +472,13 @@
     {
       "type": "top_bins_in_greenlight",
       "file": "/Users/home/Developer/greenlight-platform/src/services/integrations/supabaseSchemaService.ts",
+      "severity": "high",
+      "description": "Top Bins code found in greenlight-platform",
+      "recommendation": "Move to Top_Bins repository or refactor to system governance"
+    },
+    {
+      "type": "top_bins_in_greenlight",
+      "file": "/Users/home/Developer/greenlight-platform/src/services/monitoring/UserMonitoringService.ts",
       "severity": "high",
       "description": "Top Bins code found in greenlight-platform",
       "recommendation": "Move to Top_Bins repository or refactor to system governance"
@@ -625,7 +709,21 @@
     },
     {
       "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/components/monitoring/UserMonitoringDashboard.tsx",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
       "file": "/Users/home/Developer/greenlight-platform/src/config/ConfigManager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/CodeCzarManager.ts",
       "severity": "medium",
       "description": "Greenlight platform code found in Top_Bins",
       "recommendation": "Review if this should be in greenlight-platform"
@@ -653,7 +751,28 @@
     },
     {
       "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/Committee.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ConnectivityIntegrationManager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/EnvironmentGovernance.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ExecutiveCommitteeManager.ts",
       "severity": "medium",
       "description": "Greenlight platform code found in Top_Bins",
       "recommendation": "Review if this should be in greenlight-platform"
@@ -674,6 +793,13 @@
     },
     {
       "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ProcessManager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ReferenceManager.ts",
       "severity": "medium",
       "description": "Greenlight platform code found in Top_Bins",
@@ -682,6 +808,20 @@
     {
       "type": "greenlight_in_top_bins",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/SteeringManager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/UserConstituencyManager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/index.ts",
       "severity": "medium",
       "description": "Greenlight platform code found in Top_Bins",
       "recommendation": "Review if this should be in greenlight-platform"
@@ -724,6 +864,27 @@
     {
       "type": "greenlight_in_top_bins",
       "file": "/Users/home/Developer/greenlight-platform/src/core/holons/product/modules/CoordinationEngine.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/holons/protocols/Protocol.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/holons/protocols/ProtocolManager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/holons/security/SecurityComplianceManager.ts",
       "severity": "medium",
       "description": "Greenlight platform code found in Top_Bins",
       "recommendation": "Review if this should be in greenlight-platform"
@@ -822,6 +983,20 @@
     {
       "type": "greenlight_in_top_bins",
       "file": "/Users/home/Developer/greenlight-platform/src/core/protocols/ProtocolManager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/session-management/EnhancedSessionManager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/session-management/IntegratedSessionManager.ts",
       "severity": "medium",
       "description": "Greenlight platform code found in Top_Bins",
       "recommendation": "Review if this should be in greenlight-platform"
@@ -1003,6 +1178,104 @@
     },
     {
       "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/data/data-backup.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/data/data-validation.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/base-protocol.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/council-protocol.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/launch-protocol.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/protocol-manager.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/wrap-protocol.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/config-utils.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/file-utils.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/index.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/integration-interfaces.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/logging-utils.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/test-utils.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/validation-utils.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
       "file": "/Users/home/Developer/greenlight-platform/src/index.ts",
       "severity": "medium",
       "description": "Greenlight platform code found in Top_Bins",
@@ -1136,6 +1409,13 @@
     },
     {
       "type": "greenlight_in_top_bins",
+      "file": "/Users/home/Developer/greenlight-platform/src/services/monitoring/UserMonitoringService.ts",
+      "severity": "medium",
+      "description": "Greenlight platform code found in Top_Bins",
+      "recommendation": "Review if this should be in greenlight-platform"
+    },
+    {
+      "type": "greenlight_in_top_bins",
       "file": "/Users/home/Developer/greenlight-platform/src/services/performance/performanceTrackingService.ts",
       "severity": "medium",
       "description": "Greenlight platform code found in Top_Bins",
@@ -1251,6 +1531,18 @@
     },
     {
       "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/components/monitoring/UserMonitoringDashboard.tsx",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/CodeCzarManager.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/CommandCenter.ts",
       "destination": "Top_Bins repository",
       "reason": "Product-specific code should be in Top_Bins"
@@ -1269,7 +1561,25 @@
     },
     {
       "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ConnectivityIntegrationManager.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/DataTelemetryManager.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/EnvironmentGovernance.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ExecutiveCommitteeManager.ts",
       "destination": "Top_Bins repository",
       "reason": "Product-specific code should be in Top_Bins"
     },
@@ -1287,7 +1597,19 @@
     },
     {
       "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/ProcessManager.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
       "file": "/Users/home/Developer/greenlight-platform/src/core/governance/SteeringManager.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/core/governance/UserConstituencyManager.ts",
       "destination": "Top_Bins repository",
       "reason": "Product-specific code should be in Top_Bins"
     },
@@ -1479,6 +1801,30 @@
     },
     {
       "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/data/data-validation.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/council-protocol.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/launch-protocol.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/holons/protocols/wrap-protocol.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
       "file": "/Users/home/Developer/greenlight-platform/src/index.ts",
       "destination": "Top_Bins repository",
       "reason": "Product-specific code should be in Top_Bins"
@@ -1546,6 +1892,12 @@
     {
       "type": "move_file",
       "file": "/Users/home/Developer/greenlight-platform/src/services/integrations/supabaseSchemaService.ts",
+      "destination": "Top_Bins repository",
+      "reason": "Product-specific code should be in Top_Bins"
+    },
+    {
+      "type": "move_file",
+      "file": "/Users/home/Developer/greenlight-platform/src/services/monitoring/UserMonitoringService.ts",
       "destination": "Top_Bins repository",
       "reason": "Product-specific code should be in Top_Bins"
     },

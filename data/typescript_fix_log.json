@@ -1,0 +1,3206 @@
+{
+  "timestamp": "2025-07-10T01:56:52.129Z",
+  "errorsFound": 457,
+  "fixesApplied": 457,
+  "fixLog": [
+    {
+      "file": "src/core/operations/ServerGovernor.ts",
+      "line": 314,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerGovernor.ts",
+      "line": 503,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerGovernor.ts",
+      "line": 534,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerGovernor.ts",
+      "line": 697,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 148,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 149,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 151,
+      "message": "error TS1472: 'catch' or 'finally' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 162,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 162,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 162,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 162,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 163,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 163,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 164,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 164,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 165,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 166,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 167,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 168,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 169,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 171,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 173,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 173,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 174,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 175,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 176,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 178,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 180,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 180,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 181,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 181,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 184,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 184,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 184,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 187,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 187,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 188,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 188,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 189,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 189,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 192,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 192,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 193,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 193,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 193,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 196,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 196,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 198,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 198,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 199,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 199,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 201,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 201,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 202,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 215,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 215,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 215,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 215,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 215,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 215,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 216,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 216,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 217,
+      "message": "error TS1003: Identifier expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 221,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 221,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 221,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 222,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 223,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 224,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 226,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 228,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 228,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 229,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 229,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 231,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 233,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 233,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 233,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 235,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 235,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 236,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 236,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 237,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 237,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 238,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 238,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 240,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 240,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 240,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 241,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 241,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 242,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 252,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 252,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 252,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 252,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 252,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 253,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 253,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 254,
+      "message": "error TS1003: Identifier expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 258,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 258,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 258,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 259,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 259,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 261,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 261,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 261,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 262,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 262,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 265,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 265,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 265,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 265,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 265,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 266,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 266,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 267,
+      "message": "error TS1003: Identifier expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 271,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 271,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 271,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 272,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 272,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 274,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 274,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 274,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 275,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 275,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 278,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 278,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 278,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 278,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 278,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 278,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 279,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 279,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 280,
+      "message": "error TS1003: Identifier expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 284,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 284,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 284,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 285,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 286,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 287,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 289,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 291,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 291,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 292,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 292,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 294,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 296,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 296,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 296,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 298,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 298,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 299,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 299,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 300,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 300,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 301,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 301,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 303,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 303,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 303,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 304,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 304,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 305,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 315,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 315,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 315,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 315,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 315,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 316,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 316,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 317,
+      "message": "error TS1003: Identifier expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 321,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 321,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 321,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 322,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 323,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 324,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 326,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 328,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 328,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 329,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 329,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 331,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 333,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 333,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 333,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 335,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 335,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 336,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 336,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 339,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 339,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 340,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 340,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 341,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 341,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 344,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 344,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 344,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 349,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 349,
+      "message": "error TS1005: 'try' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 357,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 360,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 360,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 361,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 369,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 372,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 372,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 372,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 372,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 372,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 372,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 373,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 374,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 375,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 376,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 376,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 378,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 378,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 378,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 379,
+      "message": "error TS1005: ')' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 380,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 382,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 382,
+      "message": "error TS1005: 'try' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 383,
+      "message": "error TS1005: ')' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 384,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 386,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 388,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 388,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 388,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 388,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 388,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 388,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 390,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 390,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 391,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 392,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 393,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 394,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 395,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 396,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 397,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 398,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 399,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 400,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 401,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 402,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 404,
+      "message": "error TS1003: Identifier expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 404,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 404,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 404,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 416,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 418,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 418,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 418,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 418,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 418,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 418,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 419,
+      "message": "error TS1003: Identifier expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 419,
+      "message": "error TS1005: '{' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 419,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 422,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 422,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 422,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 423,
+      "message": "error TS1005: ')' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 424,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 429,
+      "message": "error TS1005: ')' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 430,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 435,
+      "message": "error TS1005: ')' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 436,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 441,
+      "message": "error TS1005: ')' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 442,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 444,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 447,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 447,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 447,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 447,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 447,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 447,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 447,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 447,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 448,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 448,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 449,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 450,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 451,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 452,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 453,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 454,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 455,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 456,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 457,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 459,
+      "message": "error TS1003: Identifier expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 459,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 459,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 459,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 470,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 472,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 472,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 472,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 472,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 472,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 472,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 473,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 473,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 480,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 480,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 480,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 480,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 480,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 480,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 481,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 481,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 489,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 489,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 489,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 489,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 490,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 491,
+      "message": "error TS1359: Identifier expected. 'const' is a reserved word that cannot be used here.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 491,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 491,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 491,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 499,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 504,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 504,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 504,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 504,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 504,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 504,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 505,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 505,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 506,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 506,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 510,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 510,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 510,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 510,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 510,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 516,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 516,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 516,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 520,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 520,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 520,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 522,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 522,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 523,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 523,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 527,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 527,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 527,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 527,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 527,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 528,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 528,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 528,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 531,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 531,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 531,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 531,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 531,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 531,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 532,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 532,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 532,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 535,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 535,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 535,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 535,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 535,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 535,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 536,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 536,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 536,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 539,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 539,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 539,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 539,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 539,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 540,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 540,
+      "message": "error TS1005: ':' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 540,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 544,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 544,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 544,
+      "message": "error TS1011: An element access expression should take an argument.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 544,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 548,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 548,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 548,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 548,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 552,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 552,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 552,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 552,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 552,
+      "message": "error TS1011: An element access expression should take an argument.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 552,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 556,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 556,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 556,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 556,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 556,
+      "message": "error TS1011: An element access expression should take an argument.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 556,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 561,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 561,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 561,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 561,
+      "message": "error TS1011: An element access expression should take an argument.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 561,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 565,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 565,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 565,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 571,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 572,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 573,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 574,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 575,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 576,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 577,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 578,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 579,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 584,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 584,
+      "message": "error TS1434: Unexpected keyword or identifier.",
+      "fix": "Fix syntax error",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 584,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 584,
+      "message": "error TS1109: Expression expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 585,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 585,
+      "message": "error TS1005: ',' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 585,
+      "message": "error TS1136: Property assignment expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 595,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/operations/ServerManager.ts",
+      "line": 596,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/core/session-management/SessionsManager.tsx",
+      "line": 395,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "line": 94,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "line": 176,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "line": 201,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "line": 238,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "line": 255,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "line": 298,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/dashboards/executive/ExecutiveDashboard.tsx",
+      "line": 342,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/dashboards/roadmap/RoadmapDashboard.tsx",
+      "line": 392,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 150,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 151,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 151,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 154,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 155,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 155,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 158,
+      "message": "error TS1005: ';' expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 159,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/cache/cache.ts",
+      "line": 159,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "line": 154,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "line": 169,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "line": 173,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "line": 177,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "line": 181,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "line": 186,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "line": 191,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    },
+    {
+      "file": "src/utils/common/formatting.ts",
+      "line": 196,
+      "message": "error TS1128: Declaration or statement expected.",
+      "fix": "Apply general error fix",
+      "success": true
+    }
+  ]
+}

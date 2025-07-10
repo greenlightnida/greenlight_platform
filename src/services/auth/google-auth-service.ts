@@ -1,6 +1,7 @@
 // google-auth-service.ts
 import { OAuth2Client } from 'google-auth-library';
 import { google } from 'googleapis';
+
 // @ts-ignore
 import { GOOGLE_OAUTH_CONFIG } from '../../config/google-workspace/oauth-config';
 

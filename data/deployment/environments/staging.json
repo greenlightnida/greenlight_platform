@@ -1,0 +1,11 @@
+{
+  "name": "staging",
+  "type": "staging",
+  "url": "https://staging.greenlight.live",
+  "status": "active",
+  "healthCheckUrl": "https://staging.greenlight.live/health",
+  "deployCommands": [
+    "npm run build",
+    "npm run deploy:staging"
+  ]
+}

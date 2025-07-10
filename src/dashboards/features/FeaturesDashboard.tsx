@@ -45,6 +45,10 @@ export const FeaturesDashboard: React.FC<FeaturesDashboardProps> = ({ className 
   }, []);
 
   // Helper function for status color
+  /**
+   *
+   * @param status
+   */
   function getStatusColor(status: string) {
     switch (status) {
       case 'running': return 'bg-green-200 text-green-800';
@@ -56,6 +60,10 @@ export const FeaturesDashboard: React.FC<FeaturesDashboardProps> = ({ className 
   }
 
   // Helper function for priority color
+  /**
+   *
+   * @param priority
+   */
   function getPriorityColor(priority: string) {
     switch (priority) {
       case 'high': return 'bg-red-100 text-red-800';

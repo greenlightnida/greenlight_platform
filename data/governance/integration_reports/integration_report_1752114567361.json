@@ -1,0 +1,114 @@
+{
+  "timestamp": "2025-07-10T02:29:27.360Z",
+  "integrationStatus": "active",
+  "systemMetrics": {
+    "optimizationSystem": {
+      "status": "healthy",
+      "lastCheck": "2025-07-10T02:24:37.905Z",
+      "metrics": {},
+      "effectiveness": 0
+    },
+    "codeCzar": {
+      "status": "healthy",
+      "lastCheck": "2025-07-10T02:24:37.905Z",
+      "totalLanguages": 3,
+      "totalOptimizations": 0,
+      "averageGovernanceScore": 0,
+      "complianceRate": 100
+    },
+    "executiveCommittee": {
+      "status": "healthy",
+      "lastCheck": "2025-07-10T02:24:37.905Z",
+      "activeMembers": 3,
+      "activeObjectives": 1,
+      "pendingDecisions": 20,
+      "performanceScore": 0
+    }
+  },
+  "learningTransfers": {
+    "total": 0,
+    "recent": []
+  },
+  "strategicDecisions": {
+    "total": 22,
+    "recent": [
+      {
+        "id": "dec-1752113687952-9ivlte038",
+        "title": "Improve Optimization Effectiveness",
+        "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+        "priority": "medium",
+        "category": "optimization",
+        "status": "proposed",
+        "proposedBy": "Integration System",
+        "reviewedBy": [],
+        "timestamp": "2025-07-10T02:14:47.952Z"
+      },
+      {
+        "id": "dec-1752113987033-9ty4ladjw",
+        "title": "Address Governance Score Decline",
+        "description": "Average governance score is 0/100. Strategic intervention required.",
+        "priority": "high",
+        "category": "governance",
+        "status": "proposed",
+        "proposedBy": "Integration System",
+        "reviewedBy": [],
+        "timestamp": "2025-07-10T02:19:47.033Z"
+      },
+      {
+        "id": "dec-1752113987033-cmdugm6g7",
+        "title": "Improve Optimization Effectiveness",
+        "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+        "priority": "medium",
+        "category": "optimization",
+        "status": "proposed",
+        "proposedBy": "Integration System",
+        "reviewedBy": [],
+        "timestamp": "2025-07-10T02:19:47.033Z"
+      },
+      {
+        "id": "dec-1752114290006-4hrj9c2lp",
+        "title": "Address Governance Score Decline",
+        "description": "Average governance score is 0/100. Strategic intervention required.",
+        "priority": "high",
+        "category": "governance",
+        "status": "proposed",
+        "proposedBy": "Integration System",
+        "reviewedBy": [],
+        "timestamp": "2025-07-10T02:24:50.006Z"
+      },
+      {
+        "id": "dec-1752114290006-fefaupfpr",
+        "title": "Improve Optimization Effectiveness",
+        "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+        "priority": "medium",
+        "category": "optimization",
+        "status": "proposed",
+        "proposedBy": "Integration System",
+        "reviewedBy": [],
+        "timestamp": "2025-07-10T02:24:50.006Z"
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "high",
+      "action": "Review TypeScript optimization strategies",
+      "impact": "Improve compilation error reduction",
+      "timeline": "1 week"
+    }
+  ],
+  "nextActions": [
+    {
+      "priority": "critical",
+      "action": "Emergency governance review",
+      "deadline": "2025-07-11T02:29:27.361Z",
+      "responsible": "CTO"
+    },
+    {
+      "priority": "medium",
+      "action": "Weekly integration effectiveness review",
+      "deadline": "2025-07-17T02:29:27.361Z",
+      "responsible": "VP Engineering"
+    }
+  ]
+}

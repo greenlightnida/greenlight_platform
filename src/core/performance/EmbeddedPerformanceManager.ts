@@ -6,9 +6,9 @@
  * while allowing each holon to pursue their north star metrics progressively.
  */
 
-import { Holon, HolonType } from '../holons/HolonSystem';
-import { EventBus } from '../events/EventBus';
 import { Logger } from '../../utils/logger/logger';
+import { EventBus } from '../events/EventBus';
+import { Holon, HolonType } from '../holons/HolonSystem';
 
 export interface PerformanceInsight {
     id: string;
@@ -70,6 +70,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Adapt to a specific holon's characteristics and needs
+     * @param holon
      */
     async adaptToHolon(holon: Holon): Promise<void> {
         const config = this.getHolonConfig(holon.type);
@@ -90,6 +91,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Get holon-specific configuration
+     * @param holonType
      */
     private getHolonConfig(holonType: HolonType): HolonPerformanceConfig {
         const configs: Record<HolonType, HolonPerformanceConfig> = {
@@ -148,6 +150,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Get default configuration for unknown holon types
+     * @param holonType
      */
     private getDefaultConfig(holonType: HolonType): HolonPerformanceConfig {
         return {
@@ -162,6 +165,8 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Setup holon-specific tracking
+     * @param holon
+     * @param config
      */
     private async setupHolonSpecificTracking(holon: Holon, config: HolonPerformanceConfig): Promise<void> {
         // Store configuration for this holon
@@ -177,6 +182,8 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Setup metric tracking for a specific holon and metric
+     * @param holon
+     * @param metric
      */
     private async setupMetricTracking(holon: Holon, metric: string): Promise<void> {
         const eventName = `${holon.type.toLowerCase()}_${metric}`;
@@ -188,6 +195,8 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Set monitoring frequency based on holon activity patterns
+     * @param holon
+     * @param frequency
      */
     private async setMonitoringFrequency(holon: Holon, frequency: number): Promise<void> {
         // Adjust monitoring frequency based on holon activity
@@ -205,6 +214,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Get holon activity level
+     * @param holon
      */
     private async getHolonActivityLevel(holon: Holon): Promise<'low' | 'medium' | 'high'> {
         // Analyze recent activity data for this holon
@@ -220,6 +230,8 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Setup domain-specific insights
+     * @param holon
+     * @param insightTypes
      */
     private async setupDomainInsights(holon: Holon, insightTypes: string[]): Promise<void> {
         for (const insightType of insightTypes) {
@@ -229,6 +241,8 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Setup insight generation for a specific type
+     * @param holon
+     * @param insightType
      */
     private async setupInsightGeneration(holon: Holon, insightType: string): Promise<void> {
         // Setup periodic insight generation based on holon activity
@@ -243,6 +257,8 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Generate insight for a specific holon and type
+     * @param holon
+     * @param insightType
      */
     private async generateInsight(holon: Holon, insightType: string): Promise<PerformanceInsight | null> {
         const holonData = this.trackingData
@@ -257,6 +273,9 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Analyze holon data to generate insights
+     * @param holon
+     * @param insightType
+     * @param data
      */
     private async analyzeHolonData(holon: Holon, insightType: string, data: EmbeddedTrackingData[]): Promise<PerformanceInsight> {
         const insight: PerformanceInsight = {
@@ -299,6 +318,11 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Record metric data seamlessly
+     * @param holonId
+     * @param holonType
+     * @param metric
+     * @param value
+     * @param context
      */
     private recordMetric(holonId: string, holonType: HolonType, metric: string, value: number, context?: any): void {
         const trackingData: EmbeddedTrackingData = {
@@ -321,6 +345,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Handle holon activity events
+     * @param data
      */
     private async handleHolonActivity(data: any): Promise<void> {
         const { holonId, holonType, activity, context } = data;
@@ -334,6 +359,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Handle command execution events
+     * @param data
      */
     private async handleCommandExecution(data: any): Promise<void> {
         const { holonId, holonType, command, duration, success, context } = data;
@@ -348,6 +374,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Handle workflow completion events
+     * @param data
      */
     private async handleWorkflowCompletion(data: any): Promise<void> {
         const { holonId, holonType, workflow, duration, success, context } = data;
@@ -362,6 +389,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Handle user interaction events
+     * @param data
      */
     private async handleUserInteraction(data: any): Promise<void> {
         const { holonId, holonType, interaction, satisfaction, context } = data;
@@ -375,6 +403,10 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Check for insights based on recent activity
+     * @param holonId
+     * @param holonType
+     * @param activityType
+     * @param context
      */
     private async checkForInsights(holonId: string, holonType: HolonType, activityType: string, context: any): Promise<void> {
         const config = this.holonConfigs.get(holonId);
@@ -393,6 +425,7 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Get insights for a specific holon
+     * @param holonId
      */
     async getInsightsForHolon(holonId: string): Promise<PerformanceInsight[]> {
         return this.insights
@@ -412,6 +445,8 @@ export class EmbeddedPerformanceManager {
 
     /**
      * Get performance data for a specific holon
+     * @param holonId
+     * @param timeRange
      */
     async getHolonPerformanceData(holonId: string, timeRange: number = 3600000): Promise<EmbeddedTrackingData[]> {
         const cutoff = Date.now() - timeRange;

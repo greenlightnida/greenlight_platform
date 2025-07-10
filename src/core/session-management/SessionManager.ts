@@ -1,4 +1,5 @@
 import { EventEmitter } from 'events';
+
 import { generateId, generateSessionId, generateLaunchSessionId, generateWorkSessionId } from '../../utils/common/formatting';
 
 export interface Session {

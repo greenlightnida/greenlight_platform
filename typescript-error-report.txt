@@ -1,0 +1,197 @@
+src/core/operations/ServerGovernor.ts(314,5): error TS1128: Declaration or statement expected.
+src/core/operations/ServerGovernor.ts(503,7): error TS1128: Declaration or statement expected.
+src/core/operations/ServerGovernor.ts(534,7): error TS1128: Declaration or statement expected.
+src/core/operations/ServerGovernor.ts(697,7): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(375,16): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(376,8): error TS1472: 'catch' or 'finally' expected.
+src/core/operations/ServerManager.ts(388,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(388,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(388,41): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(388,58): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(388,73): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(388,87): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(390,11): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(390,19): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(402,6): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(404,9): error TS1003: Identifier expected.
+src/core/operations/ServerManager.ts(404,14): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(404,36): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(404,38): error TS1136: Property assignment expected.
+src/core/operations/ServerManager.ts(416,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(418,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(418,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(418,45): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(418,62): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(418,77): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(418,91): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(419,9): error TS1003: Identifier expected.
+src/core/operations/ServerManager.ts(419,25): error TS1005: '{' expected.
+src/core/operations/ServerManager.ts(419,31): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(422,22): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(422,53): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(422,55): error TS1136: Property assignment expected.
+src/core/operations/ServerManager.ts(444,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(447,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(447,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(447,38): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(447,53): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(447,85): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(447,120): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(447,129): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(447,143): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(448,11): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(448,17): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(457,6): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(459,9): error TS1003: Identifier expected.
+src/core/operations/ServerManager.ts(459,14): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(459,35): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(459,37): error TS1136: Property assignment expected.
+src/core/operations/ServerManager.ts(470,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(472,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(472,10): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(472,42): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(472,60): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(472,69): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(472,83): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(473,11): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(473,74): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(480,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(480,10): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(480,38): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(480,56): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(480,65): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(480,79): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(481,11): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(481,74): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(489,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(489,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(489,43): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(489,57): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(490,9): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(491,12): error TS1359: Identifier expected. 'const' is a reserved word that cannot be used here.
+src/core/operations/ServerManager.ts(491,18): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(491,23): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(491,26): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(499,7): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(504,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(504,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(504,50): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(504,67): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(504,82): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(504,96): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(505,11): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(505,72): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(506,7): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(506,68): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(510,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(510,33): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(510,48): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(510,57): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(510,59): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(516,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(516,28): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(516,30): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(520,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(520,45): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(520,60): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(522,9): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(522,38): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(523,9): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(523,37): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(527,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(527,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(527,45): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(527,60): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(527,74): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(528,11): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(528,15): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(528,60): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(531,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(531,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(531,43): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(531,66): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(531,72): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(531,86): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(532,11): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(532,15): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(532,60): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(535,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(535,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(535,40): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(535,63): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(535,69): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(535,83): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(536,11): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(536,15): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(536,60): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(539,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(539,11): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(539,48): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(539,63): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(539,77): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(540,11): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(540,15): error TS1005: ':' expected.
+src/core/operations/ServerManager.ts(540,60): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(544,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(544,22): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(544,37): error TS1011: An element access expression should take an argument.
+src/core/operations/ServerManager.ts(544,39): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(548,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(548,29): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(548,38): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(548,65): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(552,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(552,36): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(552,52): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(552,67): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(552,83): error TS1011: An element access expression should take an argument.
+src/core/operations/ServerManager.ts(552,85): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(556,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(556,35): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(556,56): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(556,73): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(556,87): error TS1011: An element access expression should take an argument.
+src/core/operations/ServerManager.ts(556,89): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(561,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(561,38): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(561,47): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(561,65): error TS1011: An element access expression should take an argument.
+src/core/operations/ServerManager.ts(561,67): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(565,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(565,27): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(565,29): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(584,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(584,10): error TS1434: Unexpected keyword or identifier.
+src/core/operations/ServerManager.ts(584,26): error TS1005: ';' expected.
+src/core/operations/ServerManager.ts(584,40): error TS1109: Expression expected.
+src/core/operations/ServerManager.ts(585,13): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(585,33): error TS1005: ',' expected.
+src/core/operations/ServerManager.ts(585,35): error TS1136: Property assignment expected.
+src/core/operations/ServerManager.ts(595,3): error TS1128: Declaration or statement expected.
+src/core/operations/ServerManager.ts(596,1): error TS1128: Declaration or statement expected.
+src/core/session-management/SessionsManager.tsx(395,1): error TS1128: Declaration or statement expected.
+src/dashboards/executive/ExecutiveDashboard.tsx(94,3): error TS1128: Declaration or statement expected.
+src/dashboards/executive/ExecutiveDashboard.tsx(176,3): error TS1128: Declaration or statement expected.
+src/dashboards/executive/ExecutiveDashboard.tsx(201,3): error TS1128: Declaration or statement expected.
+src/dashboards/executive/ExecutiveDashboard.tsx(238,3): error TS1128: Declaration or statement expected.
+src/dashboards/executive/ExecutiveDashboard.tsx(255,3): error TS1128: Declaration or statement expected.
+src/dashboards/executive/ExecutiveDashboard.tsx(298,3): error TS1128: Declaration or statement expected.
+src/dashboards/executive/ExecutiveDashboard.tsx(342,1): error TS1128: Declaration or statement expected.
+src/dashboards/roadmap/RoadmapDashboard.tsx(392,1): error TS1128: Declaration or statement expected.
+src/utils/cache/cache.ts(150,10): error TS1005: ';' expected.
+src/utils/cache/cache.ts(151,1): error TS1128: Declaration or statement expected.
+src/utils/cache/cache.ts(151,2): error TS1128: Declaration or statement expected.
+src/utils/cache/cache.ts(154,10): error TS1005: ';' expected.
+src/utils/cache/cache.ts(155,1): error TS1128: Declaration or statement expected.
+src/utils/cache/cache.ts(155,2): error TS1128: Declaration or statement expected.
+src/utils/cache/cache.ts(158,10): error TS1005: ';' expected.
+src/utils/cache/cache.ts(159,1): error TS1128: Declaration or statement expected.
+src/utils/cache/cache.ts(159,2): error TS1128: Declaration or statement expected.
+src/utils/common/formatting.ts(154,1): error TS1128: Declaration or statement expected.
+src/utils/common/formatting.ts(169,1): error TS1128: Declaration or statement expected.
+src/utils/common/formatting.ts(173,1): error TS1128: Declaration or statement expected.
+src/utils/common/formatting.ts(177,1): error TS1128: Declaration or statement expected.
+src/utils/common/formatting.ts(181,1): error TS1128: Declaration or statement expected.
+src/utils/common/formatting.ts(186,1): error TS1128: Declaration or statement expected.
+src/utils/common/formatting.ts(191,1): error TS1128: Declaration or statement expected.
+src/utils/common/formatting.ts(196,1): error TS1128: Declaration or statement expected.

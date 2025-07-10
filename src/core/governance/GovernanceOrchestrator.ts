@@ -1,4 +1,5 @@
 import { EventEmitter } from 'events';
+
 import { Logger } from '../../utils/logger/logger';
 
 export interface GovernanceRule {
@@ -129,7 +130,7 @@ class GovernanceOrchestrator extends EventEmitter {
           return value !== undefined && value !== null;
         case 'not_exists':
           return value === undefined || value === null;
-        _default: return false;
+        return false;
       }
     });
   }

@@ -18,6 +18,9 @@ export interface WindowOptions {
 
 /**
  * Opens a new window with the specified URL and options
+ * @param url
+ * @param target
+ * @param options
  */
 export function openWindow(
   url: string, 
@@ -81,6 +84,7 @@ export function closeAllWindows(): void {
 
 /**
  * Checks if a window is still open
+ * @param window
  */
 export function isWindowOpen(window: Window | null): boolean {
   return window !== null && !window.closed;
@@ -88,6 +92,7 @@ export function isWindowOpen(window: Window | null): boolean {
 
 /**
  * Focuses a window if it's open
+ * @param window
  */
 export function focusWindow(window: Window | null): boolean {
   if (isWindowOpen(window)) {

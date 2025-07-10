@@ -1,0 +1,71 @@
+{
+  "assessmentId": "assessment-1752113480547-99vhxmvsy",
+  "timestamp": "2025-07-10T02:11:20.547Z",
+  "target": "elevate",
+  "duration": 89,
+  "status": "incomplete",
+  "metrics": {
+    "files": {
+      "found": [
+        "/Users/home/Developer/greenlight-platform/src/components/elevate/index.tsx"
+      ],
+      "missing": [
+        "src/core/holons/elevate/"
+      ],
+      "misplaced": [
+        "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/index.ts",
+        "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/types.ts",
+        "/Users/home/Developer/greenlight-platform/src/components/Elevate/index.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/Elevate.tsx"
+      ]
+    },
+    "managers": {
+      "ElevateManager": {
+        "found": false,
+        "path": null
+      },
+      "CoachingManager": {
+        "found": false,
+        "path": null
+      },
+      "PlayerManager": {
+        "found": false,
+        "path": null
+      }
+    },
+    "components": {
+      "CoachingToolkit": {
+        "found": false,
+        "path": null
+      },
+      "PlayerGrid": {
+        "found": false,
+        "path": null
+      },
+      "MediaLibrary": {
+        "found": false,
+        "path": null
+      }
+    },
+    "services": {
+      "playerService": {
+        "found": false,
+        "path": null
+      },
+      "coachingService": {
+        "found": false,
+        "path": null
+      }
+    },
+    "misplacedFiles": [
+      "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/index.ts",
+      "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/types.ts",
+      "/Users/home/Developer/greenlight-platform/src/components/Elevate/index.tsx",
+      "/Users/home/Developer/greenlight-platform/frontend/src/pages/Elevate.tsx"
+    ]
+  },
+  "issues": [],
+  "recommendations": [],
+  "misplacedFiles": [],
+  "effectiveness": {}
+}

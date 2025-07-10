@@ -419,6 +419,10 @@ const GovernancePanel: React.FC<{ data?: GovernanceData | undefined }> = ({ data
 };
 
 // Helper function for status badge
+/**
+ *
+ * @param status
+ */
 function getStatusBadge(status: string) {
   switch (status) {
     case 'active': return <span className="bg-green-200 text-green-800 px-2 py-1 rounded">Active</span>;
@@ -429,6 +433,10 @@ function getStatusBadge(status: string) {
 }
 
 // Helper function for priority badge
+/**
+ *
+ * @param priority
+ */
 function getPriorityBadge(priority: string) {
   switch (priority) {
     case 'high': return <span className="bg-red-100 text-red-800 px-2 py-1 rounded">High</span>;

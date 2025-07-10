@@ -13,6 +13,7 @@
  */
 
 import { EventEmitter } from 'events';
+
 import { EnvironmentVariableManager, VariableError, VariableRecommendation } from './EnvironmentVariableManager';
 
 // ============================================================================
@@ -404,7 +405,7 @@ export class EnvironmentGovernance extends EventEmitter {
       switch (_rule._condition) {
         case 'required_var_missing':
           const _variable = this._envVarManager.getVariable(_violation.variable);
-          if (_variable && _variable.defaultValue) {
+          if (_variable?.defaultValue) {
             await this._envVarManager.setVariable(_violation.variable, _variable.defaultValue);
             console.log(`🔧 Auto-fixed missing required variable: ${_violation.variable}`);
           }

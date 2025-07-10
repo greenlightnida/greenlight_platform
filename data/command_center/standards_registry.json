@@ -1,0 +1,218 @@
+{
+  "standards": [
+    {
+      "id": "standard-1752114434461-xz1r0c22o",
+      "name": "CISQ Logging Standard",
+      "category": "custom",
+      "status": "pending",
+      "added": "2025-07-10T02:27:14.461Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false
+    },
+    {
+      "id": "standard-1752114438037-ipalehgj9",
+      "name": "TypeScript Compilation Standards",
+      "category": "custom",
+      "status": "pending",
+      "added": "2025-07-10T02:27:18.037Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false
+    },
+    {
+      "id": "synth-1752114685182-zf4snn4id",
+      "name": "TestingHolonManager: Professional Standards",
+      "category": "testing",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.182Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "src/core/holons/testing/TestingHolonManager.ts",
+      "details": {
+        "complianceLevel": [
+          "basic",
+          "standard",
+          "enterprise"
+        ],
+        "protocols": [
+          "featureTesting",
+          "regressionTesting",
+          "performanceTesting",
+          "securityTesting",
+          "accessibilityTesting",
+          "deploymentTesting"
+        ],
+        "qualityGates": true,
+        "auditTrail": true,
+        "automatedReviews": true
+      }
+    },
+    {
+      "id": "synth-1752114685184-0qqhvi4yq",
+      "name": "FrontendManager: Architecture & Design Standards",
+      "category": "frontend",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "src/core/holons/systemMaster/FrontendManager.ts",
+      "details": {
+        "designSystem": true,
+        "componentLibrary": true,
+        "accessibility": "WCAG 2.1 AA",
+        "performance": "< 50KB bundle",
+        "documentation": "storybook/jsdoc/markdown"
+      }
+    },
+    {
+      "id": "synth-1752114685184-rzfetw28w",
+      "name": "FeaturesHolon: Feature Compliance",
+      "category": "features",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "src/core/holons/features/FeaturesHolon.ts",
+      "details": {
+        "complianceRate": true,
+        "qualityMetrics": true
+      }
+    },
+    {
+      "id": "synth-1752114685184-svi4heguw",
+      "name": "ServerGovernor: Server Compliance Policies",
+      "category": "server",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "src/core/operations/ServerGovernor.ts",
+      "details": {
+        "policyEvaluation": true,
+        "violationTracking": true,
+        "complianceReporting": true
+      }
+    },
+    {
+      "id": "synth-1752114685184-2siaxnxg7",
+      "name": "Governance/Compliance: Policy Enforcement",
+      "category": "governance",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "scripts/implement_phase1_modularization.cjs",
+      "details": {
+        "policies": [
+          "accessibility",
+          "performance",
+          "design"
+        ],
+        "complianceReporting": true
+      }
+    },
+    {
+      "id": "synth-1752114685184-93uzd7fum",
+      "name": "Design System Management Protocol: Quality & Compliance",
+      "category": "design-system",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "scripts/protocols/design-system-management.cjs",
+      "details": {
+        "qualityAssurance": true,
+        "complianceChecking": true,
+        "standardsUpdate": true
+      }
+    },
+    {
+      "id": "synth-1752114685184-f7lt3lzpl",
+      "name": "WCAG 2.1 AA Accessibility",
+      "category": "accessibility",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "docs/phases/COMPREHENSIVE_STANDARDIZATION_PLAN.md",
+      "details": {
+        "compliance": "WCAG 2.1 AA"
+      }
+    },
+    {
+      "id": "synth-1752114685184-8dba219ew",
+      "name": "90% Test Coverage",
+      "category": "testing",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "docs/phases/COMPREHENSIVE_STANDARDIZATION_PLAN.md",
+      "details": {
+        "coverage": "90%"
+      }
+    },
+    {
+      "id": "synth-1752114685184-u6f2jsorh",
+      "name": "<50KB Bundle Size",
+      "category": "performance",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "docs/phases/COMPREHENSIVE_STANDARDIZATION_PLAN.md",
+      "details": {
+        "bundle": "<50KB"
+      }
+    },
+    {
+      "id": "synth-1752114685184-isa4tkpz5",
+      "name": "Automated Code Quality Checks",
+      "category": "quality",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "docs/phases/COMPREHENSIVE_STANDARDIZATION_PLAN.md",
+      "details": {
+        "linting": "strict",
+        "prettier": "enforced",
+        "typescript": "strict"
+      }
+    },
+    {
+      "id": "synth-1752114685184-4fxfmrc4s",
+      "name": "CI/CD Quality Gates",
+      "category": "cicd",
+      "status": "synthesized",
+      "added": "2025-07-10T02:31:25.184Z",
+      "version": "1.0.0",
+      "holonScope": "system-wide",
+      "councilApproval": false,
+      "source": "data/cicd-protocols.json",
+      "details": {
+        "testCoverage": 80,
+        "performance": "acceptable",
+        "security": "pass",
+        "accessibility": "pass"
+      }
+    }
+  ],
+  "version": "2.0.0",
+  "lastUpdated": "2025-07-10T02:31:25.184Z",
+  "holonCompliance": {},
+  "councilApprovals": [],
+  "alerts": [],
+  "complianceManagerPaired": true
+}

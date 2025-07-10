@@ -1,0 +1,41 @@
+{
+  "timestamp": "2025-07-10T01:42:44.726Z",
+  "sessionId": "wrap-1752111764716-76gmhzyrt",
+  "protocol": "wrap_annihilate",
+  "environment": {
+    "nodeVersion": "v22.16.0",
+    "platform": "darwin",
+    "arch": "x64",
+    "cwd": "/Users/home/Developer/greenlight-platform"
+  },
+  "system": {
+    "memory": {
+      "rss": 31043584,
+      "heapTotal": 5574656,
+      "heapUsed": 4445368,
+      "external": 1566157,
+      "arrayBuffers": 10515
+    },
+    "uptime": 0.036703213,
+    "pid": 31952
+  },
+  "git": {
+    "branch": "clean-main",
+    "commit": "f31352d42782b281d2c3f36dcf8725ba28cde069",
+    "status": "M BOUNDARY_ENFORCEMENT_REPORT.json\n M CUSTODIAN_REPORT.json\n M LAUNCH_REPORT.json\n M ROADMAP_ANCHOR.json\n M SYSTEM_AUDIT_REPORT.json\n M backend/src/index.ts\n M backend/src/routes/managers.ts\n M backend/src/routes/testing.ts\n M data/audits/anchor_updates_audit.json\n M data/command_history.json\n M data/council/council_activities.json\n M data/council/council_results.json\n M data/council/council_state.json\n M data/protocols/protocol-validation-report.json\n M data/protocols/system-state.json\n M docs/protocols/CURRENT_SESSION_CONTEXT.md\n M docs/protocols/FINAL_SESSION_CONTEXT.md\n M docs/protocols/TRANSITION_MEMO.md\n M docs/protocols/TRANSITION_PACKAGE.md\n M docs/summaries/NEXT_SESSION_CONTEXT.md\n M frontend/src/App.tsx\n M frontend/src/components/Header.tsx\n M frontend/src/components/Sidebar.tsx\n M frontend/src/main.tsx\n M frontend/src/pages/Dashboard.tsx\n M greenlight-wiki/PROTOCOLS.md\n M package.json\n M scripts/command_coordinator.cjs\n M src/components/SecurityDashboard/SecurityDashboard.tsx\n M src/core/governance/CommandCenter.ts\n M src/core/governance/EnvironmentGovernance.ts\n M src/core/governance/GovernanceOrchestrator.ts\n M src/core/governance/ReferenceManager.ts\n M src/core/holons/features/FeaturesHolon.ts\n M src/core/holons/operations/ErrorManagerHolon.ts\n M src/core/holons/security/SecurityManagementTeam.ts\n M src/core/holons/systemMaster/SystemMasterManager.ts\n M src/core/holons/systemMaster/modules/Governance.ts\n M src/core/operations/OperationsMaster.ts\n M src/core/operations/ServerManager.ts\n M src/core/performance/EmbeddedPerformanceManager.ts\n M src/core/session-management/SessionManager.ts\n M src/dashboards/features/FeaturesDashboard.tsx\n M src/dashboards/governance/CommandCenterDashboard.tsx\n M src/dashboards/product/ProductDashboard.tsx\n M src/dashboards/roadmap/RoadmapActualsDashboard.tsx\n M src/design-system/components/theme/useTheme.ts\n M src/index.ts\n M src/services/ai/aiInsightsService.ts\n M src/services/auth/google-auth-service.ts\n M src/services/integrations/githubIntegrationService.ts\n M src/services/integrations/supabaseSchemaService.ts\n M src/services/performance/performanceTrackingService.ts\n M src/utils/common/cn.ts\n M src/utils/common/roadmapActuals.ts\n M src/utils/common/sessionTracking.ts\n M src/utils/common/windowManager.ts\n M src/utils/logger/logger.ts\n M tsconfig.json\n?? ANCHOR_COMMAND_ANALYSIS_AND_SOLUTION.md\n?? COMMAND_CENTER_AUDIT_OPTIMIZATION_REPORT.md\n?? DEPLOYMENT_PIPELINE_IMPLEMENTATION_SUMMARY.md\n?? NEXT_SESSION_HANDOFF.md\n?? config/deployment/\n?? data/audits/command_audit_audit-1752107099824-viv7ytam3.json\n?? data/audits/command_audit_audit-1752107327263-4jabpznzq.json\n?? data/audits/command_audit_audit-1752107380381-moz3b0mq0.json\n?? data/audits/command_audit_audit-1752107418576-cfpkbupe5.json\n?? data/audits/command_audit_audit-1752107436487-7ssv4txzz.json\n?? data/audits/command_audit_audit-1752107761150-0r2ylb0z7.json\n?? data/audits/command_audit_audit-1752107803368-2pqwwtpx7.json\n?? data/audits/cross_functional_audit_1752109791303.json\n?? data/context-preservation/enabled-wrap-20250709-234400-1752104640944-uqw0mz9qb-context.json\n?? data/cross_system_learning.json\n?? data/deployment/\n?? data/governance/\n?? data/integration_log.json\n?? data/optimization/\n?? data/protocols/prevention-report-1752105292890.json\n?? data/protocols/prevention-report-1752106627517.json\n?? data/protocols/protocol-update-1752111470092-report.json\n?? data/protocols/protocol-update-1752111590960-report.json\n?? data/protocols/safety-check-custodian-1752105289674.json\n?? data/protocols/safety-check-custodian-1752106624296.json\n?? data/protocols/safety-check-end_of_chat-1752105289475.json\n?? data/protocols/safety-check-end_of_chat-1752106624098.json\n?? data/protocols/safety-check-launch-1752105289387.json\n?? data/protocols/safety-check-launch-1752106623998.json\n?? data/protocols/safety-check-pre_wrap_audit-1752105289577.json\n?? data/protocols/safety-check-pre_wrap_audit-1752106624198.json\n?? data/reports/enabled-wrap-20250709-234300-1752104580855-bdplxe4c7-wrap-report.json\n?? data/reports/enabled-wrap-20250709-234400-1752104640944-uqw0mz9qb-final-wrap-report.json\n?? data/reports/enabled-wrap-20250710-014128-1752111688561-6htb8w7yr-wrap-report.json\n?? data/reports/enabled-wrap-20250710-014158-1752111718387-ix70q6eth-wrap-report.json\n?? data/sessions/enabled-wrap-20250709-234300-1752104580855-bdplxe4c7-context.json\n?? data/sessions/enabled-wrap-20250709-234400-1752104640944-uqw0mz9qb-final-context.json\n?? data/sessions/enabled-wrap-20250710-014128-1752111688561-6htb8w7yr-context.json\n?? data/sessions/enabled-wrap-20250710-014158-1752111718387-ix70q6eth-context.json\n?? data/sessions/session-2025-07-09T23-37-46-380Z.json\n?? data/sessions/session-2025-07-09T23-39-42-065Z.json\n?? data/sessions/session-2025-07-09T23-41-05-195Z.json\n?? data/sessions/session-2025-07-10T00-04-12-656Z.json\n?? data/sessions/session-2025-07-10T00-05-18-157Z.json\n?? data/sessions/session-2025-07-10T00-10-04-875Z.json\n?? data/sessions/session-2025-07-10T00-10-39-964Z.json\n?? data/sessions/session-2025-07-10T00-15-44-623Z.json\n?? data/sessions/transition-memo-2025-07-09T23-55-22-431Z.json\n?? data/sessions/transition-memo-2025-07-10T00-17-27-252Z.json\n?? data/sessions/typescript_remediation_session.json\n?? data/system-assessment/system_assessment_report_system_assessment_1752109783273.json\n?? data/system-state/enabled-wrap-20250709-234300-1752104580855-bdplxe4c7-system-state.json\n?? data/system-state/enabled-wrap-20250709-234400-1752104640944-uqw0mz9qb-preserved-state.json\n?? data/system-state/enabled-wrap-20250710-014128-1752111688561-6htb8w7yr-system-state.json\n?? data/system-state/enabled-wrap-20250710-014158-1752111718387-ix70q6eth-system-state.json\n?? data/transitions/enabled-wrap-20250709-234400-1752104640944-uqw0mz9qb-transition.json\n?? data/transitions/typescript_remediation_plan.json\n?? data/typescript_fix_log.json\n?? docs/CODE_CZAR_EXECUTIVE_INTEGRATION_SUMMARY.md\n?? docs/TYPESCRIPT_OPTIMIZATION_SYSTEM_SUMMARY.md\n?? docs/deployment/DEPLOYMENT_PIPELINE_GUIDE.md\n?? scripts/command_audit_optimizer.cjs\n?? scripts/deployment/\n?? scripts/fix_typescript_issues.cjs\n?? scripts/integration/\n?? scripts/monitoring/\n?? scripts/optimization/\n?? scripts/protocols/wrap_protocol.cjs\n?? src/components/monitoring/\n?? src/core/governance/CodeCzarManager.ts\n?? src/core/governance/Committee.ts\n?? src/core/governance/ConnectivityIntegrationManager.ts\n?? src/core/governance/DataTelemetryManager.ts\n?? src/core/governance/ExecutiveCommitteeManager.ts\n?? src/core/governance/ProcessManager.ts\n?? src/core/governance/UserConstituencyManager.ts\n?? src/core/governance/index.ts\n?? src/core/holons/protocols/\n?? src/core/holons/security/SecurityComplianceManager.ts\n?? src/core/session-management/EnhancedSessionManager.ts\n?? src/core/session-management/IntegratedSessionManager.ts\n?? src/services/monitoring/\n?? typescript-error-report.txt"
+  },
+  "packages": {
+    "root": {
+      "name": "greenlight-platform",
+      "version": "1.0.0"
+    },
+    "backend": {
+      "name": "greenlight-platform-backend",
+      "version": "1.0.0"
+    },
+    "frontend": {
+      "name": "frontend",
+      "version": "0.0.0"
+    }
+  }
+}

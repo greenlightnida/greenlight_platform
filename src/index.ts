@@ -1,6 +1,6 @@
 import { _governanceOrchestrator as governanceOrchestrator } from './core/governance/GovernanceOrchestrator.js';
-import { sessionManager } from './core/session-management/SessionManager.js';
 import { _protocolManager as protocolManager } from './core/protocols/ProtocolManager.js';
+import { sessionManager } from './core/session-management/SessionManager.js';
 
 class GreenlightPlatform {
   private governanceOrchestrator: typeof governanceOrchestrator;
@@ -195,6 +195,9 @@ class GreenlightPlatform {
 
   /**
    * Execute protocol for a repository
+   * @param repositoryId
+   * @param protocolName
+   * @param context
    */
   async executeProtocol(repositoryId: string, protocolName: string, context: any): Promise<void> {
     try {
@@ -214,6 +217,9 @@ class GreenlightPlatform {
 }
 
 // Main execution
+/**
+ *
+ */
 async function main() {
   const platform = new GreenlightPlatform();
   

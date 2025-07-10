@@ -220,6 +220,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Add a planned milestone
+   * @param milestone
    */
   addPlannedMilestone(milestone: PlannedMilestone): void {
     this.plannedMilestones.set(milestone.id, milestone);
@@ -227,6 +228,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Add an actual milestone
+   * @param milestone
    */
   addActualMilestone(milestone: ActualMilestone): void {
     this.actualMilestones.set(milestone.id, milestone);
@@ -234,6 +236,8 @@ export class RoadmapActualsTracker {
 
   /**
    * Update actual milestone progress
+   * @param milestoneId
+   * @param updates
    */
   updateActualMilestone(
     milestoneId: string,
@@ -268,6 +272,9 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate roadmap actuals report
+   * @param startDate
+   * @param endDate
+   * @param period
    */
   generateActualsReport(
     startDate: Date,
@@ -291,6 +298,9 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate roadmap actuals data
+   * @param startDate
+   * @param endDate
+   * @param period
    */
   private generateRoadmapActuals(
     startDate: Date,
@@ -325,6 +335,8 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate summary metrics
+   * @param plannedMilestones
+   * @param actualMilestones
    */
   private calculateSummary(
     plannedMilestones: PlannedMilestone[],
@@ -350,6 +362,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate timeline performance
+   * @param actualMilestones
    */
   private calculateTimelinePerformance(actualMilestones: ActualMilestone[]) {
     const onTimeMilestones = actualMilestones.filter(m => m.timelineVariance === 0).length;
@@ -375,6 +388,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate effort performance
+   * @param actualMilestones
    */
   private calculateEffortPerformance(actualMilestones: ActualMilestone[]) {
     const underBudgetEffort = actualMilestones.filter(m => m.effortVariance < 0).length;
@@ -400,6 +414,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate budget performance
+   * @param actualMilestones
    */
   private calculateBudgetPerformance(actualMilestones: ActualMilestone[]) {
     const milestonesWithBudget = actualMilestones.filter(m => m.budgetVariance !== undefined);
@@ -433,6 +448,8 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate quality performance
+   * @param plannedMilestones
+   * @param actualMilestones
    */
   private calculateQualityPerformance(
     plannedMilestones: PlannedMilestone[],
@@ -470,6 +487,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate risk assessment
+   * @param actualMilestones
    */
   private calculateRiskAssessment(actualMilestones: ActualMilestone[]) {
     const highRiskMilestones = actualMilestones.filter(m => 
@@ -509,6 +527,8 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate timeline variance
+   * @param planned
+   * @param actual
    */
   private calculateTimelineVariance(
     planned: PlannedMilestone,
@@ -525,6 +545,8 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate effort variance
+   * @param planned
+   * @param actual
    */
   private calculateEffortVariance(
     planned: PlannedMilestone,
@@ -537,6 +559,8 @@ export class RoadmapActualsTracker {
 
   /**
    * Calculate budget variance
+   * @param planned
+   * @param actual
    */
   private calculateBudgetVariance(
     planned: PlannedMilestone,
@@ -549,6 +573,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate executive summary
+   * @param roadmapActuals
    */
   private generateExecutiveSummary(roadmapActuals: RoadmapActuals) {
     const { summary, timelinePerformance, effortPerformance, riskAssessment } = roadmapActuals;
@@ -610,6 +635,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate detailed analysis
+   * @param roadmapActuals
    */
   private generateDetailedAnalysis(roadmapActuals: RoadmapActuals) {
     const timelineAnalysis = this.generateTimelineAnalysis(roadmapActuals);
@@ -627,6 +653,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate timeline analysis
+   * @param roadmapActuals
    */
   private generateTimelineAnalysis(roadmapActuals: RoadmapActuals): TimelineAnalysis {
     const { timelinePerformance, actualMilestones } = roadmapActuals;
@@ -678,6 +705,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate effort analysis
+   * @param roadmapActuals
    */
   private generateEffortAnalysis(roadmapActuals: RoadmapActuals): EffortAnalysis {
     const { effortPerformance, actualMilestones } = roadmapActuals;
@@ -723,6 +751,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate quality analysis
+   * @param roadmapActuals
    */
   private generateQualityAnalysis(roadmapActuals: RoadmapActuals): QualityAnalysis {
     const { qualityPerformance, actualMilestones } = roadmapActuals;
@@ -760,6 +789,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate risk analysis
+   * @param roadmapActuals
    */
   private generateRiskAnalysis(roadmapActuals: RoadmapActuals): RiskAnalysis {
     const { riskAssessment, actualMilestones } = roadmapActuals;
@@ -812,6 +842,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Generate forecast
+   * @param roadmapActuals
    */
   private generateForecast(roadmapActuals: RoadmapActuals) {
     const { actualMilestones, plannedMilestones } = roadmapActuals;
@@ -871,6 +902,7 @@ export class RoadmapActualsTracker {
 
   /**
    * Import actuals data from JSON
+   * @param jsonData
    */
   importActualsData(jsonData: string): void {
     try {

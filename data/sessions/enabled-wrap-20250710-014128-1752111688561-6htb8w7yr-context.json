@@ -1,0 +1,39 @@
+{
+  "sessionId": "enabled-wrap-20250710-014128-1752111688561-6htb8w7yr",
+  "timestamp": "2025-07-10T01:41:28.584Z",
+  "userEnabled": true,
+  "contextPreserved": true,
+  "systemState": {
+    "timestamp": "2025-07-10T01:41:28.584Z",
+    "nodeVersion": "v22.16.0",
+    "platform": "darwin",
+    "cwd": "/Users/home/Developer/greenlight-platform",
+    "env": "development"
+  },
+  "recentWork": {
+    "timestamp": "2025-07-10T01:41:28.585Z",
+    "files": [
+      "transition-memo-2025-07-09T21-06-15-079Z.json",
+      "transition-memo-2025-07-09T22-06-01-766Z.json",
+      "transition-memo-2025-07-09T23-55-22-431Z.json",
+      "transition-memo-2025-07-10T00-17-27-252Z.json",
+      "typescript_remediation_session.json"
+    ],
+    "errors": [],
+    "warnings": []
+  },
+  "pendingTasks": {
+    "timestamp": "2025-07-10T01:41:28.585Z",
+    "tasks": [],
+    "errors": [],
+    "warnings": []
+  },
+  "errorState": {
+    "timestamp": "2025-07-10T01:41:28.586Z",
+    "issues": [],
+    "warnings": [],
+    "contextPreserved": false,
+    "userEnabled": true
+  },
+  "nextSessionReady": true
+}

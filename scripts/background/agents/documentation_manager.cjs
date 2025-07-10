@@ -12,7 +12,7 @@ const path = require('path');
 
 console.log('Documentation Agent started');
 
-// Placeholder monitoring loop
+// Optimized monitoring loop with reduced frequency
 setInterval(() => {
   const timestamp = new Date().toISOString();
   console.log(`[${timestamp}] Documentation Agent monitoring...`);
@@ -23,7 +23,7 @@ setInterval(() => {
   // - Alert generation
   // - Status reporting
   
-}, 30000); // Check every 30 seconds
+}, 60000); // Check every 60 seconds to reduce contention
 
 // Graceful shutdown
 process.on('SIGTERM', () => {

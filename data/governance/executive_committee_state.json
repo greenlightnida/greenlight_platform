@@ -1,0 +1,770 @@
+{
+  "members": {
+    "exec-001": {
+      "id": "exec-001",
+      "name": "Chief Technology Officer",
+      "role": "CTO",
+      "expertise": [
+        "architecture",
+        "governance",
+        "strategy"
+      ],
+      "decisionAuthority": "executive",
+      "availability": "available",
+      "lastActive": "2025-07-10T01:29:27.375Z"
+    },
+    "exec-002": {
+      "id": "exec-002",
+      "name": "VP of Engineering",
+      "role": "VP Engineering",
+      "expertise": [
+        "development",
+        "optimization",
+        "performance"
+      ],
+      "decisionAuthority": "high",
+      "availability": "available",
+      "lastActive": "2025-07-10T01:29:27.375Z"
+    },
+    "exec-003": {
+      "id": "exec-003",
+      "name": "Head of Platform",
+      "role": "Platform Lead",
+      "expertise": [
+        "platform",
+        "infrastructure",
+        "scalability"
+      ],
+      "decisionAuthority": "high",
+      "availability": "available",
+      "lastActive": "2025-07-10T01:29:27.375Z"
+    }
+  },
+  "decisions": [
+    {
+      "id": "dec-1752111306676-u5nkrxms5",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:35:06.676Z"
+    },
+    {
+      "id": "dec-1752111306676-qnau8e6t8",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:35:06.676Z"
+    },
+    {
+      "id": "dec-1752111589592-t47vqmehh",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:39:49.592Z"
+    },
+    {
+      "id": "dec-1752111589592-i5h4le502",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:39:49.592Z"
+    },
+    {
+      "id": "dec-1752111889045-87dyv8rw0",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:44:49.045Z"
+    },
+    {
+      "id": "dec-1752111889045-uj89nh50f",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:44:49.045Z"
+    },
+    {
+      "id": "dec-1752112187006-pe3pu7ued",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:49:47.006Z"
+    },
+    {
+      "id": "dec-1752112187006-rktld9vku",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:49:47.006Z"
+    },
+    {
+      "id": "dec-1752112487392-h62ag6gec",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:54:47.392Z"
+    },
+    {
+      "id": "dec-1752112487392-xa36qszq4",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:54:47.392Z"
+    },
+    {
+      "id": "dec-1752112790929-ebuqmmdym",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:59:50.929Z"
+    },
+    {
+      "id": "dec-1752112790929-t068cphan",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T01:59:50.929Z"
+    },
+    {
+      "id": "dec-1752113086318-58d01lax2",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:04:46.318Z"
+    },
+    {
+      "id": "dec-1752113086318-z5w3eikux",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:04:46.318Z"
+    },
+    {
+      "id": "dec-1752113393332-brky2kky3",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:09:53.332Z"
+    },
+    {
+      "id": "dec-1752113393332-afcdtu19v",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:09:53.332Z"
+    },
+    {
+      "id": "dec-1752113687952-31369llaf",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:14:47.952Z"
+    },
+    {
+      "id": "dec-1752113687952-9ivlte038",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:14:47.952Z"
+    },
+    {
+      "id": "dec-1752113987033-9ty4ladjw",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:19:47.033Z"
+    },
+    {
+      "id": "dec-1752113987033-cmdugm6g7",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:19:47.033Z"
+    },
+    {
+      "id": "dec-1752114290006-4hrj9c2lp",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:24:50.006Z"
+    },
+    {
+      "id": "dec-1752114290006-fefaupfpr",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:24:50.006Z"
+    },
+    {
+      "id": "dec-1752114589932-sxt8e98nj",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:29:49.932Z"
+    },
+    {
+      "id": "dec-1752114589932-qlarc0old",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:29:49.932Z"
+    },
+    {
+      "id": "dec-1752114897388-jwlwhgajg",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:34:57.388Z"
+    },
+    {
+      "id": "dec-1752114897388-7bd8dijui",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:34:57.388Z"
+    },
+    {
+      "id": "dec-1752115192664-ytpz9f248",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:39:52.664Z"
+    },
+    {
+      "id": "dec-1752115192664-hwpvjum1e",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:39:52.664Z"
+    },
+    {
+      "id": "dec-1752115495447-57pyj6x0u",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:44:55.447Z"
+    },
+    {
+      "id": "dec-1752115495447-n24q7z97e",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:44:55.447Z"
+    },
+    {
+      "id": "dec-1752115810380-an2pwuyn6",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:50:10.380Z"
+    },
+    {
+      "id": "dec-1752115810380-zp7o8z7vv",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:50:10.380Z"
+    },
+    {
+      "id": "dec-1752116124147-vj08xt82i",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:55:24.147Z"
+    },
+    {
+      "id": "dec-1752116124147-l61oewo69",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T02:55:24.147Z"
+    },
+    {
+      "id": "dec-1752116420704-ipll7kg5b",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:00:20.704Z"
+    },
+    {
+      "id": "dec-1752116420704-hh7hf25wk",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:00:20.704Z"
+    },
+    {
+      "id": "dec-1752116720522-ajerc1ts3",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:05:20.522Z"
+    },
+    {
+      "id": "dec-1752116720522-dm7o84vhs",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:05:20.522Z"
+    },
+    {
+      "id": "dec-1752117025887-vu6l5xh3i",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:10:25.887Z"
+    },
+    {
+      "id": "dec-1752117025887-hng8uu405",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:10:25.887Z"
+    },
+    {
+      "id": "dec-1752117299362-8bsec6w8q",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:14:59.362Z"
+    },
+    {
+      "id": "dec-1752117299362-3lcgccl7w",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:14:59.362Z"
+    },
+    {
+      "id": "dec-1752117593251-7cmltyhfq",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:19:53.251Z"
+    },
+    {
+      "id": "dec-1752117593251-cfefo55dw",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:19:53.251Z"
+    },
+    {
+      "id": "dec-1752117868496-9wxl67gil",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:24:28.496Z"
+    },
+    {
+      "id": "dec-1752118215903-pr4jjexpi",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:30:15.903Z"
+    },
+    {
+      "id": "dec-1752118215903-f6ermgipk",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:30:15.903Z"
+    },
+    {
+      "id": "dec-1752118501588-liriqznjm",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:35:01.588Z"
+    },
+    {
+      "id": "dec-1752118501588-n0l9mz1yh",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:35:01.588Z"
+    },
+    {
+      "id": "dec-1752118816250-5r9wle7pp",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:40:16.250Z"
+    },
+    {
+      "id": "dec-1752118816250-c15t4zafp",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:40:16.250Z"
+    },
+    {
+      "id": "dec-1752119113690-g5ssn8n1m",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:45:13.690Z"
+    },
+    {
+      "id": "dec-1752119113690-leqa5b261",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:45:13.690Z"
+    },
+    {
+      "id": "dec-1752119401180-7fsy8au94",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:50:01.180Z"
+    },
+    {
+      "id": "dec-1752119401180-a7k48zdae",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:50:01.180Z"
+    },
+    {
+      "id": "dec-1752119697451-w5bb75826",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:54:57.451Z"
+    },
+    {
+      "id": "dec-1752119697451-y7qur388a",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:54:57.451Z"
+    },
+    {
+      "id": "dec-1752119987486-emylz2mwj",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:59:47.486Z"
+    },
+    {
+      "id": "dec-1752119987486-qnem0rfvm",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T03:59:47.486Z"
+    },
+    {
+      "id": "dec-1752145229191-vden3dwwh",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T11:00:29.191Z"
+    },
+    {
+      "id": "dec-1752145229191-1aw4ttrdr",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T11:00:29.191Z"
+    },
+    {
+      "id": "dec-1752152249726-i0txol97f",
+      "title": "Address Governance Score Decline",
+      "description": "Average governance score is 0/100. Strategic intervention required.",
+      "priority": "high",
+      "category": "governance",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T12:57:29.726Z"
+    },
+    {
+      "id": "dec-1752152249726-l12kgdznk",
+      "title": "Improve Optimization Effectiveness",
+      "description": "Optimization effectiveness is 0%. Review and improve strategies.",
+      "priority": "medium",
+      "category": "optimization",
+      "status": "proposed",
+      "proposedBy": "Integration System",
+      "reviewedBy": [],
+      "timestamp": "2025-07-10T12:57:29.726Z"
+    }
+  ],
+  "learningTransfers": [],
+  "governancePolicies": {},
+  "reports": [],
+  "strategicObjectives": [
+    {
+      "id": "obj-001",
+      "title": "Establish Cross-Language Optimization Framework",
+      "description": "Create a unified framework for applying optimization learnings across all supported languages",
+      "category": "optimization",
+      "priority": "high",
+      "status": "active",
+      "targetDate": "2025-08-09T01:29:27.375Z",
+      "progress": 0,
+      "successCriteria": [
+        "90% reduction in compilation errors across all languages",
+        "95% build success rate across all platforms",
+        "Cross-language learning transfer success rate > 80%"
+      ],
+      "responsible": "CTO",
+      "dependencies": []
+    }
+  ],
+  "performanceMetrics": {
+    "totalDecisions": 0,
+    "decisionAccuracy": 0,
+    "learningTransferSuccess": 0,
+    "governanceEffectiveness": 0,
+    "strategicAlignment": 0,
+    "crossLanguageLearning": 0,
+    "optimizationEffectiveness": 0,
+    "overallPerformance": 0
+  }
+}

@@ -108,6 +108,7 @@ class PerformanceTrackingService {
 
   /**
    * Add a performance metric
+   * @param metric
    */
   addMetric(metric: Omit<PerformanceMetric, 'id' | 'timestamp'>): void {
     const newMetric: PerformanceMetric = {
@@ -136,6 +137,7 @@ class PerformanceTrackingService {
 
   /**
    * Get metrics by category
+   * @param category
    */
   async getMetricsByCategory(category: PerformanceMetric['category']): Promise<PerformanceMetric[]> {
     return this.metrics.filter(metric => metric.category === category);
@@ -143,6 +145,8 @@ class PerformanceTrackingService {
 
   /**
    * Get metrics for a specific time range
+   * @param start
+   * @param end
    */
   async getMetricsByTimeRange(start: Date, end: Date): Promise<PerformanceMetric[]> {
     return this.metrics.filter(metric => 
@@ -152,6 +156,10 @@ class PerformanceTrackingService {
 
   /**
    * Get average metric value for a specific metric name
+   * @param name
+   * @param timeRange
+   * @param timeRange.start
+   * @param timeRange.end
    */
   async getAverageMetric(name: string, timeRange?: { start: Date; end: Date }): Promise<number> {
     let filteredMetrics = this.metrics.filter(metric => metric.name === name);
@@ -180,6 +188,7 @@ class PerformanceTrackingService {
 
   /**
    * Update service configuration
+   * @param config
    */
   updateConfig(config: Partial<PerformanceConfig>): void {
     this.config = { ...this.config, ...config };

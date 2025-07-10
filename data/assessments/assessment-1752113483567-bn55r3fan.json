@@ -1,0 +1,60 @@
+{
+  "assessmentId": "assessment-1752113483567-bn55r3fan",
+  "timestamp": "2025-07-10T02:11:23.567Z",
+  "target": "frontend",
+  "duration": 18,
+  "status": "healthy",
+  "metrics": {
+    "files": {
+      "found": [
+        "/Users/home/Developer/greenlight-platform/frontend/src/App.css",
+        "/Users/home/Developer/greenlight-platform/frontend/src/App.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/assets/react.svg",
+        "/Users/home/Developer/greenlight-platform/frontend/src/components/Header.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/components/RoadmapDashboard.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/components/Sidebar.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/components/TestingDashboard/TestingDashboard.css",
+        "/Users/home/Developer/greenlight-platform/frontend/src/components/TestingDashboard/TestingDashboard.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/components/ui/Button/Button.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/index.css",
+        "/Users/home/Developer/greenlight-platform/frontend/src/main.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/Administrate.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/Articulate.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/Dashboard.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/Elevate.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/Operations.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/Roadmap.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/SystemMaster.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/TeamPortal.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/pages/index.tsx",
+        "/Users/home/Developer/greenlight-platform/frontend/src/types.d.ts",
+        "/Users/home/Developer/greenlight-platform/src/components/Administrate/index.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/index.ts",
+        "/Users/home/Developer/greenlight-platform/src/components/CoachingToolkit/types.ts",
+        "/Users/home/Developer/greenlight-platform/src/components/Elevate/index.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/SecurityDashboard/SecurityDashboard.css",
+        "/Users/home/Developer/greenlight-platform/src/components/SecurityDashboard/SecurityDashboard.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/InformConsole.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/ObserveConsole.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/ResolveConsole.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/SystemMaster/SystemMaster.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/__tests__/ErrorBoundary.test.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/__tests__/SessionsManager.test.tsx",
+        "/Users/home/Developer/greenlight-platform/src/components/__tests__/index.ts",
+        "/Users/home/Developer/greenlight-platform/src/components/monitoring/UserMonitoringDashboard.tsx"
+      ],
+      "missing": [],
+      "total": 35
+    },
+    "health": 100,
+    "performance": {
+      "status": "unknown",
+      "metrics": {}
+    },
+    "issues": []
+  },
+  "issues": [],
+  "recommendations": [],
+  "misplacedFiles": [],
+  "effectiveness": {}
+}

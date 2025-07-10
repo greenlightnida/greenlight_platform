@@ -74,6 +74,7 @@ class AIInsightsService {
 
   /**
    * Get insights by type
+   * @param type
    */
   async getInsightsByType(type: AIInsight['type']): Promise<AIInsight[]> {
     return this.insights.filter(insight => insight.type === type);
@@ -81,6 +82,7 @@ class AIInsightsService {
 
   /**
    * Get insights by severity
+   * @param severity
    */
   async getInsightsBySeverity(severity: AIInsight['severity']): Promise<AIInsight[]> {
     return this.insights.filter(insight => insight.severity === severity);
@@ -88,6 +90,7 @@ class AIInsightsService {
 
   /**
    * Add a new insight
+   * @param insight
    */
   async addInsight(insight: Omit<AIInsight, 'id' | 'timestamp'>): Promise<AIInsight> {
     const newInsight: AIInsight = {
@@ -108,6 +111,7 @@ class AIInsightsService {
 
   /**
    * Update service configuration
+   * @param config
    */
   updateConfig(config: Partial<AIInsightsConfig>): void {
     this.config = { ...this.config, ...config };

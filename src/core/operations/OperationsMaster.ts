@@ -14,9 +14,11 @@
  */
 
 import { EventEmitter } from 'events';
-import { ServerManager, ServerConfig } from './ServerManager';
-import { ServerGovernor } from './ServerGovernor';
+
 import { ErrorManagerHolon } from '../holons/operations/ErrorManagerHolon';
+
+import { ServerGovernor } from './ServerGovernor';
+import { ServerManager, ServerConfig } from './ServerManager';
 
 export interface OperationsStatus {
   systemHealth: 'excellent' | 'good' | 'fair' | 'poor' | 'critical';

@@ -1,20 +1,24 @@
-import express from 'express';
+import fs from 'fs';
+import { createServer } from 'http';
+
 import cors from 'cors';
+import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import { createServer } from 'http';
 import { Server } from 'socket.io';
+
 import { config } from './config';
 import { errorHandler } from './middleware/errorHandler';
 import { notFound } from './middleware/notFound';
-import { taskRoutes } from './routes/tasks';
-import { managerRoutes } from './routes/managers';
 import { analyticsRoutes } from './routes/analytics';
+import { featuresRoutes } from './routes/features';
+import { managerRoutes } from './routes/managers';
+import { productRoutes } from './routes/product';
+import { taskRoutes } from './routes/tasks';
 import { testingRoutes } from './routes/testing';
 import { socketHandler } from './services/socketHandler';
-import fs from 'fs';
-import { featuresRoutes } from './routes/features';
-import { productRoutes } from './routes/product';
+
+
 
 const app = express();
 const server = createServer(app);

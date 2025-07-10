@@ -106,7 +106,7 @@ export class SupabaseSchemaService {
 
         tableDetails.push({
           name: tableName,
-          columns: (columns as any[])?.map((col: any) => ({
+          columns: (columns as any[]).map((col: any) => ({
             name: col.column_name,
             type: col.data_type,
             is_nullable: col.is_nullable === 'YES',
@@ -167,7 +167,7 @@ export class SupabaseSchemaService {
           schema: func.routine_schema,
           language: 'sql', // Most Supabase functions are SQL
           return_type: func.data_type,
-          parameters: (parameters as any[])?.map((param: any) => ({
+          parameters: (parameters as any[]).map((param: any) => ({
             name: param.parameter_name,
             type: param.data_type,
             default_value: param.parameter_default
@@ -354,12 +354,12 @@ export class SupabaseSchemaService {
         .eq('table_schema', 'public');
 
       return {
-        foreignKeys: (foreignKeys as any[])?.map((fk: any) => ({
+        foreignKeys: (foreignKeys as any[]).map((fk: any) => ({
           column: fk.column_name,
           referencesTable: fk.referenced_table_name,
           referencesColumn: fk.referenced_column_name
         })) || [],
-        referencedBy: (referencedBy as any[])?.map((ref: any) => ({
+        referencedBy: (referencedBy as any[]).map((ref: any) => ({
           table: ref.table_name,
           column: ref.column_name
         })) || []

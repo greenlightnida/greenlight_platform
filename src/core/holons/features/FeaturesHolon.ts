@@ -1,10 +1,13 @@
 import { EventEmitter } from 'events';
+
+import { performanceTrackingService } from '../../../services/performance/performanceTrackingService';
+
+import { ComponentRegistryEngine, ComponentQuery, ComponentMetrics, ComponentReport } from './modules/ComponentRegistryEngine';
+import { DeliveryEngine, FeatureDeployment, MaintenanceTask } from './modules/DeliveryEngine';
+import { FeatureRegistryEngine, FeatureQuery, FeatureMetrics, FeatureReport } from './modules/FeatureRegistryEngine';
 import { ImplementationEngine, FeatureImplementation } from './modules/ImplementationEngine';
 import { TechnicalEngine, TechnicalStandard, ArchitecturePattern } from './modules/TechnicalEngine';
-import { DeliveryEngine, FeatureDeployment, MaintenanceTask } from './modules/DeliveryEngine';
-import { ComponentRegistryEngine, ComponentQuery, ComponentMetrics, ComponentReport } from './modules/ComponentRegistryEngine';
-import { FeatureRegistryEngine, FeatureQuery, FeatureMetrics, FeatureReport } from './modules/FeatureRegistryEngine';
-import { performanceTrackingService } from '../../../services/performance/performanceTrackingService';
+
 
 export interface FeaturesHolonState {
   isInitialized: boolean;
