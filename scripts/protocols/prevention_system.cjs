@@ -227,13 +227,13 @@ class PreventionSystem {
     console.log('📋 Phase 2: Protocol Validation');
     
     try {
-      const validationResult = execSync('node scripts/protocols/protocol_validation.cjs', {
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        timeout: 30000
+      const result = await this.executor.executeCommand('node', {
+        args: ['scripts/protocols/protocol_validation.cjs'],
+        timeout: 30000,
+        silent: true
       });
       
-      if (validationResult.includes('Protocol Validation Complete')) {
+      if (result.stdout.includes('Protocol Validation Complete')) {
         this.passes.push('Protocol validation completed successfully');
       } else {
         this.warnings.push('Protocol validation had issues');
@@ -257,17 +257,17 @@ class PreventionSystem {
     
     for (const protocol of protocols) {
       try {
-        const safetyResult = execSync(`node scripts/protocols/pre_execution_safety.cjs ${protocol}`, {
-          encoding: 'utf8',
-          cwd: this.projectRoot,
-          timeout: 15000
+        const result = await this.executor.executeCommand('node', {
+          args: ['scripts/protocols/pre_execution_safety.cjs', protocol],
+          timeout: 15000,
+          silent: true
         });
         
-        if (safetyResult.includes('EXECUTION CLEARED')) {
+        if (result.stdout.includes('EXECUTION CLEARED')) {
           this.passes.push(`Protocol ${protocol} safety check passed`);
-        } else if (safetyResult.includes('EXECUTION ALLOWED WITH WARNINGS')) {
+        } else if (result.stdout.includes('EXECUTION ALLOWED WITH WARNINGS')) {
           this.warnings.push(`Protocol ${protocol} has safety warnings`);
-        } else if (safetyResult.includes('EXECUTION BLOCKED')) {
+        } else if (result.stdout.includes('EXECUTION BLOCKED')) {
           // In development, treat safety check failures as warnings
           const isDevelopment = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
           if (isDevelopment) {
