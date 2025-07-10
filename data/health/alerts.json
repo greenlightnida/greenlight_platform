@@ -149,5 +149,11 @@
     "message": "System health is critical",
     "timestamp": "2025-07-10T14:09:30.214Z",
     "score": 55
+  },
+  {
+    "level": "critical",
+    "message": "System health is critical",
+    "timestamp": "2025-07-10T14:10:30.815Z",
+    "score": 55
   }
 ]
