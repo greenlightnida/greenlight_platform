@@ -76,5 +76,51 @@
     "message": "System health is critical",
     "timestamp": "2025-07-10T13:38:51.602Z",
     "score": 55
+  },
+  {
+    "level": "critical",
+    "message": "System health is critical",
+    "timestamp": "2025-07-10T13:42:19.418Z",
+    "score": 55
+  },
+  {
+    "level": "error",
+    "message": "Command launch failed: Protocol execution failed with exit code 1",
+    "timestamp": "2025-07-10T13:42:20.434Z",
+    "details": {
+      "timestamp": "2025-07-10T13:42:20.434Z",
+      "command": "launch",
+      "error": "Protocol execution failed with exit code 1",
+      "stack": "Error: Protocol execution failed with exit code 1\n    at ChildProcess.<anonymous> (/Users/home/Developer/greenlight-platform/scripts/command_coordinator.cjs:428:18)\n    at ChildProcess.emit (node:events:518:28)\n    at maybeClose (node:internal/child_process:1101:16)\n    at ChildProcess._handle.onexit (node:internal/child_process:304:5)",
+      "context": {
+        "options": [
+          "--force"
+        ],
+        "startTime": 1752154921665
+      }
+    }
+  },
+  {
+    "level": "critical",
+    "message": "System health is critical",
+    "timestamp": "2025-07-10T13:43:44.524Z",
+    "score": 55
+  },
+  {
+    "level": "error",
+    "message": "Command launch failed: Protocol execution failed with exit code 1",
+    "timestamp": "2025-07-10T13:43:45.825Z",
+    "details": {
+      "timestamp": "2025-07-10T13:43:45.825Z",
+      "command": "launch",
+      "error": "Protocol execution failed with exit code 1",
+      "stack": "Error: Protocol execution failed with exit code 1\n    at ChildProcess.<anonymous> (/Users/home/Developer/greenlight-platform/scripts/command_coordinator.cjs:428:18)\n    at ChildProcess.emit (node:events:518:28)\n    at maybeClose (node:internal/child_process:1101:16)\n    at ChildProcess._handle.onexit (node:internal/child_process:304:5)",
+      "context": {
+        "options": [
+          "--force"
+        ],
+        "startTime": 1752155007010
+      }
+    }
   }
 ]

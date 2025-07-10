@@ -19,7 +19,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 
 class ProtocolUpdater {
   constructor() {
@@ -262,30 +262,26 @@ class ProtocolUpdater {
 
   generateLaunchProtocolTest() {
     return `#!/usr/bin/env node
-
 /**
  * Launch Protocol Test
  * Tests the launch protocol with current system state
  */
-
-const { execSync } = require('child_process');
 const fs = require('fs');
 const path = require('path');
-
+const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 async function testLaunchProtocol() {
   console.log('🧪 Testing Launch Protocol...');
-  
+  const executor = new CommandExecutionOptimizer();
   try {
     // Execute launch protocol
-    const output = execSync('node scripts/protocols/launch_protocol.cjs', {
-      encoding: 'utf8',
-      cwd: process.cwd()
+    const result = await executor.executeCommand('node', {
+      args: ['scripts/protocols/launch_protocol.cjs'],
+      timeout: 60000,
+      silent: true
     });
-    
     // Check for generated reports
     const launchReportPath = path.join(process.cwd(), 'LAUNCH_REPORT.json');
     const roadmapAnchorPath = path.join(process.cwd(), 'ROADMAP_ANCHOR.json');
-    
     if (fs.existsSync(launchReportPath) && fs.existsSync(roadmapAnchorPath)) {
       console.log('✅ Launch protocol test passed');
       return true;
@@ -298,11 +294,9 @@ async function testLaunchProtocol() {
     return false;
   }
 }
-
 if (require.main === module) {
   testLaunchProtocol();
 }
-
 module.exports = { testLaunchProtocol };
 `;
   }

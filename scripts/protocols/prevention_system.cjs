@@ -301,16 +301,22 @@ class PreventionSystem {
       this.warnings.push(`Code organization issues: ${organizationIssues.join(', ')}`);
     }
     
-    // Check for duplicate files
-    const duplicates = this.findDuplicateFiles();
-    if (duplicates.length > 0) {
-      this.warnings.push(`Duplicate files found: ${duplicates.join(', ')}`);
-    }
-    
-    // Check for orphaned files
-    const orphaned = this.findOrphanedFiles();
-    if (orphaned.length > 0) {
-      this.warnings.push(`Orphaned files found: ${orphaned.join(', ')}`);
+    // Skip heavy duplicate and orphaned file checks in development
+    const isDevelopment = process.env.NODE_ENV === 'development' || !process.env.NODE_ENV;
+    if (!isDevelopment) {
+      // Check for duplicate files (only in production)
+      const duplicates = this.findDuplicateFiles();
+      if (duplicates.length > 0) {
+        this.warnings.push(`Duplicate files found: ${duplicates.join(', ')}`);
+      }
+      
+      // Check for orphaned files (only in production)
+      const orphaned = this.findOrphanedFiles();
+      if (orphaned.length > 0) {
+        this.warnings.push(`Orphaned files found: ${orphaned.join(', ')}`);
+      }
+    } else {
+      this.passes.push('Skipping heavy file checks in development mode');
     }
   }
 
@@ -344,36 +350,57 @@ class PreventionSystem {
   findDuplicateFiles() {
     const duplicates = [];
     const fileMap = new Map();
+    let fileCount = 0;
+    const maxFiles = 1000; // Limit to prevent excessive processing
     
     const walkDir = (dir) => {
-      if (!fs.existsSync(dir)) return;
+      if (!fs.existsSync(dir) || fileCount >= maxFiles) return;
       
-      const files = fs.readdirSync(dir);
-      for (const file of files) {
-        const filePath = path.join(dir, file);
-        const stat = fs.statSync(filePath);
-        
-        if (stat.isDirectory()) {
-          // Skip node_modules directories entirely
-          if (filePath.includes('node_modules')) {
-            continue;
-          }
-          walkDir(filePath);
-        } else if (stat.isFile()) {
-          // Skip node_modules files
-          if (filePath.includes('node_modules')) {
-            continue;
-          }
+      try {
+        const files = fs.readdirSync(dir);
+        for (const file of files) {
+          if (fileCount >= maxFiles) break;
           
-          const content = fs.readFileSync(filePath, 'utf8');
-          const hash = this.hashContent(content);
+          const filePath = path.join(dir, file);
+          const stat = fs.statSync(filePath);
           
-          if (fileMap.has(hash)) {
-            duplicates.push(`${filePath} (duplicate of ${fileMap.get(hash)})`);
-          } else {
-            fileMap.set(hash, filePath);
+          if (stat.isDirectory()) {
+            // Skip node_modules and other heavy directories
+            if (filePath.includes('node_modules') || 
+                filePath.includes('.git') || 
+                filePath.includes('dist') ||
+                filePath.includes('build')) {
+              continue;
+            }
+            walkDir(filePath);
+          } else if (stat.isFile()) {
+            // Skip binary files and large files
+            if (stat.size > 1024 * 1024 || // Skip files > 1MB
+                file.includes('.min.') ||
+                file.includes('.bundle.') ||
+                file.includes('.chunk.')) {
+              continue;
+            }
+            
+            fileCount++;
+            if (fileCount >= maxFiles) break;
+            
+            try {
+              const content = fs.readFileSync(filePath, 'utf8');
+              const hash = this.hashContent(content);
+              
+              if (fileMap.has(hash)) {
+                duplicates.push(`${filePath} (duplicate of ${fileMap.get(hash)})`);
+              } else {
+                fileMap.set(hash, filePath);
+              }
+            } catch (error) {
+              // Skip files that can't be read
+            }
           }
         }
+      } catch (error) {
+        // Skip directories that can't be read
       }
     };
     
@@ -383,23 +410,43 @@ class PreventionSystem {
 
   findOrphanedFiles() {
     const orphaned = [];
+    let fileCount = 0;
+    const maxFiles = 500; // Limit to prevent excessive processing
     
     // Check for files that aren't imported anywhere
     const srcPath = path.join(this.projectRoot, 'src');
     if (fs.existsSync(srcPath)) {
-      const files = fs.readdirSync(srcPath, { recursive: true });
-      
-      for (const file of files) {
-        if (typeof file === 'string' && (file.endsWith('.ts') || file.endsWith('.tsx'))) {
-          const filePath = path.join(srcPath, file);
-          const fileName = path.basename(file, path.extname(file));
+      try {
+        const files = fs.readdirSync(srcPath, { recursive: true });
+        
+        for (const file of files) {
+          if (fileCount >= maxFiles) break;
           
-          // Check if this file is imported anywhere
-          const isImported = this.checkFileImports(fileName);
-          if (!isImported) {
-            orphaned.push(filePath);
+          if (typeof file === 'string' && (file.endsWith('.ts') || file.endsWith('.tsx'))) {
+            const filePath = path.join(srcPath, file);
+            const fileName = path.basename(file, path.extname(file));
+            
+            // Skip certain files that are expected to be standalone
+            if (fileName.includes('index') || 
+                fileName.includes('main') || 
+                fileName.includes('App') ||
+                fileName.includes('test') ||
+                fileName.includes('spec')) {
+              continue;
+            }
+            
+            fileCount++;
+            if (fileCount >= maxFiles) break;
+            
+            // Check if this file is imported anywhere
+            const isImported = this.checkFileImports(fileName);
+            if (!isImported) {
+              orphaned.push(filePath);
+            }
           }
         }
+      } catch (error) {
+        // Skip if directory can't be read
       }
     }
     

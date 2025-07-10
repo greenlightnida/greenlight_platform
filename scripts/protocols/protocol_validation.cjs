@@ -17,7 +17,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 
 class ProtocolValidator {
   constructor() {
@@ -27,6 +27,7 @@ class ProtocolValidator {
     this.errors = [];
     this.warnings = [];
     this.successes = [];
+    this.executor = new CommandExecutionOptimizer();
   }
 
   async validateAllProtocols() {

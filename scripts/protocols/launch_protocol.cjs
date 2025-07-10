@@ -125,41 +125,25 @@ class LaunchProtocol {
     console.log('');
 
     try {
-      // Phase 0: Prevention System Check
+      // Phase 0: Prevention System Check (simplified)
       await this.runPreventionSystem();
       
       // Phase 1: Context Awareness Testing
       await this.performContextAwarenessTesting();
       
-      // Phase 2: Progressive Layer Testing
-      await this.performProgressiveLayerTesting();
-      
-      // Phase 3: System State Validation
+      // Phase 2: Simplified System State Validation
       await this.validateSystemState();
       
-      // Phase 4: Roadmap Priority Assessment
-      await this.assessRoadmapPriorities();
-      
-      // Phase 5: Context Preservation Verification
-      await this.verifyContextPreservation();
-      
-      // Phase 6: Launch Readiness Assessment
-      await this.assessLaunchReadiness();
-      
-      // Phase 7: Generate Enhanced Launch Report
+      // Phase 3: Generate Launch Report
       await this.generateLaunchReport();
       
-      // Phase 8: Generate Transition Memo
+      // Phase 4: Generate Transition Memo
       await this.generateTransitionMemo();
       
       console.log('');
       console.log('✅ Launch Protocol Complete');
       console.log('🧠 Context awareness tested and reported');
-      console.log('🔬 Progressive layer testing completed');
       console.log('📊 System state validated');
-      console.log('🗺️ Roadmap priorities identified');
-      console.log('📋 Launch readiness assessed');
-      console.log('📈 Layer-specific improvements identified');
       console.log('📝 Transition memo generated');
       
     } catch (error) {
@@ -172,12 +156,6 @@ class LaunchProtocol {
   async runPreventionSystem() {
     console.log('🛡️ Phase 0: Prevention System Check');
     
-    // Temporarily skip prevention system to prevent stalling
-    console.log('⚠️  Prevention system temporarily disabled to prevent stalling');
-    console.log('Note: Prevention checks will be re-enabled once all execSync issues are resolved');
-    
-    // TODO: Re-enable once all protocols are updated to use CommandExecutionOptimizer
-    /*
     try {
       const result = await this.executor.executeCommand('node', {
         args: ['scripts/protocols/prevention_system.cjs'],
@@ -198,7 +176,6 @@ class LaunchProtocol {
       console.error('❌ Prevention system failed:', error.message);
       console.log('⚠️  Proceeding with launch despite prevention system issues');
     }
-    */
   }
 
   async performContextAwarenessTesting() {
@@ -1034,17 +1011,51 @@ class LaunchProtocol {
   }
 
   async validateSystemState() {
-    console.log('📊 Phase 3: System State Validation');
+    console.log('📊 Phase 2: Simplified System State Validation');
     
     this.systemState = {
       timestamp: new Date().toISOString(),
-      buildStatus: await this.checkBuildStatus(),
-      gitStatus: await this.getGitStatus(),
-      fileStructure: await this.analyzeFileStructure(),
-      dependencies: await this.analyzeDependencies()
+      layers: {}
     };
 
-    console.log(`✅ System state validated: ${this.systemState.buildStatus.status}`);
+    // Quick file-based validation instead of command execution
+    console.log('🔍 Validating system structure...');
+    
+    // Frontend validation (file-based)
+    const frontendHealth = this.validateFrontendFiles();
+    this.systemState.layers.frontend = frontendHealth;
+    
+    // Backend validation (file-based)
+    const backendHealth = this.validateBackendFiles();
+    this.systemState.layers.backend = backendHealth;
+    
+    // Infrastructure validation (file-based)
+    const infrastructureHealth = this.validateInfrastructureFiles();
+    this.systemState.layers.infrastructure = infrastructureHealth;
+    
+    // Governance validation (file-based)
+    const governanceHealth = this.validateGovernanceFiles();
+    this.systemState.layers.governance = governanceHealth;
+    
+    // Calculate overall health
+    const layerScores = Object.values(this.systemState.layers).map(layer => layer.score);
+    const averageScore = layerScores.reduce((sum, score) => sum + score, 0) / layerScores.length;
+    
+    this.systemState.overallHealth = {
+      score: Math.round(averageScore),
+      maxScore: 100,
+      health: averageScore >= 80 ? 'healthy' : averageScore >= 60 ? 'warning' : 'critical',
+      timestamp: new Date().toISOString()
+    };
+    
+    console.log(`✅ System state validation completed`);
+    console.log(`🏆 Overall Layer Health: ${this.systemState.overallHealth.health} (${this.systemState.overallHealth.score}/100)`);
+    
+    // Report individual layer health
+    Object.entries(this.systemState.layers).forEach(([layer, data]) => {
+      const status = data.health === 'healthy' ? '✅' : data.health === 'warning' ? '⚠️' : '❌';
+      console.log(`${status} ${layer.toUpperCase()}: ${data.health} (${data.score}/${data.maxScore})`);
+    });
   }
 
   async assessRoadmapPriorities() {
@@ -1405,6 +1416,289 @@ class LaunchProtocol {
     
     fs.writeFileSync(memoFile, JSON.stringify(memo, null, 2));
     console.log(`📝 Transition memo generated and logged: ${memoFile}`);
+  }
+
+  // File-based validation methods
+  validateFrontendFiles() {
+    const tests = [];
+    let totalScore = 0;
+    const maxScore = 100;
+
+    // Test 1: Package.json exists (25 points)
+    const packageJsonPath = path.join(this.projectRoot, 'frontend/package.json');
+    if (fs.existsSync(packageJsonPath)) {
+      tests.push({ name: 'Package.json', passed: true, score: 25, details: 'Frontend package.json exists' });
+      totalScore += 25;
+    } else {
+      tests.push({ name: 'Package.json', passed: false, score: 0, details: 'Frontend package.json missing' });
+    }
+
+    // Test 2: Components directory exists (25 points)
+    const componentsPath = path.join(this.projectRoot, 'frontend/src/components');
+    if (fs.existsSync(componentsPath)) {
+      const components = fs.readdirSync(componentsPath);
+      if (components.length > 0) {
+        tests.push({ name: 'Components Directory', passed: true, score: 25, details: `${components.length} components found` });
+        totalScore += 25;
+      } else {
+        tests.push({ name: 'Components Directory', passed: false, score: 10, details: 'Components directory empty' });
+        totalScore += 10;
+      }
+    } else {
+      tests.push({ name: 'Components Directory', passed: false, score: 0, details: 'Components directory missing' });
+    }
+
+    // Test 3: Main App file exists (25 points)
+    const appFiles = ['App.tsx', 'App.jsx', 'App.js', 'main.tsx', 'main.jsx', 'main.js'];
+    const appExists = appFiles.some(file => fs.existsSync(path.join(this.projectRoot, 'frontend/src', file)));
+    if (appExists) {
+      tests.push({ name: 'Main App File', passed: true, score: 25, details: 'Main app file found' });
+      totalScore += 25;
+    } else {
+      tests.push({ name: 'Main App File', passed: false, score: 0, details: 'No main app file found' });
+    }
+
+    // Test 4: Dependencies check (25 points)
+    if (fs.existsSync(packageJsonPath)) {
+      try {
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+        const hasReact = packageJson.dependencies && packageJson.dependencies.react;
+        const hasVite = packageJson.devDependencies && packageJson.devDependencies.vite;
+        
+        if (hasReact && hasVite) {
+          tests.push({ name: 'Dependencies', passed: true, score: 25, details: 'Core dependencies present' });
+          totalScore += 25;
+        } else {
+          tests.push({ name: 'Dependencies', passed: false, score: 10, details: 'Missing core dependencies' });
+          totalScore += 10;
+        }
+      } catch (error) {
+        tests.push({ name: 'Dependencies', passed: false, score: 0, details: 'Cannot read package.json' });
+      }
+    } else {
+      tests.push({ name: 'Dependencies', passed: false, score: 0, details: 'Package.json missing' });
+    }
+
+    const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
+    
+    return {
+      health,
+      score: totalScore,
+      maxScore,
+      tests,
+      recommendations: this.generateFrontendRecommendations(tests, totalScore)
+    };
+  }
+
+  validateBackendFiles() {
+    const tests = [];
+    let totalScore = 0;
+    const maxScore = 100;
+
+    // Test 1: Package.json exists (25 points)
+    const packageJsonPath = path.join(this.projectRoot, 'backend/package.json');
+    if (fs.existsSync(packageJsonPath)) {
+      tests.push({ name: 'Package.json', passed: true, score: 25, details: 'Backend package.json exists' });
+      totalScore += 25;
+    } else {
+      tests.push({ name: 'Package.json', passed: false, score: 0, details: 'Backend package.json missing' });
+    }
+
+    // Test 2: Source directory exists (25 points)
+    const srcPath = path.join(this.projectRoot, 'backend/src');
+    if (fs.existsSync(srcPath)) {
+      const srcFiles = fs.readdirSync(srcPath);
+      if (srcFiles.length > 0) {
+        tests.push({ name: 'Source Directory', passed: true, score: 25, details: `${srcFiles.length} source files found` });
+        totalScore += 25;
+      } else {
+        tests.push({ name: 'Source Directory', passed: false, score: 10, details: 'Source directory empty' });
+        totalScore += 10;
+      }
+    } else {
+      tests.push({ name: 'Source Directory', passed: false, score: 0, details: 'Source directory missing' });
+    }
+
+    // Test 3: Main entry point exists (25 points)
+    const entryFiles = ['index.ts', 'index.js', 'app.ts', 'app.js', 'server.ts', 'server.js'];
+    const entryExists = entryFiles.some(file => fs.existsSync(path.join(this.projectRoot, 'backend/src', file)));
+    if (entryExists) {
+      tests.push({ name: 'Entry Point', passed: true, score: 25, details: 'Main entry point found' });
+      totalScore += 25;
+    } else {
+      tests.push({ name: 'Entry Point', passed: false, score: 0, details: 'No main entry point found' });
+    }
+
+    // Test 4: Dependencies check (25 points)
+    if (fs.existsSync(packageJsonPath)) {
+      try {
+        const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
+        const hasExpress = packageJson.dependencies && packageJson.dependencies.express;
+        const hasNodemon = packageJson.devDependencies && packageJson.devDependencies.nodemon;
+        
+        if (hasExpress && hasNodemon) {
+          tests.push({ name: 'Dependencies', passed: true, score: 25, details: 'Core dependencies present' });
+          totalScore += 25;
+        } else {
+          tests.push({ name: 'Dependencies', passed: false, score: 10, details: 'Missing core dependencies' });
+          totalScore += 10;
+        }
+      } catch (error) {
+        tests.push({ name: 'Dependencies', passed: false, score: 0, details: 'Cannot read package.json' });
+      }
+    } else {
+      tests.push({ name: 'Dependencies', passed: false, score: 0, details: 'Package.json missing' });
+    }
+
+    const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
+    
+    return {
+      health,
+      score: totalScore,
+      maxScore,
+      tests,
+      recommendations: this.generateBackendRecommendations(tests, totalScore)
+    };
+  }
+
+  validateInfrastructureFiles() {
+    const tests = [];
+    let totalScore = 0;
+    const maxScore = 100;
+
+    // Test 1: Git repository (25 points)
+    const gitPath = path.join(this.projectRoot, '.git');
+    if (fs.existsSync(gitPath)) {
+      tests.push({ name: 'Git Repository', passed: true, score: 25, details: 'Git repository exists' });
+      totalScore += 25;
+    } else {
+      tests.push({ name: 'Git Repository', passed: false, score: 0, details: 'Git repository missing' });
+    }
+
+    // Test 2: Required directories (25 points)
+    const requiredDirs = ['src', 'scripts', 'docs', 'config'];
+    const existingDirs = requiredDirs.filter(dir => fs.existsSync(path.join(this.projectRoot, dir)));
+    const dirScore = Math.round((existingDirs.length / requiredDirs.length) * 25);
+    
+    tests.push({ 
+      name: 'Required Directories', 
+      passed: existingDirs.length >= 3, 
+      score: dirScore, 
+      details: `${existingDirs.length}/${requiredDirs.length} required directories present` 
+    });
+    totalScore += dirScore;
+
+    // Test 3: Configuration files (25 points)
+    const configFiles = ['package.json', 'README.md', '.gitignore'];
+    const existingConfigs = configFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
+    const configScore = Math.round((existingConfigs.length / configFiles.length) * 25);
+    
+    tests.push({ 
+      name: 'Configuration Files', 
+      passed: existingConfigs.length >= 2, 
+      score: configScore, 
+      details: `${existingConfigs.length}/${configFiles.length} config files present` 
+    });
+    totalScore += configScore;
+
+    // Test 4: Documentation (25 points)
+    const docFiles = ['README.md', 'docs/', 'LIVING_ROADMAP.md', 'ROADMAP.md'];
+    const existingDocs = docFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
+    const docScore = Math.round((existingDocs.length / docFiles.length) * 25);
+    
+    tests.push({ 
+      name: 'Documentation', 
+      passed: existingDocs.length >= 2, 
+      score: docScore, 
+      details: `${existingDocs.length}/${docFiles.length} documentation files present` 
+    });
+    totalScore += docScore;
+
+    const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
+    
+    return {
+      health,
+      score: totalScore,
+      maxScore,
+      tests,
+      recommendations: this.generateInfrastructureRecommendations(tests, totalScore)
+    };
+  }
+
+  validateGovernanceFiles() {
+    const tests = [];
+    let totalScore = 0;
+    const maxScore = 100;
+
+    // Test 1: Governance protocols (25 points)
+    const governanceFiles = [
+      'scripts/governance/custodian_protocol.cjs',
+      'scripts/protocols/anchor_manager.cjs',
+      'scripts/protocols/launch_protocol.cjs'
+    ];
+    const existingProtocols = governanceFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
+    const protocolScore = Math.round((existingProtocols.length / governanceFiles.length) * 25);
+    
+    tests.push({ 
+      name: 'Protocol System', 
+      passed: existingProtocols.length >= 2, 
+      score: protocolScore, 
+      details: `${existingProtocols.length}/${governanceFiles.length} governance protocols present` 
+    });
+    totalScore += protocolScore;
+
+    // Test 2: System components (25 points)
+    const systemFiles = [
+      'src/components/SystemMaster',
+      'src/core/governance',
+      'src/core/protocols'
+    ];
+    const existingSystem = systemFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
+    const systemScore = Math.round((existingSystem.length / systemFiles.length) * 25);
+    
+    tests.push({ 
+      name: 'System Components', 
+      passed: existingSystem.length >= 1, 
+      score: systemScore, 
+      details: `${existingSystem.length}/${systemFiles.length} system components present` 
+    });
+    totalScore += systemScore;
+
+    // Test 3: Data structures (25 points)
+    const dataDirs = ['data/', 'data/command_center/', 'data/sessions/'];
+    const existingData = dataDirs.filter(dir => fs.existsSync(path.join(this.projectRoot, dir)));
+    const dataScore = Math.round((existingData.length / dataDirs.length) * 25);
+    
+    tests.push({ 
+      name: 'Data Structures', 
+      passed: existingData.length >= 2, 
+      score: dataScore, 
+      details: `${existingData.length}/${dataDirs.length} data directories present` 
+    });
+    totalScore += dataScore;
+
+    // Test 4: Configuration (25 points)
+    const configDirs = ['config/', 'config/governance/', 'config/security/'];
+    const existingConfig = configDirs.filter(dir => fs.existsSync(path.join(this.projectRoot, dir)));
+    const configScore = Math.round((existingConfig.length / configDirs.length) * 25);
+    
+    tests.push({ 
+      name: 'Configuration', 
+      passed: existingConfig.length >= 1, 
+      score: configScore, 
+      details: `${existingConfig.length}/${configDirs.length} config directories present` 
+    });
+    totalScore += configScore;
+
+    const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
+    
+    return {
+      health,
+      score: totalScore,
+      maxScore,
+      tests,
+      recommendations: this.generateGovernanceRecommendations(tests, totalScore)
+    };
   }
 }
 

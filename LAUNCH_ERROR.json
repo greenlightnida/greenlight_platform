@@ -1,9 +1,9 @@
 {
-  "sessionId": "launch-1752007935601",
-  "timestamp": "2025-07-08T20:52:42.868Z",
+  "sessionId": "launch-session-20250710-134344-1752155024761-of6ierfo3",
+  "timestamp": "2025-07-10T13:43:45.818Z",
   "script": "launch_protocol",
   "error": {
-    "message": "Prevention system failed: Command failed: node scripts/protocols/prevention_system.cjs",
-    "stack": "Error: Prevention system failed: Command failed: node scripts/protocols/prevention_system.cjs\n    at LaunchProtocol.runPreventionSystem (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:107:13)\n    at LaunchProtocol.execute (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:48:18)\n    at Object.<anonymous> (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:1171:10)\n    at Module._compile (node:internal/modules/cjs/loader:1730:14)\n    at Object..js (node:internal/modules/cjs/loader:1895:10)\n    at Module.load (node:internal/modules/cjs/loader:1465:32)\n    at Function._load (node:internal/modules/cjs/loader:1282:12)\n    at TracingChannel.traceSync (node:diagnostics_channel:322:14)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)"
+    "message": "Cannot convert undefined or null to object",
+    "stack": "TypeError: Cannot convert undefined or null to object\n    at Function.entries (<anonymous>)\n    at LaunchProtocol.generateLayerImprovementSummary (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:970:12)\n    at LaunchProtocol.generateLaunchReport (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:1152:31)\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async LaunchProtocol.execute (/Users/home/Developer/greenlight-platform/scripts/protocols/launch_protocol.cjs:138:7)"
   }
 }

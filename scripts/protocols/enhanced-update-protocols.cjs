@@ -20,7 +20,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 
 class EnhancedProtocolUpdater {
   constructor() {
@@ -434,67 +434,41 @@ class EnhancedProtocolUpdater {
 
   generateStorybookMaintenanceProtocol() {
     return `#!/usr/bin/env node
-
 /**
  * Storybook Maintenance Protocol v1.0.0
- * 
  * PURPOSE: Maintain and update Storybook documentation, stories, and accessibility testing
- * 
  * USAGE: node scripts/protocols/storybook-maintenance.cjs
  */
-
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
-
+const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 class StorybookMaintenanceProtocol {
   constructor() {
     this.projectRoot = process.cwd();
     this.protocolId = \`storybook-maintenance-\${Date.now()}\`;
   }
-
   async execute() {
     console.log('📖 Storybook Maintenance Protocol v1.0.0');
-    
     try {
       await this.generateStories();
       await this.validateStories();
       await this.testAccessibility();
       await this.updateDocumentation();
-      
       console.log('✅ Storybook maintenance completed');
     } catch (error) {
       console.error('❌ Storybook maintenance failed:', error.message);
       process.exit(1);
     }
   }
-
-  async generateStories() {
-    console.log('📝 Generating component stories...');
-    // Implementation for story generation
-  }
-
-  async validateStories() {
-    console.log('✅ Validating stories...');
-    // Implementation for story validation
-  }
-
-  async testAccessibility() {
-    console.log('♿ Testing accessibility...');
-    // Implementation for accessibility testing
-  }
-
-  async updateDocumentation() {
-    console.log('📚 Updating documentation...');
-    // Implementation for documentation updates
-  }
+  async generateStories() { console.log('📝 Generating component stories...'); }
+  async validateStories() { console.log('✅ Validating stories...'); }
+  async testAccessibility() { console.log('♿ Testing accessibility...'); }
+  async updateDocumentation() { console.log('📚 Updating documentation...'); }
 }
-
 if (require.main === module) {
   const protocol = new StorybookMaintenanceProtocol();
   protocol.execute();
 }
-
 module.exports = StorybookMaintenanceProtocol;`;
   }
 
@@ -515,7 +489,7 @@ const path = require('path');
 class IconSystemManagementProtocol {
   constructor() {
     this.projectRoot = process.cwd();
-    this.protocolId = \`icon-system-\${Date.now()}\`;
+    this.protocolId = `icon-system-${Date.now()}`;
   }
 
   async execute() {
@@ -580,7 +554,7 @@ const path = require('path');
 class ContractorEnablementProtocol {
   constructor() {
     this.projectRoot = process.cwd();
-    this.protocolId = \`contractor-enablement-\${Date.now()}\`;
+    this.protocolId = `contractor-enablement-${Date.now()}`;
   }
 
   async execute() {
@@ -645,7 +619,7 @@ const path = require('path');
 class QualityAssuranceProtocol {
   constructor() {
     this.projectRoot = process.cwd();
-    this.protocolId = \`quality-assurance-\${Date.now()}\`;
+    this.protocolId = `quality-assurance-${Date.now()}`;
   }
 
   async execute() {
@@ -998,7 +972,7 @@ See individual protocol files for specific usage instructions.`;
 
   getGitStatus() {
     try {
-      const status = execSync('git status --porcelain', { encoding: 'utf8', cwd: this.projectRoot });
+      const status = CommandExecutionOptimizer.execSync('git status --porcelain', { encoding: 'utf8', cwd: this.projectRoot });
       return status.split('\n').filter(line => line.trim());
     } catch (error) {
       return [];

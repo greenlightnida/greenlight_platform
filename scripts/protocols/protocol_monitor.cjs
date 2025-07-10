@@ -18,6 +18,7 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
+const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 
 class ProtocolMonitor {
   constructor() {
@@ -229,19 +230,17 @@ class ProtocolMonitor {
   async checkProtocolSafety() {
     // Run safety check on all protocols
     const protocols = ['launch', 'end_of_chat', 'pre_wrap_audit', 'custodian'];
-    
+    const executor = new CommandExecutionOptimizer();
     for (const protocol of protocols) {
       try {
-        const safetyCheck = execSync(`node scripts/protocols/pre_execution_safety.cjs ${protocol}`, {
-          encoding: 'utf8',
-          cwd: this.projectRoot,
-          timeout: 10000 // 10 second timeout
+        const result = await executor.executeCommand('node', {
+          args: ['scripts/protocols/pre_execution_safety.cjs', protocol],
+          timeout: 10000,
+          silent: true
         });
-        
-        if (safetyCheck.includes('EXECUTION BLOCKED')) {
+        if (result.stdout.includes('EXECUTION BLOCKED')) {
           this.generateAlert('PROTOCOL_SAFETY_FAILED', `Protocol safety check failed: ${protocol}`);
         }
-        
       } catch (error) {
         this.generateAlert('PROTOCOL_SAFETY_ERROR', `Protocol safety check error: ${protocol} - ${error.message}`);
       }
