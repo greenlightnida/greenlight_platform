@@ -131,18 +131,22 @@ class LaunchProtocol {
       // Phase 1: Context Awareness Testing
       await this.performContextAwarenessTesting();
       
-      // Phase 2: Simplified System State Validation
+      // Phase 2: Progressive Layer Testing
+      await this.performProgressiveLayerTesting();
+      
+      // Phase 3: Simplified System State Validation
       await this.validateSystemState();
       
-      // Phase 3: Generate Launch Report
+      // Phase 4: Generate Launch Report
       await this.generateLaunchReport();
       
-      // Phase 4: Generate Transition Memo
+      // Phase 5: Generate Transition Memo
       await this.generateTransitionMemo();
       
       console.log('');
       console.log('✅ Launch Protocol Complete');
       console.log('🧠 Context awareness tested and reported');
+      console.log('🔬 Progressive layer testing completed');
       console.log('📊 System state validated');
       console.log('📝 Transition memo generated');
       
@@ -959,12 +963,19 @@ class LaunchProtocol {
   generateLayerImprovementSummary() {
     const summary = {
       timestamp: new Date().toISOString(),
-      overallHealth: this.layerTestResults.overallHealth,
+      overallHealth: this.layerTestResults?.overallHealth || { overall: 'unknown', averageScore: 0 },
       layerBreakdown: {},
       criticalIssues: [],
       improvementPriorities: [],
       nextActions: []
     };
+
+    // Safety check for layerTestResults.layers
+    if (!this.layerTestResults || !this.layerTestResults.layers) {
+      summary.criticalIssues.push('Layer test results not available');
+      summary.nextActions.push('Run layer testing to assess system health');
+      return summary;
+    }
 
     // Analyze each layer
     Object.entries(this.layerTestResults.layers).forEach(([layerName, layerData]) => {
@@ -1140,7 +1151,7 @@ class LaunchProtocol {
       
       // Test Results
       contextAwarenessResults: this.contextAwarenessResults,
-      layerTestResults: this.layerTestResults,
+      layerTestResults: this.layerTestResults || { layers: {}, overallHealth: { overall: 'unknown', averageScore: 0 } },
       
       // System State
       systemState: this.systemState,
