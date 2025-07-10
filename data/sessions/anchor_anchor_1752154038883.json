@@ -1,0 +1,89 @@
+{
+  "timestamp": "2025-07-10T13:27:18.882Z",
+  "recentEvents": [
+    {
+      "type": "command",
+      "command": "launch",
+      "timestamp": "2025-07-10T13:24:02.047Z",
+      "status": "started",
+      "options": []
+    },
+    {
+      "type": "command",
+      "command": "launch",
+      "timestamp": "2025-07-10T13:24:58.791Z",
+      "status": "success",
+      "options": []
+    },
+    {
+      "type": "command",
+      "command": "anchor",
+      "timestamp": "2025-07-10T13:25:18.242Z",
+      "status": "started",
+      "options": [
+        "--force"
+      ]
+    },
+    {
+      "type": "command",
+      "command": "anchor",
+      "timestamp": "2025-07-10T13:26:17.364Z",
+      "status": "success",
+      "options": [
+        "--force"
+      ]
+    },
+    {
+      "type": "command",
+      "command": "anchor",
+      "timestamp": "2025-07-10T13:27:18.782Z",
+      "status": "started",
+      "options": [
+        "--force"
+      ]
+    },
+    {
+      "type": "session",
+      "sessionId": "wrap-20250710-014820-1752112100405-kf6nu6pf6",
+      "timestamp": "2025-07-10T01:48:20.407Z",
+      "summary": "Session data captured"
+    },
+    {
+      "type": "session",
+      "sessionId": "wrap-20250710-023655-1752115015273-ygewt9pq9",
+      "timestamp": "2025-07-10T02:36:55.274Z",
+      "summary": "Session data captured"
+    },
+    {
+      "type": "session",
+      "sessionId": "wrap-20250710-032354-1752117834087-lkrvihntz",
+      "timestamp": "2025-07-10T03:23:54.089Z",
+      "summary": "Session data captured"
+    }
+  ],
+  "nextSteps": [
+    {
+      "type": "audit_issue",
+      "auditId": "organizational_audit_1751997575940",
+      "issues": 8,
+      "priority": "high"
+    },
+    {
+      "type": "audit_issue",
+      "auditId": "organizational_audit_1752003833528",
+      "issues": 9,
+      "priority": "high"
+    }
+  ],
+  "contextRestored": true,
+  "sessionId": "anchor_1752154038883",
+  "systemState": {
+    "timestamp": "2025-07-10T01:42:44.726Z",
+    "health": "unknown",
+    "activeComponents": []
+  },
+  "contextData": {
+    "timestamp": "2025-07-10T03:23:54.137Z",
+    "pendingDecisions": []
+  }
+}
