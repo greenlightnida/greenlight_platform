@@ -2801,14 +2801,142 @@
         "cwd": "/Users/home/Developer/greenlight-platform",
         "pid": 81782
       }
+    },
+    {
+      "timestamp": "2025-07-10T14:26:32.728Z",
+      "command": "parallel-audit",
+      "options": [
+        "--mode=critical"
+      ],
+      "results": {
+        "success": true,
+        "duration": 18549
+      },
+      "systemHealth": {
+        "score": 85,
+        "status": "healthy",
+        "timestamp": "2025-07-10T14:26:46.501Z",
+        "metrics": {
+          "buildStatus": {
+            "frontend": {
+              "success": true,
+              "error": null
+            },
+            "backend": {
+              "success": true,
+              "error": null
+            },
+            "overall": "success"
+          },
+          "gitStatus": {
+            "hasChanges": true,
+            "modifiedFiles": 0,
+            "untrackedFiles": 5,
+            "deletedFiles": 0,
+            "addedFiles": 0,
+            "totalChanges": 8
+          },
+          "testCoverage": {
+            "testFiles": 0,
+            "testResults": {
+              "success": false,
+              "error": "Command failed: npm test"
+            },
+            "coverage": "none"
+          },
+          "performance": {
+            "memory": {
+              "rss": 51195904,
+              "heapUsed": 6926608,
+              "heapTotal": 14487552,
+              "external": 1567753
+            },
+            "cpu": {
+              "user": 858669,
+              "system": 1330925
+            },
+            "uptime": 32.358139658
+          }
+        }
+      },
+      "gitStatus": {
+        "hasChanges": true,
+        "modifiedFiles": 0,
+        "untrackedFiles": 5,
+        "deletedFiles": 0,
+        "addedFiles": 0,
+        "totalChanges": 8
+      },
+      "performance": {
+        "memory": {
+          "rss": 51200000,
+          "heapUsed": 6977272,
+          "heapTotal": 14487552,
+          "external": 1568159
+        },
+        "cpu": {
+          "user": 859204,
+          "system": 1331440
+        },
+        "uptime": 32.423462447
+      },
+      "coverage": {
+        "commandCoverage": {
+          "anchor": {
+            "gitManagement": true,
+            "systemReporting": true,
+            "errorHandling": true,
+            "performanceMonitoring": true,
+            "sessionTracking": true
+          },
+          "launch": {
+            "gitManagement": true,
+            "systemReporting": true,
+            "errorHandling": true,
+            "performanceMonitoring": true,
+            "sessionTracking": true
+          },
+          "wrap": {
+            "gitManagement": false,
+            "systemReporting": true,
+            "errorHandling": true,
+            "performanceMonitoring": false,
+            "sessionTracking": true
+          },
+          "audit": {
+            "gitManagement": false,
+            "systemReporting": false,
+            "errorHandling": true,
+            "performanceMonitoring": false,
+            "sessionTracking": false
+          },
+          "status": {
+            "gitManagement": false,
+            "systemReporting": true,
+            "errorHandling": true,
+            "performanceMonitoring": false,
+            "sessionTracking": false
+          }
+        },
+        "totalCommands": 5,
+        "totalFeatures": 25,
+        "coveredFeatures": 16,
+        "coveragePercentage": 64
+      },
+      "metadata": {
+        "nodeVersion": "v22.16.0",
+        "platform": "darwin",
+        "cwd": "/Users/home/Developer/greenlight-platform",
+        "pid": 82495
+      }
     }
   ],
   "summary": {
-    "totalReports": 22,
+    "totalReports": 23,
     "averageHealthScore": 83,
     "mostUsedCommand": "launch",
     "systemStatus": "healthy",
-    "lastReport": "2025-07-10T14:25:06.639Z"
+    "lastReport": "2025-07-10T14:26:32.728Z"
   },
-  "lastUpdated": "2025-07-10T14:25:22.318Z"
+  "lastUpdated": "2025-07-10T14:26:46.567Z"
 }
