@@ -288,6 +288,9 @@ async function main() {
   const command = process.argv[2];
   const options = process.argv.slice(3);
   
+  // Check for force flag
+  const forceMode = options.includes('--force');
+  
   log(`${colors.bright}${colors.magenta}🚀 Command Coordinator v2.0.0${colors.reset}`);
   log(`${colors.yellow}Timestamp: ${new Date().toISOString()}${colors.reset}\n`);
   
@@ -350,7 +353,12 @@ async function main() {
       case 'launch':
         logInfo('Executing launch protocol...');
         try {
-          const result = coordinator.executeCommand('node scripts/protocols/launch_protocol.cjs', {
+          // Pass force flag to launch protocol if specified
+          const launchCommand = forceMode 
+            ? 'node scripts/protocols/launch_protocol.cjs --force'
+            : 'node scripts/protocols/launch_protocol.cjs';
+            
+          const result = coordinator.executeCommand(launchCommand, {
             description: 'Launch Protocol',
             timeout: 120000, // 2 minutes for launch protocol
             allowFailure: false
