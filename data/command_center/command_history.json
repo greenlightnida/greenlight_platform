@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-10T14:15:59.826Z",
+  "last_updated": "2025-07-10T14:18:09.124Z",
   "session_id": "codebase_optimization_planning_1752115453000",
   "commands": [
     {
@@ -1280,6 +1280,28 @@
       "options": [
         "--fast"
       ],
+      "status": "completed",
+      "details": {
+        "cleanupReason": "manual_fix"
+      }
+    },
+    {
+      "timestamp": "2025-07-10T14:16:49.311Z",
+      "command": "launch",
+      "options": [
+        "--fast"
+      ],
+      "status": "success",
+      "details": {
+        "executionTime": 66663
+      }
+    },
+    {
+      "timestamp": "2025-07-10T14:18:09.124Z",
+      "command": "launch",
+      "options": [
+        "--fast"
+      ],
       "status": "started",
       "details": {}
     }
@@ -1297,16 +1319,10 @@
     "files_to_optimize": 15,
     "lines_to_optimize": 4350
   },
-  "cleanup_performed": "2025-07-10T14:15:40.386Z",
-  "original_count": 115,
-  "cleaned_count": 115,
+  "cleanup_performed": "2025-07-10T14:17:38.735Z",
+  "original_count": 117,
+  "cleaned_count": 117,
   "removed_count": 0,
-  "fixed_stale_count": 1,
-  "stale_commands_fixed": [
-    {
-      "command": "launch",
-      "timestamp": "2025-07-10T14:12:58.654Z",
-      "reason": "No PID, exceeded timeout (2 min)"
-    }
-  ]
+  "fixed_stale_count": 0,
+  "stale_commands_fixed": []
 }
