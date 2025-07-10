@@ -1,0 +1,13 @@
+{
+  "auditId": "audit-1752157461781-fr6vur4qm",
+  "timestamp": "2025-07-10T14:24:21.781Z",
+  "mode": "quick",
+  "overallHealth": 96,
+  "criticalIssues": 0,
+  "recommendations": 0,
+  "performance": {
+    "totalDuration": 162,
+    "parallelChecks": 16,
+    "cascadingChecks": 0
+  }
+}

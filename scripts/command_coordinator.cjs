@@ -116,6 +116,7 @@ class CommandCoordinator {
       wrap: 'wrap_protocol.cjs',
       council: 'convene_council_protocol.cjs',
       audit: 'audit_optimizer.cjs',
+      'parallel-audit': 'parallel_cascading_audit_system.cjs',
       precommit: 'precommit_audit.cjs',
       prewrap: 'context_enabled_pre_wrap_protocol.cjs',
       monitor: 'user_monitoring_integration.cjs',
@@ -176,6 +177,9 @@ class CommandCoordinator {
           break;
         case 'audit':
           await this.executeAudit(options);
+          break;
+        case 'parallel-audit':
+          await this.executeParallelAudit(options);
           break;
         case 'precommit':
           await this.executePrecommit(options);
@@ -330,6 +334,12 @@ class CommandCoordinator {
     await this.executeProtocolWithTimeout(protocolPath, options, 120000); // 2 minute timeout
   }
 
+  async executeParallelAudit(options) {
+    console.log('🔍 Executing Parallel & Cascading Audit System (Comprehensive System Health)');
+    const protocolPath = path.join(this.protocolsDir, this.commands['parallel-audit']);
+    await this.executeProtocolWithTimeout(protocolPath, options, 300000); // 5 minute timeout for comprehensive audit
+  }
+
   async executePrecommit(options) {
     console.log('✅ Executing Precommit Protocol (Pre-commit Checks)');
     const protocolPath = path.join(this.projectRoot, 'scripts/governance', this.commands.precommit);
@@ -449,6 +459,7 @@ COMMANDS:
   wrap       Session completion and context preservation
   council    Governance and decision-making
   audit      Content quality and format regulation
+  parallel-audit Parallel & cascading system health audit
   precommit  Pre-commit validation and checks
   prewrap    Pre-wrap preparation and context preservation
   monitor    Real-time user monitoring and analytics
@@ -464,6 +475,9 @@ EXAMPLES:
   node scripts/command_coordinator.cjs wrap --preserve-context
   node scripts/command_coordinator.cjs council --urgent
   node scripts/command_coordinator.cjs audit --comprehensive
+  node scripts/command_coordinator.cjs parallel-audit --mode=full
+  node scripts/command_coordinator.cjs parallel-audit --mode=quick
+  node scripts/command_coordinator.cjs parallel-audit --mode=critical
   node scripts/command_coordinator.cjs precommit
   node scripts/command_coordinator.cjs prewrap
   node scripts/command_coordinator.cjs monitor start
@@ -487,6 +501,7 @@ PROTOCOL RESPONSIBILITIES:
   • wrap: Session completion - preserves context and ends sessions
   • council: Governance - decision making and oversight
   • audit: Content regulation - quality and format control
+  • parallel-audit: Parallel & cascading system health monitoring across all levels
   • precommit: Pre-commit validation
   • prewrap: Pre-wrap preparation
   • monitor: Real-time user monitoring and analytics
