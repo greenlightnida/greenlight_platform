@@ -1,0 +1,279 @@
+{
+  "timestamp": "2025-07-10T14:24:44.223Z",
+  "auditId": "audit-1752157484223-e5w6z232w",
+  "mode": "quick",
+  "levels": {
+    "infrastructure": {
+      "level": "infrastructure",
+      "priority": "critical",
+      "timestamp": "2025-07-10T14:24:44.236Z",
+      "components": {
+        "git": {
+          "health": 75,
+          "status": "success",
+          "duration": 169,
+          "details": {
+            "branch": "clean-main",
+            "lastCommit": "0031020a039e85a70c5d394e5ab04eaa3d66f847 [PARALLEL-AUDIT] 2025-07-10T14:24:33.586Z - --mode=quick"
+          },
+          "issues": [
+            "Uncommitted changes detected"
+          ]
+        },
+        "filesystem": {
+          "health": 100,
+          "status": "success",
+          "duration": 5,
+          "details": {
+            "checkedDirs": [
+              "src",
+              "scripts",
+              "docs",
+              "config"
+            ],
+            "missingDirs": []
+          },
+          "issues": []
+        },
+        "configs": {
+          "health": 100,
+          "status": "success",
+          "duration": 5,
+          "details": {
+            "checkedConfigs": [
+              "package.json",
+              "README.md",
+              ".gitignore"
+            ],
+            "missingConfigs": []
+          },
+          "issues": []
+        },
+        "dependencies": {
+          "health": 100,
+          "status": "success",
+          "duration": 4,
+          "details": {
+            "coreDeps": true,
+            "devDeps": true
+          },
+          "issues": []
+        }
+      },
+      "overallHealth": 94,
+      "criticalIssues": [
+        "Uncommitted changes detected"
+      ],
+      "warnings": []
+    },
+    "application": {
+      "level": "application",
+      "priority": "high",
+      "timestamp": "2025-07-10T14:24:44.401Z",
+      "components": {
+        "frontend": {
+          "health": 100,
+          "status": "success",
+          "duration": 4,
+          "details": {
+            "hasPackageJson": true,
+            "hasSrc": true
+          },
+          "issues": []
+        },
+        "backend": {
+          "health": 100,
+          "status": "success",
+          "duration": 3,
+          "details": {
+            "hasPackageJson": true,
+            "hasSrc": true
+          },
+          "issues": []
+        },
+        "apis": {
+          "health": 100,
+          "status": "success",
+          "duration": 3,
+          "details": {
+            "checkedApis": [
+              "backend/src/routes",
+              "backend/src/controllers",
+              "backend/src/middleware"
+            ],
+            "existingApis": [
+              "backend/src/routes",
+              "backend/src/controllers",
+              "backend/src/middleware"
+            ]
+          },
+          "issues": []
+        },
+        "database": {
+          "health": 100,
+          "status": "success",
+          "duration": 3,
+          "details": {
+            "checkedDb": [
+              "backend/src/models",
+              "backend/src/config/database",
+              "backend/src/database"
+            ],
+            "existingDb": [
+              "backend/src/models"
+            ]
+          },
+          "issues": []
+        }
+      },
+      "overallHealth": 100,
+      "criticalIssues": [],
+      "warnings": []
+    },
+    "governance": {
+      "level": "governance",
+      "priority": "medium",
+      "timestamp": "2025-07-10T14:24:44.403Z",
+      "components": {
+        "protocols": {
+          "health": 100,
+          "status": "success",
+          "duration": 2,
+          "details": {
+            "checkedProtocols": [
+              "scripts/protocols/launch_protocol.cjs",
+              "scripts/protocols/anchor_manager.cjs",
+              "scripts/protocols/wrap_protocol.cjs"
+            ],
+            "existingProtocols": [
+              "scripts/protocols/launch_protocol.cjs",
+              "scripts/protocols/anchor_manager.cjs"
+            ]
+          },
+          "issues": []
+        },
+        "policies": {
+          "health": 50,
+          "status": "success",
+          "duration": 2,
+          "details": {
+            "checkedPolicies": [
+              "config/governance",
+              "config/security",
+              "docs/GOVERNANCE.md"
+            ],
+            "existingPolicies": [
+              "config/security"
+            ]
+          },
+          "issues": [
+            "Insufficient policy coverage"
+          ]
+        },
+        "compliance": {
+          "health": 100,
+          "status": "success",
+          "duration": 2,
+          "details": {
+            "checkedCompliance": [
+              "data/command_center",
+              "data/audits",
+              "scripts/command_center"
+            ],
+            "existingCompliance": [
+              "data/command_center",
+              "data/audits",
+              "scripts/command_center"
+            ]
+          },
+          "issues": []
+        },
+        "standards": {
+          "health": 100,
+          "status": "success",
+          "duration": 2,
+          "details": {
+            "checkedStandards": [
+              "standards",
+              "config/design-system",
+              "docs/STANDARDS.md"
+            ],
+            "existingStandards": [
+              "standards",
+              "config/design-system"
+            ]
+          },
+          "issues": []
+        }
+      },
+      "overallHealth": 88,
+      "criticalIssues": [
+        "Insufficient policy coverage"
+      ],
+      "warnings": []
+    },
+    "data": {
+      "level": "data",
+      "priority": "low",
+      "timestamp": "2025-07-10T14:24:44.403Z",
+      "components": {
+        "sessions": {
+          "health": 100,
+          "status": "success",
+          "duration": 2,
+          "details": {
+            "sessionCount": 159
+          },
+          "issues": []
+        },
+        "history": {
+          "health": 100,
+          "status": "success",
+          "duration": 1,
+          "details": {
+            "commandCount": 122
+          },
+          "issues": []
+        },
+        "cache": {
+          "health": 100,
+          "status": "success",
+          "duration": 0,
+          "details": {
+            "cacheCount": 1
+          },
+          "issues": []
+        },
+        "logs": {
+          "health": 100,
+          "status": "success",
+          "duration": 0,
+          "details": {
+            "checkedLogs": [
+              "data/audits",
+              "data/reports",
+              "LAUNCH_ERROR.json"
+            ],
+            "existingLogs": [
+              "data/audits",
+              "data/reports",
+              "LAUNCH_ERROR.json"
+            ]
+          },
+          "issues": []
+        }
+      },
+      "overallHealth": 100,
+      "criticalIssues": [],
+      "warnings": []
+    }
+  },
+  "cascadingEvents": [],
+  "criticalIssues": [],
+  "recommendations": [],
+  "performance": {
+    "totalDuration": 183,
+    "parallelChecks": 16,
+    "cascadingChecks": 0
+  }
+}
