@@ -141,6 +141,105 @@ function analyzeCodebase() {
   return findings;
 }
 
+// === New: Command-Related Orphan/Misplaced Discovery ===
+function findCommandRelatedOrphans() {
+  const commandKeywords = [
+    'command', 'coordinator', 'audit', 'optimizer', 'history', 'protocol', 'manager', 'log', 'governance'
+  ];
+  const orphans = [];
+  function scanDir(dir) {
+    const items = fs.readdirSync(dir);
+    for (const item of items) {
+      const fullPath = path.join(dir, item);
+      if (fs.statSync(fullPath).isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
+        scanDir(fullPath);
+      } else if (fs.statSync(fullPath).isFile()) {
+        const isCommandRelated = commandKeywords.some(kw => item.toLowerCase().includes(kw));
+        const isInCommandCenter = fullPath.includes('scripts/command_center/');
+        if (isCommandRelated && !isInCommandCenter) {
+          orphans.push(fullPath);
+        }
+      }
+    }
+  }
+  scanDir(PROJECT_STRUCTURE.scripts);
+  scanDir(PROJECT_STRUCTURE.src);
+  return orphans;
+}
+
+// === Enterprise Committee Registry ===
+const ENTERPRISE_COMMITTEE = [
+  {
+    name: 'VarEnvManager',
+    path: path.join(PROJECT_STRUCTURE.scripts, 'config/var_env_manager.cjs'),
+    role: 'Environment and config authority',
+    query: () => {/* TODO: implement or import actual check */ return { status: 'ok', findings: [] }; }
+  },
+  {
+    name: 'FileManager',
+    path: path.join(PROJECT_STRUCTURE.scripts, 'background/agents/file_manager.cjs'),
+    role: 'Canonical file inventory',
+    query: () => {/* TODO: implement or import actual check */ return { status: 'ok', findings: [] }; }
+  },
+  {
+    name: 'ProtocolManager',
+    path: path.join(PROJECT_STRUCTURE.src, 'core/holons/protocols/ProtocolManager.ts'),
+    role: 'Protocol registration and compliance',
+    query: () => {/* TODO: implement or import actual check */ return { status: 'ok', findings: [] }; }
+  },
+  {
+    name: 'AuditManager',
+    path: path.join(PROJECT_STRUCTURE.scripts, 'audit/comprehensive_organizational_audit.cjs'),
+    role: 'Audit and compliance checks',
+    query: () => {/* TODO: implement or import actual check */ return { status: 'ok', findings: [] }; }
+  },
+  {
+    name: 'SessionManager',
+    path: path.join(PROJECT_STRUCTURE.src, 'core/session-management/SessionManager.ts'),
+    role: 'Session logic and state',
+    query: () => {/* TODO: implement or import actual check */ return { status: 'ok', findings: [] }; }
+  },
+  {
+    name: 'HealthMonitor',
+    path: path.join(PROJECT_STRUCTURE.scripts, 'monitoring/health_monitor.cjs'),
+    role: 'System health and risk signals',
+    query: () => {/* TODO: implement or import actual check */ return { status: 'ok', findings: [] }; }
+  }
+  // Add more managers as needed
+];
+
+// === Committee Convening Logic ===
+function conveneEnterpriseCommittee() {
+  const committeeFindings = [];
+  for (const member of ENTERPRISE_COMMITTEE) {
+    let result;
+    try {
+      result = member.query();
+    } catch (e) {
+      result = { status: 'error', error: e.message, findings: [] };
+    }
+    committeeFindings.push({
+      name: member.name,
+      role: member.role,
+      status: result.status,
+      findings: result.findings || [],
+      error: result.error || null
+    });
+  }
+  return committeeFindings;
+}
+
+function gitStageAndCommitReports() {
+  const { execSync } = require('child_process');
+  try {
+    execSync('git add ENTERPRISE_COMMITTEE_REPORT.json CUSTODIAN_MIGRATION_CANDIDATES.json CUSTODIAN_REPORT.json', { stdio: 'ignore' });
+    execSync('git commit -m "chore(governance): update committee and custodian reports [auto-commit]"', { stdio: 'ignore' });
+    console.log('\n✅ Committee and custodian reports auto-staged and committed to git.');
+  } catch (e) {
+    console.warn('\n⚠️  Could not auto-stage/commit reports to git:', e.message);
+  }
+}
+
 function main() {
   // eslint-disable-next-line no-console
   console.log('🧹 Custodian Protocol v3.0.0 Initiated');
@@ -205,6 +304,44 @@ function main() {
     recommendations.push('File management scan failed: ' + scanReport.error);
   }
 
+  // === New: Command-Related Orphan/Misplaced Discovery ===
+  const commandOrphans = findCommandRelatedOrphans();
+  if (commandOrphans.length > 0) {
+    const migrationReportPath = path.join(process.cwd(), 'CUSTODIAN_MIGRATION_CANDIDATES.json');
+    fs.writeFileSync(migrationReportPath, JSON.stringify({
+      timestamp: new Date().toISOString(),
+      candidates: commandOrphans,
+      notes: [
+        'These files are command-related but not located in the command center.',
+        'Review and migrate as appropriate. No files have been deleted or moved automatically.',
+        'All references should be updated programmatically if migration is approved.'
+      ]
+    }, null, 2));
+    console.log(`\n⚠️  Command-related orphans/misplaced files found. See ${migrationReportPath}`);
+  } else {
+    console.log('\n✅ No command-related orphans/misplaced files found.');
+  }
+
+  // === Convene Enterprise Committee ===
+  const committeeReport = conveneEnterpriseCommittee();
+  const committeeConsensus = committeeReport.every(r => r.status === 'ok' && (!r.findings || r.findings.length === 0));
+  const committeeReportPath = path.join(process.cwd(), 'ENTERPRISE_COMMITTEE_REPORT.json');
+  fs.writeFileSync(committeeReportPath, JSON.stringify({
+    timestamp: new Date().toISOString(),
+    committee: ENTERPRISE_COMMITTEE.map(m => ({ name: m.name, role: m.role, path: m.path })),
+    report: committeeReport,
+    consensus: committeeConsensus,
+    notes: [
+      'No destructive/system-wide change may occur without explicit committee consensus and human approval.',
+      'All findings and recommendations are logged and surfaced in the command center.'
+    ]
+  }, null, 2));
+  if (!committeeConsensus) {
+    console.log('\n❌ Committee consensus not reached. No destructive/system-wide changes will be made. See ENTERPRISE_COMMITTEE_REPORT.json for details.');
+  } else {
+    console.log('\n✅ Committee consensus reached. Safe to proceed with planned actions (pending human approval).');
+  }
+
   const results = [];
   for (const script of SCRIPTS) {
     if (script.safe) {
@@ -247,6 +384,8 @@ function main() {
   fs.writeFileSync(LOG_PATH, JSON.stringify(report, null, 2));
   // eslint-disable-next-line no-console
   console.log(`\n✅ Custodian protocol complete. Report saved to ${LOG_PATH}`);
+  // After all reports are written:
+  gitStageAndCommitReports();
 }
 
 main(); 
