@@ -1,5 +1,5 @@
 {
-  "timestamp": "2025-07-10T15:10:33.880Z",
+  "timestamp": "2025-07-10T15:10:37.331Z",
   "candidates": [
     "/Users/home/Developer/greenlight-platform/scripts/CHANGELOG.md",
     "/Users/home/Developer/greenlight-platform/scripts/anchor_audit_note.md",
@@ -58,7 +58,8 @@
     "/Users/home/Developer/greenlight-platform/scripts/script_catalog.json",
     "/Users/home/Developer/greenlight-platform/scripts/test-manager-implementation.ts",
     "/Users/home/Developer/greenlight-platform/scripts/test-product-manager.ts",
-    "/Users/home/Developer/greenlight-platform/scripts/test_governance_change.cjs",
+    "/Users/home/Developer/greenlight-platform/scripts/test_orphan_command.cjs",
+    "/Users/home/Developer/greenlight-platform/scripts/test_orphan_protocol.cjs",
     "/Users/home/Developer/greenlight-platform/scripts/typescript-excellence-protocol.cjs",
     "/Users/home/Developer/greenlight-platform/src/components/__tests__/SessionsManager.test.tsx",
     "/Users/home/Developer/greenlight-platform/src/config/ConfigManager.ts",
@@ -104,6 +105,7 @@
     "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/command-utils.ts",
     "/Users/home/Developer/greenlight-platform/src/holons/shared-utils/logging-utils.ts",
     "/Users/home/Developer/greenlight-platform/src/platforms/articulate/components/WorkHistory.tsx",
+    "/Users/home/Developer/greenlight-platform/src/test_orphan_manager.ts",
     "/Users/home/Developer/greenlight-platform/src/utils/common/ChangelogPanel.tsx",
     "/Users/home/Developer/greenlight-platform/src/utils/common/SystemAuditPanel.tsx",
     "/Users/home/Developer/greenlight-platform/src/utils/common/windowManager.ts",
