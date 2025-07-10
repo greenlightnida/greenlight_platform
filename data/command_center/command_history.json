@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-07-10T13:06:31.768Z",
+  "last_updated": "2025-07-10T13:08:56.696Z",
   "session_id": "codebase_optimization_planning_1752115453000",
   "commands": [
     {
@@ -581,6 +581,20 @@
       "timestamp": "2025-07-10T13:06:31.767Z",
       "command": "anchor",
       "options": [],
+      "status": "started"
+    },
+    {
+      "timestamp": "2025-07-10T13:07:44.318Z",
+      "command": "anchor",
+      "options": [],
+      "status": "success"
+    },
+    {
+      "timestamp": "2025-07-10T13:08:56.696Z",
+      "command": "anchor",
+      "options": [
+        "--comprehensive"
+      ],
       "status": "started"
     }
   ],

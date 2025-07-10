@@ -1,0 +1,128 @@
+{
+  "timestamp": "2025-07-10T13:09:26.839Z",
+  "command": "anchor",
+  "options": [
+    "--comprehensive"
+  ],
+  "results": {
+    "success": true,
+    "duration": 47548
+  },
+  "systemHealth": {
+    "score": 85,
+    "status": "healthy",
+    "timestamp": "2025-07-10T13:09:42.907Z",
+    "metrics": {
+      "buildStatus": {
+        "frontend": {
+          "success": true,
+          "error": null
+        },
+        "backend": {
+          "success": true,
+          "error": null
+        },
+        "overall": "success"
+      },
+      "gitStatus": {
+        "hasChanges": true,
+        "modifiedFiles": 0,
+        "untrackedFiles": 4,
+        "deletedFiles": 0,
+        "addedFiles": 0,
+        "totalChanges": 8
+      },
+      "testCoverage": {
+        "testFiles": 0,
+        "testResults": {
+          "success": false,
+          "error": "Command failed: npm test"
+        },
+        "coverage": "none"
+      },
+      "performance": {
+        "memory": {
+          "rss": 52346880,
+          "heapUsed": 8791560,
+          "heapTotal": 14225408,
+          "external": 1567745
+        },
+        "cpu": {
+          "user": 996985,
+          "system": 1621871
+        },
+        "uptime": 63.647300651
+      }
+    }
+  },
+  "gitStatus": {
+    "hasChanges": true,
+    "modifiedFiles": 0,
+    "untrackedFiles": 4,
+    "deletedFiles": 0,
+    "addedFiles": 0,
+    "totalChanges": 8
+  },
+  "performance": {
+    "memory": {
+      "rss": 52436992,
+      "heapUsed": 8841064,
+      "heapTotal": 14225408,
+      "external": 1568129
+    },
+    "cpu": {
+      "user": 997652,
+      "system": 1622449
+    },
+    "uptime": 63.745850666
+  },
+  "coverage": {
+    "commandCoverage": {
+      "anchor": {
+        "gitManagement": true,
+        "systemReporting": true,
+        "errorHandling": true,
+        "performanceMonitoring": true,
+        "sessionTracking": true
+      },
+      "launch": {
+        "gitManagement": true,
+        "systemReporting": true,
+        "errorHandling": true,
+        "performanceMonitoring": true,
+        "sessionTracking": true
+      },
+      "wrap": {
+        "gitManagement": false,
+        "systemReporting": true,
+        "errorHandling": true,
+        "performanceMonitoring": false,
+        "sessionTracking": true
+      },
+      "audit": {
+        "gitManagement": false,
+        "systemReporting": false,
+        "errorHandling": true,
+        "performanceMonitoring": false,
+        "sessionTracking": false
+      },
+      "status": {
+        "gitManagement": false,
+        "systemReporting": true,
+        "errorHandling": true,
+        "performanceMonitoring": false,
+        "sessionTracking": false
+      }
+    },
+    "totalCommands": 5,
+    "totalFeatures": 25,
+    "coveredFeatures": 16,
+    "coveragePercentage": 64
+  },
+  "metadata": {
+    "nodeVersion": "v22.16.0",
+    "platform": "darwin",
+    "cwd": "/Users/home/Developer/greenlight-platform",
+    "pid": 61167
+  }
+}
