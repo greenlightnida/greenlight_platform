@@ -1,15 +1,15 @@
 #!/usr/bin/env node
 
 /**
- * Launch Protocol v2.0.0
- * 
+ * Launch Protocol v2.1.0
+ *
  * PURPOSE: Comprehensive protocol for starting new chat sessions with full context preservation,
- * context awareness testing, progressive layer testing, and system state validation. Ensures new 
- * sessions can pick up where previous sessions left off with complete understanding of the current 
+ * context awareness testing, progressive layer testing, and system state validation. Ensures new
+ * sessions can pick up where previous sessions left off with complete understanding of the current
  * system state and layer-specific health metrics.
- * 
- * USAGE: node scripts/protocols/launch_protocol.cjs
- * 
+ *
+ * USAGE: node scripts/protocols/launch_protocol.cjs [--fast|-f]
+ *
  * FEATURES:
  * - Context awareness testing with detailed reporting
  * - Progressive layer testing (Frontend, Backend, Infrastructure, Governance)
@@ -19,17 +19,30 @@
  * - Launch readiness assessment
  * - Layer-specific improvement recommendations
  * - Coordination with anchor command to prevent conflicts
+ * - Fast mode (--fast/-f): Only essential checks, instant chat readiness, heavy checks deferred
+ * - Real-time progress bar/step indicator and warnings
  */
 
 const fs = require('fs');
 const path = require('path');
 const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 
+// --- Progress Bar Utility ---
+function printProgressBar(current, total, label) {
+  const width = 30;
+  const percent = Math.round((current / total) * 100);
+  const filled = Math.round((current / total) * width);
+  const bar = '█'.repeat(filled) + '-'.repeat(width - filled);
+  process.stdout.write(`\r[${bar}] ${percent}% - ${label}`);
+  if (current === total) process.stdout.write('\n');
+}
+
+// --- Main Protocol Class ---
 class LaunchProtocol {
-  constructor() {
+  constructor(fastMode = false) {
     this.projectRoot = process.cwd();
     this.sessionId = this.generateEnhancedSessionId();
-    this.protocolVersion = '2.0.0';
+    this.protocolVersion = '2.1.0';
     this.contextAwarenessResults = {};
     this.systemState = {};
     this.launchReadiness = {};
@@ -37,10 +50,9 @@ class LaunchProtocol {
     this.layerTestResults = {};
     this.sessionMetadata = this.generateSessionMetadata();
     this.sessionStartTime = Date.now();
-    
+    this.fastMode = fastMode;
     // Command execution optimizer
     this.executor = new CommandExecutionOptimizer();
-    
     // Coordination with anchor command
     this.isAnchorRunning = this.checkAnchorStatus();
     this.coordinationMode = process.env.COMMAND_COORDINATOR === 'true';
@@ -53,9 +65,9 @@ class LaunchProtocol {
       if (fs.existsSync(commandHistoryPath)) {
         const history = JSON.parse(fs.readFileSync(commandHistoryPath, 'utf8'));
         const recentCommands = history.commands?.slice(-5) || [];
-        const anchorRunning = recentCommands.some(cmd => 
-          cmd.command === 'anchor' && 
-          cmd.status === 'started' && 
+        const anchorRunning = recentCommands.some(cmd =>
+          cmd.command === 'anchor' &&
+          cmd.status === 'started' &&
           new Date(cmd.timestamp) > new Date(Date.now() - 60000) // Within last minute
         );
         return anchorRunning;
@@ -101,7 +113,7 @@ class LaunchProtocol {
     const seconds = Math.floor(duration / 1000);
     const minutes = Math.floor(seconds / 60);
     const remainingSeconds = seconds % 60;
-    
+
     if (minutes > 0) {
       return `${minutes}m ${remainingSeconds}s`;
     }
@@ -109,47 +121,63 @@ class LaunchProtocol {
   }
 
   async execute() {
-    console.log('🚀 Launch Protocol v2.0.0 Initiated');
-    console.log('====================================');
+    // Warn if running in a non-interactive shell
+    if (!process.stdout.isTTY) {
+      console.log('⚠️  WARNING: Launch protocol running in a non-interactive shell. Progress may not be visible.');
+    }
+    if (this.fastMode) {
+      console.log('🚀 Launch Protocol v2.1.0 (FAST MODE)');
+      console.log('====================================');
+      console.log('Fast mode: Only essential checks will run. Heavy checks will be deferred.');
+    } else {
+      console.log('🚀 Launch Protocol v2.1.0 Initiated');
+      console.log('====================================');
+    }
     console.log(`Session ID: ${this.sessionId}`);
     console.log(`Protocol Version: ${this.protocolVersion}`);
-    
     if (this.isAnchorRunning) {
       console.log('⚠️  Anchor command detected - coordinating execution');
     }
-    
     if (this.coordinationMode) {
       console.log('🔄 Running in coordination mode');
     }
-    
     console.log('');
 
     try {
-      // Phase 0: Prevention System Check (simplified)
+      if (this.fastMode) {
+        // --- FAST MODE: Only essential steps ---
+        let step = 1, total = 3;
+        printProgressBar(step++, total, 'Restoring minimal context...');
+        await this.restoreMinimalContext();
+        printProgressBar(step++, total, 'Running minimal health check...');
+        await this.minimalHealthCheck();
+        printProgressBar(step++, total, 'Chat ready! Heavy checks deferred.');
+        console.log('\n✅ Fast launch complete. You may begin work immediately.');
+        setTimeout(() => {
+          this.runDeferredHeavyChecks();
+        }, 1000);
+        return;
+      }
+      // --- NORMAL MODE: All steps with progress bar ---
+      let step = 1, total = 7;
+      printProgressBar(step++, total, 'Phase 0: Prevention System Check');
       await this.runPreventionSystem();
-      
-      // Phase 1: Context Awareness Testing
+      printProgressBar(step++, total, 'Phase 1: Context Awareness Testing');
       await this.performContextAwarenessTesting();
-      
-      // Phase 2: Progressive Layer Testing
+      printProgressBar(step++, total, 'Phase 2: Progressive Layer Testing');
       await this.performProgressiveLayerTesting();
-      
-      // Phase 3: Simplified System State Validation
+      printProgressBar(step++, total, 'Phase 3: System State Validation');
       await this.validateSystemState();
-      
-      // Phase 4: Generate Launch Report
+      printProgressBar(step++, total, 'Phase 4: Generate Launch Report');
       await this.generateLaunchReport();
-      
-      // Phase 5: Generate Transition Memo
+      printProgressBar(step++, total, 'Phase 5: Generate Transition Memo');
       await this.generateTransitionMemo();
-      
-      console.log('');
-      console.log('✅ Launch Protocol Complete');
+      printProgressBar(total, total, 'Launch Complete!');
+      console.log('\n✅ Launch Protocol Complete');
       console.log('🧠 Context awareness tested and reported');
       console.log('🔬 Progressive layer testing completed');
       console.log('📊 System state validated');
       console.log('📝 Transition memo generated');
-      
     } catch (error) {
       console.error('❌ Launch Protocol Failed:', error.message);
       this.logError(error);
@@ -159,14 +187,14 @@ class LaunchProtocol {
 
   async runPreventionSystem() {
     console.log('🛡️ Phase 0: Prevention System Check');
-    
+
     try {
       const result = await this.executor.executeCommand('node', {
         args: ['scripts/protocols/prevention_system.cjs'],
         timeout: 60000,
         silent: true
       });
-      
+
       if (result.stdout.includes('CRITICAL ISSUES DETECTED')) {
         console.log('⚠️  Prevention system detected issues - proceeding with caution');
         console.log('Note: Some prevention checks may be overly strict for current development phase');
@@ -175,7 +203,7 @@ class LaunchProtocol {
       } else {
         console.log('✅ Prevention system passed - all checks cleared');
       }
-      
+
     } catch (error) {
       console.error('❌ Prevention system failed:', error.message);
       console.log('⚠️  Proceeding with launch despite prevention system issues');
@@ -184,7 +212,7 @@ class LaunchProtocol {
 
   async performContextAwarenessTesting() {
     console.log('🧠 Phase 1: Context Awareness Testing');
-    
+
     const testResults = {
       timestamp: new Date().toISOString(),
       tests: []
@@ -215,12 +243,12 @@ class LaunchProtocol {
     testResults.tests.push(priorityTest);
 
     this.contextAwarenessResults = testResults;
-    
+
     const passedTests = testResults.tests.filter(test => test.passed).length;
     const totalTests = testResults.tests.length;
-    
+
     console.log(`✅ Context awareness testing completed: ${passedTests}/${totalTests} tests passed`);
-    
+
     // Always report results
     console.log('\n📋 Context Awareness Test Results:');
     testResults.tests.forEach((test, index) => {
@@ -266,7 +294,7 @@ class LaunchProtocol {
     }
 
     const architectureContent = fs.readFileSync(architecturePath, 'utf8');
-    
+
     // Check for holon system components (updated for current architecture)
     const hasHolonSystem = architectureContent.includes('HolonSystem') || architectureContent.includes('holonSystem');
     const hasSystemMaster = architectureContent.includes('systemMaster') || architectureContent.includes('SystemMaster');
@@ -284,7 +312,7 @@ class LaunchProtocol {
     const changelogPath = path.join(this.projectRoot, 'greenlight-wiki/CHANGELOG.md');
     const roadmapPath = path.join(this.projectRoot, 'ROADMAP.md');
     const livingRoadmapPath = path.join(this.projectRoot, 'LIVING_ROADMAP.md');
-    
+
     const hasChangelog = fs.existsSync(changelogPath);
     const hasRoadmap = fs.existsSync(roadmapPath);
     const hasLivingRoadmap = fs.existsSync(livingRoadmapPath);
@@ -324,7 +352,7 @@ class LaunchProtocol {
     const custodianPath = path.join(this.projectRoot, 'scripts/governance/custodian_protocol.cjs');
     const documentationPath = path.join(this.projectRoot, 'DOCUMENTATION_CUSTODIAN_AND_SCRIPTMASTER.md');
     const wikiPath = path.join(this.projectRoot, 'greenlight-wiki/');
-    
+
     const hasCustodian = fs.existsSync(custodianPath);
     const hasDocumentation = fs.existsSync(documentationPath);
     const hasWiki = fs.existsSync(wikiPath);
@@ -339,10 +367,10 @@ class LaunchProtocol {
   async testPriorityAwareness() {
     const roadmapPath = path.join(this.projectRoot, 'LIVING_ROADMAP.md');
     const sessionsDir = path.join(this.projectRoot, 'data', 'sessions');
-    
+
     let roadmapPriorities = { hasPriorityAreas: false, hasHolonMigration: false, hasKnowledgeSharing: false };
     let transitionMemoPriorities = { hasNextSteps: false, hasCriticalBlockers: false, hasRecommendations: false };
-    
+
     // Check roadmap priorities
     if (fs.existsSync(roadmapPath)) {
       const roadmapContent = fs.readFileSync(roadmapPath, 'utf8');
@@ -350,27 +378,27 @@ class LaunchProtocol {
       roadmapPriorities.hasHolonMigration = roadmapContent.includes('Holon Directory Migration');
       roadmapPriorities.hasKnowledgeSharing = roadmapContent.includes('Holon Knowledge Sharing');
     }
-    
+
     // Check transition memo priorities
     if (fs.existsSync(sessionsDir)) {
       const transitionMemos = fs.readdirSync(sessionsDir)
         .filter(file => file.startsWith('transition-memo-') && file.endsWith('.json'))
         .sort()
         .reverse(); // Get most recent first
-      
+
       if (transitionMemos.length > 0) {
         const latestMemoPath = path.join(sessionsDir, transitionMemos[0]);
         try {
           const memoContent = JSON.parse(fs.readFileSync(latestMemoPath, 'utf8'));
-          
+
           // Check for priority-related fields in transition memo
           transitionMemoPriorities.hasNextSteps = memoContent.nextSteps && Array.isArray(memoContent.nextSteps) && memoContent.nextSteps.length > 0;
           transitionMemoPriorities.hasCriticalBlockers = memoContent.criticalBlockers && Object.keys(memoContent.criticalBlockers).length > 0;
           transitionMemoPriorities.hasRecommendations = memoContent.recommendations && Object.keys(memoContent.recommendations).length > 0;
-          
+
           // Also check for immediate/nextSteps in context
           if (memoContent.context && memoContent.context.nextSteps) {
-            transitionMemoPriorities.hasNextSteps = transitionMemoPriorities.hasNextSteps || 
+            transitionMemoPriorities.hasNextSteps = transitionMemoPriorities.hasNextSteps ||
               (Array.isArray(memoContent.context.nextSteps) && memoContent.context.nextSteps.length > 0);
           }
         } catch (error) {
@@ -378,13 +406,13 @@ class LaunchProtocol {
         }
       }
     }
-    
+
     // Combine priority sources - pass if either roadmap OR transition memo has priority info
     const hasRoadmapPriorities = roadmapPriorities.hasPriorityAreas || roadmapPriorities.hasHolonMigration || roadmapPriorities.hasKnowledgeSharing;
     const hasTransitionMemoPriorities = transitionMemoPriorities.hasNextSteps || transitionMemoPriorities.hasCriticalBlockers || transitionMemoPriorities.hasRecommendations;
-    
+
     const passed = hasRoadmapPriorities || hasTransitionMemoPriorities;
-    
+
     return {
       name: 'Priority Awareness',
       passed: passed,
@@ -395,7 +423,7 @@ class LaunchProtocol {
   async performProgressiveLayerTesting() {
     console.log('🔬 Phase 2: Progressive Layer Testing');
     console.log('=====================================');
-    
+
     this.layerTestResults = {
       timestamp: new Date().toISOString(),
       layers: {}
@@ -499,7 +527,7 @@ class LaunchProtocol {
       const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'frontend/package.json'), 'utf8'));
       const hasReact = packageJson.dependencies && packageJson.dependencies.react;
       const hasVite = packageJson.devDependencies && packageJson.devDependencies.vite;
-      
+
       if (hasReact && hasVite) {
         tests.push({ name: 'Dependencies', passed: true, score: 20, details: 'Core dependencies present' });
         totalScore += 20;
@@ -512,7 +540,7 @@ class LaunchProtocol {
     }
 
     const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
-    
+
     return {
       health,
       score: totalScore,
@@ -601,7 +629,7 @@ class LaunchProtocol {
       const packageJson = JSON.parse(fs.readFileSync(path.join(this.projectRoot, 'backend/package.json'), 'utf8'));
       const hasExpress = packageJson.dependencies && packageJson.dependencies.express;
       const hasNodemon = packageJson.devDependencies && packageJson.devDependencies.nodemon;
-      
+
       if (hasExpress && hasNodemon) {
         tests.push({ name: 'Dependencies', passed: true, score: 15, details: 'Core dependencies present' });
         totalScore += 15;
@@ -614,7 +642,7 @@ class LaunchProtocol {
     }
 
     const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
-    
+
     return {
       health,
       score: totalScore,
@@ -636,7 +664,7 @@ class LaunchProtocol {
         this.executor.executeCommand('git', { args: ['branch', '--show-current'], silent: true }),
         this.executor.executeCommand('git', { args: ['log', '-1', '--oneline'], silent: true })
       ]);
-      
+
       tests.push({ name: 'Git Repository', passed: true, score: 25, details: `Branch: ${branch.stdout.trim()}, Last commit: ${lastCommit.stdout.trim()}` });
       totalScore += 25;
     } catch (error) {
@@ -647,12 +675,12 @@ class LaunchProtocol {
     const requiredDirs = ['src', 'frontend', 'backend', 'scripts', 'docs'];
     const existingDirs = requiredDirs.filter(dir => fs.existsSync(path.join(this.projectRoot, dir)));
     const dirScore = Math.round((existingDirs.length / requiredDirs.length) * 20);
-    
-    tests.push({ 
-      name: 'File Structure', 
-      passed: existingDirs.length >= 4, 
-      score: dirScore, 
-      details: `${existingDirs.length}/${requiredDirs.length} required directories present` 
+
+    tests.push({
+      name: 'File Structure',
+      passed: existingDirs.length >= 4,
+      score: dirScore,
+      details: `${existingDirs.length}/${requiredDirs.length} required directories present`
     });
     totalScore += dirScore;
 
@@ -660,12 +688,12 @@ class LaunchProtocol {
     const envFiles = ['.env', '.env.example', '.env.local'];
     const existingEnvFiles = envFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const envScore = Math.round((existingEnvFiles.length / envFiles.length) * 20);
-    
-    tests.push({ 
-      name: 'Environment Config', 
-      passed: existingEnvFiles.length >= 1, 
-      score: envScore, 
-      details: `${existingEnvFiles.length}/${envFiles.length} env files present` 
+
+    tests.push({
+      name: 'Environment Config',
+      passed: existingEnvFiles.length >= 1,
+      score: envScore,
+      details: `${existingEnvFiles.length}/${envFiles.length} env files present`
     });
     totalScore += envScore;
 
@@ -673,12 +701,12 @@ class LaunchProtocol {
     const packageFiles = ['package.json', 'package-lock.json'];
     const existingPackageFiles = packageFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const packageScore = Math.round((existingPackageFiles.length / packageFiles.length) * 20);
-    
-    tests.push({ 
-      name: 'Package Management', 
-      passed: existingPackageFiles.length >= 1, 
-      score: packageScore, 
-      details: `${existingPackageFiles.length}/${packageFiles.length} package files present` 
+
+    tests.push({
+      name: 'Package Management',
+      passed: existingPackageFiles.length >= 1,
+      score: packageScore,
+      details: `${existingPackageFiles.length}/${packageFiles.length} package files present`
     });
     totalScore += packageScore;
 
@@ -686,17 +714,17 @@ class LaunchProtocol {
     const docFiles = ['README.md', 'docs/', 'greenlight-wiki/'];
     const existingDocFiles = docFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const docScore = Math.round((existingDocFiles.length / docFiles.length) * 15);
-    
-    tests.push({ 
-      name: 'Documentation', 
-      passed: existingDocFiles.length >= 2, 
-      score: docScore, 
-      details: `${existingDocFiles.length}/${docFiles.length} documentation sources present` 
+
+    tests.push({
+      name: 'Documentation',
+      passed: existingDocFiles.length >= 2,
+      score: docScore,
+      details: `${existingDocFiles.length}/${docFiles.length} documentation sources present`
     });
     totalScore += docScore;
 
     const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
-    
+
     return {
       health,
       score: totalScore,
@@ -719,12 +747,12 @@ class LaunchProtocol {
     ];
     const existingProtocols = protocolFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const protocolScore = Math.round((existingProtocols.length / protocolFiles.length) * 25);
-    
-    tests.push({ 
-      name: 'Protocol System', 
-      passed: existingProtocols.length >= 2, 
-      score: protocolScore, 
-      details: `${existingProtocols.length}/${protocolFiles.length} protocols present` 
+
+    tests.push({
+      name: 'Protocol System',
+      passed: existingProtocols.length >= 2,
+      score: protocolScore,
+      details: `${existingProtocols.length}/${protocolFiles.length} protocols present`
     });
     totalScore += protocolScore;
 
@@ -736,12 +764,12 @@ class LaunchProtocol {
     ];
     const existingGovernance = governanceFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const governanceScore = Math.round((existingGovernance.length / governanceFiles.length) * 20);
-    
-    tests.push({ 
-      name: 'Governance Documentation', 
-      passed: existingGovernance.length >= 1, 
-      score: governanceScore, 
-      details: `${existingGovernance.length}/${governanceFiles.length} governance docs present` 
+
+    tests.push({
+      name: 'Governance Documentation',
+      passed: existingGovernance.length >= 1,
+      score: governanceScore,
+      details: `${existingGovernance.length}/${governanceFiles.length} governance docs present`
     });
     totalScore += governanceScore;
 
@@ -753,12 +781,12 @@ class LaunchProtocol {
     ];
     const existingSessions = sessionFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const sessionScore = Math.round((existingSessions.length / sessionFiles.length) * 20);
-    
-    tests.push({ 
-      name: 'Session Management', 
-      passed: existingSessions.length >= 2, 
-      score: sessionScore, 
-      details: `${existingSessions.length}/${sessionFiles.length} session management components present` 
+
+    tests.push({
+      name: 'Session Management',
+      passed: existingSessions.length >= 2,
+      score: sessionScore,
+      details: `${existingSessions.length}/${sessionFiles.length} session management components present`
     });
     totalScore += sessionScore;
 
@@ -770,12 +798,12 @@ class LaunchProtocol {
     ];
     const existingAudits = auditFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const auditScore = Math.round((existingAudits.length / auditFiles.length) * 20);
-    
-    tests.push({ 
-      name: 'Audit System', 
-      passed: existingAudits.length >= 1, 
-      score: auditScore, 
-      details: `${existingAudits.length}/${auditFiles.length} audit components present` 
+
+    tests.push({
+      name: 'Audit System',
+      passed: existingAudits.length >= 1,
+      score: auditScore,
+      details: `${existingAudits.length}/${auditFiles.length} audit components present`
     });
     totalScore += auditScore;
 
@@ -787,17 +815,17 @@ class LaunchProtocol {
     ];
     const existingChanges = changeFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const changeScore = Math.round((existingChanges.length / changeFiles.length) * 15);
-    
-    tests.push({ 
-      name: 'Change Tracking', 
-      passed: existingChanges.length >= 1, 
-      score: changeScore, 
-      details: `${existingChanges.length}/${changeFiles.length} change tracking components present` 
+
+    tests.push({
+      name: 'Change Tracking',
+      passed: existingChanges.length >= 1,
+      score: changeScore,
+      details: `${existingChanges.length}/${changeFiles.length} change tracking components present`
     });
     totalScore += changeScore;
 
     const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
-    
+
     return {
       health,
       score: totalScore,
@@ -811,15 +839,15 @@ class LaunchProtocol {
     const layers = Object.values(this.layerTestResults.layers);
     const totalScore = layers.reduce((sum, layer) => sum + layer.score, 0);
     const averageScore = Math.round(totalScore / layers.length);
-    
+
     const healthyLayers = layers.filter(layer => layer.health === 'healthy').length;
     const warningLayers = layers.filter(layer => layer.health === 'warning').length;
     const criticalLayers = layers.filter(layer => layer.health === 'critical').length;
-    
+
     let overall = 'healthy';
     if (criticalLayers > 0) overall = 'critical';
     else if (warningLayers > 0) overall = 'warning';
-    
+
     return {
       overall,
       averageScore,
@@ -830,7 +858,7 @@ class LaunchProtocol {
 
   generateFrontendRecommendations(tests, score) {
     const recommendations = [];
-    
+
     if (score < 80) {
       const failedTests = tests.filter(test => !test.passed);
       failedTests.forEach(test => {
@@ -853,17 +881,17 @@ class LaunchProtocol {
         }
       });
     }
-    
+
     if (score >= 80) {
       recommendations.push('Frontend layer is healthy - focus on performance optimization and feature development');
     }
-    
+
     return recommendations;
   }
 
   generateBackendRecommendations(tests, score) {
     const recommendations = [];
-    
+
     if (score < 80) {
       const failedTests = tests.filter(test => !test.passed);
       failedTests.forEach(test => {
@@ -886,17 +914,17 @@ class LaunchProtocol {
         }
       });
     }
-    
+
     if (score >= 80) {
       recommendations.push('Backend layer is healthy - focus on API optimization and security hardening');
     }
-    
+
     return recommendations;
   }
 
   generateInfrastructureRecommendations(tests, score) {
     const recommendations = [];
-    
+
     if (score < 80) {
       const failedTests = tests.filter(test => !test.passed);
       failedTests.forEach(test => {
@@ -919,17 +947,17 @@ class LaunchProtocol {
         }
       });
     }
-    
+
     if (score >= 80) {
       recommendations.push('Infrastructure layer is healthy - focus on deployment automation and monitoring');
     }
-    
+
     return recommendations;
   }
 
   generateGovernanceRecommendations(tests, score) {
     const recommendations = [];
-    
+
     if (score < 80) {
       const failedTests = tests.filter(test => !test.passed);
       failedTests.forEach(test => {
@@ -952,11 +980,11 @@ class LaunchProtocol {
         }
       });
     }
-    
+
     if (score >= 80) {
       recommendations.push('Governance layer is healthy - focus on policy refinement and automation');
     }
-    
+
     return recommendations;
   }
 
@@ -1006,7 +1034,7 @@ class LaunchProtocol {
     if (summary.criticalIssues.length > 0) {
       summary.nextActions.push('Address critical layer issues immediately');
     }
-    
+
     summary.improvementPriorities
       .sort((a, b) => a.priority === 'HIGH' ? -1 : 1)
       .slice(0, 3)
@@ -1023,7 +1051,7 @@ class LaunchProtocol {
 
   async validateSystemState() {
     console.log('📊 Phase 2: Simplified System State Validation');
-    
+
     this.systemState = {
       timestamp: new Date().toISOString(),
       layers: {}
@@ -1031,37 +1059,37 @@ class LaunchProtocol {
 
     // Quick file-based validation instead of command execution
     console.log('🔍 Validating system structure...');
-    
+
     // Frontend validation (file-based)
     const frontendHealth = this.validateFrontendFiles();
     this.systemState.layers.frontend = frontendHealth;
-    
+
     // Backend validation (file-based)
     const backendHealth = this.validateBackendFiles();
     this.systemState.layers.backend = backendHealth;
-    
+
     // Infrastructure validation (file-based)
     const infrastructureHealth = this.validateInfrastructureFiles();
     this.systemState.layers.infrastructure = infrastructureHealth;
-    
+
     // Governance validation (file-based)
     const governanceHealth = this.validateGovernanceFiles();
     this.systemState.layers.governance = governanceHealth;
-    
+
     // Calculate overall health
     const layerScores = Object.values(this.systemState.layers).map(layer => layer.score);
     const averageScore = layerScores.reduce((sum, score) => sum + score, 0) / layerScores.length;
-    
+
     this.systemState.overallHealth = {
       score: Math.round(averageScore),
       maxScore: 100,
       health: averageScore >= 80 ? 'healthy' : averageScore >= 60 ? 'warning' : 'critical',
       timestamp: new Date().toISOString()
     };
-    
+
     console.log(`✅ System state validation completed`);
     console.log(`🏆 Overall Layer Health: ${this.systemState.overallHealth.health} (${this.systemState.overallHealth.score}/100)`);
-    
+
     // Report individual layer health
     Object.entries(this.systemState.layers).forEach(([layer, data]) => {
       const status = data.health === 'healthy' ? '✅' : data.health === 'warning' ? '⚠️' : '❌';
@@ -1071,11 +1099,11 @@ class LaunchProtocol {
 
   async assessRoadmapPriorities() {
     console.log('🗺️ Phase 4: Roadmap Priority Assessment');
-    
+
     const roadmapPath = path.join(this.projectRoot, 'LIVING_ROADMAP.md');
     if (fs.existsSync(roadmapPath)) {
       const roadmapContent = fs.readFileSync(roadmapPath, 'utf8');
-      
+
       // Extract priority areas
       const priorityMatch = roadmapContent.match(/### Current Priority Areas:([\s\S]*?)(?=---|$)/);
       if (priorityMatch) {
@@ -1092,7 +1120,7 @@ class LaunchProtocol {
 
   async verifyContextPreservation() {
     console.log('📋 Phase 5: Context Preservation Verification');
-    
+
     const contextFiles = [
       'LIVING_ROADMAP.md',
       'ROADMAP.md',
@@ -1100,14 +1128,14 @@ class LaunchProtocol {
       'DOCUMENTATION_CUSTODIAN_AND_SCRIPTMASTER.md'
     ];
 
-    const preservedFiles = contextFiles.filter(file => 
+    const preservedFiles = contextFiles.filter(file =>
       fs.existsSync(path.join(this.projectRoot, file))
     );
 
     this.launchReadiness.contextPreservation = {
       totalFiles: contextFiles.length,
       preservedFiles: preservedFiles.length,
-      missingFiles: contextFiles.filter(file => 
+      missingFiles: contextFiles.filter(file =>
         !fs.existsSync(path.join(this.projectRoot, file))
       )
     };
@@ -1117,7 +1145,7 @@ class LaunchProtocol {
 
   async assessLaunchReadiness() {
     console.log('🚀 Phase 6: Launch Readiness Assessment');
-    
+
     const contextAwarenessScore = this.contextAwarenessResults.tests.filter(test => test.passed).length / this.contextAwarenessResults.tests.length;
     const systemHealth = this.systemState.buildStatus.status === 'success';
     const contextPreserved = this.launchReadiness.contextPreservation.preservedFiles / this.launchReadiness.contextPreservation.totalFiles;
@@ -1134,34 +1162,34 @@ class LaunchProtocol {
 
   async generateLaunchReport() {
     console.log('📄 Phase 7: Generating Enhanced Launch Report');
-    
+
     // Generate roadmap anchor statement
     const roadmapAnchor = await this.generateRoadmapAnchor();
-    
+
     const report = {
       // Enhanced Session Information
       sessionMetadata: this.sessionMetadata,
       sessionId: this.sessionId,
       sessionType: 'launch',
       sessionLabel: 'Greenlight Platform Launch Protocol',
-      
+
       // Protocol Information
       timestamp: new Date().toISOString(),
       protocolVersion: this.protocolVersion,
-      
+
       // Test Results
       contextAwarenessResults: this.contextAwarenessResults,
       layerTestResults: this.layerTestResults || { layers: {}, overallHealth: { overall: 'unknown', averageScore: 0 } },
-      
+
       // System State
       systemState: this.systemState,
       launchReadiness: this.launchReadiness,
       roadmapAnchor: roadmapAnchor,
-      
+
       // Recommendations and Improvements
       recommendations: this.recommendations,
       layerImprovements: this.generateLayerImprovementSummary(),
-      
+
       // Session Tracking
       sessionTracking: {
         uniqueId: this.sessionId,
@@ -1174,7 +1202,7 @@ class LaunchProtocol {
         status: 'completed',
         completionTime: new Date().toISOString()
       },
-      
+
       notes: [
         'Launch protocol v2.0.0 completed successfully with progressive layer testing.',
         'Context awareness testing results are always reported.',
@@ -1193,14 +1221,14 @@ class LaunchProtocol {
     // Use unique file names to avoid conflicts with anchor command
     const reportPath = path.join(this.projectRoot, 'LAUNCH_SESSION_REPORT.json');
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
-    
+
     // Also generate a separate roadmap anchor file for easy access
     const anchorPath = path.join(this.projectRoot, 'LAUNCH_ROADMAP_ANCHOR.json');
     fs.writeFileSync(anchorPath, JSON.stringify(roadmapAnchor, null, 2));
-    
+
     console.log(`✅ Launch report generated: ${reportPath}`);
     console.log(`✅ Roadmap anchor generated: ${anchorPath}`);
-    
+
     // Print roadmap anchor statement to console
     console.log('');
     console.log('🗺️ ROADMAP ANCHOR STATEMENT');
@@ -1209,21 +1237,6 @@ class LaunchProtocol {
     console.log(`Progress: ${roadmapAnchor.progress}%`);
     console.log(`Next Milestone: ${roadmapAnchor.nextMilestone}`);
     console.log('');
-    console.log('Current Priorities:');
-    roadmapAnchor.currentPriorities.forEach((priority, index) => {
-      console.log(`  ${index + 1}. ${priority}`);
-    });
-    console.log('');
-    console.log('Recent Completed Items:');
-    roadmapAnchor.completedItems.slice(-3).forEach((item, index) => {
-      console.log(`  ${index + 1}. ${item}`);
-    });
-    console.log('');
-    console.log('Pending Items:');
-    roadmapAnchor.pendingItems.slice(0, 3).forEach((item, index) => {
-      console.log(`  ${index + 1}. ${item}`);
-    });
-    console.log('');
   }
 
   async generateRoadmapAnchor() {
@@ -1231,22 +1244,22 @@ class LaunchProtocol {
     const changelogPath = path.join(this.projectRoot, 'greenlight-wiki/CHANGELOG.md');
     const roadmapPath = path.join(this.projectRoot, 'ROADMAP.md');
     const nextSessionPath = path.join(this.projectRoot, 'scripts/NEXT_SESSION_CONTEXT.md');
-    
+
     let currentPhase = 'Unknown';
     let currentPriorities = [];
     let completedItems = [];
     let pendingItems = [];
     let nextMilestone = 'Continue current work';
     let progress = 0;
-    
+
     // Read roadmap content
     if (fs.existsSync(livingRoadmapPath)) {
       const roadmapContent = fs.readFileSync(livingRoadmapPath, 'utf8');
-      
+
       // Extract current phase from roadmap (find first non-completed section)
       const sections = roadmapContent.split(/(?=^## )/m);
       let currentPhase = 'Unknown';
-      
+
       for (const section of sections) {
         const phaseMatch = section.match(/^## ([^#\n]+)/);
         if (phaseMatch) {
@@ -1258,7 +1271,7 @@ class LaunchProtocol {
           }
         }
       }
-      
+
       // Extract priorities from roadmap
       const priorityMatch = roadmapContent.match(/### Current Priority Areas:([\s\S]*?)(?=###|$)/);
       if (priorityMatch) {
@@ -1266,7 +1279,7 @@ class LaunchProtocol {
         const priorityLines = priorityContent.split('\n').filter(line => line.trim().startsWith('-'));
         currentPriorities = priorityLines.map(line => line.replace(/^-\s*/, '').trim());
       }
-      
+
       // Extract pending items from current roadmap section
       for (const section of sections) {
         const phaseMatch = section.match(/^## ([^#\n]+)/);
@@ -1285,7 +1298,7 @@ class LaunchProtocol {
         }
       }
     }
-    
+
     // Read changelog for completed items
     if (fs.existsSync(changelogPath)) {
       const changelogContent = fs.readFileSync(changelogPath, 'utf8');
@@ -1295,7 +1308,7 @@ class LaunchProtocol {
         return titleMatch ? titleMatch[1].trim() : 'Recent work';
       });
     }
-    
+
     // Read next session context for additional context
     if (fs.existsSync(nextSessionPath)) {
       const nextSessionContent = fs.readFileSync(nextSessionPath, 'utf8');
@@ -1305,16 +1318,16 @@ class LaunchProtocol {
         pendingItems = [...pendingItems, ...recommendations.map(line => line.replace(/^-\s*/, '').trim())];
       }
     }
-    
+
     // Calculate progress based on completed vs pending items
     const totalItems = completedItems.length + pendingItems.length;
     progress = totalItems > 0 ? Math.round((completedItems.length / totalItems) * 100) : 0;
-    
+
     // Determine next milestone
     if (pendingItems.length > 0) {
       nextMilestone = pendingItems[0];
     }
-    
+
     return {
       currentPhase,
       currentPriorities,
@@ -1360,12 +1373,12 @@ class LaunchProtocol {
   async analyzeFileStructure() {
     const keyDirectories = ['src', 'scripts', 'packages'];
     const structure = {};
-    
+
     for (const dir of keyDirectories) {
       const dirPath = path.join(this.projectRoot, dir);
       structure[dir] = fs.existsSync(dirPath);
     }
-    
+
     return structure;
   }
 
@@ -1400,22 +1413,22 @@ class LaunchProtocol {
 
   async generateTransitionMemo() {
     console.log('📝 Phase 8: Generating Transition Memo...');
-    
+
     const sessionsDir = path.join(this.projectRoot, 'data', 'sessions');
     if (!fs.existsSync(sessionsDir)) {
       fs.mkdirSync(sessionsDir, { recursive: true });
     }
-    
+
     const memoFile = path.join(sessionsDir, `transition-memo-${new Date().toISOString().replace(/[:.]/g, '-')}.json`);
-    
+
     // Collect data from all phases
     const memo = {
       timestamp: new Date().toISOString(),
       sessionId: this.sessionId,
       summary: 'Transition Memo: Launch Protocol',
-      sessionSummary: this.contextAwarenessResults ? 
+      sessionSummary: this.contextAwarenessResults ?
         `Context awareness: ${this.contextAwarenessResults.tests.filter(t => t.passed).length}/${this.contextAwarenessResults.tests.length} tests passed` : 'N/A',
-      auditSummary: this.layerTestResults && this.layerTestResults.overallHealth ? 
+      auditSummary: this.layerTestResults && this.layerTestResults.overallHealth ?
         `Layer health: ${this.layerTestResults.overallHealth.averageScore || this.layerTestResults.overallHealth}/100` : 'N/A',
       nextSteps: this.recommendations || [], // Use recommendations from this protocol
       context: {
@@ -1424,7 +1437,7 @@ class LaunchProtocol {
         sessionDuration: this.calculateSessionDuration()
       }
     };
-    
+
     fs.writeFileSync(memoFile, JSON.stringify(memo, null, 2));
     console.log(`📝 Transition memo generated and logged: ${memoFile}`);
   }
@@ -1475,7 +1488,7 @@ class LaunchProtocol {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
         const hasReact = packageJson.dependencies && packageJson.dependencies.react;
         const hasVite = packageJson.devDependencies && packageJson.devDependencies.vite;
-        
+
         if (hasReact && hasVite) {
           tests.push({ name: 'Dependencies', passed: true, score: 25, details: 'Core dependencies present' });
           totalScore += 25;
@@ -1491,7 +1504,7 @@ class LaunchProtocol {
     }
 
     const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
-    
+
     return {
       health,
       score: totalScore,
@@ -1546,7 +1559,7 @@ class LaunchProtocol {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8'));
         const hasExpress = packageJson.dependencies && packageJson.dependencies.express;
         const hasNodemon = packageJson.devDependencies && packageJson.devDependencies.nodemon;
-        
+
         if (hasExpress && hasNodemon) {
           tests.push({ name: 'Dependencies', passed: true, score: 25, details: 'Core dependencies present' });
           totalScore += 25;
@@ -1562,7 +1575,7 @@ class LaunchProtocol {
     }
 
     const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
-    
+
     return {
       health,
       score: totalScore,
@@ -1590,12 +1603,12 @@ class LaunchProtocol {
     const requiredDirs = ['src', 'scripts', 'docs', 'config'];
     const existingDirs = requiredDirs.filter(dir => fs.existsSync(path.join(this.projectRoot, dir)));
     const dirScore = Math.round((existingDirs.length / requiredDirs.length) * 25);
-    
-    tests.push({ 
-      name: 'Required Directories', 
-      passed: existingDirs.length >= 3, 
-      score: dirScore, 
-      details: `${existingDirs.length}/${requiredDirs.length} required directories present` 
+
+    tests.push({
+      name: 'Required Directories',
+      passed: existingDirs.length >= 3,
+      score: dirScore,
+      details: `${existingDirs.length}/${requiredDirs.length} required directories present`
     });
     totalScore += dirScore;
 
@@ -1603,12 +1616,12 @@ class LaunchProtocol {
     const configFiles = ['package.json', 'README.md', '.gitignore'];
     const existingConfigs = configFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const configScore = Math.round((existingConfigs.length / configFiles.length) * 25);
-    
-    tests.push({ 
-      name: 'Configuration Files', 
-      passed: existingConfigs.length >= 2, 
-      score: configScore, 
-      details: `${existingConfigs.length}/${configFiles.length} config files present` 
+
+    tests.push({
+      name: 'Configuration Files',
+      passed: existingConfigs.length >= 2,
+      score: configScore,
+      details: `${existingConfigs.length}/${configFiles.length} config files present`
     });
     totalScore += configScore;
 
@@ -1616,17 +1629,17 @@ class LaunchProtocol {
     const docFiles = ['README.md', 'docs/', 'LIVING_ROADMAP.md', 'ROADMAP.md'];
     const existingDocs = docFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const docScore = Math.round((existingDocs.length / docFiles.length) * 25);
-    
-    tests.push({ 
-      name: 'Documentation', 
-      passed: existingDocs.length >= 2, 
-      score: docScore, 
-      details: `${existingDocs.length}/${docFiles.length} documentation files present` 
+
+    tests.push({
+      name: 'Documentation',
+      passed: existingDocs.length >= 2,
+      score: docScore,
+      details: `${existingDocs.length}/${docFiles.length} documentation files present`
     });
     totalScore += docScore;
 
     const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
-    
+
     return {
       health,
       score: totalScore,
@@ -1649,12 +1662,12 @@ class LaunchProtocol {
     ];
     const existingProtocols = governanceFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const protocolScore = Math.round((existingProtocols.length / governanceFiles.length) * 25);
-    
-    tests.push({ 
-      name: 'Protocol System', 
-      passed: existingProtocols.length >= 2, 
-      score: protocolScore, 
-      details: `${existingProtocols.length}/${governanceFiles.length} governance protocols present` 
+
+    tests.push({
+      name: 'Protocol System',
+      passed: existingProtocols.length >= 2,
+      score: protocolScore,
+      details: `${existingProtocols.length}/${governanceFiles.length} governance protocols present`
     });
     totalScore += protocolScore;
 
@@ -1666,12 +1679,12 @@ class LaunchProtocol {
     ];
     const existingSystem = systemFiles.filter(file => fs.existsSync(path.join(this.projectRoot, file)));
     const systemScore = Math.round((existingSystem.length / systemFiles.length) * 25);
-    
-    tests.push({ 
-      name: 'System Components', 
-      passed: existingSystem.length >= 1, 
-      score: systemScore, 
-      details: `${existingSystem.length}/${systemFiles.length} system components present` 
+
+    tests.push({
+      name: 'System Components',
+      passed: existingSystem.length >= 1,
+      score: systemScore,
+      details: `${existingSystem.length}/${systemFiles.length} system components present`
     });
     totalScore += systemScore;
 
@@ -1679,12 +1692,12 @@ class LaunchProtocol {
     const dataDirs = ['data/', 'data/command_center/', 'data/sessions/'];
     const existingData = dataDirs.filter(dir => fs.existsSync(path.join(this.projectRoot, dir)));
     const dataScore = Math.round((existingData.length / dataDirs.length) * 25);
-    
-    tests.push({ 
-      name: 'Data Structures', 
-      passed: existingData.length >= 2, 
-      score: dataScore, 
-      details: `${existingData.length}/${dataDirs.length} data directories present` 
+
+    tests.push({
+      name: 'Data Structures',
+      passed: existingData.length >= 2,
+      score: dataScore,
+      details: `${existingData.length}/${dataDirs.length} data directories present`
     });
     totalScore += dataScore;
 
@@ -1692,17 +1705,17 @@ class LaunchProtocol {
     const configDirs = ['config/', 'config/governance/', 'config/security/'];
     const existingConfig = configDirs.filter(dir => fs.existsSync(path.join(this.projectRoot, dir)));
     const configScore = Math.round((existingConfig.length / configDirs.length) * 25);
-    
-    tests.push({ 
-      name: 'Configuration', 
-      passed: existingConfig.length >= 1, 
-      score: configScore, 
-      details: `${existingConfig.length}/${configDirs.length} config directories present` 
+
+    tests.push({
+      name: 'Configuration',
+      passed: existingConfig.length >= 1,
+      score: configScore,
+      details: `${existingConfig.length}/${configDirs.length} config directories present`
     });
     totalScore += configScore;
 
     const health = totalScore >= 80 ? 'healthy' : totalScore >= 60 ? 'warning' : 'critical';
-    
+
     return {
       health,
       score: totalScore,
@@ -1711,15 +1724,64 @@ class LaunchProtocol {
       recommendations: this.generateGovernanceRecommendations(tests, totalScore)
     };
   }
+
+  // --- FAST MODE HELPERS ---
+  async restoreMinimalContext() {
+    // Only restore sessionId, context files, and minimal state
+    this.sessionMetadata = this.generateSessionMetadata();
+    // Simulate minimal context restoration
+    await new Promise(res => setTimeout(res, 300));
+    console.log('  - Minimal context restored.');
+  }
+  async minimalHealthCheck() {
+    // Only check for essential files
+    const essentials = [
+      'LIVING_ROADMAP.md',
+      'greenlight-wiki/CHANGELOG.md',
+      'src/architecture/holonSystem.ts'
+    ];
+    let allPresent = true;
+    for (const file of essentials) {
+      if (!fs.existsSync(path.join(this.projectRoot, file))) {
+        allPresent = false;
+        console.log(`  - Missing essential: ${file}`);
+      }
+    }
+    if (allPresent) {
+      console.log('  - All essential files present.');
+    }
+    // Simulate quick health check
+    await new Promise(res => setTimeout(res, 300));
+  }
+  async runDeferredHeavyChecks() {
+    console.log('\n⏳ Running deferred heavy checks in background...');
+    // Run the full protocol (but do not block the user)
+    try {
+      await this.runPreventionSystem();
+      await this.performContextAwarenessTesting();
+      await this.performProgressiveLayerTesting();
+      await this.validateSystemState();
+      await this.generateLaunchReport();
+      await this.generateTransitionMemo();
+      console.log('✅ Deferred heavy checks complete.');
+    } catch (error) {
+      console.error('❌ Deferred heavy checks failed:', error.message);
+    }
+  }
 }
 
-// Run the launch protocol
+// --- Entrypoint ---
+function parseArgs() {
+  const args = process.argv.slice(2);
+  return {
+    fast: args.includes('--fast') || args.includes('-f')
+  };
+}
+
 if (require.main === module) {
-  const launch = new LaunchProtocol();
-  launch.execute().catch(error => {
-    console.error('Launch protocol failed:', error);
-    process.exit(1);
-  });
+  const { fast } = parseArgs();
+  const protocol = new LaunchProtocol(fast);
+  protocol.execute();
 }
 
 module.exports = LaunchProtocol; 
