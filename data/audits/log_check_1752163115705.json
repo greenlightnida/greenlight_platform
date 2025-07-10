@@ -1,0 +1,135 @@
+{
+  "timestamp": "2025-07-10T15:58:35.675Z",
+  "totalLogs": 10,
+  "upToDate": 5,
+  "outdated": 5,
+  "missing": 0,
+  "errors": 0,
+  "details": [
+    {
+      "location": "commandCenter",
+      "name": "Command Center History",
+      "path": "data/command_center/command_history.json",
+      "required": true,
+      "upToDate": true,
+      "details": {
+        "upToDate": true,
+        "age": 3958,
+        "lastModified": "2025-07-10T15:58:31.717Z"
+      }
+    },
+    {
+      "location": "backgroundAgents",
+      "name": "Background Agent Status",
+      "path": "data/background/agent_status.json",
+      "required": true,
+      "upToDate": false,
+      "details": {
+        "upToDate": false,
+        "reason": "File is 165086s old (max: 600s)",
+        "age": 165086334,
+        "lastModified": "2025-07-08T18:07:09.341Z"
+      }
+    },
+    {
+      "location": "systemAudit",
+      "name": "System Audit Report",
+      "path": "SYSTEM_AUDIT_REPORT.json",
+      "required": false,
+      "upToDate": true,
+      "details": {
+        "upToDate": true,
+        "age": 2854487,
+        "lastModified": "2025-07-10T15:11:01.188Z"
+      }
+    },
+    {
+      "location": "custodianReport",
+      "name": "Custodian Report",
+      "path": "CUSTODIAN_REPORT.json",
+      "required": false,
+      "upToDate": true,
+      "details": {
+        "upToDate": true,
+        "age": 2854431,
+        "lastModified": "2025-07-10T15:11:01.244Z"
+      }
+    },
+    {
+      "location": "protocols",
+      "name": "Protocol Logs",
+      "path": "data/protocols",
+      "required": true,
+      "upToDate": true,
+      "details": {
+        "upToDate": true,
+        "upToDateFiles": 6,
+        "totalFiles": 333,
+        "mostRecentFile": "prevention-report-1752162867853.json",
+        "mostRecentAge": 247820
+      }
+    },
+    {
+      "location": "sessions",
+      "name": "Session Logs",
+      "path": "data/sessions",
+      "required": true,
+      "upToDate": true,
+      "details": {
+        "upToDate": true,
+        "upToDateFiles": 4,
+        "totalFiles": 171,
+        "mostRecentFile": "anchor_anchor_1752163077617.json",
+        "mostRecentAge": 38027
+      }
+    },
+    {
+      "location": "audits",
+      "name": "Audit Logs",
+      "path": "data/audits",
+      "required": true,
+      "upToDate": false,
+      "details": {
+        "upToDate": false,
+        "reason": "No recent files (58 total files)",
+        "totalFiles": 58
+      }
+    },
+    {
+      "location": "contextPreservation",
+      "name": "Context Preservation",
+      "path": "data/context-preservation",
+      "required": true,
+      "upToDate": false,
+      "details": {
+        "upToDate": false,
+        "reason": "No recent files (10 total files)",
+        "totalFiles": 10
+      }
+    },
+    {
+      "location": "council",
+      "name": "Council Activities",
+      "path": "data/council",
+      "required": true,
+      "upToDate": false,
+      "details": {
+        "upToDate": false,
+        "reason": "No recent files (5 total files)",
+        "totalFiles": 5
+      }
+    },
+    {
+      "location": "governance",
+      "name": "Governance Logs",
+      "path": "data/governance",
+      "required": true,
+      "upToDate": false,
+      "details": {
+        "upToDate": false,
+        "reason": "No recent files (3 total files)",
+        "totalFiles": 3
+      }
+    }
+  ]
+}
