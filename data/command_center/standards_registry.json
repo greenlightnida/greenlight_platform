@@ -210,9 +210,49 @@
     }
   ],
   "version": "2.0.0",
-  "lastUpdated": "2025-07-10T02:31:25.184Z",
+  "lastUpdated": "2025-07-10T14:01:51.789Z",
   "holonCompliance": {},
   "councilApprovals": [],
   "alerts": [],
-  "complianceManagerPaired": true
+  "complianceManagerPaired": true,
+  "holonStandards": {
+    "executive": {
+      "minimum": [
+        "CISQ Logging Standard",
+        "TypeScript Compilation Standards",
+        "Automated Code Quality Checks"
+      ],
+      "optimal": [
+        "90% Test Coverage",
+        "WCAG 2.1 AA Accessibility",
+        "<50KB Bundle Size",
+        "CI/CD Quality Gates"
+      ]
+    },
+    "governance": {
+      "minimum": [
+        "Governance/Compliance: Policy Enforcement",
+        "ServerGovernor: Server Compliance Policies"
+      ],
+      "optimal": [
+        "Design System Management Protocol: Quality & Compliance"
+      ]
+    },
+    "integration": {
+      "minimum": [],
+      "optimal": []
+    },
+    "intelligence": {
+      "minimum": [],
+      "optimal": []
+    },
+    "performance": {
+      "minimum": [],
+      "optimal": []
+    },
+    "security": {
+      "minimum": [],
+      "optimal": []
+    }
+  }
 }

@@ -16,6 +16,18 @@
     "SecurityManager",
     "KnowledgeManager",
     "ContinuousImprovementManager",
-    "AnticipatoryLearningManager"
+    "AnticipatoryLearningManager",
+    "StandardsManager"
+  ],
+  "minimumStandards": [
+    "CISQ Logging Standard",
+    "TypeScript Compilation Standards",
+    "Automated Code Quality Checks"
+  ],
+  "optimalStandards": [
+    "90% Test Coverage",
+    "WCAG 2.1 AA Accessibility",
+    "<50KB Bundle Size",
+    "CI/CD Quality Gates"
   ]
 }

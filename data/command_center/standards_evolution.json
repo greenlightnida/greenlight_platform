@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-07T20:30:00Z",
+  "evolution": [
+    {
+      "id": "evolution-1752114434461-xz1r0c22o",
+      "standardId": "standard-1752114434461-xz1r0c22o",
+      "type": "creation",
+      "timestamp": "2025-01-07T20:30:00Z",
+      "description": "Initial creation of CISQ Logging Standard",
+      "version": "1.0.0",
+      "author": "system",
+      "impact": "low",
+      "approved": true
+    }
+  ],
+  "versionHistory": [
+    {
+      "standardId": "standard-1752114434461-xz1r0c22o",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "timestamp": "2025-01-07T20:30:00Z",
+          "changes": ["Initial version"],
+          "author": "system",
+          "approved": true
+        }
+      ]
+    }
+  ],
+  "changeLog": [
+    {
+      "id": "change-1752114434461-xz1r0c22o",
+      "timestamp": "2025-01-07T20:30:00Z",
+      "type": "creation",
+      "standardId": "standard-1752114434461-xz1r0c22o",
+      "description": "Created CISQ Logging Standard",
+      "author": "system",
+      "impact": "low"
+    }
+  ],
+  "migrationGuides": [
+    {
+      "id": "migration-1752114434461-xz1r0c22o",
+      "fromVersion": "none",
+      "toVersion": "1.0.0",
+      "standardId": "standard-1752114434461-xz1r0c22o",
+      "timestamp": "2025-01-07T20:30:00Z",
+      "steps": [
+        "Review new standard requirements",
+        "Update logging implementations",
+        "Test compliance",
+        "Deploy changes"
+      ],
+      "estimatedEffort": "1-2 days",
+      "author": "system"
+    }
+  ],
+  "deprecationSchedule": [],
+  "improvementProposals": []
+} 

@@ -1,0 +1,97 @@
+{
+  "version": "2.0.0",
+  "lastUpdated": "2025-01-07T20:30:00Z",
+  "compliance": {
+    "overall": {
+      "complianceRate": 0,
+      "totalStandards": 0,
+      "compliantStandards": 0,
+      "nonCompliantStandards": 0,
+      "pendingReview": 0
+    },
+    "byCategory": {
+      "protocols": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      },
+      "policies": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      },
+      "standards": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      },
+      "processes": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      },
+      "programs": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      }
+    },
+    "byHolon": {
+      "systemMaster": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      },
+      "elevate": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      },
+      "administrate": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      },
+      "elaborate": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      },
+      "articulate": {
+        "complianceRate": 0,
+        "total": 0,
+        "compliant": 0,
+        "nonCompliant": 0,
+        "pending": 0
+      }
+    }
+  },
+  "tracking": {
+    "lastAssessment": null,
+    "nextAssessment": null,
+    "assessmentFrequency": "monthly",
+    "automatedChecks": true,
+    "manualReviews": true,
+    "alerting": true
+  },
+  "history": [],
+  "alerts": []
+} 

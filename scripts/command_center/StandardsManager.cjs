@@ -27,33 +27,56 @@ const path = require('path');
 const { execSync } = require('child_process');
 
 const STANDARDS_REGISTRY = path.join(process.cwd(), 'data/command_center/standards_registry.json');
+const COMPLIANCE_TRACKING = path.join(process.cwd(), 'data/command_center/compliance_tracking.json');
+const STANDARDS_EVOLUTION = path.join(process.cwd(), 'data/command_center/standards_evolution.json');
 const COMMAND_CENTER_LOG = path.join(process.cwd(), 'data/command_center/command_history.json');
 const STANDARDS_INSIGHTS_CONFIG = path.join(process.cwd(), 'config/standards-insights.yaml');
 const COUNCIL_DATA = path.join(process.cwd(), 'data/council/');
 const HOLON_DATA = path.join(process.cwd(), 'data/holons/');
 const DECISION_LOG = path.join(process.cwd(), 'DECISION_LOG.md');
+const COUNCIL_COMMITTEES_DIR = path.join(process.cwd(), 'data/council/committees/');
 
 function logCommandCenter(action, details, status) {
   const entry = {
     timestamp: new Date().toISOString(),
-    action,
-    details,
-    status
+    command: action,
+    options: [],
+    status: status,
+    details: details
   };
   const dir = path.dirname(COMMAND_CENTER_LOG);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  let log = [];
+  
+  let logData = {
+    last_updated: new Date().toISOString(),
+    session_id: `standards_manager_${Date.now()}`,
+    commands: []
+  };
+  
   if (fs.existsSync(COMMAND_CENTER_LOG)) {
-    try { log = JSON.parse(fs.readFileSync(COMMAND_CENTER_LOG, 'utf8')); } catch {}
+    try { 
+      logData = JSON.parse(fs.readFileSync(COMMAND_CENTER_LOG, 'utf8')); 
+    } catch (error) {
+      console.warn('Warning: Could not parse existing command history, creating new one');
+    }
   }
-  log.push(entry);
-  fs.writeFileSync(COMMAND_CENTER_LOG, JSON.stringify(log, null, 2));
+  
+  if (!logData.commands) {
+    logData.commands = [];
+  }
+  
+  logData.commands.push(entry);
+  logData.last_updated = new Date().toISOString();
+  
+  fs.writeFileSync(COMMAND_CENTER_LOG, JSON.stringify(logData, null, 2));
 }
 
 class StandardsManager {
   constructor() {
     this.registry = this.loadRegistry();
-    this.holons = ['elevate', 'administrate', 'articulate', 'elaborate'];
+    this.complianceTracking = this.loadComplianceTracking();
+    this.standardsEvolution = this.loadStandardsEvolution();
+    this.holons = ['systemMaster', 'elevate', 'administrate', 'elaborate', 'articulate'];
   }
 
   loadRegistry() {
@@ -66,13 +89,75 @@ class StandardsManager {
       lastUpdated: new Date().toISOString(),
       holonCompliance: {},
       councilApprovals: [],
+      alerts: [],
+      holonStandards: {} // Added for committee standards
+    };
+  }
+
+  loadComplianceTracking() {
+    if (fs.existsSync(COMPLIANCE_TRACKING)) {
+      try { return JSON.parse(fs.readFileSync(COMPLIANCE_TRACKING, 'utf8')); } catch {}
+    }
+    return {
+      version: '2.0.0',
+      lastUpdated: new Date().toISOString(),
+      compliance: {
+        overall: { complianceRate: 0, totalStandards: 0, compliantStandards: 0, nonCompliantStandards: 0, pendingReview: 0 },
+        byCategory: {
+          protocols: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 },
+          policies: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 },
+          standards: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 },
+          processes: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 },
+          programs: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 }
+        },
+        byHolon: {
+          systemMaster: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 },
+          elevate: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 },
+          administrate: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 },
+          elaborate: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 },
+          articulate: { complianceRate: 0, total: 0, compliant: 0, nonCompliant: 0, pending: 0 }
+        }
+      },
+      tracking: {
+        lastAssessment: null,
+        nextAssessment: null,
+        assessmentFrequency: 'monthly',
+        automatedChecks: true,
+        manualReviews: true,
+        alerting: true
+      },
+      history: [],
       alerts: []
+    };
+  }
+
+  loadStandardsEvolution() {
+    if (fs.existsSync(STANDARDS_EVOLUTION)) {
+      try { return JSON.parse(fs.readFileSync(STANDARDS_EVOLUTION, 'utf8')); } catch {}
+    }
+    return {
+      version: '1.0.0',
+      lastUpdated: new Date().toISOString(),
+      evolution: [],
+      versionHistory: [],
+      changeLog: [],
+      migrationGuides: []
     };
   }
 
   saveRegistry() {
     this.registry.lastUpdated = new Date().toISOString();
     fs.writeFileSync(STANDARDS_REGISTRY, JSON.stringify(this.registry, null, 2));
+  }
+
+  saveComplianceTracking() {
+    this.complianceTracking.lastUpdated = new Date().toISOString();
+    fs.writeFileSync(COMPLIANCE_TRACKING, JSON.stringify(this.complianceTracking, null, 2));
+  }
+
+  saveStandardsEvolution() {
+    this.standardsEvolution.lastUpdated = new Date().toISOString();
+    fs.writeFileSync(STANDARDS_EVOLUTION, JSON.stringify(this.standardsEvolution, null, 2));
   }
 
   async execute() {
@@ -112,9 +197,47 @@ class StandardsManager {
       case 'synthesize':
         await this.synthesizeStandards();
         break;
+      case 'compliance':
+        this.showComplianceDetails();
+        break;
+      case 'tracking':
+        this.showTrackingDetails();
+        break;
+      case 'update-tracking':
+        await this.updateComplianceFromRegistry();
+        break;
+      case 'sync-committees':
+        await this.syncCommitteeStandards();
+        break;
       default:
         this.showHelp();
     }
+  }
+
+  async syncCommitteeStandards() {
+    const fs = require('fs');
+    const path = require('path');
+    const committeeFiles = fs.readdirSync(COUNCIL_COMMITTEES_DIR).filter(f => f.endsWith('.json'));
+    let updated = false;
+    let holonStandards = {};
+    for (const file of committeeFiles) {
+      const committee = JSON.parse(fs.readFileSync(path.join(COUNCIL_COMMITTEES_DIR, file), 'utf8'));
+      const holon = committee.name.replace(/ Committee$/, '').toLowerCase();
+      holonStandards[holon] = {
+        minimum: committee.minimumStandards || [],
+        optimal: committee.optimalStandards || []
+      };
+    }
+    // Store in registry for transparency
+    this.registry.holonStandards = holonStandards;
+    this.saveRegistry();
+    console.log('✅ Synchronized holon standards from council committees:');
+    Object.entries(holonStandards).forEach(([holon, stds]) => {
+      console.log(`  ${holon}:`);
+      console.log(`    Minimum: ${stds.minimum.join(', ')}`);
+      console.log(`    Optimal: ${stds.optimal.join(', ')}`);
+    });
+    logCommandCenter('sync-committees', { holonStandards }, 'success');
   }
 
   showStatus() {
@@ -124,19 +247,43 @@ class StandardsManager {
     console.log(`Version: ${this.registry.version}`);
     console.log(`Last Updated: ${this.registry.lastUpdated}`);
     
+    // Overall compliance summary
+    const overall = this.complianceTracking.compliance.overall;
+    console.log(`\n📊 Overall Compliance: ${overall.complianceRate}%`);
+    console.log(`  Total Standards: ${overall.totalStandards}`);
+    console.log(`  Compliant: ${overall.compliantStandards}`);
+    console.log(`  Non-Compliant: ${overall.nonCompliantStandards}`);
+    console.log(`  Pending Review: ${overall.pendingReview}`);
+    
+    // Category compliance summary
+    console.log('\n📋 Category Compliance:');
+    Object.entries(this.complianceTracking.compliance.byCategory).forEach(([category, data]) => {
+      console.log(`  ${category}: ${data.complianceRate}% (${data.compliant}/${data.total})`);
+    });
+    
     // Holon compliance summary
     console.log('\n🏛️  Holon Compliance Summary:');
-    this.holons.forEach(holon => {
-      const compliance = this.registry.holonCompliance[holon] || { compliance: 0, total: 0 };
-      const percentage = compliance.total > 0 ? Math.round((compliance.compliance / compliance.total) * 100) : 0;
-      console.log(`  ${holon}: ${percentage}% (${compliance.compliance}/${compliance.total})`);
+    Object.entries(this.complianceTracking.compliance.byHolon).forEach(([holon, data]) => {
+      console.log(`  ${holon}: ${data.complianceRate}% (${data.compliant}/${data.total})`);
     });
 
     // Council approvals
     const pendingApprovals = this.registry.councilApprovals.filter(a => a.status === 'pending');
     console.log(`\n🏛️  Council Approvals Pending: ${pendingApprovals.length}`);
     
-    logCommandCenter('status', { standards: this.registry.standards.length, holons: this.holons.length }, 'success');
+    // Tracking information
+    const tracking = this.complianceTracking.tracking;
+    console.log(`\n📈 Tracking Information:`);
+    console.log(`  Last Assessment: ${tracking.lastAssessment || 'Never'}`);
+    console.log(`  Next Assessment: ${tracking.nextAssessment || 'Not scheduled'}`);
+    console.log(`  Assessment Frequency: ${tracking.assessmentFrequency}`);
+    
+    logCommandCenter('status', { 
+      standards: this.registry.standards.length, 
+      holons: this.holons.length,
+      overallCompliance: overall.complianceRate,
+      lastAssessment: tracking.lastAssessment
+    }, 'success');
   }
 
   async runStandardsInsights() {
@@ -147,8 +294,8 @@ class StandardsManager {
       // Parse Standards Insights output
       const compliance = this.parseStandardsInsightsOutput(result);
       
-      // Update holon compliance
-      this.updateHolonCompliance(compliance);
+      // Update compliance tracking
+      this.updateComplianceTracking(compliance);
       
       console.log('✅ Standards Insights completed successfully');
       console.log('📊 Compliance Summary:');
@@ -161,6 +308,323 @@ class StandardsManager {
       console.error('❌ Standards Insights failed:', error.message);
       logCommandCenter('check', { tool: 'standards-insights', error: error.message }, 'failed');
     }
+  }
+
+  updateComplianceTracking(compliance) {
+    const now = new Date().toISOString();
+    
+    // Update tracking information
+    this.complianceTracking.tracking.lastAssessment = now;
+    this.complianceTracking.tracking.nextAssessment = this.calculateNextAssessment();
+    
+    // Update overall compliance
+    let totalStandards = 0;
+    let compliantStandards = 0;
+    let nonCompliantStandards = 0;
+    let pendingReview = 0;
+    
+    // Update by holon
+    Object.entries(compliance).forEach(([holon, data]) => {
+      if (this.complianceTracking.compliance.byHolon[holon]) {
+        this.complianceTracking.compliance.byHolon[holon] = {
+          complianceRate: data.total > 0 ? Math.round((data.compliance / data.total) * 100) : 0,
+          total: data.total,
+          compliant: data.compliance,
+          nonCompliant: data.total - data.compliance,
+          pending: 0
+        };
+        
+        totalStandards += data.total;
+        compliantStandards += data.compliance;
+        nonCompliantStandards += (data.total - data.compliance);
+      }
+    });
+    
+    // Update overall compliance
+    this.complianceTracking.compliance.overall = {
+      complianceRate: totalStandards > 0 ? Math.round((compliantStandards / totalStandards) * 100) : 0,
+      totalStandards,
+      compliantStandards,
+      nonCompliantStandards,
+      pendingReview
+    };
+    
+    // Update category compliance (map holons to categories)
+    this.updateCategoryCompliance();
+    
+    // Add to history
+    this.complianceTracking.history.push({
+      timestamp: now,
+      compliance: this.complianceTracking.compliance.overall,
+      holonCompliance: this.complianceTracking.compliance.byHolon
+    });
+    
+    // Keep only last 12 months of history
+    if (this.complianceTracking.history.length > 12) {
+      this.complianceTracking.history = this.complianceTracking.history.slice(-12);
+    }
+    
+    // Save updated tracking
+    this.saveComplianceTracking();
+  }
+
+  updateCategoryCompliance() {
+    // Map holons to categories and aggregate compliance
+    const categoryMapping = {
+      systemMaster: 'governance',
+      elevate: 'product',
+      administrate: 'business',
+      elaborate: 'system',
+      articulate: 'knowledge'
+    };
+    
+    // Reset category compliance
+    Object.keys(this.complianceTracking.compliance.byCategory).forEach(category => {
+      this.complianceTracking.compliance.byCategory[category] = {
+        complianceRate: 0,
+        total: 0,
+        compliant: 0,
+        nonCompliant: 0,
+        pending: 0
+      };
+    });
+    
+    // Aggregate holon compliance into categories
+    Object.entries(this.complianceTracking.compliance.byHolon).forEach(([holon, data]) => {
+      const category = categoryMapping[holon] || 'other';
+      if (this.complianceTracking.compliance.byCategory[category]) {
+        this.complianceTracking.compliance.byCategory[category].total += data.total;
+        this.complianceTracking.compliance.byCategory[category].compliant += data.compliant;
+        this.complianceTracking.compliance.byCategory[category].nonCompliant += data.nonCompliant;
+      }
+    });
+    
+    // Calculate compliance rates for categories
+    Object.values(this.complianceTracking.compliance.byCategory).forEach(category => {
+      category.complianceRate = category.total > 0 ? Math.round((category.compliant / category.total) * 100) : 0;
+    });
+  }
+
+  calculateNextAssessment() {
+    const now = new Date();
+    const frequency = this.complianceTracking.tracking.assessmentFrequency;
+    
+    switch (frequency) {
+      case 'daily':
+        return new Date(now.getTime() + 24 * 60 * 60 * 1000).toISOString();
+      case 'weekly':
+        return new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString();
+      case 'monthly':
+        return new Date(now.getFullYear(), now.getMonth() + 1, now.getDate()).toISOString();
+      case 'quarterly':
+        return new Date(now.getFullYear(), now.getMonth() + 3, now.getDate()).toISOString();
+      default:
+        return new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000).toISOString(); // Default to monthly
+    }
+  }
+
+  showComplianceDetails() {
+    console.log('📊 Detailed Compliance Report');
+    console.log('============================');
+    
+    const overall = this.complianceTracking.compliance.overall;
+    console.log(`\n🎯 Overall Compliance: ${overall.complianceRate}%`);
+    console.log(`  Total Standards: ${overall.totalStandards}`);
+    console.log(`  Compliant: ${overall.compliantStandards}`);
+    console.log(`  Non-Compliant: ${overall.nonCompliantStandards}`);
+    console.log(`  Pending Review: ${overall.pendingReview}`);
+    
+    console.log('\n📋 Category Breakdown:');
+    Object.entries(this.complianceTracking.compliance.byCategory).forEach(([category, data]) => {
+      console.log(`  ${category.toUpperCase()}: ${data.complianceRate}% (${data.compliant}/${data.total})`);
+      if (data.nonCompliant > 0) {
+        console.log(`    ⚠️  ${data.nonCompliant} non-compliant standards need attention`);
+      }
+    });
+    
+    console.log('\n🏛️  Holon Breakdown:');
+    Object.entries(this.complianceTracking.compliance.byHolon).forEach(([holon, data]) => {
+      console.log(`  ${holon}: ${data.complianceRate}% (${data.compliant}/${data.total})`);
+      if (data.nonCompliant > 0) {
+        console.log(`    ⚠️  ${data.nonCompliant} non-compliant standards need attention`);
+      }
+      // Show holon minimum/optimal standards if available
+      if (this.registry.holonStandards && this.registry.holonStandards[holon]) {
+        const stds = this.registry.holonStandards[holon];
+        console.log(`    Minimum Standards: ${stds.minimum.join(', ')}`);
+        console.log(`    Optimal Standards: ${stds.optimal.join(', ')}`);
+      }
+    });
+    
+    // Show recent history
+    if (this.complianceTracking.history.length > 0) {
+      console.log('\n📈 Recent Compliance History:');
+      const recent = this.complianceTracking.history.slice(-5);
+      recent.forEach((entry, index) => {
+        const date = new Date(entry.timestamp).toLocaleDateString();
+        console.log(`  ${date}: ${entry.compliance.complianceRate}% compliance`);
+      });
+    }
+    
+    logCommandCenter('compliance-details', { overallCompliance: overall.complianceRate }, 'success');
+  }
+
+  showTrackingDetails() {
+    console.log('📈 Compliance Tracking Details');
+    console.log('==============================');
+    
+    const tracking = this.complianceTracking.tracking;
+    console.log(`\n⏰ Assessment Schedule:`);
+    console.log(`  Last Assessment: ${tracking.lastAssessment ? new Date(tracking.lastAssessment).toLocaleString() : 'Never'}`);
+    console.log(`  Next Assessment: ${tracking.nextAssessment ? new Date(tracking.nextAssessment).toLocaleString() : 'Not scheduled'}`);
+    console.log(`  Frequency: ${tracking.assessmentFrequency}`);
+    console.log(`  Automated Checks: ${tracking.automatedChecks ? 'Enabled' : 'Disabled'}`);
+    console.log(`  Manual Reviews: ${tracking.manualReviews ? 'Enabled' : 'Disabled'}`);
+    console.log(`  Alerting: ${tracking.alerting ? 'Enabled' : 'Disabled'}`);
+    
+    // Show alerts
+    if (this.complianceTracking.alerts.length > 0) {
+      console.log('\n🚨 Active Alerts:');
+      this.complianceTracking.alerts.forEach((alert, index) => {
+        console.log(`  ${index + 1}. ${alert.type}: ${alert.message} (${new Date(alert.timestamp).toLocaleDateString()})`);
+      });
+    } else {
+      console.log('\n✅ No active alerts');
+    }
+    
+    // Show history summary
+    if (this.complianceTracking.history.length > 0) {
+      console.log('\n📊 History Summary:');
+      const oldest = this.complianceTracking.history[0];
+      const newest = this.complianceTracking.history[this.complianceTracking.history.length - 1];
+      console.log(`  Tracking since: ${new Date(oldest.timestamp).toLocaleDateString()}`);
+      console.log(`  Total assessments: ${this.complianceTracking.history.length}`);
+      console.log(`  Average compliance: ${this.calculateAverageCompliance()}%`);
+    }
+    
+    logCommandCenter('tracking-details', { 
+      lastAssessment: tracking.lastAssessment,
+      nextAssessment: tracking.nextAssessment,
+      alertCount: this.complianceTracking.alerts.length
+    }, 'success');
+  }
+
+  async updateComplianceFromRegistry() {
+    console.log('🔄 Updating compliance tracking from standards registry...');
+    
+    // Analyze standards registry to update compliance tracking
+    const standards = this.registry.standards;
+    let totalStandards = 0;
+    let compliantStandards = 0;
+    let nonCompliantStandards = 0;
+    let pendingReview = 0;
+    
+    // Count standards by category and status
+    const categoryCounts = {};
+    const holonCounts = {};
+    
+    standards.forEach(standard => {
+      totalStandards++;
+      
+      // Count by category
+      const category = standard.category || 'other';
+      if (!categoryCounts[category]) {
+        categoryCounts[category] = { total: 0, compliant: 0, nonCompliant: 0, pending: 0 };
+      }
+      categoryCounts[category].total++;
+      
+      // Count by holon scope
+      const holonScope = standard.holonScope || 'system-wide';
+      if (!holonCounts[holonScope]) {
+        holonCounts[holonScope] = { total: 0, compliant: 0, nonCompliant: 0, pending: 0 };
+      }
+      holonCounts[holonScope].total++;
+      
+      // Determine compliance status
+      if (standard.status === 'active' && standard.councilApproval) {
+        compliantStandards++;
+        categoryCounts[category].compliant++;
+        holonCounts[holonScope].compliant++;
+      } else if (standard.status === 'pending') {
+        pendingReview++;
+        categoryCounts[category].pending++;
+        holonCounts[holonScope].pending++;
+      } else {
+        nonCompliantStandards++;
+        categoryCounts[category].nonCompliant++;
+        holonCounts[holonScope].nonCompliant++;
+      }
+    });
+    
+    // Update compliance tracking
+    this.complianceTracking.compliance.overall = {
+      complianceRate: totalStandards > 0 ? Math.round((compliantStandards / totalStandards) * 100) : 0,
+      totalStandards,
+      compliantStandards,
+      nonCompliantStandards,
+      pendingReview
+    };
+    
+    // Update category compliance
+    Object.entries(categoryCounts).forEach(([category, data]) => {
+      if (this.complianceTracking.compliance.byCategory[category]) {
+        this.complianceTracking.compliance.byCategory[category] = {
+          complianceRate: data.total > 0 ? Math.round((data.compliant / data.total) * 100) : 0,
+          total: data.total,
+          compliant: data.compliant,
+          nonCompliant: data.nonCompliant,
+          pending: data.pending
+        };
+      }
+    });
+    
+    // Update holon compliance
+    Object.entries(holonCounts).forEach(([holon, data]) => {
+      if (this.complianceTracking.compliance.byHolon[holon]) {
+        this.complianceTracking.compliance.byHolon[holon] = {
+          complianceRate: data.total > 0 ? Math.round((data.compliant / data.total) * 100) : 0,
+          total: data.total,
+          compliant: data.compliant,
+          nonCompliant: data.nonCompliant,
+          pending: data.pending
+        };
+      }
+    });
+    
+    // Update tracking information
+    this.complianceTracking.tracking.lastAssessment = new Date().toISOString();
+    this.complianceTracking.tracking.nextAssessment = this.calculateNextAssessment();
+    
+    // Add to history
+    this.complianceTracking.history.push({
+      timestamp: new Date().toISOString(),
+      compliance: this.complianceTracking.compliance.overall,
+      holonCompliance: this.complianceTracking.compliance.byHolon,
+      source: 'registry-update'
+    });
+    
+    // Save updated tracking
+    this.saveComplianceTracking();
+    
+    console.log('✅ Compliance tracking updated from registry');
+    console.log(`📊 Updated compliance: ${this.complianceTracking.compliance.overall.complianceRate}%`);
+    
+    logCommandCenter('update-tracking', { 
+      totalStandards,
+      compliantStandards,
+      nonCompliantStandards,
+      pendingReview
+    }, 'success');
+  }
+
+  calculateAverageCompliance() {
+    if (this.complianceTracking.history.length === 0) return 0;
+    
+    const total = this.complianceTracking.history.reduce((sum, entry) => {
+      return sum + entry.compliance.complianceRate;
+    }, 0);
+    
+    return Math.round(total / this.complianceTracking.history.length);
   }
 
   parseStandardsInsightsOutput(output) {
@@ -741,6 +1205,10 @@ ACTIONS:
   evolve <action> <id> [details] Track standards evolution
   alert <action>   Configure and manage compliance alerts
   synthesize       Synthesize all standards and compliance policies from codebase, config, data, and docs
+  compliance       Show detailed compliance report
+  tracking         Show compliance tracking details
+  update-tracking  Update compliance from standards registry
+  sync-committees  Synchronize minimum and optimal standards from council committees
 
 EXAMPLES:
   node scripts/command_center/StandardsManager.cjs add "CISQ Logging Standard"
@@ -748,6 +1216,9 @@ EXAMPLES:
   node scripts/command_center/StandardsManager.cjs holon elevate
   node scripts/command_center/StandardsManager.cjs alert add "compliance < 80" "notify council"
   node scripts/command_center/StandardsManager.cjs synthesize
+  node scripts/command_center/StandardsManager.cjs compliance
+  node scripts/command_center/StandardsManager.cjs update-tracking
+  node scripts/command_center/StandardsManager.cjs sync-committees
 `);
   }
 }

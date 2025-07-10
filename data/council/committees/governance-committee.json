@@ -10,5 +10,12 @@
     "RiskManager",
     "QualityManager",
     "StrategyManager"
+  ],
+  "minimumStandards": [
+    "Governance/Compliance: Policy Enforcement",
+    "ServerGovernor: Server Compliance Policies"
+  ],
+  "optimalStandards": [
+    "Design System Management Protocol: Quality & Compliance"
   ]
 }
