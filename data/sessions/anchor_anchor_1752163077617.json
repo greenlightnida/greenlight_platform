@@ -1,0 +1,70 @@
+{
+  "timestamp": "2025-07-10T15:57:57.615Z",
+  "recentEvents": [
+    {
+      "type": "command",
+      "command": "anchor",
+      "timestamp": "2025-07-10T14:53:25.026Z",
+      "status": "success",
+      "options": []
+    },
+    {
+      "type": "command",
+      "command": "launch",
+      "timestamp": "2025-07-10T14:54:08.411Z",
+      "status": "started",
+      "options": []
+    },
+    {
+      "type": "command",
+      "command": "launch",
+      "timestamp": "2025-07-10T14:54:54.416Z",
+      "status": "success",
+      "options": []
+    },
+    {
+      "type": "command",
+      "command": "prewrap",
+      "timestamp": "2025-07-10T15:17:51.352Z",
+      "status": "started",
+      "options": []
+    },
+    {
+      "type": "command",
+      "command": "anchor",
+      "timestamp": "2025-07-10T15:57:57.430Z",
+      "status": "started",
+      "options": []
+    },
+    {
+      "type": "session",
+      "sessionId": "wrap-20250710-014820-1752112100405-kf6nu6pf6",
+      "timestamp": "2025-07-10T01:48:20.407Z",
+      "summary": "Session data captured"
+    },
+    {
+      "type": "session",
+      "sessionId": "wrap-20250710-023655-1752115015273-ygewt9pq9",
+      "timestamp": "2025-07-10T02:36:55.274Z",
+      "summary": "Session data captured"
+    },
+    {
+      "type": "session",
+      "sessionId": "wrap-20250710-032354-1752117834087-lkrvihntz",
+      "timestamp": "2025-07-10T03:23:54.089Z",
+      "summary": "Session data captured"
+    }
+  ],
+  "nextSteps": [],
+  "contextRestored": true,
+  "sessionId": "anchor_1752163077617",
+  "systemState": {
+    "timestamp": "2025-07-10T01:42:44.726Z",
+    "health": "unknown",
+    "activeComponents": []
+  },
+  "contextData": {
+    "timestamp": "2025-07-10T03:23:54.137Z",
+    "pendingDecisions": []
+  }
+}
