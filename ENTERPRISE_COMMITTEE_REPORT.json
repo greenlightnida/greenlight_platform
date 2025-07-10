@@ -1,0 +1,84 @@
+{
+  "timestamp": "2025-07-10T15:10:30.324Z",
+  "committee": [
+    {
+      "name": "VarEnvManager",
+      "role": "Environment and config authority",
+      "path": "/Users/home/Developer/greenlight-platform/scripts/config/var_env_manager.cjs"
+    },
+    {
+      "name": "FileManager",
+      "role": "Canonical file inventory",
+      "path": "/Users/home/Developer/greenlight-platform/scripts/background/agents/file_manager.cjs"
+    },
+    {
+      "name": "ProtocolManager",
+      "role": "Protocol registration and compliance",
+      "path": "/Users/home/Developer/greenlight-platform/src/core/holons/protocols/ProtocolManager.ts"
+    },
+    {
+      "name": "AuditManager",
+      "role": "Audit and compliance checks",
+      "path": "/Users/home/Developer/greenlight-platform/scripts/audit/comprehensive_organizational_audit.cjs"
+    },
+    {
+      "name": "SessionManager",
+      "role": "Session logic and state",
+      "path": "/Users/home/Developer/greenlight-platform/src/core/session-management/SessionManager.ts"
+    },
+    {
+      "name": "HealthMonitor",
+      "role": "System health and risk signals",
+      "path": "/Users/home/Developer/greenlight-platform/scripts/monitoring/health_monitor.cjs"
+    }
+  ],
+  "report": [
+    {
+      "name": "VarEnvManager",
+      "role": "Environment and config authority",
+      "status": "ok",
+      "findings": [],
+      "error": null
+    },
+    {
+      "name": "FileManager",
+      "role": "Canonical file inventory",
+      "status": "ok",
+      "findings": [],
+      "error": null
+    },
+    {
+      "name": "ProtocolManager",
+      "role": "Protocol registration and compliance",
+      "status": "ok",
+      "findings": [],
+      "error": null
+    },
+    {
+      "name": "AuditManager",
+      "role": "Audit and compliance checks",
+      "status": "ok",
+      "findings": [],
+      "error": null
+    },
+    {
+      "name": "SessionManager",
+      "role": "Session logic and state",
+      "status": "ok",
+      "findings": [],
+      "error": null
+    },
+    {
+      "name": "HealthMonitor",
+      "role": "System health and risk signals",
+      "status": "ok",
+      "findings": [],
+      "error": null
+    }
+  ],
+  "consensus": true,
+  "notes": [
+    "No destructive/system-wide change may occur without explicit committee consensus and human approval.",
+    "All findings and recommendations are logged and surfaced in the command center."
+  ]
+}
