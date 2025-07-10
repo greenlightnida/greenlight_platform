@@ -23,7 +23,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 
 class LaunchProtocol {
   constructor() {
@@ -37,6 +37,9 @@ class LaunchProtocol {
     this.layerTestResults = {};
     this.sessionMetadata = this.generateSessionMetadata();
     this.sessionStartTime = Date.now();
+    
+    // Command execution optimizer
+    this.executor = new CommandExecutionOptimizer();
     
     // Coordination with anchor command
     this.isAnchorRunning = this.checkAnchorStatus();
@@ -170,16 +173,16 @@ class LaunchProtocol {
     console.log('🛡️ Phase 0: Prevention System Check');
     
     try {
-      const preventionResult = execSync('node scripts/protocols/prevention_system.cjs', {
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        timeout: 60000
+      const result = await this.executor.executeCommand('node', {
+        args: ['scripts/protocols/prevention_system.cjs'],
+        timeout: 60000,
+        silent: true
       });
       
-      if (preventionResult.includes('CRITICAL ISSUES DETECTED')) {
+      if (result.stdout.includes('CRITICAL ISSUES DETECTED')) {
         console.log('⚠️  Prevention system detected issues - proceeding with caution');
         console.log('Note: Some prevention checks may be overly strict for current development phase');
-      } else if (preventionResult.includes('WARNINGS DETECTED')) {
+      } else if (result.stdout.includes('WARNINGS DETECTED')) {
         console.log('⚠️  Prevention system warnings detected - proceeding with caution');
       } else {
         console.log('✅ Prevention system passed - all checks cleared');
@@ -445,7 +448,12 @@ class LaunchProtocol {
 
     // Test 1: Build Status (25 points)
     try {
-      execSync('cd frontend && npm run build', { stdio: 'pipe' });
+      await this.executor.executeCommand('npm', {
+        args: ['run', 'build'],
+        cwd: path.join(this.projectRoot, 'frontend'),
+        silent: true,
+        timeout: 60000
+      });
       tests.push({ name: 'Build Status', passed: true, score: 25, details: 'Frontend builds successfully' });
       totalScore += 25;
     } catch (error) {
@@ -454,12 +462,16 @@ class LaunchProtocol {
 
     // Test 2: Development Server (20 points)
     try {
-      const response = execSync('curl -s -o /dev/null -w "%{http_code}" http://localhost:5173', { encoding: 'utf8' });
-      if (response.trim() === '200') {
+      const result = await this.executor.executeCommand('curl', {
+        args: ['-s', '-o', '/dev/null', '-w', '%{http_code}', 'http://localhost:5173'],
+        silent: true,
+        timeout: 10000
+      });
+      if (result.stdout.trim() === '200') {
         tests.push({ name: 'Development Server', passed: true, score: 20, details: 'Frontend server responding' });
         totalScore += 20;
       } else {
-        tests.push({ name: 'Development Server', passed: false, score: 0, details: `Server returned ${response}` });
+        tests.push({ name: 'Development Server', passed: false, score: 0, details: `Server returned ${result.stdout}` });
       }
     } catch (error) {
       tests.push({ name: 'Development Server', passed: false, score: 0, details: 'Server not accessible' });
@@ -467,7 +479,12 @@ class LaunchProtocol {
 
     // Test 3: TypeScript Compilation (20 points)
     try {
-      execSync('cd frontend && npx tsc --noEmit', { stdio: 'pipe' });
+      await this.executor.executeCommand('npx', {
+        args: ['tsc', '--noEmit'],
+        cwd: path.join(this.projectRoot, 'frontend'),
+        silent: true,
+        timeout: 30000
+      });
       tests.push({ name: 'TypeScript Compilation', passed: true, score: 20, details: 'No TypeScript errors' });
       totalScore += 20;
     } catch (error) {
@@ -524,7 +541,12 @@ class LaunchProtocol {
 
     // Test 1: Build Status (25 points)
     try {
-      execSync('cd backend && npx tsc --noEmit', { stdio: 'pipe' });
+      await this.executor.executeCommand('npx', {
+        args: ['tsc', '--noEmit'],
+        cwd: path.join(this.projectRoot, 'backend'),
+        silent: true,
+        timeout: 30000
+      });
       tests.push({ name: 'TypeScript Compilation', passed: true, score: 25, details: 'Backend compiles successfully' });
       totalScore += 25;
     } catch (error) {
@@ -533,8 +555,12 @@ class LaunchProtocol {
 
     // Test 2: Server Health (25 points)
     try {
-      const response = execSync('curl -s http://localhost:3001/health', { encoding: 'utf8' });
-      const healthData = JSON.parse(response);
+      const result = await this.executor.executeCommand('curl', {
+        args: ['-s', 'http://localhost:3001/health'],
+        silent: true,
+        timeout: 10000
+      });
+      const healthData = JSON.parse(result.stdout);
       if (healthData.status === 'OK') {
         tests.push({ name: 'Server Health', passed: true, score: 25, details: 'Backend server healthy' });
         totalScore += 25;
@@ -547,8 +573,12 @@ class LaunchProtocol {
 
     // Test 3: API Endpoints (20 points)
     try {
-      const response = execSync('curl -s http://localhost:3001/api/status', { encoding: 'utf8' });
-      const statusData = JSON.parse(response);
+      const result = await this.executor.executeCommand('curl', {
+        args: ['-s', 'http://localhost:3001/api/status'],
+        silent: true,
+        timeout: 10000
+      });
+      const statusData = JSON.parse(result.stdout);
       if (statusData.status === 'running') {
         tests.push({ name: 'API Endpoints', passed: true, score: 20, details: 'API endpoints responding' });
         totalScore += 20;
@@ -613,11 +643,13 @@ class LaunchProtocol {
 
     // Test 1: Git Repository Health (25 points)
     try {
-      const gitStatus = execSync('git status --porcelain', { encoding: 'utf8' });
-      const branch = execSync('git branch --show-current', { encoding: 'utf8' }).trim();
-      const lastCommit = execSync('git log -1 --oneline', { encoding: 'utf8' }).trim();
+      const [gitStatus, branch, lastCommit] = await Promise.all([
+        this.executor.executeCommand('git', { args: ['status', '--porcelain'], silent: true }),
+        this.executor.executeCommand('git', { args: ['branch', '--show-current'], silent: true }),
+        this.executor.executeCommand('git', { args: ['log', '-1', '--oneline'], silent: true })
+      ]);
       
-      tests.push({ name: 'Git Repository', passed: true, score: 25, details: `Branch: ${branch}, Last commit: ${lastCommit}` });
+      tests.push({ name: 'Git Repository', passed: true, score: 25, details: `Branch: ${branch.stdout.trim()}, Last commit: ${lastCommit.stdout.trim()}` });
       totalScore += 25;
     } catch (error) {
       tests.push({ name: 'Git Repository', passed: false, score: 0, details: 'Git repository issues' });
@@ -1268,7 +1300,11 @@ class LaunchProtocol {
   // Helper methods
   async checkBuildStatus() {
     try {
-      execSync('npm run build', { encoding: 'utf8' });
+      await this.executor.executeCommand('npm', {
+        args: ['run', 'build'],
+        silent: true,
+        timeout: 120000
+      });
       return { status: 'success', error: null };
     } catch {
       return { status: 'failed', error: 'Build failed' };
@@ -1277,8 +1313,11 @@ class LaunchProtocol {
 
   async getGitStatus() {
     try {
-      const status = execSync('git status --porcelain', { encoding: 'utf8' });
-      const lines = status.trim().split('\n').filter(line => line.length > 0);
+      const result = await this.executor.executeCommand('git', {
+        args: ['status', '--porcelain'],
+        silent: true
+      });
+      const lines = result.stdout.trim().split('\n').filter(line => line.length > 0);
       return {
         modifiedFiles: lines.length,
         hasChanges: lines.length > 0,

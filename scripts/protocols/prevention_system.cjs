@@ -17,7 +17,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const { execSync } = require('child_process');
+const CommandExecutionOptimizer = require('./command_execution_optimizer.cjs');
 
 class PreventionSystem {
   constructor() {
@@ -28,6 +28,7 @@ class PreventionSystem {
     this.warnings = [];
     this.passes = [];
     this.recoveryActions = [];
+    this.executor = new CommandExecutionOptimizer();
   }
 
   async runPreventionChecks() {
@@ -93,10 +94,10 @@ class PreventionSystem {
     
     // Run comprehensive boundary enforcement check
     try {
-      const boundaryResult = execSync('node scripts/protocols/boundary_enforcement_manager.cjs', {
-        encoding: 'utf8',
-        cwd: this.projectRoot,
-        timeout: 60000
+      const result = await this.executor.executeCommand('node', {
+        args: ['scripts/protocols/boundary_enforcement_manager.cjs'],
+        timeout: 60000,
+        silent: true
       });
       
       // Parse the boundary enforcement report
