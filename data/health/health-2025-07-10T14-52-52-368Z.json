@@ -1,0 +1,99 @@
+{
+  "score": 55,
+  "status": "critical",
+  "metrics": {
+    "gitStatus": {
+      "hasChanges": true,
+      "modifiedFiles": 0,
+      "untrackedFiles": 1,
+      "deletedFiles": 0,
+      "addedFiles": 0,
+      "totalChanges": 3,
+      "status": "dirty"
+    },
+    "buildStatus": {
+      "frontend": {
+        "success": true,
+        "error": null
+      },
+      "backend": {
+        "success": true,
+        "error": null
+      },
+      "overall": "success",
+      "status": "healthy"
+    },
+    "testCoverage": {
+      "testFiles": 0,
+      "testResults": {
+        "success": false,
+        "error": "Command failed: npm test"
+      },
+      "coverage": "none",
+      "status": "warning"
+    },
+    "performance": {
+      "memory": {
+        "rss": 33878016,
+        "heapUsed": 4475880,
+        "heapTotal": 5574656,
+        "external": 1566261,
+        "usagePercent": 80
+      },
+      "cpu": {
+        "user": 66764,
+        "system": 27161
+      },
+      "uptime": 11.419058134,
+      "status": "warning"
+    },
+    "errors": {
+      "count": 0,
+      "recentErrors": [],
+      "status": "healthy"
+    },
+    "warnings": {
+      "count": 0,
+      "recentWarnings": [],
+      "status": "healthy"
+    },
+    "diskUsage": {
+      "totalSpace": 3360,
+      "usedSpace": 1509645185,
+      "usagePercent": 44929916,
+      "status": "critical"
+    },
+    "memoryUsage": {
+      "heapUsed": 6372912,
+      "heapTotal": 14225408,
+      "usagePercent": 45,
+      "status": "healthy"
+    },
+    "processInfo": {
+      "pid": 84791,
+      "platform": "darwin",
+      "nodeVersion": "v22.16.0",
+      "uptime": 13.244009546,
+      "memoryUsage": {
+        "rss": 52080640,
+        "heapTotal": 14225408,
+        "heapUsed": 6377840,
+        "external": 1566213,
+        "arrayBuffers": 10531
+      },
+      "cpuUsage": {
+        "user": 747788,
+        "system": 1206969
+      }
+    }
+  },
+  "recommendations": [
+    "Consider committing changes to maintain clean state",
+    "Consider adding more test coverage",
+    "Monitor memory usage and consider optimization",
+    "Free up disk space immediately",
+    "System health is critical - immediate attention required"
+  ],
+  "timestamp": "2025-07-10T14:52:52.367Z",
+  "monitoringDuration": 13200
+}
